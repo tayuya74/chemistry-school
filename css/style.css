@@ -1,29 +1,120 @@
+:root {
+  --color-bg: #f5f7fb;
+  --color-text: #1f2937;
+  --color-header-bg: #2563eb;
+  --color-header-text: #fff;
+  --color-header-link: #fff;
+  --color-card-bg: #fff;
+  --color-card-shadow: rgba(0, 0, 0, 0.08);
+  --color-border: #e5e7eb;
+  --color-accent: #2563eb;
+  --color-accent-hover: #1d4ed8;
+  --color-tip-bg: #eff6ff;
+  --color-tip-border: #2563eb;
+  --color-link: #1d4ed8;
+  --color-topic-link-bg: #fff;
+  --color-topic-link-text: #1e40af;
+  --color-topic-link-hover: #eff6ff;
+  --color-topic-shadow: rgba(0, 0, 0, 0.06);
+  --color-theme-toggle-bg: rgba(255, 255, 255, 0.2);
+  --color-theme-toggle-hover: rgba(255, 255, 255, 0.3);
+}
+
+html[data-theme="dark"] {
+  --color-bg: #111827;
+  --color-text: #e5e7eb;
+  --color-header-bg: #1e3a8a;
+  --color-header-text: #f9fafb;
+  --color-header-link: #e0e7ff;
+  --color-card-bg: #1f2937;
+  --color-card-shadow: rgba(0, 0, 0, 0.35);
+  --color-border: #374151;
+  --color-accent: #3b82f6;
+  --color-accent-hover: #60a5fa;
+  --color-tip-bg: #172554;
+  --color-tip-border: #3b82f6;
+  --color-link: #93c5fd;
+  --color-topic-link-bg: #374151;
+  --color-topic-link-text: #bfdbfe;
+  --color-topic-link-hover: #4b5563;
+  --color-topic-shadow: rgba(0, 0, 0, 0.25);
+  --color-theme-toggle-bg: rgba(255, 255, 255, 0.12);
+  --color-theme-toggle-hover: rgba(255, 255, 255, 0.2);
+}
+
 body {
   margin: 0;
   font-family: Arial, sans-serif;
-  background: #f5f7fb;
-  color: #1f2937;
+  background: var(--color-bg);
+  color: var(--color-text);
 }
 
 .site-header {
-  background: #2563eb;
-  color: #fff;
+  background: var(--color-header-bg);
+  color: var(--color-header-text);
   padding: 16px;
 }
 
+.site-header__inner {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-between;
+  gap: 12px;
+}
+
 .site-header h1 {
-  margin: 0 0 8px;
+  margin: 0;
   font-size: 24px;
+  flex: 1 1 auto;
+  min-width: 0;
+}
+
+.site-header__tail {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 12px 16px;
 }
 
 .site-header nav a {
-  color: #fff;
+  color: var(--color-header-link);
   margin-right: 12px;
   text-decoration: none;
 }
 
+.site-header nav a:last-child {
+  margin-right: 0;
+}
+
 .site-header nav a:hover {
   text-decoration: underline;
+}
+
+button.theme-toggle {
+  background: var(--color-theme-toggle-bg);
+  color: var(--color-header-text);
+  border: 1px solid rgba(255, 255, 255, 0.35);
+  padding: 8px 12px;
+  border-radius: 8px;
+  cursor: pointer;
+  font-size: 14px;
+  white-space: nowrap;
+}
+
+button.theme-toggle:hover {
+  background: var(--color-theme-toggle-hover);
+}
+
+button.theme-toggle .material-symbols-outlined {
+  font-size: 22px;
+  line-height: 1;
+  vertical-align: middle;
+  font-variation-settings:
+    "FILL" 0,
+    "wght" 400,
+    "GRAD" 0,
+    "opsz" 24;
 }
 
 .container {
@@ -33,16 +124,20 @@ body {
 }
 
 .card {
-  background: #fff;
+  background: var(--color-card-bg);
   border-radius: 10px;
   padding: 20px;
-  box-shadow: 0 3px 12px rgba(0, 0, 0, 0.08);
+  box-shadow: 0 3px 12px var(--color-card-shadow);
+}
+
+.card a {
+  color: var(--color-link);
 }
 
 .question-block {
   margin-bottom: 20px;
   padding-bottom: 12px;
-  border-bottom: 1px solid #e5e7eb;
+  border-bottom: 1px solid var(--color-border);
 }
 
 .answer-option {
@@ -50,8 +145,8 @@ body {
   margin: 6px 0;
 }
 
-button {
-  background: #2563eb;
+button:not(.theme-toggle) {
+  background: var(--color-accent);
   color: #fff;
   border: none;
   padding: 10px 16px;
@@ -59,8 +154,8 @@ button {
   cursor: pointer;
 }
 
-button:hover {
-  background: #1d4ed8;
+button:not(.theme-toggle):hover {
+  background: var(--color-accent-hover);
 }
 
 .result {
@@ -71,8 +166,8 @@ button:hover {
 .tip {
   margin-top: 20px;
   padding: 12px;
-  border-left: 4px solid #2563eb;
-  background: #eff6ff;
+  border-left: 4px solid var(--color-tip-border);
+  background: var(--color-tip-bg);
 }
 
 .topic-list {
@@ -88,15 +183,15 @@ button:hover {
 .topic-list a {
   display: block;
   padding: 14px 16px;
-  background: #fff;
+  background: var(--color-topic-link-bg);
   border-radius: 8px;
   text-decoration: none;
-  color: #1e40af;
-  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.06);
+  color: var(--color-topic-link-text);
+  box-shadow: 0 2px 8px var(--color-topic-shadow);
 }
 
 .topic-list a:hover {
-  background: #eff6ff;
+  background: var(--color-topic-link-hover);
 }
 
 .lead {
