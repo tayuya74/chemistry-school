@@ -1,0 +1,105 @@
+body {
+  margin: 0;
+  font-family: Arial, sans-serif;
+  background: #f5f7fb;
+  color: #1f2937;
+}
+
+.site-header {
+  background: #2563eb;
+  color: #fff;
+  padding: 16px;
+}
+
+.site-header h1 {
+  margin: 0 0 8px;
+  font-size: 24px;
+}
+
+.site-header nav a {
+  color: #fff;
+  margin-right: 12px;
+  text-decoration: none;
+}
+
+.site-header nav a:hover {
+  text-decoration: underline;
+}
+
+.container {
+  max-width: 900px;
+  margin: 24px auto;
+  padding: 0 16px;
+}
+
+.card {
+  background: #fff;
+  border-radius: 10px;
+  padding: 20px;
+  box-shadow: 0 3px 12px rgba(0, 0, 0, 0.08);
+}
+
+.question-block {
+  margin-bottom: 20px;
+  padding-bottom: 12px;
+  border-bottom: 1px solid #e5e7eb;
+}
+
+.answer-option {
+  display: block;
+  margin: 6px 0;
+}
+
+button {
+  background: #2563eb;
+  color: #fff;
+  border: none;
+  padding: 10px 16px;
+  border-radius: 8px;
+  cursor: pointer;
+}
+
+button:hover {
+  background: #1d4ed8;
+}
+
+.result {
+  margin-top: 14px;
+  font-weight: bold;
+}
+
+.tip {
+  margin-top: 20px;
+  padding: 12px;
+  border-left: 4px solid #2563eb;
+  background: #eff6ff;
+}
+
+.topic-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.topic-list li {
+  margin-bottom: 12px;
+}
+
+.topic-list a {
+  display: block;
+  padding: 14px 16px;
+  background: #fff;
+  border-radius: 8px;
+  text-decoration: none;
+  color: #1e40af;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.06);
+}
+
+.topic-list a:hover {
+  background: #eff6ff;
+}
+
+.lead {
+  font-size: 1.05rem;
+  margin-bottom: 20px;
+}
