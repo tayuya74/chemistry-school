@@ -1,0 +1,198 @@
+<!doctype html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>ОГЭ, задание 1 — Химические элементы и вещества</title>
+  <link rel="stylesheet" href="css/style.css" />
+  <link
+    rel="stylesheet"
+    href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0"
+  />
+  <script src="js/theme.js"></script>
+</head>
+<body>
+  <header class="site-header">
+    <div class="site-header__inner">
+      <h1>ОГЭ</h1>
+      <div class="site-header__tail">
+        <nav>
+          <a href="index.html">Главная</a>
+          <a href="topics.html">Темы</a>
+          <a href="tables.html">Таблицы</a>
+          <a href="oge.html">ОГЭ</a>
+        </nav>
+        <button type="button" class="theme-toggle" aria-label="Включить светлую тему">
+          <span class="material-symbols-outlined" aria-hidden="true">light_mode</span>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <main class="container">
+    <article class="card">
+      <p><a href="oge.html">← К списку заданий ОГЭ</a></p>
+      <nav class="oge-task-nav" aria-label="Соседние задания ОГЭ">
+        <a href="oge.html">← К списку заданий</a>
+        <a class="oge-task-nav__next" href="oge-02.html">К следующему типу (задание 2) →</a>
+      </nav>
+      <h2>Задание 1</h2>
+      <p class="lead">Химические элементы и вещества</p>
+
+      <p>Выберите два утверждения, в которых говорится об азоте как о <strong>простом веществе</strong>.</p>
+
+      <ol class="oge-statements">
+        <li>
+          <label>
+            <input type="checkbox" name="st" value="1" />
+            <span>Азот необходим растениям для образования хлорофилла и других органических веществ.</span>
+          </label>
+        </li>
+        <li>
+          <label>
+            <input type="checkbox" name="st" value="2" />
+            <span>Азот в промышленности получают фракционной перегонкой жидкого воздуха.</span>
+          </label>
+        </li>
+        <li>
+          <label>
+            <input type="checkbox" name="st" value="3" />
+            <span>В жидком состоянии азот бесцветен и подвижен, как вода.</span>
+          </label>
+        </li>
+        <li>
+          <label>
+            <input type="checkbox" name="st" value="4" />
+            <span>Содержание азота в почвах колеблется от 0,07 до 0,5&nbsp;%.</span>
+          </label>
+        </li>
+        <li>
+          <label>
+            <input type="checkbox" name="st" value="5" />
+            <span>Валентность азота в ионе аммония равна IV.</span>
+          </label>
+        </li>
+      </ol>
+
+      <p>Запишите номера выбранных ответов.</p>
+
+      <p class="oge-answer-label">Ответ:</p>
+      <div class="oge-answer-cells" role="group" aria-label="Номера двух выбранных утверждений (порядок цифр в ячейках любой)">
+        <input id="ansDigit1" type="text" inputmode="numeric" maxlength="1" aria-label="Первая ячейка ответа" autocomplete="off" />
+        <input id="ansDigit2" type="text" inputmode="numeric" maxlength="1" aria-label="Вторая ячейка ответа" autocomplete="off" />
+      </div>
+
+      <p style="margin-top: 16px;">
+        <button type="button" id="checkTask1">Проверить</button>
+      </p>
+      <p id="resultTask1" class="result" role="status"></p>
+    </article>
+  </main>
+
+  <script>
+    (function () {
+      var correct = ["2", "3"];
+      var btn = document.getElementById("checkTask1");
+      var out = document.getElementById("resultTask1");
+      var boxes = document.querySelectorAll('.oge-statements input[type="checkbox"]');
+      var d1 = document.getElementById("ansDigit1");
+      var d2 = document.getElementById("ansDigit2");
+
+      function updateCheckboxLimit() {
+        var n = 0;
+        boxes.forEach(function (cb) {
+          if (cb.checked) n += 1;
+        });
+        var limit = n >= 2;
+        boxes.forEach(function (cb) {
+          cb.disabled = limit && !cb.checked;
+        });
+      }
+
+      boxes.forEach(function (cb) {
+        cb.addEventListener("change", updateCheckboxLimit);
+      });
+      updateCheckboxLimit();
+
+      btn.addEventListener("click", function () {
+        var chosen = [];
+        boxes.forEach(function (cb) {
+          if (cb.checked) chosen.push(cb.value);
+        });
+        chosen.sort();
+
+        var a = String(d1.value).trim();
+        var b = String(d2.value).trim();
+        var cellsFilled = a !== "" && b !== "";
+        var oneDigit = /^[1-5]$/;
+        var cellsCorrect =
+          cellsFilled &&
+          oneDigit.test(a) &&
+          oneDigit.test(b) &&
+          a !== b &&
+          [a, b].slice().sort().join("") === "23";
+
+        var boxesCorrect =
+          chosen.length === 2 &&
+          chosen[0] === correct[0] &&
+          chosen[1] === correct[1];
+
+        var chosenStr = chosen.slice().sort().join("");
+        var cellStr = cellsFilled ? [a, b].slice().sort().join("") : "";
+        var bothFilled = cellsFilled && chosen.length > 0;
+        var multisetsMatch =
+          cellsFilled && chosen.length === 2 && chosenStr === cellStr;
+
+        var onlyBoxes = boxesCorrect && !cellsFilled;
+        var onlyCells = cellsCorrect && chosen.length === 0;
+        var bothOk =
+          bothFilled &&
+          chosen.length === 2 &&
+          multisetsMatch &&
+          boxesCorrect &&
+          cellsCorrect;
+
+        if (onlyBoxes || onlyCells || bothOk) {
+          out.textContent =
+            "Верно: верные утверждения — 2 и 3 (простое вещество N₂). " +
+            (onlyBoxes
+              ? "Засчитано по отмеченным пунктам."
+              : onlyCells
+                ? "Засчитано по ячейкам (порядок цифр не важен)."
+                : "Засчитано: чекбоксы и ячейки совпадают.");
+          return;
+        }
+
+        if (bothFilled && chosen.length === 2 && !multisetsMatch) {
+          out.textContent =
+            "Номера в ячейках должны совпадать с отмеченными пунктами (или заполните только чекбоксы, или только ячейки 2 и 3 в любом порядке).";
+          return;
+        }
+
+        if (bothFilled && chosen.length !== 2) {
+          out.textContent =
+            "Если заполняете и чекбоксы, и ячейки, отметьте ровно два пункта и впишите те же два номера в ячейки (в любом порядке).";
+          return;
+        }
+
+        var parts = [];
+        if (!boxesCorrect && chosen.length > 0) {
+          parts.push(
+            "отметьте ровно два верных утверждения (о веществе N₂, а не об элементе в соединениях)"
+          );
+        }
+        if (!cellsCorrect && cellsFilled) {
+          parts.push("в ячейках укажите цифры 2 и 3 в любом порядке (два разных номера)");
+        }
+        if (chosen.length === 0 && !cellsFilled) {
+          parts.push("отметьте два верных пункта или внесите цифры 2 и 3 в ячейки");
+        }
+        out.textContent =
+          parts.length > 0
+            ? "Пока не всё верно: " + parts.join(" ") + "."
+            : "Пока не всё верно: проверьте выбор и ячейки.";
+      });
+    })();
+  </script>
+</body>
+</html>

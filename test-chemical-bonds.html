@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Темы — Химия 7-9 класс</title>
+  <title>Тест: типы химических связей</title>
   <link rel="stylesheet" href="css/style.css" />
   <link
     rel="stylesheet"
@@ -14,11 +14,11 @@
 <body>
   <header class="site-header">
     <div class="site-header__inner">
-      <h1>Темы</h1>
+      <h1>Тест по теме</h1>
       <div class="site-header__tail">
         <nav>
-          <a href="index.html">Главная</a>
-          <a href="topics.html">Темы</a>
+          <a href="topic-chemical-bonds.html">Теория</a>
+          <a href="topics.html">Все темы</a>
           <a href="tables.html">Таблицы</a>
           <a href="oge.html">ОГЭ</a>
         </nav>
@@ -31,20 +31,13 @@
 
   <main class="container">
     <section class="card">
-      <h2>Список тем</h2>
-      <ul class="topic-list">
-        <li>
-          <a href="topic-oxidation-state.html">
-            <strong>Степень окисления (oxidation state)</strong> — теория и тест
-          </a>
-        </li>
-        <li>
-          <a href="topic-chemical-bonds.html">
-            <strong>Типы химических связей</strong> — теория и тест
-          </a>
-        </li>
-      </ul>
+      <h2>Тест: Типы химических связей</h2>
+      <form id="quizForm"></form>
+      <button id="checkBtn" type="button">Проверить</button>
+      <p id="result" class="result"></p>
     </section>
   </main>
+
+  <script src="js/chemical-bonds-test.js"></script>
 </body>
 </html>

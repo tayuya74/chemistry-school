@@ -1,0 +1,95 @@
+<!doctype html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>ОГЭ, задание 13 — Электролиты и ионы</title>
+  <link rel="stylesheet" href="css/style.css" />
+  <link
+    rel="stylesheet"
+    href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0"
+  />
+  <script src="js/theme.js"></script>
+</head>
+<body>
+  <header class="site-header">
+    <div class="site-header__inner">
+      <h1>ОГЭ</h1>
+      <div class="site-header__tail">
+        <nav>
+          <a href="index.html">Главная</a>
+          <a href="topics.html">Темы</a>
+          <a href="tables.html">Таблицы</a>
+          <a href="oge.html">ОГЭ</a>
+        </nav>
+        <button type="button" class="theme-toggle" aria-label="Включить светлую тему">
+          <span class="material-symbols-outlined" aria-hidden="true">light_mode</span>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <main class="container">
+    <article class="card">
+      <p><a href="oge.html">← К списку заданий ОГЭ</a></p>
+      <nav class="oge-task-nav" aria-label="Соседние задания ОГЭ">
+        <a href="oge-12.html">← К предыдущему типу (задание 12)</a>
+        <a class="oge-task-nav__next" href="oge-14.html">К следующему типу (задание 14) →</a>
+      </nav>
+      <h2>Задание 13</h2>
+      <p class="lead">Электролиты и неэлектролиты. Ионы, катионы и анионы</p>
+
+      <p>
+        Укажите, какие ионы и в каком количестве образуются в растворе при <strong>полной диссоциации 1 моль</strong> хлорида
+        железа(III).
+      </p>
+      <ol class="oge-statements">
+        <li><label><input type="checkbox" name="st" value="1" /> <span>1 моль Fe<sup>3+</sup></span></label></li>
+        <li><label><input type="checkbox" name="st" value="2" /> <span>1 моль Fe<sup>2+</sup></span></label></li>
+        <li><label><input type="checkbox" name="st" value="3" /> <span>3 моль Fe<sup>3+</sup></span></label></li>
+        <li><label><input type="checkbox" name="st" value="4" /> <span>1 моль Cl<sup>−</sup></span></label></li>
+        <li><label><input type="checkbox" name="st" value="5" /> <span>3 моль Cl<sup>−</sup></span></label></li>
+      </ol>
+      <p>Запишите номера выбранных ответов.</p>
+      <p class="oge-answer-label">Ответ (порядок не важен):</p>
+      <div class="oge-answer-cells" role="group" aria-label="Две цифры">
+        <input id="c1" type="text" inputmode="numeric" maxlength="1" autocomplete="off" />
+        <input id="c2" type="text" inputmode="numeric" maxlength="1" autocomplete="off" />
+      </div>
+      <p style="margin-top: 16px;">
+        <button type="button" id="checkBtn">Проверить</button>
+      </p>
+      <p id="resultOut" class="result" role="status"></p>
+    </article>
+  </main>
+
+  <script>
+    (function () {
+      var boxes = document.querySelectorAll('.oge-statements input[type="checkbox"]');
+      function limit() {
+        var n = 0;
+        boxes.forEach(function (b) {
+          if (b.checked) n++;
+        });
+        var L = n >= 2;
+        boxes.forEach(function (b) {
+          b.disabled = L && !b.checked;
+        });
+      }
+      boxes.forEach(function (b) {
+        b.addEventListener("change", limit);
+      });
+      limit();
+      document.getElementById("checkBtn").addEventListener("click", function () {
+        var a = document.getElementById("c1").value.trim();
+        var b = document.getElementById("c2").value.trim();
+        var s = [a, b].filter(Boolean).sort().join("");
+        document.getElementById("resultOut").textContent =
+          s === "15" && a !== b
+            ? "Верно: FeCl₃ → Fe³⁺ + 3Cl⁻, то есть 1 моль Fe³⁺ и 3 моль Cl⁻."
+            : "Эталон: 1 и 5.";
+      });
+    })();
+  </script>
+</body>
+</html>

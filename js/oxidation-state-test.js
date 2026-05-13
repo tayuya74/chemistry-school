@@ -23,6 +23,18 @@ const questions = [
     question: "Сумма степеней окисления элементов в нейтральной молекуле равна:",
     answers: ["+1", "-1", "0", "заряду ядра"],
     correct: 2
+  },
+  {
+    type: "match",
+    instruction:
+      "Установите соответствие между веществом и степенью окисления хлора в данном веществе: к каждой позиции, обозначенной буквой, подберите соответствующую позицию, обозначенную цифрой.",
+    substances: [
+      { letter: "А", html: "NH<sub>4</sub>Cl" },
+      { letter: "Б", html: "Ca(ClO)<sub>2</sub>" },
+      { letter: "В", html: "Ba(ClO<sub>4</sub>)<sub>2</sub>" }
+    ],
+    oxidationStates: ["1) −1", "2) +1", "3) +3", "4) +7"],
+    correctMatch: [1, 2, 4]
   }
 ];
 
@@ -30,26 +42,116 @@ const quizForm = document.getElementById("quizForm");
 const checkBtn = document.getElementById("checkBtn");
 const result = document.getElementById("result");
 
+function renderMatchQuestion(block, q, index) {
+  const num = index + 1;
+
+  const title = document.createElement("p");
+  title.innerHTML = `<strong>${num}. ${q.instruction}</strong>`;
+  block.appendChild(title);
+
+  const grid = document.createElement("div");
+  grid.className = "match-columns";
+
+  const left = document.createElement("div");
+  const leftTitle = document.createElement("strong");
+  leftTitle.textContent = "ВЕЩЕСТВО";
+  left.appendChild(leftTitle);
+  const leftList = document.createElement("ul");
+  q.substances.forEach(function (s) {
+    const li = document.createElement("li");
+    li.innerHTML = s.letter + ") <span class=\"chem-formula\">" + s.html + "</span>";
+    leftList.appendChild(li);
+  });
+  left.appendChild(leftList);
+
+  const right = document.createElement("div");
+  const rightTitle = document.createElement("strong");
+  rightTitle.textContent = "СТЕПЕНЬ ОКИСЛЕНИЯ ХЛОРА";
+  right.appendChild(rightTitle);
+  const rightList = document.createElement("ul");
+  q.oxidationStates.forEach(function (line) {
+    const li = document.createElement("li");
+    li.textContent = line;
+    rightList.appendChild(li);
+  });
+  right.appendChild(rightList);
+
+  grid.appendChild(left);
+  grid.appendChild(right);
+  block.appendChild(grid);
+
+  const note = document.createElement("p");
+  note.textContent =
+    "Запишите в таблицу выбранные цифры под соответствующими буквами.";
+  block.appendChild(note);
+
+  const answerRow = document.createElement("p");
+  answerRow.innerHTML = "<strong>Ответ:</strong>";
+  block.appendChild(answerRow);
+
+  const table = document.createElement("table");
+  table.className = "match-answer-table";
+  const thead = document.createElement("thead");
+  const trHead = document.createElement("tr");
+  q.substances.forEach(function (s) {
+    const th = document.createElement("th");
+    th.textContent = s.letter;
+    trHead.appendChild(th);
+  });
+  thead.appendChild(trHead);
+  table.appendChild(thead);
+
+  const tbody = document.createElement("tbody");
+  const trBody = document.createElement("tr");
+  for (var r = 0; r < q.correctMatch.length; r++) {
+    const td = document.createElement("td");
+    const sel = document.createElement("select");
+    sel.name = "q" + index + "_match_" + r;
+    sel.setAttribute("aria-label", "Ответ для позиции " + q.substances[r].letter);
+    var optEmpty = document.createElement("option");
+    optEmpty.value = "";
+    optEmpty.textContent = "—";
+    sel.appendChild(optEmpty);
+    for (var d = 1; d <= 4; d++) {
+      var opt = document.createElement("option");
+      opt.value = String(d);
+      opt.textContent = String(d);
+      sel.appendChild(opt);
+    }
+    td.appendChild(sel);
+    trBody.appendChild(td);
+  }
+  tbody.appendChild(trBody);
+  table.appendChild(tbody);
+  block.appendChild(table);
+}
+
 function renderQuestions() {
-  questions.forEach((q, index) => {
+  questions.forEach(function (q, index) {
     const block = document.createElement("div");
     block.className = "question-block";
 
+    if (q.type === "match") {
+      renderMatchQuestion(block, q, index);
+      quizForm.appendChild(block);
+      return;
+    }
+
     const title = document.createElement("p");
-    title.innerHTML = `<strong>${index + 1}. ${q.question}</strong>`;
+    title.innerHTML = "<strong>" + (index + 1) + ". " + q.question + "</strong>";
     block.appendChild(title);
 
-    q.answers.forEach((answer, answerIndex) => {
+    q.answers.forEach(function (answer, answerIndex) {
       const label = document.createElement("label");
       label.className = "answer-option";
 
       const input = document.createElement("input");
       input.type = "radio";
-      input.name = `q${index}`;
+      input.name = "q" + index;
       input.value = answerIndex;
 
       label.appendChild(input);
-      label.append(` ${answer}`);
+      label.append(" " + answer);
       block.appendChild(label);
     });
 
@@ -58,17 +160,32 @@ function renderQuestions() {
 }
 
 function checkAnswers() {
-  let score = 0;
+  var score = 0;
 
-  questions.forEach((q, index) => {
-    const selected = document.querySelector(`input[name="q${index}"]:checked`);
+  questions.forEach(function (q, index) {
+    if (q.type === "match") {
+      var allOk = true;
+      for (var r = 0; r < q.correctMatch.length; r++) {
+        var sel = document.querySelector('select[name="q' + index + "_match_" + r + '"]');
+        if (!sel || sel.value === "" || Number(sel.value) !== q.correctMatch[r]) {
+          allOk = false;
+          break;
+        }
+      }
+      if (allOk) {
+        score++;
+      }
+      return;
+    }
+
+    var selected = document.querySelector('input[name="q' + index + '"]:checked');
     if (selected && Number(selected.value) === q.correct) {
       score++;
     }
   });
 
-  const percent = Math.round((score / questions.length) * 100);
-  result.textContent = `Результат: ${score} из ${questions.length} (${percent}%)`;
+  var percent = Math.round((score / questions.length) * 100);
+  result.textContent = "Результат: " + score + " из " + questions.length + " (" + percent + "%)";
 
   localStorage.setItem("oxidation_state_score", String(score));
   localStorage.setItem("oxidation_state_total", String(questions.length));
