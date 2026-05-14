@@ -1,0 +1,84 @@
+<!doctype html>
+<html lang="ru">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Массовая доля элемента в веществе</title>
+    <link rel="stylesheet" href="../../css/style.css" />
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0"
+    />
+    <script src="../../js/theme.js"></script>
+  </head>
+  <body>
+    <header class="site-header">
+      <div class="site-header__inner">
+        <h1>Химия ОГЭ</h1>
+        <div class="site-header__tail">
+          <nav>
+            <a href="../../index.html">Главная</a>
+            <a href="index.html">Темы</a>
+            <a href="../tables.html">Таблицы</a>
+            <a href="../oge/index.html">ОГЭ</a>
+            <a href="../tests/test-mass-fraction-element.html">Тест</a>
+          </nav>
+          <button
+            type="button"
+            class="theme-toggle"
+            aria-label="Включить светлую тему"
+          >
+            <span class="material-symbols-outlined" aria-hidden="true"
+              >light_mode</span
+            >
+          </button>
+        </div>
+      </div>
+    </header>
+
+    <main class="container">
+      <article class="card">
+        <h2>Массовая доля элемента и масса элемента по массовой доле</h2>
+        <p class="lead">
+          Если в пироге половина вишни — это про <strong>долю по массе</strong>.
+          В химии то же самое: сколько «веса» вещества принадлежит одному
+          элементу. Это не магия дробей — обычный смысл «часть от целого».
+        </p>
+
+        <p>
+          <strong>Массовая доля</strong> ω (омега) элемента в чистом веществе: ω
+          = m(элемента) / m(всего вещества). В процентах просто умножаешь на
+          100%. Все элементы в формуле в сумме дают 100% — удобная проверка
+          «сойдётся ли».
+        </p>
+        <p>
+          Обратная задача: знаешь долю и массу образца — ищешь массу элемента:
+          m(элемента) = ω · m(вещества), если ω записана
+          <strong>долей единицы</strong> (например 0,27, а не 27%). Если дали
+          проценты, сначала делишь на 100.
+        </p>
+        <p>
+          По формуле удобно считать через относительные массы из таблицы:
+          сначала Mr всей молекулы, потом вклад каждого элемента как Ar·число
+          атомов / Mr. Калькулятор и черновик — твои друзья; ошибиться в одном
+          шаге легко, поэтому перепроверь сложение.
+        </p>
+
+        <section class="tip">
+          <h4>Типичная ловушка</h4>
+          <p>
+            Путают массу <strong>чистого вещества</strong> и массу
+            <strong>раствора</strong>. В условии аккуратно подчеркни, что именно
+            дано: «образец CO₂» или «раствор кислоты».
+          </p>
+        </section>
+
+        <p>
+          <a href="../tests/test-mass-fraction-element.html"
+            >Попробовать квиз</a
+          >
+        </p>
+      </article>
+    </main>
+  </body>
+</html>

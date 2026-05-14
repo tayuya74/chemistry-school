@@ -1,0 +1,150 @@
+<!doctype html>
+<html lang="ru">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>ОГЭ, задание 6 № 1006 — Закономерности изменения свойств</title>
+    <link rel="stylesheet" href="../../../css/style.css" />
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0"
+    />
+    <script src="../../../js/theme.js"></script>
+    <script src="../../../js/oge-check-feedback.js"></script>
+  </head>
+  <body>
+    <header class="site-header">
+      <div class="site-header__inner">
+        <h1>ОГЭ</h1>
+        <div class="site-header__tail">
+          <nav>
+            <a href="../../../index.html">Главная</a>
+            <a href="../../topics/index.html">Темы</a>
+            <a href="../../tables.html">Таблицы</a>
+            <a href="../index.html">ОГЭ</a>
+          </nav>
+          <button
+            type="button"
+            class="theme-toggle"
+            aria-label="Включить светлую тему"
+          >
+            <span class="material-symbols-outlined" aria-hidden="true"
+              >light_mode</span
+            >
+          </button>
+        </div>
+      </div>
+    </header>
+
+    <main class="container">
+      <article class="card">
+<p><a href="../index.html">← К списку заданий ОГЭ</a> · <a href="../type-06.html">Задание 6</a></p>
+      <nav class="oge-task-nav" aria-label="Соседние типы заданий ОГЭ">
+        <a href="../type-05.html">← Задание 5</a>
+        <a class="oge-task-nav__next" href="../type-07.html">Задание 7 →</a>
+      </nav>
+      <h2>Задание 6 № 1006</h2>
+      <p class="lead">Закономерности изменения свойств элементов</p>
+
+      <p>
+          Какие <strong>два утверждения верны</strong> для характеристики
+          <strong>как алюминия, так и кремния</strong>?
+        </p>
+        <ol class="oge-statements">
+          <li>
+            <label
+              ><input type="checkbox" name="st" value="1" />
+              <span
+                >Все электроны в атоме элемента в основном состоянии расположены
+                на трёх электронных слоях.</span
+              ></label
+            >
+          </li>
+          <li>
+            <label
+              ><input type="checkbox" name="st" value="2" />
+              <span
+                >Атомный радиус элемента меньше атомного радиуса натрия.</span
+              ></label
+            >
+          </li>
+          <li>
+            <label
+              ><input type="checkbox" name="st" value="3" />
+              <span
+                >Простое вещество существует в виде двухатомных молекул.</span
+              ></label
+            >
+          </li>
+          <li>
+            <label
+              ><input type="checkbox" name="st" value="4" />
+              <span>Элемент образует амфотерные гидроксиды.</span></label
+            >
+          </li>
+          <li>
+            <label
+              ><input type="checkbox" name="st" value="5" />
+              <span
+                >Элемент образует высший оксид состава
+                Э<sub>2</sub>O<sub>3</sub>.</span
+              ></label
+            >
+          </li>
+        </ol>
+        <p>Запишите номера выбранных ответов.</p>
+        <p class="oge-answer-label">Ответ:</p>
+        <div class="oge-answer-cells" role="group" aria-label="Две цифры">
+          <input
+            id="c1"
+            type="text"
+            inputmode="numeric"
+            maxlength="1"
+            autocomplete="off"
+          />
+          <input
+            id="c2"
+            type="text"
+            inputmode="numeric"
+            maxlength="1"
+            autocomplete="off"
+          />
+        </div>
+        <p style="margin-top: 16px">
+          <button type="button" id="checkBtn">Ответ</button>
+        </p>
+        <p id="resultOut" class="result" role="status"></p>
+
+      <p>Источник: Демонстрационный вариант ОГЭ по химии 2026 года (ФИПИ).</p>
+    </article>
+    </main>
+  <script>
+      (function () {
+        const correct = ["1", "2"];
+        const boxes = document.querySelectorAll(
+          '.oge-statements input[type="checkbox"]',
+        );
+        function limit() {
+          let n = 0;
+          boxes.forEach(function (b) {
+            if (b.checked) n++;
+          });
+          const L = n >= 2;
+          boxes.forEach(function (b) {
+            b.disabled = L && !b.checked;
+          });
+        }
+        boxes.forEach(function (b) {
+          b.addEventListener("change", limit);
+        });
+        limit();
+        document
+          .getElementById("checkBtn")
+          .addEventListener("click", function () {
+          const out = document.getElementById("resultOut");
+          if (out) out.textContent = OGE_EX_formatAnswer(["1","2"]);
+        });
+      })();
+    </script>
+</body>
+</html>

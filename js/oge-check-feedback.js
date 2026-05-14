@@ -1,0 +1,182 @@
+/** Тексты для кнопки «Проверить» в интерактивных заданиях ОГЭ */
+window.OGE_CHECK = {
+  ok: "верно",
+  retry: "попробуй еще раз",
+};
+
+/** Строка с ключом для страниц oge/ex (кнопка «Ответ»): «ответ 2 3 …» */
+window.OGE_EX_formatAnswer = function (parts) {
+  return "ответ " + parts.map(String).join(" ");
+};
+
+/**
+ * Два верных утверждения из списка: засчитывается только галочки, только ячейки,
+ * или оба способа при согласованных номерах (как в задании 1).
+ * @param {string[]} chosenValues value чекбоксов, например ["2","3"]
+ * @param {string} cellA cellB — содержимое двух ячеек
+ * @param {string[]} correctPair два правильных номера **по возрастанию**, строками
+ * @param {number} optionCount сколько пунктов в списке (1…N для проверки ввода)
+ */
+window.OGE_twoChoiceAllOk = function (
+  chosenValues,
+  cellA,
+  cellB,
+  correctPair,
+  optionCount,
+) {
+  const sortedCorrect = correctPair.slice().sort();
+  const chosen = chosenValues.slice().sort();
+  const a = String(cellA).trim();
+  const b = String(cellB).trim();
+  const cellsFilled = a !== "" && b !== "";
+  const reCell = new RegExp("^[1-" + String(optionCount) + "]$");
+  const correctJoin = sortedCorrect.join("");
+  const cellStr = cellsFilled ? [a, b].slice().sort().join("") : "";
+  const cellsCorrect =
+    cellsFilled &&
+    reCell.test(a) &&
+    reCell.test(b) &&
+    a !== b &&
+    cellStr === correctJoin;
+  const boxesCorrect =
+    chosen.length === 2 &&
+    chosen[0] === sortedCorrect[0] &&
+    chosen[1] === sortedCorrect[1];
+  const chosenStr = chosen.join("");
+  const bothFilled = cellsFilled && chosen.length > 0;
+  const multisetsMatch =
+    cellsFilled && chosen.length === 2 && chosenStr === cellStr;
+  const onlyBoxes = boxesCorrect && !cellsFilled;
+  const onlyCells = cellsCorrect && chosen.length === 0;
+  const bothOk =
+    bothFilled &&
+    chosen.length === 2 &&
+    multisetsMatch &&
+    boxesCorrect &&
+    cellsCorrect;
+  return onlyBoxes || onlyCells || bothOk;
+};
+
+/**
+ * Перед проверкой числового ответа (типы 18–19): в поле «.» заменить на «,»,
+ * вернуть строку для parseFloat (с «.»).
+ */
+window.OGE_answerDotsToCommasInField = function (inputEl) {
+  if (!inputEl) return "";
+  let t = String(inputEl.value).trim();
+  t = t.replace(/\./g, ",");
+  inputEl.value = t;
+  return t.replace(",", ".");
+};
+
+/** Для inputmode=numeric — только цифры; decimal — ещё «.» и «,»; text — без фильтра. */
+(function () {
+  const NAV_KEYS = new Set([
+    "Backspace",
+    "Delete",
+    "Tab",
+    "Escape",
+    "Enter",
+    "ArrowLeft",
+    "ArrowRight",
+    "ArrowUp",
+    "ArrowDown",
+    "Home",
+    "End",
+  ]);
+
+  function clampMaxLength(el, s) {
+    const max = el.maxLength;
+    if (max > 0 && s.length > max) return s.slice(0, max);
+    return s;
+  }
+
+  function bindIntegerInput(el) {
+    el.addEventListener("keydown", (e) => {
+      if (e.ctrlKey || e.metaKey || e.altKey) return;
+      if (NAV_KEYS.has(e.key)) return;
+      if (e.key.length === 1 && !/\d/.test(e.key)) {
+        e.preventDefault();
+      }
+    });
+    el.addEventListener("input", () => {
+      const next = clampMaxLength(el, el.value.replace(/\D/g, ""));
+      if (next !== el.value) el.value = next;
+    });
+    el.addEventListener("paste", (e) => {
+      e.preventDefault();
+      const clip = (e.clipboardData || window.clipboardData)
+        .getData("text")
+        .replace(/\D/g, "");
+      const start = el.selectionStart ?? 0;
+      const end = el.selectionEnd ?? start;
+      const merged = clampMaxLength(
+        el,
+        (el.value.slice(0, start) + clip + el.value.slice(end)).replace(
+          /\D/g,
+          "",
+        ),
+      );
+      el.value = merged;
+    });
+  }
+
+  function sanitizeDecimalValue(s) {
+    let out = "";
+    let sep = false;
+    for (const c of s) {
+      if (c === "." || c === ",") {
+        if (sep) continue;
+        sep = true;
+        out += c;
+      } else if (/\d/.test(c)) {
+        out += c;
+      }
+    }
+    return out;
+  }
+
+  function bindDecimalInput(el) {
+    el.addEventListener("keydown", (e) => {
+      if (e.ctrlKey || e.metaKey || e.altKey) return;
+      if (NAV_KEYS.has(e.key)) return;
+      if (e.key.length === 1 && !/[\d.,]/.test(e.key)) {
+        e.preventDefault();
+      }
+    });
+    el.addEventListener("input", () => {
+      const next = sanitizeDecimalValue(el.value);
+      if (next !== el.value) el.value = next;
+    });
+    el.addEventListener("paste", (e) => {
+      e.preventDefault();
+      const clip = sanitizeDecimalValue(
+        (e.clipboardData || window.clipboardData).getData("text"),
+      );
+      const start = el.selectionStart ?? 0;
+      const end = el.selectionEnd ?? start;
+      el.value = sanitizeDecimalValue(
+        el.value.slice(0, start) + clip + el.value.slice(end),
+      );
+    });
+  }
+
+  function attachNumericGuards() {
+    const card = document.querySelector("article.card");
+    if (!card) return;
+    card.querySelectorAll('input[type="text"]').forEach((input) => {
+      if (input.dataset.ogeNumericGuard === "1") return;
+      input.dataset.ogeNumericGuard = "1";
+      const mode = input.getAttribute("inputmode");
+      if (mode === "decimal") bindDecimalInput(input);
+      else if (mode === "numeric") bindIntegerInput(input);
+      /* inputmode="text" и прочие — без ограничения (например таблица в задании 19) */
+    });
+  }
+
+  if (document.readyState === "loading") {
+    document.addEventListener("DOMContentLoaded", attachNumericGuards);
+  } else {
+    attachNumericGuards();
+  }
+})();

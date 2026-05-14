@@ -1,0 +1,119 @@
+<!doctype html>
+<html lang="ru">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Таблицы — справочник по химии</title>
+    <link rel="stylesheet" href="../css/style.css" />
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0"
+    />
+    <script src="../js/theme.js"></script>
+  </head>
+  <body>
+    <header class="site-header">
+      <div class="site-header__inner">
+        <h1>Таблицы</h1>
+        <div class="site-header__tail">
+          <nav>
+            <a href="../index.html">Главная</a>
+            <a href="topics/index.html">Темы</a>
+            <a href="tables.html">Таблицы</a>
+            <a href="oge/index.html">ОГЭ</a>
+          </nav>
+          <button
+            type="button"
+            class="theme-toggle"
+            aria-label="Включить светлую тему"
+          >
+            <span class="material-symbols-outlined" aria-hidden="true"
+              >light_mode</span
+            >
+          </button>
+        </div>
+      </div>
+    </header>
+
+    <main class="container">
+      <section class="card">
+        <h2>Периодическая система химических элементов Д. И. Менделеева</h2>
+        <p class="lead">
+          Группы I–VIII, периоды 1–7, отдельные ряды лантаноидов и актиноидов.
+          При необходимости увеличьте масштаб страницы (Ctrl +) или прокрутите
+          область по горизонтали.
+        </p>
+        <figure class="ref-table-figure">
+          <div
+            class="ref-table-scroll"
+            tabindex="0"
+            role="region"
+            aria-label="Периодическая таблица Менделеева"
+          >
+            <img
+              src="../assets/periodic-mendeleev.png"
+              class="ref-table-img"
+              alt="Периодическая таблица Менделеева на русском: порядковый номер, символ, название элемента, относительная атомная масса."
+              decoding="async"
+              fetchpriority="high"
+            />
+          </div>
+        </figure>
+      </section>
+
+      <section class="card">
+        <h2>Растворимость в воде и ряд активности металлов</h2>
+        <p class="lead">
+          Справочный лист в формате, близком к экзаменационным материалам:
+          сверху — таблица растворимости кислот, солей и оснований; ниже на том
+          же изображении — электрохимический ряд напряжений. При узком экране
+          включите горизонтальную прокрутку.
+        </p>
+        <figure class="ref-table-figure">
+          <div
+            class="ref-table-scroll"
+            tabindex="0"
+            role="region"
+            aria-label="Таблица растворимости и ряд металлов"
+          >
+            <img
+              src="../assets/reference-solubility-and-metals.png"
+              class="ref-table-img"
+              alt="Таблица растворимости по анионам и катионам с обозначениями Р, М, Н и др.; под ней горизонтальный ряд символов металлов Li … Au."
+              decoding="async"
+              loading="lazy"
+            />
+          </div>
+          <figcaption class="ref-table-caption">
+            Условные обозначения в таблице растворимости: <strong>Р</strong> —
+            растворяется (&gt; 1 г на 100 г H<sub>2</sub>O);
+            <strong>М</strong> — мало растворяется (от 0,1 г до 1 г на 100 г
+            H<sub>2</sub>O); <strong>Н</strong> — практически не растворимо;
+            <strong>—</strong> — в водной среде разлагается;
+            <strong>?</strong> — нет достоверных сведений о соединении (см.
+            подписи на скане).
+          </figcaption>
+        </figure>
+
+        <h3 class="ref-table-subheading">
+          Ряд активности (текст для поиска и копирования)
+        </h3>
+        <p class="ref-table-note">
+          Активность убывает слева направо (как на стрелке под символами на
+          скане).
+        </p>
+        <div class="metal-series" aria-label="Ряд активности металлов">
+          <span>Li</span><span>Rb</span><span>K</span><span>Ba</span
+          ><span>Sr</span><span>Ca</span><span>Na</span><span>Mg</span
+          ><span>Al</span><span>Mn</span><span>Zn</span><span>Cr</span
+          ><span>Fe</span><span>Cd</span><span>Co</span><span>Ni</span
+          ><span>Sn</span><span>Pb</span
+          ><span class="metal-series__h">(H<sub>2</sub>)</span><span>Sb</span
+          ><span>Bi</span><span>Cu</span><span>Hg</span><span>Ag</span
+          ><span>Pt</span><span>Au</span>
+        </div>
+        <p class="metal-series-note">активность металлов уменьшается →</p>
+      </section>
+    </main>
+  </body>
+</html>

@@ -13,16 +13,23 @@
 
   function themeIconHtml(name) {
     return (
-      '<span class="material-symbols-outlined" aria-hidden="true">' + name + "</span>"
+      '<span class="material-symbols-outlined" aria-hidden="true">' +
+      name +
+      "</span>"
     );
   }
 
   function syncToggles() {
-    var dark = isDark();
+    const dark = isDark();
     document.querySelectorAll(".theme-toggle").forEach(function (btn) {
       btn.setAttribute("aria-pressed", dark ? "true" : "false");
-      btn.setAttribute("aria-label", dark ? "Включить светлую тему" : "Включить тёмную тему");
-      btn.innerHTML = dark ? themeIconHtml("light_mode") : themeIconHtml("dark_mode");
+      btn.setAttribute(
+        "aria-label",
+        dark ? "Включить светлую тему" : "Включить тёмную тему",
+      );
+      btn.innerHTML = dark
+        ? themeIconHtml("light_mode")
+        : themeIconHtml("dark_mode");
     });
   }
 

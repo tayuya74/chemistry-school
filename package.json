@@ -1,0 +1,13 @@
+{
+  "name": "chemistry-school",
+  "private": true,
+  "description": "Статический сайт: химия ОГЭ, темы, тесты",
+  "scripts": {
+    "format": "prettier --write .",
+    "format:check": "prettier --check .",
+    "build:oge": "node scripts/build-oge-from-registry.mjs"
+  },
+  "devDependencies": {
+    "prettier": "^3.5.3"
+  }
+}
