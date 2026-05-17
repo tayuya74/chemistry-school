@@ -46,7 +46,8 @@
       <h2>Задание 14 № 1014</h2>
       <p class="lead">Реакции ионного обмена</p>
 
-      <p>
+      <div class="oge-subtask" data-oge-checkbox-max="2" data-oge-two-choice-correct="3|5" data-oge-option-count="6">
+<p>
           Выберите <strong>два исходных вещества</strong>, взаимодействию
           которых соответствует сокращённое ионное уравнение реакции
         </p>
@@ -113,6 +114,7 @@
           <button type="button" id="checkBtn">Ответ</button>
         </p>
         <p id="resultOut" class="result" role="status"></p>
+      </div>
 
       <p>Источник: Демонстрационный вариант ОГЭ по химии 2026 года (ФИПИ).</p>
     </article>
@@ -120,31 +122,20 @@
   <script>
       (function () {
         const correct = ["3", "5"];
-        const boxes = document.querySelectorAll(
-          '.oge-statements input[type="checkbox"]',
-        );
-
-        function updateCheckboxLimit() {
-          let n = 0;
-          boxes.forEach(function (cb) {
-            if (cb.checked) n += 1;
-          });
-          const limitReached = n >= 2;
-          boxes.forEach(function (cb) {
-            cb.disabled = limitReached && !cb.checked;
-          });
-        }
-
-        boxes.forEach(function (cb) {
-          cb.addEventListener("change", updateCheckboxLimit);
-        });
-        updateCheckboxLimit();
-
-        document
-          .getElementById("checkBtn")
-          .addEventListener("click", function () {
+        OGE_eachTwoChoiceScope(correct, 6, function (root, pair, optionCount) {
+          const boxes = root.querySelectorAll(
+            '.oge-statements input[type="checkbox"]',
+          );
+          const btn = root.querySelector("button[type='button']");
+          const out = root.querySelector(".result");
+          const inputs = root.querySelectorAll(
+            ".oge-answer-cells input[type='text']",
+          );
+          if (!btn || !out || inputs.length < 2) return;
+          btn.addEventListener("click", function () {
           const out = document.getElementById("resultOut");
           if (out) out.textContent = OGE_EX_formatAnswer(["3","5"]);
+        });
         });
       })();
     </script>

@@ -1,0 +1,155 @@
+<!doctype html>
+<html lang="ru">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>ОГЭ, задание 9 — Свойства простых и сложных веществ</title>
+    <link rel="stylesheet" href="css/style.css" />
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0"
+    />
+    <script src="js/theme.js"></script>
+    <script src="js/oge-check-feedback.js"></script>
+  </head>
+  <body>
+    <header class="site-header">
+      <div class="site-header__inner">
+        <h1>ОГЭ</h1>
+        <div class="site-header__tail">
+          <nav>
+            <a href="index.html">Главная</a>
+            <a href="topics.html">Темы</a>
+            <a href="tables.html">Таблицы</a>
+            <a href="oge.html">ОГЭ</a>
+          </nav>
+          <button
+            type="button"
+            class="theme-toggle"
+            aria-label="Включить светлую тему"
+          >
+            <span class="material-symbols-outlined" aria-hidden="true"
+              >light_mode</span
+            >
+          </button>
+        </div>
+      </div>
+    </header>
+
+    <main class="container">
+      <article class="card">
+        <p><a href="oge.html">← К списку заданий ОГЭ</a></p>
+        <nav class="oge-task-nav" aria-label="Соседние задания ОГЭ">
+          <a href="oge-08.html">← К предыдущему типу (задание 8)</a>
+          <a class="oge-task-nav__next" href="oge-10.html"
+            >К следующему типу (задание 10) →</a
+          >
+        </nav>
+        <h2>Задание 9</h2>
+        <p class="lead">Химические свойства простых и сложных веществ</p>
+
+        <p>
+          Установите соответствие между реагирующими веществами и продуктами их
+          взаимодействия: к каждой позиции, обозначенной буквой, подберите
+          соответствующую позицию, обозначенную цифрой.
+        </p>
+
+        <div class="match-columns">
+          <div>
+            <strong>Реагирующие вещества</strong>
+            <ul class="oge-match-plain">
+              <li>
+                А) Fe<sub>2</sub>(SO<sub>4</sub>)<sub>3</sub> и BaCl<sub>2</sub>
+              </li>
+              <li>Б) Fe и H<sub>2</sub>SO<sub>4</sub> (разб.)</li>
+              <li>
+                В) Fe<sub>2</sub>O<sub>3</sub> и H<sub>2</sub>SO<sub>4</sub>
+                (разб.)
+              </li>
+            </ul>
+          </div>
+          <div>
+            <strong>Продукты взаимодействия</strong>
+            <ul class="oge-match-plain">
+              <li>1) FeSO<sub>4</sub> и H<sub>2</sub></li>
+              <li>2) FeCl<sub>3</sub> и BaSO<sub>4</sub></li>
+              <li>3) FeSO<sub>4</sub> и H<sub>2</sub>O</li>
+              <li>
+                4) Fe<sub>2</sub>(SO<sub>4</sub>)<sub>3</sub> и H<sub>2</sub>O
+              </li>
+              <li>5) FeCl<sub>2</sub> и BaSO<sub>4</sub></li>
+            </ul>
+          </div>
+        </div>
+
+        <table class="match-answer-table">
+          <thead>
+            <tr>
+              <th>А</th>
+              <th>Б</th>
+              <th>В</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>
+                <select id="sA" aria-label="А">
+                  <option value="">—</option>
+                  <option value="1">1</option>
+                  <option value="2">2</option>
+                  <option value="3">3</option>
+                  <option value="4">4</option>
+                  <option value="5">5</option>
+                </select>
+              </td>
+              <td>
+                <select id="sB" aria-label="Б">
+                  <option value="">—</option>
+                  <option value="1">1</option>
+                  <option value="2">2</option>
+                  <option value="3">3</option>
+                  <option value="4">4</option>
+                  <option value="5">5</option>
+                </select>
+              </td>
+              <td>
+                <select id="sV" aria-label="В">
+                  <option value="">—</option>
+                  <option value="1">1</option>
+                  <option value="2">2</option>
+                  <option value="3">3</option>
+                  <option value="4">4</option>
+                  <option value="5">5</option>
+                </select>
+              </td>
+            </tr>
+          </tbody>
+        </table>
+
+        <p style="margin-top: 16px">
+          <button type="button" id="checkBtn">Проверить</button>
+        </p>
+        <p id="resultOut" class="result" role="status"></p>
+      </article>
+    </main>
+
+    <script>
+      (function () {
+        document
+          .getElementById("checkBtn")
+          .addEventListener("click", function () {
+            const a = document.getElementById("sA").value;
+            const b = document.getElementById("sB").value;
+            const v = document.getElementById("sV").value;
+            const out = document.getElementById("resultOut");
+            if (!a || !b || !v) {
+              out.textContent = OGE_CHECK.retry;
+              return;
+            }
+            const ok = a === "2" && b === "1" && v === "4";
+            out.textContent = ok ? OGE_CHECK.ok : OGE_CHECK.retry;
+          });
+      })();
+    </script>
+  </body>
+</html>

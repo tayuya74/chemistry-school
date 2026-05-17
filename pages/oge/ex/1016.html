@@ -48,7 +48,8 @@
           Безопасность в лаборатории. Разделение смесей. Химическое загрязнение
         </p>
 
-      <p>
+      <div class="oge-subtask" data-oge-checkbox-max="2" data-oge-sorted-correct="3|4">
+<p>
           Из перечисленных суждений о правилах работы с веществами в лаборатории
           и быту выберите <strong>верное(-ые) суждение(-я)</strong>.
         </p>
@@ -94,6 +95,7 @@
           <button type="button" id="checkBtn">Ответ</button>
         </p>
         <p id="resultOut" class="result" role="status"></p>
+      </div>
 
       <p>Источник: Демонстрационный вариант ОГЭ по химии 2026 года (ФИПИ).</p>
     </article>
@@ -101,14 +103,46 @@
   <script>
       (function () {
         const correct = ["3", "4"];
-        const boxes = document.querySelectorAll(
-          '.oge-statements input[type="checkbox"]',
-        );
-        document
-          .getElementById("checkBtn")
-          .addEventListener("click", function () {
+        function rootsWithCheckboxes() {
+          const roots = [];
+          document.querySelectorAll(".oge-subtask").forEach(function (el) {
+            if (el.querySelector('.oge-statements input[type="checkbox"]')) {
+              roots.push(el);
+            }
+          });
+          if (!roots.length) {
+            const art = document.querySelector("article.card");
+            if (
+              art &&
+              art.querySelector('.oge-statements input[type="checkbox"]')
+            ) {
+              roots.push(art);
+            }
+          }
+          return roots;
+        }
+        rootsWithCheckboxes().forEach(function (root) {
+          const boxes = root.querySelectorAll(
+            '.oge-statements input[type="checkbox"]',
+          );
+          const btn = root.querySelector("button[type='button']");
+          const out = root.querySelector(".result");
+          if (!btn || !out) return;
+          const ds = root.dataset.ogeSortedCorrect;
+          const key = ds
+            ? ds
+                .split("|")
+                .slice()
+                .sort(function (a, b) {
+                  return Number(a) - Number(b);
+                })
+            : correct.slice().sort(function (a, b) {
+                return Number(a) - Number(b);
+              });
+          btn.addEventListener("click", function () {
           const out = document.getElementById("resultOut");
           if (out) out.textContent = OGE_EX_formatAnswer(["3","4"]);
+        });
         });
       })();
     </script>

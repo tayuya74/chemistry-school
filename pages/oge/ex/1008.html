@@ -48,7 +48,8 @@
           Химические свойства простых веществ. Химические свойства оксидов
         </p>
 
-      <p>
+      <div class="oge-subtask" data-oge-checkbox-max="2" data-oge-two-choice-correct="1|3" data-oge-option-count="5">
+<p>
           Какие <strong>два</strong> из перечисленных веществ вступают в реакцию
           с <strong>серой</strong>?
         </p>
@@ -106,6 +107,7 @@
           <button type="button" id="checkBtn">Ответ</button>
         </p>
         <p id="resultOut" class="result" role="status"></p>
+      </div>
 
       <p>Источник: Демонстрационный вариант ОГЭ по химии 2026 года (ФИПИ).</p>
     </article>
@@ -113,28 +115,20 @@
   <script>
       (function () {
         const correct = ["1", "3"];
-        const boxes = document.querySelectorAll(
-          '.oge-statements input[type="checkbox"]',
-        );
-        function limit() {
-          let n = 0;
-          boxes.forEach(function (b) {
-            if (b.checked) n++;
-          });
-          const L = n >= 2;
-          boxes.forEach(function (b) {
-            b.disabled = L && !b.checked;
-          });
-        }
-        boxes.forEach(function (b) {
-          b.addEventListener("change", limit);
-        });
-        limit();
-        document
-          .getElementById("checkBtn")
-          .addEventListener("click", function () {
+        OGE_eachTwoChoiceScope(correct, 5, function (root, pair, optionCount) {
+          const boxes = root.querySelectorAll(
+            '.oge-statements input[type="checkbox"]',
+          );
+          const btn = root.querySelector("button[type='button']");
+          const out = root.querySelector(".result");
+          const inputs = root.querySelectorAll(
+            ".oge-answer-cells input[type='text']",
+          );
+          if (!btn || !out || inputs.length < 2) return;
+          btn.addEventListener("click", function () {
           const out = document.getElementById("resultOut");
           if (out) out.textContent = OGE_EX_formatAnswer(["1","3"]);
+        });
         });
       })();
     </script>

@@ -5,9 +5,65 @@ import { fileURLToPath } from "node:url";
 const __dirname = path.dirname(fileURLToPath(import.meta.url));
 const root = path.join(__dirname, "..");
 
-/** Подпись внизу страниц ex/ (простой абзац, без классов). */
-const OGE_SOURCE_FOOTER_TEXT =
-  "Демонстрационный вариант ОГЭ по химии 2026 года (ФИПИ).";
+const FOOTER_2026 = "Демонстрационный вариант ОГЭ по химии 2026 года (ФИПИ).";
+const FOOTER_2025 = "Демонстрационный вариант ОГЭ по химии 2025 года (ФИПИ).";
+const FOOTER_VARIANT_1 =
+  "ОГЭ. Типовые экзаменационные варианты, вариант 1 (Издательство «Национальное образование», 2025).";
+const FOOTER_VARIANT_2 =
+  "ОГЭ. Типовые экзаменационные варианты, вариант 2 (Издательство «Национальное образование», 2025).";
+
+/** Записи без sourceDir — демо 2025 (ФИПИ), шаблоны в data/oge-source/default/ */
+function resolveSourcePath(row, paddedType) {
+  const dir = row.sourceDir ? row.sourceDir : "default";
+  return path.join(root, "data", "oge-source", dir, `oge-${paddedType}.html`);
+}
+
+/** Подпись «Источник» на страницах ex/ */
+function footerForRow(row) {
+  if (row.sourceFooter) return row.sourceFooter;
+  if (row.sourceDir === "2026-demo") return FOOTER_2026;
+  if (row.sourceDir === "variant-1") return FOOTER_VARIANT_1;
+  if (row.sourceDir === "variant-2") return FOOTER_VARIANT_2;
+  return FOOTER_2025;
+}
+
+/** Порядок на странице типа: демо 2026, вариант 1, вариант 2, корень (демо 2025); внутри по id */
+function rowSortPriority(row) {
+  if (row.sourceDir === "2026-demo") return 0;
+  if (row.sourceDir === "variant-1") return 1;
+  if (row.sourceDir === "variant-2") return 2;
+  return 3;
+}
+
+function sortRowsForType(rows) {
+  return rows.slice().sort((a, b) => {
+    const ap = rowSortPriority(a);
+    const bp = rowSortPriority(b);
+    if (ap !== bp) return ap - bp;
+    return a.id - b.id;
+  });
+}
+
+/** Уникальные id на странице типа при нескольких примерах одного номера */
+function suffixHtmlIds(html, idSuffix) {
+  if (!idSuffix) return html;
+  return html.replace(/\bid="([^"]+)"/g, (_, id) => `id="${id}-${idSuffix}"`);
+}
+
+function suffixScriptDomIds(script, idSuffix) {
+  if (!idSuffix || !script) return script;
+  return script.replace(
+    /getElementById\(\s*(['"])([^'"]+)\1\s*\)/g,
+    (_, q, id) => `getElementById(${q}${id}-${idSuffix}${q})`,
+  );
+}
+
+function stripScriptsAfterMain(html) {
+  return html.replace(
+    /<\/main>\s*(?:<script>[\s\S]*?<\/script>\s*)+/g,
+    "</main>\n",
+  );
+}
 
 /** Убрать из текста задания отсылки к демоверсии — для страниц type-* (и тела ex до подписи). */
 function stripOgeSourceFromPublicHtml(html) {
@@ -17,11 +73,14 @@ function stripOgeSourceFromPublicHtml(html) {
       /Экспериментальная задача \(демоверсия ОГЭ 2026\)/g,
       "Экспериментальная задача",
     )
-    .replace(/\(демоверсия ОГЭ 2026\)/g, "")
     .replace(
-      /Эталон ответа \(демоверсия ОГЭ 2026\)/g,
-      "Эталон ответа",
+      /Экспериментальная задача \(демоверсия ОГЭ 2025\)/g,
+      "Экспериментальная задача",
     )
+    .replace(/\(демоверсия ОГЭ 2026\)/g, "")
+    .replace(/Эталон ответа \(демоверсия ОГЭ 2026\)/g, "Эталон ответа")
+    .replace(/\(демоверсия ОГЭ 2025\)/g, "")
+    .replace(/Эталон ответа \(демоверсия ОГЭ 2025\)/g, "Эталон ответа")
     .replace(/\(\s*по демоверсии:\s*/gi, "(")
     .replace(/В официальном ключе демоверсии/gi, "В официальном ключе")
     .replace(
@@ -113,6 +172,11 @@ function extractAnswerPartsFromOgeScript(scr) {
   if (m) return [m[1]];
   m = scr.match(/\bn\s*===\s*(\d+)\s*;/);
   if (m) return [m[1]];
+  m = scr.match(/Math\.round\(n\s*\*\s*10\)\s*===\s*(\d+)/);
+  if (m) {
+    const val = Number(m[1]) / 10;
+    return [String(val).replace(".", ",")];
+  }
   m = scr.match(/\b(?:s|sorted)\s*===\s*"(\d{2})"/);
   if (m) return m[1].split("");
   m = scr.match(/(?:const|let|var)\s+ok\s*=\s*([^;]+);/);
@@ -141,6 +205,106 @@ function getFirstInlineScriptInnerAfterArticle(html) {
   return m ? m[1] : "";
 }
 
+/** Для списков с чекбоксами и лимитом выбора (число совпадает с длиной ключа correct). */
+function extractCheckboxLimitFromRaw(raw) {
+  const scr = getFirstInlineScriptInnerAfterArticle(raw);
+  const m = scr.match(/(?:const|let|var)\s+correct\s*=\s*\[([^\]]*)\]/);
+  if (!m) return null;
+  const parts = [...m[1].matchAll(/"([^"]*)"/g)].map((x) => x[1]);
+  if (parts.length < 2) return null;
+  const articleMatch = raw.match(/<article class="card">([\s\S]*?)<\/article>/);
+  if (!articleMatch) return null;
+  let taskBody;
+  try {
+    taskBody = splitAtLead(articleMatch[1]).taskBody;
+  } catch {
+    return null;
+  }
+  if (
+    !taskBody.includes("oge-statements") ||
+    !taskBody.includes('type="checkbox"')
+  ) {
+    return null;
+  }
+  return parts.length;
+}
+
+/** Задания с двумя верными и OGE_twoChoiceAllOk — для делегированной проверки на странице типа. */
+function extractTwoChoiceMetaFromRaw(raw) {
+  const scr = getFirstInlineScriptInnerAfterArticle(raw);
+  if (!scr.includes("OGE_twoChoiceAllOk")) return null;
+  const mCorrect = scr.match(/(?:const|let|var)\s+correct\s*=\s*\[([^\]]*)\]/);
+  if (!mCorrect) return null;
+  const parts = [...mCorrect[1].matchAll(/"([^"]*)"/g)].map((x) => x[1]);
+  if (parts.length !== 2) return null;
+  let optionCount = null;
+  const mOpt = scr.match(/OGE_twoChoiceAllOk\s*\([\s\S]*?,\s*(\d+)\s*\)\s*;/);
+  if (mOpt) optionCount = Number(mOpt[1]);
+  const mScope = scr.match(
+    /OGE_eachTwoChoiceScope\s*\(\s*correct\s*,\s*(\d+)\s*,/,
+  );
+  if (mScope) optionCount = Number(mScope[1]);
+  if (optionCount === null) return null;
+  const articleMatch = raw.match(/<article class="card">([\s\S]*?)<\/article>/);
+  if (!articleMatch) return null;
+  try {
+    const taskBody = splitAtLead(articleMatch[1]).taskBody;
+    if (
+      !taskBody.includes("oge-statements") ||
+      !taskBody.includes('type="checkbox"')
+    ) {
+      return null;
+    }
+  } catch {
+    return null;
+  }
+  const sorted = parts.slice().sort((a, b) => Number(a) - Number(b));
+  return { correct: sorted, optionCount };
+}
+
+/** Задание 16: только чекбоксы, сверка через sorted === exp. */
+function extractSortedCheckboxCorrectFromRaw(raw) {
+  const scr = getFirstInlineScriptInnerAfterArticle(raw);
+  if (scr.includes("OGE_twoChoiceAllOk")) return null;
+  if (!scr.includes("sorted === exp")) return null;
+  const mCorrect = scr.match(/(?:const|let|var)\s+correct\s*=\s*\[([^\]]*)\]/);
+  if (!mCorrect) return null;
+  const parts = [...mCorrect[1].matchAll(/"([^"]*)"/g)].map((x) => x[1]);
+  if (parts.length < 2) return null;
+  const articleMatch = raw.match(/<article class="card">([\s\S]*?)<\/article>/);
+  if (!articleMatch) return null;
+  try {
+    const taskBody = splitAtLead(articleMatch[1]).taskBody;
+    if (
+      !taskBody.includes("oge-statements") ||
+      !taskBody.includes('type="checkbox"')
+    ) {
+      return null;
+    }
+  } catch {
+    return null;
+  }
+  return parts.slice().sort((a, b) => Number(a) - Number(b));
+}
+
+function attrsForOgeInteractivity(raw) {
+  const parts = [];
+  const chkMax = extractCheckboxLimitFromRaw(raw);
+  if (chkMax !== null && chkMax !== undefined) {
+    parts.push(`data-oge-checkbox-max="${chkMax}"`);
+  }
+  const tc = extractTwoChoiceMetaFromRaw(raw);
+  if (tc !== null) {
+    parts.push(`data-oge-two-choice-correct="${tc.correct.join("|")}"`);
+    parts.push(`data-oge-option-count="${tc.optionCount}"`);
+  }
+  const sc = extractSortedCheckboxCorrectFromRaw(raw);
+  if (sc !== null && sc.length) {
+    parts.push(`data-oge-sorted-correct="${sc.join("|")}"`);
+  }
+  return parts.length ? ` ${parts.join(" ")}` : "";
+}
+
 /** Заменить тело первого обработчика addEventListener("click", function () { … }) */
 function replaceFirstClickHandlerBody(script, innerReplacement) {
   const needle = 'addEventListener("click", function () {';
@@ -160,9 +324,7 @@ function replaceFirstClickHandlerBody(script, innerReplacement) {
   if (depth !== 0) {
     return script;
   }
-  return (
-    script.slice(0, bodyStart) + innerReplacement + script.slice(j - 1)
-  );
+  return script.slice(0, bodyStart) + innerReplacement + script.slice(j - 1);
 }
 
 function buildExPageInlineScript(raw) {
@@ -191,58 +353,110 @@ const ogeDir = path.join(root, "pages", "oge");
 const exDir = path.join(ogeDir, "ex");
 fs.mkdirSync(exDir, { recursive: true });
 
+const byType = new Map();
 for (const row of registry.examples) {
-  const { id, type } = row;
+  const { type } = row;
+  if (!byType.has(type)) byType.set(type, []);
+  byType.get(type).push(row);
+}
+
+for (let type = 1; type <= 23; type++) {
+  const rowsRaw = byType.get(type);
+  if (!rowsRaw || !rowsRaw.length) continue;
+  const rows = sortRowsForType(rowsRaw);
   const p = pad2(type);
-  const srcPath = path.join(root, "data", "oge-source", `oge-${p}.html`);
-  if (!fs.existsSync(srcPath)) {
-    console.error("Нет файла", srcPath);
+
+  const firstPath = resolveSourcePath(rows[0], p);
+  if (!fs.existsSync(firstPath)) {
+    console.error("Нет файла", firstPath);
     process.exit(1);
   }
-  const raw = fs.readFileSync(srcPath, "utf8");
-  const typeHtml = rewriteLinksForType(raw);
-  const articleMatch = typeHtml.match(
+  const firstRaw = fs.readFileSync(firstPath, "utf8");
+  const typeHtmlBase = rewriteLinksForType(firstRaw);
+  const articleMatchBase = typeHtmlBase.match(
     /<article class="card">([\s\S]*?)<\/article>/,
   );
-  if (!articleMatch) {
-    throw new Error(`article: oge-${p}`);
+  if (!articleMatchBase) {
+    throw new Error(`article: ${firstPath}`);
   }
-  const { prefix, taskBody } = splitAtLead(articleMatch[1]);
+  const { prefix } = splitAtLead(articleMatchBase[1]);
   const prefixClean = stripOgeSourceFromPublicHtml(prefix);
-  const taskBodyClean = stripOgeSourceFromPublicHtml(taskBody);
-  const insert = `      <h3 class="oge-example-title" id="oge-ex-title-${id}"><a class="oge-task-seq" href="ex/${id}.html">Задание ${type} № ${id}</a></h3>
-      <div class="oge-subtask" id="oge-ex-${id}">
-${taskBodyClean
+
+  let inserts = "";
+  let typePageScripts = "";
+  for (const row of rows) {
+    const srcPath = resolveSourcePath(row, p);
+    if (!fs.existsSync(srcPath)) {
+      console.error("Нет файла", srcPath);
+      process.exit(1);
+    }
+    const raw = fs.readFileSync(srcPath, "utf8");
+    const typeHtml = rewriteLinksForType(raw);
+    const articleMatch = typeHtml.match(
+      /<article class="card">([\s\S]*?)<\/article>/,
+    );
+    const { taskBody } = splitAtLead(articleMatch[1]);
+    const taskBodyClean = stripOgeSourceFromPublicHtml(taskBody);
+    const interactivityAttrs = attrsForOgeInteractivity(raw);
+    const { id } = row;
+    const taskBodyForType = suffixHtmlIds(taskBodyClean, id);
+    inserts += `${inserts ? "\n" : ""}      <h3 class="oge-example-title" id="oge-ex-title-${id}"><a class="oge-task-seq" href="ex/${id}.html">Задание ${type} № ${id}</a></h3>
+      <div class="oge-subtask" id="oge-ex-${id}"${interactivityAttrs}>
+${taskBodyForType
   .split("\n")
   .map((line) => (line ? `        ${line}` : line))
   .join("\n")}
       </div>`;
-  const typeArticleInner = `${prefixClean}\n${insert}`;
-  const outType = replaceArticle(typeHtml, typeArticleInner.trimStart());
+    const rowScr = extractScriptsAfterArticle(raw);
+    if (rowScr) {
+      typePageScripts += suffixScriptDomIds(rowScr, id) + "\n  ";
+    }
+  }
+
+  const typeArticleInner = `${prefixClean}\n${inserts.trimEnd()}`;
+  let outType = replaceArticle(typeHtmlBase, typeArticleInner.trimStart());
+  outType = stripScriptsAfterMain(outType);
+  if (typePageScripts.trim()) {
+    outType = outType.replace(
+      "</body>",
+      `  ${typePageScripts.trim()}\n</body>`,
+    );
+  }
   fs.writeFileSync(path.join(ogeDir, `type-${p}.html`), outType, "utf8");
 
-  const exHtml0 = rewriteLinksForEx(raw);
-  let exHtml = exHtml0.replace(/<title>([^<]*)<\/title>/, (__, t) => {
-    const ins = t.replace(/^(ОГЭ, задание \d+)/, `$1 № ${id}`);
-    return `<title>${ins}</title>`;
-  });
-  const exArticleMatch = exHtml.match(
-    /<article class="card">([\s\S]*?)<\/article>/,
-  );
-  const inner = exArticleMatch[1];
-  const { prefix: exPrefix, taskBody: exTask } = splitAtLead(inner);
-  const lead = extractLeadParagraph(exPrefix);
-  const leadClean = stripOgeSourceFromPublicHtml(lead);
-  const exTaskClean = stripOgeSourceFromPublicHtml(exTask);
-  const prevP = type > 1 ? pad2(type - 1) : null;
-  const nextP = type < 23 ? pad2(type + 1) : null;
-  const prevLink = prevP
-    ? `<a href="../type-${prevP}.html">← Задание ${type - 1}</a>`
-    : `<a href="../index.html">← К списку</a>`;
-  const nextLink = nextP
-    ? `<a class="oge-task-nav__next" href="../type-${nextP}.html">Задание ${type + 1} →</a>`
-    : `<a class="oge-task-nav__next" href="../index.html">К списку заданий →</a>`;
-  const exArticle = `      <p><a href="../index.html">← К списку заданий ОГЭ</a> · <a href="../type-${p}.html">Задание ${type}</a></p>
+  for (const row of rows) {
+    const { id } = row;
+    const srcPath = resolveSourcePath(row, p);
+    const raw = fs.readFileSync(srcPath, "utf8");
+    const footerText = footerForRow(row);
+
+    const exHtml0 = rewriteLinksForEx(raw);
+    let exHtml = exHtml0.replace(/<title>([^<]*)<\/title>/, (__, t) => {
+      const ins = t.replace(/^(ОГЭ, задание \d+)/, `$1 № ${id}`);
+      return `<title>${ins}</title>`;
+    });
+    const exArticleMatch = exHtml.match(
+      /<article class="card">([\s\S]*?)<\/article>/,
+    );
+    const inner = exArticleMatch[1];
+    const { prefix: exPrefix, taskBody: exTask } = splitAtLead(inner);
+    const lead = extractLeadParagraph(exPrefix);
+    const leadClean = stripOgeSourceFromPublicHtml(lead);
+    const exTaskClean = stripOgeSourceFromPublicHtml(exTask);
+    const prevP = type > 1 ? pad2(type - 1) : null;
+    const nextP = type < 23 ? pad2(type + 1) : null;
+    const prevLink = prevP
+      ? `<a href="../type-${prevP}.html">← Задание ${type - 1}</a>`
+      : `<a href="../index.html">← К списку</a>`;
+    const nextLink = nextP
+      ? `<a class="oge-task-nav__next" href="../type-${nextP}.html">Задание ${type + 1} →</a>`
+      : `<a class="oge-task-nav__next" href="../index.html">К списку заданий →</a>`;
+    const exInteractivityAttrs = attrsForOgeInteractivity(raw);
+    const exTaskWrapped =
+      exInteractivityAttrs.trim() !== ""
+        ? `<div class="oge-subtask"${exInteractivityAttrs}>\n${exTaskClean}\n      </div>`
+        : exTaskClean;
+    const exArticle = `      <p><a href="../index.html">← К списку заданий ОГЭ</a> · <a href="../type-${p}.html">Задание ${type}</a></p>
       <nav class="oge-task-nav" aria-label="Соседние типы заданий ОГЭ">
         ${prevLink}
         ${nextLink}
@@ -250,24 +464,25 @@ ${taskBodyClean
       <h2>Задание ${type} № ${id}</h2>
       ${leadClean}
 
-      ${exTaskClean}
+      ${exTaskWrapped}
 
-      <p>Источник: ${OGE_SOURCE_FOOTER_TEXT}</p>`;
-  exHtml = replaceArticle(exHtml, exArticle.trimStart());
-  exHtml = exHtml.replace(
-    /<\/main>\s*(?:<script>[\s\S]*?<\/script>\s*)+/g,
-    "</main>\n",
-  );
-  const exReveal = buildExPageInlineScript(raw);
-  const exScr = exReveal ?? extractScriptsAfterArticle(raw);
-  if (exReveal) {
-    exHtml = exHtml.replace(/>Проверить</g, ">Ответ<");
+      <p>Источник: ${footerText}</p>`;
+    exHtml = replaceArticle(exHtml, exArticle.trimStart());
+    exHtml = exHtml.replace(
+      /<\/main>\s*(?:<script>[\s\S]*?<\/script>\s*)+/g,
+      "</main>\n",
+    );
+    const exReveal = buildExPageInlineScript(raw);
+    const exScr = exReveal ?? extractScriptsAfterArticle(raw);
+    if (exReveal) {
+      exHtml = exHtml.replace(/>Проверить</g, ">Ответ<");
+    }
+    if (exScr) {
+      exHtml = exHtml.replace("</body>", `  ${exScr}\n</body>`);
+    }
+    fs.writeFileSync(path.join(exDir, `${id}.html`), exHtml, "utf8");
+    console.log("OK", `type-${p}.html`, `ex/${id}.html`);
   }
-  if (exScr) {
-    exHtml = exHtml.replace("</body>", `  ${exScr}\n</body>`);
-  }
-  fs.writeFileSync(path.join(exDir, `${id}.html`), exHtml, "utf8");
-  console.log("OK", `type-${p}.html`, `ex/${id}.html`);
 }
 
 console.log("Готово: pages/oge/type-*.html и pages/oge/ex/*.html");

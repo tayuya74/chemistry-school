@@ -1,0 +1,133 @@
+<!doctype html>
+<html lang="ru">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>ОГЭ, задание 15 — Окислительно-восстановительные реакции</title>
+    <link rel="stylesheet" href="css/style.css" />
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0"
+    />
+    <script src="js/theme.js"></script>
+    <script src="js/oge-check-feedback.js"></script>
+  </head>
+  <body>
+    <header class="site-header">
+      <div class="site-header__inner">
+        <h1>ОГЭ</h1>
+        <div class="site-header__tail">
+          <nav>
+            <a href="index.html">Главная</a>
+            <a href="topics.html">Темы</a>
+            <a href="tables.html">Таблицы</a>
+            <a href="oge.html">ОГЭ</a>
+          </nav>
+          <button
+            type="button"
+            class="theme-toggle"
+            aria-label="Включить светлую тему"
+          >
+            <span class="material-symbols-outlined" aria-hidden="true"
+              >light_mode</span
+            >
+          </button>
+        </div>
+      </div>
+    </header>
+
+    <main class="container">
+      <article class="card">
+        <p><a href="oge.html">← К списку заданий ОГЭ</a></p>
+        <nav class="oge-task-nav" aria-label="Соседние задания ОГЭ">
+          <a href="oge-14.html">← К предыдущему типу (задание 14)</a>
+          <a class="oge-task-nav__next" href="oge-16.html">К следующему типу (задание 16) →</a>
+        </nav>
+        <h2>Задание 15</h2>
+        <p class="lead">Окислительно-восстановительные реакции</p>
+
+        <p>
+          Установите соответствие между схемой процесса, происходящего в окислительно-восстановительной реакции, и названием этого процесса: к каждой позиции, обозначенной буквой, подберите соответствующую позицию, обозначенную цифрой.
+        </p>
+
+        <div class="match-columns">
+          <div>
+            <strong>Схема процесса</strong>
+            <ul class="oge-match-plain">
+              <li>А) Ag<sup>+1</sup> → Ag<sup>0</sup></li>
+              <li>Б) N<sup>+2</sup> → N<sup>+4</sup></li>
+              <li>В) O<sub>2</sub><sup>0</sup> → 2O<sup>−2</sup></li>
+            </ul>
+          </div>
+          <div>
+            <strong>Название процесса</strong>
+            <ul class="oge-match-plain">
+              <li>1) окисление</li>
+              <li>2) восстановление</li>
+            </ul>
+          </div>
+        </div>
+
+        <p>Запишите в таблицу выбранные цифры под соответствующими буквами.</p>
+        <table class="match-answer-table">
+          <thead>
+            <tr>
+              <th>А</th>
+              <th>Б</th>
+              <th>В</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>
+                <select id="sA" aria-label="Ответ для А">
+                  <option value="">—</option>
+                  <option value="1">1</option>
+                  <option value="2">2</option>
+                </select>
+              </td>
+              <td>
+                <select id="sB" aria-label="Ответ для Б">
+                  <option value="">—</option>
+                  <option value="1">1</option>
+                  <option value="2">2</option>
+                </select>
+              </td>
+              <td>
+                <select id="sV" aria-label="Ответ для В">
+                  <option value="">—</option>
+                  <option value="1">1</option>
+                  <option value="2">2</option>
+                </select>
+              </td>
+            </tr>
+          </tbody>
+        </table>
+
+        <p style="margin-top: 16px">
+          <button type="button" id="checkBtn">Проверить</button>
+        </p>
+        <p id="resultOut" class="result" role="status"></p>
+      </article>
+    </main>
+
+    <script>
+      (function () {
+        document
+          .getElementById("checkBtn")
+          .addEventListener("click", function () {
+            const x = document.getElementById("sA").value;
+            const y = document.getElementById("sB").value;
+            const z = document.getElementById("sV").value;
+            const out = document.getElementById("resultOut");
+            if (!x || !y || !z) {
+              out.textContent = OGE_CHECK.retry;
+              return;
+            }
+            const ok = x === "2" && y === "1" && z === "2";
+            out.textContent = ok ? OGE_CHECK.ok : OGE_CHECK.retry;
+          });
+      })();
+    </script>
+  </body>
+</html>

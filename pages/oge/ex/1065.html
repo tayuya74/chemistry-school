@@ -1,0 +1,168 @@
+<!doctype html>
+<html lang="ru">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>ОГЭ, задание 19 № 1065 — Масса элемента по доле</title>
+    <link rel="stylesheet" href="../../../css/style.css" />
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0"
+    />
+    <script src="../../../js/theme.js"></script>
+    <script src="../../../js/oge-check-feedback.js"></script>
+  </head>
+  <body>
+    <header class="site-header">
+      <div class="site-header__inner">
+        <h1>ОГЭ</h1>
+        <div class="site-header__tail">
+          <nav>
+            <a href="../../../index.html">Главная</a>
+            <a href="../../topics/index.html">Темы</a>
+            <a href="../../tables.html">Таблицы</a>
+            <a href="../index.html">ОГЭ</a>
+          </nav>
+          <button
+            type="button"
+            class="theme-toggle"
+            aria-label="Включить светлую тему"
+          >
+            <span class="material-symbols-outlined" aria-hidden="true"
+              >light_mode</span
+            >
+          </button>
+        </div>
+      </div>
+    </header>
+
+    <main class="container">
+      <article class="card">
+<p><a href="../index.html">← К списку заданий ОГЭ</a> · <a href="../type-19.html">Задание 19</a></p>
+      <nav class="oge-task-nav" aria-label="Соседние типы заданий ОГЭ">
+        <a href="../type-18.html">← Задание 18</a>
+        <a class="oge-task-nav__next" href="../type-20.html">Задание 20 →</a>
+      </nav>
+      <h2>Задание 19 № 1065</h2>
+      <p class="lead">
+          Вычисления массы элемента по его массовой доле в веществе
+        </p>
+
+      <p class="tip" style="margin-bottom: 16px">
+          При проведении расчётов для всех элементов, кроме хлора, используйте
+          целые значения относительных атомных масс (Ar(Cl) = 35,5).
+        </p>
+
+        <p class="tip" style="margin-bottom: 16px">
+          При выполнении задания 19 используйте величину, которая определена в
+          задании 18, с указанной в нём степенью точности.
+        </p>
+
+        <p>
+          Цитрат магния — химическое соединение, соль магния и лимонной кислоты,
+          с формулой
+          Mg<sub>3</sub>(C<sub>6</sub>H<sub>5</sub>O<sub>7</sub>)<sub>2</sub>,
+          используемое в медицине при недостатке магния, который влияет на
+          работу сердечно-сосудистой системы в организме человека.
+        </p>
+
+        <p>
+          Чтобы покрывать суточную потребность животного в магнии, собаке массой
+          около 20&nbsp;кг ежедневно в пищу добавляют одну мерную ложечку
+          (10&nbsp;г) цитрата магния.
+          <strong
+            >Вычислите, сколько граммов (г) магния ежедневно получает собака с
+            этим препаратом.</strong
+          >
+          Запишите число с точностью до десятых.
+        </p>
+
+        <div
+          class="oge-mass-table-wrap"
+          role="region"
+          aria-label="Таблица для расчёта"
+        >
+          <table class="oge-mass-table">
+            <tbody>
+              <tr>
+                <td class="oge-mass-table__cell--blank"></td>
+                <td class="oge-mass-table__static">W, %</td>
+                <td>
+                  <input
+                    id="oge19tbl-r1c3"
+                    type="text"
+                    inputmode="text"
+                    autocomplete="off"
+                    aria-label="Верхняя правая ячейка таблицы"
+                  />
+                </td>
+              </tr>
+              <tr>
+                <td class="oge-mass-table__static">элемент</td>
+                <td>
+                  <input
+                    id="oge19tbl-r2c2"
+                    type="text"
+                    inputmode="text"
+                    autocomplete="off"
+                    aria-label="Массовая доля элемента, проценты"
+                  />
+                </td>
+                <td>
+                  <input
+                    id="oge19tbl-r2c3"
+                    type="text"
+                    inputmode="text"
+                    autocomplete="off"
+                    aria-label="Правая ячейка строки «элемент»"
+                  />
+                </td>
+              </tr>
+              <tr>
+                <td class="oge-mass-table__static">вещество</td>
+                <td class="oge-mass-table__static">100</td>
+                <td>
+                  <input
+                    id="oge19tbl-r3c3"
+                    type="text"
+                    inputmode="text"
+                    autocomplete="off"
+                    aria-label="Масса вещества"
+                  />
+                </td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+
+        <p class="oge-answer-label">Ответ (г):</p>
+        <p>
+          <input
+            id="ansNum"
+            type="text"
+            inputmode="decimal"
+            class="oge-answer-input"
+            autocomplete="off"
+            aria-label="Масса магния в граммах"
+          />
+        </p>
+        <p style="margin-top: 16px">
+          <button type="button" id="checkBtn">Ответ</button>
+        </p>
+        <p id="resultOut" class="result" role="status"></p>
+
+      <p>Источник: Демонстрационный вариант ОГЭ по химии 2025 года (ФИПИ).</p>
+    </article>
+    </main>
+  <script>
+      (function () {
+        document
+          .getElementById("checkBtn")
+          .addEventListener("click", function () {
+          const out = document.getElementById("resultOut");
+          if (out) out.textContent = OGE_EX_formatAnswer(["1,6"]);
+        });
+      })();
+    </script>
+</body>
+</html>

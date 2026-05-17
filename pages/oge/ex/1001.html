@@ -46,7 +46,8 @@
       <h2>Задание 1 № 1001</h2>
       <p class="lead">Химические элементы и вещества</p>
 
-      <p>
+      <div class="oge-subtask" data-oge-checkbox-max="2" data-oge-two-choice-correct="2|3" data-oge-option-count="5">
+<p>
           Выберите два утверждения, в которых говорится об азоте как о
           <strong>простом веществе</strong>.
         </p>
@@ -125,6 +126,7 @@
           <button type="button" id="checkTask1">Ответ</button>
         </p>
         <p id="resultTask1" class="result" role="status"></p>
+      </div>
 
       <p>Источник: Демонстрационный вариант ОГЭ по химии 2026 года (ФИПИ).</p>
     </article>
@@ -132,33 +134,20 @@
   <script>
       (function () {
         const correct = ["2", "3"];
-        const btn = document.getElementById("checkTask1");
-        const out = document.getElementById("resultTask1");
-        const boxes = document.querySelectorAll(
-          '.oge-statements input[type="checkbox"]',
-        );
-        const d1 = document.getElementById("ansDigit1");
-        const d2 = document.getElementById("ansDigit2");
-
-        function updateCheckboxLimit() {
-          let n = 0;
-          boxes.forEach(function (cb) {
-            if (cb.checked) n += 1;
-          });
-          const limit = n >= 2;
-          boxes.forEach(function (cb) {
-            cb.disabled = limit && !cb.checked;
-          });
-        }
-
-        boxes.forEach(function (cb) {
-          cb.addEventListener("change", updateCheckboxLimit);
-        });
-        updateCheckboxLimit();
-
-        btn.addEventListener("click", function () {
+        OGE_eachTwoChoiceScope(correct, 5, function (root, pair, optionCount) {
+          const boxes = root.querySelectorAll(
+            '.oge-statements input[type="checkbox"]',
+          );
+          const btn = root.querySelector("button[type='button']");
+          const out = root.querySelector(".result");
+          const inputs = root.querySelectorAll(
+            ".oge-answer-cells input[type='text']",
+          );
+          if (!btn || !out || inputs.length < 2) return;
+          btn.addEventListener("click", function () {
           const out = document.getElementById("resultTask1");
           if (out) out.textContent = OGE_EX_formatAnswer(["2","3"]);
+        });
         });
       })();
     </script>

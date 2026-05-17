@@ -180,3 +180,91 @@ window.OGE_answerDotsToCommasInField = function (inputEl) {
     attachNumericGuards();
   }
 })();
+
+/**
+ * Задания с чекбоксами и парой ячеек (OGE_twoChoiceAllOk): привязка по каждому
+ * `.oge-subtask` или одному `article.card`, чтобы на странице типа несколько
+ * примеров не делили один обработчик и лимит галочек.
+ */
+window.OGE_eachTwoChoiceScope = function (
+  fallbackCorrect,
+  fallbackOptionCount,
+  bindClick,
+) {
+  const roots = [];
+  document.querySelectorAll(".oge-subtask").forEach(function (el) {
+    if (el.querySelector('.oge-statements input[type="checkbox"]')) {
+      roots.push(el);
+    }
+  });
+  if (!roots.length) {
+    const art = document.querySelector("article.card");
+    if (art && art.querySelector('.oge-statements input[type="checkbox"]')) {
+      roots.push(art);
+    }
+  }
+  roots.forEach(function (root) {
+    const ds = root.dataset.ogeTwoChoiceCorrect;
+    const pair = ds ? ds.split("|") : fallbackCorrect.slice();
+    const sortedPair = pair.slice().sort(function (a, b) {
+      return Number(a) - Number(b);
+    });
+    const oc =
+      root.dataset.ogeOptionCount !== undefined &&
+      root.dataset.ogeOptionCount !== ""
+        ? parseInt(root.dataset.ogeOptionCount, 10)
+        : fallbackOptionCount;
+    bindClick(root, sortedPair, oc);
+  });
+};
+
+function bindOgeCheckboxLimitsBySubtask() {
+  const roots = [];
+  document.querySelectorAll(".oge-subtask").forEach(function (el) {
+    if (el.querySelector('.oge-statements input[type="checkbox"]')) {
+      roots.push(el);
+    }
+  });
+  if (!roots.length) {
+    const art = document.querySelector("article.card");
+    if (art && art.querySelector('.oge-statements input[type="checkbox"]')) {
+      roots.push(art);
+    }
+  }
+  roots.forEach(function (root) {
+    const boxes = root.querySelectorAll(
+      '.oge-statements input[type="checkbox"]',
+    );
+    if (!boxes.length) return;
+    let max = 2;
+    const attr = root.getAttribute("data-oge-checkbox-max");
+    if (attr !== null && attr !== "") {
+      const parsed = parseInt(attr, 10);
+      if (!isNaN(parsed) && parsed > 0) max = parsed;
+    }
+    function sync() {
+      let n = 0;
+      boxes.forEach(function (cb) {
+        if (cb.checked) n += 1;
+      });
+      const cap = n >= max;
+      boxes.forEach(function (cb) {
+        cb.disabled = cap && !cb.checked;
+      });
+    }
+    boxes.forEach(function (cb) {
+      cb.addEventListener("change", sync);
+    });
+    sync();
+  });
+}
+
+function initOgeSubtaskCheckboxLimits() {
+  bindOgeCheckboxLimitsBySubtask();
+}
+
+if (document.readyState === "loading") {
+  document.addEventListener("DOMContentLoaded", initOgeSubtaskCheckboxLimits);
+} else {
+  initOgeSubtaskCheckboxLimits();
+}
