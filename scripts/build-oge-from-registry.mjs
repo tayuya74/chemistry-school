@@ -11,6 +11,22 @@ const FOOTER_VARIANT_1 =
   "ОГЭ. Типовые экзаменационные варианты, вариант 1 (Издательство «Национальное образование», 2025).";
 const FOOTER_VARIANT_2 =
   "ОГЭ. Типовые экзаменационные варианты, вариант 2 (Издательство «Национальное образование», 2025).";
+const FOOTER_VARIANT_3 =
+  "ОГЭ. Типовые экзаменационные варианты, вариант 3 (Издательство «Национальное образование», 2025).";
+const FOOTER_VARIANT_4 =
+  "ОГЭ. Типовые экзаменационные варианты, вариант 4 (Издательство «Национальное образование», 2025).";
+const FOOTER_VARIANT_5 =
+  "ОГЭ. Типовые экзаменационные варианты, вариант 5 (Издательство «Национальное образование», 2025).";
+const FOOTER_VARIANT_6 =
+  "ОГЭ. Типовые экзаменационные варианты, вариант 6 (Издательство «Национальное образование», 2025).";
+const FOOTER_VARIANT_7 =
+  "ОГЭ. Типовые экзаменационные варианты, вариант 7 (Издательство «Национальное образование», 2025).";
+const FOOTER_VARIANT_8 =
+  "ОГЭ. Типовые экзаменационные варианты, вариант 8 (Издательство «Национальное образование», 2025).";
+const FOOTER_VARIANT_9 =
+  "ОГЭ. Типовые экзаменационные варианты, вариант 9 (Издательство «Национальное образование», 2025).";
+const FOOTER_VARIANT_10 =
+  "ОГЭ. Типовые экзаменационные варианты, вариант 10 (Издательство «Национальное образование», 2025).";
 
 /** Записи без sourceDir — демо 2025 (ФИПИ), шаблоны в data/oge-source/default/ */
 function resolveSourcePath(row, paddedType) {
@@ -24,15 +40,31 @@ function footerForRow(row) {
   if (row.sourceDir === "2026-demo") return FOOTER_2026;
   if (row.sourceDir === "variant-1") return FOOTER_VARIANT_1;
   if (row.sourceDir === "variant-2") return FOOTER_VARIANT_2;
+  if (row.sourceDir === "variant-3") return FOOTER_VARIANT_3;
+  if (row.sourceDir === "variant-4") return FOOTER_VARIANT_4;
+  if (row.sourceDir === "variant-5") return FOOTER_VARIANT_5;
+  if (row.sourceDir === "variant-6") return FOOTER_VARIANT_6;
+  if (row.sourceDir === "variant-7") return FOOTER_VARIANT_7;
+  if (row.sourceDir === "variant-8") return FOOTER_VARIANT_8;
+  if (row.sourceDir === "variant-9") return FOOTER_VARIANT_9;
+  if (row.sourceDir === "variant-10") return FOOTER_VARIANT_10;
   return FOOTER_2025;
 }
 
-/** Порядок на странице типа: демо 2026, вариант 1, вариант 2, корень (демо 2025); внутри по id */
+/** Порядок на странице типа: демо 2026, варианты 1–4, корень (демо 2025); внутри по id */
 function rowSortPriority(row) {
   if (row.sourceDir === "2026-demo") return 0;
   if (row.sourceDir === "variant-1") return 1;
   if (row.sourceDir === "variant-2") return 2;
-  return 3;
+  if (row.sourceDir === "variant-3") return 3;
+  if (row.sourceDir === "variant-4") return 4;
+  if (row.sourceDir === "variant-5") return 5;
+  if (row.sourceDir === "variant-6") return 6;
+  if (row.sourceDir === "variant-7") return 7;
+  if (row.sourceDir === "variant-8") return 8;
+  if (row.sourceDir === "variant-9") return 9;
+  if (row.sourceDir === "variant-10") return 10;
+  return 11;
 }
 
 function sortRowsForType(rows) {
@@ -177,11 +209,15 @@ function extractAnswerPartsFromOgeScript(scr) {
     const val = Number(m[1]) / 10;
     return [String(val).replace(".", ",")];
   }
-  m = scr.match(/\b(?:s|sorted)\s*===\s*"(\d{2})"/);
+  m = scr.match(/Math\.abs\(\s*n\s*-\s*(\d+(?:\.\d+)?)\s*\)\s*</);
+  if (m) return [m[1].replace(".", ",")];
+  m = scr.match(/\b(?:s|sorted)\s*===\s*"(\d{2,3})"/);
   if (m) return m[1].split("");
   m = scr.match(/(?:const|let|var)\s+ok\s*=\s*([^;]+);/);
   if (m) {
     const expr = m[1].trim();
+    const numericEq = expr.match(/^n\s*===\s*(\d+(?:\.\d+)?)$/);
+    if (numericEq) return [numericEq[1].replace(".", ",")];
     const eqs = [...expr.matchAll(/(\w+)\s*===\s*"([^"]*)"/g)];
     if (
       eqs.length === 1 &&
@@ -208,6 +244,7 @@ function getFirstInlineScriptInnerAfterArticle(html) {
 /** Для списков с чекбоксами и лимитом выбора (число совпадает с длиной ключа correct). */
 function extractCheckboxLimitFromRaw(raw) {
   const scr = getFirstInlineScriptInnerAfterArticle(raw);
+  if (scr.includes("OGE_multiChoiceAllOk")) return null;
   const m = scr.match(/(?:const|let|var)\s+correct\s*=\s*\[([^\]]*)\]/);
   if (!m) return null;
   const parts = [...m[1].matchAll(/"([^"]*)"/g)].map((x) => x[1]);
@@ -242,6 +279,37 @@ function extractTwoChoiceMetaFromRaw(raw) {
   if (mOpt) optionCount = Number(mOpt[1]);
   const mScope = scr.match(
     /OGE_eachTwoChoiceScope\s*\(\s*correct\s*,\s*(\d+)\s*,/,
+  );
+  if (mScope) optionCount = Number(mScope[1]);
+  if (optionCount === null) return null;
+  const articleMatch = raw.match(/<article class="card">([\s\S]*?)<\/article>/);
+  if (!articleMatch) return null;
+  try {
+    const taskBody = splitAtLead(articleMatch[1]).taskBody;
+    if (
+      !taskBody.includes("oge-statements") ||
+      !taskBody.includes('type="checkbox"')
+    ) {
+      return null;
+    }
+  } catch {
+    return null;
+  }
+  const sorted = parts.slice().sort((a, b) => Number(a) - Number(b));
+  return { correct: sorted, optionCount };
+}
+
+/** Задание 16: два или три верных из четырёх, без ограничения числа галочек. */
+function extractMultiChoiceMetaFromRaw(raw) {
+  const scr = getFirstInlineScriptInnerAfterArticle(raw);
+  if (!scr.includes("OGE_multiChoiceAllOk")) return null;
+  const mCorrect = scr.match(/(?:const|let|var)\s+correct\s*=\s*\[([^\]]*)\]/);
+  if (!mCorrect) return null;
+  const parts = [...mCorrect[1].matchAll(/"([^"]*)"/g)].map((x) => x[1]);
+  if (parts.length < 2) return null;
+  let optionCount = null;
+  const mScope = scr.match(
+    /OGE_eachMultiChoiceScope\s*\(\s*correct\s*,\s*(\d+)\s*,/,
   );
   if (mScope) optionCount = Number(mScope[1]);
   if (optionCount === null) return null;
@@ -297,6 +365,11 @@ function attrsForOgeInteractivity(raw) {
   if (tc !== null) {
     parts.push(`data-oge-two-choice-correct="${tc.correct.join("|")}"`);
     parts.push(`data-oge-option-count="${tc.optionCount}"`);
+  }
+  const mc = extractMultiChoiceMetaFromRaw(raw);
+  if (mc !== null) {
+    parts.push(`data-oge-multi-choice-correct="${mc.correct.join("|")}"`);
+    parts.push(`data-oge-option-count="${mc.optionCount}"`);
   }
   const sc = extractSortedCheckboxCorrectFromRaw(raw);
   if (sc !== null && sc.length) {

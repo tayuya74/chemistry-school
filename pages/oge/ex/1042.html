@@ -3,7 +3,10 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>ОГЭ, задание 19 № 1042 — Вычисления массы элемента по его массовой доле в веществе</title>
+    <title>
+      ОГЭ, задание 19 — Вычисления массы элемента по его массовой доле в
+      веществе
+    </title>
     <link rel="stylesheet" href="../../../css/style.css" />
     <link
       rel="stylesheet"
@@ -44,7 +47,9 @@
         <a class="oge-task-nav__next" href="../type-20.html">Задание 20 →</a>
       </nav>
       <h2>Задание 19 № 1042</h2>
-      <p class="lead">Вычисления массы элемента по его массовой доле в веществе</p>
+      <p class="lead">
+          Вычисления массы элемента по его массовой доле в веществе
+        </p>
 
       <p class="tip" style="margin-bottom: 16px">
           При проведении расчётов для всех элементов, кроме хлора, используйте
@@ -142,7 +147,7 @@
           />
         </p>
         <p style="margin-top: 16px">
-          <button type="button" id="checkBtn">Проверить</button>
+          <button type="button" id="checkBtn">Ответ</button>
         </p>
         <p id="resultOut" class="result" role="status"></p>
 
@@ -154,18 +159,9 @@
         document
           .getElementById("checkBtn")
           .addEventListener("click", function () {
-            const raw = OGE_answerDotsToCommasInField(
-              document.getElementById("ansNum"),
-            );
-            const n = parseFloat(raw);
-            const out = document.getElementById("resultOut");
-            if (isNaN(n)) {
-              out.textContent = OGE_CHECK.retry;
-              return;
-            }
-            const ok = Math.abs(n - 53.4) < 0.06;
-            out.textContent = ok ? OGE_CHECK.ok : OGE_CHECK.retry;
-          });
+          const out = document.getElementById("resultOut");
+          if (out) out.textContent = OGE_EX_formatAnswer(["53,4"]);
+        });
       })();
     </script>
 </body>

@@ -57,31 +57,57 @@
           Из перечисленных суждений о правилах работы с веществами в лаборатории
           и быту выберите <strong>верное(-ые) суждение(-я)</strong>.
         </p>
-        <ol>
+        <ol class="oge-statements">
           <li>
-            Для определения наличия щёлочи в растворе его следует попробовать на
-            вкус.
+            <label>
+              <input type="checkbox" name="st" value="1" />
+              <span
+                >Для определения наличия щёлочи в растворе его следует
+                попробовать на вкус.</span
+              >
+            </label>
           </li>
           <li>
-            Аммиак можно собирать методом вытеснения воздуха и методом
-            вытеснения воды.
+            <label>
+              <input type="checkbox" name="st" value="2" />
+              <span
+                >Аммиак можно собирать методом вытеснения воздуха и методом
+                вытеснения воды.</span
+              >
+            </label>
           </li>
           <li>
-            При приготовлении раствора медного купороса для опрыскивания
-            растений нельзя использовать оцинкованную посуду.
+            <label>
+              <input type="checkbox" name="st" value="3" />
+              <span
+                >При приготовлении раствора медного купороса для опрыскивания
+                растений нельзя использовать оцинкованную посуду.</span
+              >
+            </label>
           </li>
-          <li>Для выпаривания растворов используют фарфоровую чашечку.</li>
+          <li>
+            <label>
+              <input type="checkbox" name="st" value="4" />
+              <span
+                >Для выпаривания растворов используют фарфоровую чашечку.</span
+              >
+            </label>
+          </li>
         </ol>
         <p>Запишите в поле ответа номер(а) верного(-ых) суждения(-й).</p>
         <p class="oge-answer-label">Ответ:</p>
-        <div class="oge-answer-cells" role="group" aria-label="Две цифры">
+        <div
+          class="oge-answer-cells"
+          role="group"
+          aria-label="Номера верных суждений"
+        >
           <input
             id="c1"
             type="text"
             inputmode="numeric"
             maxlength="1"
             autocomplete="off"
-            aria-label="Первая ячейка ответа"
+            aria-label="1-я ячейка ответа"
           />
           <input
             id="c2"
@@ -89,7 +115,23 @@
             inputmode="numeric"
             maxlength="1"
             autocomplete="off"
-            aria-label="Вторая ячейка ответа"
+            aria-label="2-я ячейка ответа"
+          />
+          <input
+            id="c3"
+            type="text"
+            inputmode="numeric"
+            maxlength="1"
+            autocomplete="off"
+            aria-label="3-я ячейка ответа"
+          />
+          <input
+            id="c4"
+            type="text"
+            inputmode="numeric"
+            maxlength="1"
+            autocomplete="off"
+            aria-label="4-я ячейка ответа"
           />
         </div>
         <p style="margin-top: 16px">
@@ -101,20 +143,37 @@
 
     <script>
       (function () {
-        document
-          .getElementById("checkBtn")
-          .addEventListener("click", function () {
-            const a = document.getElementById("c1").value.trim();
-            const b = document.getElementById("c2").value.trim();
-            const out = document.getElementById("resultOut");
-            const cells = [a, b].filter(Boolean).sort().join("");
-            const ok =
-              (cells === "34" || cells === "43") &&
-              a !== b &&
-              a !== "" &&
-              b !== "";
-            out.textContent = ok ? OGE_CHECK.ok : OGE_CHECK.retry;
-          });
+        const correct = ["3", "4"];
+        OGE_eachMultiChoiceScope(
+          correct,
+          4,
+          function (root, answer, optionCount) {
+            const boxes = root.querySelectorAll(
+              '.oge-statements input[type="checkbox"]',
+            );
+            const btn = root.querySelector("button[type='button']");
+            const out = root.querySelector(".result");
+            const inputs = root.querySelectorAll(
+              ".oge-answer-cells input[type='text']",
+            );
+            if (!btn || !out || inputs.length < 4) return;
+            btn.addEventListener("click", function () {
+              const chosen = [];
+              boxes.forEach(function (cb) {
+                if (cb.checked) chosen.push(cb.value);
+              });
+              const ok = OGE_multiChoiceAllOk(
+                chosen,
+                Array.from(inputs, function (input) {
+                  return input.value.trim();
+                }),
+                answer,
+                optionCount,
+              );
+              out.textContent = ok ? OGE_CHECK.ok : OGE_CHECK.retry;
+            });
+          },
+        );
       })();
     </script>
   </body>

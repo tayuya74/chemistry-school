@@ -40,8 +40,9 @@
       <article class="card">
         <p><a href="oge.html">← К списку заданий ОГЭ</a></p>
         <nav class="oge-task-nav" aria-label="Соседние задания ОГЭ">
-
-          <a class="oge-task-nav__next" href="oge-02.html">К следующему типу (задание 2) →</a>
+          <a class="oge-task-nav__next" href="oge-02.html"
+            >К следующему типу (задание 2) →</a
+          >
         </nav>
         <h2>Задание 1</h2>
         <p class="lead">Химические элементы и вещества</p>
@@ -61,19 +62,26 @@
           <li>
             <label>
               <input type="checkbox" name="st" value="2" />
-              <span>В природе встречаются шесть стабильных изотопов кальция.</span>
+              <span
+                >В природе встречаются шесть стабильных изотопов кальция.</span
+              >
             </label>
           </li>
           <li>
             <label>
               <input type="checkbox" name="st" value="3" />
-              <span>Кальций используют для десульфуризации нефтепродуктов.</span>
+              <span
+                >Кальций используют для десульфуризации нефтепродуктов.</span
+              >
             </label>
           </li>
           <li>
             <label>
               <input type="checkbox" name="st" value="4" />
-              <span>В промышленности кальций получают электролитическими методами.</span>
+              <span
+                >В промышленности кальций получают электролитическими
+                методами.</span
+              >
             </label>
           </li>
           <li>
@@ -113,7 +121,7 @@
 
     <script>
       (function () {
-        const correct = ["1","2"];
+        const correct = ["1", "2"];
         OGE_eachTwoChoiceScope(correct, 5, function (root, pair, optionCount) {
           const boxes = root.querySelectorAll(
             '.oge-statements input[type="checkbox"]',

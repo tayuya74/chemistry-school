@@ -48,7 +48,7 @@
           Безопасность в лаборатории. Разделение смесей. Химическое загрязнение
         </p>
 
-      <div class="oge-subtask" data-oge-checkbox-max="2" data-oge-sorted-correct="3|4">
+      <div class="oge-subtask" data-oge-multi-choice-correct="3|4" data-oge-option-count="4">
 <p>
           Из перечисленных суждений о правилах работы с веществами в лаборатории
           и быту выберите <strong>верное(-ые) суждение(-я)</strong>.
@@ -90,7 +90,46 @@
             >
           </li>
         </ol>
-        <p>Отметьте галочками верные суждения.</p>
+        <p>Запишите в поле ответа номер(а) верного(-ых) суждения(-й).</p>
+        <p class="oge-answer-label">Ответ:</p>
+        <div
+          class="oge-answer-cells"
+          role="group"
+          aria-label="Номера верных суждений"
+        >
+          <input
+            id="c1"
+            type="text"
+            inputmode="numeric"
+            maxlength="1"
+            autocomplete="off"
+            aria-label="1-я ячейка ответа"
+          />
+          <input
+            id="c2"
+            type="text"
+            inputmode="numeric"
+            maxlength="1"
+            autocomplete="off"
+            aria-label="2-я ячейка ответа"
+          />
+          <input
+            id="c3"
+            type="text"
+            inputmode="numeric"
+            maxlength="1"
+            autocomplete="off"
+            aria-label="3-я ячейка ответа"
+          />
+          <input
+            id="c4"
+            type="text"
+            inputmode="numeric"
+            maxlength="1"
+            autocomplete="off"
+            aria-label="4-я ячейка ответа"
+          />
+        </div>
         <p style="margin-top: 16px">
           <button type="button" id="checkBtn">Ответ</button>
         </p>
@@ -103,47 +142,25 @@
   <script>
       (function () {
         const correct = ["3", "4"];
-        function rootsWithCheckboxes() {
-          const roots = [];
-          document.querySelectorAll(".oge-subtask").forEach(function (el) {
-            if (el.querySelector('.oge-statements input[type="checkbox"]')) {
-              roots.push(el);
-            }
-          });
-          if (!roots.length) {
-            const art = document.querySelector("article.card");
-            if (
-              art &&
-              art.querySelector('.oge-statements input[type="checkbox"]')
-            ) {
-              roots.push(art);
-            }
-          }
-          return roots;
-        }
-        rootsWithCheckboxes().forEach(function (root) {
-          const boxes = root.querySelectorAll(
-            '.oge-statements input[type="checkbox"]',
-          );
-          const btn = root.querySelector("button[type='button']");
-          const out = root.querySelector(".result");
-          if (!btn || !out) return;
-          const ds = root.dataset.ogeSortedCorrect;
-          const key = ds
-            ? ds
-                .split("|")
-                .slice()
-                .sort(function (a, b) {
-                  return Number(a) - Number(b);
-                })
-            : correct.slice().sort(function (a, b) {
-                return Number(a) - Number(b);
-              });
-          btn.addEventListener("click", function () {
+        OGE_eachMultiChoiceScope(
+          correct,
+          4,
+          function (root, answer, optionCount) {
+            const boxes = root.querySelectorAll(
+              '.oge-statements input[type="checkbox"]',
+            );
+            const btn = root.querySelector("button[type='button']");
+            const out = root.querySelector(".result");
+            const inputs = root.querySelectorAll(
+              ".oge-answer-cells input[type='text']",
+            );
+            if (!btn || !out || inputs.length < 4) return;
+            btn.addEventListener("click", function () {
           const out = document.getElementById("resultOut");
           if (out) out.textContent = OGE_EX_formatAnswer(["3","4"]);
         });
-        });
+          },
+        );
       })();
     </script>
 </body>

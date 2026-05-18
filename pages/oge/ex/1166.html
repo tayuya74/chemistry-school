@@ -1,0 +1,136 @@
+<!doctype html>
+<html lang="ru">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>ОГЭ, задание 5 № 1166 — Химическая связь</title>
+    <link rel="stylesheet" href="../../../css/style.css" />
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0"
+    />
+    <script src="../../../js/theme.js"></script>
+    <script src="../../../js/oge-check-feedback.js"></script>
+  </head>
+  <body>
+    <header class="site-header">
+      <div class="site-header__inner">
+        <h1>ОГЭ</h1>
+        <div class="site-header__tail">
+          <nav>
+            <a href="../../../index.html">Главная</a>
+            <a href="../../topics/index.html">Темы</a>
+            <a href="../../tables.html">Таблицы</a>
+            <a href="../index.html">ОГЭ</a>
+          </nav>
+          <button
+            type="button"
+            class="theme-toggle"
+            aria-label="Включить светлую тему"
+          >
+            <span class="material-symbols-outlined" aria-hidden="true"
+              >light_mode</span
+            >
+          </button>
+        </div>
+      </div>
+    </header>
+
+    <main class="container">
+      <article class="card">
+<p><a href="../index.html">← К списку заданий ОГЭ</a> · <a href="../type-05.html">Задание 5</a></p>
+      <nav class="oge-task-nav" aria-label="Соседние типы заданий ОГЭ">
+        <a href="../type-04.html">← Задание 4</a>
+        <a class="oge-task-nav__next" href="../type-06.html">Задание 6 →</a>
+      </nav>
+      <h2>Задание 5 № 1166</h2>
+      <p class="lead">Химическая связь</p>
+
+      <div class="oge-subtask" data-oge-checkbox-max="2" data-oge-two-choice-correct="3|5" data-oge-option-count="5">
+<p>
+          Из предложенного перечня выберите два вещества с
+          <strong>ковалентной полярной связью</strong>.
+        </p>
+        <ol class="oge-statements">
+          <li>
+            <label>
+              <input type="checkbox" name="st" value="1" />
+              <span>P<sub>4</sub></span>
+            </label>
+          </li>
+          <li>
+            <label>
+              <input type="checkbox" name="st" value="2" />
+              <span>K<sub>2</sub>O</span>
+            </label>
+          </li>
+          <li>
+            <label>
+              <input type="checkbox" name="st" value="3" />
+              <span>CO</span>
+            </label>
+          </li>
+          <li>
+            <label>
+              <input type="checkbox" name="st" value="4" />
+              <span>Mg<sub>3</sub>N<sub>2</sub></span>
+            </label>
+          </li>
+          <li>
+            <label>
+              <input type="checkbox" name="st" value="5" />
+              <span>SCl<sub>6</sub></span>
+            </label>
+          </li>
+        </ol>
+        <p>Запишите номера выбранных ответов.</p>
+        <p class="oge-answer-label">Ответ:</p>
+        <div class="oge-answer-cells" role="group" aria-label="Две цифры">
+          <input
+            id="c1"
+            type="text"
+            inputmode="numeric"
+            maxlength="1"
+            autocomplete="off"
+            aria-label="Первая ячейка ответа"
+          />
+          <input
+            id="c2"
+            type="text"
+            inputmode="numeric"
+            maxlength="1"
+            autocomplete="off"
+            aria-label="Вторая ячейка ответа"
+          />
+        </div>
+        <p style="margin-top: 16px">
+          <button type="button" id="checkBtn">Ответ</button>
+        </p>
+        <p id="resultOut" class="result" role="status"></p>
+      </div>
+
+      <p>Источник: ОГЭ. Типовые экзаменационные варианты, вариант 6 (Издательство «Национальное образование», 2025).</p>
+    </article>
+    </main>
+  <script>
+      (function () {
+        const correct = ["3", "5"];
+        OGE_eachTwoChoiceScope(correct, 5, function (root, pair, optionCount) {
+          const boxes = root.querySelectorAll(
+            '.oge-statements input[type="checkbox"]',
+          );
+          const btn = root.querySelector("button[type='button']");
+          const out = root.querySelector(".result");
+          const inputs = root.querySelectorAll(
+            ".oge-answer-cells input[type='text']",
+          );
+          if (!btn || !out || inputs.length < 2) return;
+          btn.addEventListener("click", function () {
+          const out = document.getElementById("resultOut");
+          if (out) out.textContent = OGE_EX_formatAnswer(["3","5"]);
+        });
+        });
+      })();
+    </script>
+</body>
+</html>

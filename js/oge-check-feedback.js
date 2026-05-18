@@ -17,6 +17,39 @@ window.OGE_EX_formatAnswer = function (parts) {
  * @param {string[]} correctPair два правильных номера **по возрастанию**, строками
  * @param {number} optionCount сколько пунктов в списке (1…N для проверки ввода)
  */
+window.OGE_multiChoiceAllOk = function (
+  chosenValues,
+  cellValues,
+  correctValues,
+  optionCount,
+) {
+  const sortedCorrect = correctValues.slice().sort();
+  const chosen = chosenValues.slice().sort();
+  const cells = cellValues.map((x) => String(x).trim()).filter(Boolean);
+  const cellsFilled = cells.length > 0;
+  const reCell = new RegExp("^[1-" + String(optionCount) + "]$");
+  const correctJoin = sortedCorrect.join("");
+  const cellStr = cellsFilled ? cells.slice().sort().join("") : "";
+  const cellsCorrect =
+    cellsFilled &&
+    cells.length === sortedCorrect.length &&
+    cells.every(function (x) {
+      return reCell.test(x);
+    }) &&
+    new Set(cells).size === cells.length &&
+    cellStr === correctJoin;
+  const boxesCorrect =
+    chosen.length === sortedCorrect.length && chosen.join("") === correctJoin;
+  const chosenStr = chosen.join("");
+  const bothFilled = cellsFilled && chosen.length > 0;
+  const multisetsMatch =
+    cellsFilled && chosen.length === cells.length && chosenStr === cellStr;
+  const onlyBoxes = boxesCorrect && !cellsFilled;
+  const onlyCells = cellsCorrect && chosen.length === 0;
+  const bothOk = bothFilled && multisetsMatch && boxesCorrect && cellsCorrect;
+  return onlyBoxes || onlyCells || bothOk;
+};
+
 window.OGE_twoChoiceAllOk = function (
   chosenValues,
   cellA,
@@ -24,37 +57,12 @@ window.OGE_twoChoiceAllOk = function (
   correctPair,
   optionCount,
 ) {
-  const sortedCorrect = correctPair.slice().sort();
-  const chosen = chosenValues.slice().sort();
-  const a = String(cellA).trim();
-  const b = String(cellB).trim();
-  const cellsFilled = a !== "" && b !== "";
-  const reCell = new RegExp("^[1-" + String(optionCount) + "]$");
-  const correctJoin = sortedCorrect.join("");
-  const cellStr = cellsFilled ? [a, b].slice().sort().join("") : "";
-  const cellsCorrect =
-    cellsFilled &&
-    reCell.test(a) &&
-    reCell.test(b) &&
-    a !== b &&
-    cellStr === correctJoin;
-  const boxesCorrect =
-    chosen.length === 2 &&
-    chosen[0] === sortedCorrect[0] &&
-    chosen[1] === sortedCorrect[1];
-  const chosenStr = chosen.join("");
-  const bothFilled = cellsFilled && chosen.length > 0;
-  const multisetsMatch =
-    cellsFilled && chosen.length === 2 && chosenStr === cellStr;
-  const onlyBoxes = boxesCorrect && !cellsFilled;
-  const onlyCells = cellsCorrect && chosen.length === 0;
-  const bothOk =
-    bothFilled &&
-    chosen.length === 2 &&
-    multisetsMatch &&
-    boxesCorrect &&
-    cellsCorrect;
-  return onlyBoxes || onlyCells || bothOk;
+  return OGE_multiChoiceAllOk(
+    chosenValues,
+    [cellA, cellB],
+    correctPair,
+    optionCount,
+  );
 };
 
 /**
@@ -218,6 +226,40 @@ window.OGE_eachTwoChoiceScope = function (
   });
 };
 
+window.OGE_eachMultiChoiceScope = function (
+  fallbackCorrect,
+  fallbackOptionCount,
+  bindClick,
+) {
+  const roots = [];
+  document.querySelectorAll(".oge-subtask").forEach(function (el) {
+    if (el.querySelector('.oge-statements input[type="checkbox"]')) {
+      roots.push(el);
+    }
+  });
+  if (!roots.length) {
+    const art = document.querySelector("article.card");
+    if (art && art.querySelector('.oge-statements input[type="checkbox"]')) {
+      roots.push(art);
+    }
+  }
+  roots.forEach(function (root) {
+    if (root.dataset.ogeMultiChoiceBound === "1") return;
+    root.dataset.ogeMultiChoiceBound = "1";
+    const ds = root.dataset.ogeMultiChoiceCorrect;
+    const answer = ds ? ds.split("|") : fallbackCorrect.slice();
+    const sortedAnswer = answer.slice().sort(function (a, b) {
+      return Number(a) - Number(b);
+    });
+    const oc =
+      root.dataset.ogeOptionCount !== undefined &&
+      root.dataset.ogeOptionCount !== ""
+        ? parseInt(root.dataset.ogeOptionCount, 10)
+        : fallbackOptionCount;
+    bindClick(root, sortedAnswer, oc);
+  });
+};
+
 function bindOgeCheckboxLimitsBySubtask() {
   const roots = [];
   document.querySelectorAll(".oge-subtask").forEach(function (el) {
@@ -232,6 +274,7 @@ function bindOgeCheckboxLimitsBySubtask() {
     }
   }
   roots.forEach(function (root) {
+    if (!root.hasAttribute("data-oge-checkbox-max")) return;
     const boxes = root.querySelectorAll(
       '.oge-statements input[type="checkbox"]',
     );

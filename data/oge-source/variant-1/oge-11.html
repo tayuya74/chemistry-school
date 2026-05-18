@@ -41,7 +41,9 @@
         <p><a href="oge.html">← К списку заданий ОГЭ</a></p>
         <nav class="oge-task-nav" aria-label="Соседние задания ОГЭ">
           <a href="oge-10.html">← К предыдущему типу (задание 10)</a>
-          <a class="oge-task-nav__next" href="oge-12.html">К следующему типу (задание 12) →</a>
+          <a class="oge-task-nav__next" href="oge-12.html"
+            >К следующему типу (задание 12) →</a
+          >
         </nav>
         <h2>Задание 11</h2>
         <p class="lead">Классификация химических реакций</p>
@@ -112,7 +114,7 @@
 
     <script>
       (function () {
-        const correct = ["2","3"];
+        const correct = ["2", "3"];
         OGE_eachTwoChoiceScope(correct, 5, function (root, pair, optionCount) {
           const boxes = root.querySelectorAll(
             '.oge-statements input[type="checkbox"]',

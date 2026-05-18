@@ -113,6 +113,27 @@ function twoAnswerCells(ids = ["c1", "c2"], aria = "Две цифры") {
         </div>`;
 }
 
+function fourAnswerCells(
+  ids = ["c1", "c2", "c3", "c4"],
+  aria = "Номера верных суждений",
+) {
+  return `        <p class="oge-answer-label">Ответ:</p>
+        <div class="oge-answer-cells" role="group" aria-label="${aria}">
+          ${ids
+            .map(
+              (id, i) => `<input
+            id="${id}"
+            type="text"
+            inputmode="numeric"
+            maxlength="1"
+            autocomplete="off"
+            aria-label="${i + 1}-я ячейка ответа"
+          />`,
+            )
+            .join("\n          ")}
+        </div>`;
+}
+
 function checkboxStatements(items) {
   return items
     .map(
@@ -124,6 +145,39 @@ function checkboxStatements(items) {
           </li>`,
     )
     .join("\n");
+}
+
+function multiChoiceScript(correct, optionCount = 4) {
+  const answer = JSON.stringify(correct);
+  return `      (function () {
+        const correct = ${answer};
+        OGE_eachMultiChoiceScope(correct, ${optionCount}, function (root, answer, optionCount) {
+          const boxes = root.querySelectorAll(
+            '.oge-statements input[type="checkbox"]',
+          );
+          const btn = root.querySelector("button[type='button']");
+          const out = root.querySelector(".result");
+          const inputs = root.querySelectorAll(
+            ".oge-answer-cells input[type='text']",
+          );
+          if (!btn || !out || inputs.length < 4) return;
+          btn.addEventListener("click", function () {
+            const chosen = [];
+            boxes.forEach(function (cb) {
+              if (cb.checked) chosen.push(cb.value);
+            });
+            const ok = OGE_multiChoiceAllOk(
+              chosen,
+              Array.from(inputs, function (input) {
+                return input.value.trim();
+              }),
+              answer,
+              optionCount,
+            );
+            out.textContent = ok ? OGE_CHECK.ok : OGE_CHECK.retry;
+          });
+        });
+      })();`;
 }
 
 function twoChoiceScript(correct, optionCount = 5) {
@@ -772,44 +826,29 @@ ${checkBlock()}`,
           Из перечисленных суждений о правилах работы с веществами в лаборатории
           и быту выберите <strong>верное(-ые) суждение(-я)</strong>.
         </p>
-        <ol>
-          <li>
-            Для переноса порошкообразных реагентов из склянки в пробирку
-            необходимо использовать химическую воронку.
-          </li>
-          <li>
-            Средства бытовой химии можно хранить в любом свободном контейнере с
-            плотно закрытой крышкой.
-          </li>
-          <li>
-            Запрещается проводить опыты с реактивами, находящимися в склянке без
-            подписи.
-          </li>
-          <li>
-            Сероводород, аммиак, хлороводород относятся к группе ядовитых газов.
-          </li>
+        <ol class="oge-statements">
+${checkboxStatements([
+  [
+    1,
+    "Для переноса порошкообразных реагентов из склянки в пробирку необходимо использовать химическую воронку.",
+  ],
+  [
+    2,
+    "Средства бытовой химии можно хранить в любом свободном контейнере с плотно закрытой крышкой.",
+  ],
+  [
+    3,
+    "Запрещается проводить опыты с реактивами, находящимися в склянке без подписи.",
+  ],
+  [4, "Сероводород, аммиак, хлороводород относятся к группе ядовитых газов."],
+])}
         </ol>
         <p>
           Запишите в поле ответа номер(а) верного(-ых) суждения(-й).
         </p>
-${twoAnswerCells()}
+${fourAnswerCells()}
 ${checkBlock()}`,
-    script: `      (function () {
-        document
-          .getElementById("checkBtn")
-          .addEventListener("click", function () {
-            const a = document.getElementById("c1").value.trim();
-            const b = document.getElementById("c2").value.trim();
-            const out = document.getElementById("resultOut");
-            const cells = [a, b].filter(Boolean).sort().join("");
-            const ok =
-              (cells === "34" || cells === "43") &&
-              a !== b &&
-              a !== "" &&
-              b !== "";
-            out.textContent = ok ? OGE_CHECK.ok : OGE_CHECK.retry;
-          });
-      })();`,
+    script: multiChoiceScript(["3", "4"], 4),
   },
   {
     type: 17,

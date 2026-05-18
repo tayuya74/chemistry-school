@@ -1,0 +1,116 @@
+<!doctype html>
+<html lang="ru">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>
+      ОГЭ, задание 18 — Вычисление массовой доли химического элемента в веществе
+    </title>
+    <link rel="stylesheet" href="css/style.css" />
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0"
+    />
+    <script src="js/theme.js"></script>
+    <script src="js/oge-check-feedback.js"></script>
+  </head>
+  <body>
+    <header class="site-header">
+      <div class="site-header__inner">
+        <h1>ОГЭ</h1>
+        <div class="site-header__tail">
+          <nav>
+            <a href="index.html">Главная</a>
+            <a href="topics.html">Темы</a>
+            <a href="tables.html">Таблицы</a>
+            <a href="oge.html">ОГЭ</a>
+          </nav>
+          <button
+            type="button"
+            class="theme-toggle"
+            aria-label="Включить светлую тему"
+          >
+            <span class="material-symbols-outlined" aria-hidden="true"
+              >light_mode</span
+            >
+          </button>
+        </div>
+      </div>
+    </header>
+
+    <main class="container">
+      <article class="card">
+        <p><a href="oge.html">← К списку заданий ОГЭ</a></p>
+        <nav class="oge-task-nav" aria-label="Соседние задания ОГЭ">
+          <a href="oge-17.html">← К предыдущему типу (задание 17)</a
+          ><a class="oge-task-nav__next" href="oge-19.html"
+            >К следующему типу (задание 19) →</a
+          >
+        </nav>
+        <h2>Задание 18</h2>
+        <p class="lead">
+          Вычисление массовой доли химического элемента в веществе
+        </p>
+
+        <p class="tip" style="margin-bottom: 16px">
+          Ответом к заданиям 18, 19 является целое число или конечная десятичная
+          дробь. Ответы сначала укажите в тексте работы, а затем перенесите в
+          БЛАНК ОТВЕТОВ № 1 справа от номера соответствующего задания, начиная с
+          первой клеточки. Каждый символ пишите в отдельной клеточке в
+          соответствии с приведёнными в бланке образцами. Единицы измерения
+          физических величин в бланке ответов указывать не нужно.
+        </p>
+        <p class="tip" style="margin-bottom: 16px">
+          Задания 18 и 19 выполняются с использованием следующего текста.
+        </p>
+        <p>
+          Доломитовая мука (двойной карбонат кальция-магния, CaCO<sub>3</sub> ·
+          MgCO<sub>3</sub>) широко используется в сельском хозяйстве в качестве
+          раскислителя почв. При использовании этого вещества в почву нужно
+          вносить 10 г магния на 1 м<sup>2</sup>.
+        </p>
+        <p>
+          <strong
+            >Вычислите массовую долю (в процентах) магния в доломите.</strong
+          >
+          Запишите число с точностью до целых.
+        </p>
+        <p class="oge-answer-label">Ответ (%):</p>
+        <p>
+          <input
+            id="ansNum"
+            type="text"
+            inputmode="decimal"
+            class="oge-answer-input"
+            autocomplete="off"
+            aria-label="Массовая доля магния в процентах"
+          />
+        </p>
+        <p style="margin-top: 16px">
+          <button type="button" id="checkBtn">Проверить</button>
+        </p>
+        <p id="resultOut" class="result" role="status"></p>
+      </article>
+    </main>
+
+    <script>
+      (function () {
+        document
+          .getElementById("checkBtn")
+          .addEventListener("click", function () {
+            const raw = OGE_answerDotsToCommasInField(
+              document.getElementById("ansNum"),
+            );
+            const n = parseFloat(raw);
+            const out = document.getElementById("resultOut");
+            if (isNaN(n)) {
+              out.textContent = OGE_CHECK.retry;
+              return;
+            }
+            const ok = Math.round(n) === 13;
+            out.textContent = ok ? OGE_CHECK.ok : OGE_CHECK.retry;
+          });
+      })();
+    </script>
+  </body>
+</html>

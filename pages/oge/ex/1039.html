@@ -3,7 +3,10 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>ОГЭ, задание 16 № 1039 — Безопасность в лаборатории. Разделение смесей. Химическое загрязнение</title>
+    <title>
+      ОГЭ, задание 16 — Безопасность в лаборатории. Разделение смесей.
+      Химическое загрязнение
+    </title>
     <link rel="stylesheet" href="../../../css/style.css" />
     <link
       rel="stylesheet"
@@ -44,41 +47,67 @@
         <a class="oge-task-nav__next" href="../type-17.html">Задание 17 →</a>
       </nav>
       <h2>Задание 16 № 1039</h2>
-      <p class="lead">Безопасность в лаборатории. Разделение смесей. Химическое загрязнение</p>
+      <p class="lead">
+          Безопасность в лаборатории. Разделение смесей. Химическое загрязнение
+        </p>
 
-      <p>
+      <div class="oge-subtask" data-oge-multi-choice-correct="3|4" data-oge-option-count="4">
+<p>
           Из перечисленных суждений о правилах работы с веществами в лаборатории
           и быту выберите <strong>верное(-ые) суждение(-я)</strong>.
         </p>
-        <ol>
+        <ol class="oge-statements">
           <li>
-            Для переноса порошкообразных реагентов из склянки в пробирку
-            необходимо использовать химическую воронку.
+            <label>
+              <input type="checkbox" name="st" value="1" />
+              <span
+                >Для переноса порошкообразных реагентов из склянки в пробирку
+                необходимо использовать химическую воронку.</span
+              >
+            </label>
           </li>
           <li>
-            Средства бытовой химии можно хранить в любом свободном контейнере с
-            плотно закрытой крышкой.
+            <label>
+              <input type="checkbox" name="st" value="2" />
+              <span
+                >Средства бытовой химии можно хранить в любом свободном
+                контейнере с плотно закрытой крышкой.</span
+              >
+            </label>
           </li>
           <li>
-            Запрещается проводить опыты с реактивами, находящимися в склянке без
-            подписи.
+            <label>
+              <input type="checkbox" name="st" value="3" />
+              <span
+                >Запрещается проводить опыты с реактивами, находящимися в
+                склянке без подписи.</span
+              >
+            </label>
           </li>
           <li>
-            Сероводород, аммиак, хлороводород относятся к группе ядовитых газов.
+            <label>
+              <input type="checkbox" name="st" value="4" />
+              <span
+                >Сероводород, аммиак, хлороводород относятся к группе ядовитых
+                газов.</span
+              >
+            </label>
           </li>
         </ol>
-        <p>
-          Запишите в поле ответа номер(а) верного(-ых) суждения(-й).
-        </p>
+        <p>Запишите в поле ответа номер(а) верного(-ых) суждения(-й).</p>
         <p class="oge-answer-label">Ответ:</p>
-        <div class="oge-answer-cells" role="group" aria-label="Две цифры">
+        <div
+          class="oge-answer-cells"
+          role="group"
+          aria-label="Номера верных суждений"
+        >
           <input
             id="c1"
             type="text"
             inputmode="numeric"
             maxlength="1"
             autocomplete="off"
-            aria-label="Первая ячейка ответа"
+            aria-label="1-я ячейка ответа"
           />
           <input
             id="c2"
@@ -86,25 +115,56 @@
             inputmode="numeric"
             maxlength="1"
             autocomplete="off"
-            aria-label="Вторая ячейка ответа"
+            aria-label="2-я ячейка ответа"
+          />
+          <input
+            id="c3"
+            type="text"
+            inputmode="numeric"
+            maxlength="1"
+            autocomplete="off"
+            aria-label="3-я ячейка ответа"
+          />
+          <input
+            id="c4"
+            type="text"
+            inputmode="numeric"
+            maxlength="1"
+            autocomplete="off"
+            aria-label="4-я ячейка ответа"
           />
         </div>
         <p style="margin-top: 16px">
           <button type="button" id="checkBtn">Ответ</button>
         </p>
         <p id="resultOut" class="result" role="status"></p>
+      </div>
 
       <p>Источник: ОГЭ. Типовые экзаменационные варианты, вариант 1 (Издательство «Национальное образование», 2025).</p>
     </article>
     </main>
   <script>
       (function () {
-        document
-          .getElementById("checkBtn")
-          .addEventListener("click", function () {
+        const correct = ["3", "4"];
+        OGE_eachMultiChoiceScope(
+          correct,
+          4,
+          function (root, answer, optionCount) {
+            const boxes = root.querySelectorAll(
+              '.oge-statements input[type="checkbox"]',
+            );
+            const btn = root.querySelector("button[type='button']");
+            const out = root.querySelector(".result");
+            const inputs = root.querySelectorAll(
+              ".oge-answer-cells input[type='text']",
+            );
+            if (!btn || !out || inputs.length < 4) return;
+            btn.addEventListener("click", function () {
           const out = document.getElementById("resultOut");
-          if (out) out.textContent = OGE_EX_formatAnswer(["34","43"]);
+          if (out) out.textContent = OGE_EX_formatAnswer(["3","4"]);
         });
+          },
+        );
       })();
     </script>
 </body>

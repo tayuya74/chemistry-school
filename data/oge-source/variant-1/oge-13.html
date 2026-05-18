@@ -41,7 +41,9 @@
         <p><a href="oge.html">← К списку заданий ОГЭ</a></p>
         <nav class="oge-task-nav" aria-label="Соседние задания ОГЭ">
           <a href="oge-12.html">← К предыдущему типу (задание 12)</a>
-          <a class="oge-task-nav__next" href="oge-14.html">К следующему типу (задание 14) →</a>
+          <a class="oge-task-nav__next" href="oge-14.html"
+            >К следующему типу (задание 14) →</a
+          >
         </nav>
         <h2>Задание 13</h2>
         <p class="lead">Электролитическая диссоциация</p>
@@ -110,7 +112,7 @@
 
     <script>
       (function () {
-        const correct = ["1","4"];
+        const correct = ["1", "4"];
         OGE_eachTwoChoiceScope(correct, 5, function (root, pair, optionCount) {
           const boxes = root.querySelectorAll(
             '.oge-statements input[type="checkbox"]',

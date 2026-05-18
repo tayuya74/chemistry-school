@@ -1,0 +1,165 @@
+<!doctype html>
+<html lang="ru">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>
+      ОГЭ, задание 19 — Вычисления массы элемента по его массовой доле в
+      веществе
+    </title>
+    <link rel="stylesheet" href="css/style.css" />
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0"
+    />
+    <script src="js/theme.js"></script>
+    <script src="js/oge-check-feedback.js"></script>
+  </head>
+  <body>
+    <header class="site-header">
+      <div class="site-header__inner">
+        <h1>ОГЭ</h1>
+        <div class="site-header__tail">
+          <nav>
+            <a href="index.html">Главная</a>
+            <a href="topics.html">Темы</a>
+            <a href="tables.html">Таблицы</a>
+            <a href="oge.html">ОГЭ</a>
+          </nav>
+          <button
+            type="button"
+            class="theme-toggle"
+            aria-label="Включить светлую тему"
+          >
+            <span class="material-symbols-outlined" aria-hidden="true"
+              >light_mode</span
+            >
+          </button>
+        </div>
+      </div>
+    </header>
+
+    <main class="container">
+      <article class="card">
+        <p><a href="oge.html">← К списку заданий ОГЭ</a></p>
+        <nav class="oge-task-nav" aria-label="Соседние задания ОГЭ">
+          <a href="oge-18.html">← К предыдущему типу (задание 18)</a
+          ><a class="oge-task-nav__next" href="oge-20.html"
+            >К следующему типу (задание 20) →</a
+          >
+        </nav>
+        <h2>Задание 19</h2>
+        <p class="lead">
+          Вычисления массы элемента по его массовой доле в веществе
+        </p>
+
+        <p class="tip" style="margin-bottom: 16px">
+          При выполнении задания 19 используйте величину, которая определена в
+          задании 18 с указанной в нём степенью точности.
+        </p>
+        <p class="tip" style="margin-bottom: 16px">
+          Контекст двойного суперфосфата — в задании 18 этого варианта.
+        </p>
+        <p>
+          <strong
+            >Вычислите массу (в килограммах) двойного суперфосфата, которую надо
+            внести в почву на участке площадью 150 м<sup>2</sup>.</strong
+          >
+          Запишите число с точностью до десятых.
+        </p>
+        <div
+          class="oge-mass-table-wrap"
+          role="region"
+          aria-label="Таблица для расчёта"
+        >
+          <table class="oge-mass-table">
+            <tbody>
+              <tr>
+                <td class="oge-mass-table__cell--blank"></td>
+                <td class="oge-mass-table__static">W, %</td>
+                <td>
+                  <input
+                    id="oge19tbl-r1c3"
+                    type="text"
+                    inputmode="text"
+                    autocomplete="off"
+                    aria-label="Верхняя правая ячейка таблицы"
+                  />
+                </td>
+              </tr>
+              <tr>
+                <td class="oge-mass-table__static">элемент</td>
+                <td>
+                  <input
+                    id="oge19tbl-r2c2"
+                    type="text"
+                    inputmode="text"
+                    autocomplete="off"
+                    aria-label="Массовая доля элемента, проценты"
+                  />
+                </td>
+                <td>
+                  <input
+                    id="oge19tbl-r2c3"
+                    type="text"
+                    inputmode="text"
+                    autocomplete="off"
+                    aria-label="Правая ячейка строки «элемент»"
+                  />
+                </td>
+              </tr>
+              <tr>
+                <td class="oge-mass-table__static">вещество</td>
+                <td class="oge-mass-table__static">100</td>
+                <td>
+                  <input
+                    id="oge19tbl-r3c3"
+                    type="text"
+                    inputmode="text"
+                    autocomplete="off"
+                    aria-label="Масса вещества"
+                  />
+                </td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+        <p class="oge-answer-label">Ответ (кг):</p>
+        <p>
+          <input
+            id="ansNum"
+            type="text"
+            inputmode="decimal"
+            class="oge-answer-input oge-answer-input--wide"
+            autocomplete="off"
+            aria-label="Масса двойного суперфосфата в килограммах, одна цифра после запятой"
+          />
+        </p>
+        <p style="margin-top: 16px">
+          <button type="button" id="checkBtn">Проверить</button>
+        </p>
+        <p id="resultOut" class="result" role="status"></p>
+      </article>
+    </main>
+
+    <script>
+      (function () {
+        document
+          .getElementById("checkBtn")
+          .addEventListener("click", function () {
+            const raw = OGE_answerDotsToCommasInField(
+              document.getElementById("ansNum"),
+            );
+            const n = parseFloat(raw);
+            const out = document.getElementById("resultOut");
+            if (isNaN(n)) {
+              out.textContent = OGE_CHECK.retry;
+              return;
+            }
+            const ok = Math.round(n * 10) === 88;
+            out.textContent = ok ? OGE_CHECK.ok : OGE_CHECK.retry;
+          });
+      })();
+    </script>
+  </body>
+</html>

@@ -54,31 +54,55 @@
           Из перечисленных суждений о чистых веществах и смесях выберите
           <strong>верное(-ые) суждение(-я)</strong>.
         </p>
-        <ol>
-          <li>Чугун является чистым веществом.</li>
+        <ol class="oge-statements">
           <li>
-            Для разделения смеси машинного масла и воды можно использовать
-            делительную воронку.
+            <label>
+              <input type="checkbox" name="st" value="1" />
+              <span>Чугун является чистым веществом.</span>
+            </label>
           </li>
           <li>
-            Очистить озёрную воду от примеси песка можно с помощью отстаивания
-            и фильтрования.
+            <label>
+              <input type="checkbox" name="st" value="2" />
+              <span
+                >Для разделения смеси машинного масла и воды можно использовать
+                делительную воронку.</span
+              >
+            </label>
           </li>
           <li>
-            Магнит применяют для разделения двухкомпонентных неоднородных
-            смесей, содержащих железные опилки.
+            <label>
+              <input type="checkbox" name="st" value="3" />
+              <span
+                >Очистить озёрную воду от примеси песка можно с помощью
+                отстаивания и фильтрования.</span
+              >
+            </label>
+          </li>
+          <li>
+            <label>
+              <input type="checkbox" name="st" value="4" />
+              <span
+                >Магнит применяют для разделения двухкомпонентных неоднородных
+                смесей, содержащих железные опилки.</span
+              >
+            </label>
           </li>
         </ol>
         <p>Запишите в поле ответа номер(а) верного(-ых) суждения(-й).</p>
         <p class="oge-answer-label">Ответ:</p>
-        <div class="oge-answer-cells" role="group" aria-label="Номера верных суждений">
+        <div
+          class="oge-answer-cells"
+          role="group"
+          aria-label="Номера верных суждений"
+        >
           <input
             id="c1"
             type="text"
             inputmode="numeric"
             maxlength="1"
             autocomplete="off"
-            aria-label="Первая цифра ответа"
+            aria-label="1-я ячейка ответа"
           />
           <input
             id="c2"
@@ -86,7 +110,7 @@
             inputmode="numeric"
             maxlength="1"
             autocomplete="off"
-            aria-label="Вторая цифра ответа"
+            aria-label="2-я ячейка ответа"
           />
           <input
             id="c3"
@@ -94,7 +118,15 @@
             inputmode="numeric"
             maxlength="1"
             autocomplete="off"
-            aria-label="Третья цифра ответа"
+            aria-label="3-я ячейка ответа"
+          />
+          <input
+            id="c4"
+            type="text"
+            inputmode="numeric"
+            maxlength="1"
+            autocomplete="off"
+            aria-label="4-я ячейка ответа"
           />
         </div>
         <p style="margin-top: 16px">
@@ -106,17 +138,37 @@
 
     <script>
       (function () {
-        document
-          .getElementById("checkBtn")
-          .addEventListener("click", function () {
-            const a = document.getElementById("c1").value.trim();
-            const b = document.getElementById("c2").value.trim();
-            const c = document.getElementById("c3").value.trim();
-            const out = document.getElementById("resultOut");
-            const sorted = [a, b, c].slice().sort().join("");
-            const ok = sorted === "234";
-            out.textContent = ok ? OGE_CHECK.ok : OGE_CHECK.retry;
-          });
+        const correct = ["2", "3", "4"];
+        OGE_eachMultiChoiceScope(
+          correct,
+          4,
+          function (root, answer, optionCount) {
+            const boxes = root.querySelectorAll(
+              '.oge-statements input[type="checkbox"]',
+            );
+            const btn = root.querySelector("button[type='button']");
+            const out = root.querySelector(".result");
+            const inputs = root.querySelectorAll(
+              ".oge-answer-cells input[type='text']",
+            );
+            if (!btn || !out || inputs.length < 4) return;
+            btn.addEventListener("click", function () {
+              const chosen = [];
+              boxes.forEach(function (cb) {
+                if (cb.checked) chosen.push(cb.value);
+              });
+              const ok = OGE_multiChoiceAllOk(
+                chosen,
+                Array.from(inputs, function (input) {
+                  return input.value.trim();
+                }),
+                answer,
+                optionCount,
+              );
+              out.textContent = ok ? OGE_CHECK.ok : OGE_CHECK.retry;
+            });
+          },
+        );
       })();
     </script>
   </body>

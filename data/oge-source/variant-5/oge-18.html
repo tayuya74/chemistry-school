@@ -1,0 +1,118 @@
+<!doctype html>
+<html lang="ru">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>
+      ОГЭ, задание 18 — Вычисление массовой доли химического элемента в веществе
+    </title>
+    <link rel="stylesheet" href="css/style.css" />
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0"
+    />
+    <script src="js/theme.js"></script>
+    <script src="js/oge-check-feedback.js"></script>
+  </head>
+  <body>
+    <header class="site-header">
+      <div class="site-header__inner">
+        <h1>ОГЭ</h1>
+        <div class="site-header__tail">
+          <nav>
+            <a href="index.html">Главная</a>
+            <a href="topics.html">Темы</a>
+            <a href="tables.html">Таблицы</a>
+            <a href="oge.html">ОГЭ</a>
+          </nav>
+          <button
+            type="button"
+            class="theme-toggle"
+            aria-label="Включить светлую тему"
+          >
+            <span class="material-symbols-outlined" aria-hidden="true"
+              >light_mode</span
+            >
+          </button>
+        </div>
+      </div>
+    </header>
+
+    <main class="container">
+      <article class="card">
+        <p><a href="oge.html">← К списку заданий ОГЭ</a></p>
+        <nav class="oge-task-nav" aria-label="Соседние задания ОГЭ">
+          <a href="oge-17.html">← К предыдущему типу (задание 17)</a>
+          <a class="oge-task-nav__next" href="oge-19.html"
+            >К следующему типу (задание 19) →</a
+          >
+        </nav>
+        <h2>Задание 18</h2>
+        <p class="lead">
+          Вычисление массовой доли химического элемента в веществе
+        </p>
+
+        <p class="tip" style="margin-bottom: 16px">
+          При проведении расчётов для всех элементов, кроме хлора, используйте
+          целые значения относительных атомных масс (Ar(Cl) = 35,5).
+        </p>
+
+        <p class="tip" style="margin-bottom: 16px">
+          Ответом к заданиям 18, 19 является целое число или конечная десятичная
+          дробь. Задания 18 и 19 выполняются с использованием следующего текста.
+        </p>
+
+        <p>
+          Фтороборат кадмия (Cd[BF<sub>4</sub>]<sub>2</sub>) — флюс, применяемый
+          для пайки алюминия и других металлов. Соединения кадмия токсичны,
+          способны накапливаться в организме. Предельная допустимая концентрация
+          (ПДК) кадмия в питьевой воде составляет 10&nbsp;мг на 1&nbsp;м³ воды.
+        </p>
+
+        <p>
+          <strong
+            >Вычислите в процентах массовую долю кадмия во фтороборате
+            кадмия.</strong
+          >
+          Запишите число с точностью до десятых.
+        </p>
+
+        <p class="oge-answer-label">Ответ (%):</p>
+        <p>
+          <input
+            id="ansNum"
+            type="text"
+            inputmode="decimal"
+            class="oge-answer-input"
+            autocomplete="off"
+            aria-label="Массовая доля кадмия в процентах, одна цифра после запятой"
+          />
+        </p>
+        <p style="margin-top: 16px">
+          <button type="button" id="checkBtn">Проверить</button>
+        </p>
+        <p id="resultOut" class="result" role="status"></p>
+      </article>
+    </main>
+
+    <script>
+      (function () {
+        document
+          .getElementById("checkBtn")
+          .addEventListener("click", function () {
+            const raw = OGE_answerDotsToCommasInField(
+              document.getElementById("ansNum"),
+            );
+            const n = parseFloat(raw);
+            const out = document.getElementById("resultOut");
+            if (isNaN(n)) {
+              out.textContent = OGE_CHECK.retry;
+              return;
+            }
+            const ok = Math.round(n * 10) === 392;
+            out.textContent = ok ? OGE_CHECK.ok : OGE_CHECK.retry;
+          });
+      })();
+    </script>
+  </body>
+</html>

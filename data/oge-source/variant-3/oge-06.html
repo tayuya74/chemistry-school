@@ -1,0 +1,153 @@
+<!doctype html>
+<html lang="ru">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>ОГЭ, задание 6 — Закономерности изменения свойств элементов</title>
+    <link rel="stylesheet" href="css/style.css" />
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0"
+    />
+    <script src="js/theme.js"></script>
+    <script src="js/oge-check-feedback.js"></script>
+  </head>
+  <body>
+    <header class="site-header">
+      <div class="site-header__inner">
+        <h1>ОГЭ</h1>
+        <div class="site-header__tail">
+          <nav>
+            <a href="index.html">Главная</a>
+            <a href="topics.html">Темы</a>
+            <a href="tables.html">Таблицы</a>
+            <a href="oge.html">ОГЭ</a>
+          </nav>
+          <button
+            type="button"
+            class="theme-toggle"
+            aria-label="Включить светлую тему"
+          >
+            <span class="material-symbols-outlined" aria-hidden="true"
+              >light_mode</span
+            >
+          </button>
+        </div>
+      </div>
+    </header>
+
+    <main class="container">
+      <article class="card">
+        <p><a href="oge.html">← К списку заданий ОГЭ</a></p>
+        <nav class="oge-task-nav" aria-label="Соседние задания ОГЭ">
+          <a href="oge-05.html">← К предыдущему типу (задание 5)</a>
+          <a class="oge-task-nav__next" href="oge-07.html"
+            >К следующему типу (задание 7) →</a
+          >
+        </nav>
+        <h2>Задание 6</h2>
+        <p class="lead">Закономерности изменения свойств элементов</p>
+
+        <p>
+          Выберите два верных продолжения для следующего утверждения. Сходство
+          углерода, азота и кислорода проявляется в том, что…
+        </p>
+        <ol class="oge-statements">
+          <li>
+            <label>
+              <input type="checkbox" name="st" value="1" />
+              <span>они образуют соединения с металлами</span>
+            </label>
+          </li>
+          <li>
+            <label>
+              <input type="checkbox" name="st" value="2" />
+              <span
+                >соответствующие им простые вещества проявляют сильные
+                восстановительные свойства</span
+              >
+            </label>
+          </li>
+          <li>
+            <label>
+              <input type="checkbox" name="st" value="3" />
+              <span>в ядрах их атомов находится одинаковое число протонов</span>
+            </label>
+          </li>
+          <li>
+            <label>
+              <input type="checkbox" name="st" value="4" />
+              <span
+                >значения электроотрицательности их атомов меньше, чем у
+                фтора</span
+              >
+            </label>
+          </li>
+          <li>
+            <label>
+              <input type="checkbox" name="st" value="5" />
+              <span
+                >их атомы содержат одинаковое число валентных электронов</span
+              >
+            </label>
+          </li>
+        </ol>
+        <p>Запишите номера выбранных ответов.</p>
+        <p class="oge-answer-label">Ответ:</p>
+        <div class="oge-answer-cells" role="group" aria-label="Две цифры">
+          <input
+            id="c1"
+            type="text"
+            inputmode="numeric"
+            maxlength="1"
+            autocomplete="off"
+            aria-label="Первая ячейка ответа"
+          />
+          <input
+            id="c2"
+            type="text"
+            inputmode="numeric"
+            maxlength="1"
+            autocomplete="off"
+            aria-label="Вторая ячейка ответа"
+          />
+        </div>
+        <p style="margin-top: 16px">
+          <button type="button" id="checkBtn">Проверить</button>
+        </p>
+        <p id="resultOut" class="result" role="status"></p>
+      </article>
+    </main>
+
+    <script>
+      (function () {
+        const correct = ["1", "4"];
+        OGE_eachTwoChoiceScope(correct, 5, function (root, pair, optionCount) {
+          const boxes = root.querySelectorAll(
+            '.oge-statements input[type="checkbox"]',
+          );
+          const btn = root.querySelector("button[type='button']");
+          const out = root.querySelector(".result");
+          const inputs = root.querySelectorAll(
+            ".oge-answer-cells input[type='text']",
+          );
+          if (!btn || !out || inputs.length < 2) return;
+          btn.addEventListener("click", function () {
+            const chosen = [];
+            boxes.forEach(function (cb) {
+              if (cb.checked) chosen.push(cb.value);
+            });
+            const ok = OGE_twoChoiceAllOk(
+              chosen,
+              inputs[0].value.trim(),
+              inputs[1].value.trim(),
+              pair,
+              optionCount,
+            );
+            out.textContent = ok ? OGE_CHECK.ok : OGE_CHECK.retry;
+          });
+        });
+      })();
+    </script>
+  </body>
+</html>

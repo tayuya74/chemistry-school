@@ -48,14 +48,16 @@
 
       <div class="oge-subtask" data-oge-checkbox-max="2" data-oge-two-choice-correct="1|4" data-oge-option-count="5">
 <p>
-          Выберите два верных продолжения для следующего утверждения.
-          Сходство натрия, магния и алюминия проявляется в том, что…
+          Выберите два верных продолжения для следующего утверждения. Сходство
+          натрия, магния и алюминия проявляется в том, что…
         </p>
         <ol class="oge-statements">
           <li>
             <label>
               <input type="checkbox" name="st" value="1" />
-              <span>в соединениях они проявляют постоянную степень окисления</span>
+              <span
+                >в соединениях они проявляют постоянную степень окисления</span
+              >
             </label>
           </li>
           <li>
@@ -73,13 +75,18 @@
           <li>
             <label>
               <input type="checkbox" name="st" value="4" />
-              <span>значение электроотрицательности их атомов меньше, чем у фосфора</span>
+              <span
+                >значение электроотрицательности их атомов меньше, чем у
+                фосфора</span
+              >
             </label>
           </li>
           <li>
             <label>
               <input type="checkbox" name="st" value="5" />
-              <span>образуемые ими высшие оксиды относятся к основным оксидам</span>
+              <span
+                >образуемые ими высшие оксиды относятся к основным оксидам</span
+              >
             </label>
           </li>
         </ol>
@@ -114,7 +121,7 @@
     </main>
   <script>
       (function () {
-        const correct = ["1","4"];
+        const correct = ["1", "4"];
         OGE_eachTwoChoiceScope(correct, 5, function (root, pair, optionCount) {
           const boxes = root.querySelectorAll(
             '.oge-statements input[type="checkbox"]',
