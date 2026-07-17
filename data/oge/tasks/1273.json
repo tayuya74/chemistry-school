@@ -1,0 +1,27 @@
+{
+  "id": 1273,
+  "examType": 20,
+  "uiKind": "openReference",
+  "meta": {
+    "lead": "Окислительно-восстановительные реакции",
+    "source": "ОГЭ. Типовые экзаменационные варианты, вариант 10 (Издательство «Национальное образование», 2025).",
+    "sourceDir": "variant-10"
+  },
+  "blocks": [
+    {
+      "html": "<p>\n          Используя метод электронного баланса, расставьте коэффициенты в\n          уравнении реакции, схема которой\n        </p>"
+    },
+    {
+      "html": "<p style=\"text-align: center; font-size: 1.1rem; margin: 16px 0\">\n          K<sub>2</sub>S + FeBr<sub>3</sub> → FeS + S + KBr\n        </p>"
+    },
+    {
+      "html": "<p>Определите окислитель и восстановитель.</p>"
+    }
+  ],
+  "content": {},
+  "answer": null,
+  "solution": {
+    "title": "Эталон ответа (вариант 10, 2025)",
+    "html": "<p style=\"margin-top: 12px\">\n            S<sup>2−</sup> − 2ē → S<sup>0</sup> |×1; Fe<sup>+3</sup> + ē →\n            Fe<sup>+2</sup> |×2.\n          </p>\n          <p style=\"margin-top: 12px\">\n            <strong>Окислитель:</strong> FeBr<sub>3</sub>\n            (Fe<sup>+3</sup>).<br /><strong>Восстановитель:</strong>\n            K<sub>2</sub>S (S<sup>2−</sup>).\n          </p>\n          <p style=\"margin-top: 12px\">Уравнение реакции:</p>\n          <p style=\"text-align: center; margin-top: 8px\">\n            <strong>3</strong>K<sub>2</sub>S + <strong>2</strong>FeBr<sub\n              >3</sub\n            >\n            = <strong>2</strong>FeS + <strong>1</strong>S +\n            <strong>6</strong>KBr\n          </p>"
+  }
+}

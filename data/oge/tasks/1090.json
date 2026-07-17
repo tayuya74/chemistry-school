@@ -1,0 +1,27 @@
+{
+  "id": 1090,
+  "examType": 21,
+  "uiKind": "openReference",
+  "meta": {
+    "lead": "Химические свойства простых и сложных веществ",
+    "source": "ОГЭ. Типовые экзаменационные варианты, вариант 2 (Издательство «Национальное образование», 2025).",
+    "sourceDir": "variant-2"
+  },
+  "blocks": [
+    {
+      "html": "<p>Дана схема превращений:</p>"
+    },
+    {
+      "html": "<p style=\"text-align: center; font-size: 1.1rem; margin: 16px 0\">\n          Al → X → AlCl<sub>3</sub> → Al(NO<sub>3</sub>)<sub>3</sub>\n        </p>"
+    },
+    {
+      "html": "<p>\n          Напишите <strong>молекулярные уравнения реакций</strong>, с помощью\n          которых можно осуществить указанные превращения.\n        </p>"
+    }
+  ],
+  "content": {},
+  "answer": null,
+  "solution": {
+    "title": "Эталон ответа (вариант 2, 2025)",
+    "html": "<p style=\"margin-top: 12px\">\n            В качестве X удобно взять оксид алюминия\n            Al<sub>2</sub>O<sub>3</sub>.\n          </p>\n          <ol style=\"margin-top: 12px; line-height: 1.7\">\n            <li>4Al + 3O<sub>2</sub> = 2Al<sub>2</sub>O<sub>3</sub></li>\n            <li>\n              Al<sub>2</sub>O<sub>3</sub> + 6HCl = 2AlCl<sub>3</sub> +\n              3H<sub>2</sub>O\n            </li>\n            <li>\n              AlCl<sub>3</sub> + 3AgNO<sub>3</sub> = Al(NO<sub>3</sub>)<sub\n                >3</sub\n              >\n              + 3AgCl↓\n            </li>\n          </ol>\n          <p style=\"margin-top: 12px\">\n            Допустимы и другие цепочки, согласованные с условием (например,\n            получение AlCl<sub>3</sub> через реакцию Al с хлором или HCl и\n            последующий переход к нитрату).\n          </p>"
+  }
+}

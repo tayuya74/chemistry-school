@@ -1,0 +1,27 @@
+{
+  "id": 1113,
+  "examType": 21,
+  "uiKind": "openReference",
+  "meta": {
+    "lead": "Химические свойства простых и сложных веществ",
+    "source": "ОГЭ. Типовые экзаменационные варианты, вариант 3 (Издательство «Национальное образование», 2025).",
+    "sourceDir": "variant-3"
+  },
+  "blocks": [
+    {
+      "html": "<p>Дана схема превращений:</p>"
+    },
+    {
+      "html": "<p style=\"text-align: center; font-size: 1.1rem; margin: 16px 0\">\n          Mg → MgO <strong>(+ SO<sub>3</sub>)</strong> → X →\n          Mg(NO<sub>3</sub>)<sub>2</sub>\n        </p>"
+    },
+    {
+      "html": "<p>\n          Напишите <strong>молекулярные уравнения реакций</strong>, с помощью\n          которых можно осуществить указанные превращения.\n        </p>"
+    }
+  ],
+  "content": {},
+  "answer": null,
+  "solution": {
+    "title": "Эталон ответа (вариант 3, 2025)",
+    "html": "<p style=\"margin-top: 12px\">\n            Одна из возможных цепочек: <strong>X = MgSO<sub>4</sub></strong\n            >.\n          </p>\n          <ol style=\"margin-top: 12px; line-height: 1.7\">\n            <li>2Mg + O<sub>2</sub> = 2MgO</li>\n            <li>MgO + SO<sub>3</sub> = MgSO<sub>4</sub></li>\n            <li>\n              MgSO<sub>4</sub> + Ba(NO<sub>3</sub>)<sub>2</sub> =\n              Mg(NO<sub>3</sub>)<sub>2</sub> + BaSO<sub>4</sub>↓\n            </li>\n          </ol>\n          <p style=\"margin-top: 12px\">\n            Допустимы эквивалентные переходы, например, растворение MgSO<sub\n              >4</sub\n            >\n            или MgO в азотной кислоте с последующим упариванием кристаллами\n            Mg(NO<sub>3</sub>)<sub>2</sub>, если они согласуются с условием.\n          </p>"
+  }
+}

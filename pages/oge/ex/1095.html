@@ -3,7 +3,7 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>ОГЭ, задание 3 № 1095 — Периодический закон и Периодическая система</title>
+    <title>ОГЭ, задание 3 № 1095 — Периодический закон и Периодическая система элементов</title>
     <link rel="stylesheet" href="../../../css/style.css" />
     <link
       rel="stylesheet"
@@ -44,90 +44,62 @@
         <a class="oge-task-nav__next" href="../type-04.html">Задание 4 →</a>
       </nav>
       <h2>Задание 3 № 1095</h2>
-      <p class="lead">
-          Периодический закон и Периодическая система элементов
-        </p>
+      <p class="lead">Периодический закон и Периодическая система элементов</p>
 
-      <p>Расположите химические элементы:</p>
-        <ol>
+      <div class="oge-subtask">
+<p>Расположите химические элементы:</p>
+<ol>
           <li>бром</li>
           <li>йод</li>
           <li>хлор</li>
         </ol>
-        <p>
+<p>
           в порядке
           <strong
             >уменьшения кислотных свойств образуемых ими высших
             гидроксидов</strong
           >.
         </p>
-        <p>
+<p>
           Запишите указанные номера химических элементов в соответствующем
           порядке.
         </p>
 
         <p class="oge-answer-label">Ответ:</p>
         <div
-          style="
-            display: inline-flex;
-            align-items: center;
-            gap: 8px;
-            margin-top: 8px;
-          "
+          class="oge-answer-cells"
           role="group"
-          aria-label="Порядок номеров 1—3"
+          aria-label="Последовательность цифр"
         >
-          <div class="oge-answer-cells">
-            <input
-              id="d1"
-              type="text"
-              inputmode="numeric"
-              maxlength="1"
-              autocomplete="off"
-              aria-label="Первая позиция"
-            />
-          </div>
-          <span aria-hidden="true">→</span>
-          <div class="oge-answer-cells">
-            <input
-              id="d2"
-              type="text"
-              inputmode="numeric"
-              maxlength="1"
-              autocomplete="off"
-              aria-label="Вторая позиция"
-            />
-          </div>
-          <span aria-hidden="true">→</span>
-          <div class="oge-answer-cells">
-            <input
-              id="d3"
-              type="text"
-              inputmode="numeric"
-              maxlength="1"
-              autocomplete="off"
-              aria-label="Третья позиция"
-            />
-          </div>
+          <input
+            id="d1"
+            type="text"
+            inputmode="numeric"
+            maxlength="1"
+            autocomplete="off"
+            aria-label="Позиция 1"
+          />
         </div>
 
         <p style="margin-top: 16px">
-          <button type="button" id="checkBtn">Ответ</button>
+          <button type="button" id="checkBtn">Проверить</button>
         </p>
         <p id="resultOut" class="result" role="status"></p>
+      </div>
 
       <p>Источник: ОГЭ. Типовые экзаменационные варианты, вариант 3 (Издательство «Национальное образование», 2025).</p>
-    </article>
+      </article>
     </main>
-  <script>
+    <script>
       (function () {
-        document
-          .getElementById("checkBtn")
-          .addEventListener("click", function () {
-          const out = document.getElementById("resultOut");
-          if (out) out.textContent = OGE_EX_formatAnswer(["3","1","2"]);
+        const btn = document.querySelector(".oge-subtask button[type='button']");
+        const out = document.querySelector(".oge-subtask .result");
+        if (!btn || !out) return;
+        btn.textContent = "Ответ";
+        btn.addEventListener("click", function () {
+          out.textContent = OGE_EX_formatAnswer(["3","1","2"]);
         });
       })();
     </script>
-</body>
+  </body>
 </html>

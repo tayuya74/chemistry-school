@@ -1,0 +1,27 @@
+{
+  "id": 1135,
+  "examType": 20,
+  "uiKind": "openReference",
+  "meta": {
+    "lead": "Окислительно-восстановительные реакции",
+    "source": "ОГЭ. Типовые экзаменационные варианты, вариант 4 (Издательство «Национальное образование», 2025).",
+    "sourceDir": "variant-4"
+  },
+  "blocks": [
+    {
+      "html": "<p>\n          Используя метод электронного баланса, расставьте коэффициенты в схеме\n          реакции:\n        </p>"
+    },
+    {
+      "html": "<p style=\"text-align: center; font-size: 1.1rem; margin: 16px 0\">\n          MnSO<sub>4</sub> + KMnO<sub>4</sub> + H<sub>2</sub>O → MnO<sub>2</sub>\n          + H<sub>2</sub>SO<sub>4</sub> + K<sub>2</sub>SO<sub>4</sub>\n        </p>"
+    },
+    {
+      "html": "<p>Определите окислитель и восстановитель.</p>"
+    }
+  ],
+  "content": {},
+  "answer": null,
+  "solution": {
+    "title": "Эталон ответа (вариант 4, 2025)",
+    "html": "<p style=\"margin-top: 12px\">Электронный баланс (в кислой среде):</p>\n          <p style=\"font-family: monospace; line-height: 1.65\">\n            3 | Mn<sup>2+</sup> + 2H<sub>2</sub>O − 2ē → MnO<sub>2</sub> +\n            4H<sup>+</sup><br />\n            2 | MnO<sub>4</sub><sup>−</sup> + 4H<sup>+</sup> + 3ē → MnO<sub\n              >2</sub\n            >\n            + 2H<sub>2</sub>O\n          </p>\n          <p style=\"margin-top: 12px\">\n            <strong>Восстановитель:</strong> Mn<sup>2+</sup> (или\n            MnSO<sub>4</sub>).<br />\n            <strong>Окислитель:</strong> MnO<sub>4</sub><sup>−</sup> (или\n            KMnO<sub>4</sub>).\n          </p>\n          <p style=\"margin-top: 12px\">Уравнение реакции:</p>\n          <p style=\"text-align: center; margin-top: 8px\">\n            <strong>3</strong> MnSO<sub>4</sub> + <strong>2</strong> KMnO<sub\n              >4</sub\n            >\n            + <strong>2</strong> H<sub>2</sub>O = <strong>5</strong> MnO<sub\n              >2</sub\n            >\n            + <strong>3</strong> H<sub>2</sub>SO<sub>4</sub> +\n            <strong>1</strong> K<sub>2</sub>SO<sub>4</sub>\n          </p>"
+  }
+}

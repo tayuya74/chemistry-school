@@ -3,9 +3,7 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>
-      ОГЭ, задание 18 — Вычисление массовой доли химического элемента в веществе
-    </title>
+    <title>ОГЭ, задание 18 № 1110 — Вычисление массовой доли химического элемента в веществе</title>
     <link rel="stylesheet" href="../../../css/style.css" />
     <link
       rel="stylesheet"
@@ -46,21 +44,18 @@
         <a class="oge-task-nav__next" href="../type-19.html">Задание 19 →</a>
       </nav>
       <h2>Задание 18 № 1110</h2>
-      <p class="lead">
-          Вычисление массовой доли химического элемента в веществе
-        </p>
+      <p class="lead">Вычисление массовой доли химического элемента в веществе</p>
 
-      <p class="tip" style="margin-bottom: 16px">
+      <div class="oge-subtask">
+<p class="tip" style="margin-bottom: 16px">
           При проведении расчётов для всех элементов, кроме хлора, используйте
           целые значения относительных атомных масс (Ar(Cl) = 35,5).
         </p>
-
-        <p class="tip" style="margin-bottom: 16px">
+<p class="tip" style="margin-bottom: 16px">
           Ответом к заданиям 18, 19 является целое число или конечная десятичная
           дробь. Задания 18 и 19 выполняются с использованием следующего текста.
         </p>
-
-        <p>
+<p>
           Аллицин (C<sub>6</sub>H<sub>10</sub>OS<sub>2</sub>) — органическое
           соединение, которое образуется при механическом разрушении клеток
           чеснока. Придаёт острый аромат блюдам со свежим чесноком и обладает
@@ -69,8 +64,7 @@
           <strong>5&nbsp;мг</strong> аллицина. Рекомендовано принимать
           <strong>две</strong> капсулы в сутки.
         </p>
-
-        <p>
+<p>
           <strong>Вычислите в процентах массовую долю серы в аллицине.</strong>
           Запишите число с точностью до целых.
         </p>
@@ -83,26 +77,28 @@
             inputmode="numeric"
             class="oge-answer-input"
             autocomplete="off"
-            aria-label="Массовая доля серы в процентах (целое число)"
+            aria-label="Числовой ответ"
           />
         </p>
         <p style="margin-top: 16px">
-          <button type="button" id="checkBtn">Ответ</button>
+          <button type="button" id="checkBtn">Проверить</button>
         </p>
         <p id="resultOut" class="result" role="status"></p>
+      </div>
 
       <p>Источник: ОГЭ. Типовые экзаменационные варианты, вариант 3 (Издательство «Национальное образование», 2025).</p>
-    </article>
+      </article>
     </main>
-  <script>
+    <script>
       (function () {
-        document
-          .getElementById("checkBtn")
-          .addEventListener("click", function () {
-          const out = document.getElementById("resultOut");
-          if (out) out.textContent = OGE_EX_formatAnswer(["36"]);
+        const btn = document.querySelector(".oge-subtask button[type='button']");
+        const out = document.querySelector(".oge-subtask .result");
+        if (!btn || !out) return;
+        btn.textContent = "Ответ";
+        btn.addEventListener("click", function () {
+          out.textContent = OGE_EX_formatAnswer(["36"]);
         });
       })();
     </script>
-</body>
+  </body>
 </html>

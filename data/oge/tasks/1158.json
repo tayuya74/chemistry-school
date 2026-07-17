@@ -1,0 +1,27 @@
+{
+  "id": 1158,
+  "examType": 20,
+  "uiKind": "openReference",
+  "meta": {
+    "lead": "Окислительно-восстановительные реакции",
+    "source": "ОГЭ. Типовые экзаменационные варианты, вариант 5 (Издательство «Национальное образование», 2025).",
+    "sourceDir": "variant-5"
+  },
+  "blocks": [
+    {
+      "html": "<p>\n          Используя метод электронного баланса, расставьте коэффициенты в схеме\n          реакции:\n        </p>"
+    },
+    {
+      "html": "<p style=\"text-align: center; font-size: 1.1rem; margin: 16px 0\">\n          CO + Cl<sub>2</sub> + KOH → K<sub>2</sub>CO<sub>3</sub> + KCl +\n          H<sub>2</sub>O\n        </p>"
+    },
+    {
+      "html": "<p>Укажите окислитель и восстановитель.</p>"
+    }
+  ],
+  "content": {},
+  "answer": null,
+  "solution": {
+    "title": "Эталон ответа (вариант 5, 2025)",
+    "html": "<p style=\"margin-top: 12px\">\n            Электронный баланс (в базной среде): C<sup>2+</sup> − 2ē →\n            C<sup>4+</sup>; Cl<sub>2</sub><sup>0</sup> + 2ē → 2Cl<sup>−</sup>.\n          </p>\n          <p style=\"margin-top: 12px\">\n            <strong>Восстановитель:</strong> C<sup>2+</sup>\n            (<strong>CO</strong>).<br />\n            <strong>Окислитель:</strong> Cl<sub>2</sub>.\n          </p>\n          <p style=\"margin-top: 12px\">Уравнение реакции:</p>\n          <p style=\"text-align: center; margin-top: 8px\">\n            <strong>1</strong> CO + <strong>1</strong> Cl<sub>2</sub> +\n            <strong>4</strong> KOH = <strong>1</strong> K<sub>2</sub>CO<sub\n              >3</sub\n            >\n            + <strong>2</strong> KCl + <strong>2</strong> H<sub>2</sub>O\n          </p>"
+  }
+}

@@ -1,0 +1,37 @@
+{
+  "id": 1152,
+  "examType": 14,
+  "uiKind": "twoChoice",
+  "meta": {
+    "lead": "Реакции ионного обмена",
+    "source": "ОГЭ. Типовые экзаменационные варианты, вариант 5 (Издательство «Национальное образование», 2025).",
+    "sourceDir": "variant-5"
+  },
+  "blocks": [
+    {
+      "html": "<p>\n          Выберите <strong>два исходных вещества</strong>, взаимодействию водных\n          растворов которых соответствует сокращённое ионное уравнение реакции:\n        </p>"
+    },
+    {
+      "html": "<p style=\"text-align: center; font-size: 1.15rem; margin: 16px 0\">\n          Ca<sup>2+</sup> + CO<sub>3</sub><sup>2−</sup> = CaCO<sub>3</sub>\n        </p>"
+    }
+  ],
+  "content": {
+    "statements": [
+      "Ca",
+      "CaBr<sub>2</sub>",
+      "CaO",
+      "H<sub>2</sub>CO<sub>3</sub>",
+      "Ag<sub>2</sub>CO<sub>3</sub>",
+      "K<sub>2</sub>CO<sub>3</sub>"
+    ],
+    "maxChoices": 2,
+    "cellCount": 2
+  },
+  "answer": {
+    "correct": [
+      "2",
+      "6"
+    ]
+  },
+  "solution": null
+}

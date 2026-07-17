@@ -1,0 +1,27 @@
+{
+  "id": 1020,
+  "examType": 20,
+  "uiKind": "openReference",
+  "meta": {
+    "lead": "Окислительно-восстановительные реакции",
+    "source": "Демонстрационный вариант ОГЭ по химии 2026 года (ФИПИ).",
+    "sourceDir": "2026-demo"
+  },
+  "blocks": [
+    {
+      "html": "<p>\n          Используя метод электронного баланса, расставьте коэффициенты в схеме\n          реакции\n        </p>"
+    },
+    {
+      "html": "<p style=\"text-align: center; font-size: 1.1rem; margin: 16px 0\">\n          Fe(OH)<sub>3</sub> + HI → FeI<sub>2</sub> + I<sub>2</sub> +\n          H<sub>2</sub>O\n        </p>"
+    },
+    {
+      "html": "<p>\n          Запишите в отдельной(-ых) строчке(-ах) формулы вещества/частицы\n          окислителя и восстановителя. Укажите, какое(-ая) из этих\n          веществ/частиц является окислителем, а какое(-ая) — восстановителем.\n        </p>"
+    }
+  ],
+  "content": {},
+  "answer": null,
+  "solution": {
+    "title": "Эталон ответа (демоверсия ОГЭ 2026)",
+    "html": "<p style=\"margin-top: 12px\">Электронный баланс:</p>\n          <p style=\"font-family: monospace; white-space: pre-line\">\n            Fe<sup>+3</sup> + 1ē → Fe<sup>+2</sup> |×2 2I<sup>−1</sup> − 2ē →\n            I<sub>2</sub><sup>0</sup> |×1\n          </p>\n          <p>\n            <strong>Окислитель:</strong> железо в степени окисления +3 (или\n            Fe(OH)<sub>3</sub>).<br />\n            <strong>Восстановитель:</strong> иод в степени окисления −1 (или\n            HI).\n          </p>\n          <p>Уравнение реакции:</p>\n          <p style=\"text-align: center\">\n            <strong>2</strong>Fe(OH)<sub>3</sub> + <strong>6</strong>HI =\n            <strong>2</strong>FeI<sub>2</sub> + I<sub>2</sub> +\n            <strong>6</strong>H<sub>2</sub>O\n          </p>"
+  }
+}

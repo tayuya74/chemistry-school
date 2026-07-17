@@ -1,0 +1,27 @@
+{
+  "id": 1204,
+  "examType": 20,
+  "uiKind": "openReference",
+  "meta": {
+    "lead": "Окислительно-восстановительные реакции",
+    "source": "ОГЭ. Типовые экзаменационные варианты, вариант 7 (Издательство «Национальное образование», 2025).",
+    "sourceDir": "variant-7"
+  },
+  "blocks": [
+    {
+      "html": "<p>\n          Используя метод электронного баланса, расставьте коэффициенты в\n          уравнении реакции, схема которой\n        </p>"
+    },
+    {
+      "html": "<p style=\"text-align: center; font-size: 1.1rem; margin: 16px 0\">\n          NO + KClO<sub>3</sub> + KOH → KNO<sub>3</sub> + KCl + H<sub>2</sub>O\n        </p>"
+    },
+    {
+      "html": "<p>Укажите окислитель и восстановитель.</p>"
+    }
+  ],
+  "content": {},
+  "answer": null,
+  "solution": {
+    "title": "Эталон ответа (вариант 7, 2025)",
+    "html": "<p style=\"margin-top: 12px\">\n            N<sup>+2</sup> − 3ē → N<sup>+5</sup> |×2; Cl<sup>+5</sup> + 6ē →\n            Cl<sup>−1</sup> |×1.\n          </p>\n          <p style=\"margin-top: 12px\">\n            <strong>Окислитель:</strong> KClO<sub>3</sub>\n            (Cl<sup>+5</sup>).<br /><strong>Восстановитель:</strong> NO\n            (N<sup>+2</sup>).\n          </p>\n          <p style=\"margin-top: 12px\">Уравнение реакции:</p>\n          <p style=\"text-align: center; margin-top: 8px\">\n            <strong>2</strong>NO + <strong>1</strong>KClO<sub>3</sub> +\n            <strong>2</strong>KOH = <strong>2</strong>KNO<sub>3</sub> +\n            <strong>1</strong>KCl + <strong>1</strong>H<sub>2</sub>O\n          </p>"
+  }
+}

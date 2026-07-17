@@ -3,10 +3,7 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>
-      ОГЭ, задание 17 — Качественные реакции неорганических соединений.
-      Индикаторы
-    </title>
+    <title>ОГЭ, задание 17 № 1270 — Качественные реакции неорганических соединений. Индикаторы</title>
     <link rel="stylesheet" href="../../../css/style.css" />
     <link
       rel="stylesheet"
@@ -47,24 +44,21 @@
         <a class="oge-task-nav__next" href="../type-18.html">Задание 18 →</a>
       </nav>
       <h2>Задание 17 № 1270</h2>
-      <p class="lead">
-          Качественные реакции неорганических соединений. Индикаторы
-        </p>
+      <p class="lead">Качественные реакции неорганических соединений. Индикаторы</p>
 
-      <p>
+      <div class="oge-subtask">
+<p>
           Установите соответствие между двумя веществами, взятыми в виде водных
           растворов, и реактивом, с помощью которого можно различить эти
           вещества: к каждой позиции, обозначенной буквой, подберите
           соответствующую позицию, обозначенную цифрой.
         </p>
+
         <div class="match-columns">
           <div>
             <strong>Вещества</strong>
             <ul class="oge-match-plain">
-              <li>
-                А) Al<sub>2</sub>(SO<sub>4</sub>)<sub>3</sub> и
-                H<sub>2</sub>SO<sub>4</sub>
-              </li>
+              <li>А) Al<sub>2</sub>(SO<sub>4</sub>)<sub>3</sub> и H<sub>2</sub>SO<sub>4</sub></li>
               <li>Б) Ca(OH)<sub>2</sub> и CaCl<sub>2</sub></li>
               <li>В) K<sub>3</sub>PO<sub>4</sub> и NaNO<sub>3</sub></li>
             </ul>
@@ -79,6 +73,7 @@
             </ul>
           </div>
         </div>
+
         <p>Запишите в таблицу выбранные цифры под соответствующими буквами.</p>
         <table class="match-answer-table">
           <thead>
@@ -120,23 +115,26 @@
             </tr>
           </tbody>
         </table>
+
         <p style="margin-top: 16px">
-          <button type="button" id="checkBtn">Ответ</button>
+          <button type="button" id="checkBtn">Проверить</button>
         </p>
         <p id="resultOut" class="result" role="status"></p>
+      </div>
 
       <p>Источник: ОГЭ. Типовые экзаменационные варианты, вариант 10 (Издательство «Национальное образование», 2025).</p>
-    </article>
+      </article>
     </main>
-  <script>
+    <script>
       (function () {
-        document
-          .getElementById("checkBtn")
-          .addEventListener("click", function () {
-          const out = document.getElementById("resultOut");
-          if (out) out.textContent = OGE_EX_formatAnswer(["2","1","1"]);
+        const btn = document.querySelector(".oge-subtask button[type='button']");
+        const out = document.querySelector(".oge-subtask .result");
+        if (!btn || !out) return;
+        btn.textContent = "Ответ";
+        btn.addEventListener("click", function () {
+          out.textContent = OGE_EX_formatAnswer(["2","1","1"]);
         });
       })();
     </script>
-</body>
+  </body>
 </html>

@@ -1,0 +1,33 @@
+{
+  "id": 1169,
+  "examType": 8,
+  "uiKind": "twoChoice",
+  "meta": {
+    "lead": "Химические свойства простых и сложных веществ",
+    "source": "ОГЭ. Типовые экзаменационные варианты, вариант 6 (Издательство «Национальное образование», 2025).",
+    "sourceDir": "variant-6"
+  },
+  "blocks": [
+    {
+      "html": "<p>\n          Какие <strong>два</strong> из перечисленных веществ реагируют с\n          оксидом кальция?\n        </p>"
+    }
+  ],
+  "content": {
+    "statements": [
+      "CO<sub>2</sub>",
+      "HNO<sub>3</sub>",
+      "O<sub>2</sub>",
+      "NaOH",
+      "CuCl<sub>2</sub>"
+    ],
+    "maxChoices": 2,
+    "cellCount": 2
+  },
+  "answer": {
+    "correct": [
+      "1",
+      "2"
+    ]
+  },
+  "solution": null
+}

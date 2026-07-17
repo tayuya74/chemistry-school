@@ -46,7 +46,8 @@
       <h2>Задание 15 № 1130</h2>
       <p class="lead">Окислительно-восстановительные реакции</p>
 
-      <p>
+      <div class="oge-subtask">
+<p>
           Установите соответствие между схемой процесса, происходящего в
           окислительно-восстановительной реакции, и названием этого процесса: к
           каждой позиции, обозначенной буквой, подберите соответствующую
@@ -85,22 +86,19 @@
               <td>
                 <select id="sA" aria-label="Ответ для А">
                   <option value="">—</option>
-                  <option value="1">1</option>
-                  <option value="2">2</option>
+
                 </select>
               </td>
               <td>
                 <select id="sB" aria-label="Ответ для Б">
                   <option value="">—</option>
-                  <option value="1">1</option>
-                  <option value="2">2</option>
+
                 </select>
               </td>
               <td>
                 <select id="sV" aria-label="Ответ для В">
                   <option value="">—</option>
-                  <option value="1">1</option>
-                  <option value="2">2</option>
+
                 </select>
               </td>
             </tr>
@@ -108,22 +106,24 @@
         </table>
 
         <p style="margin-top: 16px">
-          <button type="button" id="checkBtn">Ответ</button>
+          <button type="button" id="checkBtn">Проверить</button>
         </p>
         <p id="resultOut" class="result" role="status"></p>
+      </div>
 
       <p>Источник: ОГЭ. Типовые экзаменационные варианты, вариант 4 (Издательство «Национальное образование», 2025).</p>
-    </article>
+      </article>
     </main>
-  <script>
+    <script>
       (function () {
-        document
-          .getElementById("checkBtn")
-          .addEventListener("click", function () {
-          const out = document.getElementById("resultOut");
-          if (out) out.textContent = OGE_EX_formatAnswer(["2","1","1"]);
+        const btn = document.querySelector(".oge-subtask button[type='button']");
+        const out = document.querySelector(".oge-subtask .result");
+        if (!btn || !out) return;
+        btn.textContent = "Ответ";
+        btn.addEventListener("click", function () {
+          out.textContent = OGE_EX_formatAnswer(["2","1","1"]);
         });
       })();
     </script>
-</body>
+  </body>
 </html>

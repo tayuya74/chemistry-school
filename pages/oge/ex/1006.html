@@ -3,7 +3,7 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>ОГЭ, задание 6 № 1006 — Закономерности изменения свойств</title>
+    <title>ОГЭ, задание 6 № 1006 — Закономерности изменения свойств элементов</title>
     <link rel="stylesheet" href="../../../css/style.css" />
     <link
       rel="stylesheet"
@@ -51,94 +51,85 @@
           Какие <strong>два утверждения верны</strong> для характеристики
           <strong>как алюминия, так и кремния</strong>?
         </p>
+
         <ol class="oge-statements">
           <li>
-            <label
-              ><input type="checkbox" name="st" value="1" />
-              <span
-                >Все электроны в атоме элемента в основном состоянии расположены
-                на трёх электронных слоях.</span
-              ></label
-            >
+            <label>
+              <input type="checkbox" name="st" value="1" />
+              <span>Все электроны в атоме элемента в основном состоянии расположены на трёх электронных слоях.</span>
+            </label>
           </li>
           <li>
-            <label
-              ><input type="checkbox" name="st" value="2" />
-              <span
-                >Атомный радиус элемента меньше атомного радиуса натрия.</span
-              ></label
-            >
+            <label>
+              <input type="checkbox" name="st" value="2" />
+              <span>Атомный радиус элемента меньше атомного радиуса натрия.</span>
+            </label>
           </li>
           <li>
-            <label
-              ><input type="checkbox" name="st" value="3" />
-              <span
-                >Простое вещество существует в виде двухатомных молекул.</span
-              ></label
-            >
+            <label>
+              <input type="checkbox" name="st" value="3" />
+              <span>Простое вещество существует в виде двухатомных молекул.</span>
+            </label>
           </li>
           <li>
-            <label
-              ><input type="checkbox" name="st" value="4" />
-              <span>Элемент образует амфотерные гидроксиды.</span></label
-            >
+            <label>
+              <input type="checkbox" name="st" value="4" />
+              <span>Элемент образует амфотерные гидроксиды.</span>
+            </label>
           </li>
           <li>
-            <label
-              ><input type="checkbox" name="st" value="5" />
-              <span
-                >Элемент образует высший оксид состава
-                Э<sub>2</sub>O<sub>3</sub>.</span
-              ></label
-            >
+            <label>
+              <input type="checkbox" name="st" value="5" />
+              <span>Элемент образует высший оксид состава Э<sub>2</sub>O<sub>3</sub>.</span>
+            </label>
           </li>
         </ol>
+
         <p>Запишите номера выбранных ответов.</p>
+
         <p class="oge-answer-label">Ответ:</p>
-        <div class="oge-answer-cells" role="group" aria-label="Две цифры">
+        <div
+          class="oge-answer-cells"
+          role="group"
+          aria-label="Номера двух выбранных утверждений (порядок цифр в ячейках любой)"
+        >
           <input
-            id="c1"
+            id="ansDigit1"
             type="text"
             inputmode="numeric"
             maxlength="1"
+            aria-label="Первая ячейка ответа"
             autocomplete="off"
           />
           <input
-            id="c2"
+            id="ansDigit2"
             type="text"
             inputmode="numeric"
             maxlength="1"
+            aria-label="Вторая ячейка ответа"
             autocomplete="off"
           />
         </div>
+
         <p style="margin-top: 16px">
-          <button type="button" id="checkBtn">Ответ</button>
+          <button type="button" id="checkBtn">Проверить</button>
         </p>
         <p id="resultOut" class="result" role="status"></p>
       </div>
 
       <p>Источник: Демонстрационный вариант ОГЭ по химии 2026 года (ФИПИ).</p>
-    </article>
+      </article>
     </main>
-  <script>
+    <script>
       (function () {
-        const correct = ["1", "2"];
-        OGE_eachTwoChoiceScope(correct, 5, function (root, pair, optionCount) {
-          const boxes = root.querySelectorAll(
-            '.oge-statements input[type="checkbox"]',
-          );
-          const btn = root.querySelector("button[type='button']");
-          const out = root.querySelector(".result");
-          const inputs = root.querySelectorAll(
-            ".oge-answer-cells input[type='text']",
-          );
-          if (!btn || !out || inputs.length < 2) return;
-          btn.addEventListener("click", function () {
-          const out = document.getElementById("resultOut");
-          if (out) out.textContent = OGE_EX_formatAnswer(["1","2"]);
-        });
+        const btn = document.querySelector(".oge-subtask button[type='button']");
+        const out = document.querySelector(".oge-subtask .result");
+        if (!btn || !out) return;
+        btn.textContent = "Ответ";
+        btn.addEventListener("click", function () {
+          out.textContent = OGE_EX_formatAnswer(["1","2"]);
         });
       })();
     </script>
-</body>
+  </body>
 </html>

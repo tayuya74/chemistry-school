@@ -1,0 +1,33 @@
+{
+  "id": 1255,
+  "examType": 2,
+  "uiKind": "periodDiagram",
+  "meta": {
+    "lead": "Строение атома, строение электронных оболочек",
+    "source": "ОГЭ. Типовые экзаменационные варианты, вариант 10 (Издательство «Национальное образование», 2025).",
+    "sourceDir": "variant-10"
+  },
+  "blocks": [
+    {
+      "html": "<p>\n          На приведённом рисунке изображена модель атома химического элемента.\n        </p>"
+    }
+  ],
+  "content": {
+    "figure": {
+      "kind": "svg",
+      "html": "<svg\n            xmlns=\"http://www.w3.org/2000/svg\"\n            viewBox=\"0 0 320 260\"\n            width=\"300\"\n            height=\"244\"\n            aria-label=\"Схема атома: ядро +Z, три электронных слоя, 15 электронов\"\n          >\n            <circle\n              cx=\"160\"\n              cy=\"130\"\n              r=\"118\"\n              fill=\"var(--color-tip-bg)\"\n              stroke=\"var(--color-border)\"\n              stroke-width=\"2\"\n            />\n            <circle\n              cx=\"160\"\n              cy=\"130\"\n              r=\"78\"\n              fill=\"none\"\n              stroke=\"var(--color-border)\"\n              stroke-width=\"1.5\"\n            />\n            <circle\n              cx=\"160\"\n              cy=\"130\"\n              r=\"44\"\n              fill=\"none\"\n              stroke=\"var(--color-border)\"\n              stroke-width=\"1.5\"\n            />\n            <circle\n              cx=\"160\"\n              cy=\"130\"\n              r=\"18\"\n              fill=\"none\"\n              stroke=\"var(--color-border)\"\n              stroke-width=\"1.5\"\n            />\n            <circle\n              cx=\"160\"\n              cy=\"130\"\n              r=\"14\"\n              fill=\"#fecaca\"\n              stroke=\"#dc2626\"\n              stroke-width=\"2\"\n            />\n            <text\n              x=\"160\"\n              y=\"135\"\n              text-anchor=\"middle\"\n              font-size=\"12\"\n              font-weight=\"700\"\n              fill=\"#991b1b\"\n            >\n              +Z\n            </text>\n            <g fill=\"#111827\">\n              <circle cx=\"160\" cy=\"112\" r=\"4\" />\n              <circle cx=\"160\" cy=\"148\" r=\"4\" />\n              <circle cx=\"160\" cy=\"52\" r=\"4\" />\n              <circle cx=\"103\" cy=\"103\" r=\"4\" />\n              <circle cx=\"217\" cy=\"103\" r=\"4\" />\n              <circle cx=\"110\" cy=\"188\" r=\"4\" />\n              <circle cx=\"85\" cy=\"125\" r=\"4\" />\n              <circle cx=\"235\" cy=\"125\" r=\"4\" />\n              <circle cx=\"160\" cy=\"208\" r=\"4\" />\n              <circle cx=\"160\" cy=\"86\" r=\"4\" />\n              <circle cx=\"126\" cy=\"104\" r=\"4\" />\n              <circle cx=\"194\" cy=\"104\" r=\"4\" />\n              <circle cx=\"126\" cy=\"156\" r=\"4\" />\n              <circle cx=\"194\" cy=\"156\" r=\"4\" />\n              <circle cx=\"160\" cy=\"174\" r=\"4\" />\n            </g>\n          </svg>",
+      "captionHtml": null
+    },
+    "labels": [
+      "X",
+      "Y"
+    ]
+  },
+  "answer": {
+    "values": {
+      "X": "3",
+      "Y": "15"
+    }
+  },
+  "solution": null
+}

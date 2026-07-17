@@ -1,0 +1,24 @@
+{
+  "id": 1182,
+  "examType": 21,
+  "uiKind": "openReference",
+  "meta": {
+    "lead": "Генетическая связь между классами неорганических соединений",
+    "source": "ОГЭ. Типовые экзаменационные варианты, вариант 6 (Издательство «Национальное образование», 2025).",
+    "sourceDir": "variant-6"
+  },
+  "blocks": [
+    {
+      "html": "<p>\n          Дана схема превращений:\n          <strong\n            >Cu → Cu(NO<sub>3</sub>)<sub>2</sub> → X → CuCl<sub>2</sub></strong\n          >\n        </p>"
+    },
+    {
+      "html": "<p>\n          Напишите молекулярные уравнения реакций, с помощью которых можно\n          осуществить указанные превращения.\n        </p>"
+    }
+  ],
+  "content": {},
+  "answer": null,
+  "solution": {
+    "title": "Эталон ответа (вариант 6, 2025)",
+    "html": "<p style=\"margin-top: 12px\">\n            Cu + 4HNO<sub>3</sub> = Cu(NO<sub>3</sub>)<sub>2</sub> + 2NO<sub\n              >2</sub\n            >\n            + 2H<sub>2</sub>O\n          </p>\n          <p style=\"margin-top: 8px\">\n            Cu(NO<sub>3</sub>)<sub>2</sub> + 2NaOH = Cu(OH)<sub>2</sub>↓ +\n            2NaNO<sub>3</sub><br />\n            <span>(X — Cu(OH)<sub>2</sub>)</span>\n          </p>\n          <p style=\"margin-top: 8px\">\n            Cu(OH)<sub>2</sub> + 2HCl = CuCl<sub>2</sub> + 2H<sub>2</sub>O\n          </p>"
+  }
+}

@@ -1,0 +1,38 @@
+{
+  "id": 1053,
+  "examType": 7,
+  "uiKind": "orderedDigits",
+  "meta": {
+    "lead": "Классификация сложных веществ",
+    "source": "Демонстрационный вариант ОГЭ по химии 2025 года (ФИПИ).",
+    "sourceDir": "default"
+  },
+  "blocks": [
+    {
+      "html": "<p>\n          Из предложенного перечня веществ выберите\n          <strong>оснóвный оксид</strong> и\n          <strong>амфотерный гидроксид</strong>.\n        </p>"
+    },
+    {
+      "html": "<ol>\n          <li>Al(OH)<sub>3</sub></li>\n          <li>Mg(OH)<sub>2</sub></li>\n          <li>OF<sub>2</sub></li>\n          <li>N<sub>2</sub>O</li>\n          <li>FeO</li>\n        </ol>"
+    },
+    {
+      "html": "<p>\n          Запишите в поле ответа\n          <strong>сначала номер оснóвного оксида</strong>, а\n          <strong>затем номер амфотерного гидроксида</strong>.\n        </p>"
+    }
+  ],
+  "content": {
+    "items": [
+      "Al(OH)<sub>3</sub>",
+      "Mg(OH)<sub>2</sub>",
+      "OF<sub>2</sub>",
+      "N<sub>2</sub>O",
+      "FeO"
+    ],
+    "cellCount": 2
+  },
+  "answer": {
+    "sequence": [
+      "5",
+      "1"
+    ]
+  },
+  "solution": null
+}

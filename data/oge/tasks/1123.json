@@ -1,0 +1,33 @@
+{
+  "id": 1123,
+  "examType": 8,
+  "uiKind": "twoChoice",
+  "meta": {
+    "lead": "Химические свойства простых и сложных веществ",
+    "source": "ОГЭ. Типовые экзаменационные варианты, вариант 4 (Издательство «Национальное образование», 2025).",
+    "sourceDir": "variant-4"
+  },
+  "blocks": [
+    {
+      "html": "<p>\n          Какие <strong>два</strong> из перечисленных веществ вступают в реакцию\n          с <strong>оксидом кальция</strong>?\n        </p>"
+    }
+  ],
+  "content": {
+    "statements": [
+      "SiO<sub>2</sub>",
+      "H<sub>2</sub>O",
+      "KOH",
+      "FeCl<sub>2</sub>",
+      "Br<sub>2</sub>"
+    ],
+    "maxChoices": 2,
+    "cellCount": 2
+  },
+  "answer": {
+    "correct": [
+      "1",
+      "2"
+    ]
+  },
+  "solution": null
+}

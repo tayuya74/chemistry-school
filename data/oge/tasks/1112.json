@@ -1,0 +1,27 @@
+{
+  "id": 1112,
+  "examType": 20,
+  "uiKind": "openReference",
+  "meta": {
+    "lead": "Окислительно-восстановительные реакции",
+    "source": "ОГЭ. Типовые экзаменационные варианты, вариант 3 (Издательство «Национальное образование», 2025).",
+    "sourceDir": "variant-3"
+  },
+  "blocks": [
+    {
+      "html": "<p>\n          Используя метод электронного баланса, расставьте коэффициенты в схеме\n          реакции:\n        </p>"
+    },
+    {
+      "html": "<p style=\"text-align: center; font-size: 1.1rem; margin: 16px 0\">\n          FeCl<sub>3</sub> + Na<sub>2</sub>S → FeS + S + NaCl\n        </p>"
+    },
+    {
+      "html": "<p>Укажите окислитель и восстановитель.</p>"
+    }
+  ],
+  "content": {},
+  "answer": null,
+  "solution": {
+    "title": "Эталон ответа (вариант 3, 2025)",
+    "html": "<p style=\"margin-top: 12px\">Электронный баланс:</p>\n          <p style=\"font-family: monospace; line-height: 1.65\">\n            1 | S<sup>2−</sup> − 2ē → S<sup>0</sup><br />\n            2 | Fe<sup>3+</sup> + ē → Fe<sup>2+</sup>\n          </p>\n          <p style=\"margin-top: 12px\">\n            <strong>Окислитель:</strong> Fe<sup>3+</sup> (или\n            FeCl<sub>3</sub>).<br />\n            <strong>Восстановитель:</strong> S<sup>2−</sup> (или\n            Na<sub>2</sub>S).\n          </p>\n          <p style=\"margin-top: 12px\">Уравнение реакции:</p>\n          <p style=\"text-align: center; margin-top: 8px\">\n            2FeCl<sub>3</sub> + 3Na<sub>2</sub>S = <strong>2</strong>FeS +\n            <strong>1</strong>S + <strong>6</strong>NaCl\n          </p>"
+  }
+}

@@ -1,0 +1,24 @@
+{
+  "id": 1137,
+  "examType": 22,
+  "uiKind": "openReference",
+  "meta": {
+    "lead": "Расчётная задача. Массовая доля, количество вещества, объём и масса",
+    "source": "ОГЭ. Типовые экзаменационные варианты, вариант 4 (Издательство «Национальное образование», 2025).",
+    "sourceDir": "variant-4"
+  },
+  "blocks": [
+    {
+      "html": "<p class=\"tip\" style=\"margin-bottom: 16px\">\n          При проведении расчётов для всех элементов, кроме хлора, используйте\n          целые значения Ar; Ar(Cl) = 35,5.\n        </p>"
+    },
+    {
+      "html": "<p>\n          Рассчитайте объём (н.&nbsp;у.) <strong>сернистого газа</strong>,\n          который выделится при взаимодействии <strong>146&nbsp;г</strong>\n          20%-ного раствора соляной кислоты с избытком раствора сульфита калия.\n          В ответе запишите уравнение реакции, о которой идёт речь в условии\n          задачи, и приведите все необходимые вычисления (указывайте единицы\n          измерения искомых физических величин).\n        </p>"
+    }
+  ],
+  "content": {},
+  "answer": null,
+  "solution": {
+    "title": "Эталон ответа (вариант 4, 2025)",
+    "html": "<p style=\"margin-top: 12px\"><strong>Уравнение:</strong></p>\n          <p style=\"text-align: center\">\n            K<sub>2</sub>SO<sub>3</sub> + 2HCl = 2KCl + H<sub>2</sub>O +\n            SO<sub>2</sub>↑\n          </p>\n          <p><strong>Вычисления:</strong></p>\n          <ul style=\"line-height: 1.7\">\n            <li>\n              m(HCl) = m(р-ра) · ω = 146 · 0,20 =\n              <strong>29,2 г</strong>\n            </li>\n            <li>\n              n(HCl) = m / M = 29,2 / 36,5 =\n              <strong>0,80 моль</strong>\n            </li>\n            <li>\n              по уравнению n(SO<sub>2</sub>) = ½ · n(HCl) =\n              <strong>0,40 моль</strong>\n            </li>\n            <li>\n              V(SO<sub>2</sub>) = n · V<sub>m</sub> = 0,40 · 22,4 =\n              <strong>8,96 л</strong> (н.&nbsp;у.)\n            </li>\n          </ul>"
+  }
+}

@@ -1,0 +1,38 @@
+{
+  "id": 1191,
+  "examType": 7,
+  "uiKind": "orderedDigits",
+  "meta": {
+    "lead": "Классификация неорганических веществ",
+    "source": "ОГЭ. Типовые экзаменационные варианты, вариант 7 (Издательство «Национальное образование», 2025).",
+    "sourceDir": "variant-7"
+  },
+  "blocks": [
+    {
+      "html": "<p>\n          Из предложенного перечня веществ выберите кислотный оксид и основание.\n        </p>"
+    },
+    {
+      "html": "<ol>\n          <li>CaO</li>\n          <li>Fe<sub>2</sub>O<sub>3</sub></li>\n          <li>Zn(OH)<sub>2</sub></li>\n          <li>LiOH</li>\n          <li>P<sub>2</sub>O<sub>5</sub></li>\n        </ol>"
+    },
+    {
+      "html": "<p>\n          Запишите в поле ответа сначала номер кислотного оксида, а затем номер\n          основания.\n        </p>"
+    }
+  ],
+  "content": {
+    "items": [
+      "CaO",
+      "Fe<sub>2</sub>O<sub>3</sub>",
+      "Zn(OH)<sub>2</sub>",
+      "LiOH",
+      "P<sub>2</sub>O<sub>5</sub>"
+    ],
+    "cellCount": 2
+  },
+  "answer": {
+    "sequence": [
+      "5",
+      "4"
+    ]
+  },
+  "solution": null
+}

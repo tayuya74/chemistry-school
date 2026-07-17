@@ -3,9 +3,7 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>
-      ОГЭ, задание 10 — Химические свойства простых и сложных веществ
-    </title>
+    <title>ОГЭ, задание 10 № 1217 — Химические свойства простых и сложных веществ</title>
     <link rel="stylesheet" href="../../../css/style.css" />
     <link
       rel="stylesheet"
@@ -48,11 +46,13 @@
       <h2>Задание 10 № 1217</h2>
       <p class="lead">Химические свойства простых и сложных веществ</p>
 
-      <p>
+      <div class="oge-subtask">
+<p>
           Установите соответствие между веществом и реагентами, с каждым из
           которых оно может вступать в реакцию: к каждой позиции, обозначенной
           буквой, подберите соответствующую позицию, обозначенную цифрой.
         </p>
+
         <div class="match-columns">
           <div>
             <strong>Вещество</strong>
@@ -65,19 +65,14 @@
           <div>
             <strong>Реагенты</strong>
             <ul class="oge-match-plain">
-              <li>
-                1) FeCl<sub>2</sub> <small>(р-р)</small>, HCl
-                <small>(р-р)</small>
-              </li>
+              <li>1) FeCl<sub>2</sub> <small>(р-р)</small>, HCl <small>(р-р)</small></li>
               <li>2) HNO<sub>3</sub> <small>(р-р)</small>, CO</li>
               <li>3) Cu, NaOH <small>(р-р)</small></li>
-              <li>
-                4) NH<sub>3</sub>, K<sub>2</sub>SO<sub>4</sub>
-                <small>(р-р)</small>
-              </li>
+              <li>4) NH<sub>3</sub>, K<sub>2</sub>SO<sub>4</sub> <small>(р-р)</small></li>
             </ul>
           </div>
         </div>
+
         <p>Запишите в таблицу выбранные цифры под соответствующими буквами.</p>
         <table class="match-answer-table">
           <thead>
@@ -119,23 +114,26 @@
             </tr>
           </tbody>
         </table>
+
         <p style="margin-top: 16px">
-          <button type="button" id="checkBtn">Ответ</button>
+          <button type="button" id="checkBtn">Проверить</button>
         </p>
         <p id="resultOut" class="result" role="status"></p>
+      </div>
 
       <p>Источник: ОГЭ. Типовые экзаменационные варианты, вариант 8 (Издательство «Национальное образование», 2025).</p>
-    </article>
+      </article>
     </main>
-  <script>
+    <script>
       (function () {
-        document
-          .getElementById("checkBtn")
-          .addEventListener("click", function () {
-          const out = document.getElementById("resultOut");
-          if (out) out.textContent = OGE_EX_formatAnswer(["3","2","1"]);
+        const btn = document.querySelector(".oge-subtask button[type='button']");
+        const out = document.querySelector(".oge-subtask .result");
+        if (!btn || !out) return;
+        btn.textContent = "Ответ";
+        btn.addEventListener("click", function () {
+          out.textContent = OGE_EX_formatAnswer(["3","2","1"]);
         });
       })();
     </script>
-</body>
+  </body>
 </html>

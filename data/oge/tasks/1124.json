@@ -1,0 +1,39 @@
+{
+  "id": 1124,
+  "examType": 9,
+  "uiKind": "matchTriple",
+  "meta": {
+    "lead": "Химические свойства простых и сложных веществ",
+    "source": "ОГЭ. Типовые экзаменационные варианты, вариант 4 (Издательство «Национальное образование», 2025).",
+    "sourceDir": "variant-4"
+  },
+  "blocks": [
+    {
+      "html": "<p>\n          Установите соответствие между реагирующими веществами и продуктами их\n          взаимодействия: к каждой позиции, обозначенной буквой, подберите\n          соответствующую позицию, обозначенную цифрой.\n        </p>"
+    }
+  ],
+  "content": {
+    "leftTitle": "Реагирующие вещества",
+    "rightTitle": "Продукты взаимодействия",
+    "left": [
+      "А) Al<sub>2</sub>S<sub>3</sub> + 6H<sub>2</sub>O →",
+      "Б) Al<sub>2</sub>S<sub>3</sub> + O<sub>2</sub> →",
+      "В) Al + H<sub>2</sub>SO<sub>4</sub> <small>(разб.)</small> →"
+    ],
+    "right": [
+      "1) Al(OH)<sub>3</sub> + H<sub>2</sub>S",
+      "2) Al<sub>2</sub>O<sub>3</sub> + H<sub>2</sub>S",
+      "3) Al<sub>2</sub>O<sub>3</sub> + SO<sub>2</sub>",
+      "4) Al<sub>2</sub>(SO<sub>4</sub>)<sub>3</sub> + H<sub>2</sub>",
+      "5) Al<sub>2</sub>(SO<sub>4</sub>)<sub>3</sub> + S + H<sub>2</sub>O"
+    ]
+  },
+  "answer": {
+    "mapping": {
+      "A": "1",
+      "B": "3",
+      "V": "4"
+    }
+  },
+  "solution": null
+}

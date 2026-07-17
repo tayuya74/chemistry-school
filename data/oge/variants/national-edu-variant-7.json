@@ -1,0 +1,100 @@
+{
+  "slug": "national-edu-variant-7",
+  "title": "Типовой вариант 7 (Национальное образование)",
+  "source": "ОГЭ. Типовые экзаменационные варианты, вариант 7 (Издательство «Национальное образование», 2025).",
+  "sourceDir": "variant-7",
+  "tasks": [
+    {
+      "slot": 1,
+      "taskId": 1185
+    },
+    {
+      "slot": 2,
+      "taskId": 1186
+    },
+    {
+      "slot": 3,
+      "taskId": 1187
+    },
+    {
+      "slot": 4,
+      "taskId": 1188
+    },
+    {
+      "slot": 5,
+      "taskId": 1189
+    },
+    {
+      "slot": 6,
+      "taskId": 1190
+    },
+    {
+      "slot": 7,
+      "taskId": 1191
+    },
+    {
+      "slot": 8,
+      "taskId": 1192
+    },
+    {
+      "slot": 9,
+      "taskId": 1193
+    },
+    {
+      "slot": 10,
+      "taskId": 1194
+    },
+    {
+      "slot": 11,
+      "taskId": 1195
+    },
+    {
+      "slot": 12,
+      "taskId": 1196
+    },
+    {
+      "slot": 13,
+      "taskId": 1197
+    },
+    {
+      "slot": 14,
+      "taskId": 1198
+    },
+    {
+      "slot": 15,
+      "taskId": 1199
+    },
+    {
+      "slot": 16,
+      "taskId": 1200
+    },
+    {
+      "slot": 17,
+      "taskId": 1201
+    },
+    {
+      "slot": 18,
+      "taskId": 1202
+    },
+    {
+      "slot": 19,
+      "taskId": 1203
+    },
+    {
+      "slot": 20,
+      "taskId": 1204
+    },
+    {
+      "slot": 21,
+      "taskId": 1205
+    },
+    {
+      "slot": 22,
+      "taskId": 1206
+    },
+    {
+      "slot": 23,
+      "taskId": 1207
+    }
+  ]
+}

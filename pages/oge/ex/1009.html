@@ -3,7 +3,7 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>ОГЭ, задание 9 № 1009 — Свойства простых и сложных веществ</title>
+    <title>ОГЭ, задание 9 № 1009 — Химические свойства простых и сложных веществ</title>
     <link rel="stylesheet" href="../../../css/style.css" />
     <link
       rel="stylesheet"
@@ -46,7 +46,8 @@
       <h2>Задание 9 № 1009</h2>
       <p class="lead">Химические свойства простых и сложных веществ</p>
 
-      <p>
+      <div class="oge-subtask">
+<p>
           Установите соответствие между реагирующими веществами и возможным(и)
           продуктом(-ами) их взаимодействия: к каждой позиции, обозначенной
           буквой, подберите соответствующую позицию, обозначенную цифрой.
@@ -73,6 +74,7 @@
           </div>
         </div>
 
+        <p>Запишите в таблицу выбранные цифры под соответствующими буквами.</p>
         <table class="match-answer-table">
           <thead>
             <tr>
@@ -84,7 +86,7 @@
           <tbody>
             <tr>
               <td>
-                <select id="sA" aria-label="А">
+                <select id="sA" aria-label="Ответ для А">
                   <option value="">—</option>
                   <option value="1">1</option>
                   <option value="2">2</option>
@@ -94,7 +96,7 @@
                 </select>
               </td>
               <td>
-                <select id="sB" aria-label="Б">
+                <select id="sB" aria-label="Ответ для Б">
                   <option value="">—</option>
                   <option value="1">1</option>
                   <option value="2">2</option>
@@ -104,7 +106,7 @@
                 </select>
               </td>
               <td>
-                <select id="sV" aria-label="В">
+                <select id="sV" aria-label="Ответ для В">
                   <option value="">—</option>
                   <option value="1">1</option>
                   <option value="2">2</option>
@@ -118,22 +120,24 @@
         </table>
 
         <p style="margin-top: 16px">
-          <button type="button" id="checkBtn">Ответ</button>
+          <button type="button" id="checkBtn">Проверить</button>
         </p>
         <p id="resultOut" class="result" role="status"></p>
+      </div>
 
       <p>Источник: Демонстрационный вариант ОГЭ по химии 2026 года (ФИПИ).</p>
-    </article>
+      </article>
     </main>
-  <script>
+    <script>
       (function () {
-        document
-          .getElementById("checkBtn")
-          .addEventListener("click", function () {
-          const out = document.getElementById("resultOut");
-          if (out) out.textContent = OGE_EX_formatAnswer(["3","5","4"]);
+        const btn = document.querySelector(".oge-subtask button[type='button']");
+        const out = document.querySelector(".oge-subtask .result");
+        if (!btn || !out) return;
+        btn.textContent = "Ответ";
+        btn.addEventListener("click", function () {
+          out.textContent = OGE_EX_formatAnswer(["3","5","4"]);
         });
       })();
     </script>
-</body>
+  </body>
 </html>

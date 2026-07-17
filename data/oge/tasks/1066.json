@@ -1,0 +1,27 @@
+{
+  "id": 1066,
+  "examType": 20,
+  "uiKind": "openReference",
+  "meta": {
+    "lead": "Окислительно-восстановительные реакции",
+    "source": "Демонстрационный вариант ОГЭ по химии 2025 года (ФИПИ).",
+    "sourceDir": "default"
+  },
+  "blocks": [
+    {
+      "html": "<p>\n          Используя метод электронного баланса, расставьте коэффициенты в\n          предложенной схеме реакции\n        </p>"
+    },
+    {
+      "html": "<p style=\"text-align: center; font-size: 1.1rem; margin: 16px 0\">\n          HNO<sub>3</sub> + HCl → Cl<sub>2</sub> + NO + H<sub>2</sub>O\n        </p>"
+    },
+    {
+      "html": "<p>Укажите окислитель и восстановитель.</p>"
+    }
+  ],
+  "content": {},
+  "answer": null,
+  "solution": {
+    "title": "Эталон ответа (демоверсия ОГЭ 2025)",
+    "html": "<p style=\"margin-top: 12px\">Электронный баланс:</p>\n          <p style=\"font-family: monospace; white-space: pre-line\">\n            N<sup>+5</sup> + 3ē → N<sup>+2</sup> |×2 2Cl<sup>−1</sup> − 2ē →\n            Cl<sub>2</sub><sup>0</sup> |×3\n          </p>\n          <p>\n            <strong>Восстановитель:</strong> хлор в степени окисления −1 (или\n            HCl).<br />\n            <strong>Окислитель:</strong> азот в степени окисления +5 (или\n            HNO<sub>3</sub>).\n          </p>\n          <p>Уравнение реакции:</p>\n          <p style=\"text-align: center\">\n            <strong>2</strong>HNO<sub>3</sub> + <strong>6</strong>HCl =\n            <strong>3</strong>Cl<sub>2</sub> + <strong>2</strong>NO +\n            <strong>4</strong>H<sub>2</sub>O\n          </p>"
+  }
+}

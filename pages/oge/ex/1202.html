@@ -3,9 +3,7 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>
-      ОГЭ, задание 18 — Вычисление массовой доли химического элемента в веществе
-    </title>
+    <title>ОГЭ, задание 18 № 1202 — Вычисление массовой доли химического элемента в веществе</title>
     <link rel="stylesheet" href="../../../css/style.css" />
     <link
       rel="stylesheet"
@@ -46,11 +44,10 @@
         <a class="oge-task-nav__next" href="../type-19.html">Задание 19 →</a>
       </nav>
       <h2>Задание 18 № 1202</h2>
-      <p class="lead">
-          Вычисление массовой доли химического элемента в веществе
-        </p>
+      <p class="lead">Вычисление массовой доли химического элемента в веществе</p>
 
-      <p class="tip" style="margin-bottom: 16px">
+      <div class="oge-subtask">
+<p class="tip" style="margin-bottom: 16px">
           Ответом к заданиям 18, 19 является целое число или конечная десятичная
           дробь. Ответы сначала укажите в тексте работы, а затем перенесите в
           БЛАНК ОТВЕТОВ № 1 справа от номера соответствующего задания, начиная с
@@ -58,50 +55,53 @@
           соответствии с приведёнными в бланке образцами. Единицы измерения
           физических величин в бланке ответов указывать не нужно.
         </p>
-        <p class="tip" style="margin-bottom: 16px">
+<p class="tip" style="margin-bottom: 16px">
           Задания 18 и 19 выполняются с использованием следующего текста.
         </p>
-        <p>
+<p>
           Глицерофосфат кальция (C<sub>3</sub>H<sub>7</sub>CaO<sub>6</sub>P)
           является лекарственным препаратом, который восполняет дефицит кальция
           и оказывает общеукрепляющее действие на организм. Его прописывают
           детям в форме таблеток для приёма два раза в сутки.
         </p>
-        <p>
+<p>
           <strong
             >Вычислите в процентах массовую долю кальция в глицерофосфате
             кальция.</strong
           >
           Запишите число с точностью до целых.
         </p>
+
         <p class="oge-answer-label">Ответ (%):</p>
         <p>
           <input
             id="ansNum"
             type="text"
-            inputmode="decimal"
+            inputmode="numeric"
             class="oge-answer-input"
             autocomplete="off"
-            aria-label="Массовая доля кальция в процентах"
+            aria-label="Числовой ответ"
           />
         </p>
         <p style="margin-top: 16px">
-          <button type="button" id="checkBtn">Ответ</button>
+          <button type="button" id="checkBtn">Проверить</button>
         </p>
         <p id="resultOut" class="result" role="status"></p>
+      </div>
 
       <p>Источник: ОГЭ. Типовые экзаменационные варианты, вариант 7 (Издательство «Национальное образование», 2025).</p>
-    </article>
+      </article>
     </main>
-  <script>
+    <script>
       (function () {
-        document
-          .getElementById("checkBtn")
-          .addEventListener("click", function () {
-          const out = document.getElementById("resultOut");
-          if (out) out.textContent = OGE_EX_formatAnswer(["19"]);
+        const btn = document.querySelector(".oge-subtask button[type='button']");
+        const out = document.querySelector(".oge-subtask .result");
+        if (!btn || !out) return;
+        btn.textContent = "Ответ";
+        btn.addEventListener("click", function () {
+          out.textContent = OGE_EX_formatAnswer(["19"]);
         });
       })();
     </script>
-</body>
+  </body>
 </html>

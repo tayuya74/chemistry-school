@@ -1,0 +1,27 @@
+{
+  "id": 1067,
+  "examType": 21,
+  "uiKind": "openReference",
+  "meta": {
+    "lead": "Химические свойства простых и сложных веществ",
+    "source": "Демонстрационный вариант ОГЭ по химии 2025 года (ФИПИ).",
+    "sourceDir": "default"
+  },
+  "blocks": [
+    {
+      "html": "<p>Дана схема превращений:</p>"
+    },
+    {
+      "html": "<p style=\"text-align: center; font-size: 1.1rem; margin: 16px 0\">\n          Fe(NO<sub>3</sub>)<sub>2</sub>\n          <span style=\"margin: 0 6px\">→</span>\n          Fe(OH)<sub>2</sub>\n          <span style=\"margin: 0 6px\">→</span>\n          X\n          <span style=\"margin: 0 6px\">→</span>\n          Fe<sub>2</sub>O<sub>3</sub>\n        </p>"
+    },
+    {
+      "html": "<p>\n          Напишите <strong>молекулярные уравнения реакций</strong>, с помощью\n          которых можно осуществить указанные превращения.\n        </p>"
+    }
+  ],
+  "content": {},
+  "answer": null,
+  "solution": {
+    "title": "Эталон ответа (демоверсия ОГЭ 2025)",
+    "html": "<ol style=\"margin-top: 12px; line-height: 1.7\">\n            <li>\n              Fe(NO<sub>3</sub>)<sub>2</sub> + 2NaOH = Fe(OH)<sub>2</sub> +\n              2NaNO<sub>3</sub>\n            </li>\n            <li>\n              4Fe(OH)<sub>2</sub> + 2H<sub>2</sub>O + O<sub>2</sub> =\n              4Fe(OH)<sub>3</sub>\n              &nbsp;(X — Fe(OH)<sub>3</sub>)\n            </li>\n            <li>\n              2Fe(OH)<sub>3</sub> <span style=\"margin-left: 4px\">→</span\n              ><sup>t°</sup> Fe<sub>2</sub>O<sub>3</sub> + 3H<sub>2</sub>O\n            </li>\n          </ol>"
+  }
+}

@@ -1,0 +1,37 @@
+{
+  "id": 1037,
+  "examType": 14,
+  "uiKind": "twoChoice",
+  "meta": {
+    "lead": "Реакции ионного обмена",
+    "source": "ОГЭ. Типовые экзаменационные варианты, вариант 1 (Издательство «Национальное образование», 2025).",
+    "sourceDir": "variant-1"
+  },
+  "blocks": [
+    {
+      "html": "<p>\n          Выберите <strong>два исходных вещества</strong>, взаимодействию водных\n          растворов которых соответствует сокращённое ионное уравнение реакции\n        </p>"
+    },
+    {
+      "html": "<p style=\"text-align: center; font-size: 1.15rem; margin: 16px 0\">\n          2OH<sup>−</sup> + Cu<sup>2+</sup> = Cu(OH)<sub>2</sub>\n        </p>"
+    }
+  ],
+  "content": {
+    "statements": [
+      "Pb(OH)<sub>2</sub>",
+      "Ba(OH)<sub>2</sub>",
+      "LiOH",
+      "CuSO<sub>4</sub>",
+      "CuO",
+      "Cu"
+    ],
+    "maxChoices": 2,
+    "cellCount": 2
+  },
+  "answer": {
+    "correct": [
+      "3",
+      "4"
+    ]
+  },
+  "solution": null
+}

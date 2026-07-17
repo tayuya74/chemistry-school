@@ -1,0 +1,38 @@
+{
+  "id": 1076,
+  "examType": 7,
+  "uiKind": "orderedDigits",
+  "meta": {
+    "lead": "Классификация сложных веществ",
+    "source": "ОГЭ. Типовые экзаменационные варианты, вариант 2 (Издательство «Национальное образование», 2025).",
+    "sourceDir": "variant-2"
+  },
+  "blocks": [
+    {
+      "html": "<p>\n          Из предложенного перечня веществ выберите\n          <strong>амфотерный оксид и кислоту</strong>.\n        </p>"
+    },
+    {
+      "html": "<ol>\n          <li>NaHCO<sub>3</sub></li>\n          <li>SiO<sub>2</sub></li>\n          <li>LiH</li>\n          <li>Fe<sub>2</sub>O<sub>3</sub></li>\n          <li>HClO</li>\n        </ol>"
+    },
+    {
+      "html": "<p>\n          Запишите в поле ответа сначала номер амфотерного оксида, а затем номер\n          кислоты.\n        </p>"
+    }
+  ],
+  "content": {
+    "items": [
+      "NaHCO<sub>3</sub>",
+      "SiO<sub>2</sub>",
+      "LiH",
+      "Fe<sub>2</sub>O<sub>3</sub>",
+      "HClO"
+    ],
+    "cellCount": 2
+  },
+  "answer": {
+    "sequence": [
+      "4",
+      "5"
+    ]
+  },
+  "solution": null
+}

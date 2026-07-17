@@ -51,85 +51,85 @@
           Из предложенного перечня выберите две пары веществ, между которыми
           протекает реакция замещения.
         </p>
+
         <ol class="oge-statements">
           <li>
-            <label
-              ><input type="checkbox" name="st" value="1" />
-              <span>цинк и хлорид меди(II)</span></label
-            >
+            <label>
+              <input type="checkbox" name="st" value="1" />
+              <span>цинк и хлорид меди(II)</span>
+            </label>
           </li>
           <li>
-            <label
-              ><input type="checkbox" name="st" value="2" />
-              <span>натрий и вода</span></label
-            >
+            <label>
+              <input type="checkbox" name="st" value="2" />
+              <span>натрий и вода</span>
+            </label>
           </li>
           <li>
-            <label
-              ><input type="checkbox" name="st" value="3" />
-              <span>оксид углерода(II) и кислород</span></label
-            >
+            <label>
+              <input type="checkbox" name="st" value="3" />
+              <span>оксид углерода(II) и кислород</span>
+            </label>
           </li>
           <li>
-            <label
-              ><input type="checkbox" name="st" value="4" />
-              <span>оксид серы(VI) и оксид натрия</span></label
-            >
+            <label>
+              <input type="checkbox" name="st" value="4" />
+              <span>оксид серы(VI) и оксид натрия</span>
+            </label>
           </li>
           <li>
-            <label
-              ><input type="checkbox" name="st" value="5" />
-              <span>хлорид железа(II) и хлор</span></label
-            >
+            <label>
+              <input type="checkbox" name="st" value="5" />
+              <span>хлорид железа(II) и хлор</span>
+            </label>
           </li>
         </ol>
+
         <p>Запишите номера выбранных ответов.</p>
+
         <p class="oge-answer-label">Ответ:</p>
-        <div class="oge-answer-cells" role="group" aria-label="Ответ">
+        <div
+          class="oge-answer-cells"
+          role="group"
+          aria-label="Номера двух выбранных утверждений (порядок цифр в ячейках любой)"
+        >
           <input
-            id="c1"
+            id="ansDigit1"
             type="text"
             inputmode="numeric"
             maxlength="1"
+            aria-label="Первая ячейка ответа"
             autocomplete="off"
-            aria-label="1-я цифра ответа"
-          /><input
-            id="c2"
+          />
+          <input
+            id="ansDigit2"
             type="text"
             inputmode="numeric"
             maxlength="1"
+            aria-label="Вторая ячейка ответа"
             autocomplete="off"
-            aria-label="2-я цифра ответа"
           />
         </div>
+
         <p style="margin-top: 16px">
-          <button type="button" id="checkBtn">Ответ</button>
+          <button type="button" id="checkBtn">Проверить</button>
         </p>
         <p id="resultOut" class="result" role="status"></p>
       </div>
 
       <p>Источник: ОГЭ. Типовые экзаменационные варианты, вариант 7 (Издательство «Национальное образование», 2025).</p>
-    </article>
+      </article>
     </main>
-  <script>
+    <script>
       (function () {
-        const correct = ["1", "2"];
-        OGE_eachTwoChoiceScope(correct, 5, function (root, pair, optionCount) {
-          const boxes = root.querySelectorAll(
-            '.oge-statements input[type="checkbox"]',
-          );
-          const btn = root.querySelector("button[type='button']");
-          const out = root.querySelector(".result");
-          const inputs = root.querySelectorAll(
-            ".oge-answer-cells input[type='text']",
-          );
-          if (!btn || !out || inputs.length < 2) return;
-          btn.addEventListener("click", function () {
-          const out = document.getElementById("resultOut");
-          if (out) out.textContent = OGE_EX_formatAnswer(["1","2"]);
-        });
+        const btn = document.querySelector(".oge-subtask button[type='button']");
+        const out = document.querySelector(".oge-subtask .result");
+        if (!btn || !out) return;
+        btn.textContent = "Ответ";
+        btn.addEventListener("click", function () {
+          out.textContent = OGE_EX_formatAnswer(["1","2"]);
         });
       })();
     </script>
-</body>
+  </body>
 </html>

@@ -1,0 +1,32 @@
+{
+  "id": 1186,
+  "examType": 2,
+  "uiKind": "periodDiagram",
+  "meta": {
+    "lead": "Строение атома, строение электронных оболочек",
+    "source": "ОГЭ. Типовые экзаменационные варианты, вариант 7 (Издательство «Национальное образование», 2025).",
+    "sourceDir": "variant-7"
+  },
+  "blocks": [
+    {
+      "html": "<p>\n          На приведённом рисунке изображена ячейка Периодической системы Д. И.\n          Менделеева с данными о химическом элементе.\n        </p>"
+    }
+  ],
+  "content": {
+    "figure": {
+      "kind": "periodicCell",
+      "html": "<div\n          style=\"\n            display: inline-grid;\n            grid-template-columns: 1fr;\n            min-width: 96px;\n            border: 1px solid var(--color-border);\n            padding: 12px;\n            text-align: center;\n            margin: 12px 0 18px;\n          \"\n        >\n          <div style=\"text-align: left\">7</div>\n          <div style=\"font-size: 1.2rem\">N</div>\n          <div style=\"text-align: right\">14,0</div>\n        </div>"
+    },
+    "labels": [
+      "X",
+      "Y"
+    ]
+  },
+  "answer": {
+    "values": {
+      "X": "2",
+      "Y": "5"
+    }
+  },
+  "solution": null
+}

@@ -56,27 +56,19 @@
           <li>
             <label>
               <input type="checkbox" name="st" value="1" />
-              <span
-                >Алюминий по распространённости в земной коре занимает третье
-                место, уступая только кислороду и кремнию.</span
-              >
+              <span>Алюминий по распространённости в земной коре занимает третье место, уступая только кислороду и кремнию.</span>
             </label>
           </li>
           <li>
             <label>
               <input type="checkbox" name="st" value="2" />
-              <span
-                >До конца XIX&nbsp;в. алюминий в промышленных масштабах не
-                производился.</span
-              >
+              <span>До конца XIX&nbsp;в. алюминий в промышленных масштабах не производился.</span>
             </label>
           </li>
           <li>
             <label>
               <input type="checkbox" name="st" value="3" />
-              <span
-                >Алюминий образует прочную химическую связь с кислородом.</span
-              >
+              <span>Алюминий образует прочную химическую связь с кислородом.</span>
             </label>
           </li>
           <li>
@@ -88,10 +80,7 @@
           <li>
             <label>
               <input type="checkbox" name="st" value="5" />
-              <span
-                >При производстве сплавов для авиационной промышленности
-                используется алюминий.</span
-              >
+              <span>При производстве сплавов для авиационной промышленности используется алюминий.</span>
             </label>
           </li>
         </ol>
@@ -123,33 +112,24 @@
         </div>
 
         <p style="margin-top: 16px">
-          <button type="button" id="checkTask1">Ответ</button>
+          <button type="button" id="checkBtn">Проверить</button>
         </p>
-        <p id="resultTask1" class="result" role="status"></p>
+        <p id="resultOut" class="result" role="status"></p>
       </div>
 
       <p>Источник: Демонстрационный вариант ОГЭ по химии 2025 года (ФИПИ).</p>
-    </article>
+      </article>
     </main>
-  <script>
+    <script>
       (function () {
-        const correct = ["1", "3"];
-        OGE_eachTwoChoiceScope(correct, 5, function (root, pair, optionCount) {
-          const boxes = root.querySelectorAll(
-            '.oge-statements input[type="checkbox"]',
-          );
-          const btn = root.querySelector("button[type='button']");
-          const out = root.querySelector(".result");
-          const inputs = root.querySelectorAll(
-            ".oge-answer-cells input[type='text']",
-          );
-          if (!btn || !out || inputs.length < 2) return;
-          btn.addEventListener("click", function () {
-          const out = document.getElementById("resultTask1");
-          if (out) out.textContent = OGE_EX_formatAnswer(["1","3"]);
-        });
+        const btn = document.querySelector(".oge-subtask button[type='button']");
+        const out = document.querySelector(".oge-subtask .result");
+        if (!btn || !out) return;
+        btn.textContent = "Ответ";
+        btn.addEventListener("click", function () {
+          out.textContent = OGE_EX_formatAnswer(["1","3"]);
         });
       })();
     </script>
-</body>
+  </body>
 </html>

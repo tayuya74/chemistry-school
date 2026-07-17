@@ -1,0 +1,33 @@
+{
+  "id": 1232,
+  "examType": 2,
+  "uiKind": "periodDiagram",
+  "meta": {
+    "lead": "Строение атома, строение электронных оболочек",
+    "source": "ОГЭ. Типовые экзаменационные варианты, вариант 9 (Издательство «Национальное образование», 2025).",
+    "sourceDir": "variant-9"
+  },
+  "blocks": [
+    {
+      "html": "<p>\n          На рисунке изображена схема распределения электронов по электронным\n          слоям атома некоторого химического элемента.\n        </p>"
+    }
+  ],
+  "content": {
+    "figure": {
+      "kind": "svg",
+      "html": "<svg\n            xmlns=\"http://www.w3.org/2000/svg\"\n            viewBox=\"0 0 300 180\"\n            width=\"300\"\n            height=\"180\"\n            aria-label=\"Схема атома: ядро +Z, 2 электрона, 8 электронов и 1 электрон на электронных слоях\"\n          >\n            <circle\n              cx=\"90\"\n              cy=\"90\"\n              r=\"18\"\n              fill=\"var(--color-tip-bg)\"\n              stroke=\"var(--color-border)\"\n              stroke-width=\"2\"\n            />\n            <text x=\"90\" y=\"95\" text-anchor=\"middle\" font-size=\"16\">+Z</text>\n            <path\n              d=\"M118 42 C150 58 150 122 118 138\"\n              fill=\"none\"\n              stroke=\"var(--color-border)\"\n              stroke-width=\"2\"\n            />\n            <path\n              d=\"M148 30 C194 54 194 126 148 150\"\n              fill=\"none\"\n              stroke=\"var(--color-border)\"\n              stroke-width=\"2\"\n            />\n            <path\n              d=\"M178 24 C238 52 238 128 178 156\"\n              fill=\"none\"\n              stroke=\"var(--color-border)\"\n              stroke-width=\"2\"\n            />\n            <text x=\"130\" y=\"128\" text-anchor=\"middle\" font-size=\"16\">2ē</text>\n            <text x=\"162\" y=\"128\" text-anchor=\"middle\" font-size=\"16\">8ē</text>\n            <text x=\"194\" y=\"128\" text-anchor=\"middle\" font-size=\"16\">1ē</text>\n          </svg>",
+      "captionHtml": null
+    },
+    "labels": [
+      "X",
+      "Y"
+    ]
+  },
+  "answer": {
+    "values": {
+      "X": "11",
+      "Y": "1"
+    }
+  },
+  "solution": null
+}

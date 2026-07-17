@@ -1,0 +1,32 @@
+{
+  "id": 1138,
+  "examType": 23,
+  "uiKind": "experimentOpen",
+  "meta": {
+    "lead": "Экспериментальная задача",
+    "source": "ОГЭ. Типовые экзаменационные варианты, вариант 4 (Издательство «Национальное образование», 2025).",
+    "sourceDir": "variant-4"
+  },
+  "blocks": [
+    {
+      "html": "<p class=\"tip\" style=\"margin-bottom: 16px\">\n          Для ответа на задание 23 используйте БЛАНК ОТВЕТОВ № 2. Запишите\n          сначала номер задания (23), а затем развёрнутый ответ к нему. Ответ\n          записывайте чётко и разборчиво. Для оформления ответа используйте\n          предложенную в задании табличную форму, которую следует перенести в\n          БЛАНК ОТВЕТОВ № 2.\n        </p>"
+    },
+    {
+      "html": "<p>\n          Для проведения эксперимента выданы склянки №&nbsp;1 и №&nbsp;2 с\n          растворами <strong>хлорида магния</strong> и\n          <strong>хлорида бария</strong>, а также три реактива: растворы\n          <strong>серной кислоты</strong>, <strong>нитрата серебра</strong> и\n          <strong>гидроксида калия</strong>.\n        </p>"
+    },
+    {
+      "html": "<ol style=\"line-height: 1.65\">\n          <li>\n            только из указанных в перечне трёх реактивов выберите два, которые\n            необходимы для определения каждого вещества, находящегося в склянках\n            № 1 и № 2;\n          </li>\n          <li>\n            составьте молекулярное, полное и сокращённое ионные уравнения\n            реакции, которую планируете провести для определения вещества из\n            склянки № 1;\n          </li>\n          <li>\n            составьте молекулярное, полное и сокращённое ионные уравнения\n            реакции, которую планируете провести для определения вещества из\n            склянки № 2;\n          </li>\n          <li>\n            для оформления хода эксперимента используйте предложенную ниже\n            таблицу;\n          </li>\n          <li>приступайте к выполнению эксперимента.</li>\n        </ol>"
+    },
+    {
+      "html": "<p><strong>Таблица для оформления проведения эксперимента</strong></p>"
+    }
+  ],
+  "content": {
+    "hasExperimentTable": true
+  },
+  "answer": null,
+  "solution": {
+    "title": "Эталон ответа (вариант 4, 2025)",
+    "html": "<p style=\"margin-top: 12px\">\n            Выбранные реактивы: <strong>KOH</strong> и\n            <strong>H<sub>2</sub>SO<sub>4</sub></strong>\n            (AgNO<sub>3</sub> с обоими растворами даёт одинаковый белый осадок\n            AgCl и не различает соли).\n          </p>\n          <p style=\"margin-top: 12px\">\n            <strong\n              >Опыт 1 (реактив KOH) — для идентификации\n              MgCl<sub>2</sub>.</strong\n            >\n          </p>\n          <p style=\"line-height: 1.65\">\n            MgCl<sub>2</sub> + 2KOH = Mg(OH)<sub>2</sub>↓ + 2KCl;<br />\n            Mg<sup>2+</sup> + 2Cl<sup>−</sup> + 2K<sup>+</sup> + 2OH<sup>−</sup>\n            = Mg(OH)<sub>2</sub>↓ + 2K<sup>+</sup> + 2Cl<sup>−</sup>;<br />\n            Mg<sup>2+</sup> + 2OH<sup>−</sup> = Mg(OH)<sub>2</sub>↓.\n          </p>\n          <p style=\"margin-top: 12px\">\n            <strong\n              >Опыт 2 (реактив H<sub>2</sub>SO<sub>4</sub>) — для идентификации\n              BaCl<sub>2</sub>.</strong\n            >\n          </p>\n          <p style=\"line-height: 1.65\">\n            BaCl<sub>2</sub> + H<sub>2</sub>SO<sub>4</sub> = BaSO<sub>4</sub>↓ +\n            2HCl;<br />\n            Ba<sup>2+</sup> + 2Cl<sup>−</sup> + 2H<sup>+</sup> + SO<sub>4</sub\n            ><sup>2−</sup> = BaSO<sub>4</sub>↓ + 2H<sup>+</sup> +\n            2Cl<sup>−</sup>;<br />\n            Ba<sup>2+</sup> + SO<sub>4</sub><sup>2−</sup> = BaSO<sub>4</sub>↓.\n          </p>\n          <p style=\"margin-top: 14px\"><strong>Таблица (пример):</strong></p>\n          <ul style=\"line-height: 1.65\">\n            <li>\n              1 — KOH: в растворе MgCl<sub>2</sub> белый осадок\n              Mg(OH)<sub>2</sub>; в BaCl<sub>2</sub> заметных изменений нет.\n            </li>\n            <li>\n              2 — H<sub>2</sub>SO<sub>4</sub>: в BaCl<sub>2</sub> белый осадок\n              BaSO<sub>4</sub>; в MgCl<sub>2</sub> осадка нет.\n            </li>\n            <li>\n              <strong>ВЫВОД:</strong> по совокупности опытов устанавливают, где\n              MgCl<sub>2</sub>, а где BaCl<sub>2</sub> (конкретная нумерация\n              склянок в ответе указывается по фактическим наблюдениям).\n            </li>\n          </ul>\n          <p style=\"margin-top: 10px\">\n            Допускаются другие корректные формулировки, согласованные с\n            выбранным планом опыта.\n          </p>"
+  }
+}

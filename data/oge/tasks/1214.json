@@ -1,0 +1,38 @@
+{
+  "id": 1214,
+  "examType": 7,
+  "uiKind": "orderedDigits",
+  "meta": {
+    "lead": "Классификация неорганических веществ",
+    "source": "ОГЭ. Типовые экзаменационные варианты, вариант 8 (Издательство «Национальное образование», 2025).",
+    "sourceDir": "variant-8"
+  },
+  "blocks": [
+    {
+      "html": "<p>\n          Из предложенного перечня веществ выберите основание и кислотный оксид.\n        </p>"
+    },
+    {
+      "html": "<ol>\n          <li>SiO<sub>2</sub></li>\n          <li>NO</li>\n          <li>Ca(OH)<sub>2</sub></li>\n          <li>Al(OH)<sub>3</sub></li>\n          <li>Na<sub>2</sub>S</li>\n        </ol>"
+    },
+    {
+      "html": "<p>\n          Запишите в поле ответа сначала номер основания, а затем номер\n          кислотного оксида.\n        </p>"
+    }
+  ],
+  "content": {
+    "items": [
+      "SiO<sub>2</sub>",
+      "NO",
+      "Ca(OH)<sub>2</sub>",
+      "Al(OH)<sub>3</sub>",
+      "Na<sub>2</sub>S"
+    ],
+    "cellCount": 2
+  },
+  "answer": {
+    "sequence": [
+      "3",
+      "1"
+    ]
+  },
+  "solution": null
+}

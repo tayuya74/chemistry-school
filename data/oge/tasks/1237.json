@@ -1,0 +1,38 @@
+{
+  "id": 1237,
+  "examType": 7,
+  "uiKind": "orderedDigits",
+  "meta": {
+    "lead": "Классификация неорганических веществ",
+    "source": "ОГЭ. Типовые экзаменационные варианты, вариант 9 (Издательство «Национальное образование», 2025).",
+    "sourceDir": "variant-9"
+  },
+  "blocks": [
+    {
+      "html": "<p>\n          Из предложенного перечня веществ выберите соль и амфотерный оксид.\n        </p>"
+    },
+    {
+      "html": "<ol>\n          <li>Ca(OH)<sub>2</sub></li>\n          <li>Al(OH)<sub>3</sub></li>\n          <li>ZnO</li>\n          <li>NaClO</li>\n          <li>FeO</li>\n        </ol>"
+    },
+    {
+      "html": "<p>\n          Запишите в поле ответа сначала номер соли, а затем номер амфотерного\n          оксида.\n        </p>"
+    }
+  ],
+  "content": {
+    "items": [
+      "Ca(OH)<sub>2</sub>",
+      "Al(OH)<sub>3</sub>",
+      "ZnO",
+      "NaClO",
+      "FeO"
+    ],
+    "cellCount": 2
+  },
+  "answer": {
+    "sequence": [
+      "4",
+      "3"
+    ]
+  },
+  "solution": null
+}

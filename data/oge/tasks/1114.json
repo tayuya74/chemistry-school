@@ -1,0 +1,24 @@
+{
+  "id": 1114,
+  "examType": 22,
+  "uiKind": "openReference",
+  "meta": {
+    "lead": "Расчётная задача. Массовая доля, количество вещества, объём и масса",
+    "source": "ОГЭ. Типовые экзаменационные варианты, вариант 3 (Издательство «Национальное образование», 2025).",
+    "sourceDir": "variant-3"
+  },
+  "blocks": [
+    {
+      "html": "<p class=\"tip\" style=\"margin-bottom: 16px\">\n          При проведении расчётов для всех элементов, кроме хлора, используйте\n          целые значения Ar; Ar(Cl) = 35,5.\n        </p>"
+    },
+    {
+      "html": "<p>\n          <strong>110 г</strong> раствора гидроксида калия смешали с избытком\n          раствора нитрата железа(II). Выпал осадок массой\n          <strong>22,5 г</strong>. Вычислите массовую долю гидроксида калия в\n          исходном растворе. В ответе запишите уравнение реакции, о которой идёт\n          речь в условии задачи, и приведите все необходимые вычисления\n          (указывайте единицы измерения искомых физических величин).\n        </p>"
+    }
+  ],
+  "content": {},
+  "answer": null,
+  "solution": {
+    "title": "Эталон ответа (вариант 3, 2025)",
+    "html": "<p style=\"margin-top: 12px\"><strong>Уравнение:</strong></p>\n          <p style=\"text-align: center\">\n            Fe(NO<sub>3</sub>)<sub>2</sub> + 2KOH = Fe(OH)<sub>2</sub>↓ +\n            2KNO<sub>3</sub>\n          </p>\n          <p><strong>Вычисления:</strong></p>\n          <ul style=\"line-height: 1.7\">\n            <li>\n              M(Fe(OH)<sub>2</sub>) = 56 + 2 · (16 + 1) =\n              <strong>90 г/моль</strong>\n            </li>\n            <li>\n              n(Fe(OH)<sub>2</sub>) = m / M = 22,5 / 90 =\n              <strong>0,25 моль</strong>\n            </li>\n            <li>\n              по коэффициентам реакции n(KOH) = 2 · n(Fe(OH)<sub>2</sub>) =\n              <strong>0,50 моль</strong>\n            </li>\n            <li>\n              m(KOH) = n · M = 0,50 · 56 = <strong>28 г</strong> (принято M(KOH)\n              = 39 + 16 + 1)\n            </li>\n            <li>\n              ω(KOH) = m / m(р-ра) = 28 / 110 =\n              <strong>0,255</strong>&nbsp;(≈&nbsp;<strong>25,5&nbsp;%</strong>)\n            </li>\n          </ul>"
+  }
+}

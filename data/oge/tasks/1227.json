@@ -1,0 +1,27 @@
+{
+  "id": 1227,
+  "examType": 20,
+  "uiKind": "openReference",
+  "meta": {
+    "lead": "Окислительно-восстановительные реакции",
+    "source": "ОГЭ. Типовые экзаменационные варианты, вариант 8 (Издательство «Национальное образование», 2025).",
+    "sourceDir": "variant-8"
+  },
+  "blocks": [
+    {
+      "html": "<p>\n          Используя метод электронного баланса, расставьте коэффициенты в схеме\n          реакции\n        </p>"
+    },
+    {
+      "html": "<p style=\"text-align: center; font-size: 1.1rem; margin: 16px 0\">\n          K<sub>2</sub>S + HClO<sub>3</sub> + H<sub>2</sub>O → KCl + S + KOH\n        </p>"
+    },
+    {
+      "html": "<p>Определите окислитель и восстановитель.</p>"
+    }
+  ],
+  "content": {},
+  "answer": null,
+  "solution": {
+    "title": "Эталон ответа (вариант 8, 2025)",
+    "html": "<p style=\"margin-top: 12px\">\n            S<sup>−2</sup> − 2ē → S<sup>0</sup> |×3; Cl<sup>+5</sup> + 6ē →\n            Cl<sup>−1</sup> |×1.\n          </p>\n          <p style=\"margin-top: 12px\">\n            <strong>Окислитель:</strong> HClO<sub>3</sub>\n            (Cl<sup>+5</sup>).<br /><strong>Восстановитель:</strong>\n            K<sub>2</sub>S (S<sup>−2</sup>).\n          </p>\n          <p style=\"margin-top: 12px\">Уравнение реакции:</p>\n          <p style=\"text-align: center; margin-top: 8px\">\n            <strong>3</strong>K<sub>2</sub>S + <strong>1</strong>HClO<sub\n              >3</sub\n            >\n            + <strong>2</strong>H<sub>2</sub>O = <strong>1</strong>KCl +\n            <strong>3</strong>S + <strong>5</strong>KOH\n          </p>"
+  }
+}

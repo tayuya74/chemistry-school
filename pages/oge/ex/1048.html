@@ -3,9 +3,7 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>
-      ОГЭ, задание 2 — Строение атома, строение электронных оболочек
-    </title>
+    <title>ОГЭ, задание 2 № 1048 — Строение атома, строение электронных оболочек</title>
     <link rel="stylesheet" href="../../../css/style.css" />
     <link
       rel="stylesheet"
@@ -48,7 +46,8 @@
       <h2>Задание 2 № 1048</h2>
       <p class="lead">Строение атома, строение электронных оболочек</p>
 
-      <p>
+      <div class="oge-subtask">
+<p>
           На приведённом рисунке изображена модель атома химического элемента.
         </p>
 
@@ -131,18 +130,12 @@
               <circle cx="125" cy="152" r="5" />
             </g>
           </svg>
-          <p class="tip" style="margin-top: 8px; max-width: 420px">
-            Точками показаны электроны на трёх слоях; на первом слое — 2
-            электрона, на втором — 8, на третьем — 5 (не возбуждённое
-            состояние).
-          </p>
+          <p class="tip" style="margin-top: 8px">Точками показаны электроны на трёх слоях; на первом слое — 2 электрона, на втором — 8, на третьем — 5 (не возбуждённое состояние).</p>
         </div>
-
         <p>
-          Запишите в поле ответа номер периода (<strong>X</strong>) и номер
-          группы (<strong>Y</strong>), в которых данный химический элемент
-          расположен в Периодической системе химических элементов Д.И.
-          Менделеева. (Для записи ответа используйте арабские цифры.)
+          Запишите в таблицу значения <strong>X</strong> и
+          <strong>Y</strong>.
+          (Для записи ответа используйте арабские цифры.)
         </p>
 
         <p class="oge-answer-label">Ответ:</p>
@@ -161,7 +154,7 @@
                   type="text"
                   inputmode="numeric"
                   autocomplete="off"
-                  aria-label="Номер периода X"
+                  aria-label="X"
                 />
               </td>
               <td>
@@ -170,7 +163,7 @@
                   type="text"
                   inputmode="numeric"
                   autocomplete="off"
-                  aria-label="Номер группы Y"
+                  aria-label="Y"
                 />
               </td>
             </tr>
@@ -178,25 +171,24 @@
         </table>
 
         <p style="margin-top: 16px">
-          <button type="button" id="checkTask2">Ответ</button>
+          <button type="button" id="checkBtn">Проверить</button>
         </p>
-        <p id="resultTask2" class="result" role="status"></p>
+        <p id="resultOut" class="result" role="status"></p>
+      </div>
 
       <p>Источник: Демонстрационный вариант ОГЭ по химии 2025 года (ФИПИ).</p>
-    </article>
+      </article>
     </main>
-  <script>
+    <script>
       (function () {
-        const btn = document.getElementById("checkTask2");
-        const out = document.getElementById("resultTask2");
-        const xEl = document.getElementById("ansX");
-        const yEl = document.getElementById("ansY");
-
+        const btn = document.querySelector(".oge-subtask button[type='button']");
+        const out = document.querySelector(".oge-subtask .result");
+        if (!btn || !out) return;
+        btn.textContent = "Ответ";
         btn.addEventListener("click", function () {
-          const out = document.getElementById("resultTask2");
-          if (out) out.textContent = OGE_EX_formatAnswer(["3","5"]);
+          out.textContent = OGE_EX_formatAnswer(["3","5"]);
         });
       })();
     </script>
-</body>
+  </body>
 </html>

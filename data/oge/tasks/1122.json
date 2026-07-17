@@ -1,0 +1,35 @@
+{
+  "id": 1122,
+  "examType": 7,
+  "uiKind": "orderedDigits",
+  "meta": {
+    "lead": "Классификация сложных веществ",
+    "source": "ОГЭ. Типовые экзаменационные варианты, вариант 4 (Издательство «Национальное образование», 2025).",
+    "sourceDir": "variant-4"
+  },
+  "blocks": [
+    {
+      "html": "<p>\n          Из предложенного перечня веществ выберите\n          <strong>щёлочь и амфотерный оксид</strong>. Запишите в поле ответа\n          сначала номер щёлочи, а затем номер амфотерного оксида.\n        </p>"
+    },
+    {
+      "html": "<ol>\n          <li>Cu(OH)<sub>2</sub></li>\n          <li>H<sub>2</sub>SiO<sub>3</sub></li>\n          <li>MgO</li>\n          <li>Ba(OH)<sub>2</sub></li>\n          <li>Cr<sub>2</sub>O<sub>3</sub></li>\n        </ol>"
+    }
+  ],
+  "content": {
+    "items": [
+      "Cu(OH)<sub>2</sub>",
+      "H<sub>2</sub>SiO<sub>3</sub>",
+      "MgO",
+      "Ba(OH)<sub>2</sub>",
+      "Cr<sub>2</sub>O<sub>3</sub>"
+    ],
+    "cellCount": 2
+  },
+  "answer": {
+    "sequence": [
+      "4",
+      "5"
+    ]
+  },
+  "solution": null
+}

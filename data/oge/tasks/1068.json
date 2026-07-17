@@ -1,0 +1,27 @@
+{
+  "id": 1068,
+  "examType": 22,
+  "uiKind": "openReference",
+  "meta": {
+    "lead": "Расчётная задача. Массовая доля, количество вещества, объём и масса",
+    "source": "Демонстрационный вариант ОГЭ по химии 2025 года (ФИПИ).",
+    "sourceDir": "default"
+  },
+  "blocks": [
+    {
+      "html": "<p class=\"tip\" style=\"margin-bottom: 16px\">\n          При проведении расчётов для всех элементов, кроме хлора, используйте\n          целые значения Ar; Ar(Cl) = 35,5.\n        </p>"
+    },
+    {
+      "html": "<p>\n          К 150&nbsp;г раствора карбоната натрия добавляли раствор хлорида\n          кальция до прекращения выделения осадка. Масса осадка составила\n          12,0&nbsp;г.\n          <strong\n            >Вычислите массовую долю карбоната натрия в исходном\n            растворе.</strong\n          >\n        </p>"
+    },
+    {
+      "html": "<p>\n          В ответе запишите уравнение реакции, о которой идёт речь в условии\n          задачи, и приведите все необходимые вычисления (указывайте единицы\n          измерения искомых физических величин).\n        </p>"
+    }
+  ],
+  "content": {},
+  "answer": null,
+  "solution": {
+    "title": "Эталон ответа (демоверсия ОГЭ 2025)",
+    "html": "<p style=\"margin-top: 12px\"><strong>Уравнение:</strong></p>\n          <p style=\"text-align: center\">\n            Na<sub>2</sub>CO<sub>3</sub> + CaCl<sub>2</sub> = CaCO<sub>3</sub>↓\n            + 2NaCl\n          </p>\n          <p><strong>Вычисления:</strong></p>\n          <ul style=\"line-height: 1.7\">\n            <li>n(CaCO<sub>3</sub>) = m / M = 12 / 100 = 0,12 моль</li>\n            <li>\n              по уравнению реакции n(Na<sub>2</sub>CO<sub>3</sub>) =\n              n(CaCO<sub>3</sub>) = 0,12 моль\n            </li>\n            <li>\n              m(Na<sub>2</sub>CO<sub>3</sub>) = n · M = 0,12 · 106 = 12,72 г\n            </li>\n            <li>\n              ω(Na<sub>2</sub>CO<sub>3</sub>) = m(Na<sub>2</sub>CO<sub>3</sub>)\n              · 100&nbsp;% / m(р-ра) = 12,72 · 100&nbsp;% / 150 =\n              <strong>8,48&nbsp;%</strong>\n            </li>\n          </ul>"
+  }
+}

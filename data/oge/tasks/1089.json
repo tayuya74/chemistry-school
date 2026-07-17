@@ -1,0 +1,27 @@
+{
+  "id": 1089,
+  "examType": 20,
+  "uiKind": "openReference",
+  "meta": {
+    "lead": "Окислительно-восстановительные реакции",
+    "source": "ОГЭ. Типовые экзаменационные варианты, вариант 2 (Издательство «Национальное образование», 2025).",
+    "sourceDir": "variant-2"
+  },
+  "blocks": [
+    {
+      "html": "<p>\n          Используя метод электронного баланса, расставьте коэффициенты в схеме\n          реакции:\n        </p>"
+    },
+    {
+      "html": "<p style=\"text-align: center; font-size: 1.1rem; margin: 16px 0\">\n          PH<sub>3</sub> + HNO<sub>3</sub> → H<sub>3</sub>PO<sub>4</sub> +\n          NO<sub>2</sub> + H<sub>2</sub>O\n        </p>"
+    },
+    {
+      "html": "<p>Определите окислитель и восстановитель.</p>"
+    }
+  ],
+  "content": {},
+  "answer": null,
+  "solution": {
+    "title": "Эталон ответа (вариант 2, 2025)",
+    "html": "<p style=\"margin-top: 12px\">Электронный баланс:</p>\n          <p style=\"font-family: monospace; white-space: pre-line\">\n            P<sup>−3</sup> − 8ē → P<sup>+5</sup> |×1 N<sup>+5</sup> + 1ē →\n            N<sup>+4</sup> |×8\n          </p>\n          <p>\n            <strong>Восстановитель:</strong> PH<sub>3</sub> (фосфор в степени\n            окисления −3).<br />\n            <strong>Окислитель:</strong> HNO<sub>3</sub> (азот в степени\n            окисления +5).\n          </p>\n          <p style=\"text-align: center; margin-top: 12px\">\n            <strong>1</strong>PH<sub>3</sub> + <strong>8</strong>HNO<sub>3</sub>\n            = <strong>1</strong>H<sub>3</sub>PO<sub>4</sub> +\n            <strong>8</strong>NO<sub>2</sub> + <strong>4</strong>H<sub>2</sub>O\n          </p>"
+  }
+}

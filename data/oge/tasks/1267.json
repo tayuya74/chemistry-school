@@ -1,0 +1,34 @@
+{
+  "id": 1267,
+  "examType": 14,
+  "uiKind": "twoChoice",
+  "meta": {
+    "lead": "Реакции ионного обмена",
+    "source": "ОГЭ. Типовые экзаменационные варианты, вариант 10 (Издательство «Национальное образование», 2025).",
+    "sourceDir": "variant-10"
+  },
+  "blocks": [
+    {
+      "html": "<p>\n          Из предложенного перечня выберите два иона, при взаимодействии которых\n          выделяется газ.\n        </p>"
+    }
+  ],
+  "content": {
+    "statements": [
+      "NH<sub>4</sub><sup>+</sup>",
+      "H<sup>+</sup>",
+      "SiO<sub>3</sub><sup>2−</sup>",
+      "OH<sup>−</sup>",
+      "SO<sub>4</sub><sup>2−</sup>",
+      "Ca<sup>2+</sup>"
+    ],
+    "maxChoices": 2,
+    "cellCount": 2
+  },
+  "answer": {
+    "correct": [
+      "1",
+      "4"
+    ]
+  },
+  "solution": null
+}

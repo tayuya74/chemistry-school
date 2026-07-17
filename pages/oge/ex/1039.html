@@ -3,10 +3,7 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>
-      ОГЭ, задание 16 — Безопасность в лаборатории. Разделение смесей.
-      Химическое загрязнение
-    </title>
+    <title>ОГЭ, задание 16 № 1039 — Безопасность в лаборатории. Разделение смесей. Химическое загрязнение</title>
     <link rel="stylesheet" href="../../../css/style.css" />
     <link
       rel="stylesheet"
@@ -47,50 +44,37 @@
         <a class="oge-task-nav__next" href="../type-17.html">Задание 17 →</a>
       </nav>
       <h2>Задание 16 № 1039</h2>
-      <p class="lead">
-          Безопасность в лаборатории. Разделение смесей. Химическое загрязнение
-        </p>
+      <p class="lead">Безопасность в лаборатории. Разделение смесей. Химическое загрязнение</p>
 
       <div class="oge-subtask" data-oge-multi-choice-correct="3|4" data-oge-option-count="4">
 <p>
           Из перечисленных суждений о правилах работы с веществами в лаборатории
           и быту выберите <strong>верное(-ые) суждение(-я)</strong>.
         </p>
+
         <ol class="oge-statements">
           <li>
             <label>
               <input type="checkbox" name="st" value="1" />
-              <span
-                >Для переноса порошкообразных реагентов из склянки в пробирку
-                необходимо использовать химическую воронку.</span
-              >
+              <span>Для переноса порошкообразных реагентов из склянки в пробирку необходимо использовать химическую воронку.</span>
             </label>
           </li>
           <li>
             <label>
               <input type="checkbox" name="st" value="2" />
-              <span
-                >Средства бытовой химии можно хранить в любом свободном
-                контейнере с плотно закрытой крышкой.</span
-              >
+              <span>Средства бытовой химии можно хранить в любом свободном контейнере с плотно закрытой крышкой.</span>
             </label>
           </li>
           <li>
             <label>
               <input type="checkbox" name="st" value="3" />
-              <span
-                >Запрещается проводить опыты с реактивами, находящимися в
-                склянке без подписи.</span
-              >
+              <span>Запрещается проводить опыты с реактивами, находящимися в склянке без подписи.</span>
             </label>
           </li>
           <li>
             <label>
               <input type="checkbox" name="st" value="4" />
-              <span
-                >Сероводород, аммиак, хлороводород относятся к группе ядовитых
-                газов.</span
-              >
+              <span>Сероводород, аммиак, хлороводород относятся к группе ядовитых газов.</span>
             </label>
           </li>
         </ol>
@@ -135,37 +119,24 @@
           />
         </div>
         <p style="margin-top: 16px">
-          <button type="button" id="checkBtn">Ответ</button>
+          <button type="button" id="checkBtn">Проверить</button>
         </p>
         <p id="resultOut" class="result" role="status"></p>
       </div>
 
       <p>Источник: ОГЭ. Типовые экзаменационные варианты, вариант 1 (Издательство «Национальное образование», 2025).</p>
-    </article>
+      </article>
     </main>
-  <script>
+    <script>
       (function () {
-        const correct = ["3", "4"];
-        OGE_eachMultiChoiceScope(
-          correct,
-          4,
-          function (root, answer, optionCount) {
-            const boxes = root.querySelectorAll(
-              '.oge-statements input[type="checkbox"]',
-            );
-            const btn = root.querySelector("button[type='button']");
-            const out = root.querySelector(".result");
-            const inputs = root.querySelectorAll(
-              ".oge-answer-cells input[type='text']",
-            );
-            if (!btn || !out || inputs.length < 4) return;
-            btn.addEventListener("click", function () {
-          const out = document.getElementById("resultOut");
-          if (out) out.textContent = OGE_EX_formatAnswer(["3","4"]);
+        const btn = document.querySelector(".oge-subtask button[type='button']");
+        const out = document.querySelector(".oge-subtask .result");
+        if (!btn || !out) return;
+        btn.textContent = "Ответ";
+        btn.addEventListener("click", function () {
+          out.textContent = OGE_EX_formatAnswer(["3","4"]);
         });
-          },
-        );
       })();
     </script>
-</body>
+  </body>
 </html>

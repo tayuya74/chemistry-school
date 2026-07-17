@@ -1,0 +1,27 @@
+{
+  "id": 1228,
+  "examType": 21,
+  "uiKind": "openReference",
+  "meta": {
+    "lead": "Генетическая связь между классами неорганических соединений",
+    "source": "ОГЭ. Типовые экзаменационные варианты, вариант 8 (Издательство «Национальное образование», 2025).",
+    "sourceDir": "variant-8"
+  },
+  "blocks": [
+    {
+      "html": "<p>Дана схема превращений:</p>"
+    },
+    {
+      "html": "<p style=\"text-align: center; font-size: 1.1rem; margin: 16px 0\">\n          FeCl<sub>2</sub> → X → Fe(OH)<sub>2</sub> →\n          Fe<sub>2</sub>(SO<sub>4</sub>)<sub>3</sub>\n        </p>"
+    },
+    {
+      "html": "<p>\n          Напишите молекулярные уравнения реакций, с помощью которых можно\n          осуществить указанные превращения.\n        </p>"
+    }
+  ],
+  "content": {},
+  "answer": null,
+  "solution": {
+    "title": "Эталон ответа (вариант 8, 2025)",
+    "html": "<p style=\"margin-top: 12px\">\n            FeCl<sub>2</sub> + 2AgNO<sub>3</sub> = Fe(NO<sub>3</sub>)<sub\n              >2</sub\n            >\n            + 2AgCl↓<br /><span>(X — Fe(NO<sub>3</sub>)<sub>2</sub>)</span>\n          </p>\n          <p style=\"margin-top: 8px\">\n            Fe(NO<sub>3</sub>)<sub>2</sub> + 2NaOH = Fe(OH)<sub>2</sub>↓ +\n            2NaNO<sub>3</sub>\n          </p>\n          <p style=\"margin-top: 8px\">\n            4Fe(OH)<sub>2</sub> + O<sub>2</sub> + 6H<sub>2</sub>SO<sub>4</sub> =\n            2Fe<sub>2</sub>(SO<sub>4</sub>)<sub>3</sub> + 10H<sub>2</sub>O\n          </p>"
+  }
+}

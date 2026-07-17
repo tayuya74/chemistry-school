@@ -1,0 +1,38 @@
+{
+  "id": 1260,
+  "examType": 7,
+  "uiKind": "orderedDigits",
+  "meta": {
+    "lead": "Классификация неорганических веществ",
+    "source": "ОГЭ. Типовые экзаменационные варианты, вариант 10 (Издательство «Национальное образование», 2025).",
+    "sourceDir": "variant-10"
+  },
+  "blocks": [
+    {
+      "html": "<p>\n          Из предложенного перечня веществ выберите амфотерный оксид и\n          основание.\n        </p>"
+    },
+    {
+      "html": "<ol>\n          <li>Mg(OH)<sub>2</sub></li>\n          <li>KAlO<sub>2</sub></li>\n          <li>CaO</li>\n          <li>ZnO</li>\n          <li>Fe(OH)<sub>3</sub></li>\n        </ol>"
+    },
+    {
+      "html": "<p>\n          Запишите в поле ответа сначала номер амфотерного оксида, а затем номер\n          основания.\n        </p>"
+    }
+  ],
+  "content": {
+    "items": [
+      "Mg(OH)<sub>2</sub>",
+      "KAlO<sub>2</sub>",
+      "CaO",
+      "ZnO",
+      "Fe(OH)<sub>3</sub>"
+    ],
+    "cellCount": 2
+  },
+  "answer": {
+    "sequence": [
+      "4",
+      "1"
+    ]
+  },
+  "solution": null
+}

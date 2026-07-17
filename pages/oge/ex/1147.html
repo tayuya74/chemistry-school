@@ -3,9 +3,7 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>
-      ОГЭ, задание 9 — Химические свойства простых и сложных веществ
-    </title>
+    <title>ОГЭ, задание 9 № 1147 — Химические свойства простых и сложных веществ</title>
     <link rel="stylesheet" href="../../../css/style.css" />
     <link
       rel="stylesheet"
@@ -48,7 +46,8 @@
       <h2>Задание 9 № 1147</h2>
       <p class="lead">Химические свойства простых и сложных веществ</p>
 
-      <p>
+      <div class="oge-subtask">
+<p>
           Установите соответствие между реагирующими веществами и
           продуктом(-ами) их взаимодействия: к каждой позиции, обозначенной
           буквой, подберите соответствующую позицию, обозначенную цифрой.
@@ -58,12 +57,8 @@
           <div>
             <strong>Реагирующие вещества</strong>
             <ul class="oge-match-plain">
-              <li>
-                А) Fe + H<sub>2</sub>SO<sub>4</sub> <small>(разб.)</small> →
-              </li>
-              <li>
-                Б) Fe(OH)<sub>3</sub> + HNO<sub>3</sub> <small>(конц.)</small> →
-              </li>
+              <li>А) Fe + H<sub>2</sub>SO<sub>4</sub> <small>(разб.)</small> →</li>
+              <li>Б) Fe(OH)<sub>3</sub> + HNO<sub>3</sub> <small>(конц.)</small> →</li>
               <li>В) Fe(OH)<sub>2</sub> + H<sub>2</sub>O<sub>2</sub> →</li>
             </ul>
           </div>
@@ -71,15 +66,10 @@
             <strong>Продукт(-ы) взаимодействия</strong>
             <ul class="oge-match-plain">
               <li>1) Fe(OH)<sub>3</sub></li>
-              <li>
-                2) Fe(NO<sub>3</sub>)<sub>3</sub> + NO<sub>2</sub> +
-                H<sub>2</sub>O
-              </li>
+              <li>2) Fe(NO<sub>3</sub>)<sub>3</sub> + NO<sub>2</sub> + H<sub>2</sub>O</li>
               <li>3) Fe(NO<sub>3</sub>)<sub>3</sub> + H<sub>2</sub>O</li>
               <li>4) FeSO<sub>4</sub> + H<sub>2</sub></li>
-              <li>
-                5) Fe<sub>2</sub>(SO<sub>4</sub>)<sub>3</sub> + H<sub>2</sub>
-              </li>
+              <li>5) Fe<sub>2</sub>(SO<sub>4</sub>)<sub>3</sub> + H<sub>2</sub></li>
             </ul>
           </div>
         </div>
@@ -130,22 +120,24 @@
         </table>
 
         <p style="margin-top: 16px">
-          <button type="button" id="checkBtn">Ответ</button>
+          <button type="button" id="checkBtn">Проверить</button>
         </p>
         <p id="resultOut" class="result" role="status"></p>
+      </div>
 
       <p>Источник: ОГЭ. Типовые экзаменационные варианты, вариант 5 (Издательство «Национальное образование», 2025).</p>
-    </article>
+      </article>
     </main>
-  <script>
+    <script>
       (function () {
-        document
-          .getElementById("checkBtn")
-          .addEventListener("click", function () {
-          const out = document.getElementById("resultOut");
-          if (out) out.textContent = OGE_EX_formatAnswer(["4","3","1"]);
+        const btn = document.querySelector(".oge-subtask button[type='button']");
+        const out = document.querySelector(".oge-subtask .result");
+        if (!btn || !out) return;
+        btn.textContent = "Ответ";
+        btn.addEventListener("click", function () {
+          out.textContent = OGE_EX_formatAnswer(["4","3","1"]);
         });
       })();
     </script>
-</body>
+  </body>
 </html>

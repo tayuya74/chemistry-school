@@ -1,0 +1,37 @@
+{
+  "id": 1060,
+  "examType": 14,
+  "uiKind": "twoChoice",
+  "meta": {
+    "lead": "Реакции ионного обмена",
+    "source": "Демонстрационный вариант ОГЭ по химии 2025 года (ФИПИ).",
+    "sourceDir": "default"
+  },
+  "blocks": [
+    {
+      "html": "<p>\n          Выберите <strong>два исходных вещества</strong>, взаимодействию\n          которых соответствует сокращённое ионное уравнение реакции\n        </p>"
+    },
+    {
+      "html": "<p style=\"text-align: center; font-size: 1.15rem; margin: 16px 0\">\n          H<sup>+</sup> + OH<sup>−</sup> = H<sub>2</sub>O\n        </p>"
+    }
+  ],
+  "content": {
+    "statements": [
+      "H<sub>2</sub>S",
+      "HI",
+      "H<sub>2</sub>SO<sub>4</sub>",
+      "Al(OH)<sub>3</sub>",
+      "Ba(OH)<sub>2</sub>",
+      "Mg(OH)<sub>2</sub>"
+    ],
+    "maxChoices": 2,
+    "cellCount": 2
+  },
+  "answer": {
+    "correct": [
+      "2",
+      "5"
+    ]
+  },
+  "solution": null
+}

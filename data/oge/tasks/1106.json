@@ -1,0 +1,37 @@
+{
+  "id": 1106,
+  "examType": 14,
+  "uiKind": "twoChoice",
+  "meta": {
+    "lead": "Реакции ионного обмена",
+    "source": "ОГЭ. Типовые экзаменационные варианты, вариант 3 (Издательство «Национальное образование», 2025).",
+    "sourceDir": "variant-3"
+  },
+  "blocks": [
+    {
+      "html": "<p>\n          Выберите <strong>два исходных вещества</strong>, взаимодействию водных\n          растворов которых соответствует приведённое сокращённое ионное\n          уравнение реакции\n        </p>"
+    },
+    {
+      "html": "<p style=\"text-align: center; font-size: 1.15rem; margin: 16px 0\">\n          SO<sub>3</sub><sup>2−</sup> + 2H<sup>+</sup> = H<sub>2</sub>SO<sub\n            >3</sub\n          >\n        </p>"
+    }
+  ],
+  "content": {
+    "statements": [
+      "SO<sub>3</sub>",
+      "Na<sub>2</sub>SO<sub>3</sub>",
+      "MgSO<sub>3</sub>",
+      "HCl",
+      "PH<sub>3</sub>",
+      "H<sub>2</sub>SiO<sub>3</sub>"
+    ],
+    "maxChoices": 2,
+    "cellCount": 2
+  },
+  "answer": {
+    "correct": [
+      "2",
+      "4"
+    ]
+  },
+  "solution": null
+}

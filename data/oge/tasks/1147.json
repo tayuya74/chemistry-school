@@ -1,0 +1,39 @@
+{
+  "id": 1147,
+  "examType": 9,
+  "uiKind": "matchTriple",
+  "meta": {
+    "lead": "Химические свойства простых и сложных веществ",
+    "source": "ОГЭ. Типовые экзаменационные варианты, вариант 5 (Издательство «Национальное образование», 2025).",
+    "sourceDir": "variant-5"
+  },
+  "blocks": [
+    {
+      "html": "<p>\n          Установите соответствие между реагирующими веществами и\n          продуктом(-ами) их взаимодействия: к каждой позиции, обозначенной\n          буквой, подберите соответствующую позицию, обозначенную цифрой.\n        </p>"
+    }
+  ],
+  "content": {
+    "leftTitle": "Реагирующие вещества",
+    "rightTitle": "Продукт(-ы) взаимодействия",
+    "left": [
+      "А) Fe + H<sub>2</sub>SO<sub>4</sub> <small>(разб.)</small> →",
+      "Б) Fe(OH)<sub>3</sub> + HNO<sub>3</sub> <small>(конц.)</small> →",
+      "В) Fe(OH)<sub>2</sub> + H<sub>2</sub>O<sub>2</sub> →"
+    ],
+    "right": [
+      "1) Fe(OH)<sub>3</sub>",
+      "2) Fe(NO<sub>3</sub>)<sub>3</sub> + NO<sub>2</sub> + H<sub>2</sub>O",
+      "3) Fe(NO<sub>3</sub>)<sub>3</sub> + H<sub>2</sub>O",
+      "4) FeSO<sub>4</sub> + H<sub>2</sub>",
+      "5) Fe<sub>2</sub>(SO<sub>4</sub>)<sub>3</sub> + H<sub>2</sub>"
+    ]
+  },
+  "answer": {
+    "mapping": {
+      "A": "4",
+      "B": "3",
+      "V": "1"
+    }
+  },
+  "solution": null
+}

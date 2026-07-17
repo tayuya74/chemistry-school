@@ -3,9 +3,7 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>
-      ОГЭ, задание 9 — Химические свойства простых и сложных веществ
-    </title>
+    <title>ОГЭ, задание 9 № 1262 — Химические свойства простых и сложных веществ</title>
     <link rel="stylesheet" href="../../../css/style.css" />
     <link
       rel="stylesheet"
@@ -48,31 +46,26 @@
       <h2>Задание 9 № 1262</h2>
       <p class="lead">Химические свойства простых и сложных веществ</p>
 
-      <p>
+      <div class="oge-subtask">
+<p>
           Установите соответствие между реагирующими веществами и продуктами их
           взаимодействия: к каждой позиции, обозначенной буквой, подберите
           соответствующую позицию, обозначенную цифрой.
         </p>
+
         <div class="match-columns">
           <div>
             <strong>Реагирующие вещества</strong>
             <ul class="oge-match-plain">
               <li>А) ZnO + KOH <small>(тв.)</small> →</li>
-              <li>
-                Б) ZnSO<sub>4</sub> <small>(изб.)</small> + KOH
-                <small>(р-р)</small> →
-              </li>
+              <li>Б) ZnSO<sub>4</sub> <small>(изб.)</small> + KOH <small>(р-р)</small> →</li>
               <li>В) Zn + KOH <small>(р-р)</small> →</li>
             </ul>
           </div>
           <div>
             <strong>Продукты взаимодействия</strong>
             <ul class="oge-match-plain">
-              <li>
-                1) K<sub>2</sub>[Zn(OH)<sub>4</sub>] + K<sub>2</sub>SO<sub
-                  >4</sub
-                >
-              </li>
+              <li>1) K<sub>2</sub>[Zn(OH)<sub>4</sub>] + K<sub>2</sub>SO<sub >4</sub ></li>
               <li>2) K<sub>2</sub>[Zn(OH)<sub>4</sub>] + H<sub>2</sub>O</li>
               <li>3) Zn(OH)<sub>2</sub> + K<sub>2</sub>SO<sub>4</sub></li>
               <li>4) K<sub>2</sub>[Zn(OH)<sub>4</sub>] + H<sub>2</sub></li>
@@ -80,6 +73,7 @@
             </ul>
           </div>
         </div>
+
         <p>Запишите в таблицу выбранные цифры под соответствующими буквами.</p>
         <table class="match-answer-table">
           <thead>
@@ -124,23 +118,26 @@
             </tr>
           </tbody>
         </table>
+
         <p style="margin-top: 16px">
-          <button type="button" id="checkBtn">Ответ</button>
+          <button type="button" id="checkBtn">Проверить</button>
         </p>
         <p id="resultOut" class="result" role="status"></p>
+      </div>
 
       <p>Источник: ОГЭ. Типовые экзаменационные варианты, вариант 10 (Издательство «Национальное образование», 2025).</p>
-    </article>
+      </article>
     </main>
-  <script>
+    <script>
       (function () {
-        document
-          .getElementById("checkBtn")
-          .addEventListener("click", function () {
-          const out = document.getElementById("resultOut");
-          if (out) out.textContent = OGE_EX_formatAnswer(["5","3","4"]);
+        const btn = document.querySelector(".oge-subtask button[type='button']");
+        const out = document.querySelector(".oge-subtask .result");
+        if (!btn || !out) return;
+        btn.textContent = "Ответ";
+        btn.addEventListener("click", function () {
+          out.textContent = OGE_EX_formatAnswer(["5","3","4"]);
         });
       })();
     </script>
-</body>
+  </body>
 </html>

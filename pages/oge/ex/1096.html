@@ -3,9 +3,7 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>
-      ОГЭ, задание 4 — Валентность и степень окисления химических элементов
-    </title>
+    <title>ОГЭ, задание 4 № 1096 — Валентность и степень окисления химических элементов</title>
     <link rel="stylesheet" href="../../../css/style.css" />
     <link
       rel="stylesheet"
@@ -48,7 +46,8 @@
       <h2>Задание 4 № 1096</h2>
       <p class="lead">Валентность и степень окисления химических элементов</p>
 
-      <p>
+      <div class="oge-subtask">
+<p>
           Установите соответствие между формулой вещества и степенью окисления
           хрома в данном веществе: к каждой позиции, обозначенной буквой,
           подберите соответствующую позицию, обозначенную цифрой.
@@ -117,22 +116,24 @@
         </table>
 
         <p style="margin-top: 16px">
-          <button type="button" id="checkBtn">Ответ</button>
+          <button type="button" id="checkBtn">Проверить</button>
         </p>
         <p id="resultOut" class="result" role="status"></p>
+      </div>
 
       <p>Источник: ОГЭ. Типовые экзаменационные варианты, вариант 3 (Издательство «Национальное образование», 2025).</p>
-    </article>
+      </article>
     </main>
-  <script>
+    <script>
       (function () {
-        document
-          .getElementById("checkBtn")
-          .addEventListener("click", function () {
-          const out = document.getElementById("resultOut");
-          if (out) out.textContent = OGE_EX_formatAnswer(["1","4","2"]);
+        const btn = document.querySelector(".oge-subtask button[type='button']");
+        const out = document.querySelector(".oge-subtask .result");
+        if (!btn || !out) return;
+        btn.textContent = "Ответ";
+        btn.addEventListener("click", function () {
+          out.textContent = OGE_EX_formatAnswer(["1","4","2"]);
         });
       })();
     </script>
-</body>
+  </body>
 </html>

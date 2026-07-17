@@ -1,0 +1,33 @@
+{
+  "id": 1054,
+  "examType": 8,
+  "uiKind": "twoChoice",
+  "meta": {
+    "lead": "Химические свойства простых веществ. Химические свойства оксидов",
+    "source": "Демонстрационный вариант ОГЭ по химии 2025 года (ФИПИ).",
+    "sourceDir": "default"
+  },
+  "blocks": [
+    {
+      "html": "<p>\n          Какие <strong>два</strong> из перечисленных веществ\n          <strong>не вступают</strong> в реакцию с <strong>фосфором</strong>?\n        </p>"
+    }
+  ],
+  "content": {
+    "statements": [
+      "Na<sub>2</sub>SO<sub>4</sub>",
+      "HNO<sub>3</sub>",
+      "O<sub>2</sub>",
+      "Mg",
+      "CO"
+    ],
+    "maxChoices": 2,
+    "cellCount": 2
+  },
+  "answer": {
+    "correct": [
+      "1",
+      "5"
+    ]
+  },
+  "solution": null
+}

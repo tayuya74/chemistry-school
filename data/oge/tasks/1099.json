@@ -1,0 +1,35 @@
+{
+  "id": 1099,
+  "examType": 7,
+  "uiKind": "orderedDigits",
+  "meta": {
+    "lead": "Классификация сложных веществ",
+    "source": "ОГЭ. Типовые экзаменационные варианты, вариант 3 (Издательство «Национальное образование», 2025).",
+    "sourceDir": "variant-3"
+  },
+  "blocks": [
+    {
+      "html": "<p>\n          Из предложенного перечня веществ выберите\n          <strong>среднюю соль и основание</strong>. Запишите в поле ответа\n          сначала номер средней соли, а затем номер основания.\n        </p>"
+    },
+    {
+      "html": "<ol>\n          <li>Fe(OH)<sub>3</sub></li>\n          <li>KHCO<sub>3</sub></li>\n          <li>Na<sub>2</sub>ZnO<sub>2</sub></li>\n          <li>H<sub>2</sub>CO<sub>3</sub></li>\n          <li>Ca(OH)<sub>2</sub></li>\n        </ol>"
+    }
+  ],
+  "content": {
+    "items": [
+      "Fe(OH)<sub>3</sub>",
+      "KHCO<sub>3</sub>",
+      "Na<sub>2</sub>ZnO<sub>2</sub>",
+      "H<sub>2</sub>CO<sub>3</sub>",
+      "Ca(OH)<sub>2</sub>"
+    ],
+    "cellCount": 2
+  },
+  "answer": {
+    "sequence": [
+      "3",
+      "5"
+    ]
+  },
+  "solution": null
+}

@@ -1,0 +1,27 @@
+{
+  "id": 1044,
+  "examType": 21,
+  "uiKind": "openReference",
+  "meta": {
+    "lead": "Химические свойства простых и сложных веществ",
+    "source": "ОГЭ. Типовые экзаменационные варианты, вариант 1 (Издательство «Национальное образование», 2025).",
+    "sourceDir": "variant-1"
+  },
+  "blocks": [
+    {
+      "html": "<p>Дана схема превращений:</p>"
+    },
+    {
+      "html": "<p style=\"text-align: center; font-size: 1.1rem; margin: 16px 0\">\n          Cu(NO<sub>3</sub>)<sub>2</sub>\n          <span style=\"margin: 0 6px\">→</span>\n          Cu\n          <span style=\"margin: 0 6px\">→</span>\n          CuCl<sub>2</sub>\n          <span style=\"margin: 0 6px\">→</span>\n          Cu(OH)<sub>2</sub>\n        </p>"
+    },
+    {
+      "html": "<p>\n          Напишите <strong>молекулярные уравнения реакций</strong>, с помощью\n          которых можно осуществить указанные превращения.\n        </p>"
+    }
+  ],
+  "content": {},
+  "answer": null,
+  "solution": {
+    "title": "Эталон ответа (вариант 1, 2025)",
+    "html": "<ol style=\"margin-top: 12px; line-height: 1.7\">\n            <li>\n              Cu(NO<sub>3</sub>)<sub>2</sub> + 2Ag = 2AgNO<sub>3</sub> + Cu↓\n            </li>\n            <li>Cu + Cl<sub>2</sub> = CuCl<sub>2</sub></li>\n            <li>CuCl<sub>2</sub> + 2NaOH = Cu(OH)<sub>2</sub>↓ + 2NaCl</li>\n          </ol>"
+  }
+}

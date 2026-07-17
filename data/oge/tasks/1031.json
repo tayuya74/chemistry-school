@@ -1,0 +1,33 @@
+{
+  "id": 1031,
+  "examType": 8,
+  "uiKind": "twoChoice",
+  "meta": {
+    "lead": "Химические свойства простых и сложных веществ",
+    "source": "ОГЭ. Типовые экзаменационные варианты, вариант 1 (Издательство «Национальное образование», 2025).",
+    "sourceDir": "variant-1"
+  },
+  "blocks": [
+    {
+      "html": "<p>\n          Какие два из перечисленных веществ\n          <strong>не вступают</strong> в реакцию с оксидом натрия?\n        </p>"
+    }
+  ],
+  "content": {
+    "statements": [
+      "FeO",
+      "H<sub>2</sub>O",
+      "HCl",
+      "CO<sub>2</sub>",
+      "Al"
+    ],
+    "maxChoices": 2,
+    "cellCount": 2
+  },
+  "answer": {
+    "correct": [
+      "1",
+      "5"
+    ]
+  },
+  "solution": null
+}

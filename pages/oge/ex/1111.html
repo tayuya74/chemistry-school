@@ -3,10 +3,7 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>
-      ОГЭ, задание 19 — Вычисления массы элемента по его массовой доле в
-      веществе
-    </title>
+    <title>ОГЭ, задание 19 № 1111 — Вычисления массы элемента по его массовой доле в веществе</title>
     <link rel="stylesheet" href="../../../css/style.css" />
     <link
       rel="stylesheet"
@@ -47,28 +44,24 @@
         <a class="oge-task-nav__next" href="../type-20.html">Задание 20 →</a>
       </nav>
       <h2>Задание 19 № 1111</h2>
-      <p class="lead">
-          Вычисления массы элемента по его массовой доле в веществе
-        </p>
+      <p class="lead">Вычисления массы элемента по его массовой доле в веществе</p>
 
-      <p class="tip" style="margin-bottom: 16px">
+      <div class="oge-subtask">
+<p class="tip" style="margin-bottom: 16px">
           При проведении расчётов для всех элементов, кроме хлора, используйте
           целые значения относительных атомных масс (Ar(Cl) = 35,5).
         </p>
-
-        <p class="tip" style="margin-bottom: 16px">
+<p class="tip" style="margin-bottom: 16px">
           При выполнении задания 19 используйте величину, которая определена в
           задании 18 с указанной в нём степенью точности.
         </p>
-
-        <p class="tip" style="margin-bottom: 16px">
+<p class="tip" style="margin-bottom: 16px">
           Аллицин (C<sub>6</sub>H<sub>10</sub>OS<sub>2</sub>) содержится в
           каждой капсуле в количестве <strong>5&nbsp;мг</strong>; масса капсулы
           — <strong>400&nbsp;мг</strong> (полный текст — в задании 18 этого
           варианта).
         </p>
-
-        <p>
+<p>
           <strong
             >Вычислите, сколько граммов (г) серы содержится в 24&nbsp;г капсул
             биологически активной добавки к пище.</strong
@@ -88,7 +81,6 @@
                 <td class="oge-mass-table__static">W, %</td>
                 <td>
                   <input
-                    id="oge19tbl-r1c3"
                     type="text"
                     inputmode="text"
                     autocomplete="off"
@@ -100,7 +92,6 @@
                 <td class="oge-mass-table__static">элемент</td>
                 <td>
                   <input
-                    id="oge19tbl-r2c2"
                     type="text"
                     inputmode="text"
                     autocomplete="off"
@@ -109,7 +100,6 @@
                 </td>
                 <td>
                   <input
-                    id="oge19tbl-r2c3"
                     type="text"
                     inputmode="text"
                     autocomplete="off"
@@ -122,7 +112,6 @@
                 <td class="oge-mass-table__static">100</td>
                 <td>
                   <input
-                    id="oge19tbl-r3c3"
                     type="text"
                     inputmode="text"
                     autocomplete="off"
@@ -133,35 +122,36 @@
             </tbody>
           </table>
         </div>
-
         <p class="oge-answer-label">Ответ (г):</p>
         <p>
           <input
             id="ansNum"
             type="text"
             inputmode="decimal"
-            class="oge-answer-input oge-answer-input--wide"
+            class="oge-answer-input"
             autocomplete="off"
-            aria-label="Масса серы в граммах, одна цифра после запятой"
+            aria-label="Числовой ответ"
           />
         </p>
         <p style="margin-top: 16px">
-          <button type="button" id="checkBtn">Ответ</button>
+          <button type="button" id="checkBtn">Проверить</button>
         </p>
         <p id="resultOut" class="result" role="status"></p>
+      </div>
 
       <p>Источник: ОГЭ. Типовые экзаменационные варианты, вариант 3 (Издательство «Национальное образование», 2025).</p>
-    </article>
+      </article>
     </main>
-  <script>
+    <script>
       (function () {
-        document
-          .getElementById("checkBtn")
-          .addEventListener("click", function () {
-          const out = document.getElementById("resultOut");
-          if (out) out.textContent = OGE_EX_formatAnswer(["0,1"]);
+        const btn = document.querySelector(".oge-subtask button[type='button']");
+        const out = document.querySelector(".oge-subtask .result");
+        if (!btn || !out) return;
+        btn.textContent = "Ответ";
+        btn.addEventListener("click", function () {
+          out.textContent = OGE_EX_formatAnswer(["0,1"]);
         });
       })();
     </script>
-</body>
+  </body>
 </html>

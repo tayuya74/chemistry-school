@@ -1,0 +1,100 @@
+{
+  "slug": "demo-2025",
+  "title": "Демонстрационный вариант 2025 (ФИПИ)",
+  "source": "Демонстрационный вариант ОГЭ по химии 2025 года (ФИПИ).",
+  "sourceDir": "default",
+  "tasks": [
+    {
+      "slot": 1,
+      "taskId": 1047
+    },
+    {
+      "slot": 2,
+      "taskId": 1048
+    },
+    {
+      "slot": 3,
+      "taskId": 1049
+    },
+    {
+      "slot": 4,
+      "taskId": 1050
+    },
+    {
+      "slot": 5,
+      "taskId": 1051
+    },
+    {
+      "slot": 6,
+      "taskId": 1052
+    },
+    {
+      "slot": 7,
+      "taskId": 1053
+    },
+    {
+      "slot": 8,
+      "taskId": 1054
+    },
+    {
+      "slot": 9,
+      "taskId": 1055
+    },
+    {
+      "slot": 10,
+      "taskId": 1056
+    },
+    {
+      "slot": 11,
+      "taskId": 1057
+    },
+    {
+      "slot": 12,
+      "taskId": 1058
+    },
+    {
+      "slot": 13,
+      "taskId": 1059
+    },
+    {
+      "slot": 14,
+      "taskId": 1060
+    },
+    {
+      "slot": 15,
+      "taskId": 1061
+    },
+    {
+      "slot": 16,
+      "taskId": 1062
+    },
+    {
+      "slot": 17,
+      "taskId": 1063
+    },
+    {
+      "slot": 18,
+      "taskId": 1064
+    },
+    {
+      "slot": 19,
+      "taskId": 1065
+    },
+    {
+      "slot": 20,
+      "taskId": 1066
+    },
+    {
+      "slot": 21,
+      "taskId": 1067
+    },
+    {
+      "slot": 22,
+      "taskId": 1068
+    },
+    {
+      "slot": 23,
+      "taskId": 1069
+    }
+  ]
+}

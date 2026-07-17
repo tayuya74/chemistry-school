@@ -46,58 +46,63 @@
       <h2>Задание 7 № 1122</h2>
       <p class="lead">Классификация сложных веществ</p>
 
-      <p>
+      <div class="oge-subtask">
+<p>
           Из предложенного перечня веществ выберите
           <strong>щёлочь и амфотерный оксид</strong>. Запишите в поле ответа
           сначала номер щёлочи, а затем номер амфотерного оксида.
         </p>
-        <ol>
+<ol>
           <li>Cu(OH)<sub>2</sub></li>
           <li>H<sub>2</sub>SiO<sub>3</sub></li>
           <li>MgO</li>
           <li>Ba(OH)<sub>2</sub></li>
           <li>Cr<sub>2</sub>O<sub>3</sub></li>
         </ol>
+
         <p class="oge-answer-label">Ответ:</p>
         <div
           class="oge-answer-cells"
           role="group"
-          aria-label="Сначала щёлочь, затем амфотерный оксид"
+          aria-label="Последовательность цифр"
         >
           <input
-            id="c1"
+            id="d1"
             type="text"
             inputmode="numeric"
             maxlength="1"
             autocomplete="off"
-            aria-label="Первая ячейка ответа"
+            aria-label="Позиция 1"
           />
           <input
-            id="c2"
+            id="d2"
             type="text"
             inputmode="numeric"
             maxlength="1"
             autocomplete="off"
-            aria-label="Вторая ячейка ответа"
+            aria-label="Позиция 2"
           />
         </div>
+
         <p style="margin-top: 16px">
-          <button type="button" id="checkBtn">Ответ</button>
+          <button type="button" id="checkBtn">Проверить</button>
         </p>
         <p id="resultOut" class="result" role="status"></p>
+      </div>
 
       <p>Источник: ОГЭ. Типовые экзаменационные варианты, вариант 4 (Издательство «Национальное образование», 2025).</p>
-    </article>
+      </article>
     </main>
-  <script>
+    <script>
       (function () {
-        document
-          .getElementById("checkBtn")
-          .addEventListener("click", function () {
-          const out = document.getElementById("resultOut");
-          if (out) out.textContent = OGE_EX_formatAnswer(["4","5"]);
+        const btn = document.querySelector(".oge-subtask button[type='button']");
+        const out = document.querySelector(".oge-subtask .result");
+        if (!btn || !out) return;
+        btn.textContent = "Ответ";
+        btn.addEventListener("click", function () {
+          out.textContent = OGE_EX_formatAnswer(["4","5"]);
         });
       })();
     </script>
-</body>
+  </body>
 </html>

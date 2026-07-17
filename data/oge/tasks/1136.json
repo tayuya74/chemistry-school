@@ -1,0 +1,27 @@
+{
+  "id": 1136,
+  "examType": 21,
+  "uiKind": "openReference",
+  "meta": {
+    "lead": "Химические свойства простых и сложных веществ",
+    "source": "ОГЭ. Типовые экзаменационные варианты, вариант 4 (Издательство «Национальное образование», 2025).",
+    "sourceDir": "variant-4"
+  },
+  "blocks": [
+    {
+      "html": "<p>Дана схема превращений:</p>"
+    },
+    {
+      "html": "<p style=\"text-align: center; font-size: 1.1rem; margin: 16px 0\">\n          Si → SiO<sub>2</sub> → X → H<sub>2</sub>SiO<sub>3</sub>\n        </p>"
+    },
+    {
+      "html": "<p>\n          Напишите <strong>молекулярные уравнения реакций</strong>, с помощью\n          которых можно осуществить указанные превращения.\n        </p>"
+    }
+  ],
+  "content": {},
+  "answer": null,
+  "solution": {
+    "title": "Эталон ответа (вариант 4, 2025)",
+    "html": "<p style=\"margin-top: 12px\">\n            Одна из возможных цепочек:\n            <strong>X = Na<sub>2</sub>SiO<sub>3</sub></strong\n            >.\n          </p>\n          <ol style=\"margin-top: 12px; line-height: 1.7\">\n            <li>Si + O<sub>2</sub> = SiO<sub>2</sub></li>\n            <li>\n              SiO<sub>2</sub> + 2NaOH = Na<sub>2</sub>SiO<sub>3</sub> +\n              H<sub>2</sub>O\n              <small\n                >(сплавление или сильный нагрев с концентрированным\n                раствором)</small\n              >\n            </li>\n            <li>\n              Na<sub>2</sub>SiO<sub>3</sub> + 2HCl = H<sub>2</sub>SiO<sub\n                >3</sub\n              >\n              ↓ + 2NaCl\n            </li>\n          </ol>\n          <p style=\"margin-top: 12px\">\n            Допустимы эквивалентные переходы (например, через силикат кальция и\n            CO<sub>2</sub> в водной среде), если они согласуются с условием.\n          </p>"
+  }
+}

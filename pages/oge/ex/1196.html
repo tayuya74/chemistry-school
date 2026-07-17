@@ -3,9 +3,7 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>
-      ОГЭ, задание 12 — Химические свойства простых и сложных веществ
-    </title>
+    <title>ОГЭ, задание 12 № 1196 — Химические свойства простых и сложных веществ</title>
     <link rel="stylesheet" href="../../../css/style.css" />
     <link
       rel="stylesheet"
@@ -48,11 +46,13 @@
       <h2>Задание 12 № 1196</h2>
       <p class="lead">Химические свойства простых и сложных веществ</p>
 
-      <p>
+      <div class="oge-subtask">
+<p>
           Установите соответствие между реагирующими веществами и признаком
           протекающей между ними реакции: к каждой позиции, обозначенной буквой,
           подберите соответствующую позицию, обозначенную цифрой.
         </p>
+
         <div class="match-columns">
           <div>
             <strong>Реагирующие вещества</strong>
@@ -72,6 +72,7 @@
             </ul>
           </div>
         </div>
+
         <p>Запишите в таблицу выбранные цифры под соответствующими буквами.</p>
         <table class="match-answer-table">
           <thead>
@@ -90,7 +91,6 @@
                   <option value="2">2</option>
                   <option value="3">3</option>
                   <option value="4">4</option>
-                  <option value="5">5</option>
                 </select>
               </td>
               <td>
@@ -100,7 +100,6 @@
                   <option value="2">2</option>
                   <option value="3">3</option>
                   <option value="4">4</option>
-                  <option value="5">5</option>
                 </select>
               </td>
               <td>
@@ -110,29 +109,31 @@
                   <option value="2">2</option>
                   <option value="3">3</option>
                   <option value="4">4</option>
-                  <option value="5">5</option>
                 </select>
               </td>
             </tr>
           </tbody>
         </table>
+
         <p style="margin-top: 16px">
-          <button type="button" id="checkBtn">Ответ</button>
+          <button type="button" id="checkBtn">Проверить</button>
         </p>
         <p id="resultOut" class="result" role="status"></p>
+      </div>
 
       <p>Источник: ОГЭ. Типовые экзаменационные варианты, вариант 7 (Издательство «Национальное образование», 2025).</p>
-    </article>
+      </article>
     </main>
-  <script>
+    <script>
       (function () {
-        document
-          .getElementById("checkBtn")
-          .addEventListener("click", function () {
-          const out = document.getElementById("resultOut");
-          if (out) out.textContent = OGE_EX_formatAnswer(["2","3","1"]);
+        const btn = document.querySelector(".oge-subtask button[type='button']");
+        const out = document.querySelector(".oge-subtask .result");
+        if (!btn || !out) return;
+        btn.textContent = "Ответ";
+        btn.addEventListener("click", function () {
+          out.textContent = OGE_EX_formatAnswer(["2","3","1"]);
         });
       })();
     </script>
-</body>
+  </body>
 </html>

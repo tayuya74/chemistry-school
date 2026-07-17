@@ -51,9 +51,10 @@
           Выберите <strong>два исходных вещества</strong>, взаимодействию водных
           растворов которых соответствует сокращённое ионное уравнение реакции:
         </p>
-        <p style="text-align: center; font-size: 1.15rem; margin: 16px 0">
+<p style="text-align: center; font-size: 1.15rem; margin: 16px 0">
           Ca<sup>2+</sup> + CO<sub>3</sub><sup>2−</sup> = CaCO<sub>3</sub>
         </p>
+
         <ol class="oge-statements">
           <li>
             <label>
@@ -92,54 +93,52 @@
             </label>
           </li>
         </ol>
+
         <p>Запишите номера выбранных ответов.</p>
+
         <p class="oge-answer-label">Ответ:</p>
-        <div class="oge-answer-cells" role="group" aria-label="Две цифры">
+        <div
+          class="oge-answer-cells"
+          role="group"
+          aria-label="Номера двух выбранных утверждений (порядок цифр в ячейках любой)"
+        >
           <input
-            id="c1"
+            id="ansDigit1"
             type="text"
             inputmode="numeric"
             maxlength="1"
-            autocomplete="off"
             aria-label="Первая ячейка ответа"
+            autocomplete="off"
           />
           <input
-            id="c2"
+            id="ansDigit2"
             type="text"
             inputmode="numeric"
             maxlength="1"
-            autocomplete="off"
             aria-label="Вторая ячейка ответа"
+            autocomplete="off"
           />
         </div>
+
         <p style="margin-top: 16px">
-          <button type="button" id="checkBtn">Ответ</button>
+          <button type="button" id="checkBtn">Проверить</button>
         </p>
         <p id="resultOut" class="result" role="status"></p>
       </div>
 
       <p>Источник: ОГЭ. Типовые экзаменационные варианты, вариант 5 (Издательство «Национальное образование», 2025).</p>
-    </article>
+      </article>
     </main>
-  <script>
+    <script>
       (function () {
-        const correct = ["2", "6"];
-        OGE_eachTwoChoiceScope(correct, 6, function (root, pair, optionCount) {
-          const boxes = root.querySelectorAll(
-            '.oge-statements input[type="checkbox"]',
-          );
-          const btn = root.querySelector("button[type='button']");
-          const out = root.querySelector(".result");
-          const inputs = root.querySelectorAll(
-            ".oge-answer-cells input[type='text']",
-          );
-          if (!btn || !out || inputs.length < 2) return;
-          btn.addEventListener("click", function () {
-          const out = document.getElementById("resultOut");
-          if (out) out.textContent = OGE_EX_formatAnswer(["2","6"]);
-        });
+        const btn = document.querySelector(".oge-subtask button[type='button']");
+        const out = document.querySelector(".oge-subtask .result");
+        if (!btn || !out) return;
+        btn.textContent = "Ответ";
+        btn.addEventListener("click", function () {
+          out.textContent = OGE_EX_formatAnswer(["2","6"]);
         });
       })();
     </script>
-</body>
+  </body>
 </html>

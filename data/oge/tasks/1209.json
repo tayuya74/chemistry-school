@@ -1,0 +1,33 @@
+{
+  "id": 1209,
+  "examType": 2,
+  "uiKind": "periodDiagram",
+  "meta": {
+    "lead": "Строение атома, строение электронных оболочек",
+    "source": "ОГЭ. Типовые экзаменационные варианты, вариант 8 (Издательство «Национальное образование», 2025).",
+    "sourceDir": "variant-8"
+  },
+  "blocks": [
+    {
+      "html": "<p>\n          На рисунке изображена схема распределения электронов по электронным\n          слоям атома некоторого химического элемента.\n        </p>"
+    }
+  ],
+  "content": {
+    "figure": {
+      "kind": "svg",
+      "html": "<svg\n            xmlns=\"http://www.w3.org/2000/svg\"\n            viewBox=\"0 0 260 180\"\n            width=\"260\"\n            height=\"180\"\n            aria-label=\"Схема атома: ядро +Z, 2 электрона на первом слое и 3 электрона на втором слое\"\n          >\n            <circle\n              cx=\"92\"\n              cy=\"90\"\n              r=\"18\"\n              fill=\"var(--color-tip-bg)\"\n              stroke=\"var(--color-border)\"\n              stroke-width=\"2\"\n            />\n            <text x=\"92\" y=\"95\" text-anchor=\"middle\" font-size=\"16\">+Z</text>\n            <path\n              d=\"M120 42 C152 58 152 122 120 138\"\n              fill=\"none\"\n              stroke=\"var(--color-border)\"\n              stroke-width=\"2\"\n            />\n            <path\n              d=\"M150 30 C196 54 196 126 150 150\"\n              fill=\"none\"\n              stroke=\"var(--color-border)\"\n              stroke-width=\"2\"\n            />\n            <text x=\"132\" y=\"128\" text-anchor=\"middle\" font-size=\"16\">2ē</text>\n            <text x=\"165\" y=\"128\" text-anchor=\"middle\" font-size=\"16\">3ē</text>\n          </svg>",
+      "captionHtml": null
+    },
+    "labels": [
+      "X",
+      "Y"
+    ]
+  },
+  "answer": {
+    "values": {
+      "X": "5",
+      "Y": "5"
+    }
+  },
+  "solution": null
+}

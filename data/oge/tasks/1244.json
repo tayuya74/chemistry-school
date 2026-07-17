@@ -1,0 +1,37 @@
+{
+  "id": 1244,
+  "examType": 14,
+  "uiKind": "twoChoice",
+  "meta": {
+    "lead": "Реакции ионного обмена",
+    "source": "ОГЭ. Типовые экзаменационные варианты, вариант 9 (Издательство «Национальное образование», 2025).",
+    "sourceDir": "variant-9"
+  },
+  "blocks": [
+    {
+      "html": "<p>\n          Выберите два исходных вещества, взаимодействию которых соответствует\n          сокращённое ионное уравнение реакции\n        </p>"
+    },
+    {
+      "html": "<p style=\"text-align: center; font-size: 1.1rem\">\n          2H<sup>+</sup> + S<sup>2−</sup> = H<sub>2</sub>S\n        </p>"
+    }
+  ],
+  "content": {
+    "statements": [
+      "Na<sub>2</sub>S",
+      "H<sub>2</sub>SiO<sub>3</sub>",
+      "ZnS",
+      "HF",
+      "S",
+      "HBr"
+    ],
+    "maxChoices": 2,
+    "cellCount": 2
+  },
+  "answer": {
+    "correct": [
+      "1",
+      "6"
+    ]
+  },
+  "solution": null
+}

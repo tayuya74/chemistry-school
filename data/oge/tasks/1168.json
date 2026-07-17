@@ -1,0 +1,35 @@
+{
+  "id": 1168,
+  "examType": 7,
+  "uiKind": "orderedDigits",
+  "meta": {
+    "lead": "Классификация сложных веществ",
+    "source": "ОГЭ. Типовые экзаменационные варианты, вариант 6 (Издательство «Национальное образование», 2025).",
+    "sourceDir": "variant-6"
+  },
+  "blocks": [
+    {
+      "html": "<p>\n          Из предложенного перечня веществ выберите\n          <strong>амфотерный оксид</strong> и <strong>соль</strong>. Запишите в\n          поле ответа сначала номер амфотерного оксида, а затем номер соли.\n        </p>"
+    },
+    {
+      "html": "<ol>\n          <li>FeO</li>\n          <li>P<sub>2</sub>O<sub>3</sub></li>\n          <li>NaNO<sub>3</sub></li>\n          <li>KOH</li>\n          <li>Al<sub>2</sub>O<sub>3</sub></li>\n        </ol>"
+    }
+  ],
+  "content": {
+    "items": [
+      "FeO",
+      "P<sub>2</sub>O<sub>3</sub>",
+      "NaNO<sub>3</sub>",
+      "KOH",
+      "Al<sub>2</sub>O<sub>3</sub>"
+    ],
+    "cellCount": 2
+  },
+  "answer": {
+    "sequence": [
+      "5",
+      "3"
+    ]
+  },
+  "solution": null
+}

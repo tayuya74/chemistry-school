@@ -1,0 +1,39 @@
+{
+  "id": 1055,
+  "examType": 9,
+  "uiKind": "matchTriple",
+  "meta": {
+    "lead": "Химические свойства простых и сложных веществ",
+    "source": "Демонстрационный вариант ОГЭ по химии 2025 года (ФИПИ).",
+    "sourceDir": "default"
+  },
+  "blocks": [
+    {
+      "html": "<p>\n          Установите соответствие между реагирующими веществами и продуктами их\n          взаимодействия: к каждой позиции, обозначенной буквой, подберите\n          соответствующую позицию, обозначенную цифрой.\n        </p>"
+    }
+  ],
+  "content": {
+    "leftTitle": "Реагирующие вещества",
+    "rightTitle": "Продукты взаимодействия",
+    "left": [
+      "А) Fe<sub>2</sub>(SO<sub>4</sub>)<sub>3</sub> и BaCl<sub>2</sub>",
+      "Б) Fe и H<sub>2</sub>SO<sub>4</sub> (разб.)",
+      "В) Fe<sub>2</sub>O<sub>3</sub> и H<sub>2</sub>SO<sub>4</sub> (разб.)"
+    ],
+    "right": [
+      "1) FeSO<sub>4</sub> и H<sub>2</sub>",
+      "2) FeCl<sub>3</sub> и BaSO<sub>4</sub>",
+      "3) FeSO<sub>4</sub> и H<sub>2</sub>O",
+      "4) Fe<sub>2</sub>(SO<sub>4</sub>)<sub>3</sub> и H<sub>2</sub>O",
+      "5) FeCl<sub>2</sub> и BaSO<sub>4</sub>"
+    ]
+  },
+  "answer": {
+    "mapping": {
+      "A": "2",
+      "B": "1",
+      "V": "4"
+    }
+  },
+  "solution": null
+}

@@ -1,0 +1,27 @@
+{
+  "id": 1251,
+  "examType": 21,
+  "uiKind": "openReference",
+  "meta": {
+    "lead": "Генетическая связь между классами неорганических соединений",
+    "source": "ОГЭ. Типовые экзаменационные варианты, вариант 9 (Издательство «Национальное образование», 2025).",
+    "sourceDir": "variant-9"
+  },
+  "blocks": [
+    {
+      "html": "<p>Дана схема превращений:</p>"
+    },
+    {
+      "html": "<p style=\"text-align: center; font-size: 1.1rem; margin: 16px 0\">\n          Cu <span style=\"font-size: 0.85rem\">+AgNO<sub>3</sub></span> → X →\n          Cu(OH)<sub>2</sub> → CuO\n        </p>"
+    },
+    {
+      "html": "<p>\n          Напишите молекулярные уравнения реакций, с помощью которых можно\n          осуществить указанные превращения.\n        </p>"
+    }
+  ],
+  "content": {},
+  "answer": null,
+  "solution": {
+    "title": "Эталон ответа (вариант 9, 2025)",
+    "html": "<p style=\"margin-top: 12px\">\n            Cu + 2AgNO<sub>3</sub> = Cu(NO<sub>3</sub>)<sub>2</sub> + 2Ag<br /><span\n              >(X — Cu(NO<sub>3</sub>)<sub>2</sub>)</span\n            >\n          </p>\n          <p style=\"margin-top: 8px\">\n            Cu(NO<sub>3</sub>)<sub>2</sub> + 2NaOH = Cu(OH)<sub>2</sub>↓ +\n            2NaNO<sub>3</sub>\n          </p>\n          <p style=\"margin-top: 8px\">\n            Cu(OH)<sub>2</sub> = CuO + H<sub>2</sub>O\n          </p>"
+  }
+}

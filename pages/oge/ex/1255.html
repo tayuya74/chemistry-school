@@ -3,9 +3,7 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>
-      ОГЭ, задание 2 — Строение атома, строение электронных оболочек
-    </title>
+    <title>ОГЭ, задание 2 № 1255 — Строение атома, строение электронных оболочек</title>
     <link rel="stylesheet" href="../../../css/style.css" />
     <link
       rel="stylesheet"
@@ -48,9 +46,11 @@
       <h2>Задание 2 № 1255</h2>
       <p class="lead">Строение атома, строение электронных оболочек</p>
 
-      <p>
+      <div class="oge-subtask">
+<p>
           На приведённом рисунке изображена модель атома химического элемента.
         </p>
+
         <div class="oge-nucleus-wrap">
           <svg
             xmlns="http://www.w3.org/2000/svg"
@@ -127,13 +127,14 @@
               <circle cx="160" cy="174" r="4" />
             </g>
           </svg>
+          
         </div>
         <p>
-          Запишите в поле ответа номер периода (<strong>X</strong>), в котором
-          расположен данный химический элемент, и заряд ядра атома этого
-          элемента (<strong>Y</strong>). (Для записи ответа используйте арабские
-          цифры.)
+          Запишите в таблицу значения <strong>X</strong> и
+          <strong>Y</strong>.
+          (Для записи ответа используйте арабские цифры.)
         </p>
+
         <p class="oge-answer-label">Ответ:</p>
         <table class="oge-xy-table">
           <thead>
@@ -150,7 +151,7 @@
                   type="text"
                   inputmode="numeric"
                   autocomplete="off"
-                  aria-label="Номер периода X"
+                  aria-label="X"
                 />
               </td>
               <td>
@@ -159,29 +160,32 @@
                   type="text"
                   inputmode="numeric"
                   autocomplete="off"
-                  aria-label="Заряд ядра Y"
+                  aria-label="Y"
                 />
               </td>
             </tr>
           </tbody>
         </table>
+
         <p style="margin-top: 16px">
-          <button type="button" id="checkBtn">Ответ</button>
+          <button type="button" id="checkBtn">Проверить</button>
         </p>
         <p id="resultOut" class="result" role="status"></p>
+      </div>
 
       <p>Источник: ОГЭ. Типовые экзаменационные варианты, вариант 10 (Издательство «Национальное образование», 2025).</p>
-    </article>
+      </article>
     </main>
-  <script>
+    <script>
       (function () {
-        document
-          .getElementById("checkBtn")
-          .addEventListener("click", function () {
-          const out = document.getElementById("resultOut");
-          if (out) out.textContent = OGE_EX_formatAnswer(["3","15"]);
+        const btn = document.querySelector(".oge-subtask button[type='button']");
+        const out = document.querySelector(".oge-subtask .result");
+        if (!btn || !out) return;
+        btn.textContent = "Ответ";
+        btn.addEventListener("click", function () {
+          out.textContent = OGE_EX_formatAnswer(["3","15"]);
         });
       })();
     </script>
-</body>
+  </body>
 </html>

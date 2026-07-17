@@ -1,0 +1,5423 @@
+{
+  "generatedAt": "2026-07-17T21:15:44.671Z",
+  "totalTasks": 276,
+  "analyzed": 276,
+  "passed": 255,
+  "failed": 21,
+  "missingFiles": 0,
+  "uiKindConfirmed": true,
+  "uiKindMismatchCount": 0,
+  "numericLegacyCount": 21,
+  "otherIssueCount": 0,
+  "byExamType": [
+    {
+      "examType": 1,
+      "expectedUiKind": "twoChoice",
+      "detectedUiKinds": [
+        "twoChoice"
+      ],
+      "examples": 12,
+      "failedExamples": 0,
+      "consistent": true,
+      "statementCounts": [
+        5
+      ],
+      "matchRightCounts": [],
+      "correctLengths": [
+        2
+      ],
+      "legacyNumericChecks": []
+    },
+    {
+      "examType": 2,
+      "expectedUiKind": "periodDiagram",
+      "detectedUiKinds": [
+        "periodDiagram"
+      ],
+      "examples": 12,
+      "failedExamples": 0,
+      "consistent": true,
+      "statementCounts": [],
+      "matchRightCounts": [],
+      "correctLengths": [
+        2
+      ],
+      "legacyNumericChecks": []
+    },
+    {
+      "examType": 3,
+      "expectedUiKind": "orderedDigits",
+      "detectedUiKinds": [
+        "orderedDigits"
+      ],
+      "examples": 12,
+      "failedExamples": 0,
+      "consistent": true,
+      "statementCounts": [],
+      "matchRightCounts": [],
+      "correctLengths": [],
+      "legacyNumericChecks": []
+    },
+    {
+      "examType": 4,
+      "expectedUiKind": "matchTriple",
+      "detectedUiKinds": [
+        "matchTriple"
+      ],
+      "examples": 12,
+      "failedExamples": 0,
+      "consistent": true,
+      "statementCounts": [],
+      "matchRightCounts": [
+        4
+      ],
+      "correctLengths": [],
+      "legacyNumericChecks": []
+    },
+    {
+      "examType": 5,
+      "expectedUiKind": "twoChoice",
+      "detectedUiKinds": [
+        "twoChoice"
+      ],
+      "examples": 12,
+      "failedExamples": 0,
+      "consistent": true,
+      "statementCounts": [
+        5
+      ],
+      "matchRightCounts": [],
+      "correctLengths": [
+        2
+      ],
+      "legacyNumericChecks": []
+    },
+    {
+      "examType": 6,
+      "expectedUiKind": "twoChoice",
+      "detectedUiKinds": [
+        "twoChoice"
+      ],
+      "examples": 12,
+      "failedExamples": 0,
+      "consistent": true,
+      "statementCounts": [
+        5
+      ],
+      "matchRightCounts": [],
+      "correctLengths": [
+        2
+      ],
+      "legacyNumericChecks": []
+    },
+    {
+      "examType": 7,
+      "expectedUiKind": "orderedDigits",
+      "detectedUiKinds": [
+        "orderedDigits"
+      ],
+      "examples": 12,
+      "failedExamples": 0,
+      "consistent": true,
+      "statementCounts": [],
+      "matchRightCounts": [],
+      "correctLengths": [],
+      "legacyNumericChecks": []
+    },
+    {
+      "examType": 8,
+      "expectedUiKind": "twoChoice",
+      "detectedUiKinds": [
+        "twoChoice"
+      ],
+      "examples": 12,
+      "failedExamples": 0,
+      "consistent": true,
+      "statementCounts": [
+        5
+      ],
+      "matchRightCounts": [],
+      "correctLengths": [
+        2
+      ],
+      "legacyNumericChecks": []
+    },
+    {
+      "examType": 9,
+      "expectedUiKind": "matchTriple",
+      "detectedUiKinds": [
+        "matchTriple"
+      ],
+      "examples": 12,
+      "failedExamples": 0,
+      "consistent": true,
+      "statementCounts": [],
+      "matchRightCounts": [
+        5
+      ],
+      "correctLengths": [],
+      "legacyNumericChecks": []
+    },
+    {
+      "examType": 10,
+      "expectedUiKind": "matchTriple",
+      "detectedUiKinds": [
+        "matchTriple"
+      ],
+      "examples": 12,
+      "failedExamples": 0,
+      "consistent": true,
+      "statementCounts": [],
+      "matchRightCounts": [
+        4
+      ],
+      "correctLengths": [],
+      "legacyNumericChecks": []
+    },
+    {
+      "examType": 11,
+      "expectedUiKind": "twoChoice",
+      "detectedUiKinds": [
+        "twoChoice"
+      ],
+      "examples": 12,
+      "failedExamples": 0,
+      "consistent": true,
+      "statementCounts": [
+        5
+      ],
+      "matchRightCounts": [],
+      "correctLengths": [
+        2
+      ],
+      "legacyNumericChecks": []
+    },
+    {
+      "examType": 12,
+      "expectedUiKind": "matchTriple",
+      "detectedUiKinds": [
+        "matchTriple"
+      ],
+      "examples": 12,
+      "failedExamples": 0,
+      "consistent": true,
+      "statementCounts": [],
+      "matchRightCounts": [
+        4
+      ],
+      "correctLengths": [],
+      "legacyNumericChecks": []
+    },
+    {
+      "examType": 13,
+      "expectedUiKind": "twoChoice",
+      "detectedUiKinds": [
+        "twoChoice"
+      ],
+      "examples": 12,
+      "failedExamples": 0,
+      "consistent": true,
+      "statementCounts": [
+        5
+      ],
+      "matchRightCounts": [],
+      "correctLengths": [
+        2
+      ],
+      "legacyNumericChecks": []
+    },
+    {
+      "examType": 14,
+      "expectedUiKind": "twoChoice",
+      "detectedUiKinds": [
+        "twoChoice"
+      ],
+      "examples": 12,
+      "failedExamples": 0,
+      "consistent": true,
+      "statementCounts": [
+        6
+      ],
+      "matchRightCounts": [],
+      "correctLengths": [
+        2
+      ],
+      "legacyNumericChecks": []
+    },
+    {
+      "examType": 15,
+      "expectedUiKind": "matchTriple",
+      "detectedUiKinds": [
+        "matchTriple"
+      ],
+      "examples": 12,
+      "failedExamples": 0,
+      "consistent": true,
+      "statementCounts": [],
+      "matchRightCounts": [
+        2
+      ],
+      "correctLengths": [],
+      "legacyNumericChecks": []
+    },
+    {
+      "examType": 16,
+      "expectedUiKind": "multiChoiceFour",
+      "detectedUiKinds": [
+        "multiChoiceFour"
+      ],
+      "examples": 12,
+      "failedExamples": 0,
+      "consistent": true,
+      "statementCounts": [
+        4
+      ],
+      "matchRightCounts": [],
+      "correctLengths": [
+        2,
+        3
+      ],
+      "legacyNumericChecks": []
+    },
+    {
+      "examType": 17,
+      "expectedUiKind": "matchTriple",
+      "detectedUiKinds": [
+        "matchTriple"
+      ],
+      "examples": 12,
+      "failedExamples": 0,
+      "consistent": true,
+      "statementCounts": [],
+      "matchRightCounts": [
+        4
+      ],
+      "correctLengths": [],
+      "legacyNumericChecks": []
+    },
+    {
+      "examType": 18,
+      "expectedUiKind": "numericInt",
+      "detectedUiKinds": [
+        "numericInt"
+      ],
+      "examples": 12,
+      "failedExamples": 10,
+      "consistent": true,
+      "statementCounts": [],
+      "matchRightCounts": [],
+      "correctLengths": [],
+      "legacyNumericChecks": [
+        "rounded",
+        "strict",
+        "tolerance"
+      ]
+    },
+    {
+      "examType": 19,
+      "expectedUiKind": "numericMassTable",
+      "detectedUiKinds": [
+        "numericMassTable"
+      ],
+      "examples": 12,
+      "failedExamples": 11,
+      "consistent": true,
+      "statementCounts": [],
+      "matchRightCounts": [],
+      "correctLengths": [],
+      "legacyNumericChecks": [
+        "rounded",
+        "strict",
+        "tolerance"
+      ]
+    },
+    {
+      "examType": 20,
+      "expectedUiKind": "openReference",
+      "detectedUiKinds": [
+        "openReference"
+      ],
+      "examples": 12,
+      "failedExamples": 0,
+      "consistent": true,
+      "statementCounts": [],
+      "matchRightCounts": [],
+      "correctLengths": [],
+      "legacyNumericChecks": []
+    },
+    {
+      "examType": 21,
+      "expectedUiKind": "openReference",
+      "detectedUiKinds": [
+        "openReference"
+      ],
+      "examples": 12,
+      "failedExamples": 0,
+      "consistent": true,
+      "statementCounts": [],
+      "matchRightCounts": [],
+      "correctLengths": [],
+      "legacyNumericChecks": []
+    },
+    {
+      "examType": 22,
+      "expectedUiKind": "openReference",
+      "detectedUiKinds": [
+        "openReference"
+      ],
+      "examples": 12,
+      "failedExamples": 0,
+      "consistent": true,
+      "statementCounts": [],
+      "matchRightCounts": [],
+      "correctLengths": [],
+      "legacyNumericChecks": []
+    },
+    {
+      "examType": 23,
+      "expectedUiKind": "experimentOpen",
+      "detectedUiKinds": [
+        "experimentOpen"
+      ],
+      "examples": 12,
+      "failedExamples": 0,
+      "consistent": true,
+      "statementCounts": [],
+      "matchRightCounts": [],
+      "correctLengths": [],
+      "legacyNumericChecks": []
+    }
+  ],
+  "tasks": [
+    {
+      "id": 1024,
+      "examType": 1,
+      "sourceDir": "variant-1",
+      "file": "data\\oge-source\\variant-1\\oge-01.html",
+      "expectedUiKind": "twoChoice",
+      "detectedUiKind": "twoChoice",
+      "ok": true,
+      "issues": [],
+      "details": {
+        "statementCount": 5,
+        "answerCellCount": 2,
+        "matchRightCount": null,
+        "correct": [
+          "1",
+          "2"
+        ],
+        "numericCheck": null
+      }
+    },
+    {
+      "id": 1025,
+      "examType": 2,
+      "sourceDir": "variant-1",
+      "file": "data\\oge-source\\variant-1\\oge-02.html",
+      "expectedUiKind": "periodDiagram",
+      "detectedUiKind": "periodDiagram",
+      "ok": true,
+      "issues": [],
+      "details": {
+        "statementCount": null,
+        "answerCellCount": null,
+        "matchRightCount": null,
+        "correct": null,
+        "numericCheck": null
+      }
+    },
+    {
+      "id": 1026,
+      "examType": 3,
+      "sourceDir": "variant-1",
+      "file": "data\\oge-source\\variant-1\\oge-03.html",
+      "expectedUiKind": "orderedDigits",
+      "detectedUiKind": "orderedDigits",
+      "ok": true,
+      "issues": [],
+      "details": {
+        "statementCount": null,
+        "answerCellCount": 1,
+        "matchRightCount": null,
+        "correct": null,
+        "numericCheck": null
+      }
+    },
+    {
+      "id": 1027,
+      "examType": 4,
+      "sourceDir": "variant-1",
+      "file": "data\\oge-source\\variant-1\\oge-04.html",
+      "expectedUiKind": "matchTriple",
+      "detectedUiKind": "matchTriple",
+      "ok": true,
+      "issues": [],
+      "details": {
+        "statementCount": null,
+        "answerCellCount": null,
+        "matchRightCount": 4,
+        "correct": null,
+        "numericCheck": null
+      }
+    },
+    {
+      "id": 1028,
+      "examType": 5,
+      "sourceDir": "variant-1",
+      "file": "data\\oge-source\\variant-1\\oge-05.html",
+      "expectedUiKind": "twoChoice",
+      "detectedUiKind": "twoChoice",
+      "ok": true,
+      "issues": [],
+      "details": {
+        "statementCount": 5,
+        "answerCellCount": 2,
+        "matchRightCount": null,
+        "correct": [
+          "1",
+          "4"
+        ],
+        "numericCheck": null
+      }
+    },
+    {
+      "id": 1029,
+      "examType": 6,
+      "sourceDir": "variant-1",
+      "file": "data\\oge-source\\variant-1\\oge-06.html",
+      "expectedUiKind": "twoChoice",
+      "detectedUiKind": "twoChoice",
+      "ok": true,
+      "issues": [],
+      "details": {
+        "statementCount": 5,
+        "answerCellCount": 2,
+        "matchRightCount": null,
+        "correct": [
+          "1",
+          "4"
+        ],
+        "numericCheck": null
+      }
+    },
+    {
+      "id": 1030,
+      "examType": 7,
+      "sourceDir": "variant-1",
+      "file": "data\\oge-source\\variant-1\\oge-07.html",
+      "expectedUiKind": "orderedDigits",
+      "detectedUiKind": "orderedDigits",
+      "ok": true,
+      "issues": [],
+      "details": {
+        "statementCount": null,
+        "answerCellCount": 2,
+        "matchRightCount": null,
+        "correct": null,
+        "numericCheck": null
+      }
+    },
+    {
+      "id": 1031,
+      "examType": 8,
+      "sourceDir": "variant-1",
+      "file": "data\\oge-source\\variant-1\\oge-08.html",
+      "expectedUiKind": "twoChoice",
+      "detectedUiKind": "twoChoice",
+      "ok": true,
+      "issues": [],
+      "details": {
+        "statementCount": 5,
+        "answerCellCount": 2,
+        "matchRightCount": null,
+        "correct": [
+          "1",
+          "5"
+        ],
+        "numericCheck": null
+      }
+    },
+    {
+      "id": 1032,
+      "examType": 9,
+      "sourceDir": "variant-1",
+      "file": "data\\oge-source\\variant-1\\oge-09.html",
+      "expectedUiKind": "matchTriple",
+      "detectedUiKind": "matchTriple",
+      "ok": true,
+      "issues": [],
+      "details": {
+        "statementCount": null,
+        "answerCellCount": null,
+        "matchRightCount": 5,
+        "correct": null,
+        "numericCheck": null
+      }
+    },
+    {
+      "id": 1033,
+      "examType": 10,
+      "sourceDir": "variant-1",
+      "file": "data\\oge-source\\variant-1\\oge-10.html",
+      "expectedUiKind": "matchTriple",
+      "detectedUiKind": "matchTriple",
+      "ok": true,
+      "issues": [],
+      "details": {
+        "statementCount": null,
+        "answerCellCount": null,
+        "matchRightCount": 4,
+        "correct": null,
+        "numericCheck": null
+      }
+    },
+    {
+      "id": 1034,
+      "examType": 11,
+      "sourceDir": "variant-1",
+      "file": "data\\oge-source\\variant-1\\oge-11.html",
+      "expectedUiKind": "twoChoice",
+      "detectedUiKind": "twoChoice",
+      "ok": true,
+      "issues": [],
+      "details": {
+        "statementCount": 5,
+        "answerCellCount": 2,
+        "matchRightCount": null,
+        "correct": [
+          "2",
+          "3"
+        ],
+        "numericCheck": null
+      }
+    },
+    {
+      "id": 1035,
+      "examType": 12,
+      "sourceDir": "variant-1",
+      "file": "data\\oge-source\\variant-1\\oge-12.html",
+      "expectedUiKind": "matchTriple",
+      "detectedUiKind": "matchTriple",
+      "ok": true,
+      "issues": [],
+      "details": {
+        "statementCount": null,
+        "answerCellCount": null,
+        "matchRightCount": 4,
+        "correct": null,
+        "numericCheck": null
+      }
+    },
+    {
+      "id": 1036,
+      "examType": 13,
+      "sourceDir": "variant-1",
+      "file": "data\\oge-source\\variant-1\\oge-13.html",
+      "expectedUiKind": "twoChoice",
+      "detectedUiKind": "twoChoice",
+      "ok": true,
+      "issues": [],
+      "details": {
+        "statementCount": 5,
+        "answerCellCount": 2,
+        "matchRightCount": null,
+        "correct": [
+          "1",
+          "4"
+        ],
+        "numericCheck": null
+      }
+    },
+    {
+      "id": 1037,
+      "examType": 14,
+      "sourceDir": "variant-1",
+      "file": "data\\oge-source\\variant-1\\oge-14.html",
+      "expectedUiKind": "twoChoice",
+      "detectedUiKind": "twoChoice",
+      "ok": true,
+      "issues": [],
+      "details": {
+        "statementCount": 6,
+        "answerCellCount": 2,
+        "matchRightCount": null,
+        "correct": [
+          "3",
+          "4"
+        ],
+        "numericCheck": null
+      }
+    },
+    {
+      "id": 1038,
+      "examType": 15,
+      "sourceDir": "variant-1",
+      "file": "data\\oge-source\\variant-1\\oge-15.html",
+      "expectedUiKind": "matchTriple",
+      "detectedUiKind": "matchTriple",
+      "ok": true,
+      "issues": [],
+      "details": {
+        "statementCount": null,
+        "answerCellCount": null,
+        "matchRightCount": 2,
+        "correct": null,
+        "numericCheck": null
+      }
+    },
+    {
+      "id": 1039,
+      "examType": 16,
+      "sourceDir": "variant-1",
+      "file": "data\\oge-source\\variant-1\\oge-16.html",
+      "expectedUiKind": "multiChoiceFour",
+      "detectedUiKind": "multiChoiceFour",
+      "ok": true,
+      "issues": [],
+      "details": {
+        "statementCount": 4,
+        "answerCellCount": 4,
+        "matchRightCount": null,
+        "correct": [
+          "3",
+          "4"
+        ],
+        "numericCheck": null
+      }
+    },
+    {
+      "id": 1040,
+      "examType": 17,
+      "sourceDir": "variant-1",
+      "file": "data\\oge-source\\variant-1\\oge-17.html",
+      "expectedUiKind": "matchTriple",
+      "detectedUiKind": "matchTriple",
+      "ok": true,
+      "issues": [],
+      "details": {
+        "statementCount": null,
+        "answerCellCount": null,
+        "matchRightCount": 4,
+        "correct": null,
+        "numericCheck": null
+      }
+    },
+    {
+      "id": 1041,
+      "examType": 18,
+      "sourceDir": "variant-1",
+      "file": "data\\oge-source\\variant-1\\oge-18.html",
+      "expectedUiKind": "numericInt",
+      "detectedUiKind": "numericInt",
+      "ok": false,
+      "issues": [
+        "numeric: проверка «tolerance», целевое правило — strict (n === value)"
+      ],
+      "details": {
+        "statementCount": null,
+        "answerCellCount": null,
+        "matchRightCount": null,
+        "correct": null,
+        "numericCheck": "tolerance"
+      }
+    },
+    {
+      "id": 1042,
+      "examType": 19,
+      "sourceDir": "variant-1",
+      "file": "data\\oge-source\\variant-1\\oge-19.html",
+      "expectedUiKind": "numericMassTable",
+      "detectedUiKind": "numericMassTable",
+      "ok": false,
+      "issues": [
+        "numeric: проверка «tolerance», целевое правило — strict (n === value)"
+      ],
+      "details": {
+        "statementCount": null,
+        "answerCellCount": null,
+        "matchRightCount": null,
+        "correct": null,
+        "numericCheck": "tolerance"
+      }
+    },
+    {
+      "id": 1043,
+      "examType": 20,
+      "sourceDir": "variant-1",
+      "file": "data\\oge-source\\variant-1\\oge-20.html",
+      "expectedUiKind": "openReference",
+      "detectedUiKind": "openReference",
+      "ok": true,
+      "issues": [],
+      "details": {
+        "statementCount": null,
+        "answerCellCount": null,
+        "matchRightCount": null,
+        "correct": null,
+        "numericCheck": null
+      }
+    },
+    {
+      "id": 1044,
+      "examType": 21,
+      "sourceDir": "variant-1",
+      "file": "data\\oge-source\\variant-1\\oge-21.html",
+      "expectedUiKind": "openReference",
+      "detectedUiKind": "openReference",
+      "ok": true,
+      "issues": [],
+      "details": {
+        "statementCount": null,
+        "answerCellCount": null,
+        "matchRightCount": null,
+        "correct": null,
+        "numericCheck": null
+      }
+    },
+    {
+      "id": 1045,
+      "examType": 22,
+      "sourceDir": "variant-1",
+      "file": "data\\oge-source\\variant-1\\oge-22.html",
+      "expectedUiKind": "openReference",
+      "detectedUiKind": "openReference",
+      "ok": true,
+      "issues": [],
+      "details": {
+        "statementCount": null,
+        "answerCellCount": null,
+        "matchRightCount": null,
+        "correct": null,
+        "numericCheck": null
+      }
+    },
+    {
+      "id": 1046,
+      "examType": 23,
+      "sourceDir": "variant-1",
+      "file": "data\\oge-source\\variant-1\\oge-23.html",
+      "expectedUiKind": "experimentOpen",
+      "detectedUiKind": "experimentOpen",
+      "ok": true,
+      "issues": [],
+      "details": {
+        "statementCount": null,
+        "answerCellCount": null,
+        "matchRightCount": null,
+        "correct": null,
+        "numericCheck": null
+      }
+    },
+    {
+      "id": 1001,
+      "examType": 1,
+      "sourceDir": "2026-demo",
+      "file": "data\\oge-source\\2026-demo\\oge-01.html",
+      "expectedUiKind": "twoChoice",
+      "detectedUiKind": "twoChoice",
+      "ok": true,
+      "issues": [],
+      "details": {
+        "statementCount": 5,
+        "answerCellCount": 2,
+        "matchRightCount": null,
+        "correct": [
+          "2",
+          "3"
+        ],
+        "numericCheck": null
+      }
+    },
+    {
+      "id": 1002,
+      "examType": 2,
+      "sourceDir": "2026-demo",
+      "file": "data\\oge-source\\2026-demo\\oge-02.html",
+      "expectedUiKind": "periodDiagram",
+      "detectedUiKind": "periodDiagram",
+      "ok": true,
+      "issues": [],
+      "details": {
+        "statementCount": null,
+        "answerCellCount": null,
+        "matchRightCount": null,
+        "correct": null,
+        "numericCheck": null
+      }
+    },
+    {
+      "id": 1003,
+      "examType": 3,
+      "sourceDir": "2026-demo",
+      "file": "data\\oge-source\\2026-demo\\oge-03.html",
+      "expectedUiKind": "orderedDigits",
+      "detectedUiKind": "orderedDigits",
+      "ok": true,
+      "issues": [],
+      "details": {
+        "statementCount": null,
+        "answerCellCount": 3,
+        "matchRightCount": null,
+        "correct": null,
+        "numericCheck": null
+      }
+    },
+    {
+      "id": 1004,
+      "examType": 4,
+      "sourceDir": "2026-demo",
+      "file": "data\\oge-source\\2026-demo\\oge-04.html",
+      "expectedUiKind": "matchTriple",
+      "detectedUiKind": "matchTriple",
+      "ok": true,
+      "issues": [],
+      "details": {
+        "statementCount": null,
+        "answerCellCount": null,
+        "matchRightCount": 4,
+        "correct": null,
+        "numericCheck": null
+      }
+    },
+    {
+      "id": 1005,
+      "examType": 5,
+      "sourceDir": "2026-demo",
+      "file": "data\\oge-source\\2026-demo\\oge-05.html",
+      "expectedUiKind": "twoChoice",
+      "detectedUiKind": "twoChoice",
+      "ok": true,
+      "issues": [],
+      "details": {
+        "statementCount": 5,
+        "answerCellCount": 2,
+        "matchRightCount": null,
+        "correct": [
+          "1",
+          "2"
+        ],
+        "numericCheck": null
+      }
+    },
+    {
+      "id": 1006,
+      "examType": 6,
+      "sourceDir": "2026-demo",
+      "file": "data\\oge-source\\2026-demo\\oge-06.html",
+      "expectedUiKind": "twoChoice",
+      "detectedUiKind": "twoChoice",
+      "ok": true,
+      "issues": [],
+      "details": {
+        "statementCount": 5,
+        "answerCellCount": 2,
+        "matchRightCount": null,
+        "correct": [
+          "1",
+          "2"
+        ],
+        "numericCheck": null
+      }
+    },
+    {
+      "id": 1007,
+      "examType": 7,
+      "sourceDir": "2026-demo",
+      "file": "data\\oge-source\\2026-demo\\oge-07.html",
+      "expectedUiKind": "orderedDigits",
+      "detectedUiKind": "orderedDigits",
+      "ok": true,
+      "issues": [],
+      "details": {
+        "statementCount": null,
+        "answerCellCount": 2,
+        "matchRightCount": null,
+        "correct": null,
+        "numericCheck": null
+      }
+    },
+    {
+      "id": 1008,
+      "examType": 8,
+      "sourceDir": "2026-demo",
+      "file": "data\\oge-source\\2026-demo\\oge-08.html",
+      "expectedUiKind": "twoChoice",
+      "detectedUiKind": "twoChoice",
+      "ok": true,
+      "issues": [],
+      "details": {
+        "statementCount": 5,
+        "answerCellCount": 2,
+        "matchRightCount": null,
+        "correct": [
+          "1",
+          "3"
+        ],
+        "numericCheck": null
+      }
+    },
+    {
+      "id": 1009,
+      "examType": 9,
+      "sourceDir": "2026-demo",
+      "file": "data\\oge-source\\2026-demo\\oge-09.html",
+      "expectedUiKind": "matchTriple",
+      "detectedUiKind": "matchTriple",
+      "ok": true,
+      "issues": [],
+      "details": {
+        "statementCount": null,
+        "answerCellCount": null,
+        "matchRightCount": 5,
+        "correct": null,
+        "numericCheck": null
+      }
+    },
+    {
+      "id": 1010,
+      "examType": 10,
+      "sourceDir": "2026-demo",
+      "file": "data\\oge-source\\2026-demo\\oge-10.html",
+      "expectedUiKind": "matchTriple",
+      "detectedUiKind": "matchTriple",
+      "ok": true,
+      "issues": [],
+      "details": {
+        "statementCount": null,
+        "answerCellCount": null,
+        "matchRightCount": 4,
+        "correct": null,
+        "numericCheck": null
+      }
+    },
+    {
+      "id": 1011,
+      "examType": 11,
+      "sourceDir": "2026-demo",
+      "file": "data\\oge-source\\2026-demo\\oge-11.html",
+      "expectedUiKind": "twoChoice",
+      "detectedUiKind": "twoChoice",
+      "ok": true,
+      "issues": [],
+      "details": {
+        "statementCount": 5,
+        "answerCellCount": 2,
+        "matchRightCount": null,
+        "correct": [
+          "1",
+          "2"
+        ],
+        "numericCheck": null
+      }
+    },
+    {
+      "id": 1012,
+      "examType": 12,
+      "sourceDir": "2026-demo",
+      "file": "data\\oge-source\\2026-demo\\oge-12.html",
+      "expectedUiKind": "matchTriple",
+      "detectedUiKind": "matchTriple",
+      "ok": true,
+      "issues": [],
+      "details": {
+        "statementCount": null,
+        "answerCellCount": null,
+        "matchRightCount": 4,
+        "correct": null,
+        "numericCheck": null
+      }
+    },
+    {
+      "id": 1013,
+      "examType": 13,
+      "sourceDir": "2026-demo",
+      "file": "data\\oge-source\\2026-demo\\oge-13.html",
+      "expectedUiKind": "twoChoice",
+      "detectedUiKind": "twoChoice",
+      "ok": true,
+      "issues": [],
+      "details": {
+        "statementCount": 5,
+        "answerCellCount": 2,
+        "matchRightCount": null,
+        "correct": [
+          "1",
+          "5"
+        ],
+        "numericCheck": null
+      }
+    },
+    {
+      "id": 1014,
+      "examType": 14,
+      "sourceDir": "2026-demo",
+      "file": "data\\oge-source\\2026-demo\\oge-14.html",
+      "expectedUiKind": "twoChoice",
+      "detectedUiKind": "twoChoice",
+      "ok": true,
+      "issues": [],
+      "details": {
+        "statementCount": 6,
+        "answerCellCount": 2,
+        "matchRightCount": null,
+        "correct": [
+          "3",
+          "5"
+        ],
+        "numericCheck": null
+      }
+    },
+    {
+      "id": 1015,
+      "examType": 15,
+      "sourceDir": "2026-demo",
+      "file": "data\\oge-source\\2026-demo\\oge-15.html",
+      "expectedUiKind": "matchTriple",
+      "detectedUiKind": "matchTriple",
+      "ok": true,
+      "issues": [],
+      "details": {
+        "statementCount": null,
+        "answerCellCount": null,
+        "matchRightCount": 2,
+        "correct": null,
+        "numericCheck": null
+      }
+    },
+    {
+      "id": 1016,
+      "examType": 16,
+      "sourceDir": "2026-demo",
+      "file": "data\\oge-source\\2026-demo\\oge-16.html",
+      "expectedUiKind": "multiChoiceFour",
+      "detectedUiKind": "multiChoiceFour",
+      "ok": true,
+      "issues": [],
+      "details": {
+        "statementCount": 4,
+        "answerCellCount": 4,
+        "matchRightCount": null,
+        "correct": [
+          "3",
+          "4"
+        ],
+        "numericCheck": null
+      }
+    },
+    {
+      "id": 1017,
+      "examType": 17,
+      "sourceDir": "2026-demo",
+      "file": "data\\oge-source\\2026-demo\\oge-17.html",
+      "expectedUiKind": "matchTriple",
+      "detectedUiKind": "matchTriple",
+      "ok": true,
+      "issues": [],
+      "details": {
+        "statementCount": null,
+        "answerCellCount": null,
+        "matchRightCount": 4,
+        "correct": null,
+        "numericCheck": null
+      }
+    },
+    {
+      "id": 1018,
+      "examType": 18,
+      "sourceDir": "2026-demo",
+      "file": "data\\oge-source\\2026-demo\\oge-18.html",
+      "expectedUiKind": "numericInt",
+      "detectedUiKind": "numericInt",
+      "ok": true,
+      "issues": [],
+      "details": {
+        "statementCount": null,
+        "answerCellCount": null,
+        "matchRightCount": null,
+        "correct": null,
+        "numericCheck": "strict"
+      }
+    },
+    {
+      "id": 1019,
+      "examType": 19,
+      "sourceDir": "2026-demo",
+      "file": "data\\oge-source\\2026-demo\\oge-19.html",
+      "expectedUiKind": "numericMassTable",
+      "detectedUiKind": "numericMassTable",
+      "ok": true,
+      "issues": [],
+      "details": {
+        "statementCount": null,
+        "answerCellCount": null,
+        "matchRightCount": null,
+        "correct": null,
+        "numericCheck": "strict"
+      }
+    },
+    {
+      "id": 1020,
+      "examType": 20,
+      "sourceDir": "2026-demo",
+      "file": "data\\oge-source\\2026-demo\\oge-20.html",
+      "expectedUiKind": "openReference",
+      "detectedUiKind": "openReference",
+      "ok": true,
+      "issues": [],
+      "details": {
+        "statementCount": null,
+        "answerCellCount": null,
+        "matchRightCount": null,
+        "correct": null,
+        "numericCheck": null
+      }
+    },
+    {
+      "id": 1021,
+      "examType": 21,
+      "sourceDir": "2026-demo",
+      "file": "data\\oge-source\\2026-demo\\oge-21.html",
+      "expectedUiKind": "openReference",
+      "detectedUiKind": "openReference",
+      "ok": true,
+      "issues": [],
+      "details": {
+        "statementCount": null,
+        "answerCellCount": null,
+        "matchRightCount": null,
+        "correct": null,
+        "numericCheck": null
+      }
+    },
+    {
+      "id": 1022,
+      "examType": 22,
+      "sourceDir": "2026-demo",
+      "file": "data\\oge-source\\2026-demo\\oge-22.html",
+      "expectedUiKind": "openReference",
+      "detectedUiKind": "openReference",
+      "ok": true,
+      "issues": [],
+      "details": {
+        "statementCount": null,
+        "answerCellCount": null,
+        "matchRightCount": null,
+        "correct": null,
+        "numericCheck": null
+      }
+    },
+    {
+      "id": 1023,
+      "examType": 23,
+      "sourceDir": "2026-demo",
+      "file": "data\\oge-source\\2026-demo\\oge-23.html",
+      "expectedUiKind": "experimentOpen",
+      "detectedUiKind": "experimentOpen",
+      "ok": true,
+      "issues": [],
+      "details": {
+        "statementCount": null,
+        "answerCellCount": null,
+        "matchRightCount": null,
+        "correct": null,
+        "numericCheck": null
+      }
+    },
+    {
+      "id": 1047,
+      "examType": 1,
+      "sourceDir": "default",
+      "file": "data\\oge-source\\default\\oge-01.html",
+      "expectedUiKind": "twoChoice",
+      "detectedUiKind": "twoChoice",
+      "ok": true,
+      "issues": [],
+      "details": {
+        "statementCount": 5,
+        "answerCellCount": 2,
+        "matchRightCount": null,
+        "correct": [
+          "1",
+          "3"
+        ],
+        "numericCheck": null
+      }
+    },
+    {
+      "id": 1048,
+      "examType": 2,
+      "sourceDir": "default",
+      "file": "data\\oge-source\\default\\oge-02.html",
+      "expectedUiKind": "periodDiagram",
+      "detectedUiKind": "periodDiagram",
+      "ok": true,
+      "issues": [],
+      "details": {
+        "statementCount": null,
+        "answerCellCount": null,
+        "matchRightCount": null,
+        "correct": null,
+        "numericCheck": null
+      }
+    },
+    {
+      "id": 1049,
+      "examType": 3,
+      "sourceDir": "default",
+      "file": "data\\oge-source\\default\\oge-03.html",
+      "expectedUiKind": "orderedDigits",
+      "detectedUiKind": "orderedDigits",
+      "ok": true,
+      "issues": [],
+      "details": {
+        "statementCount": null,
+        "answerCellCount": 3,
+        "matchRightCount": null,
+        "correct": null,
+        "numericCheck": null
+      }
+    },
+    {
+      "id": 1050,
+      "examType": 4,
+      "sourceDir": "default",
+      "file": "data\\oge-source\\default\\oge-04.html",
+      "expectedUiKind": "matchTriple",
+      "detectedUiKind": "matchTriple",
+      "ok": true,
+      "issues": [],
+      "details": {
+        "statementCount": null,
+        "answerCellCount": null,
+        "matchRightCount": 4,
+        "correct": null,
+        "numericCheck": null
+      }
+    },
+    {
+      "id": 1051,
+      "examType": 5,
+      "sourceDir": "default",
+      "file": "data\\oge-source\\default\\oge-05.html",
+      "expectedUiKind": "twoChoice",
+      "detectedUiKind": "twoChoice",
+      "ok": true,
+      "issues": [],
+      "details": {
+        "statementCount": 5,
+        "answerCellCount": 2,
+        "matchRightCount": null,
+        "correct": [
+          "1",
+          "5"
+        ],
+        "numericCheck": null
+      }
+    },
+    {
+      "id": 1052,
+      "examType": 6,
+      "sourceDir": "default",
+      "file": "data\\oge-source\\default\\oge-06.html",
+      "expectedUiKind": "twoChoice",
+      "detectedUiKind": "twoChoice",
+      "ok": true,
+      "issues": [],
+      "details": {
+        "statementCount": 5,
+        "answerCellCount": 2,
+        "matchRightCount": null,
+        "correct": [
+          "2",
+          "3"
+        ],
+        "numericCheck": null
+      }
+    },
+    {
+      "id": 1053,
+      "examType": 7,
+      "sourceDir": "default",
+      "file": "data\\oge-source\\default\\oge-07.html",
+      "expectedUiKind": "orderedDigits",
+      "detectedUiKind": "orderedDigits",
+      "ok": true,
+      "issues": [],
+      "details": {
+        "statementCount": null,
+        "answerCellCount": 2,
+        "matchRightCount": null,
+        "correct": null,
+        "numericCheck": null
+      }
+    },
+    {
+      "id": 1054,
+      "examType": 8,
+      "sourceDir": "default",
+      "file": "data\\oge-source\\default\\oge-08.html",
+      "expectedUiKind": "twoChoice",
+      "detectedUiKind": "twoChoice",
+      "ok": true,
+      "issues": [],
+      "details": {
+        "statementCount": 5,
+        "answerCellCount": 2,
+        "matchRightCount": null,
+        "correct": [
+          "1",
+          "5"
+        ],
+        "numericCheck": null
+      }
+    },
+    {
+      "id": 1055,
+      "examType": 9,
+      "sourceDir": "default",
+      "file": "data\\oge-source\\default\\oge-09.html",
+      "expectedUiKind": "matchTriple",
+      "detectedUiKind": "matchTriple",
+      "ok": true,
+      "issues": [],
+      "details": {
+        "statementCount": null,
+        "answerCellCount": null,
+        "matchRightCount": 5,
+        "correct": null,
+        "numericCheck": null
+      }
+    },
+    {
+      "id": 1056,
+      "examType": 10,
+      "sourceDir": "default",
+      "file": "data\\oge-source\\default\\oge-10.html",
+      "expectedUiKind": "matchTriple",
+      "detectedUiKind": "matchTriple",
+      "ok": true,
+      "issues": [],
+      "details": {
+        "statementCount": null,
+        "answerCellCount": null,
+        "matchRightCount": 4,
+        "correct": null,
+        "numericCheck": null
+      }
+    },
+    {
+      "id": 1057,
+      "examType": 11,
+      "sourceDir": "default",
+      "file": "data\\oge-source\\default\\oge-11.html",
+      "expectedUiKind": "twoChoice",
+      "detectedUiKind": "twoChoice",
+      "ok": true,
+      "issues": [],
+      "details": {
+        "statementCount": 5,
+        "answerCellCount": 2,
+        "matchRightCount": null,
+        "correct": [
+          "4",
+          "5"
+        ],
+        "numericCheck": null
+      }
+    },
+    {
+      "id": 1058,
+      "examType": 12,
+      "sourceDir": "default",
+      "file": "data\\oge-source\\default\\oge-12.html",
+      "expectedUiKind": "matchTriple",
+      "detectedUiKind": "matchTriple",
+      "ok": true,
+      "issues": [],
+      "details": {
+        "statementCount": null,
+        "answerCellCount": null,
+        "matchRightCount": 4,
+        "correct": null,
+        "numericCheck": null
+      }
+    },
+    {
+      "id": 1059,
+      "examType": 13,
+      "sourceDir": "default",
+      "file": "data\\oge-source\\default\\oge-13.html",
+      "expectedUiKind": "twoChoice",
+      "detectedUiKind": "twoChoice",
+      "ok": true,
+      "issues": [],
+      "details": {
+        "statementCount": 5,
+        "answerCellCount": 2,
+        "matchRightCount": null,
+        "correct": [
+          "1",
+          "2"
+        ],
+        "numericCheck": null
+      }
+    },
+    {
+      "id": 1060,
+      "examType": 14,
+      "sourceDir": "default",
+      "file": "data\\oge-source\\default\\oge-14.html",
+      "expectedUiKind": "twoChoice",
+      "detectedUiKind": "twoChoice",
+      "ok": true,
+      "issues": [],
+      "details": {
+        "statementCount": 6,
+        "answerCellCount": 2,
+        "matchRightCount": null,
+        "correct": [
+          "2",
+          "5"
+        ],
+        "numericCheck": null
+      }
+    },
+    {
+      "id": 1061,
+      "examType": 15,
+      "sourceDir": "default",
+      "file": "data\\oge-source\\default\\oge-15.html",
+      "expectedUiKind": "matchTriple",
+      "detectedUiKind": "matchTriple",
+      "ok": true,
+      "issues": [],
+      "details": {
+        "statementCount": null,
+        "answerCellCount": null,
+        "matchRightCount": 2,
+        "correct": null,
+        "numericCheck": null
+      }
+    },
+    {
+      "id": 1062,
+      "examType": 16,
+      "sourceDir": "default",
+      "file": "data\\oge-source\\default\\oge-16.html",
+      "expectedUiKind": "multiChoiceFour",
+      "detectedUiKind": "multiChoiceFour",
+      "ok": true,
+      "issues": [],
+      "details": {
+        "statementCount": 4,
+        "answerCellCount": 4,
+        "matchRightCount": null,
+        "correct": [
+          "2",
+          "3",
+          "4"
+        ],
+        "numericCheck": null
+      }
+    },
+    {
+      "id": 1063,
+      "examType": 17,
+      "sourceDir": "default",
+      "file": "data\\oge-source\\default\\oge-17.html",
+      "expectedUiKind": "matchTriple",
+      "detectedUiKind": "matchTriple",
+      "ok": true,
+      "issues": [],
+      "details": {
+        "statementCount": null,
+        "answerCellCount": null,
+        "matchRightCount": 4,
+        "correct": null,
+        "numericCheck": null
+      }
+    },
+    {
+      "id": 1064,
+      "examType": 18,
+      "sourceDir": "default",
+      "file": "data\\oge-source\\default\\oge-18.html",
+      "expectedUiKind": "numericInt",
+      "detectedUiKind": "numericInt",
+      "ok": true,
+      "issues": [],
+      "details": {
+        "statementCount": null,
+        "answerCellCount": null,
+        "matchRightCount": null,
+        "correct": null,
+        "numericCheck": "strict"
+      }
+    },
+    {
+      "id": 1065,
+      "examType": 19,
+      "sourceDir": "default",
+      "file": "data\\oge-source\\default\\oge-19.html",
+      "expectedUiKind": "numericMassTable",
+      "detectedUiKind": "numericMassTable",
+      "ok": false,
+      "issues": [
+        "numeric: проверка «rounded», целевое правило — strict (n === value)"
+      ],
+      "details": {
+        "statementCount": null,
+        "answerCellCount": null,
+        "matchRightCount": null,
+        "correct": null,
+        "numericCheck": "rounded"
+      }
+    },
+    {
+      "id": 1066,
+      "examType": 20,
+      "sourceDir": "default",
+      "file": "data\\oge-source\\default\\oge-20.html",
+      "expectedUiKind": "openReference",
+      "detectedUiKind": "openReference",
+      "ok": true,
+      "issues": [],
+      "details": {
+        "statementCount": null,
+        "answerCellCount": null,
+        "matchRightCount": null,
+        "correct": null,
+        "numericCheck": null
+      }
+    },
+    {
+      "id": 1067,
+      "examType": 21,
+      "sourceDir": "default",
+      "file": "data\\oge-source\\default\\oge-21.html",
+      "expectedUiKind": "openReference",
+      "detectedUiKind": "openReference",
+      "ok": true,
+      "issues": [],
+      "details": {
+        "statementCount": null,
+        "answerCellCount": null,
+        "matchRightCount": null,
+        "correct": null,
+        "numericCheck": null
+      }
+    },
+    {
+      "id": 1068,
+      "examType": 22,
+      "sourceDir": "default",
+      "file": "data\\oge-source\\default\\oge-22.html",
+      "expectedUiKind": "openReference",
+      "detectedUiKind": "openReference",
+      "ok": true,
+      "issues": [],
+      "details": {
+        "statementCount": null,
+        "answerCellCount": null,
+        "matchRightCount": null,
+        "correct": null,
+        "numericCheck": null
+      }
+    },
+    {
+      "id": 1069,
+      "examType": 23,
+      "sourceDir": "default",
+      "file": "data\\oge-source\\default\\oge-23.html",
+      "expectedUiKind": "experimentOpen",
+      "detectedUiKind": "experimentOpen",
+      "ok": true,
+      "issues": [],
+      "details": {
+        "statementCount": null,
+        "answerCellCount": null,
+        "matchRightCount": null,
+        "correct": null,
+        "numericCheck": null
+      }
+    },
+    {
+      "id": 1070,
+      "examType": 1,
+      "sourceDir": "variant-2",
+      "file": "data\\oge-source\\variant-2\\oge-01.html",
+      "expectedUiKind": "twoChoice",
+      "detectedUiKind": "twoChoice",
+      "ok": true,
+      "issues": [],
+      "details": {
+        "statementCount": 5,
+        "answerCellCount": 2,
+        "matchRightCount": null,
+        "correct": [
+          "4",
+          "5"
+        ],
+        "numericCheck": null
+      }
+    },
+    {
+      "id": 1071,
+      "examType": 2,
+      "sourceDir": "variant-2",
+      "file": "data\\oge-source\\variant-2\\oge-02.html",
+      "expectedUiKind": "periodDiagram",
+      "detectedUiKind": "periodDiagram",
+      "ok": true,
+      "issues": [],
+      "details": {
+        "statementCount": null,
+        "answerCellCount": null,
+        "matchRightCount": null,
+        "correct": null,
+        "numericCheck": null
+      }
+    },
+    {
+      "id": 1072,
+      "examType": 3,
+      "sourceDir": "variant-2",
+      "file": "data\\oge-source\\variant-2\\oge-03.html",
+      "expectedUiKind": "orderedDigits",
+      "detectedUiKind": "orderedDigits",
+      "ok": true,
+      "issues": [],
+      "details": {
+        "statementCount": null,
+        "answerCellCount": 1,
+        "matchRightCount": null,
+        "correct": null,
+        "numericCheck": null
+      }
+    },
+    {
+      "id": 1073,
+      "examType": 4,
+      "sourceDir": "variant-2",
+      "file": "data\\oge-source\\variant-2\\oge-04.html",
+      "expectedUiKind": "matchTriple",
+      "detectedUiKind": "matchTriple",
+      "ok": true,
+      "issues": [],
+      "details": {
+        "statementCount": null,
+        "answerCellCount": null,
+        "matchRightCount": 4,
+        "correct": null,
+        "numericCheck": null
+      }
+    },
+    {
+      "id": 1074,
+      "examType": 5,
+      "sourceDir": "variant-2",
+      "file": "data\\oge-source\\variant-2\\oge-05.html",
+      "expectedUiKind": "twoChoice",
+      "detectedUiKind": "twoChoice",
+      "ok": true,
+      "issues": [],
+      "details": {
+        "statementCount": 5,
+        "answerCellCount": 2,
+        "matchRightCount": null,
+        "correct": [
+          "2",
+          "5"
+        ],
+        "numericCheck": null
+      }
+    },
+    {
+      "id": 1075,
+      "examType": 6,
+      "sourceDir": "variant-2",
+      "file": "data\\oge-source\\variant-2\\oge-06.html",
+      "expectedUiKind": "twoChoice",
+      "detectedUiKind": "twoChoice",
+      "ok": true,
+      "issues": [],
+      "details": {
+        "statementCount": 5,
+        "answerCellCount": 2,
+        "matchRightCount": null,
+        "correct": [
+          "2",
+          "3"
+        ],
+        "numericCheck": null
+      }
+    },
+    {
+      "id": 1076,
+      "examType": 7,
+      "sourceDir": "variant-2",
+      "file": "data\\oge-source\\variant-2\\oge-07.html",
+      "expectedUiKind": "orderedDigits",
+      "detectedUiKind": "orderedDigits",
+      "ok": true,
+      "issues": [],
+      "details": {
+        "statementCount": null,
+        "answerCellCount": 2,
+        "matchRightCount": null,
+        "correct": null,
+        "numericCheck": null
+      }
+    },
+    {
+      "id": 1077,
+      "examType": 8,
+      "sourceDir": "variant-2",
+      "file": "data\\oge-source\\variant-2\\oge-08.html",
+      "expectedUiKind": "twoChoice",
+      "detectedUiKind": "twoChoice",
+      "ok": true,
+      "issues": [],
+      "details": {
+        "statementCount": 5,
+        "answerCellCount": 2,
+        "matchRightCount": null,
+        "correct": [
+          "1",
+          "3"
+        ],
+        "numericCheck": null
+      }
+    },
+    {
+      "id": 1078,
+      "examType": 9,
+      "sourceDir": "variant-2",
+      "file": "data\\oge-source\\variant-2\\oge-09.html",
+      "expectedUiKind": "matchTriple",
+      "detectedUiKind": "matchTriple",
+      "ok": true,
+      "issues": [],
+      "details": {
+        "statementCount": null,
+        "answerCellCount": null,
+        "matchRightCount": 5,
+        "correct": null,
+        "numericCheck": null
+      }
+    },
+    {
+      "id": 1079,
+      "examType": 10,
+      "sourceDir": "variant-2",
+      "file": "data\\oge-source\\variant-2\\oge-10.html",
+      "expectedUiKind": "matchTriple",
+      "detectedUiKind": "matchTriple",
+      "ok": true,
+      "issues": [],
+      "details": {
+        "statementCount": null,
+        "answerCellCount": null,
+        "matchRightCount": 4,
+        "correct": null,
+        "numericCheck": null
+      }
+    },
+    {
+      "id": 1080,
+      "examType": 11,
+      "sourceDir": "variant-2",
+      "file": "data\\oge-source\\variant-2\\oge-11.html",
+      "expectedUiKind": "twoChoice",
+      "detectedUiKind": "twoChoice",
+      "ok": true,
+      "issues": [],
+      "details": {
+        "statementCount": 5,
+        "answerCellCount": 2,
+        "matchRightCount": null,
+        "correct": [
+          "2",
+          "4"
+        ],
+        "numericCheck": null
+      }
+    },
+    {
+      "id": 1081,
+      "examType": 12,
+      "sourceDir": "variant-2",
+      "file": "data\\oge-source\\variant-2\\oge-12.html",
+      "expectedUiKind": "matchTriple",
+      "detectedUiKind": "matchTriple",
+      "ok": true,
+      "issues": [],
+      "details": {
+        "statementCount": null,
+        "answerCellCount": null,
+        "matchRightCount": 4,
+        "correct": null,
+        "numericCheck": null
+      }
+    },
+    {
+      "id": 1082,
+      "examType": 13,
+      "sourceDir": "variant-2",
+      "file": "data\\oge-source\\variant-2\\oge-13.html",
+      "expectedUiKind": "twoChoice",
+      "detectedUiKind": "twoChoice",
+      "ok": true,
+      "issues": [],
+      "details": {
+        "statementCount": 5,
+        "answerCellCount": 2,
+        "matchRightCount": null,
+        "correct": [
+          "2",
+          "4"
+        ],
+        "numericCheck": null
+      }
+    },
+    {
+      "id": 1083,
+      "examType": 14,
+      "sourceDir": "variant-2",
+      "file": "data\\oge-source\\variant-2\\oge-14.html",
+      "expectedUiKind": "twoChoice",
+      "detectedUiKind": "twoChoice",
+      "ok": true,
+      "issues": [],
+      "details": {
+        "statementCount": 6,
+        "answerCellCount": 2,
+        "matchRightCount": null,
+        "correct": [
+          "1",
+          "5"
+        ],
+        "numericCheck": null
+      }
+    },
+    {
+      "id": 1084,
+      "examType": 15,
+      "sourceDir": "variant-2",
+      "file": "data\\oge-source\\variant-2\\oge-15.html",
+      "expectedUiKind": "matchTriple",
+      "detectedUiKind": "matchTriple",
+      "ok": true,
+      "issues": [],
+      "details": {
+        "statementCount": null,
+        "answerCellCount": null,
+        "matchRightCount": 2,
+        "correct": null,
+        "numericCheck": null
+      }
+    },
+    {
+      "id": 1085,
+      "examType": 16,
+      "sourceDir": "variant-2",
+      "file": "data\\oge-source\\variant-2\\oge-16.html",
+      "expectedUiKind": "multiChoiceFour",
+      "detectedUiKind": "multiChoiceFour",
+      "ok": true,
+      "issues": [],
+      "details": {
+        "statementCount": 4,
+        "answerCellCount": 4,
+        "matchRightCount": null,
+        "correct": [
+          "3",
+          "4"
+        ],
+        "numericCheck": null
+      }
+    },
+    {
+      "id": 1086,
+      "examType": 17,
+      "sourceDir": "variant-2",
+      "file": "data\\oge-source\\variant-2\\oge-17.html",
+      "expectedUiKind": "matchTriple",
+      "detectedUiKind": "matchTriple",
+      "ok": true,
+      "issues": [],
+      "details": {
+        "statementCount": null,
+        "answerCellCount": null,
+        "matchRightCount": 4,
+        "correct": null,
+        "numericCheck": null
+      }
+    },
+    {
+      "id": 1087,
+      "examType": 18,
+      "sourceDir": "variant-2",
+      "file": "data\\oge-source\\variant-2\\oge-18.html",
+      "expectedUiKind": "numericInt",
+      "detectedUiKind": "numericInt",
+      "ok": false,
+      "issues": [
+        "numeric: проверка «rounded», целевое правило — strict (n === value)"
+      ],
+      "details": {
+        "statementCount": null,
+        "answerCellCount": null,
+        "matchRightCount": null,
+        "correct": null,
+        "numericCheck": "rounded"
+      }
+    },
+    {
+      "id": 1088,
+      "examType": 19,
+      "sourceDir": "variant-2",
+      "file": "data\\oge-source\\variant-2\\oge-19.html",
+      "expectedUiKind": "numericMassTable",
+      "detectedUiKind": "numericMassTable",
+      "ok": false,
+      "issues": [
+        "numeric: проверка «rounded», целевое правило — strict (n === value)"
+      ],
+      "details": {
+        "statementCount": null,
+        "answerCellCount": null,
+        "matchRightCount": null,
+        "correct": null,
+        "numericCheck": "rounded"
+      }
+    },
+    {
+      "id": 1089,
+      "examType": 20,
+      "sourceDir": "variant-2",
+      "file": "data\\oge-source\\variant-2\\oge-20.html",
+      "expectedUiKind": "openReference",
+      "detectedUiKind": "openReference",
+      "ok": true,
+      "issues": [],
+      "details": {
+        "statementCount": null,
+        "answerCellCount": null,
+        "matchRightCount": null,
+        "correct": null,
+        "numericCheck": null
+      }
+    },
+    {
+      "id": 1090,
+      "examType": 21,
+      "sourceDir": "variant-2",
+      "file": "data\\oge-source\\variant-2\\oge-21.html",
+      "expectedUiKind": "openReference",
+      "detectedUiKind": "openReference",
+      "ok": true,
+      "issues": [],
+      "details": {
+        "statementCount": null,
+        "answerCellCount": null,
+        "matchRightCount": null,
+        "correct": null,
+        "numericCheck": null
+      }
+    },
+    {
+      "id": 1091,
+      "examType": 22,
+      "sourceDir": "variant-2",
+      "file": "data\\oge-source\\variant-2\\oge-22.html",
+      "expectedUiKind": "openReference",
+      "detectedUiKind": "openReference",
+      "ok": true,
+      "issues": [],
+      "details": {
+        "statementCount": null,
+        "answerCellCount": null,
+        "matchRightCount": null,
+        "correct": null,
+        "numericCheck": null
+      }
+    },
+    {
+      "id": 1092,
+      "examType": 23,
+      "sourceDir": "variant-2",
+      "file": "data\\oge-source\\variant-2\\oge-23.html",
+      "expectedUiKind": "experimentOpen",
+      "detectedUiKind": "experimentOpen",
+      "ok": true,
+      "issues": [],
+      "details": {
+        "statementCount": null,
+        "answerCellCount": null,
+        "matchRightCount": null,
+        "correct": null,
+        "numericCheck": null
+      }
+    },
+    {
+      "id": 1093,
+      "examType": 1,
+      "sourceDir": "variant-3",
+      "file": "data\\oge-source\\variant-3\\oge-01.html",
+      "expectedUiKind": "twoChoice",
+      "detectedUiKind": "twoChoice",
+      "ok": true,
+      "issues": [],
+      "details": {
+        "statementCount": 5,
+        "answerCellCount": 2,
+        "matchRightCount": null,
+        "correct": [
+          "3",
+          "5"
+        ],
+        "numericCheck": null
+      }
+    },
+    {
+      "id": 1094,
+      "examType": 2,
+      "sourceDir": "variant-3",
+      "file": "data\\oge-source\\variant-3\\oge-02.html",
+      "expectedUiKind": "periodDiagram",
+      "detectedUiKind": "periodDiagram",
+      "ok": true,
+      "issues": [],
+      "details": {
+        "statementCount": null,
+        "answerCellCount": null,
+        "matchRightCount": null,
+        "correct": null,
+        "numericCheck": null
+      }
+    },
+    {
+      "id": 1095,
+      "examType": 3,
+      "sourceDir": "variant-3",
+      "file": "data\\oge-source\\variant-3\\oge-03.html",
+      "expectedUiKind": "orderedDigits",
+      "detectedUiKind": "orderedDigits",
+      "ok": true,
+      "issues": [],
+      "details": {
+        "statementCount": null,
+        "answerCellCount": 1,
+        "matchRightCount": null,
+        "correct": null,
+        "numericCheck": null
+      }
+    },
+    {
+      "id": 1096,
+      "examType": 4,
+      "sourceDir": "variant-3",
+      "file": "data\\oge-source\\variant-3\\oge-04.html",
+      "expectedUiKind": "matchTriple",
+      "detectedUiKind": "matchTriple",
+      "ok": true,
+      "issues": [],
+      "details": {
+        "statementCount": null,
+        "answerCellCount": null,
+        "matchRightCount": 4,
+        "correct": null,
+        "numericCheck": null
+      }
+    },
+    {
+      "id": 1097,
+      "examType": 5,
+      "sourceDir": "variant-3",
+      "file": "data\\oge-source\\variant-3\\oge-05.html",
+      "expectedUiKind": "twoChoice",
+      "detectedUiKind": "twoChoice",
+      "ok": true,
+      "issues": [],
+      "details": {
+        "statementCount": 5,
+        "answerCellCount": 2,
+        "matchRightCount": null,
+        "correct": [
+          "1",
+          "2"
+        ],
+        "numericCheck": null
+      }
+    },
+    {
+      "id": 1098,
+      "examType": 6,
+      "sourceDir": "variant-3",
+      "file": "data\\oge-source\\variant-3\\oge-06.html",
+      "expectedUiKind": "twoChoice",
+      "detectedUiKind": "twoChoice",
+      "ok": true,
+      "issues": [],
+      "details": {
+        "statementCount": 5,
+        "answerCellCount": 2,
+        "matchRightCount": null,
+        "correct": [
+          "1",
+          "4"
+        ],
+        "numericCheck": null
+      }
+    },
+    {
+      "id": 1099,
+      "examType": 7,
+      "sourceDir": "variant-3",
+      "file": "data\\oge-source\\variant-3\\oge-07.html",
+      "expectedUiKind": "orderedDigits",
+      "detectedUiKind": "orderedDigits",
+      "ok": true,
+      "issues": [],
+      "details": {
+        "statementCount": null,
+        "answerCellCount": 2,
+        "matchRightCount": null,
+        "correct": null,
+        "numericCheck": null
+      }
+    },
+    {
+      "id": 1100,
+      "examType": 8,
+      "sourceDir": "variant-3",
+      "file": "data\\oge-source\\variant-3\\oge-08.html",
+      "expectedUiKind": "twoChoice",
+      "detectedUiKind": "twoChoice",
+      "ok": true,
+      "issues": [],
+      "details": {
+        "statementCount": 5,
+        "answerCellCount": 2,
+        "matchRightCount": null,
+        "correct": [
+          "4",
+          "5"
+        ],
+        "numericCheck": null
+      }
+    },
+    {
+      "id": 1101,
+      "examType": 9,
+      "sourceDir": "variant-3",
+      "file": "data\\oge-source\\variant-3\\oge-09.html",
+      "expectedUiKind": "matchTriple",
+      "detectedUiKind": "matchTriple",
+      "ok": true,
+      "issues": [],
+      "details": {
+        "statementCount": null,
+        "answerCellCount": null,
+        "matchRightCount": 5,
+        "correct": null,
+        "numericCheck": null
+      }
+    },
+    {
+      "id": 1102,
+      "examType": 10,
+      "sourceDir": "variant-3",
+      "file": "data\\oge-source\\variant-3\\oge-10.html",
+      "expectedUiKind": "matchTriple",
+      "detectedUiKind": "matchTriple",
+      "ok": true,
+      "issues": [],
+      "details": {
+        "statementCount": null,
+        "answerCellCount": null,
+        "matchRightCount": 4,
+        "correct": null,
+        "numericCheck": null
+      }
+    },
+    {
+      "id": 1103,
+      "examType": 11,
+      "sourceDir": "variant-3",
+      "file": "data\\oge-source\\variant-3\\oge-11.html",
+      "expectedUiKind": "twoChoice",
+      "detectedUiKind": "twoChoice",
+      "ok": true,
+      "issues": [],
+      "details": {
+        "statementCount": 5,
+        "answerCellCount": 2,
+        "matchRightCount": null,
+        "correct": [
+          "3",
+          "5"
+        ],
+        "numericCheck": null
+      }
+    },
+    {
+      "id": 1104,
+      "examType": 12,
+      "sourceDir": "variant-3",
+      "file": "data\\oge-source\\variant-3\\oge-12.html",
+      "expectedUiKind": "matchTriple",
+      "detectedUiKind": "matchTriple",
+      "ok": true,
+      "issues": [],
+      "details": {
+        "statementCount": null,
+        "answerCellCount": null,
+        "matchRightCount": 4,
+        "correct": null,
+        "numericCheck": null
+      }
+    },
+    {
+      "id": 1105,
+      "examType": 13,
+      "sourceDir": "variant-3",
+      "file": "data\\oge-source\\variant-3\\oge-13.html",
+      "expectedUiKind": "twoChoice",
+      "detectedUiKind": "twoChoice",
+      "ok": true,
+      "issues": [],
+      "details": {
+        "statementCount": 5,
+        "answerCellCount": 2,
+        "matchRightCount": null,
+        "correct": [
+          "3",
+          "4"
+        ],
+        "numericCheck": null
+      }
+    },
+    {
+      "id": 1106,
+      "examType": 14,
+      "sourceDir": "variant-3",
+      "file": "data\\oge-source\\variant-3\\oge-14.html",
+      "expectedUiKind": "twoChoice",
+      "detectedUiKind": "twoChoice",
+      "ok": true,
+      "issues": [],
+      "details": {
+        "statementCount": 6,
+        "answerCellCount": 2,
+        "matchRightCount": null,
+        "correct": [
+          "2",
+          "4"
+        ],
+        "numericCheck": null
+      }
+    },
+    {
+      "id": 1107,
+      "examType": 15,
+      "sourceDir": "variant-3",
+      "file": "data\\oge-source\\variant-3\\oge-15.html",
+      "expectedUiKind": "matchTriple",
+      "detectedUiKind": "matchTriple",
+      "ok": true,
+      "issues": [],
+      "details": {
+        "statementCount": null,
+        "answerCellCount": null,
+        "matchRightCount": 2,
+        "correct": null,
+        "numericCheck": null
+      }
+    },
+    {
+      "id": 1108,
+      "examType": 16,
+      "sourceDir": "variant-3",
+      "file": "data\\oge-source\\variant-3\\oge-16.html",
+      "expectedUiKind": "multiChoiceFour",
+      "detectedUiKind": "multiChoiceFour",
+      "ok": true,
+      "issues": [],
+      "details": {
+        "statementCount": 4,
+        "answerCellCount": 4,
+        "matchRightCount": null,
+        "correct": [
+          "2",
+          "3",
+          "4"
+        ],
+        "numericCheck": null
+      }
+    },
+    {
+      "id": 1109,
+      "examType": 17,
+      "sourceDir": "variant-3",
+      "file": "data\\oge-source\\variant-3\\oge-17.html",
+      "expectedUiKind": "matchTriple",
+      "detectedUiKind": "matchTriple",
+      "ok": true,
+      "issues": [],
+      "details": {
+        "statementCount": null,
+        "answerCellCount": null,
+        "matchRightCount": 4,
+        "correct": null,
+        "numericCheck": null
+      }
+    },
+    {
+      "id": 1110,
+      "examType": 18,
+      "sourceDir": "variant-3",
+      "file": "data\\oge-source\\variant-3\\oge-18.html",
+      "expectedUiKind": "numericInt",
+      "detectedUiKind": "numericInt",
+      "ok": false,
+      "issues": [
+        "numeric: проверка «rounded», целевое правило — strict (n === value)"
+      ],
+      "details": {
+        "statementCount": null,
+        "answerCellCount": null,
+        "matchRightCount": null,
+        "correct": null,
+        "numericCheck": "rounded"
+      }
+    },
+    {
+      "id": 1111,
+      "examType": 19,
+      "sourceDir": "variant-3",
+      "file": "data\\oge-source\\variant-3\\oge-19.html",
+      "expectedUiKind": "numericMassTable",
+      "detectedUiKind": "numericMassTable",
+      "ok": false,
+      "issues": [
+        "numeric: проверка «rounded», целевое правило — strict (n === value)"
+      ],
+      "details": {
+        "statementCount": null,
+        "answerCellCount": null,
+        "matchRightCount": null,
+        "correct": null,
+        "numericCheck": "rounded"
+      }
+    },
+    {
+      "id": 1112,
+      "examType": 20,
+      "sourceDir": "variant-3",
+      "file": "data\\oge-source\\variant-3\\oge-20.html",
+      "expectedUiKind": "openReference",
+      "detectedUiKind": "openReference",
+      "ok": true,
+      "issues": [],
+      "details": {
+        "statementCount": null,
+        "answerCellCount": null,
+        "matchRightCount": null,
+        "correct": null,
+        "numericCheck": null
+      }
+    },
+    {
+      "id": 1113,
+      "examType": 21,
+      "sourceDir": "variant-3",
+      "file": "data\\oge-source\\variant-3\\oge-21.html",
+      "expectedUiKind": "openReference",
+      "detectedUiKind": "openReference",
+      "ok": true,
+      "issues": [],
+      "details": {
+        "statementCount": null,
+        "answerCellCount": null,
+        "matchRightCount": null,
+        "correct": null,
+        "numericCheck": null
+      }
+    },
+    {
+      "id": 1114,
+      "examType": 22,
+      "sourceDir": "variant-3",
+      "file": "data\\oge-source\\variant-3\\oge-22.html",
+      "expectedUiKind": "openReference",
+      "detectedUiKind": "openReference",
+      "ok": true,
+      "issues": [],
+      "details": {
+        "statementCount": null,
+        "answerCellCount": null,
+        "matchRightCount": null,
+        "correct": null,
+        "numericCheck": null
+      }
+    },
+    {
+      "id": 1115,
+      "examType": 23,
+      "sourceDir": "variant-3",
+      "file": "data\\oge-source\\variant-3\\oge-23.html",
+      "expectedUiKind": "experimentOpen",
+      "detectedUiKind": "experimentOpen",
+      "ok": true,
+      "issues": [],
+      "details": {
+        "statementCount": null,
+        "answerCellCount": null,
+        "matchRightCount": null,
+        "correct": null,
+        "numericCheck": null
+      }
+    },
+    {
+      "id": 1116,
+      "examType": 1,
+      "sourceDir": "variant-4",
+      "file": "data\\oge-source\\variant-4\\oge-01.html",
+      "expectedUiKind": "twoChoice",
+      "detectedUiKind": "twoChoice",
+      "ok": true,
+      "issues": [],
+      "details": {
+        "statementCount": 5,
+        "answerCellCount": 2,
+        "matchRightCount": null,
+        "correct": [
+          "2",
+          "3"
+        ],
+        "numericCheck": null
+      }
+    },
+    {
+      "id": 1117,
+      "examType": 2,
+      "sourceDir": "variant-4",
+      "file": "data\\oge-source\\variant-4\\oge-02.html",
+      "expectedUiKind": "periodDiagram",
+      "detectedUiKind": "periodDiagram",
+      "ok": true,
+      "issues": [],
+      "details": {
+        "statementCount": null,
+        "answerCellCount": null,
+        "matchRightCount": null,
+        "correct": null,
+        "numericCheck": null
+      }
+    },
+    {
+      "id": 1118,
+      "examType": 3,
+      "sourceDir": "variant-4",
+      "file": "data\\oge-source\\variant-4\\oge-03.html",
+      "expectedUiKind": "orderedDigits",
+      "detectedUiKind": "orderedDigits",
+      "ok": true,
+      "issues": [],
+      "details": {
+        "statementCount": null,
+        "answerCellCount": 1,
+        "matchRightCount": null,
+        "correct": null,
+        "numericCheck": null
+      }
+    },
+    {
+      "id": 1119,
+      "examType": 4,
+      "sourceDir": "variant-4",
+      "file": "data\\oge-source\\variant-4\\oge-04.html",
+      "expectedUiKind": "matchTriple",
+      "detectedUiKind": "matchTriple",
+      "ok": true,
+      "issues": [],
+      "details": {
+        "statementCount": null,
+        "answerCellCount": null,
+        "matchRightCount": 4,
+        "correct": null,
+        "numericCheck": null
+      }
+    },
+    {
+      "id": 1120,
+      "examType": 5,
+      "sourceDir": "variant-4",
+      "file": "data\\oge-source\\variant-4\\oge-05.html",
+      "expectedUiKind": "twoChoice",
+      "detectedUiKind": "twoChoice",
+      "ok": true,
+      "issues": [],
+      "details": {
+        "statementCount": 5,
+        "answerCellCount": 2,
+        "matchRightCount": null,
+        "correct": [
+          "2",
+          "5"
+        ],
+        "numericCheck": null
+      }
+    },
+    {
+      "id": 1121,
+      "examType": 6,
+      "sourceDir": "variant-4",
+      "file": "data\\oge-source\\variant-4\\oge-06.html",
+      "expectedUiKind": "twoChoice",
+      "detectedUiKind": "twoChoice",
+      "ok": true,
+      "issues": [],
+      "details": {
+        "statementCount": 5,
+        "answerCellCount": 2,
+        "matchRightCount": null,
+        "correct": [
+          "1",
+          "4"
+        ],
+        "numericCheck": null
+      }
+    },
+    {
+      "id": 1122,
+      "examType": 7,
+      "sourceDir": "variant-4",
+      "file": "data\\oge-source\\variant-4\\oge-07.html",
+      "expectedUiKind": "orderedDigits",
+      "detectedUiKind": "orderedDigits",
+      "ok": true,
+      "issues": [],
+      "details": {
+        "statementCount": null,
+        "answerCellCount": 2,
+        "matchRightCount": null,
+        "correct": null,
+        "numericCheck": null
+      }
+    },
+    {
+      "id": 1123,
+      "examType": 8,
+      "sourceDir": "variant-4",
+      "file": "data\\oge-source\\variant-4\\oge-08.html",
+      "expectedUiKind": "twoChoice",
+      "detectedUiKind": "twoChoice",
+      "ok": true,
+      "issues": [],
+      "details": {
+        "statementCount": 5,
+        "answerCellCount": 2,
+        "matchRightCount": null,
+        "correct": [
+          "1",
+          "2"
+        ],
+        "numericCheck": null
+      }
+    },
+    {
+      "id": 1124,
+      "examType": 9,
+      "sourceDir": "variant-4",
+      "file": "data\\oge-source\\variant-4\\oge-09.html",
+      "expectedUiKind": "matchTriple",
+      "detectedUiKind": "matchTriple",
+      "ok": true,
+      "issues": [],
+      "details": {
+        "statementCount": null,
+        "answerCellCount": null,
+        "matchRightCount": 5,
+        "correct": null,
+        "numericCheck": null
+      }
+    },
+    {
+      "id": 1125,
+      "examType": 10,
+      "sourceDir": "variant-4",
+      "file": "data\\oge-source\\variant-4\\oge-10.html",
+      "expectedUiKind": "matchTriple",
+      "detectedUiKind": "matchTriple",
+      "ok": true,
+      "issues": [],
+      "details": {
+        "statementCount": null,
+        "answerCellCount": null,
+        "matchRightCount": 4,
+        "correct": null,
+        "numericCheck": null
+      }
+    },
+    {
+      "id": 1126,
+      "examType": 11,
+      "sourceDir": "variant-4",
+      "file": "data\\oge-source\\variant-4\\oge-11.html",
+      "expectedUiKind": "twoChoice",
+      "detectedUiKind": "twoChoice",
+      "ok": true,
+      "issues": [],
+      "details": {
+        "statementCount": 5,
+        "answerCellCount": 2,
+        "matchRightCount": null,
+        "correct": [
+          "1",
+          "4"
+        ],
+        "numericCheck": null
+      }
+    },
+    {
+      "id": 1127,
+      "examType": 12,
+      "sourceDir": "variant-4",
+      "file": "data\\oge-source\\variant-4\\oge-12.html",
+      "expectedUiKind": "matchTriple",
+      "detectedUiKind": "matchTriple",
+      "ok": true,
+      "issues": [],
+      "details": {
+        "statementCount": null,
+        "answerCellCount": null,
+        "matchRightCount": 4,
+        "correct": null,
+        "numericCheck": null
+      }
+    },
+    {
+      "id": 1128,
+      "examType": 13,
+      "sourceDir": "variant-4",
+      "file": "data\\oge-source\\variant-4\\oge-13.html",
+      "expectedUiKind": "twoChoice",
+      "detectedUiKind": "twoChoice",
+      "ok": true,
+      "issues": [],
+      "details": {
+        "statementCount": 5,
+        "answerCellCount": 2,
+        "matchRightCount": null,
+        "correct": [
+          "3",
+          "5"
+        ],
+        "numericCheck": null
+      }
+    },
+    {
+      "id": 1129,
+      "examType": 14,
+      "sourceDir": "variant-4",
+      "file": "data\\oge-source\\variant-4\\oge-14.html",
+      "expectedUiKind": "twoChoice",
+      "detectedUiKind": "twoChoice",
+      "ok": true,
+      "issues": [],
+      "details": {
+        "statementCount": 6,
+        "answerCellCount": 2,
+        "matchRightCount": null,
+        "correct": [
+          "2",
+          "4"
+        ],
+        "numericCheck": null
+      }
+    },
+    {
+      "id": 1130,
+      "examType": 15,
+      "sourceDir": "variant-4",
+      "file": "data\\oge-source\\variant-4\\oge-15.html",
+      "expectedUiKind": "matchTriple",
+      "detectedUiKind": "matchTriple",
+      "ok": true,
+      "issues": [],
+      "details": {
+        "statementCount": null,
+        "answerCellCount": null,
+        "matchRightCount": 2,
+        "correct": null,
+        "numericCheck": null
+      }
+    },
+    {
+      "id": 1131,
+      "examType": 16,
+      "sourceDir": "variant-4",
+      "file": "data\\oge-source\\variant-4\\oge-16.html",
+      "expectedUiKind": "multiChoiceFour",
+      "detectedUiKind": "multiChoiceFour",
+      "ok": true,
+      "issues": [],
+      "details": {
+        "statementCount": 4,
+        "answerCellCount": 4,
+        "matchRightCount": null,
+        "correct": [
+          "1",
+          "4"
+        ],
+        "numericCheck": null
+      }
+    },
+    {
+      "id": 1132,
+      "examType": 17,
+      "sourceDir": "variant-4",
+      "file": "data\\oge-source\\variant-4\\oge-17.html",
+      "expectedUiKind": "matchTriple",
+      "detectedUiKind": "matchTriple",
+      "ok": true,
+      "issues": [],
+      "details": {
+        "statementCount": null,
+        "answerCellCount": null,
+        "matchRightCount": 4,
+        "correct": null,
+        "numericCheck": null
+      }
+    },
+    {
+      "id": 1133,
+      "examType": 18,
+      "sourceDir": "variant-4",
+      "file": "data\\oge-source\\variant-4\\oge-18.html",
+      "expectedUiKind": "numericInt",
+      "detectedUiKind": "numericInt",
+      "ok": false,
+      "issues": [
+        "numeric: проверка «rounded», целевое правило — strict (n === value)"
+      ],
+      "details": {
+        "statementCount": null,
+        "answerCellCount": null,
+        "matchRightCount": null,
+        "correct": null,
+        "numericCheck": "rounded"
+      }
+    },
+    {
+      "id": 1134,
+      "examType": 19,
+      "sourceDir": "variant-4",
+      "file": "data\\oge-source\\variant-4\\oge-19.html",
+      "expectedUiKind": "numericMassTable",
+      "detectedUiKind": "numericMassTable",
+      "ok": false,
+      "issues": [
+        "numeric: проверка «rounded», целевое правило — strict (n === value)"
+      ],
+      "details": {
+        "statementCount": null,
+        "answerCellCount": null,
+        "matchRightCount": null,
+        "correct": null,
+        "numericCheck": "rounded"
+      }
+    },
+    {
+      "id": 1135,
+      "examType": 20,
+      "sourceDir": "variant-4",
+      "file": "data\\oge-source\\variant-4\\oge-20.html",
+      "expectedUiKind": "openReference",
+      "detectedUiKind": "openReference",
+      "ok": true,
+      "issues": [],
+      "details": {
+        "statementCount": null,
+        "answerCellCount": null,
+        "matchRightCount": null,
+        "correct": null,
+        "numericCheck": null
+      }
+    },
+    {
+      "id": 1136,
+      "examType": 21,
+      "sourceDir": "variant-4",
+      "file": "data\\oge-source\\variant-4\\oge-21.html",
+      "expectedUiKind": "openReference",
+      "detectedUiKind": "openReference",
+      "ok": true,
+      "issues": [],
+      "details": {
+        "statementCount": null,
+        "answerCellCount": null,
+        "matchRightCount": null,
+        "correct": null,
+        "numericCheck": null
+      }
+    },
+    {
+      "id": 1137,
+      "examType": 22,
+      "sourceDir": "variant-4",
+      "file": "data\\oge-source\\variant-4\\oge-22.html",
+      "expectedUiKind": "openReference",
+      "detectedUiKind": "openReference",
+      "ok": true,
+      "issues": [],
+      "details": {
+        "statementCount": null,
+        "answerCellCount": null,
+        "matchRightCount": null,
+        "correct": null,
+        "numericCheck": null
+      }
+    },
+    {
+      "id": 1138,
+      "examType": 23,
+      "sourceDir": "variant-4",
+      "file": "data\\oge-source\\variant-4\\oge-23.html",
+      "expectedUiKind": "experimentOpen",
+      "detectedUiKind": "experimentOpen",
+      "ok": true,
+      "issues": [],
+      "details": {
+        "statementCount": null,
+        "answerCellCount": null,
+        "matchRightCount": null,
+        "correct": null,
+        "numericCheck": null
+      }
+    },
+    {
+      "id": 1139,
+      "examType": 1,
+      "sourceDir": "variant-5",
+      "file": "data\\oge-source\\variant-5\\oge-01.html",
+      "expectedUiKind": "twoChoice",
+      "detectedUiKind": "twoChoice",
+      "ok": true,
+      "issues": [],
+      "details": {
+        "statementCount": 5,
+        "answerCellCount": 2,
+        "matchRightCount": null,
+        "correct": [
+          "2",
+          "4"
+        ],
+        "numericCheck": null
+      }
+    },
+    {
+      "id": 1140,
+      "examType": 2,
+      "sourceDir": "variant-5",
+      "file": "data\\oge-source\\variant-5\\oge-02.html",
+      "expectedUiKind": "periodDiagram",
+      "detectedUiKind": "periodDiagram",
+      "ok": true,
+      "issues": [],
+      "details": {
+        "statementCount": null,
+        "answerCellCount": null,
+        "matchRightCount": null,
+        "correct": [
+          "2",
+          "1"
+        ],
+        "numericCheck": null
+      }
+    },
+    {
+      "id": 1141,
+      "examType": 3,
+      "sourceDir": "variant-5",
+      "file": "data\\oge-source\\variant-5\\oge-03.html",
+      "expectedUiKind": "orderedDigits",
+      "detectedUiKind": "orderedDigits",
+      "ok": true,
+      "issues": [],
+      "details": {
+        "statementCount": null,
+        "answerCellCount": 1,
+        "matchRightCount": null,
+        "correct": null,
+        "numericCheck": null
+      }
+    },
+    {
+      "id": 1142,
+      "examType": 4,
+      "sourceDir": "variant-5",
+      "file": "data\\oge-source\\variant-5\\oge-04.html",
+      "expectedUiKind": "matchTriple",
+      "detectedUiKind": "matchTriple",
+      "ok": true,
+      "issues": [],
+      "details": {
+        "statementCount": null,
+        "answerCellCount": null,
+        "matchRightCount": 4,
+        "correct": null,
+        "numericCheck": null
+      }
+    },
+    {
+      "id": 1143,
+      "examType": 5,
+      "sourceDir": "variant-5",
+      "file": "data\\oge-source\\variant-5\\oge-05.html",
+      "expectedUiKind": "twoChoice",
+      "detectedUiKind": "twoChoice",
+      "ok": true,
+      "issues": [],
+      "details": {
+        "statementCount": 5,
+        "answerCellCount": 2,
+        "matchRightCount": null,
+        "correct": [
+          "3",
+          "5"
+        ],
+        "numericCheck": null
+      }
+    },
+    {
+      "id": 1144,
+      "examType": 6,
+      "sourceDir": "variant-5",
+      "file": "data\\oge-source\\variant-5\\oge-06.html",
+      "expectedUiKind": "twoChoice",
+      "detectedUiKind": "twoChoice",
+      "ok": true,
+      "issues": [],
+      "details": {
+        "statementCount": 5,
+        "answerCellCount": 2,
+        "matchRightCount": null,
+        "correct": [
+          "1",
+          "3"
+        ],
+        "numericCheck": null
+      }
+    },
+    {
+      "id": 1145,
+      "examType": 7,
+      "sourceDir": "variant-5",
+      "file": "data\\oge-source\\variant-5\\oge-07.html",
+      "expectedUiKind": "orderedDigits",
+      "detectedUiKind": "orderedDigits",
+      "ok": true,
+      "issues": [],
+      "details": {
+        "statementCount": null,
+        "answerCellCount": 2,
+        "matchRightCount": null,
+        "correct": null,
+        "numericCheck": null
+      }
+    },
+    {
+      "id": 1146,
+      "examType": 8,
+      "sourceDir": "variant-5",
+      "file": "data\\oge-source\\variant-5\\oge-08.html",
+      "expectedUiKind": "twoChoice",
+      "detectedUiKind": "twoChoice",
+      "ok": true,
+      "issues": [],
+      "details": {
+        "statementCount": 5,
+        "answerCellCount": 2,
+        "matchRightCount": null,
+        "correct": [
+          "3",
+          "5"
+        ],
+        "numericCheck": null
+      }
+    },
+    {
+      "id": 1147,
+      "examType": 9,
+      "sourceDir": "variant-5",
+      "file": "data\\oge-source\\variant-5\\oge-09.html",
+      "expectedUiKind": "matchTriple",
+      "detectedUiKind": "matchTriple",
+      "ok": true,
+      "issues": [],
+      "details": {
+        "statementCount": null,
+        "answerCellCount": null,
+        "matchRightCount": 5,
+        "correct": null,
+        "numericCheck": null
+      }
+    },
+    {
+      "id": 1148,
+      "examType": 10,
+      "sourceDir": "variant-5",
+      "file": "data\\oge-source\\variant-5\\oge-10.html",
+      "expectedUiKind": "matchTriple",
+      "detectedUiKind": "matchTriple",
+      "ok": true,
+      "issues": [],
+      "details": {
+        "statementCount": null,
+        "answerCellCount": null,
+        "matchRightCount": 4,
+        "correct": null,
+        "numericCheck": null
+      }
+    },
+    {
+      "id": 1149,
+      "examType": 11,
+      "sourceDir": "variant-5",
+      "file": "data\\oge-source\\variant-5\\oge-11.html",
+      "expectedUiKind": "twoChoice",
+      "detectedUiKind": "twoChoice",
+      "ok": true,
+      "issues": [],
+      "details": {
+        "statementCount": 5,
+        "answerCellCount": 2,
+        "matchRightCount": null,
+        "correct": [
+          "1",
+          "5"
+        ],
+        "numericCheck": null
+      }
+    },
+    {
+      "id": 1150,
+      "examType": 12,
+      "sourceDir": "variant-5",
+      "file": "data\\oge-source\\variant-5\\oge-12.html",
+      "expectedUiKind": "matchTriple",
+      "detectedUiKind": "matchTriple",
+      "ok": true,
+      "issues": [],
+      "details": {
+        "statementCount": null,
+        "answerCellCount": null,
+        "matchRightCount": 4,
+        "correct": null,
+        "numericCheck": null
+      }
+    },
+    {
+      "id": 1151,
+      "examType": 13,
+      "sourceDir": "variant-5",
+      "file": "data\\oge-source\\variant-5\\oge-13.html",
+      "expectedUiKind": "twoChoice",
+      "detectedUiKind": "twoChoice",
+      "ok": true,
+      "issues": [],
+      "details": {
+        "statementCount": 5,
+        "answerCellCount": 2,
+        "matchRightCount": null,
+        "correct": [
+          "1",
+          "3"
+        ],
+        "numericCheck": null
+      }
+    },
+    {
+      "id": 1152,
+      "examType": 14,
+      "sourceDir": "variant-5",
+      "file": "data\\oge-source\\variant-5\\oge-14.html",
+      "expectedUiKind": "twoChoice",
+      "detectedUiKind": "twoChoice",
+      "ok": true,
+      "issues": [],
+      "details": {
+        "statementCount": 6,
+        "answerCellCount": 2,
+        "matchRightCount": null,
+        "correct": [
+          "2",
+          "6"
+        ],
+        "numericCheck": null
+      }
+    },
+    {
+      "id": 1153,
+      "examType": 15,
+      "sourceDir": "variant-5",
+      "file": "data\\oge-source\\variant-5\\oge-15.html",
+      "expectedUiKind": "matchTriple",
+      "detectedUiKind": "matchTriple",
+      "ok": true,
+      "issues": [],
+      "details": {
+        "statementCount": null,
+        "answerCellCount": null,
+        "matchRightCount": 2,
+        "correct": null,
+        "numericCheck": null
+      }
+    },
+    {
+      "id": 1154,
+      "examType": 16,
+      "sourceDir": "variant-5",
+      "file": "data\\oge-source\\variant-5\\oge-16.html",
+      "expectedUiKind": "multiChoiceFour",
+      "detectedUiKind": "multiChoiceFour",
+      "ok": true,
+      "issues": [],
+      "details": {
+        "statementCount": 4,
+        "answerCellCount": 4,
+        "matchRightCount": null,
+        "correct": [
+          "2",
+          "3",
+          "4"
+        ],
+        "numericCheck": null
+      }
+    },
+    {
+      "id": 1155,
+      "examType": 17,
+      "sourceDir": "variant-5",
+      "file": "data\\oge-source\\variant-5\\oge-17.html",
+      "expectedUiKind": "matchTriple",
+      "detectedUiKind": "matchTriple",
+      "ok": true,
+      "issues": [],
+      "details": {
+        "statementCount": null,
+        "answerCellCount": null,
+        "matchRightCount": 4,
+        "correct": null,
+        "numericCheck": null
+      }
+    },
+    {
+      "id": 1156,
+      "examType": 18,
+      "sourceDir": "variant-5",
+      "file": "data\\oge-source\\variant-5\\oge-18.html",
+      "expectedUiKind": "numericInt",
+      "detectedUiKind": "numericInt",
+      "ok": false,
+      "issues": [
+        "numeric: проверка «rounded», целевое правило — strict (n === value)"
+      ],
+      "details": {
+        "statementCount": null,
+        "answerCellCount": null,
+        "matchRightCount": null,
+        "correct": null,
+        "numericCheck": "rounded"
+      }
+    },
+    {
+      "id": 1157,
+      "examType": 19,
+      "sourceDir": "variant-5",
+      "file": "data\\oge-source\\variant-5\\oge-19.html",
+      "expectedUiKind": "numericMassTable",
+      "detectedUiKind": "numericMassTable",
+      "ok": false,
+      "issues": [
+        "numeric: проверка «rounded», целевое правило — strict (n === value)"
+      ],
+      "details": {
+        "statementCount": null,
+        "answerCellCount": null,
+        "matchRightCount": null,
+        "correct": null,
+        "numericCheck": "rounded"
+      }
+    },
+    {
+      "id": 1158,
+      "examType": 20,
+      "sourceDir": "variant-5",
+      "file": "data\\oge-source\\variant-5\\oge-20.html",
+      "expectedUiKind": "openReference",
+      "detectedUiKind": "openReference",
+      "ok": true,
+      "issues": [],
+      "details": {
+        "statementCount": null,
+        "answerCellCount": null,
+        "matchRightCount": null,
+        "correct": null,
+        "numericCheck": null
+      }
+    },
+    {
+      "id": 1159,
+      "examType": 21,
+      "sourceDir": "variant-5",
+      "file": "data\\oge-source\\variant-5\\oge-21.html",
+      "expectedUiKind": "openReference",
+      "detectedUiKind": "openReference",
+      "ok": true,
+      "issues": [],
+      "details": {
+        "statementCount": null,
+        "answerCellCount": null,
+        "matchRightCount": null,
+        "correct": null,
+        "numericCheck": null
+      }
+    },
+    {
+      "id": 1160,
+      "examType": 22,
+      "sourceDir": "variant-5",
+      "file": "data\\oge-source\\variant-5\\oge-22.html",
+      "expectedUiKind": "openReference",
+      "detectedUiKind": "openReference",
+      "ok": true,
+      "issues": [],
+      "details": {
+        "statementCount": null,
+        "answerCellCount": null,
+        "matchRightCount": null,
+        "correct": null,
+        "numericCheck": null
+      }
+    },
+    {
+      "id": 1161,
+      "examType": 23,
+      "sourceDir": "variant-5",
+      "file": "data\\oge-source\\variant-5\\oge-23.html",
+      "expectedUiKind": "experimentOpen",
+      "detectedUiKind": "experimentOpen",
+      "ok": true,
+      "issues": [],
+      "details": {
+        "statementCount": null,
+        "answerCellCount": null,
+        "matchRightCount": null,
+        "correct": null,
+        "numericCheck": null
+      }
+    },
+    {
+      "id": 1162,
+      "examType": 1,
+      "sourceDir": "variant-6",
+      "file": "data\\oge-source\\variant-6\\oge-01.html",
+      "expectedUiKind": "twoChoice",
+      "detectedUiKind": "twoChoice",
+      "ok": true,
+      "issues": [],
+      "details": {
+        "statementCount": 5,
+        "answerCellCount": 2,
+        "matchRightCount": null,
+        "correct": [
+          "3",
+          "5"
+        ],
+        "numericCheck": null
+      }
+    },
+    {
+      "id": 1163,
+      "examType": 2,
+      "sourceDir": "variant-6",
+      "file": "data\\oge-source\\variant-6\\oge-02.html",
+      "expectedUiKind": "periodDiagram",
+      "detectedUiKind": "periodDiagram",
+      "ok": true,
+      "issues": [],
+      "details": {
+        "statementCount": null,
+        "answerCellCount": null,
+        "matchRightCount": null,
+        "correct": null,
+        "numericCheck": null
+      }
+    },
+    {
+      "id": 1164,
+      "examType": 3,
+      "sourceDir": "variant-6",
+      "file": "data\\oge-source\\variant-6\\oge-03.html",
+      "expectedUiKind": "orderedDigits",
+      "detectedUiKind": "orderedDigits",
+      "ok": true,
+      "issues": [],
+      "details": {
+        "statementCount": null,
+        "answerCellCount": 1,
+        "matchRightCount": null,
+        "correct": null,
+        "numericCheck": null
+      }
+    },
+    {
+      "id": 1165,
+      "examType": 4,
+      "sourceDir": "variant-6",
+      "file": "data\\oge-source\\variant-6\\oge-04.html",
+      "expectedUiKind": "matchTriple",
+      "detectedUiKind": "matchTriple",
+      "ok": true,
+      "issues": [],
+      "details": {
+        "statementCount": null,
+        "answerCellCount": null,
+        "matchRightCount": 4,
+        "correct": null,
+        "numericCheck": null
+      }
+    },
+    {
+      "id": 1166,
+      "examType": 5,
+      "sourceDir": "variant-6",
+      "file": "data\\oge-source\\variant-6\\oge-05.html",
+      "expectedUiKind": "twoChoice",
+      "detectedUiKind": "twoChoice",
+      "ok": true,
+      "issues": [],
+      "details": {
+        "statementCount": 5,
+        "answerCellCount": 2,
+        "matchRightCount": null,
+        "correct": [
+          "3",
+          "5"
+        ],
+        "numericCheck": null
+      }
+    },
+    {
+      "id": 1167,
+      "examType": 6,
+      "sourceDir": "variant-6",
+      "file": "data\\oge-source\\variant-6\\oge-06.html",
+      "expectedUiKind": "twoChoice",
+      "detectedUiKind": "twoChoice",
+      "ok": true,
+      "issues": [],
+      "details": {
+        "statementCount": 5,
+        "answerCellCount": 2,
+        "matchRightCount": null,
+        "correct": [
+          "3",
+          "5"
+        ],
+        "numericCheck": null
+      }
+    },
+    {
+      "id": 1168,
+      "examType": 7,
+      "sourceDir": "variant-6",
+      "file": "data\\oge-source\\variant-6\\oge-07.html",
+      "expectedUiKind": "orderedDigits",
+      "detectedUiKind": "orderedDigits",
+      "ok": true,
+      "issues": [],
+      "details": {
+        "statementCount": null,
+        "answerCellCount": 2,
+        "matchRightCount": null,
+        "correct": null,
+        "numericCheck": null
+      }
+    },
+    {
+      "id": 1169,
+      "examType": 8,
+      "sourceDir": "variant-6",
+      "file": "data\\oge-source\\variant-6\\oge-08.html",
+      "expectedUiKind": "twoChoice",
+      "detectedUiKind": "twoChoice",
+      "ok": true,
+      "issues": [],
+      "details": {
+        "statementCount": 5,
+        "answerCellCount": 2,
+        "matchRightCount": null,
+        "correct": [
+          "1",
+          "2"
+        ],
+        "numericCheck": null
+      }
+    },
+    {
+      "id": 1170,
+      "examType": 9,
+      "sourceDir": "variant-6",
+      "file": "data\\oge-source\\variant-6\\oge-09.html",
+      "expectedUiKind": "matchTriple",
+      "detectedUiKind": "matchTriple",
+      "ok": true,
+      "issues": [],
+      "details": {
+        "statementCount": null,
+        "answerCellCount": null,
+        "matchRightCount": 5,
+        "correct": null,
+        "numericCheck": null
+      }
+    },
+    {
+      "id": 1171,
+      "examType": 10,
+      "sourceDir": "variant-6",
+      "file": "data\\oge-source\\variant-6\\oge-10.html",
+      "expectedUiKind": "matchTriple",
+      "detectedUiKind": "matchTriple",
+      "ok": true,
+      "issues": [],
+      "details": {
+        "statementCount": null,
+        "answerCellCount": null,
+        "matchRightCount": 4,
+        "correct": null,
+        "numericCheck": null
+      }
+    },
+    {
+      "id": 1172,
+      "examType": 11,
+      "sourceDir": "variant-6",
+      "file": "data\\oge-source\\variant-6\\oge-11.html",
+      "expectedUiKind": "twoChoice",
+      "detectedUiKind": "twoChoice",
+      "ok": true,
+      "issues": [],
+      "details": {
+        "statementCount": 5,
+        "answerCellCount": 2,
+        "matchRightCount": null,
+        "correct": [
+          "1",
+          "5"
+        ],
+        "numericCheck": null
+      }
+    },
+    {
+      "id": 1173,
+      "examType": 12,
+      "sourceDir": "variant-6",
+      "file": "data\\oge-source\\variant-6\\oge-12.html",
+      "expectedUiKind": "matchTriple",
+      "detectedUiKind": "matchTriple",
+      "ok": true,
+      "issues": [],
+      "details": {
+        "statementCount": null,
+        "answerCellCount": null,
+        "matchRightCount": 4,
+        "correct": null,
+        "numericCheck": null
+      }
+    },
+    {
+      "id": 1174,
+      "examType": 13,
+      "sourceDir": "variant-6",
+      "file": "data\\oge-source\\variant-6\\oge-13.html",
+      "expectedUiKind": "twoChoice",
+      "detectedUiKind": "twoChoice",
+      "ok": true,
+      "issues": [],
+      "details": {
+        "statementCount": 5,
+        "answerCellCount": 2,
+        "matchRightCount": null,
+        "correct": [
+          "1",
+          "4"
+        ],
+        "numericCheck": null
+      }
+    },
+    {
+      "id": 1175,
+      "examType": 14,
+      "sourceDir": "variant-6",
+      "file": "data\\oge-source\\variant-6\\oge-14.html",
+      "expectedUiKind": "twoChoice",
+      "detectedUiKind": "twoChoice",
+      "ok": true,
+      "issues": [],
+      "details": {
+        "statementCount": 6,
+        "answerCellCount": 2,
+        "matchRightCount": null,
+        "correct": [
+          "1",
+          "5"
+        ],
+        "numericCheck": null
+      }
+    },
+    {
+      "id": 1176,
+      "examType": 15,
+      "sourceDir": "variant-6",
+      "file": "data\\oge-source\\variant-6\\oge-15.html",
+      "expectedUiKind": "matchTriple",
+      "detectedUiKind": "matchTriple",
+      "ok": true,
+      "issues": [],
+      "details": {
+        "statementCount": null,
+        "answerCellCount": null,
+        "matchRightCount": 2,
+        "correct": null,
+        "numericCheck": null
+      }
+    },
+    {
+      "id": 1177,
+      "examType": 16,
+      "sourceDir": "variant-6",
+      "file": "data\\oge-source\\variant-6\\oge-16.html",
+      "expectedUiKind": "multiChoiceFour",
+      "detectedUiKind": "multiChoiceFour",
+      "ok": true,
+      "issues": [],
+      "details": {
+        "statementCount": 4,
+        "answerCellCount": 4,
+        "matchRightCount": null,
+        "correct": [
+          "1",
+          "3",
+          "4"
+        ],
+        "numericCheck": null
+      }
+    },
+    {
+      "id": 1178,
+      "examType": 17,
+      "sourceDir": "variant-6",
+      "file": "data\\oge-source\\variant-6\\oge-17.html",
+      "expectedUiKind": "matchTriple",
+      "detectedUiKind": "matchTriple",
+      "ok": true,
+      "issues": [],
+      "details": {
+        "statementCount": null,
+        "answerCellCount": null,
+        "matchRightCount": 4,
+        "correct": null,
+        "numericCheck": null
+      }
+    },
+    {
+      "id": 1179,
+      "examType": 18,
+      "sourceDir": "variant-6",
+      "file": "data\\oge-source\\variant-6\\oge-18.html",
+      "expectedUiKind": "numericInt",
+      "detectedUiKind": "numericInt",
+      "ok": false,
+      "issues": [
+        "numeric: проверка «rounded», целевое правило — strict (n === value)"
+      ],
+      "details": {
+        "statementCount": null,
+        "answerCellCount": null,
+        "matchRightCount": null,
+        "correct": null,
+        "numericCheck": "rounded"
+      }
+    },
+    {
+      "id": 1180,
+      "examType": 19,
+      "sourceDir": "variant-6",
+      "file": "data\\oge-source\\variant-6\\oge-19.html",
+      "expectedUiKind": "numericMassTable",
+      "detectedUiKind": "numericMassTable",
+      "ok": false,
+      "issues": [
+        "numeric: проверка «rounded», целевое правило — strict (n === value)"
+      ],
+      "details": {
+        "statementCount": null,
+        "answerCellCount": null,
+        "matchRightCount": null,
+        "correct": null,
+        "numericCheck": "rounded"
+      }
+    },
+    {
+      "id": 1181,
+      "examType": 20,
+      "sourceDir": "variant-6",
+      "file": "data\\oge-source\\variant-6\\oge-20.html",
+      "expectedUiKind": "openReference",
+      "detectedUiKind": "openReference",
+      "ok": true,
+      "issues": [],
+      "details": {
+        "statementCount": null,
+        "answerCellCount": null,
+        "matchRightCount": null,
+        "correct": null,
+        "numericCheck": null
+      }
+    },
+    {
+      "id": 1182,
+      "examType": 21,
+      "sourceDir": "variant-6",
+      "file": "data\\oge-source\\variant-6\\oge-21.html",
+      "expectedUiKind": "openReference",
+      "detectedUiKind": "openReference",
+      "ok": true,
+      "issues": [],
+      "details": {
+        "statementCount": null,
+        "answerCellCount": null,
+        "matchRightCount": null,
+        "correct": null,
+        "numericCheck": null
+      }
+    },
+    {
+      "id": 1183,
+      "examType": 22,
+      "sourceDir": "variant-6",
+      "file": "data\\oge-source\\variant-6\\oge-22.html",
+      "expectedUiKind": "openReference",
+      "detectedUiKind": "openReference",
+      "ok": true,
+      "issues": [],
+      "details": {
+        "statementCount": null,
+        "answerCellCount": null,
+        "matchRightCount": null,
+        "correct": null,
+        "numericCheck": null
+      }
+    },
+    {
+      "id": 1184,
+      "examType": 23,
+      "sourceDir": "variant-6",
+      "file": "data\\oge-source\\variant-6\\oge-23.html",
+      "expectedUiKind": "experimentOpen",
+      "detectedUiKind": "experimentOpen",
+      "ok": true,
+      "issues": [],
+      "details": {
+        "statementCount": null,
+        "answerCellCount": null,
+        "matchRightCount": null,
+        "correct": null,
+        "numericCheck": null
+      }
+    },
+    {
+      "id": 1185,
+      "examType": 1,
+      "sourceDir": "variant-7",
+      "file": "data\\oge-source\\variant-7\\oge-01.html",
+      "expectedUiKind": "twoChoice",
+      "detectedUiKind": "twoChoice",
+      "ok": true,
+      "issues": [],
+      "details": {
+        "statementCount": 5,
+        "answerCellCount": 2,
+        "matchRightCount": null,
+        "correct": [
+          "2",
+          "3"
+        ],
+        "numericCheck": null
+      }
+    },
+    {
+      "id": 1186,
+      "examType": 2,
+      "sourceDir": "variant-7",
+      "file": "data\\oge-source\\variant-7\\oge-02.html",
+      "expectedUiKind": "periodDiagram",
+      "detectedUiKind": "periodDiagram",
+      "ok": true,
+      "issues": [],
+      "details": {
+        "statementCount": null,
+        "answerCellCount": null,
+        "matchRightCount": null,
+        "correct": null,
+        "numericCheck": null
+      }
+    },
+    {
+      "id": 1187,
+      "examType": 3,
+      "sourceDir": "variant-7",
+      "file": "data\\oge-source\\variant-7\\oge-03.html",
+      "expectedUiKind": "orderedDigits",
+      "detectedUiKind": "orderedDigits",
+      "ok": true,
+      "issues": [],
+      "details": {
+        "statementCount": null,
+        "answerCellCount": 1,
+        "matchRightCount": null,
+        "correct": null,
+        "numericCheck": null
+      }
+    },
+    {
+      "id": 1188,
+      "examType": 4,
+      "sourceDir": "variant-7",
+      "file": "data\\oge-source\\variant-7\\oge-04.html",
+      "expectedUiKind": "matchTriple",
+      "detectedUiKind": "matchTriple",
+      "ok": true,
+      "issues": [],
+      "details": {
+        "statementCount": null,
+        "answerCellCount": null,
+        "matchRightCount": 4,
+        "correct": null,
+        "numericCheck": null
+      }
+    },
+    {
+      "id": 1189,
+      "examType": 5,
+      "sourceDir": "variant-7",
+      "file": "data\\oge-source\\variant-7\\oge-05.html",
+      "expectedUiKind": "twoChoice",
+      "detectedUiKind": "twoChoice",
+      "ok": true,
+      "issues": [],
+      "details": {
+        "statementCount": 5,
+        "answerCellCount": 2,
+        "matchRightCount": null,
+        "correct": [
+          "2",
+          "4"
+        ],
+        "numericCheck": null
+      }
+    },
+    {
+      "id": 1190,
+      "examType": 6,
+      "sourceDir": "variant-7",
+      "file": "data\\oge-source\\variant-7\\oge-06.html",
+      "expectedUiKind": "twoChoice",
+      "detectedUiKind": "twoChoice",
+      "ok": true,
+      "issues": [],
+      "details": {
+        "statementCount": 5,
+        "answerCellCount": 2,
+        "matchRightCount": null,
+        "correct": [
+          "1",
+          "3"
+        ],
+        "numericCheck": null
+      }
+    },
+    {
+      "id": 1191,
+      "examType": 7,
+      "sourceDir": "variant-7",
+      "file": "data\\oge-source\\variant-7\\oge-07.html",
+      "expectedUiKind": "orderedDigits",
+      "detectedUiKind": "orderedDigits",
+      "ok": true,
+      "issues": [],
+      "details": {
+        "statementCount": null,
+        "answerCellCount": 2,
+        "matchRightCount": null,
+        "correct": null,
+        "numericCheck": null
+      }
+    },
+    {
+      "id": 1192,
+      "examType": 8,
+      "sourceDir": "variant-7",
+      "file": "data\\oge-source\\variant-7\\oge-08.html",
+      "expectedUiKind": "twoChoice",
+      "detectedUiKind": "twoChoice",
+      "ok": true,
+      "issues": [],
+      "details": {
+        "statementCount": 5,
+        "answerCellCount": 2,
+        "matchRightCount": null,
+        "correct": [
+          "3",
+          "4"
+        ],
+        "numericCheck": null
+      }
+    },
+    {
+      "id": 1193,
+      "examType": 9,
+      "sourceDir": "variant-7",
+      "file": "data\\oge-source\\variant-7\\oge-09.html",
+      "expectedUiKind": "matchTriple",
+      "detectedUiKind": "matchTriple",
+      "ok": true,
+      "issues": [],
+      "details": {
+        "statementCount": null,
+        "answerCellCount": null,
+        "matchRightCount": 5,
+        "correct": null,
+        "numericCheck": null
+      }
+    },
+    {
+      "id": 1194,
+      "examType": 10,
+      "sourceDir": "variant-7",
+      "file": "data\\oge-source\\variant-7\\oge-10.html",
+      "expectedUiKind": "matchTriple",
+      "detectedUiKind": "matchTriple",
+      "ok": true,
+      "issues": [],
+      "details": {
+        "statementCount": null,
+        "answerCellCount": null,
+        "matchRightCount": 4,
+        "correct": null,
+        "numericCheck": null
+      }
+    },
+    {
+      "id": 1195,
+      "examType": 11,
+      "sourceDir": "variant-7",
+      "file": "data\\oge-source\\variant-7\\oge-11.html",
+      "expectedUiKind": "twoChoice",
+      "detectedUiKind": "twoChoice",
+      "ok": true,
+      "issues": [],
+      "details": {
+        "statementCount": 5,
+        "answerCellCount": 2,
+        "matchRightCount": null,
+        "correct": [
+          "1",
+          "2"
+        ],
+        "numericCheck": null
+      }
+    },
+    {
+      "id": 1196,
+      "examType": 12,
+      "sourceDir": "variant-7",
+      "file": "data\\oge-source\\variant-7\\oge-12.html",
+      "expectedUiKind": "matchTriple",
+      "detectedUiKind": "matchTriple",
+      "ok": true,
+      "issues": [],
+      "details": {
+        "statementCount": null,
+        "answerCellCount": null,
+        "matchRightCount": 4,
+        "correct": null,
+        "numericCheck": null
+      }
+    },
+    {
+      "id": 1197,
+      "examType": 13,
+      "sourceDir": "variant-7",
+      "file": "data\\oge-source\\variant-7\\oge-13.html",
+      "expectedUiKind": "twoChoice",
+      "detectedUiKind": "twoChoice",
+      "ok": true,
+      "issues": [],
+      "details": {
+        "statementCount": 5,
+        "answerCellCount": 2,
+        "matchRightCount": null,
+        "correct": [
+          "3",
+          "4"
+        ],
+        "numericCheck": null
+      }
+    },
+    {
+      "id": 1198,
+      "examType": 14,
+      "sourceDir": "variant-7",
+      "file": "data\\oge-source\\variant-7\\oge-14.html",
+      "expectedUiKind": "twoChoice",
+      "detectedUiKind": "twoChoice",
+      "ok": true,
+      "issues": [],
+      "details": {
+        "statementCount": 6,
+        "answerCellCount": 2,
+        "matchRightCount": null,
+        "correct": [
+          "1",
+          "4"
+        ],
+        "numericCheck": null
+      }
+    },
+    {
+      "id": 1199,
+      "examType": 15,
+      "sourceDir": "variant-7",
+      "file": "data\\oge-source\\variant-7\\oge-15.html",
+      "expectedUiKind": "matchTriple",
+      "detectedUiKind": "matchTriple",
+      "ok": true,
+      "issues": [],
+      "details": {
+        "statementCount": null,
+        "answerCellCount": null,
+        "matchRightCount": 2,
+        "correct": null,
+        "numericCheck": null
+      }
+    },
+    {
+      "id": 1200,
+      "examType": 16,
+      "sourceDir": "variant-7",
+      "file": "data\\oge-source\\variant-7\\oge-16.html",
+      "expectedUiKind": "multiChoiceFour",
+      "detectedUiKind": "multiChoiceFour",
+      "ok": true,
+      "issues": [],
+      "details": {
+        "statementCount": 4,
+        "answerCellCount": 4,
+        "matchRightCount": null,
+        "correct": [
+          "1",
+          "2",
+          "4"
+        ],
+        "numericCheck": null
+      }
+    },
+    {
+      "id": 1201,
+      "examType": 17,
+      "sourceDir": "variant-7",
+      "file": "data\\oge-source\\variant-7\\oge-17.html",
+      "expectedUiKind": "matchTriple",
+      "detectedUiKind": "matchTriple",
+      "ok": true,
+      "issues": [],
+      "details": {
+        "statementCount": null,
+        "answerCellCount": null,
+        "matchRightCount": 4,
+        "correct": null,
+        "numericCheck": null
+      }
+    },
+    {
+      "id": 1202,
+      "examType": 18,
+      "sourceDir": "variant-7",
+      "file": "data\\oge-source\\variant-7\\oge-18.html",
+      "expectedUiKind": "numericInt",
+      "detectedUiKind": "numericInt",
+      "ok": false,
+      "issues": [
+        "numeric: проверка «rounded», целевое правило — strict (n === value)"
+      ],
+      "details": {
+        "statementCount": null,
+        "answerCellCount": null,
+        "matchRightCount": null,
+        "correct": null,
+        "numericCheck": "rounded"
+      }
+    },
+    {
+      "id": 1203,
+      "examType": 19,
+      "sourceDir": "variant-7",
+      "file": "data\\oge-source\\variant-7\\oge-19.html",
+      "expectedUiKind": "numericMassTable",
+      "detectedUiKind": "numericMassTable",
+      "ok": false,
+      "issues": [
+        "numeric: проверка «rounded», целевое правило — strict (n === value)"
+      ],
+      "details": {
+        "statementCount": null,
+        "answerCellCount": null,
+        "matchRightCount": null,
+        "correct": null,
+        "numericCheck": "rounded"
+      }
+    },
+    {
+      "id": 1204,
+      "examType": 20,
+      "sourceDir": "variant-7",
+      "file": "data\\oge-source\\variant-7\\oge-20.html",
+      "expectedUiKind": "openReference",
+      "detectedUiKind": "openReference",
+      "ok": true,
+      "issues": [],
+      "details": {
+        "statementCount": null,
+        "answerCellCount": null,
+        "matchRightCount": null,
+        "correct": null,
+        "numericCheck": null
+      }
+    },
+    {
+      "id": 1205,
+      "examType": 21,
+      "sourceDir": "variant-7",
+      "file": "data\\oge-source\\variant-7\\oge-21.html",
+      "expectedUiKind": "openReference",
+      "detectedUiKind": "openReference",
+      "ok": true,
+      "issues": [],
+      "details": {
+        "statementCount": null,
+        "answerCellCount": null,
+        "matchRightCount": null,
+        "correct": null,
+        "numericCheck": null
+      }
+    },
+    {
+      "id": 1206,
+      "examType": 22,
+      "sourceDir": "variant-7",
+      "file": "data\\oge-source\\variant-7\\oge-22.html",
+      "expectedUiKind": "openReference",
+      "detectedUiKind": "openReference",
+      "ok": true,
+      "issues": [],
+      "details": {
+        "statementCount": null,
+        "answerCellCount": null,
+        "matchRightCount": null,
+        "correct": null,
+        "numericCheck": null
+      }
+    },
+    {
+      "id": 1207,
+      "examType": 23,
+      "sourceDir": "variant-7",
+      "file": "data\\oge-source\\variant-7\\oge-23.html",
+      "expectedUiKind": "experimentOpen",
+      "detectedUiKind": "experimentOpen",
+      "ok": true,
+      "issues": [],
+      "details": {
+        "statementCount": null,
+        "answerCellCount": null,
+        "matchRightCount": null,
+        "correct": null,
+        "numericCheck": null
+      }
+    },
+    {
+      "id": 1208,
+      "examType": 1,
+      "sourceDir": "variant-8",
+      "file": "data\\oge-source\\variant-8\\oge-01.html",
+      "expectedUiKind": "twoChoice",
+      "detectedUiKind": "twoChoice",
+      "ok": true,
+      "issues": [],
+      "details": {
+        "statementCount": 5,
+        "answerCellCount": 2,
+        "matchRightCount": null,
+        "correct": [
+          "3",
+          "5"
+        ],
+        "numericCheck": null
+      }
+    },
+    {
+      "id": 1209,
+      "examType": 2,
+      "sourceDir": "variant-8",
+      "file": "data\\oge-source\\variant-8\\oge-02.html",
+      "expectedUiKind": "periodDiagram",
+      "detectedUiKind": "periodDiagram",
+      "ok": true,
+      "issues": [],
+      "details": {
+        "statementCount": null,
+        "answerCellCount": null,
+        "matchRightCount": null,
+        "correct": null,
+        "numericCheck": null
+      }
+    },
+    {
+      "id": 1210,
+      "examType": 3,
+      "sourceDir": "variant-8",
+      "file": "data\\oge-source\\variant-8\\oge-03.html",
+      "expectedUiKind": "orderedDigits",
+      "detectedUiKind": "orderedDigits",
+      "ok": true,
+      "issues": [],
+      "details": {
+        "statementCount": null,
+        "answerCellCount": 1,
+        "matchRightCount": null,
+        "correct": null,
+        "numericCheck": null
+      }
+    },
+    {
+      "id": 1211,
+      "examType": 4,
+      "sourceDir": "variant-8",
+      "file": "data\\oge-source\\variant-8\\oge-04.html",
+      "expectedUiKind": "matchTriple",
+      "detectedUiKind": "matchTriple",
+      "ok": true,
+      "issues": [],
+      "details": {
+        "statementCount": null,
+        "answerCellCount": null,
+        "matchRightCount": 4,
+        "correct": null,
+        "numericCheck": null
+      }
+    },
+    {
+      "id": 1212,
+      "examType": 5,
+      "sourceDir": "variant-8",
+      "file": "data\\oge-source\\variant-8\\oge-05.html",
+      "expectedUiKind": "twoChoice",
+      "detectedUiKind": "twoChoice",
+      "ok": true,
+      "issues": [],
+      "details": {
+        "statementCount": 5,
+        "answerCellCount": 2,
+        "matchRightCount": null,
+        "correct": [
+          "3",
+          "5"
+        ],
+        "numericCheck": null
+      }
+    },
+    {
+      "id": 1213,
+      "examType": 6,
+      "sourceDir": "variant-8",
+      "file": "data\\oge-source\\variant-8\\oge-06.html",
+      "expectedUiKind": "twoChoice",
+      "detectedUiKind": "twoChoice",
+      "ok": true,
+      "issues": [],
+      "details": {
+        "statementCount": 5,
+        "answerCellCount": 2,
+        "matchRightCount": null,
+        "correct": [
+          "4",
+          "5"
+        ],
+        "numericCheck": null
+      }
+    },
+    {
+      "id": 1214,
+      "examType": 7,
+      "sourceDir": "variant-8",
+      "file": "data\\oge-source\\variant-8\\oge-07.html",
+      "expectedUiKind": "orderedDigits",
+      "detectedUiKind": "orderedDigits",
+      "ok": true,
+      "issues": [],
+      "details": {
+        "statementCount": null,
+        "answerCellCount": 2,
+        "matchRightCount": null,
+        "correct": null,
+        "numericCheck": null
+      }
+    },
+    {
+      "id": 1215,
+      "examType": 8,
+      "sourceDir": "variant-8",
+      "file": "data\\oge-source\\variant-8\\oge-08.html",
+      "expectedUiKind": "twoChoice",
+      "detectedUiKind": "twoChoice",
+      "ok": true,
+      "issues": [],
+      "details": {
+        "statementCount": 5,
+        "answerCellCount": 2,
+        "matchRightCount": null,
+        "correct": [
+          "1",
+          "4"
+        ],
+        "numericCheck": null
+      }
+    },
+    {
+      "id": 1216,
+      "examType": 9,
+      "sourceDir": "variant-8",
+      "file": "data\\oge-source\\variant-8\\oge-09.html",
+      "expectedUiKind": "matchTriple",
+      "detectedUiKind": "matchTriple",
+      "ok": true,
+      "issues": [],
+      "details": {
+        "statementCount": null,
+        "answerCellCount": null,
+        "matchRightCount": 5,
+        "correct": null,
+        "numericCheck": null
+      }
+    },
+    {
+      "id": 1217,
+      "examType": 10,
+      "sourceDir": "variant-8",
+      "file": "data\\oge-source\\variant-8\\oge-10.html",
+      "expectedUiKind": "matchTriple",
+      "detectedUiKind": "matchTriple",
+      "ok": true,
+      "issues": [],
+      "details": {
+        "statementCount": null,
+        "answerCellCount": null,
+        "matchRightCount": 4,
+        "correct": null,
+        "numericCheck": null
+      }
+    },
+    {
+      "id": 1218,
+      "examType": 11,
+      "sourceDir": "variant-8",
+      "file": "data\\oge-source\\variant-8\\oge-11.html",
+      "expectedUiKind": "twoChoice",
+      "detectedUiKind": "twoChoice",
+      "ok": true,
+      "issues": [],
+      "details": {
+        "statementCount": 5,
+        "answerCellCount": 2,
+        "matchRightCount": null,
+        "correct": [
+          "2",
+          "5"
+        ],
+        "numericCheck": null
+      }
+    },
+    {
+      "id": 1219,
+      "examType": 12,
+      "sourceDir": "variant-8",
+      "file": "data\\oge-source\\variant-8\\oge-12.html",
+      "expectedUiKind": "matchTriple",
+      "detectedUiKind": "matchTriple",
+      "ok": true,
+      "issues": [],
+      "details": {
+        "statementCount": null,
+        "answerCellCount": null,
+        "matchRightCount": 4,
+        "correct": null,
+        "numericCheck": null
+      }
+    },
+    {
+      "id": 1220,
+      "examType": 13,
+      "sourceDir": "variant-8",
+      "file": "data\\oge-source\\variant-8\\oge-13.html",
+      "expectedUiKind": "twoChoice",
+      "detectedUiKind": "twoChoice",
+      "ok": true,
+      "issues": [],
+      "details": {
+        "statementCount": 5,
+        "answerCellCount": 2,
+        "matchRightCount": null,
+        "correct": [
+          "4",
+          "5"
+        ],
+        "numericCheck": null
+      }
+    },
+    {
+      "id": 1221,
+      "examType": 14,
+      "sourceDir": "variant-8",
+      "file": "data\\oge-source\\variant-8\\oge-14.html",
+      "expectedUiKind": "twoChoice",
+      "detectedUiKind": "twoChoice",
+      "ok": true,
+      "issues": [],
+      "details": {
+        "statementCount": 6,
+        "answerCellCount": 2,
+        "matchRightCount": null,
+        "correct": [
+          "2",
+          "4"
+        ],
+        "numericCheck": null
+      }
+    },
+    {
+      "id": 1222,
+      "examType": 15,
+      "sourceDir": "variant-8",
+      "file": "data\\oge-source\\variant-8\\oge-15.html",
+      "expectedUiKind": "matchTriple",
+      "detectedUiKind": "matchTriple",
+      "ok": true,
+      "issues": [],
+      "details": {
+        "statementCount": null,
+        "answerCellCount": null,
+        "matchRightCount": 2,
+        "correct": null,
+        "numericCheck": null
+      }
+    },
+    {
+      "id": 1223,
+      "examType": 16,
+      "sourceDir": "variant-8",
+      "file": "data\\oge-source\\variant-8\\oge-16.html",
+      "expectedUiKind": "multiChoiceFour",
+      "detectedUiKind": "multiChoiceFour",
+      "ok": true,
+      "issues": [],
+      "details": {
+        "statementCount": 4,
+        "answerCellCount": 4,
+        "matchRightCount": null,
+        "correct": [
+          "2",
+          "3"
+        ],
+        "numericCheck": null
+      }
+    },
+    {
+      "id": 1224,
+      "examType": 17,
+      "sourceDir": "variant-8",
+      "file": "data\\oge-source\\variant-8\\oge-17.html",
+      "expectedUiKind": "matchTriple",
+      "detectedUiKind": "matchTriple",
+      "ok": true,
+      "issues": [],
+      "details": {
+        "statementCount": null,
+        "answerCellCount": null,
+        "matchRightCount": 4,
+        "correct": null,
+        "numericCheck": null
+      }
+    },
+    {
+      "id": 1225,
+      "examType": 18,
+      "sourceDir": "variant-8",
+      "file": "data\\oge-source\\variant-8\\oge-18.html",
+      "expectedUiKind": "numericInt",
+      "detectedUiKind": "numericInt",
+      "ok": false,
+      "issues": [
+        "numeric: проверка «rounded», целевое правило — strict (n === value)"
+      ],
+      "details": {
+        "statementCount": null,
+        "answerCellCount": null,
+        "matchRightCount": null,
+        "correct": null,
+        "numericCheck": "rounded"
+      }
+    },
+    {
+      "id": 1226,
+      "examType": 19,
+      "sourceDir": "variant-8",
+      "file": "data\\oge-source\\variant-8\\oge-19.html",
+      "expectedUiKind": "numericMassTable",
+      "detectedUiKind": "numericMassTable",
+      "ok": false,
+      "issues": [
+        "numeric: проверка «rounded», целевое правило — strict (n === value)"
+      ],
+      "details": {
+        "statementCount": null,
+        "answerCellCount": null,
+        "matchRightCount": null,
+        "correct": null,
+        "numericCheck": "rounded"
+      }
+    },
+    {
+      "id": 1227,
+      "examType": 20,
+      "sourceDir": "variant-8",
+      "file": "data\\oge-source\\variant-8\\oge-20.html",
+      "expectedUiKind": "openReference",
+      "detectedUiKind": "openReference",
+      "ok": true,
+      "issues": [],
+      "details": {
+        "statementCount": null,
+        "answerCellCount": null,
+        "matchRightCount": null,
+        "correct": null,
+        "numericCheck": null
+      }
+    },
+    {
+      "id": 1228,
+      "examType": 21,
+      "sourceDir": "variant-8",
+      "file": "data\\oge-source\\variant-8\\oge-21.html",
+      "expectedUiKind": "openReference",
+      "detectedUiKind": "openReference",
+      "ok": true,
+      "issues": [],
+      "details": {
+        "statementCount": null,
+        "answerCellCount": null,
+        "matchRightCount": null,
+        "correct": null,
+        "numericCheck": null
+      }
+    },
+    {
+      "id": 1229,
+      "examType": 22,
+      "sourceDir": "variant-8",
+      "file": "data\\oge-source\\variant-8\\oge-22.html",
+      "expectedUiKind": "openReference",
+      "detectedUiKind": "openReference",
+      "ok": true,
+      "issues": [],
+      "details": {
+        "statementCount": null,
+        "answerCellCount": null,
+        "matchRightCount": null,
+        "correct": null,
+        "numericCheck": null
+      }
+    },
+    {
+      "id": 1230,
+      "examType": 23,
+      "sourceDir": "variant-8",
+      "file": "data\\oge-source\\variant-8\\oge-23.html",
+      "expectedUiKind": "experimentOpen",
+      "detectedUiKind": "experimentOpen",
+      "ok": true,
+      "issues": [],
+      "details": {
+        "statementCount": null,
+        "answerCellCount": null,
+        "matchRightCount": null,
+        "correct": null,
+        "numericCheck": null
+      }
+    },
+    {
+      "id": 1231,
+      "examType": 1,
+      "sourceDir": "variant-9",
+      "file": "data\\oge-source\\variant-9\\oge-01.html",
+      "expectedUiKind": "twoChoice",
+      "detectedUiKind": "twoChoice",
+      "ok": true,
+      "issues": [],
+      "details": {
+        "statementCount": 5,
+        "answerCellCount": 2,
+        "matchRightCount": null,
+        "correct": [
+          "4",
+          "5"
+        ],
+        "numericCheck": null
+      }
+    },
+    {
+      "id": 1232,
+      "examType": 2,
+      "sourceDir": "variant-9",
+      "file": "data\\oge-source\\variant-9\\oge-02.html",
+      "expectedUiKind": "periodDiagram",
+      "detectedUiKind": "periodDiagram",
+      "ok": true,
+      "issues": [],
+      "details": {
+        "statementCount": null,
+        "answerCellCount": null,
+        "matchRightCount": null,
+        "correct": null,
+        "numericCheck": null
+      }
+    },
+    {
+      "id": 1233,
+      "examType": 3,
+      "sourceDir": "variant-9",
+      "file": "data\\oge-source\\variant-9\\oge-03.html",
+      "expectedUiKind": "orderedDigits",
+      "detectedUiKind": "orderedDigits",
+      "ok": true,
+      "issues": [],
+      "details": {
+        "statementCount": null,
+        "answerCellCount": 1,
+        "matchRightCount": null,
+        "correct": null,
+        "numericCheck": null
+      }
+    },
+    {
+      "id": 1234,
+      "examType": 4,
+      "sourceDir": "variant-9",
+      "file": "data\\oge-source\\variant-9\\oge-04.html",
+      "expectedUiKind": "matchTriple",
+      "detectedUiKind": "matchTriple",
+      "ok": true,
+      "issues": [],
+      "details": {
+        "statementCount": null,
+        "answerCellCount": null,
+        "matchRightCount": 4,
+        "correct": null,
+        "numericCheck": null
+      }
+    },
+    {
+      "id": 1235,
+      "examType": 5,
+      "sourceDir": "variant-9",
+      "file": "data\\oge-source\\variant-9\\oge-05.html",
+      "expectedUiKind": "twoChoice",
+      "detectedUiKind": "twoChoice",
+      "ok": true,
+      "issues": [],
+      "details": {
+        "statementCount": 5,
+        "answerCellCount": 2,
+        "matchRightCount": null,
+        "correct": [
+          "1",
+          "4"
+        ],
+        "numericCheck": null
+      }
+    },
+    {
+      "id": 1236,
+      "examType": 6,
+      "sourceDir": "variant-9",
+      "file": "data\\oge-source\\variant-9\\oge-06.html",
+      "expectedUiKind": "twoChoice",
+      "detectedUiKind": "twoChoice",
+      "ok": true,
+      "issues": [],
+      "details": {
+        "statementCount": 5,
+        "answerCellCount": 2,
+        "matchRightCount": null,
+        "correct": [
+          "2",
+          "4"
+        ],
+        "numericCheck": null
+      }
+    },
+    {
+      "id": 1237,
+      "examType": 7,
+      "sourceDir": "variant-9",
+      "file": "data\\oge-source\\variant-9\\oge-07.html",
+      "expectedUiKind": "orderedDigits",
+      "detectedUiKind": "orderedDigits",
+      "ok": true,
+      "issues": [],
+      "details": {
+        "statementCount": null,
+        "answerCellCount": 2,
+        "matchRightCount": null,
+        "correct": null,
+        "numericCheck": null
+      }
+    },
+    {
+      "id": 1238,
+      "examType": 8,
+      "sourceDir": "variant-9",
+      "file": "data\\oge-source\\variant-9\\oge-08.html",
+      "expectedUiKind": "twoChoice",
+      "detectedUiKind": "twoChoice",
+      "ok": true,
+      "issues": [],
+      "details": {
+        "statementCount": 5,
+        "answerCellCount": 2,
+        "matchRightCount": null,
+        "correct": [
+          "3",
+          "4"
+        ],
+        "numericCheck": null
+      }
+    },
+    {
+      "id": 1239,
+      "examType": 9,
+      "sourceDir": "variant-9",
+      "file": "data\\oge-source\\variant-9\\oge-09.html",
+      "expectedUiKind": "matchTriple",
+      "detectedUiKind": "matchTriple",
+      "ok": true,
+      "issues": [],
+      "details": {
+        "statementCount": null,
+        "answerCellCount": null,
+        "matchRightCount": 5,
+        "correct": null,
+        "numericCheck": null
+      }
+    },
+    {
+      "id": 1240,
+      "examType": 10,
+      "sourceDir": "variant-9",
+      "file": "data\\oge-source\\variant-9\\oge-10.html",
+      "expectedUiKind": "matchTriple",
+      "detectedUiKind": "matchTriple",
+      "ok": true,
+      "issues": [],
+      "details": {
+        "statementCount": null,
+        "answerCellCount": null,
+        "matchRightCount": 4,
+        "correct": null,
+        "numericCheck": null
+      }
+    },
+    {
+      "id": 1241,
+      "examType": 11,
+      "sourceDir": "variant-9",
+      "file": "data\\oge-source\\variant-9\\oge-11.html",
+      "expectedUiKind": "twoChoice",
+      "detectedUiKind": "twoChoice",
+      "ok": true,
+      "issues": [],
+      "details": {
+        "statementCount": 5,
+        "answerCellCount": 2,
+        "matchRightCount": null,
+        "correct": [
+          "1",
+          "3"
+        ],
+        "numericCheck": null
+      }
+    },
+    {
+      "id": 1242,
+      "examType": 12,
+      "sourceDir": "variant-9",
+      "file": "data\\oge-source\\variant-9\\oge-12.html",
+      "expectedUiKind": "matchTriple",
+      "detectedUiKind": "matchTriple",
+      "ok": true,
+      "issues": [],
+      "details": {
+        "statementCount": null,
+        "answerCellCount": null,
+        "matchRightCount": 4,
+        "correct": null,
+        "numericCheck": null
+      }
+    },
+    {
+      "id": 1243,
+      "examType": 13,
+      "sourceDir": "variant-9",
+      "file": "data\\oge-source\\variant-9\\oge-13.html",
+      "expectedUiKind": "twoChoice",
+      "detectedUiKind": "twoChoice",
+      "ok": true,
+      "issues": [],
+      "details": {
+        "statementCount": 5,
+        "answerCellCount": 2,
+        "matchRightCount": null,
+        "correct": [
+          "4",
+          "5"
+        ],
+        "numericCheck": null
+      }
+    },
+    {
+      "id": 1244,
+      "examType": 14,
+      "sourceDir": "variant-9",
+      "file": "data\\oge-source\\variant-9\\oge-14.html",
+      "expectedUiKind": "twoChoice",
+      "detectedUiKind": "twoChoice",
+      "ok": true,
+      "issues": [],
+      "details": {
+        "statementCount": 6,
+        "answerCellCount": 2,
+        "matchRightCount": null,
+        "correct": [
+          "1",
+          "6"
+        ],
+        "numericCheck": null
+      }
+    },
+    {
+      "id": 1245,
+      "examType": 15,
+      "sourceDir": "variant-9",
+      "file": "data\\oge-source\\variant-9\\oge-15.html",
+      "expectedUiKind": "matchTriple",
+      "detectedUiKind": "matchTriple",
+      "ok": true,
+      "issues": [],
+      "details": {
+        "statementCount": null,
+        "answerCellCount": null,
+        "matchRightCount": 2,
+        "correct": null,
+        "numericCheck": null
+      }
+    },
+    {
+      "id": 1246,
+      "examType": 16,
+      "sourceDir": "variant-9",
+      "file": "data\\oge-source\\variant-9\\oge-16.html",
+      "expectedUiKind": "multiChoiceFour",
+      "detectedUiKind": "multiChoiceFour",
+      "ok": true,
+      "issues": [],
+      "details": {
+        "statementCount": 4,
+        "answerCellCount": 4,
+        "matchRightCount": null,
+        "correct": [
+          "1",
+          "3"
+        ],
+        "numericCheck": null
+      }
+    },
+    {
+      "id": 1247,
+      "examType": 17,
+      "sourceDir": "variant-9",
+      "file": "data\\oge-source\\variant-9\\oge-17.html",
+      "expectedUiKind": "matchTriple",
+      "detectedUiKind": "matchTriple",
+      "ok": true,
+      "issues": [],
+      "details": {
+        "statementCount": null,
+        "answerCellCount": null,
+        "matchRightCount": 4,
+        "correct": null,
+        "numericCheck": null
+      }
+    },
+    {
+      "id": 1248,
+      "examType": 18,
+      "sourceDir": "variant-9",
+      "file": "data\\oge-source\\variant-9\\oge-18.html",
+      "expectedUiKind": "numericInt",
+      "detectedUiKind": "numericInt",
+      "ok": false,
+      "issues": [
+        "numeric: проверка «rounded», целевое правило — strict (n === value)"
+      ],
+      "details": {
+        "statementCount": null,
+        "answerCellCount": null,
+        "matchRightCount": null,
+        "correct": null,
+        "numericCheck": "rounded"
+      }
+    },
+    {
+      "id": 1249,
+      "examType": 19,
+      "sourceDir": "variant-9",
+      "file": "data\\oge-source\\variant-9\\oge-19.html",
+      "expectedUiKind": "numericMassTable",
+      "detectedUiKind": "numericMassTable",
+      "ok": false,
+      "issues": [
+        "numeric: проверка «rounded», целевое правило — strict (n === value)"
+      ],
+      "details": {
+        "statementCount": null,
+        "answerCellCount": null,
+        "matchRightCount": null,
+        "correct": null,
+        "numericCheck": "rounded"
+      }
+    },
+    {
+      "id": 1250,
+      "examType": 20,
+      "sourceDir": "variant-9",
+      "file": "data\\oge-source\\variant-9\\oge-20.html",
+      "expectedUiKind": "openReference",
+      "detectedUiKind": "openReference",
+      "ok": true,
+      "issues": [],
+      "details": {
+        "statementCount": null,
+        "answerCellCount": null,
+        "matchRightCount": null,
+        "correct": null,
+        "numericCheck": null
+      }
+    },
+    {
+      "id": 1251,
+      "examType": 21,
+      "sourceDir": "variant-9",
+      "file": "data\\oge-source\\variant-9\\oge-21.html",
+      "expectedUiKind": "openReference",
+      "detectedUiKind": "openReference",
+      "ok": true,
+      "issues": [],
+      "details": {
+        "statementCount": null,
+        "answerCellCount": null,
+        "matchRightCount": null,
+        "correct": null,
+        "numericCheck": null
+      }
+    },
+    {
+      "id": 1252,
+      "examType": 22,
+      "sourceDir": "variant-9",
+      "file": "data\\oge-source\\variant-9\\oge-22.html",
+      "expectedUiKind": "openReference",
+      "detectedUiKind": "openReference",
+      "ok": true,
+      "issues": [],
+      "details": {
+        "statementCount": null,
+        "answerCellCount": null,
+        "matchRightCount": null,
+        "correct": null,
+        "numericCheck": null
+      }
+    },
+    {
+      "id": 1253,
+      "examType": 23,
+      "sourceDir": "variant-9",
+      "file": "data\\oge-source\\variant-9\\oge-23.html",
+      "expectedUiKind": "experimentOpen",
+      "detectedUiKind": "experimentOpen",
+      "ok": true,
+      "issues": [],
+      "details": {
+        "statementCount": null,
+        "answerCellCount": null,
+        "matchRightCount": null,
+        "correct": null,
+        "numericCheck": null
+      }
+    },
+    {
+      "id": 1254,
+      "examType": 1,
+      "sourceDir": "variant-10",
+      "file": "data\\oge-source\\variant-10\\oge-01.html",
+      "expectedUiKind": "twoChoice",
+      "detectedUiKind": "twoChoice",
+      "ok": true,
+      "issues": [],
+      "details": {
+        "statementCount": 5,
+        "answerCellCount": 2,
+        "matchRightCount": null,
+        "correct": [
+          "3",
+          "4"
+        ],
+        "numericCheck": null
+      }
+    },
+    {
+      "id": 1255,
+      "examType": 2,
+      "sourceDir": "variant-10",
+      "file": "data\\oge-source\\variant-10\\oge-02.html",
+      "expectedUiKind": "periodDiagram",
+      "detectedUiKind": "periodDiagram",
+      "ok": true,
+      "issues": [],
+      "details": {
+        "statementCount": null,
+        "answerCellCount": null,
+        "matchRightCount": null,
+        "correct": null,
+        "numericCheck": null
+      }
+    },
+    {
+      "id": 1256,
+      "examType": 3,
+      "sourceDir": "variant-10",
+      "file": "data\\oge-source\\variant-10\\oge-03.html",
+      "expectedUiKind": "orderedDigits",
+      "detectedUiKind": "orderedDigits",
+      "ok": true,
+      "issues": [],
+      "details": {
+        "statementCount": null,
+        "answerCellCount": 1,
+        "matchRightCount": null,
+        "correct": null,
+        "numericCheck": null
+      }
+    },
+    {
+      "id": 1257,
+      "examType": 4,
+      "sourceDir": "variant-10",
+      "file": "data\\oge-source\\variant-10\\oge-04.html",
+      "expectedUiKind": "matchTriple",
+      "detectedUiKind": "matchTriple",
+      "ok": true,
+      "issues": [],
+      "details": {
+        "statementCount": null,
+        "answerCellCount": null,
+        "matchRightCount": 4,
+        "correct": null,
+        "numericCheck": null
+      }
+    },
+    {
+      "id": 1258,
+      "examType": 5,
+      "sourceDir": "variant-10",
+      "file": "data\\oge-source\\variant-10\\oge-05.html",
+      "expectedUiKind": "twoChoice",
+      "detectedUiKind": "twoChoice",
+      "ok": true,
+      "issues": [],
+      "details": {
+        "statementCount": 5,
+        "answerCellCount": 2,
+        "matchRightCount": null,
+        "correct": [
+          "2",
+          "3"
+        ],
+        "numericCheck": null
+      }
+    },
+    {
+      "id": 1259,
+      "examType": 6,
+      "sourceDir": "variant-10",
+      "file": "data\\oge-source\\variant-10\\oge-06.html",
+      "expectedUiKind": "twoChoice",
+      "detectedUiKind": "twoChoice",
+      "ok": true,
+      "issues": [],
+      "details": {
+        "statementCount": 5,
+        "answerCellCount": 2,
+        "matchRightCount": null,
+        "correct": [
+          "3",
+          "4"
+        ],
+        "numericCheck": null
+      }
+    },
+    {
+      "id": 1260,
+      "examType": 7,
+      "sourceDir": "variant-10",
+      "file": "data\\oge-source\\variant-10\\oge-07.html",
+      "expectedUiKind": "orderedDigits",
+      "detectedUiKind": "orderedDigits",
+      "ok": true,
+      "issues": [],
+      "details": {
+        "statementCount": null,
+        "answerCellCount": 2,
+        "matchRightCount": null,
+        "correct": null,
+        "numericCheck": null
+      }
+    },
+    {
+      "id": 1261,
+      "examType": 8,
+      "sourceDir": "variant-10",
+      "file": "data\\oge-source\\variant-10\\oge-08.html",
+      "expectedUiKind": "twoChoice",
+      "detectedUiKind": "twoChoice",
+      "ok": true,
+      "issues": [],
+      "details": {
+        "statementCount": 5,
+        "answerCellCount": 2,
+        "matchRightCount": null,
+        "correct": [
+          "2",
+          "4"
+        ],
+        "numericCheck": null
+      }
+    },
+    {
+      "id": 1262,
+      "examType": 9,
+      "sourceDir": "variant-10",
+      "file": "data\\oge-source\\variant-10\\oge-09.html",
+      "expectedUiKind": "matchTriple",
+      "detectedUiKind": "matchTriple",
+      "ok": true,
+      "issues": [],
+      "details": {
+        "statementCount": null,
+        "answerCellCount": null,
+        "matchRightCount": 5,
+        "correct": null,
+        "numericCheck": null
+      }
+    },
+    {
+      "id": 1263,
+      "examType": 10,
+      "sourceDir": "variant-10",
+      "file": "data\\oge-source\\variant-10\\oge-10.html",
+      "expectedUiKind": "matchTriple",
+      "detectedUiKind": "matchTriple",
+      "ok": true,
+      "issues": [],
+      "details": {
+        "statementCount": null,
+        "answerCellCount": null,
+        "matchRightCount": 4,
+        "correct": null,
+        "numericCheck": null
+      }
+    },
+    {
+      "id": 1264,
+      "examType": 11,
+      "sourceDir": "variant-10",
+      "file": "data\\oge-source\\variant-10\\oge-11.html",
+      "expectedUiKind": "twoChoice",
+      "detectedUiKind": "twoChoice",
+      "ok": true,
+      "issues": [],
+      "details": {
+        "statementCount": 5,
+        "answerCellCount": 2,
+        "matchRightCount": null,
+        "correct": [
+          "3",
+          "5"
+        ],
+        "numericCheck": null
+      }
+    },
+    {
+      "id": 1265,
+      "examType": 12,
+      "sourceDir": "variant-10",
+      "file": "data\\oge-source\\variant-10\\oge-12.html",
+      "expectedUiKind": "matchTriple",
+      "detectedUiKind": "matchTriple",
+      "ok": true,
+      "issues": [],
+      "details": {
+        "statementCount": null,
+        "answerCellCount": null,
+        "matchRightCount": 4,
+        "correct": null,
+        "numericCheck": null
+      }
+    },
+    {
+      "id": 1266,
+      "examType": 13,
+      "sourceDir": "variant-10",
+      "file": "data\\oge-source\\variant-10\\oge-13.html",
+      "expectedUiKind": "twoChoice",
+      "detectedUiKind": "twoChoice",
+      "ok": true,
+      "issues": [],
+      "details": {
+        "statementCount": 5,
+        "answerCellCount": 2,
+        "matchRightCount": null,
+        "correct": [
+          "2",
+          "5"
+        ],
+        "numericCheck": null
+      }
+    },
+    {
+      "id": 1267,
+      "examType": 14,
+      "sourceDir": "variant-10",
+      "file": "data\\oge-source\\variant-10\\oge-14.html",
+      "expectedUiKind": "twoChoice",
+      "detectedUiKind": "twoChoice",
+      "ok": true,
+      "issues": [],
+      "details": {
+        "statementCount": 6,
+        "answerCellCount": 2,
+        "matchRightCount": null,
+        "correct": [
+          "1",
+          "4"
+        ],
+        "numericCheck": null
+      }
+    },
+    {
+      "id": 1268,
+      "examType": 15,
+      "sourceDir": "variant-10",
+      "file": "data\\oge-source\\variant-10\\oge-15.html",
+      "expectedUiKind": "matchTriple",
+      "detectedUiKind": "matchTriple",
+      "ok": true,
+      "issues": [],
+      "details": {
+        "statementCount": null,
+        "answerCellCount": null,
+        "matchRightCount": 2,
+        "correct": null,
+        "numericCheck": null
+      }
+    },
+    {
+      "id": 1269,
+      "examType": 16,
+      "sourceDir": "variant-10",
+      "file": "data\\oge-source\\variant-10\\oge-16.html",
+      "expectedUiKind": "multiChoiceFour",
+      "detectedUiKind": "multiChoiceFour",
+      "ok": true,
+      "issues": [],
+      "details": {
+        "statementCount": 4,
+        "answerCellCount": 4,
+        "matchRightCount": null,
+        "correct": [
+          "1",
+          "4"
+        ],
+        "numericCheck": null
+      }
+    },
+    {
+      "id": 1270,
+      "examType": 17,
+      "sourceDir": "variant-10",
+      "file": "data\\oge-source\\variant-10\\oge-17.html",
+      "expectedUiKind": "matchTriple",
+      "detectedUiKind": "matchTriple",
+      "ok": true,
+      "issues": [],
+      "details": {
+        "statementCount": null,
+        "answerCellCount": null,
+        "matchRightCount": 4,
+        "correct": null,
+        "numericCheck": null
+      }
+    },
+    {
+      "id": 1271,
+      "examType": 18,
+      "sourceDir": "variant-10",
+      "file": "data\\oge-source\\variant-10\\oge-18.html",
+      "expectedUiKind": "numericInt",
+      "detectedUiKind": "numericInt",
+      "ok": false,
+      "issues": [
+        "numeric: проверка «rounded», целевое правило — strict (n === value)"
+      ],
+      "details": {
+        "statementCount": null,
+        "answerCellCount": null,
+        "matchRightCount": null,
+        "correct": null,
+        "numericCheck": "rounded"
+      }
+    },
+    {
+      "id": 1272,
+      "examType": 19,
+      "sourceDir": "variant-10",
+      "file": "data\\oge-source\\variant-10\\oge-19.html",
+      "expectedUiKind": "numericMassTable",
+      "detectedUiKind": "numericMassTable",
+      "ok": false,
+      "issues": [
+        "numeric: проверка «rounded», целевое правило — strict (n === value)"
+      ],
+      "details": {
+        "statementCount": null,
+        "answerCellCount": null,
+        "matchRightCount": null,
+        "correct": null,
+        "numericCheck": "rounded"
+      }
+    },
+    {
+      "id": 1273,
+      "examType": 20,
+      "sourceDir": "variant-10",
+      "file": "data\\oge-source\\variant-10\\oge-20.html",
+      "expectedUiKind": "openReference",
+      "detectedUiKind": "openReference",
+      "ok": true,
+      "issues": [],
+      "details": {
+        "statementCount": null,
+        "answerCellCount": null,
+        "matchRightCount": null,
+        "correct": null,
+        "numericCheck": null
+      }
+    },
+    {
+      "id": 1274,
+      "examType": 21,
+      "sourceDir": "variant-10",
+      "file": "data\\oge-source\\variant-10\\oge-21.html",
+      "expectedUiKind": "openReference",
+      "detectedUiKind": "openReference",
+      "ok": true,
+      "issues": [],
+      "details": {
+        "statementCount": null,
+        "answerCellCount": null,
+        "matchRightCount": null,
+        "correct": null,
+        "numericCheck": null
+      }
+    },
+    {
+      "id": 1275,
+      "examType": 22,
+      "sourceDir": "variant-10",
+      "file": "data\\oge-source\\variant-10\\oge-22.html",
+      "expectedUiKind": "openReference",
+      "detectedUiKind": "openReference",
+      "ok": true,
+      "issues": [],
+      "details": {
+        "statementCount": null,
+        "answerCellCount": null,
+        "matchRightCount": null,
+        "correct": null,
+        "numericCheck": null
+      }
+    },
+    {
+      "id": 1276,
+      "examType": 23,
+      "sourceDir": "variant-10",
+      "file": "data\\oge-source\\variant-10\\oge-23.html",
+      "expectedUiKind": "experimentOpen",
+      "detectedUiKind": "experimentOpen",
+      "ok": true,
+      "issues": [],
+      "details": {
+        "statementCount": null,
+        "answerCellCount": null,
+        "matchRightCount": null,
+        "correct": null,
+        "numericCheck": null
+      }
+    }
+  ]
+}

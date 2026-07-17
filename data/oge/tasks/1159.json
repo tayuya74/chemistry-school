@@ -1,0 +1,27 @@
+{
+  "id": 1159,
+  "examType": 21,
+  "uiKind": "openReference",
+  "meta": {
+    "lead": "Химические свойства простых и сложных веществ",
+    "source": "ОГЭ. Типовые экзаменационные варианты, вариант 5 (Издательство «Национальное образование», 2025).",
+    "sourceDir": "variant-5"
+  },
+  "blocks": [
+    {
+      "html": "<p>Дана схема превращений:</p>"
+    },
+    {
+      "html": "<p style=\"text-align: center; font-size: 1.1rem; margin: 16px 0\">\n          Na → X → NaNO<sub>3</sub> → NaNO<sub>2</sub>\n        </p>"
+    },
+    {
+      "html": "<p>\n          Напишите <strong>молекулярные уравнения реакций</strong>, с помощью\n          которых можно осуществить указанные превращения.\n        </p>"
+    }
+  ],
+  "content": {},
+  "answer": null,
+  "solution": {
+    "title": "Эталон ответа (вариант 5, 2025)",
+    "html": "<p style=\"margin-top: 12px\">\n            <strong>X = NaOH</strong> (ряд возможных превращений):\n          </p>\n          <ol style=\"margin-top: 12px; line-height: 1.7\">\n            <li>2Na + 2H<sub>2</sub>O = 2NaOH + H<sub>2</sub>↑</li>\n            <li>NaOH + HNO<sub>3</sub> = NaNO<sub>3</sub> + H<sub>2</sub>O</li>\n            <li>\n              2NaNO<sub>3</sub> <small>(разложение при нагревании)</small> →\n              2NaNO<sub>2</sub>\n              + O<sub>2</sub>↑\n            </li>\n          </ol>\n          <p style=\"margin-top: 12px\">\n            Допустимы иные последовательности к&nbsp;NaNO<sub>3</sub>\n            и&nbsp;далее к&nbsp;NaNO<sub>2</sub>, если они выполнимы школьными\n            реагентами.\n          </p>"
+  }
+}

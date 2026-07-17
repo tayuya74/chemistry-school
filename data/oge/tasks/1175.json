@@ -1,0 +1,37 @@
+{
+  "id": 1175,
+  "examType": 14,
+  "uiKind": "twoChoice",
+  "meta": {
+    "lead": "Реакции ионного обмена",
+    "source": "ОГЭ. Типовые экзаменационные варианты, вариант 6 (Издательство «Национальное образование», 2025).",
+    "sourceDir": "variant-6"
+  },
+  "blocks": [
+    {
+      "html": "<p>\n          Выберите <strong>два исходных вещества</strong>, взаимодействию водных\n          растворов которых соответствует сокращённое ионное уравнение реакции:\n        </p>"
+    },
+    {
+      "html": "<p style=\"text-align: center; font-size: 1.15rem; margin: 16px 0\">\n          Ba<sup>2+</sup> + CO<sub>3</sub><sup>2−</sup> = BaCO<sub>3</sub>\n        </p>"
+    }
+  ],
+  "content": {
+    "statements": [
+      "Ba(NO<sub>3</sub>)<sub>2</sub>",
+      "CuO",
+      "Cu(OH)<sub>2</sub>",
+      "MgCO<sub>3</sub>",
+      "K<sub>2</sub>CO<sub>3</sub>",
+      "CO<sub>2</sub>"
+    ],
+    "maxChoices": 2,
+    "cellCount": 2
+  },
+  "answer": {
+    "correct": [
+      "1",
+      "5"
+    ]
+  },
+  "solution": null
+}

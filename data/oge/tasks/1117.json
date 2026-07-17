@@ -1,0 +1,33 @@
+{
+  "id": 1117,
+  "examType": 2,
+  "uiKind": "periodDiagram",
+  "meta": {
+    "lead": "Строение атома, строение электронных оболочек",
+    "source": "ОГЭ. Типовые экзаменационные варианты, вариант 4 (Издательство «Национальное образование», 2025).",
+    "sourceDir": "variant-4"
+  },
+  "blocks": [
+    {
+      "html": "<p>\n          На рисунке изображена модель строения <strong>ядра</strong> атома\n          некоторого химического элемента.\n        </p>"
+    }
+  ],
+  "content": {
+    "figure": {
+      "kind": "svg",
+      "html": "<svg\n            xmlns=\"http://www.w3.org/2000/svg\"\n            viewBox=\"0 0 280 260\"\n            width=\"280\"\n            height=\"260\"\n            aria-label=\"Схема ядра: 7 протонов и 7 нейтронов\"\n          >\n            <circle\n              cx=\"140\"\n              cy=\"125\"\n              r=\"108\"\n              fill=\"var(--color-tip-bg)\"\n              stroke=\"var(--color-border)\"\n              stroke-width=\"2\"\n            />\n            <g fill=\"#9ca3af\" stroke=\"#6b7280\" stroke-width=\"1\">\n              <circle cx=\"140\" cy=\"125\" r=\"14\" />\n              <circle cx=\"125\" cy=\"95\" r=\"14\" />\n              <circle cx=\"155\" cy=\"95\" r=\"14\" />\n              <circle cx=\"168\" cy=\"125\" r=\"14\" />\n              <circle cx=\"112\" cy=\"125\" r=\"14\" />\n              <circle cx=\"128\" cy=\"152\" r=\"14\" />\n              <circle cx=\"152\" cy=\"152\" r=\"14\" />\n            </g>\n            <g fill=\"#fecaca\" stroke=\"#dc2626\" stroke-width=\"1.5\">\n              <circle cx=\"140\" cy=\"88\" r=\"14\" />\n              <text\n                x=\"140\"\n                y=\"93\"\n                text-anchor=\"middle\"\n                font-size=\"16\"\n                font-weight=\"bold\"\n                fill=\"#991b1b\"\n              >\n                +\n              </text>\n              <circle cx=\"108\" cy=\"108\" r=\"14\" />\n              <text\n                x=\"108\"\n                y=\"113\"\n                text-anchor=\"middle\"\n                font-size=\"16\"\n                font-weight=\"bold\"\n                fill=\"#991b1b\"\n              >\n                +\n              </text>\n              <circle cx=\"172\" cy=\"108\" r=\"14\" />\n              <text\n                x=\"172\"\n                y=\"113\"\n                text-anchor=\"middle\"\n                font-size=\"16\"\n                font-weight=\"bold\"\n                fill=\"#991b1b\"\n              >\n                +\n              </text>\n              <circle cx=\"95\" cy=\"140\" r=\"14\" />\n              <text\n                x=\"95\"\n                y=\"145\"\n                text-anchor=\"middle\"\n                font-size=\"16\"\n                font-weight=\"bold\"\n                fill=\"#991b1b\"\n              >\n                +\n              </text>\n              <circle cx=\"185\" cy=\"140\" r=\"14\" />\n              <text\n                x=\"185\"\n                y=\"145\"\n                text-anchor=\"middle\"\n                font-size=\"16\"\n                font-weight=\"bold\"\n                fill=\"#991b1b\"\n              >\n                +\n              </text>\n              <circle cx=\"118\" cy=\"168\" r=\"14\" />\n              <text\n                x=\"118\"\n                y=\"173\"\n                text-anchor=\"middle\"\n                font-size=\"16\"\n                font-weight=\"bold\"\n                fill=\"#991b1b\"\n              >\n                +\n              </text>\n              <circle cx=\"162\" cy=\"168\" r=\"14\" />\n              <text\n                x=\"162\"\n                y=\"173\"\n                text-anchor=\"middle\"\n                font-size=\"16\"\n                font-weight=\"bold\"\n                fill=\"#991b1b\"\n              >\n                +\n              </text>\n            </g>\n          </svg>",
+      "captionHtml": null
+    },
+    "labels": [
+      "X",
+      "Y"
+    ]
+  },
+  "answer": {
+    "values": {
+      "X": "14",
+      "Y": "5"
+    }
+  },
+  "solution": null
+}

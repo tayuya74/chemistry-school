@@ -1,0 +1,27 @@
+{
+  "id": 1043,
+  "examType": 20,
+  "uiKind": "openReference",
+  "meta": {
+    "lead": "Окислительно-восстановительные реакции",
+    "source": "ОГЭ. Типовые экзаменационные варианты, вариант 1 (Издательство «Национальное образование», 2025).",
+    "sourceDir": "variant-1"
+  },
+  "blocks": [
+    {
+      "html": "<p>\n          Используя метод электронного баланса, расставьте коэффициенты в\n          предложенной схеме реакции\n        </p>"
+    },
+    {
+      "html": "<p style=\"text-align: center; font-size: 1.1rem; margin: 16px 0\">\n          CuS + FeCl<sub>3</sub> → CuCl<sub>2</sub> + FeCl<sub>2</sub> + S\n        </p>"
+    },
+    {
+      "html": "<p>Укажите окислитель и восстановитель.</p>"
+    }
+  ],
+  "content": {},
+  "answer": null,
+  "solution": {
+    "title": "Эталон ответа (вариант 1, 2025)",
+    "html": "<p style=\"margin-top: 12px\">Электронный баланс:</p>\n          <p style=\"font-family: monospace; white-space: pre-line\">\n            S<sup>−2</sup> − 2ē → S<sup>0</sup> |×1 Fe<sup>+3</sup> + 1ē →\n            Fe<sup>+2</sup> |×2\n          </p>\n          <p>\n            <strong>Восстановитель:</strong> сера в степени окисления −2 (или\n            CuS).<br />\n            <strong>Окислитель:</strong> железо в степени окисления +3 (или\n            FeCl<sub>3</sub>).\n          </p>\n          <p>Уравнение реакции:</p>\n          <p style=\"text-align: center\">\n            <strong>1</strong>CuS + <strong>2</strong>FeCl<sub>3</sub> =\n            <strong>1</strong>CuCl<sub>2</sub> + <strong>2</strong>FeCl<sub\n              >2</sub\n            >\n            + <strong>1</strong>S\n          </p>"
+  }
+}

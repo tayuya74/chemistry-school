@@ -1,0 +1,38 @@
+{
+  "id": 1030,
+  "examType": 7,
+  "uiKind": "orderedDigits",
+  "meta": {
+    "lead": "Классификация сложных веществ",
+    "source": "ОГЭ. Типовые экзаменационные варианты, вариант 1 (Издательство «Национальное образование», 2025).",
+    "sourceDir": "variant-1"
+  },
+  "blocks": [
+    {
+      "html": "<p>\n          Из предложенного перечня веществ выберите\n          <strong>кислоту и основной оксид</strong>.\n        </p>"
+    },
+    {
+      "html": "<ol>\n          <li>HNO<sub>2</sub></li>\n          <li>Mg(OH)<sub>2</sub></li>\n          <li>ZnO</li>\n          <li>KHSO<sub>4</sub></li>\n          <li>CaO</li>\n        </ol>"
+    },
+    {
+      "html": "<p>\n          Запишите в поле ответа сначала номер кислоты, а затем номер основного\n          оксида.\n        </p>"
+    }
+  ],
+  "content": {
+    "items": [
+      "HNO<sub>2</sub>",
+      "Mg(OH)<sub>2</sub>",
+      "ZnO",
+      "KHSO<sub>4</sub>",
+      "CaO"
+    ],
+    "cellCount": 2
+  },
+  "answer": {
+    "sequence": [
+      "1",
+      "5"
+    ]
+  },
+  "solution": null
+}

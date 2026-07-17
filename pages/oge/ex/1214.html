@@ -46,55 +46,65 @@
       <h2>Задание 7 № 1214</h2>
       <p class="lead">Классификация неорганических веществ</p>
 
-      <p>
+      <div class="oge-subtask">
+<p>
           Из предложенного перечня веществ выберите основание и кислотный оксид.
         </p>
-        <ol>
+<ol>
           <li>SiO<sub>2</sub></li>
           <li>NO</li>
           <li>Ca(OH)<sub>2</sub></li>
           <li>Al(OH)<sub>3</sub></li>
           <li>Na<sub>2</sub>S</li>
         </ol>
-        <p>
+<p>
           Запишите в поле ответа сначала номер основания, а затем номер
           кислотного оксида.
         </p>
+
         <p class="oge-answer-label">Ответ:</p>
-        <div class="oge-answer-cells" role="group" aria-label="Две цифры">
+        <div
+          class="oge-answer-cells"
+          role="group"
+          aria-label="Последовательность цифр"
+        >
           <input
-            id="c1"
+            id="d1"
             type="text"
             inputmode="numeric"
             maxlength="1"
             autocomplete="off"
-            aria-label="1-я цифра ответа"
-          /><input
-            id="c2"
+            aria-label="Позиция 1"
+          />
+          <input
+            id="d2"
             type="text"
             inputmode="numeric"
             maxlength="1"
             autocomplete="off"
-            aria-label="2-я цифра ответа"
+            aria-label="Позиция 2"
           />
         </div>
+
         <p style="margin-top: 16px">
-          <button type="button" id="checkBtn">Ответ</button>
+          <button type="button" id="checkBtn">Проверить</button>
         </p>
         <p id="resultOut" class="result" role="status"></p>
+      </div>
 
       <p>Источник: ОГЭ. Типовые экзаменационные варианты, вариант 8 (Издательство «Национальное образование», 2025).</p>
-    </article>
+      </article>
     </main>
-  <script>
+    <script>
       (function () {
-        document
-          .getElementById("checkBtn")
-          .addEventListener("click", function () {
-          const out = document.getElementById("resultOut");
-          if (out) out.textContent = OGE_EX_formatAnswer(["3","1"]);
+        const btn = document.querySelector(".oge-subtask button[type='button']");
+        const out = document.querySelector(".oge-subtask .result");
+        if (!btn || !out) return;
+        btn.textContent = "Ответ";
+        btn.addEventListener("click", function () {
+          out.textContent = OGE_EX_formatAnswer(["3","1"]);
         });
       })();
     </script>
-</body>
+  </body>
 </html>

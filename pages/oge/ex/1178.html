@@ -3,10 +3,7 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>
-      ОГЭ, задание 17 — Качественные реакции неорганических соединений.
-      Индикаторы
-    </title>
+    <title>ОГЭ, задание 17 № 1178 — Качественные реакции неорганических соединений. Индикаторы</title>
     <link rel="stylesheet" href="../../../css/style.css" />
     <link
       rel="stylesheet"
@@ -47,11 +44,10 @@
         <a class="oge-task-nav__next" href="../type-18.html">Задание 18 →</a>
       </nav>
       <h2>Задание 17 № 1178</h2>
-      <p class="lead">
-          Качественные реакции неорганических соединений. Индикаторы
-        </p>
+      <p class="lead">Качественные реакции неорганических соединений. Индикаторы</p>
 
-      <p>
+      <div class="oge-subtask">
+<p>
           Установите соответствие между двумя веществами, взятыми в виде водных
           растворов, и реактивом, с помощью которого можно различить эти
           вещества: к каждой позиции, обозначенной буквой, подберите
@@ -64,9 +60,7 @@
             <ul class="oge-match-plain">
               <li>А) MgBr<sub>2</sub> и KBr</li>
               <li>Б) HCl и KNO<sub>3</sub></li>
-              <li>
-                В) Li<sub>2</sub>SO<sub>4</sub> и Na<sub>2</sub>CO<sub>3</sub>
-              </li>
+              <li>В) Li<sub>2</sub>SO<sub>4</sub> и Na<sub>2</sub>CO<sub>3</sub></li>
             </ul>
           </div>
           <div>
@@ -123,22 +117,24 @@
         </table>
 
         <p style="margin-top: 16px">
-          <button type="button" id="checkBtn">Ответ</button>
+          <button type="button" id="checkBtn">Проверить</button>
         </p>
         <p id="resultOut" class="result" role="status"></p>
+      </div>
 
       <p>Источник: ОГЭ. Типовые экзаменационные варианты, вариант 6 (Издательство «Национальное образование», 2025).</p>
-    </article>
+      </article>
     </main>
-  <script>
+    <script>
       (function () {
-        document
-          .getElementById("checkBtn")
-          .addEventListener("click", function () {
-          const out = document.getElementById("resultOut");
-          if (out) out.textContent = OGE_EX_formatAnswer(["1","4","3"]);
+        const btn = document.querySelector(".oge-subtask button[type='button']");
+        const out = document.querySelector(".oge-subtask .result");
+        if (!btn || !out) return;
+        btn.textContent = "Ответ";
+        btn.addEventListener("click", function () {
+          out.textContent = OGE_EX_formatAnswer(["1","4","3"]);
         });
       })();
     </script>
-</body>
+  </body>
 </html>

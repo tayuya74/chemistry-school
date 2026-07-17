@@ -1,0 +1,33 @@
+{
+  "id": 1105,
+  "examType": 13,
+  "uiKind": "twoChoice",
+  "meta": {
+    "lead": "Электролитическая диссоциация",
+    "source": "ОГЭ. Типовые экзаменационные варианты, вариант 3 (Издательство «Национальное образование», 2025).",
+    "sourceDir": "variant-3"
+  },
+  "blocks": [
+    {
+      "html": "<p>\n          Укажите, какие <strong>два</strong> утверждения из представленных ниже\n          <strong>верны</strong> относительно ионов и их количества,\n          образующихся при\n          <strong>полной диссоциации 1&nbsp;моль нитрата меди(II)</strong>.\n        </p>"
+    }
+  ],
+  "content": {
+    "statements": [
+      "1 моль Cu",
+      "1 моль Cu<sup>+</sup>",
+      "1 моль Cu<sup>2+</sup>",
+      "2 моль NO<sub>3</sub><sup>−</sup>",
+      "3 моль NO<sub>3</sub><sup>−</sup>"
+    ],
+    "maxChoices": 2,
+    "cellCount": 2
+  },
+  "answer": {
+    "correct": [
+      "3",
+      "4"
+    ]
+  },
+  "solution": null
+}

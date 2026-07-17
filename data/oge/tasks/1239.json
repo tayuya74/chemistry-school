@@ -1,0 +1,39 @@
+{
+  "id": 1239,
+  "examType": 9,
+  "uiKind": "matchTriple",
+  "meta": {
+    "lead": "Химические свойства простых и сложных веществ",
+    "source": "ОГЭ. Типовые экзаменационные варианты, вариант 9 (Издательство «Национальное образование», 2025).",
+    "sourceDir": "variant-9"
+  },
+  "blocks": [
+    {
+      "html": "<p>\n          Установите соответствие между реагирующими веществами и\n          продуктом(−ами) их взаимодействия: к каждой позиции, обозначенной\n          буквой, подберите соответствующую позицию, обозначенную цифрой.\n        </p>"
+    }
+  ],
+  "content": {
+    "leftTitle": "Реагирующие вещества",
+    "rightTitle": "Продукт(ы) взаимодействия",
+    "left": [
+      "А) ZnO + LiOH <small>(тв.)</small> →",
+      "Б) Zn(OH)<sub>2</sub> + LiOH <small>(изб.)</small> →",
+      "В) Zn + LiOH <small>(р-р)</small> →"
+    ],
+    "right": [
+      "1) Zn(OH)<sub>2</sub> + Li<sub>2</sub>O",
+      "2) Li<sub>2</sub>ZnO<sub>2</sub> + H<sub>2</sub>O",
+      "3) Li<sub>2</sub>[Zn(OH)<sub>4</sub>] + H<sub>2</sub>",
+      "4) Li<sub>2</sub>ZnO<sub>2</sub> + H<sub>2</sub>",
+      "5) Li<sub>2</sub>[Zn(OH)<sub>4</sub>]"
+    ]
+  },
+  "answer": {
+    "mapping": {
+      "A": "2",
+      "B": "5",
+      "V": "3"
+    }
+  },
+  "solution": null
+}
