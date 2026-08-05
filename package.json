@@ -10,7 +10,8 @@
     "validate:oge-phase0": "node scripts/validate-oge-phase0.mjs",
     "migrate:oge-tasks": "node scripts/migrate-oge-html-to-json.mjs",
     "validate:oge-tasks": "node scripts/validate-oge-tasks.mjs",
-    "generate:oge-variants": "node scripts/generate-oge-variants.mjs"
+    "generate:oge-variants": "node scripts/generate-oge-variants.mjs",
+    "add:oge-task": "node scripts/add-oge-task.mjs"
   },
   "devDependencies": {
     "prettier": "^3.5.3"

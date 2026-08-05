@@ -9,6 +9,8 @@
 
 **Проверка карты (фаза 0 миграции):** `npm run validate:oge-phase0` → [`phase-0-report.md`](phase-0-report.md). Подробнее — [`MIGRATION.md`](MIGRATION.md).
 
+Чтобы определить номер типа **по содержанию вопроса** (а не по внешнему виду) — см. [`TASK-TOPICS.md`](TASK-TOPICS.md).
+
 ## Сводная таблица
 
 | examType | uiKind | Что на экране | Автопроверка |

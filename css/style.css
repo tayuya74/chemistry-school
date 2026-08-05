@@ -513,6 +513,25 @@ html[data-theme="dark"] .oge-answer-cells input:focus-visible {
     0 0 0 3px var(--color-field-focus-ring);
 }
 
+/* Таблица конструктора своего варианта (pages/oge/builder.html) */
+.oge-builder-table {
+  border-collapse: collapse;
+  margin-top: 8px;
+  width: 100%;
+  max-width: 26rem;
+}
+
+.oge-builder-table th,
+.oge-builder-table td {
+  border: 1px solid var(--color-border);
+  padding: 8px 12px;
+  text-align: left;
+}
+
+.oge-builder-table input[type="number"] {
+  width: 5rem;
+}
+
 /* Одно числовое поле в заданиях 18–19 и аналогичных */
 .oge-answer-input {
   width: 7rem;

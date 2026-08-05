@@ -180,6 +180,7 @@ function main() {
     byType.get(row.type).push(row);
   }
 
+  const index = [];
   for (const row of rows) {
     const task = loadTask(row.id);
     fs.writeFileSync(
@@ -187,7 +188,14 @@ function main() {
       buildExPage(task),
       "utf8",
     );
+    index.push({ id: task.id, examType: task.examType, lead: task.meta.lead });
   }
+  index.sort((a, b) => a.id - b.id);
+  fs.writeFileSync(
+    path.join(ogeDir, "task-index.json"),
+    JSON.stringify(index, null, 2) + "\n",
+    "utf8",
+  );
 
   for (let examType = 1; examType <= 23; examType++) {
     const typeRows = byType.get(examType);
@@ -202,6 +210,7 @@ function main() {
   }
 
   console.log(`Готово: ${rows.length} ex-страниц и type-01…23 из JSON`);
+  console.log(`Готово: pages/oge/task-index.json (${index.length} записей)`);
   const variantCount = buildAllVariantPages();
   console.log(`Готово: ${variantCount} вариантов в pages/oge/variants/`);
 }
