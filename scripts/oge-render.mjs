@@ -324,9 +324,12 @@ function renderPeriodDiagramBody(task, suffix) {
   const hasPostPrompt = (task.blocks ?? []).some((b) =>
     /Запишите в (поле|таблицу)/.test(b.html),
   );
-  const postPrompt = hasPostPrompt
-    ? ""
-    : `        <p>
+  /* content.postPrompt — точная формулировка, что означают X и Y в конкретном задании */
+  const postPrompt = task.content.postPrompt
+    ? `        <p>${task.content.postPrompt}</p>`
+    : hasPostPrompt
+      ? ""
+      : `        <p>
           Запишите в таблицу значения <strong>${task.content.labels[0]}</strong> и
           <strong>${task.content.labels[1]}</strong>.
           (Для записи ответа используйте арабские цифры.)

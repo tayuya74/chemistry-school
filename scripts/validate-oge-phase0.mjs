@@ -105,12 +105,15 @@ function analyzeTask(row) {
   const relPath = path.relative(root, filePath);
 
   if (!fs.existsSync(filePath)) {
+    /* Задания, созданные сразу в JSON (npm run add:oge-task), не имеют HTML-исходника —
+       фаза 0 проверяет только миграцию из HTML, поэтому такие записи не ошибка. */
+    const jsonNative = !fs.existsSync(path.dirname(filePath));
     return {
       id: row.id,
       examType: row.type,
       sourceDir: row.sourceDir ?? "default",
       file: relPath,
-      error: "file_missing",
+      error: jsonNative ? "json_native" : "file_missing",
     };
   }
 
@@ -257,11 +260,12 @@ function buildMarkdownReport(report) {
     "",
     `- Заданий в реестре: **${report.totalTasks}**`,
     `- Без ошибок чтения: **${report.analyzed}**`,
-    `- **Карта uiKind:** ${report.uiKindConfirmed ? "✓ **подтверждена** (все 276 HTML совпадают с TASK-TYPES.md)" : "✗ есть расхождения"}`,
+    `- **Карта uiKind:** ${report.uiKindConfirmed ? `✓ **подтверждена** (все ${report.analyzed} HTML совпадают с TASK-TYPES.md)` : "✗ есть расхождения"}`,
     `- Расхождений uiKind: **${report.uiKindMismatchCount}**`,
     `- Legacy-проверка чисел (18/19): **${report.numericLegacyCount}** заданий (исправится при миграции)`,
     `- Прочие замечания: **${report.otherIssueCount}**`,
     `- Пропущено (нет файла): **${report.missingFiles}**`,
+    `- Создано сразу в JSON (без HTML-исходника, вне проверки фазы 0): **${report.jsonNative}**`,
     "",
     "## По типам экзамена (1–23)",
     "",
@@ -354,6 +358,7 @@ function main() {
   const passed = results.filter((r) => r.ok && !r.error).length;
   const failed = results.filter((r) => !r.ok && !r.error).length;
   const missingFiles = results.filter((r) => r.error === "file_missing").length;
+  const jsonNative = results.filter((r) => r.error === "json_native").length;
 
   const uiKindIssues = results.filter(
     (r) => !r.error && r.detectedUiKind !== r.expectedUiKind,
@@ -375,10 +380,11 @@ function main() {
   const report = {
     generatedAt: new Date().toISOString(),
     totalTasks: results.length,
-    analyzed: results.length - missingFiles,
+    analyzed: results.length - missingFiles - jsonNative,
     passed,
     failed,
     missingFiles,
+    jsonNative,
     uiKindConfirmed: uiKindIssues.length === 0 && missingFiles === 0,
     uiKindMismatchCount: uiKindIssues.length,
     numericLegacyCount: numericLegacyIssues.length,
@@ -396,7 +402,12 @@ function main() {
   fs.writeFileSync(jsonPath, JSON.stringify(report, null, 2) + "\n", "utf8");
   fs.writeFileSync(mdPath, buildMarkdownReport(report) + "\n", "utf8");
 
-  console.log(`Проверено заданий: ${report.totalTasks}`);
+  console.log(
+    `Проверено заданий: ${report.analyzed} из ${report.totalTasks} в реестре` +
+      (report.jsonNative
+        ? ` (${report.jsonNative} создано сразу в JSON — вне проверки фазы 0)`
+        : ""),
+  );
   console.log(
     `Карта uiKind: ${report.uiKindConfirmed ? "OK" : "ОШИБКА"} (${report.uiKindMismatchCount} расхождений)`,
   );

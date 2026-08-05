@@ -1,0 +1,34 @@
+{
+  "id": 1310,
+  "examType": 2,
+  "uiKind": "periodDiagram",
+  "meta": {
+    "lead": "Строение атома, строение электронных оболочек",
+    "source": "Открытый банк заданий ОГЭ по химии (ФИПИ), oge.fipi.ru/bank, № 3642F6",
+    "sourceDir": "fipi-bank"
+  },
+  "blocks": [
+    {
+      "html": "<p>\n          На рисунке изображена <strong>схема распределения электронов</strong>\n          по электронным слоям атома некоторого химического элемента.\n        </p>"
+    }
+  ],
+  "content": {
+    "figure": {
+      "kind": "svg",
+      "html": "<svg\n            xmlns=\"http://www.w3.org/2000/svg\"\n            viewBox=\"0 0 300 196\"\n            width=\"300\"\n            height=\"196\"\n            aria-label=\"Схема атома: ядро +Z, электроны по слоям — 2, 8, 3\"\n          >\n            <circle\n              cx=\"92\"\n              cy=\"90\"\n              r=\"18\"\n              fill=\"var(--color-tip-bg)\"\n              stroke=\"var(--color-border)\"\n              stroke-width=\"2\"\n            />\n            <text x=\"92\" y=\"95\" text-anchor=\"middle\" font-size=\"16\">+Z</text>\n            <path\n              d=\"M120 42 C152 58 152 122 120 138\"\n              fill=\"none\"\n              stroke=\"var(--color-border)\"\n              stroke-width=\"2\"\n            />\n            <path\n              d=\"M150 30 C196 54 196 126 150 150\"\n              fill=\"none\"\n              stroke=\"var(--color-border)\"\n              stroke-width=\"2\"\n            />\n            <path\n              d=\"M180 18 C240 50 240 130 180 162\"\n              fill=\"none\"\n              stroke=\"var(--color-border)\"\n              stroke-width=\"2\"\n            />\n            <text x=\"134\" y=\"154\" text-anchor=\"middle\" font-size=\"16\">2ē</text>\n            <text x=\"166\" y=\"166\" text-anchor=\"middle\" font-size=\"16\">8ē</text>\n            <text x=\"198\" y=\"178\" text-anchor=\"middle\" font-size=\"16\">3ē</text>\n          </svg>",
+      "captionHtml": null
+    },
+    "labels": [
+      "X",
+      "Y"
+    ],
+    "postPrompt": "Запишите в таблицу <strong>номер группы (X)</strong>, в которой данный химический элемент расположен в Периодической системе Д.И. Менделеева, и <strong>число протонов (Y)</strong> в ядре его атома. (Для записи ответа используйте арабские цифры.)"
+  },
+  "answer": {
+    "values": {
+      "X": "3",
+      "Y": "13"
+    }
+  },
+  "solution": null
+}

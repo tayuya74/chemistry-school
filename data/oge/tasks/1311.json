@@ -1,0 +1,34 @@
+{
+  "id": 1311,
+  "examType": 2,
+  "uiKind": "periodDiagram",
+  "meta": {
+    "lead": "Строение атома, строение электронных оболочек",
+    "source": "Открытый банк заданий ОГЭ по химии (ФИПИ), oge.fipi.ru/bank, № A54A07",
+    "sourceDir": "fipi-bank"
+  },
+  "blocks": [
+    {
+      "html": "<p>\n          На рисунке изображена <strong>схема распределения электронов</strong>\n          по электронным слоям атома некоторого химического элемента.\n        </p>"
+    }
+  ],
+  "content": {
+    "figure": {
+      "kind": "svg",
+      "html": "<svg\n            xmlns=\"http://www.w3.org/2000/svg\"\n            viewBox=\"0 0 260 184\"\n            width=\"260\"\n            height=\"184\"\n            aria-label=\"Схема атома: ядро +Z, электроны по слоям — 2, 3\"\n          >\n            <circle\n              cx=\"92\"\n              cy=\"90\"\n              r=\"18\"\n              fill=\"var(--color-tip-bg)\"\n              stroke=\"var(--color-border)\"\n              stroke-width=\"2\"\n            />\n            <text x=\"92\" y=\"95\" text-anchor=\"middle\" font-size=\"16\">+Z</text>\n            <path\n              d=\"M120 42 C152 58 152 122 120 138\"\n              fill=\"none\"\n              stroke=\"var(--color-border)\"\n              stroke-width=\"2\"\n            />\n            <path\n              d=\"M150 30 C196 54 196 126 150 150\"\n              fill=\"none\"\n              stroke=\"var(--color-border)\"\n              stroke-width=\"2\"\n            />\n            <text x=\"134\" y=\"154\" text-anchor=\"middle\" font-size=\"16\">2ē</text>\n            <text x=\"166\" y=\"166\" text-anchor=\"middle\" font-size=\"16\">3ē</text>\n          </svg>",
+      "captionHtml": null
+    },
+    "labels": [
+      "X",
+      "Y"
+    ],
+    "postPrompt": "Запишите в таблицу <strong>номер периода (X)</strong>, в котором данный химический элемент расположен в Периодической системе Д.И. Менделеева, и <strong>величину заряда ядра (Y)</strong> его атома. (Для записи ответа используйте арабские цифры.)"
+  },
+  "answer": {
+    "values": {
+      "X": "2",
+      "Y": "5"
+    }
+  },
+  "solution": null
+}
