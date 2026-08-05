@@ -1,0 +1,33 @@
+{
+  "id": 1354,
+  "examType": 5,
+  "uiKind": "twoChoice",
+  "meta": {
+    "lead": "Типы химической связи",
+    "source": "Открытый банк заданий ОГЭ по химии (ФИПИ), oge.fipi.ru/bank, № BDAC0C",
+    "sourceDir": "fipi-bank"
+  },
+  "blocks": [
+    {
+      "html": "<p>\n          Из предложенного перечня выберите два вещества, содержащие <strong>как ионную, так и ковалентную связь</strong>.\n        </p>"
+    }
+  ],
+  "content": {
+    "statements": [
+      "K<sub>2</sub>CO<sub>3</sub>",
+      "NaCl",
+      "H<sub>2</sub>SO<sub>3</sub>",
+      "Ca(OH)<sub>2</sub>",
+      "PF<sub>5</sub>"
+    ],
+    "maxChoices": 2,
+    "cellCount": 2
+  },
+  "answer": {
+    "correct": [
+      "1",
+      "4"
+    ]
+  },
+  "solution": null
+}

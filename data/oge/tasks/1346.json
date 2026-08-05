@@ -1,0 +1,33 @@
+{
+  "id": 1346,
+  "examType": 5,
+  "uiKind": "twoChoice",
+  "meta": {
+    "lead": "Типы химической связи",
+    "source": "Открытый банк заданий ОГЭ по химии (ФИПИ), oge.fipi.ru/bank, № AC6341",
+    "sourceDir": "fipi-bank"
+  },
+  "blocks": [
+    {
+      "html": "<p>\n          Из предложенного перечня выберите два вещества с <strong>ковалентной полярной связью</strong>.\n        </p>"
+    }
+  ],
+  "content": {
+    "statements": [
+      "PCl<sub>3</sub>",
+      "Ca<sub>3</sub>N<sub>2</sub>",
+      "Na<sub>2</sub>O",
+      "Al",
+      "SO<sub>2</sub>"
+    ],
+    "maxChoices": 2,
+    "cellCount": 2
+  },
+  "answer": {
+    "correct": [
+      "1",
+      "5"
+    ]
+  },
+  "solution": null
+}

@@ -1,0 +1,33 @@
+{
+  "id": 1355,
+  "examType": 5,
+  "uiKind": "twoChoice",
+  "meta": {
+    "lead": "Типы химической связи",
+    "source": "Открытый банк заданий ОГЭ по химии (ФИПИ), oge.fipi.ru/bank, № B65108",
+    "sourceDir": "fipi-bank"
+  },
+  "blocks": [
+    {
+      "html": "<p>\n          Из предложенного перечня выберите два вещества с <strong>ковалентной неполярной связью</strong>.\n        </p>"
+    }
+  ],
+  "content": {
+    "statements": [
+      "P<sub>4</sub>",
+      "SiO<sub>2</sub>",
+      "NH<sub>4</sub>Cl",
+      "H<sub>2</sub>S",
+      "S<sub>8</sub>"
+    ],
+    "maxChoices": 2,
+    "cellCount": 2
+  },
+  "answer": {
+    "correct": [
+      "1",
+      "5"
+    ]
+  },
+  "solution": null
+}
