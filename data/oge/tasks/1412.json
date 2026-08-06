@@ -1,0 +1,38 @@
+{
+  "id": 1412,
+  "examType": 7,
+  "uiKind": "orderedDigits",
+  "meta": {
+    "lead": "Классификация сложных веществ",
+    "source": "Открытый банк заданий ОГЭ по химии (ФИПИ), oge.fipi.ru/bank, № 02A908",
+    "sourceDir": "fipi-bank"
+  },
+  "blocks": [
+    {
+      "html": "<p>\n          Из предложенного перечня веществ выберите <strong>щёлочь</strong> и <strong>амфотерный гидроксид</strong>.\n        </p>"
+    },
+    {
+      "html": "<ol>\n            <li>K<sub>2</sub>CO<sub>3</sub></li>\n            <li>Ca(OH)<sub>2</sub></li>\n            <li>Na<sub>2</sub>O</li>\n            <li>AlCl<sub>3</sub></li>\n            <li>Zn(OH)<sub>2</sub></li>\n          </ol>"
+    },
+    {
+      "html": "<p>\n          Запишите в поле ответа сначала номер <strong>щёлочи</strong>, а затем номер <strong>амфотерного гидроксида</strong>.\n        </p>"
+    }
+  ],
+  "content": {
+    "items": [
+      "K<sub>2</sub>CO<sub>3</sub>",
+      "Ca(OH)<sub>2</sub>",
+      "Na<sub>2</sub>O",
+      "AlCl<sub>3</sub>",
+      "Zn(OH)<sub>2</sub>"
+    ],
+    "cellCount": 2
+  },
+  "answer": {
+    "sequence": [
+      "2",
+      "5"
+    ]
+  },
+  "solution": null
+}

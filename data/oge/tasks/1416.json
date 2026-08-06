@@ -1,0 +1,33 @@
+{
+  "id": 1416,
+  "examType": 7,
+  "uiKind": "twoChoice",
+  "meta": {
+    "lead": "Классификация сложных веществ",
+    "source": "Открытый банк заданий ОГЭ по химии (ФИПИ), oge.fipi.ru/bank, № 7AECFD",
+    "sourceDir": "fipi-bank"
+  },
+  "blocks": [
+    {
+      "html": "<p>\n          Из предложенного перечня веществ выберите <strong>два оснóвных оксида</strong>.\n        </p>"
+    }
+  ],
+  "content": {
+    "statements": [
+      "ZnO",
+      "MgO",
+      "Al<sub>2</sub>O<sub>3</sub>",
+      "Li<sub>2</sub>O",
+      "N<sub>2</sub>O"
+    ],
+    "maxChoices": 2,
+    "cellCount": 2
+  },
+  "answer": {
+    "correct": [
+      "2",
+      "4"
+    ]
+  },
+  "solution": null
+}

@@ -32,6 +32,9 @@ export const EXAM_TYPE_TO_UI_KIND = {
  */
 export const ALSO_ALLOWED_UI_KINDS = {
   3: ["twoChoice"],
+  /* Тип 7: «выберите соль и кислотный оксид» — порядок строгий (orderedDigits),
+     «выберите два оснóвных оксида» — порядок любой (twoChoice). */
+  7: ["twoChoice"],
 };
 
 export function expectedUiKind(examType) {

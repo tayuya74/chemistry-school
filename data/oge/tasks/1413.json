@@ -1,0 +1,38 @@
+{
+  "id": 1413,
+  "examType": 7,
+  "uiKind": "orderedDigits",
+  "meta": {
+    "lead": "Классификация сложных веществ",
+    "source": "Открытый банк заданий ОГЭ по химии (ФИПИ), oge.fipi.ru/bank, № 5F0B06",
+    "sourceDir": "fipi-bank"
+  },
+  "blocks": [
+    {
+      "html": "<p>\n          Из предложенного перечня веществ выберите <strong>основание</strong> и <strong>амфотерный оксид</strong>.\n        </p>"
+    },
+    {
+      "html": "<ol>\n            <li>KH</li>\n            <li>NaOH</li>\n            <li>Al<sub>2</sub>O<sub>3</sub></li>\n            <li>MgO</li>\n            <li>Zn(OH)<sub>2</sub></li>\n          </ol>"
+    },
+    {
+      "html": "<p>\n          Запишите в поле ответа сначала номер <strong>основания</strong>, а затем номер <strong>амфотерного оксида</strong>.\n        </p>"
+    }
+  ],
+  "content": {
+    "items": [
+      "KH",
+      "NaOH",
+      "Al<sub>2</sub>O<sub>3</sub>",
+      "MgO",
+      "Zn(OH)<sub>2</sub>"
+    ],
+    "cellCount": 2
+  },
+  "answer": {
+    "sequence": [
+      "2",
+      "3"
+    ]
+  },
+  "solution": null
+}

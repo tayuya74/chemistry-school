@@ -1,0 +1,33 @@
+{
+  "id": 1421,
+  "examType": 7,
+  "uiKind": "twoChoice",
+  "meta": {
+    "lead": "Классификация сложных веществ",
+    "source": "Открытый банк заданий ОГЭ по химии (ФИПИ), oge.fipi.ru/bank, № E9BE6F",
+    "sourceDir": "fipi-bank"
+  },
+  "blocks": [
+    {
+      "html": "<p>\n          Из предложенного перечня веществ выберите <strong>две соли</strong>.\n        </p>"
+    }
+  ],
+  "content": {
+    "statements": [
+      "PCl<sub>3</sub>",
+      "AlCl<sub>3</sub>",
+      "NH<sub>4</sub>Cl",
+      "HClO<sub>2</sub>",
+      "HCl"
+    ],
+    "maxChoices": 2,
+    "cellCount": 2
+  },
+  "answer": {
+    "correct": [
+      "2",
+      "3"
+    ]
+  },
+  "solution": null
+}

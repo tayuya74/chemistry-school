@@ -1,0 +1,38 @@
+{
+  "id": 1411,
+  "examType": 7,
+  "uiKind": "orderedDigits",
+  "meta": {
+    "lead": "Классификация сложных веществ",
+    "source": "Открытый банк заданий ОГЭ по химии (ФИПИ), oge.fipi.ru/bank, № A788FC",
+    "sourceDir": "fipi-bank"
+  },
+  "blocks": [
+    {
+      "html": "<p>\n          Из предложенного перечня веществ выберите <strong>основание</strong> и <strong>кислотный оксид</strong>.\n        </p>"
+    },
+    {
+      "html": "<ol>\n            <li>SO<sub>3</sub></li>\n            <li>Zn(OH)<sub>2</sub></li>\n            <li>MgO</li>\n            <li>HClO<sub>4</sub></li>\n            <li>Ba(OH)<sub>2</sub></li>\n          </ol>"
+    },
+    {
+      "html": "<p>\n          Запишите в поле ответа сначала номер <strong>основания</strong>, а затем номер <strong>кислотного оксида</strong>.\n        </p>"
+    }
+  ],
+  "content": {
+    "items": [
+      "SO<sub>3</sub>",
+      "Zn(OH)<sub>2</sub>",
+      "MgO",
+      "HClO<sub>4</sub>",
+      "Ba(OH)<sub>2</sub>"
+    ],
+    "cellCount": 2
+  },
+  "answer": {
+    "sequence": [
+      "5",
+      "1"
+    ]
+  },
+  "solution": null
+}

@@ -1,0 +1,33 @@
+{
+  "id": 1418,
+  "examType": 7,
+  "uiKind": "twoChoice",
+  "meta": {
+    "lead": "Классификация сложных веществ",
+    "source": "Открытый банк заданий ОГЭ по химии (ФИПИ), oge.fipi.ru/bank, № A25FF6",
+    "sourceDir": "fipi-bank"
+  },
+  "blocks": [
+    {
+      "html": "<p>\n          Из предложенного перечня веществ выберите <strong>две щёлочи</strong>.\n        </p>"
+    }
+  ],
+  "content": {
+    "statements": [
+      "Zn(OH)<sub>2</sub>",
+      "Ba(OH)<sub>2</sub>",
+      "Cu(OH)<sub>2</sub>",
+      "Fe(OH)<sub>2</sub>",
+      "Ca(OH)<sub>2</sub>"
+    ],
+    "maxChoices": 2,
+    "cellCount": 2
+  },
+  "answer": {
+    "correct": [
+      "2",
+      "5"
+    ]
+  },
+  "solution": null
+}
