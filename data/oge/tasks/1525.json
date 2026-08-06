@@ -1,0 +1,41 @@
+{
+  "id": 1525,
+  "examType": 9,
+  "uiKind": "matchTriple",
+  "meta": {
+    "lead": "Химические свойства простых и сложных веществ",
+    "source": "Открытый банк заданий ОГЭ по химии (ФИПИ), oge.fipi.ru/bank, № 8381C8",
+    "sourceDir": "fipi-bank",
+    "advanced": true,
+    "advancedNote": "Соляная кислота окисляет железо только до +2, поэтому получается FeCl₂, а не FeCl₃."
+  },
+  "blocks": [
+    {
+      "html": "<p>\n          Установите соответствие между <strong>реагирующими веществами</strong> и\n          <strong>продуктом(-ами) их взаимодействия</strong>: к каждой позиции,\n          обозначенной буквой, подберите соответствующую позицию, обозначенную цифрой.\n        </p>"
+    }
+  ],
+  "content": {
+    "leftTitle": "Реагирующие вещества",
+    "rightTitle": "Продукт(-ы) взаимодействия",
+    "left": [
+      "А) Fe и HCl",
+      "Б) Fe<sub>2</sub>O<sub>3</sub> и H<sub>2</sub>",
+      "В) Fe(OH)<sub>3</sub> —t°→"
+    ],
+    "right": [
+      "1) FeCl<sub>2</sub> и H<sub>2</sub>",
+      "2) FeO и H<sub>2</sub>O",
+      "3) Fe<sub>2</sub>O<sub>3</sub> и H<sub>2</sub>O",
+      "4) FeO и H<sub>2</sub>O<sub>2</sub>",
+      "5) FeCl<sub>3</sub> и H<sub>2</sub>"
+    ]
+  },
+  "answer": {
+    "mapping": {
+      "A": "1",
+      "B": "2",
+      "V": "3"
+    }
+  },
+  "solution": null
+}

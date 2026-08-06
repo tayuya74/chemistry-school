@@ -1,0 +1,41 @@
+{
+  "id": 1526,
+  "examType": 9,
+  "uiKind": "matchTriple",
+  "meta": {
+    "lead": "Химические свойства простых и сложных веществ",
+    "source": "Открытый банк заданий ОГЭ по химии (ФИПИ), oge.fipi.ru/bank, № B7338C",
+    "sourceDir": "fipi-bank",
+    "advanced": true,
+    "advancedNote": "Щёлочь с кислотой даёт воду, а металл с той же кислотой — водород. Соль в обоих случаях одна и та же."
+  },
+  "blocks": [
+    {
+      "html": "<p>\n          Установите соответствие между <strong>реагирующими веществами</strong> и\n          <strong>продуктом(-ами) их взаимодействия</strong>: к каждой позиции,\n          обозначенной буквой, подберите соответствующую позицию, обозначенную цифрой.\n        </p>"
+    }
+  ],
+  "content": {
+    "leftTitle": "Реагирующие вещества",
+    "rightTitle": "Продукт(-ы) взаимодействия",
+    "left": [
+      "А) Ca(OH)<sub>2</sub> и FeCl<sub>3</sub>",
+      "Б) Ca(OH)<sub>2</sub> и H<sub>2</sub>SO<sub>4</sub>",
+      "В) Ca и H<sub>2</sub>SO<sub>4</sub> (разб.)"
+    ],
+    "right": [
+      "1) CaCl<sub>2</sub> и Fe(OH)<sub>2</sub>",
+      "2) Fe(OH)<sub>3</sub> и CaCl<sub>2</sub>",
+      "3) CaSO<sub>4</sub> и H<sub>2</sub>",
+      "4) CaSO<sub>4</sub> и H<sub>2</sub>O",
+      "5) CaSO<sub>3</sub> и H<sub>2</sub>O"
+    ]
+  },
+  "answer": {
+    "mapping": {
+      "A": "2",
+      "B": "4",
+      "V": "3"
+    }
+  },
+  "solution": null
+}

@@ -1,0 +1,41 @@
+{
+  "id": 1529,
+  "examType": 9,
+  "uiKind": "matchTriple",
+  "meta": {
+    "lead": "Химические свойства простых и сложных веществ",
+    "source": "Открытый банк заданий ОГЭ по химии (ФИПИ), oge.fipi.ru/bank, № 77D96E",
+    "sourceDir": "fipi-bank",
+    "advanced": true,
+    "advancedNote": "То же различие железа(II) и (III), плюс восстановление оксида меди угарным газом."
+  },
+  "blocks": [
+    {
+      "html": "<p>\n          Установите соответствие между <strong>реагирующими веществами</strong> и\n          <strong>продуктом(-ами) их взаимодействия</strong>: к каждой позиции,\n          обозначенной буквой, подберите соответствующую позицию, обозначенную цифрой.\n        </p>"
+    }
+  ],
+  "content": {
+    "leftTitle": "Реагирующие вещества",
+    "rightTitle": "Продукт(-ы) взаимодействия",
+    "left": [
+      "А) CuO и CO",
+      "Б) Fe<sub>2</sub>O<sub>3</sub> и H<sub>2</sub>SO<sub>4</sub> (р-р)",
+      "В) Fe и H<sub>2</sub>SO<sub>4</sub> (р-р)"
+    ],
+    "right": [
+      "1) Fe<sub>2</sub>(SO<sub>4</sub>)<sub>3</sub> и H<sub>2</sub>O",
+      "2) CuCO<sub>3</sub>",
+      "3) Cu и CO<sub>2</sub>",
+      "4) FeSO<sub>4</sub> и H<sub>2</sub>",
+      "5) FeSO<sub>4</sub> и H<sub>2</sub>O"
+    ]
+  },
+  "answer": {
+    "mapping": {
+      "A": "3",
+      "B": "1",
+      "V": "4"
+    }
+  },
+  "solution": null
+}

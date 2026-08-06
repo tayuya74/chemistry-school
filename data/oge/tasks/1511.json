@@ -1,0 +1,41 @@
+{
+  "id": 1511,
+  "examType": 9,
+  "uiKind": "matchTriple",
+  "meta": {
+    "lead": "Химические свойства простых и сложных веществ",
+    "source": "Открытый банк заданий ОГЭ по химии (ФИПИ), oge.fipi.ru/bank, № F6BCA1",
+    "sourceDir": "fipi-bank",
+    "advanced": true,
+    "advancedNote": "Смотрите, чего взято в избытке: лишняя щёлочь растворяет осадок до K₂[Zn(OH)₄], а лишняя соль оставляет Zn(OH)₂."
+  },
+  "blocks": [
+    {
+      "html": "<p>\n          Установите соответствие между <strong>реагирующими веществами</strong> и\n          <strong>продуктом(-ами) их взаимодействия</strong>: к каждой позиции,\n          обозначенной буквой, подберите соответствующую позицию, обозначенную цифрой.\n        </p>"
+    }
+  ],
+  "content": {
+    "leftTitle": "Реагирующие вещества",
+    "rightTitle": "Продукт(-ы) взаимодействия",
+    "left": [
+      "А) ZnO + KOH (тв.) —t°→",
+      "Б) ZnSO<sub>4</sub> + KOH (изб.) →",
+      "В) ZnSO<sub>4</sub> (изб.) + KOH (р-р) →"
+    ],
+    "right": [
+      "1) K<sub>2</sub>ZnO<sub>2</sub> + H<sub>2</sub>",
+      "2) K<sub>2</sub>ZnO<sub>2</sub> + H<sub>2</sub>O",
+      "3) K<sub>2</sub>[Zn(OH)<sub>4</sub>] + K<sub>2</sub>SO<sub>4</sub>",
+      "4) Zn(OH)<sub>2</sub> + K<sub>2</sub>SO<sub>4</sub>",
+      "5) K<sub>2</sub>[Zn(OH)<sub>4</sub>] + H<sub>2</sub>O"
+    ]
+  },
+  "answer": {
+    "mapping": {
+      "A": "2",
+      "B": "3",
+      "V": "4"
+    }
+  },
+  "solution": null
+}

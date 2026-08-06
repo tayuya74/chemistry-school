@@ -1,0 +1,41 @@
+{
+  "id": 1527,
+  "examType": 9,
+  "uiKind": "matchTriple",
+  "meta": {
+    "lead": "Химические свойства простых и сложных веществ",
+    "source": "Открытый банк заданий ОГЭ по химии (ФИПИ), oge.fipi.ru/bank, № E14A27",
+    "sourceDir": "fipi-bank",
+    "advanced": true,
+    "advancedNote": "Металл с кислотой даёт водород, а его оксид — воду. Соль при этом получается одинаковая."
+  },
+  "blocks": [
+    {
+      "html": "<p>\n          Установите соответствие между <strong>реагирующими веществами</strong> и\n          <strong>продуктом(-ами) их взаимодействия</strong>: к каждой позиции,\n          обозначенной буквой, подберите соответствующую позицию, обозначенную цифрой.\n        </p>"
+    }
+  ],
+  "content": {
+    "leftTitle": "Реагирующие вещества",
+    "rightTitle": "Продукт(-ы) взаимодействия",
+    "left": [
+      "А) FeSO<sub>4</sub> и Na<sub>2</sub>S",
+      "Б) Fe и H<sub>2</sub>SO<sub>4</sub> (разб.)",
+      "В) FeO и H<sub>2</sub>SO<sub>4</sub> (разб.)"
+    ],
+    "right": [
+      "1) FeSO<sub>4</sub> и H<sub>2</sub>O",
+      "2) Fe<sub>2</sub>(SO<sub>4</sub>)<sub>3</sub> и H<sub>2</sub>",
+      "3) FeS и Na<sub>2</sub>SO<sub>4</sub>",
+      "4) FeSO<sub>4</sub> и H<sub>2</sub>",
+      "5) FeO и Na<sub>2</sub>SO<sub>4</sub>"
+    ]
+  },
+  "answer": {
+    "mapping": {
+      "A": "3",
+      "B": "4",
+      "V": "1"
+    }
+  },
+  "solution": null
+}

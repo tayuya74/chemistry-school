@@ -1,0 +1,40 @@
+{
+  "id": 1522,
+  "examType": 9,
+  "uiKind": "matchTriple",
+  "meta": {
+    "lead": "Химические свойства простых и сложных веществ",
+    "source": "Открытый банк заданий ОГЭ по химии (ФИПИ), oge.fipi.ru/bank, № 0690c0",
+    "sourceDir": "fipi-bank",
+    "advanced": true,
+    "advancedNote": "Концентрированная серная окисляет железо до +3 и сама даёт SO₂, а разбавленная — только до +2 с выделением водорода."
+  },
+  "blocks": [
+    {
+      "html": "<p>\n          Установите соответствие между <strong>реагирующими веществами</strong> и\n          <strong>продуктом(-ами) их взаимодействия</strong>: к каждой позиции,\n          обозначенной буквой, подберите соответствующую позицию, обозначенную цифрой.\n        </p>"
+    }
+  ],
+  "content": {
+    "leftTitle": "Реагирующие вещества",
+    "rightTitle": "Продукт(-ы) взаимодействия",
+    "left": [
+      "А) H<sub>2</sub>SO<sub>4</sub> (конц.) + Fe → (при нагревании)",
+      "Б) H<sub>2</sub>SO<sub>4</sub> (разб.) + Fe →",
+      "В) H<sub>2</sub>SO<sub>4</sub> (разб.) + FeO →"
+    ],
+    "right": [
+      "1) FeSO<sub>4</sub> + H<sub>2</sub>",
+      "2) FeSO<sub>4</sub> + H<sub>2</sub>O",
+      "3) Fe<sub>2</sub>(SO<sub>4</sub>)<sub>3</sub> + SO<sub>2</sub> + H<sub>2</sub>O",
+      "4) FeS + SO<sub>2</sub> + H<sub>2</sub>O"
+    ]
+  },
+  "answer": {
+    "mapping": {
+      "A": "3",
+      "B": "1",
+      "V": "2"
+    }
+  },
+  "solution": null
+}

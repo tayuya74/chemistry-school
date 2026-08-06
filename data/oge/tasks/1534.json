@@ -1,0 +1,40 @@
+{
+  "id": 1534,
+  "examType": 10,
+  "uiKind": "matchTriple",
+  "meta": {
+    "lead": "Химические свойства простых и сложных веществ",
+    "source": "Открытый банк заданий ОГЭ по химии (ФИПИ), oge.fipi.ru/bank, № 65162A",
+    "sourceDir": "fipi-bank",
+    "advanced": true,
+    "advancedNote": "Амфотерный Al₂O₃ реагирует и со щёлочью, и с кислотой. Хлор вытесняет бром из бромида меди."
+  },
+  "blocks": [
+    {
+      "html": "<p>\n          Установите соответствие между <strong>веществом</strong> и\n          <strong>реагентами</strong>, с каждым из которых оно может вступать в реакцию:\n          к каждой позиции, обозначенной буквой, подберите соответствующую позицию,\n          обозначенную цифрой.\n        </p>"
+    }
+  ],
+  "content": {
+    "leftTitle": "Вещество",
+    "rightTitle": "Реагенты",
+    "left": [
+      "А) Fe",
+      "Б) Al<sub>2</sub>O<sub>3</sub>",
+      "В) CuBr<sub>2</sub>"
+    ],
+    "right": [
+      "1) CuO, KCl",
+      "2) Cl<sub>2</sub>, Na<sub>2</sub>CO<sub>3</sub>",
+      "3) NaOH, HCl",
+      "4) O<sub>2</sub>, S"
+    ]
+  },
+  "answer": {
+    "mapping": {
+      "A": "4",
+      "B": "3",
+      "V": "2"
+    }
+  },
+  "solution": null
+}

@@ -1,0 +1,41 @@
+{
+  "id": 1518,
+  "examType": 9,
+  "uiKind": "matchTriple",
+  "meta": {
+    "lead": "Химические свойства простых и сложных веществ",
+    "source": "Открытый банк заданий ОГЭ по химии (ФИПИ), oge.fipi.ru/bank, № E14CAB",
+    "sourceDir": "fipi-bank",
+    "advanced": true,
+    "advancedNote": "В одном задании и раствор, и расплав: раствор даёт комплекс Na[Al(OH)₄], сплавление — алюминат NaAlO₂."
+  },
+  "blocks": [
+    {
+      "html": "<p>\n          Установите соответствие между <strong>реагирующими веществами</strong> и\n          <strong>продуктом(-ами) их взаимодействия</strong>: к каждой позиции,\n          обозначенной буквой, подберите соответствующую позицию, обозначенную цифрой.\n        </p>"
+    }
+  ],
+  "content": {
+    "leftTitle": "Реагирующие вещества",
+    "rightTitle": "Продукт(-ы) взаимодействия",
+    "left": [
+      "А) Al и NaOH (р-р)",
+      "Б) Ca(OH)<sub>2</sub> и NH<sub>4</sub>Cl",
+      "В) Al<sub>2</sub>O<sub>3</sub> и NaOH (тв.)"
+    ],
+    "right": [
+      "1) CaCl<sub>2</sub>, N<sub>2</sub> и H<sub>2</sub>O",
+      "2) Na[Al(OH)<sub>4</sub>] и H<sub>2</sub>",
+      "3) Na<sub>2</sub>O и Al(OH)<sub>3</sub>",
+      "4) NaAlO<sub>2</sub> и H<sub>2</sub>O",
+      "5) CaCl<sub>2</sub>, NH<sub>3</sub> и H<sub>2</sub>O"
+    ]
+  },
+  "answer": {
+    "mapping": {
+      "A": "2",
+      "B": "5",
+      "V": "4"
+    }
+  },
+  "solution": null
+}
