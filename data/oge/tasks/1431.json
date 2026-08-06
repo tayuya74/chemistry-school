@@ -1,0 +1,38 @@
+{
+  "id": 1431,
+  "examType": 7,
+  "uiKind": "orderedDigits",
+  "meta": {
+    "lead": "Классификация сложных веществ",
+    "source": "Открытый банк заданий ОГЭ по химии (ФИПИ), oge.fipi.ru/bank, № 7DFA80",
+    "sourceDir": "fipi-bank"
+  },
+  "blocks": [
+    {
+      "html": "<p>\n          Из предложенного перечня веществ выберите <strong>кислотный оксид</strong> и <strong>амфотерный гидроксид</strong>.\n        </p>"
+    },
+    {
+      "html": "<ol>\n            <li>CO</li>\n            <li>Zn(OH)<sub>2</sub></li>\n            <li>P<sub>2</sub>O<sub>5</sub></li>\n            <li>NaClO<sub>4</sub></li>\n            <li>Mg(OH)<sub>2</sub></li>\n          </ol>"
+    },
+    {
+      "html": "<p>\n          Запишите в поле ответа сначала номер <strong>кислотного оксида</strong>, а затем номер <strong>амфотерного гидроксида</strong>.\n        </p>"
+    }
+  ],
+  "content": {
+    "items": [
+      "CO",
+      "Zn(OH)<sub>2</sub>",
+      "P<sub>2</sub>O<sub>5</sub>",
+      "NaClO<sub>4</sub>",
+      "Mg(OH)<sub>2</sub>"
+    ],
+    "cellCount": 2
+  },
+  "answer": {
+    "sequence": [
+      "3",
+      "2"
+    ]
+  },
+  "solution": null
+}

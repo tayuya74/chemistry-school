@@ -422,6 +422,23 @@
     { "id": 1420, "type": 7, "sourceDir": "fipi-bank" },
     { "id": 1421, "type": 7, "sourceDir": "fipi-bank" },
     { "id": 1422, "type": 6, "sourceDir": "fipi-bank" },
-    { "id": 1423, "type": 6, "sourceDir": "fipi-bank" }
+    { "id": 1423, "type": 6, "sourceDir": "fipi-bank" },
+    { "id": 1424, "type": 7, "sourceDir": "fipi-bank" },
+    { "id": 1425, "type": 7, "sourceDir": "fipi-bank" },
+    { "id": 1426, "type": 7, "sourceDir": "fipi-bank" },
+    { "id": 1427, "type": 7, "sourceDir": "fipi-bank" },
+    { "id": 1428, "type": 7, "sourceDir": "fipi-bank" },
+    { "id": 1429, "type": 7, "sourceDir": "fipi-bank" },
+    { "id": 1430, "type": 7, "sourceDir": "fipi-bank" },
+    { "id": 1431, "type": 7, "sourceDir": "fipi-bank" },
+    { "id": 1432, "type": 7, "sourceDir": "fipi-bank" },
+    { "id": 1433, "type": 7, "sourceDir": "fipi-bank" },
+    { "id": 1434, "type": 7, "sourceDir": "fipi-bank" },
+    { "id": 1435, "type": 7, "sourceDir": "fipi-bank" },
+    { "id": 1436, "type": 7, "sourceDir": "own" },
+    { "id": 1437, "type": 7, "sourceDir": "own" },
+    { "id": 1438, "type": 7, "sourceDir": "own" },
+    { "id": 1439, "type": 7, "sourceDir": "own" },
+    { "id": 1440, "type": 7, "sourceDir": "own" }
   ]
 }

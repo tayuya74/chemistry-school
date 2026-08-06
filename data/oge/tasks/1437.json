@@ -1,0 +1,38 @@
+{
+  "id": 1437,
+  "examType": 7,
+  "uiKind": "orderedDigits",
+  "meta": {
+    "lead": "Классификация сложных веществ",
+    "source": "Задание составлено для сайта (в открытом банке ФИПИ примеров на этот случай нет)",
+    "sourceDir": "own"
+  },
+  "blocks": [
+    {
+      "html": "<p>\n          Из предложенного перечня веществ выберите <strong>кислую соль</strong> и <strong>кислотный оксид</strong>.\n        </p>"
+    },
+    {
+      "html": "<ol>\n            <li>K<sub>2</sub>SO<sub>4</sub></li>\n            <li>KHSO<sub>4</sub></li>\n            <li>SO<sub>3</sub></li>\n            <li>KOH</li>\n            <li>H<sub>2</sub>SO<sub>4</sub></li>\n          </ol>"
+    },
+    {
+      "html": "<p>\n          Запишите в поле ответа сначала номер <strong>кислой соли</strong>, а затем номер <strong>кислотного оксида</strong>.\n        </p>"
+    }
+  ],
+  "content": {
+    "items": [
+      "K<sub>2</sub>SO<sub>4</sub>",
+      "KHSO<sub>4</sub>",
+      "SO<sub>3</sub>",
+      "KOH",
+      "H<sub>2</sub>SO<sub>4</sub>"
+    ],
+    "cellCount": 2
+  },
+  "answer": {
+    "sequence": [
+      "2",
+      "3"
+    ]
+  },
+  "solution": null
+}

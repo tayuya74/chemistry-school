@@ -1,0 +1,38 @@
+{
+  "id": 1436,
+  "examType": 7,
+  "uiKind": "orderedDigits",
+  "meta": {
+    "lead": "Классификация сложных веществ",
+    "source": "Задание составлено для сайта (в открытом банке ФИПИ примеров на этот случай нет)",
+    "sourceDir": "own"
+  },
+  "blocks": [
+    {
+      "html": "<p>\n          Из предложенного перечня веществ выберите <strong>кислую соль</strong> и <strong>среднюю соль</strong>.\n        </p>"
+    },
+    {
+      "html": "<ol>\n            <li>Na<sub>2</sub>CO<sub>3</sub></li>\n            <li>NaHCO<sub>3</sub></li>\n            <li>HNO<sub>3</sub></li>\n            <li>CaO</li>\n            <li>Al(OH)<sub>3</sub></li>\n          </ol>"
+    },
+    {
+      "html": "<p>\n          Запишите в поле ответа сначала номер <strong>кислой соли</strong>, а затем номер <strong>средней соли</strong>.\n        </p>"
+    }
+  ],
+  "content": {
+    "items": [
+      "Na<sub>2</sub>CO<sub>3</sub>",
+      "NaHCO<sub>3</sub>",
+      "HNO<sub>3</sub>",
+      "CaO",
+      "Al(OH)<sub>3</sub>"
+    ],
+    "cellCount": 2
+  },
+  "answer": {
+    "sequence": [
+      "2",
+      "1"
+    ]
+  },
+  "solution": null
+}
