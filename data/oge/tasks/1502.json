@@ -1,0 +1,40 @@
+{
+  "id": 1502,
+  "examType": 10,
+  "uiKind": "matchTriple",
+  "meta": {
+    "lead": "Химические свойства простых и сложных веществ",
+    "source": "Открытый банк заданий ОГЭ по химии (ФИПИ), oge.fipi.ru/bank, № 6DDD4C",
+    "sourceDir": "fipi-bank",
+    "advanced": true,
+    "advancedNote": "Оксид алюминия амфотерный: реагирует и с кислотой, и со щёлочью. Хлор же вытесняет бром из бромида."
+  },
+  "blocks": [
+    {
+      "html": "<p>\n          Установите соответствие между <strong>веществом</strong> и\n          <strong>реагентами</strong>, с каждым из которых оно может вступать в реакцию:\n          к каждой позиции, обозначенной буквой, подберите соответствующую позицию,\n          обозначенную цифрой.\n        </p>"
+    }
+  ],
+  "content": {
+    "leftTitle": "Вещество",
+    "rightTitle": "Реагенты",
+    "left": [
+      "А) Cl<sub>2</sub>",
+      "Б) Al<sub>2</sub>O<sub>3</sub>",
+      "В) CuSO<sub>4</sub>"
+    ],
+    "right": [
+      "1) Mg, Na<sub>3</sub>PO<sub>4</sub>",
+      "2) AlCl<sub>3</sub>, H<sub>2</sub>O",
+      "3) H<sub>2</sub>, MgBr<sub>2</sub>",
+      "4) HNO<sub>3</sub>, KOH"
+    ]
+  },
+  "answer": {
+    "mapping": {
+      "A": "3",
+      "B": "4",
+      "V": "1"
+    }
+  },
+  "solution": null
+}

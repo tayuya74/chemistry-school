@@ -1,0 +1,40 @@
+{
+  "id": 1500,
+  "examType": 10,
+  "uiKind": "matchTriple",
+  "meta": {
+    "lead": "Химические свойства простых и сложных веществ",
+    "source": "Открытый банк заданий ОГЭ по химии (ФИПИ), oge.fipi.ru/bank, № D7B74F",
+    "sourceDir": "fipi-bank",
+    "advanced": true,
+    "advancedNote": "Магний горит даже в углекислом газе, отнимая у него кислород, — про эту реакцию часто забывают."
+  },
+  "blocks": [
+    {
+      "html": "<p>\n          Установите соответствие между <strong>веществом</strong> и\n          <strong>реагентами</strong>, с каждым из которых оно может вступать в реакцию:\n          к каждой позиции, обозначенной буквой, подберите соответствующую позицию,\n          обозначенную цифрой.\n        </p>"
+    }
+  ],
+  "content": {
+    "leftTitle": "Вещество",
+    "rightTitle": "Реагенты",
+    "left": [
+      "А) O<sub>2</sub>",
+      "Б) CO<sub>2</sub>",
+      "В) Na<sub>2</sub>SO<sub>3</sub>"
+    ],
+    "right": [
+      "1) FeO, KCl",
+      "2) Mg, NaOH",
+      "3) BaCl<sub>2</sub>, H<sub>2</sub>SO<sub>4</sub>",
+      "4) FeS<sub>2</sub>, NH<sub>3</sub>"
+    ]
+  },
+  "answer": {
+    "mapping": {
+      "A": "4",
+      "B": "2",
+      "V": "3"
+    }
+  },
+  "solution": null
+}

@@ -1,0 +1,41 @@
+{
+  "id": 1491,
+  "examType": 9,
+  "uiKind": "matchTriple",
+  "meta": {
+    "lead": "Химические свойства простых и сложных веществ",
+    "source": "Открытый банк заданий ОГЭ по химии (ФИПИ), oge.fipi.ru/bank, № C298FB",
+    "sourceDir": "fipi-bank",
+    "advanced": true,
+    "advancedNote": "Оксид фосфора(III) даёт фосфористую кислоту H₃PO₃, а не фосфорную. Две буквы получают одну цифру."
+  },
+  "blocks": [
+    {
+      "html": "<p>\n          Установите соответствие между <strong>реагирующими веществами</strong> и\n          <strong>продуктом(-ами) их взаимодействия</strong>: к каждой позиции,\n          обозначенной буквой, подберите соответствующую позицию, обозначенную цифрой.\n        </p>"
+    }
+  ],
+  "content": {
+    "leftTitle": "Реагирующие вещества",
+    "rightTitle": "Продукт(-ы) взаимодействия",
+    "left": [
+      "А) P<sub>2</sub>O<sub>5</sub> + H<sub>2</sub>O (изб.) →",
+      "Б) P<sub>2</sub>O<sub>3</sub> + H<sub>2</sub>O (изб.) →",
+      "В) PH<sub>3</sub> + O<sub>2</sub> (изб.) →"
+    ],
+    "right": [
+      "1) H<sub>3</sub>PO<sub>4</sub> + H<sub>2</sub>O",
+      "2) H<sub>3</sub>PO<sub>3</sub> + H<sub>2</sub>",
+      "3) H<sub>3</sub>PO<sub>4</sub> + H<sub>2</sub>",
+      "4) H<sub>3</sub>PO<sub>3</sub>",
+      "5) H<sub>3</sub>PO<sub>4</sub>"
+    ]
+  },
+  "answer": {
+    "mapping": {
+      "A": "5",
+      "B": "4",
+      "V": "5"
+    }
+  },
+  "solution": null
+}

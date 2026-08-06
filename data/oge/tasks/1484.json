@@ -1,0 +1,41 @@
+{
+  "id": 1484,
+  "examType": 9,
+  "uiKind": "matchTriple",
+  "meta": {
+    "lead": "Химические свойства простых и сложных веществ",
+    "source": "Открытый банк заданий ОГЭ по химии (ФИПИ), oge.fipi.ru/bank, № 8CE74C",
+    "sourceDir": "fipi-bank",
+    "advanced": true,
+    "advancedNote": "Степень окисления железа сохраняется: из FeO — сульфат железа(II), из Fe(OH)₃ — железа(III). Из сульфита выделяется SO₂, а не SO₃."
+  },
+  "blocks": [
+    {
+      "html": "<p>\n          Установите соответствие между <strong>реагирующими веществами</strong> и\n          <strong>продуктом(-ами) их взаимодействия</strong>: к каждой позиции,\n          обозначенной буквой, подберите соответствующую позицию, обозначенную цифрой.\n        </p>"
+    }
+  ],
+  "content": {
+    "leftTitle": "Реагирующие вещества",
+    "rightTitle": "Продукт(-ы) взаимодействия",
+    "left": [
+      "А) H<sub>2</sub>SO<sub>4</sub> (разб.) и FeO",
+      "Б) H<sub>2</sub>SO<sub>4</sub> (разб.) и Fe(OH)<sub>3</sub>",
+      "В) K<sub>2</sub>SO<sub>3</sub> и HCl"
+    ],
+    "right": [
+      "1) Fe<sub>2</sub>(SO<sub>4</sub>)<sub>3</sub> и H<sub>2</sub>O",
+      "2) FeSO<sub>4</sub> и H<sub>2</sub>O",
+      "3) KCl, SO<sub>3</sub> и H<sub>2</sub>O",
+      "4) KCl, SO<sub>2</sub> и H<sub>2</sub>O",
+      "5) Fe<sub>2</sub>(SO<sub>4</sub>)<sub>3</sub> и H<sub>2</sub>"
+    ]
+  },
+  "answer": {
+    "mapping": {
+      "A": "2",
+      "B": "1",
+      "V": "4"
+    }
+  },
+  "solution": null
+}

@@ -1,0 +1,41 @@
+{
+  "id": 1493,
+  "examType": 9,
+  "uiKind": "matchTriple",
+  "meta": {
+    "lead": "Химические свойства простых и сложных веществ",
+    "source": "Открытый банк заданий ОГЭ по химии (ФИПИ), oge.fipi.ru/bank, № 3071F2",
+    "sourceDir": "fipi-bank",
+    "advanced": true,
+    "advancedNote": "Аммиак с кислотой даёт только соль, без воды. И снова: оксид алюминия со щёлочью — без водорода, металл — с водородом."
+  },
+  "blocks": [
+    {
+      "html": "<p>\n          Установите соответствие между <strong>реагирующими веществами</strong> и\n          <strong>продуктом(-ами) их взаимодействия</strong>: к каждой позиции,\n          обозначенной буквой, подберите соответствующую позицию, обозначенную цифрой.\n        </p>"
+    }
+  ],
+  "content": {
+    "leftTitle": "Реагирующие вещества",
+    "rightTitle": "Продукт(-ы) взаимодействия",
+    "left": [
+      "А) NH<sub>3</sub> и HNO<sub>3</sub> (разб.)",
+      "Б) Al<sub>2</sub>O<sub>3</sub> и KOH (р-р)",
+      "В) Al и KOH (р-р)"
+    ],
+    "right": [
+      "1) Al(OH)<sub>3</sub> и K<sub>2</sub>O",
+      "2) NH<sub>4</sub>NO<sub>3</sub>",
+      "3) K[Al(OH)<sub>4</sub>] и H<sub>2</sub>",
+      "4) NH<sub>4</sub>NO<sub>3</sub> и H<sub>2</sub>O",
+      "5) K[Al(OH)<sub>4</sub>]"
+    ]
+  },
+  "answer": {
+    "mapping": {
+      "A": "2",
+      "B": "5",
+      "V": "3"
+    }
+  },
+  "solution": null
+}

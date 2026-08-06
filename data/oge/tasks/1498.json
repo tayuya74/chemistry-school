@@ -1,0 +1,40 @@
+{
+  "id": 1498,
+  "examType": 10,
+  "uiKind": "matchTriple",
+  "meta": {
+    "lead": "Химические свойства простых и сложных веществ",
+    "source": "Открытый банк заданий ОГЭ по химии (ФИПИ), oge.fipi.ru/bank, № BE9C47",
+    "sourceDir": "fipi-bank",
+    "advanced": true,
+    "advancedNote": "Фосфат калия реагирует с LiOH, потому что фосфат лития Li₃PO₄ нерастворим — это исключение среди солей лития."
+  },
+  "blocks": [
+    {
+      "html": "<p>\n          Установите соответствие между <strong>веществом</strong> и\n          <strong>реагентами</strong>, с каждым из которых оно может вступать в реакцию:\n          к каждой позиции, обозначенной буквой, подберите соответствующую позицию,\n          обозначенную цифрой.\n        </p>"
+    }
+  ],
+  "content": {
+    "leftTitle": "Вещество",
+    "rightTitle": "Реагенты",
+    "left": [
+      "А) H<sub>2</sub>",
+      "Б) Ba(OH)<sub>2</sub>",
+      "В) K<sub>3</sub>PO<sub>4</sub>"
+    ],
+    "right": [
+      "1) H<sub>2</sub>S, K<sub>2</sub>SO<sub>4</sub>",
+      "2) SiO<sub>2</sub>, NaCl",
+      "3) Fe<sub>2</sub>O<sub>3</sub>, N<sub>2</sub>",
+      "4) AgNO<sub>3</sub>, LiOH"
+    ]
+  },
+  "answer": {
+    "mapping": {
+      "A": "3",
+      "B": "1",
+      "V": "4"
+    }
+  },
+  "solution": null
+}

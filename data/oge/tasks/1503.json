@@ -1,0 +1,40 @@
+{
+  "id": 1503,
+  "examType": 10,
+  "uiKind": "matchTriple",
+  "meta": {
+    "lead": "Химические свойства простых и сложных веществ",
+    "source": "Открытый банк заданий ОГЭ по химии (ФИПИ), oge.fipi.ru/bank, № 318747",
+    "sourceDir": "fipi-bank",
+    "advanced": true,
+    "advancedNote": "Кремний — неметалл, но растворяется в щёлочи. А хлорид лития с фосфатом даёт осадок Li₃PO₄."
+  },
+  "blocks": [
+    {
+      "html": "<p>\n          Установите соответствие между <strong>веществом</strong> и\n          <strong>реагентами</strong>, с каждым из которых оно может вступать в реакцию:\n          к каждой позиции, обозначенной буквой, подберите соответствующую позицию,\n          обозначенную цифрой.\n        </p>"
+    }
+  ],
+  "content": {
+    "leftTitle": "Вещество",
+    "rightTitle": "Реагенты",
+    "left": [
+      "А) Si",
+      "Б) CaO",
+      "В) LiCl"
+    ],
+    "right": [
+      "1) H<sub>2</sub>O, CO<sub>2</sub>",
+      "2) K<sub>3</sub>PO<sub>4</sub>, AgNO<sub>3</sub>",
+      "3) FeSO<sub>4</sub>, HCl",
+      "4) O<sub>2</sub>, NaOH"
+    ]
+  },
+  "answer": {
+    "mapping": {
+      "A": "4",
+      "B": "1",
+      "V": "2"
+    }
+  },
+  "solution": null
+}

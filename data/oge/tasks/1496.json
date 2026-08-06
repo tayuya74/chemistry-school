@@ -1,0 +1,38 @@
+{
+  "id": 1496,
+  "examType": 10,
+  "uiKind": "matchTriple",
+  "meta": {
+    "lead": "Химические свойства простых и сложных веществ",
+    "source": "Открытый банк заданий ОГЭ по химии (ФИПИ), oge.fipi.ru/bank, № FF6B4F",
+    "sourceDir": "fipi-bank"
+  },
+  "blocks": [
+    {
+      "html": "<p>\n          Установите соответствие между <strong>веществом</strong> и\n          <strong>реагентами</strong>, с каждым из которых оно может вступать в реакцию:\n          к каждой позиции, обозначенной буквой, подберите соответствующую позицию,\n          обозначенную цифрой.\n        </p>"
+    }
+  ],
+  "content": {
+    "leftTitle": "Вещество",
+    "rightTitle": "Реагенты",
+    "left": [
+      "А) CaCl<sub>2</sub>",
+      "Б) SO<sub>2</sub>",
+      "В) H<sub>2</sub>"
+    ],
+    "right": [
+      "1) N<sub>2</sub>, Fe<sub>2</sub>O<sub>3</sub>",
+      "2) CaO, Ba(OH)<sub>2</sub>",
+      "3) H<sub>2</sub>O, NaNO<sub>3</sub>",
+      "4) Na<sub>2</sub>CO<sub>3</sub>, AgNO<sub>3</sub>"
+    ]
+  },
+  "answer": {
+    "mapping": {
+      "A": "4",
+      "B": "2",
+      "V": "1"
+    }
+  },
+  "solution": null
+}

@@ -1,0 +1,41 @@
+{
+  "id": 1481,
+  "examType": 9,
+  "uiKind": "matchTriple",
+  "meta": {
+    "lead": "Химические свойства простых и сложных веществ",
+    "source": "Открытый банк заданий ОГЭ по химии (ФИПИ), oge.fipi.ru/bank, № F7BD4C",
+    "sourceDir": "fipi-bank",
+    "advanced": true,
+    "advancedNote": "Оксид натрия и сам натрий с водой дают разное: оксид — только щёлочь, а металл ещё и водород."
+  },
+  "blocks": [
+    {
+      "html": "<p>\n          Установите соответствие между <strong>реагирующими веществами</strong> и\n          <strong>продуктом(-ами) их взаимодействия</strong>: к каждой позиции,\n          обозначенной буквой, подберите соответствующую позицию, обозначенную цифрой.\n        </p>"
+    }
+  ],
+  "content": {
+    "leftTitle": "Реагирующие вещества",
+    "rightTitle": "Продукт(-ы) взаимодействия",
+    "left": [
+      "А) Na<sub>2</sub>O и H<sub>2</sub>O",
+      "Б) Na и H<sub>2</sub>O",
+      "В) LiOH и SO<sub>3</sub>"
+    ],
+    "right": [
+      "1) NaOH",
+      "2) Li<sub>2</sub>SO<sub>4</sub> и H<sub>2</sub>O",
+      "3) NaOH и H<sub>2</sub>",
+      "4) Li<sub>2</sub>SO<sub>4</sub> и H<sub>2</sub>",
+      "5) Li<sub>2</sub>SO<sub>3</sub> и H<sub>2</sub>O"
+    ]
+  },
+  "answer": {
+    "mapping": {
+      "A": "1",
+      "B": "3",
+      "V": "2"
+    }
+  },
+  "solution": null
+}
