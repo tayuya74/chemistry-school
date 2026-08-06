@@ -2768,6 +2768,148 @@
         </p>
         <p id="resultOut-1406" class="result" role="status"></p>
       </div>
+      <h3 class="oge-example-title" id="oge-ex-title-1422"><a class="oge-task-seq" href="ex/1422.html">Задание 6 № 1422</a></h3>
+<div class="oge-subtask" id="oge-ex-1422" data-oge-checkbox-max="2" data-oge-two-choice-correct="3|5" data-oge-option-count="5">
+<p>
+          Какие <strong>два утверждения</strong> являются <strong>верными для характеристики магния</strong>
+          и <strong>неверными для характеристики фтора</strong>?
+        </p>
+
+        <ol class="oge-statements">
+          <li>
+            <label>
+              <input type="checkbox" name="st" value="1" />
+              <span>Химический элемент образует летучее водородное соединение.</span>
+            </label>
+          </li>
+          <li>
+            <label>
+              <input type="checkbox" name="st" value="2" />
+              <span>Является неметаллом.</span>
+            </label>
+          </li>
+          <li>
+            <label>
+              <input type="checkbox" name="st" value="3" />
+              <span>Гидроксид элемента является оснóвным.</span>
+            </label>
+          </li>
+          <li>
+            <label>
+              <input type="checkbox" name="st" value="4" />
+              <span>Электроны в атоме расположены на двух электронных слоях.</span>
+            </label>
+          </li>
+          <li>
+            <label>
+              <input type="checkbox" name="st" value="5" />
+              <span>Химический элемент в соединениях с кислородом проявляет положительную степень окисления.</span>
+            </label>
+          </li>
+        </ol>
+
+        <p>Запишите номера выбранных ответов.</p>
+
+        <p class="oge-answer-label">Ответ:</p>
+        <div
+          class="oge-answer-cells"
+          role="group"
+          aria-label="Номера двух выбранных утверждений (порядок цифр в ячейках любой)"
+        >
+          <input
+            id="ansDigit1-1422"
+            type="text"
+            inputmode="numeric"
+            maxlength="1"
+            aria-label="Первая ячейка ответа"
+            autocomplete="off"
+          />
+          <input
+            id="ansDigit2-1422"
+            type="text"
+            inputmode="numeric"
+            maxlength="1"
+            aria-label="Вторая ячейка ответа"
+            autocomplete="off"
+          />
+        </div>
+
+        <p style="margin-top: 16px">
+          <button type="button" id="checkBtn-1422">Проверить</button>
+        </p>
+        <p id="resultOut-1422" class="result" role="status"></p>
+      </div>
+      <h3 class="oge-example-title" id="oge-ex-title-1423"><a class="oge-task-seq" href="ex/1423.html">Задание 6 № 1423</a></h3>
+<div class="oge-subtask" id="oge-ex-1423" data-oge-checkbox-max="2" data-oge-two-choice-correct="3|5" data-oge-option-count="5">
+<p>
+          Какие <strong>два утверждения</strong> являются <strong>верными для характеристики натрия</strong>
+          и <strong>неверными для характеристики хлора</strong>?
+        </p>
+
+        <ol class="oge-statements">
+          <li>
+            <label>
+              <input type="checkbox" name="st" value="1" />
+              <span>Соответствующее простое вещество является жидким при обычных условиях.</span>
+            </label>
+          </li>
+          <li>
+            <label>
+              <input type="checkbox" name="st" value="2" />
+              <span>Электроны в атоме расположены на трёх электронных слоях.</span>
+            </label>
+          </li>
+          <li>
+            <label>
+              <input type="checkbox" name="st" value="3" />
+              <span>Является металлом.</span>
+            </label>
+          </li>
+          <li>
+            <label>
+              <input type="checkbox" name="st" value="4" />
+              <span>Химический элемент образует летучее водородное соединение.</span>
+            </label>
+          </li>
+          <li>
+            <label>
+              <input type="checkbox" name="st" value="5" />
+              <span>Высшая валентность этого элемента равна I.</span>
+            </label>
+          </li>
+        </ol>
+
+        <p>Запишите номера выбранных ответов.</p>
+
+        <p class="oge-answer-label">Ответ:</p>
+        <div
+          class="oge-answer-cells"
+          role="group"
+          aria-label="Номера двух выбранных утверждений (порядок цифр в ячейках любой)"
+        >
+          <input
+            id="ansDigit1-1423"
+            type="text"
+            inputmode="numeric"
+            maxlength="1"
+            aria-label="Первая ячейка ответа"
+            autocomplete="off"
+          />
+          <input
+            id="ansDigit2-1423"
+            type="text"
+            inputmode="numeric"
+            maxlength="1"
+            aria-label="Вторая ячейка ответа"
+            autocomplete="off"
+          />
+        </div>
+
+        <p style="margin-top: 16px">
+          <button type="button" id="checkBtn-1423">Проверить</button>
+        </p>
+        <p id="resultOut-1423" class="result" role="status"></p>
+      </div>
       </article>
     </main>
     <script>
@@ -3774,6 +3916,60 @@
         const correct = ["4","5"];
         const optionCount = 5;
         const root = document.getElementById("oge-ex-1406");
+        if (!root) return;
+        const boxes = root.querySelectorAll('.oge-statements input[type="checkbox"]');
+        const btn = root.querySelector("button[type='button']");
+        const out = root.querySelector(".result");
+        const inputs = root.querySelectorAll(".oge-answer-cells input[type='text']");
+        if (!btn || !out || inputs.length < 2) return;
+        btn.addEventListener("click", function () {
+          const chosen = [];
+          boxes.forEach(function (cb) {
+            if (cb.checked) chosen.push(cb.value);
+          });
+          const ok = OGE_twoChoiceAllOk(
+            chosen,
+            inputs[0].value.trim(),
+            inputs[1].value.trim(),
+            correct,
+            optionCount,
+          );
+          out.textContent = ok ? OGE_CHECK.ok : OGE_CHECK.retry;
+        });
+      })();
+    </script>
+    <script>
+      (function () {
+        const correct = ["3","5"];
+        const optionCount = 5;
+        const root = document.getElementById("oge-ex-1422");
+        if (!root) return;
+        const boxes = root.querySelectorAll('.oge-statements input[type="checkbox"]');
+        const btn = root.querySelector("button[type='button']");
+        const out = root.querySelector(".result");
+        const inputs = root.querySelectorAll(".oge-answer-cells input[type='text']");
+        if (!btn || !out || inputs.length < 2) return;
+        btn.addEventListener("click", function () {
+          const chosen = [];
+          boxes.forEach(function (cb) {
+            if (cb.checked) chosen.push(cb.value);
+          });
+          const ok = OGE_twoChoiceAllOk(
+            chosen,
+            inputs[0].value.trim(),
+            inputs[1].value.trim(),
+            correct,
+            optionCount,
+          );
+          out.textContent = ok ? OGE_CHECK.ok : OGE_CHECK.retry;
+        });
+      })();
+    </script>
+    <script>
+      (function () {
+        const correct = ["3","5"];
+        const optionCount = 5;
+        const root = document.getElementById("oge-ex-1423");
         if (!root) return;
         const boxes = root.querySelectorAll('.oge-statements input[type="checkbox"]');
         const btn = root.querySelector("button[type='button']");

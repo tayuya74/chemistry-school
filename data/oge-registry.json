@@ -420,6 +420,8 @@
     { "id": 1418, "type": 7, "sourceDir": "fipi-bank" },
     { "id": 1419, "type": 7, "sourceDir": "fipi-bank" },
     { "id": 1420, "type": 7, "sourceDir": "fipi-bank" },
-    { "id": 1421, "type": 7, "sourceDir": "fipi-bank" }
+    { "id": 1421, "type": 7, "sourceDir": "fipi-bank" },
+    { "id": 1422, "type": 6, "sourceDir": "fipi-bank" },
+    { "id": 1423, "type": 6, "sourceDir": "fipi-bank" }
   ]
 }
