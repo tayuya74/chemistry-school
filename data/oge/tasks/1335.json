@@ -5,7 +5,9 @@
   "meta": {
     "lead": "Валентность и степень окисления химических элементов",
     "source": "Открытый банк заданий ОГЭ по химии (ФИПИ), oge.fipi.ru/bank, № EB2A48",
-    "sourceDir": "fipi-bank"
+    "sourceDir": "fipi-bank",
+    "advanced": true,
+    "advancedNote": "Три разных «неудобных» вещества: POCl₃, фосфористая кислота H₃PO₃ (фосфор +3, а не +5) и PH₄I (фосфор −3)."
   },
   "blocks": [
     {
@@ -16,9 +18,9 @@
     "leftTitle": "Формула вещества",
     "rightTitle": "Степень окисления фосфора",
     "left": [
-      "A) POCl<sub>3</sub>",
+      "А) POCl<sub>3</sub>",
       "Б) H<sub>3</sub>PO<sub>3</sub>",
-      "B) PH<sub>4</sub>I"
+      "В) PH<sub>4</sub>I"
     ],
     "right": [
       "1) −3",

@@ -5,7 +5,9 @@
   "meta": {
     "lead": "Типы химической связи",
     "source": "Открытый банк заданий ОГЭ по химии (ФИПИ), oge.fipi.ru/bank, № 26F3D7",
-    "sourceDir": "fipi-bank"
+    "sourceDir": "fipi-bank",
+    "advanced": true,
+    "advancedNote": "Ионная и ковалентная связь в одном веществе: K₃PO₄ и Ca(OH)₂."
   },
   "blocks": [
     {

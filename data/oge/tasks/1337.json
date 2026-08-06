@@ -5,7 +5,9 @@
   "meta": {
     "lead": "Валентность и степень окисления химических элементов",
     "source": "Открытый банк заданий ОГЭ по химии (ФИПИ), oge.fipi.ru/bank, № 426E03",
-    "sourceDir": "fipi-bank"
+    "sourceDir": "fipi-bank",
+    "advanced": true,
+    "advancedNote": "Две буквы дают одну и ту же цифру. В NF₃ азот положителен (+3), потому что фтор электроотрицательнее азота."
   },
   "blocks": [
     {
@@ -16,9 +18,9 @@
     "leftTitle": "Формула вещества",
     "rightTitle": "Степень окисления азота",
     "left": [
-      "A) NH<sub>4</sub>F",
+      "А) NH<sub>4</sub>F",
       "Б) N<sub>2</sub>O<sub>3</sub>",
-      "B) NF<sub>3</sub>"
+      "В) NF<sub>3</sub>"
     ],
     "right": [
       "1) +3",

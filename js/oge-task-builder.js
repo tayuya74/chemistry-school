@@ -85,7 +85,7 @@
         link.href = `ex/${row.id}.html`;
         link.target = "_blank";
         link.rel = "noopener";
-        link.textContent = `№ ${row.id} — ${row.lead}`;
+        link.textContent = `${row.advanced ? "★ " : ""}№ ${row.id} — ${row.lead}`;
         item.appendChild(link);
         list.appendChild(item);
       });
@@ -106,7 +106,9 @@
       return;
     }
 
-    const byType = groupByType(index);
+    const onlyHard = document.getElementById("onlyHard")?.checked;
+    const pool = onlyHard ? index.filter((row) => row.advanced) : index;
+    const byType = groupByType(pool);
     const warnings = [];
     const groups = [];
 
@@ -114,7 +116,7 @@
       const available = byType.get(type) ?? [];
       if (available.length < n) {
         warnings.push(
-          `Тип ${type}: запрошено ${n}, в наличии только ${available.length} — взяты все.`,
+          `Тип ${type}: запрошено ${n}, ${onlyHard ? "заданий повышенной сложности" : "в наличии"} только ${available.length} — взяты все.`,
         );
       }
       const picked = pickRandom(available, n);

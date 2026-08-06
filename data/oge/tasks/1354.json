@@ -5,7 +5,9 @@
   "meta": {
     "lead": "Типы химической связи",
     "source": "Открытый банк заданий ОГЭ по химии (ФИПИ), oge.fipi.ru/bank, № BDAC0C",
-    "sourceDir": "fipi-bank"
+    "sourceDir": "fipi-bank",
+    "advanced": true,
+    "advancedNote": "Ионная и ковалентная связь в одном веществе: в K₂CO₃ и Ca(OH)₂ ковалентные связи спрятаны внутри сложного иона."
   },
   "blocks": [
     {

@@ -5,7 +5,9 @@
   "meta": {
     "lead": "Классификация сложных веществ",
     "source": "Открытый банк заданий ОГЭ по химии (ФИПИ), oge.fipi.ru/bank, № 78850F",
-    "sourceDir": "fipi-bank"
+    "sourceDir": "fipi-bank",
+    "advanced": true,
+    "advancedNote": "В перечне есть кислая соль NaHCO₃ и сульфат аммония — оба легко принять за искомое."
   },
   "blocks": [
     {

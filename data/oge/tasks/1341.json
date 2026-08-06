@@ -5,7 +5,9 @@
   "meta": {
     "lead": "Валентность и степень окисления химических элементов",
     "source": "Открытый банк заданий ОГЭ по химии (ФИПИ), oge.fipi.ru/bank, № A6C80C",
-    "sourceDir": "fipi-bank"
+    "sourceDir": "fipi-bank",
+    "advanced": true,
+    "advancedNote": "Спрашивают не степень окисления, а валентность — и ответ римскими цифрами. Валентность серы в Na₂SO₃ равна IV."
   },
   "blocks": [
     {
@@ -16,9 +18,9 @@
     "leftTitle": "Формула вещества",
     "rightTitle": "Валентность серы",
     "left": [
-      "A) H<sub>2</sub>S",
+      "А) H<sub>2</sub>S",
       "Б) Na<sub>2</sub>SO<sub>3</sub>",
-      "B) SO<sub>3</sub>"
+      "В) SO<sub>3</sub>"
     ],
     "right": [
       "1) VI",

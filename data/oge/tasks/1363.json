@@ -5,7 +5,9 @@
   "meta": {
     "lead": "Типы химической связи",
     "source": "Открытый банк заданий ОГЭ по химии (ФИПИ), oge.fipi.ru/bank, № E460BA",
-    "sourceDir": "fipi-bank"
+    "sourceDir": "fipi-bank",
+    "advanced": true,
+    "advancedNote": "Гидроксид калия — вещество ионное, но связь O–H внутри гидроксид-иона ковалентная полярная, поэтому он подходит."
   },
   "blocks": [
     {

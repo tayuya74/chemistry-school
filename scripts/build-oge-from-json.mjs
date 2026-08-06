@@ -78,6 +78,19 @@ ${scripts}
 `;
 }
 
+/** Звёздочка «повышенная сложность» + пояснение, чем задание коварно */
+function hardMark(task) {
+  if (!task.meta.advanced) return "";
+  return `<span class="oge-hard" title="${task.meta.advancedNote}" aria-label="Задание повышенной сложности: ${task.meta.advancedNote}">★</span>`;
+}
+
+function hardNote(task) {
+  if (!task.meta.advanced) return "";
+  return `\n      <p class="tip oge-hard-note">
+        <strong>★ Задание повышенной сложности.</strong> ${task.meta.advancedNote}
+      </p>`;
+}
+
 function buildExPage(task) {
   const type = task.examType;
   const p = pad2(type);
@@ -97,8 +110,8 @@ function buildExPage(task) {
         ${prevLink}
         ${nextLink}
       </nav>
-      <h2>Задание ${type} № ${task.id}</h2>
-      <p class="lead">${task.meta.lead}</p>
+      <h2>${hardMark(task)}Задание ${type} № ${task.id}</h2>
+      <p class="lead">${task.meta.lead}</p>${hardNote(task)}
 
       ${html}
 
@@ -134,7 +147,7 @@ function buildTypePage(examType, tasks) {
       suffix,
       wrapId: `oge-ex-${task.id}`,
     });
-    inserts += `      <h3 class="oge-example-title" id="oge-ex-title-${task.id}"><a class="oge-task-seq" href="ex/${task.id}.html">Задание ${examType} № ${task.id}</a></h3>
+    inserts += `      <h3 class="oge-example-title" id="oge-ex-title-${task.id}">${hardMark(task)}<a class="oge-task-seq" href="ex/${task.id}.html">Задание ${examType} № ${task.id}</a></h3>${hardNote(task)}
 ${html}
 `;
     if (script) scripts += script + "\n";
@@ -188,7 +201,12 @@ function main() {
       buildExPage(task),
       "utf8",
     );
-    index.push({ id: task.id, examType: task.examType, lead: task.meta.lead });
+    index.push({
+      id: task.id,
+      examType: task.examType,
+      lead: task.meta.lead,
+      ...(task.meta.advanced ? { advanced: true } : {}),
+    });
   }
   index.sort((a, b) => a.id - b.id);
   fs.writeFileSync(

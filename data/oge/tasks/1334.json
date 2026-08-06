@@ -5,7 +5,9 @@
   "meta": {
     "lead": "Валентность и степень окисления химических элементов",
     "source": "Открытый банк заданий ОГЭ по химии (ФИПИ), oge.fipi.ru/bank, № D95A4E",
-    "sourceDir": "fipi-bank"
+    "sourceDir": "fipi-bank",
+    "advanced": true,
+    "advancedNote": "Две буквы дают одну и ту же цифру. Плюс PH₄I: фосфор здесь −3, как в фосфиде, хотя формула похожа на соль."
   },
   "blocks": [
     {
@@ -16,9 +18,9 @@
     "leftTitle": "Формула вещества",
     "rightTitle": "Степень окисления фосфора",
     "left": [
-      "A) Ca<sub>3</sub>(PO<sub>4</sub>)<sub>2</sub>",
+      "А) Ca<sub>3</sub>(PO<sub>4</sub>)<sub>2</sub>",
       "Б) Na<sub>3</sub>P",
-      "B) PH<sub>4</sub>I"
+      "В) PH<sub>4</sub>I"
     ],
     "right": [
       "1) −3",

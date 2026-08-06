@@ -513,6 +513,18 @@ html[data-theme="dark"] .oge-answer-cells input:focus-visible {
     0 0 0 3px var(--color-field-focus-ring);
 }
 
+/* Пометка «задание повышенной сложности» */
+.oge-hard {
+  color: #f59e0b;
+  font-size: 1.1em;
+  margin-right: 6px;
+  cursor: help;
+}
+
+.oge-hard-note {
+  margin-top: 4px;
+}
+
 /* Таблица конструктора своего варианта (pages/oge/builder.html) */
 .oge-builder-table {
   border-collapse: collapse;

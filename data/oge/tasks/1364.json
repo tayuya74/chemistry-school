@@ -5,7 +5,9 @@
   "meta": {
     "lead": "Типы химической связи",
     "source": "Открытый банк заданий ОГЭ по химии (ФИПИ), oge.fipi.ru/bank, № 63BCBE",
-    "sourceDir": "fipi-bank"
+    "sourceDir": "fipi-bank",
+    "advanced": true,
+    "advancedNote": "Фторид аммония ионный, но связь N–H внутри иона аммония ковалентная полярная."
   },
   "blocks": [
     {

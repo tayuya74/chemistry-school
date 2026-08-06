@@ -5,7 +5,9 @@
   "meta": {
     "lead": "Типы химической связи",
     "source": "Открытый банк заданий ОГЭ по химии (ФИПИ), oge.fipi.ru/bank, № 742855",
-    "sourceDir": "fipi-bank"
+    "sourceDir": "fipi-bank",
+    "advanced": true,
+    "advancedNote": "В NH₄Cl ковалентная полярная связь есть внутри иона аммония, хотя само вещество ионное."
   },
   "blocks": [
     {

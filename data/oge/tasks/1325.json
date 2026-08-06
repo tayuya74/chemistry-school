@@ -5,7 +5,9 @@
   "meta": {
     "lead": "Периодический закон и Периодическая система элементов",
     "source": "Открытый банк заданий ОГЭ по химии (ФИПИ), oge.fipi.ru/bank, № 9E0672",
-    "sourceDir": "fipi-bank"
+    "sourceDir": "fipi-bank",
+    "advanced": true,
+    "advancedNote": "Цифры в ответе идут в порядке убывания (3-2-1)."
   },
   "blocks": [
     {
