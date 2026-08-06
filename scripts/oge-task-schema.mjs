@@ -1,4 +1,4 @@
-import { expectedUiKind } from "./oge-ui-kind-map.mjs";
+import { allowedUiKinds, isAllowedUiKind } from "./oge-ui-kind-map.mjs";
 
 const OPEN_KINDS = new Set(["openReference", "experimentOpen"]);
 
@@ -65,8 +65,10 @@ export function validateTask(task, row) {
 
   if (task.id !== row.id) issues.push(`id mismatch: ${task.id}`);
   if (task.examType !== row.type) issues.push(`examType mismatch`);
-  if (task.uiKind !== expectedUiKind(row.type)) {
-    issues.push(`uiKind ${task.uiKind} != ${expectedUiKind(row.type)}`);
+  if (!isAllowedUiKind(row.type, task.uiKind)) {
+    issues.push(
+      `uiKind ${task.uiKind} не подходит для типа ${row.type} (допустимы: ${allowedUiKinds(row.type).join(", ")})`,
+    );
   }
 
   return [...issues, ...validateTaskShape(task)];
@@ -83,9 +85,10 @@ export function validateDraft(draft) {
     return [`examType must be a number 1..23, got: ${draft.examType}`];
   }
 
-  const expected = expectedUiKind(draft.examType);
-  if (draft.uiKind !== expected) {
-    issues.push(`uiKind ${draft.uiKind} != ${expected} (для examType ${draft.examType})`);
+  if (!isAllowedUiKind(draft.examType, draft.uiKind)) {
+    issues.push(
+      `uiKind ${draft.uiKind} не подходит для типа ${draft.examType} (допустимы: ${allowedUiKinds(draft.examType).join(", ")})`,
+    );
   }
 
   return [...issues, ...validateTaskShape(draft)];

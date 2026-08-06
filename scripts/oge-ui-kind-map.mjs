@@ -25,6 +25,27 @@ export const EXAM_TYPE_TO_UI_KIND = {
   23: "experimentOpen",
 };
 
+/**
+ * Дополнительно допустимые шаблоны для типа — когда формулировка задания менялась.
+ * Тип 3: раньше спрашивали «выберите два верных продолжения» (twoChoice),
+ * сейчас — «расположите элементы в порядке…» (orderedDigits). Нужны оба.
+ */
+export const ALSO_ALLOWED_UI_KINDS = {
+  3: ["twoChoice"],
+};
+
 export function expectedUiKind(examType) {
   return EXAM_TYPE_TO_UI_KIND[examType] ?? null;
+}
+
+/** Подходит ли шаблон для этого типа задания (основной или дополнительный). */
+export function isAllowedUiKind(examType, uiKind) {
+  if (uiKind === expectedUiKind(examType)) return true;
+  return (ALSO_ALLOWED_UI_KINDS[examType] ?? []).includes(uiKind);
+}
+
+/** Все допустимые шаблоны типа — для сообщений об ошибках. */
+export function allowedUiKinds(examType) {
+  const main = expectedUiKind(examType);
+  return [main, ...(ALSO_ALLOWED_UI_KINDS[examType] ?? [])].filter(Boolean);
 }
