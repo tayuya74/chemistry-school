@@ -1,0 +1,33 @@
+{
+  "id": 1457,
+  "examType": 8,
+  "uiKind": "twoChoice",
+  "meta": {
+    "lead": "Химические свойства простых веществ. Химические свойства оксидов",
+    "source": "Открытый банк заданий ОГЭ по химии (ФИПИ), oge.fipi.ru/bank, № 42DA48",
+    "sourceDir": "fipi-bank"
+  },
+  "blocks": [
+    {
+      "html": "<p>\n          Какие <strong>два</strong> из перечисленных веществ <strong>вступают в реакцию</strong>\n          с оксидом кальция?\n        </p>"
+    }
+  ],
+  "content": {
+    "statements": [
+      "CuCl2",
+      "NaNO3",
+      "P2O5",
+      "H2S",
+      "FeO"
+    ],
+    "maxChoices": 2,
+    "cellCount": 2
+  },
+  "answer": {
+    "correct": [
+      "3",
+      "4"
+    ]
+  },
+  "solution": null
+}

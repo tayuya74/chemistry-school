@@ -1,0 +1,35 @@
+{
+  "id": 1473,
+  "examType": 8,
+  "uiKind": "twoChoice",
+  "meta": {
+    "lead": "Химические свойства простых веществ. Химические свойства оксидов",
+    "source": "Открытый банк заданий ОГЭ по химии (ФИПИ), oge.fipi.ru/bank, № 24ECF4",
+    "sourceDir": "fipi-bank",
+    "advanced": true,
+    "advancedNote": "Ищем те, что НЕ реагируют. Магний не амфотерный, поэтому со щёлочью не реагирует; из соли натрия он тоже металл не вытеснит."
+  },
+  "blocks": [
+    {
+      "html": "<p>\n          Какие <strong>два</strong> из перечисленных веществ <strong>не вступают в реакцию</strong>\n          с магнием?\n        </p>"
+    }
+  ],
+  "content": {
+    "statements": [
+      "Na2SO4",
+      "HNO3",
+      "Br2",
+      "CuCl2",
+      "KOH"
+    ],
+    "maxChoices": 2,
+    "cellCount": 2
+  },
+  "answer": {
+    "correct": [
+      "1",
+      "5"
+    ]
+  },
+  "solution": null
+}

@@ -1,0 +1,35 @@
+{
+  "id": 1474,
+  "examType": 8,
+  "uiKind": "twoChoice",
+  "meta": {
+    "lead": "Химические свойства простых веществ. Химические свойства оксидов",
+    "source": "Открытый банк заданий ОГЭ по химии (ФИПИ), oge.fipi.ru/bank, № 8B22F3",
+    "sourceDir": "fipi-bank",
+    "advanced": true,
+    "advancedNote": "Ищем те, что НЕ реагируют. Оксид меди(II) реагирует с кислотами и восстанавливается угарным газом, но не с солями."
+  },
+  "blocks": [
+    {
+      "html": "<p>\n          Какие <strong>два</strong> из перечисленных веществ <strong>не вступают в реакцию</strong>\n          с оксидом меди(II)?\n        </p>"
+    }
+  ],
+  "content": {
+    "statements": [
+      "Na2SO4",
+      "CO",
+      "HNO3",
+      "CaSiO3",
+      "HBr"
+    ],
+    "maxChoices": 2,
+    "cellCount": 2
+  },
+  "answer": {
+    "correct": [
+      "1",
+      "4"
+    ]
+  },
+  "solution": null
+}

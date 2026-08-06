@@ -1,0 +1,33 @@
+{
+  "id": 1464,
+  "examType": 8,
+  "uiKind": "twoChoice",
+  "meta": {
+    "lead": "Химические свойства простых веществ. Химические свойства оксидов",
+    "source": "Открытый банк заданий ОГЭ по химии (ФИПИ), oge.fipi.ru/bank, № CAEC0E",
+    "sourceDir": "fipi-bank"
+  },
+  "blocks": [
+    {
+      "html": "<p>\n          Какие <strong>два</strong> из перечисленных веществ <strong>вступают в реакцию</strong>\n          с литием?\n        </p>"
+    }
+  ],
+  "content": {
+    "statements": [
+      "H3PO4",
+      "Al",
+      "KOH",
+      "BaSO4",
+      "N2"
+    ],
+    "maxChoices": 2,
+    "cellCount": 2
+  },
+  "answer": {
+    "correct": [
+      "1",
+      "5"
+    ]
+  },
+  "solution": null
+}

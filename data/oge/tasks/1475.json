@@ -1,0 +1,35 @@
+{
+  "id": 1475,
+  "examType": 8,
+  "uiKind": "twoChoice",
+  "meta": {
+    "lead": "Химические свойства простых веществ. Химические свойства оксидов",
+    "source": "Открытый банк заданий ОГЭ по химии (ФИПИ), oge.fipi.ru/bank, № 13250B",
+    "sourceDir": "fipi-bank",
+    "advanced": true,
+    "advancedNote": "Ищем те, что НЕ реагируют. K₂O — оснóвный оксид: с амфотерным Al₂O₃ реагирует, а с другим оснóвным FeO — нет."
+  },
+  "blocks": [
+    {
+      "html": "<p>\n          Какие <strong>два</strong> из перечисленных веществ <strong>не вступают в реакцию</strong>\n          с оксидом калия?\n        </p>"
+    }
+  ],
+  "content": {
+    "statements": [
+      "N2",
+      "FeO",
+      "SO2",
+      "Al2O3",
+      "H3PO4"
+    ],
+    "maxChoices": 2,
+    "cellCount": 2
+  },
+  "answer": {
+    "correct": [
+      "1",
+      "2"
+    ]
+  },
+  "solution": null
+}

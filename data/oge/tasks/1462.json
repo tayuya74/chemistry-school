@@ -1,0 +1,33 @@
+{
+  "id": 1462,
+  "examType": 8,
+  "uiKind": "twoChoice",
+  "meta": {
+    "lead": "Химические свойства простых веществ. Химические свойства оксидов",
+    "source": "Открытый банк заданий ОГЭ по химии (ФИПИ), oge.fipi.ru/bank, № D2F80D",
+    "sourceDir": "fipi-bank"
+  },
+  "blocks": [
+    {
+      "html": "<p>\n          Какие <strong>два</strong> из перечисленных веществ <strong>вступают в реакцию</strong>\n          с оксидом меди(II)?\n        </p>"
+    }
+  ],
+  "content": {
+    "statements": [
+      "Na2S",
+      "CO",
+      "KOH",
+      "H2SO4",
+      "O2"
+    ],
+    "maxChoices": 2,
+    "cellCount": 2
+  },
+  "answer": {
+    "correct": [
+      "2",
+      "4"
+    ]
+  },
+  "solution": null
+}

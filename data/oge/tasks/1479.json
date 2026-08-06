@@ -1,0 +1,35 @@
+{
+  "id": 1479,
+  "examType": 8,
+  "uiKind": "twoChoice",
+  "meta": {
+    "lead": "Химические свойства простых веществ. Химические свойства оксидов",
+    "source": "Открытый банк заданий ОГЭ по химии (ФИПИ), oge.fipi.ru/bank, № 00CF35",
+    "sourceDir": "fipi-bank",
+    "advanced": true,
+    "advancedNote": "Ищем те, что НЕ реагируют. FeO — оснóвный оксид: восстанавливается алюминием и угарным газом, растворяется в кислоте, но со щёлочью не реагирует."
+  },
+  "blocks": [
+    {
+      "html": "<p>\n          Какие <strong>два</strong> из перечисленных веществ <strong>не вступают в реакцию</strong>\n          с оксидом железа(II)?\n        </p>"
+    }
+  ],
+  "content": {
+    "statements": [
+      "Al",
+      "CO",
+      "NaOH",
+      "CaCl2",
+      "H2SO4"
+    ],
+    "maxChoices": 2,
+    "cellCount": 2
+  },
+  "answer": {
+    "correct": [
+      "3",
+      "4"
+    ]
+  },
+  "solution": null
+}

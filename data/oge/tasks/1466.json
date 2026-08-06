@@ -1,0 +1,33 @@
+{
+  "id": 1466,
+  "examType": 8,
+  "uiKind": "twoChoice",
+  "meta": {
+    "lead": "Химические свойства простых веществ. Химические свойства оксидов",
+    "source": "Открытый банк заданий ОГЭ по химии (ФИПИ), oge.fipi.ru/bank, № F7BCBC",
+    "sourceDir": "fipi-bank"
+  },
+  "blocks": [
+    {
+      "html": "<p>\n          Какие <strong>два</strong> из перечисленных веществ <strong>вступают в реакцию</strong>\n          с оксидом магния?\n        </p>"
+    }
+  ],
+  "content": {
+    "statements": [
+      "NaNO3",
+      "H2SO4",
+      "CO2",
+      "CaO",
+      "NaOH"
+    ],
+    "maxChoices": 2,
+    "cellCount": 2
+  },
+  "answer": {
+    "correct": [
+      "2",
+      "3"
+    ]
+  },
+  "solution": null
+}
