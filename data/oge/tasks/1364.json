@@ -1,0 +1,33 @@
+{
+  "id": 1364,
+  "examType": 5,
+  "uiKind": "twoChoice",
+  "meta": {
+    "lead": "Типы химической связи",
+    "source": "Открытый банк заданий ОГЭ по химии (ФИПИ), oge.fipi.ru/bank, № 63BCBE",
+    "sourceDir": "fipi-bank"
+  },
+  "blocks": [
+    {
+      "html": "<p>\n          Из предложенного перечня выберите два вещества, содержащие <strong>ковалентную полярную связь</strong>.\n        </p>"
+    }
+  ],
+  "content": {
+    "statements": [
+      "оксид магния",
+      "сульфид натрия",
+      "оксид азота(II)",
+      "белый фосфор",
+      "фторид аммония"
+    ],
+    "maxChoices": 2,
+    "cellCount": 2
+  },
+  "answer": {
+    "correct": [
+      "3",
+      "5"
+    ]
+  },
+  "solution": null
+}

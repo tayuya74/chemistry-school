@@ -1,0 +1,33 @@
+{
+  "id": 1367,
+  "examType": 5,
+  "uiKind": "twoChoice",
+  "meta": {
+    "lead": "Типы химической связи",
+    "source": "Открытый банк заданий ОГЭ по химии (ФИПИ), oge.fipi.ru/bank, № 1314A8",
+    "sourceDir": "fipi-bank"
+  },
+  "blocks": [
+    {
+      "html": "<p>\n          Из предложенного перечня выберите два вещества с <strong>ковалентной полярной связью</strong>.\n        </p>"
+    }
+  ],
+  "content": {
+    "statements": [
+      "MgF<sub>2</sub>",
+      "Na",
+      "NH<sub>3</sub>",
+      "F<sub>2</sub>",
+      "PBr<sub>3</sub>"
+    ],
+    "maxChoices": 2,
+    "cellCount": 2
+  },
+  "answer": {
+    "correct": [
+      "3",
+      "5"
+    ]
+  },
+  "solution": null
+}
