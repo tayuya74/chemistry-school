@@ -1514,54 +1514,6 @@
         </p>
         <p id="resultOut-1425" class="result" role="status"></p>
       </div>
-      <h3 class="oge-example-title" id="oge-ex-title-1426"><span class="oge-hard" title="В перечне OF₂ — это вообще не оксид: фтор электроотрицательнее кислорода." aria-label="Задание повышенной сложности: В перечне OF₂ — это вообще не оксид: фтор электроотрицательнее кислорода.">★</span><a class="oge-task-seq" href="ex/1426.html">Задание 7 № 1426</a></h3>
-      <p class="tip oge-hard-note">
-        <strong>★ Задание повышенной сложности.</strong> В перечне OF₂ — это вообще не оксид: фтор электроотрицательнее кислорода.
-      </p>
-<div class="oge-subtask" id="oge-ex-1426">
-<p>
-          Из предложенного перечня веществ выберите <strong>оснóвный оксид</strong> и <strong>амфотерный гидроксид</strong>.
-        </p>
-<ol>
-            <li>Al(OH)<sub>3</sub></li>
-            <li>Mg(OH)<sub>2</sub></li>
-            <li>OF<sub>2</sub></li>
-            <li>N<sub>2</sub>O</li>
-            <li>FeO</li>
-          </ol>
-<p>
-          Запишите в поле ответа сначала номер <strong>оснóвного оксида</strong>, а затем номер <strong>амфотерного гидроксида</strong>.
-        </p>
-
-        <p class="oge-answer-label">Ответ:</p>
-        <div
-          class="oge-answer-cells"
-          role="group"
-          aria-label="Последовательность цифр"
-        >
-          <input
-            id="d1-1426"
-            type="text"
-            inputmode="numeric"
-            maxlength="1"
-            autocomplete="off"
-            aria-label="Позиция 1"
-          />
-          <input
-            id="d2-1426"
-            type="text"
-            inputmode="numeric"
-            maxlength="1"
-            autocomplete="off"
-            aria-label="Позиция 2"
-          />
-        </div>
-
-        <p style="margin-top: 16px">
-          <button type="button" id="checkBtn-1426">Проверить</button>
-        </p>
-        <p id="resultOut-1426" class="result" role="status"></p>
-      </div>
       <h3 class="oge-example-title" id="oge-ex-title-1427"><a class="oge-task-seq" href="ex/1427.html">Задание 7 № 1427</a></h3>
 <div class="oge-subtask" id="oge-ex-1427">
 <p>
@@ -2760,22 +2712,6 @@
           const b = root.querySelector("#d2-1425").value.trim();
           
           const ok = a === "3" && b === "5";
-          out.textContent = ok ? OGE_CHECK.ok : OGE_CHECK.retry;
-        });
-      })();
-    </script>
-    <script>
-      (function () {
-        const root = document.getElementById("oge-ex-1426");
-        if (!root) return;
-        const btn = root.querySelector("button[type='button']");
-        const out = root.querySelector(".result");
-        if (!btn || !out) return;
-        btn.addEventListener("click", function () {
-          const a = root.querySelector("#d1-1426").value.trim();
-          const b = root.querySelector("#d2-1426").value.trim();
-          
-          const ok = a === "5" && b === "1";
           out.textContent = ok ? OGE_CHECK.ok : OGE_CHECK.retry;
         });
       })();

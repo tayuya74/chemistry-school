@@ -2662,76 +2662,6 @@
         </p>
         <p id="resultOut-1366" class="result" role="status"></p>
       </div>
-      <h3 class="oge-example-title" id="oge-ex-title-1367"><a class="oge-task-seq" href="ex/1367.html">Задание 5 № 1367</a></h3>
-<div class="oge-subtask" id="oge-ex-1367" data-oge-checkbox-max="2" data-oge-two-choice-correct="3|5" data-oge-option-count="5">
-<p>
-          Из предложенного перечня выберите два вещества с <strong>ковалентной полярной связью</strong>.
-        </p>
-
-        <ol class="oge-statements">
-          <li>
-            <label>
-              <input type="checkbox" name="st" value="1" />
-              <span>MgF<sub>2</sub></span>
-            </label>
-          </li>
-          <li>
-            <label>
-              <input type="checkbox" name="st" value="2" />
-              <span>Na</span>
-            </label>
-          </li>
-          <li>
-            <label>
-              <input type="checkbox" name="st" value="3" />
-              <span>NH<sub>3</sub></span>
-            </label>
-          </li>
-          <li>
-            <label>
-              <input type="checkbox" name="st" value="4" />
-              <span>F<sub>2</sub></span>
-            </label>
-          </li>
-          <li>
-            <label>
-              <input type="checkbox" name="st" value="5" />
-              <span>PBr<sub>3</sub></span>
-            </label>
-          </li>
-        </ol>
-
-        <p>Запишите номера выбранных ответов.</p>
-
-        <p class="oge-answer-label">Ответ:</p>
-        <div
-          class="oge-answer-cells"
-          role="group"
-          aria-label="Номера двух выбранных утверждений (порядок цифр в ячейках любой)"
-        >
-          <input
-            id="ansDigit1-1367"
-            type="text"
-            inputmode="numeric"
-            maxlength="1"
-            aria-label="Первая ячейка ответа"
-            autocomplete="off"
-          />
-          <input
-            id="ansDigit2-1367"
-            type="text"
-            inputmode="numeric"
-            maxlength="1"
-            aria-label="Вторая ячейка ответа"
-            autocomplete="off"
-          />
-        </div>
-
-        <p style="margin-top: 16px">
-          <button type="button" id="checkBtn-1367">Проверить</button>
-        </p>
-        <p id="resultOut-1367" class="result" role="status"></p>
-      </div>
       <h3 class="oge-example-title" id="oge-ex-title-1368"><a class="oge-task-seq" href="ex/1368.html">Задание 5 № 1368</a></h3>
 <div class="oge-subtask" id="oge-ex-1368" data-oge-checkbox-max="2" data-oge-two-choice-correct="1|5" data-oge-option-count="5">
 <p>
@@ -4213,33 +4143,6 @@
         const correct = ["3","4"];
         const optionCount = 5;
         const root = document.getElementById("oge-ex-1366");
-        if (!root) return;
-        const boxes = root.querySelectorAll('.oge-statements input[type="checkbox"]');
-        const btn = root.querySelector("button[type='button']");
-        const out = root.querySelector(".result");
-        const inputs = root.querySelectorAll(".oge-answer-cells input[type='text']");
-        if (!btn || !out || inputs.length < 2) return;
-        btn.addEventListener("click", function () {
-          const chosen = [];
-          boxes.forEach(function (cb) {
-            if (cb.checked) chosen.push(cb.value);
-          });
-          const ok = OGE_twoChoiceAllOk(
-            chosen,
-            inputs[0].value.trim(),
-            inputs[1].value.trim(),
-            correct,
-            optionCount,
-          );
-          out.textContent = ok ? OGE_CHECK.ok : OGE_CHECK.retry;
-        });
-      })();
-    </script>
-    <script>
-      (function () {
-        const correct = ["3","5"];
-        const optionCount = 5;
-        const root = document.getElementById("oge-ex-1367");
         if (!root) return;
         const boxes = root.querySelectorAll('.oge-statements input[type="checkbox"]');
         const btn = root.querySelector("button[type='button']");
