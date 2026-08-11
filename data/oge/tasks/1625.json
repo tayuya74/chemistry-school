@@ -1,0 +1,34 @@
+{
+  "id": 1625,
+  "examType": 14,
+  "uiKind": "twoChoice",
+  "meta": {
+    "lead": "Реакции ионного обмена",
+    "source": "Открытый банк заданий ОГЭ по химии (ФИПИ), oge.fipi.ru/bank, № A8A2D7",
+    "sourceDir": "fipi-bank"
+  },
+  "blocks": [
+    {
+      "html": "<p>Выберите <strong>два исходных вещества</strong>, взаимодействию водных растворов которых соответствует сокращённое ионное уравнение реакции:<br />3Li<sup>+</sup> + PO<sub>4</sub><sup>3−</sup> = Li<sub>3</sub>PO<sub>4</sub></p>"
+    }
+  ],
+  "content": {
+    "statements": [
+      "литий",
+      "оксид лития",
+      "сульфат лития",
+      "фосфат кальция",
+      "оксид фосфора(V)",
+      "фосфат калия"
+    ],
+    "maxChoices": 2,
+    "cellCount": 2
+  },
+  "answer": {
+    "correct": [
+      "3",
+      "6"
+    ]
+  },
+  "solution": null
+}

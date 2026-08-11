@@ -1,0 +1,34 @@
+{
+  "id": 1620,
+  "examType": 14,
+  "uiKind": "twoChoice",
+  "meta": {
+    "lead": "Реакции ионного обмена",
+    "source": "Открытый банк заданий ОГЭ по химии (ФИПИ), oge.fipi.ru/bank, № 4E6386",
+    "sourceDir": "fipi-bank"
+  },
+  "blocks": [
+    {
+      "html": "<p>Из предложенного перечня выберите <strong>две формулы ионов</strong>, при взаимодействии которых <strong>выпадает осадок</strong>.</p>"
+    }
+  ],
+  "content": {
+    "statements": [
+      "Li<sup>+</sup>",
+      "K<sup>+</sup>",
+      "Na<sup>+</sup>",
+      "SO<sub>4</sub><sup>2−</sup>",
+      "SO<sub>3</sub><sup>2−</sup>",
+      "PO<sub>4</sub><sup>3−</sup>"
+    ],
+    "maxChoices": 2,
+    "cellCount": 2
+  },
+  "answer": {
+    "correct": [
+      "1",
+      "6"
+    ]
+  },
+  "solution": null
+}

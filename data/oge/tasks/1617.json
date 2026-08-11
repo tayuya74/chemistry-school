@@ -1,0 +1,34 @@
+{
+  "id": 1617,
+  "examType": 14,
+  "uiKind": "twoChoice",
+  "meta": {
+    "lead": "Реакции ионного обмена",
+    "source": "Открытый банк заданий ОГЭ по химии (ФИПИ), oge.fipi.ru/bank, № B1CA6D",
+    "sourceDir": "fipi-bank"
+  },
+  "blocks": [
+    {
+      "html": "<p>Выберите <strong>два иона</strong>, взаимодействие которых сопровождается <strong>выделением газа</strong>.</p>"
+    }
+  ],
+  "content": {
+    "statements": [
+      "SO<sub>4</sub><sup>2−</sup>",
+      "SO<sub>3</sub><sup>2−</sup>",
+      "NO<sub>3</sub><sup>−</sup>",
+      "H<sup>+</sup>",
+      "NH<sub>4</sub><sup>+</sup>",
+      "Ba<sup>2+</sup>"
+    ],
+    "maxChoices": 2,
+    "cellCount": 2
+  },
+  "answer": {
+    "correct": [
+      "2",
+      "4"
+    ]
+  },
+  "solution": null
+}

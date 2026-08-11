@@ -1,0 +1,34 @@
+{
+  "id": 1636,
+  "examType": 14,
+  "uiKind": "twoChoice",
+  "meta": {
+    "lead": "Реакции ионного обмена",
+    "source": "Открытый банк заданий ОГЭ по химии (ФИПИ), oge.fipi.ru/bank, № 08F557",
+    "sourceDir": "fipi-bank"
+  },
+  "blocks": [
+    {
+      "html": "<p>Выберите <strong>два исходных вещества</strong>, взаимодействию водных растворов которых соответствует сокращённое ионное уравнение реакции:<br />Ag<sup>+</sup> + Cl<sup>−</sup> = AgCl</p>"
+    }
+  ],
+  "content": {
+    "statements": [
+      "Ag<sub>2</sub>O",
+      "Ag",
+      "AgNO<sub>3</sub>",
+      "Cl<sub>2</sub>",
+      "HClO",
+      "KCl"
+    ],
+    "maxChoices": 2,
+    "cellCount": 2
+  },
+  "answer": {
+    "correct": [
+      "3",
+      "6"
+    ]
+  },
+  "solution": null
+}

@@ -1,0 +1,34 @@
+{
+  "id": 1629,
+  "examType": 14,
+  "uiKind": "twoChoice",
+  "meta": {
+    "lead": "Реакции ионного обмена",
+    "source": "Открытый банк заданий ОГЭ по химии (ФИПИ), oge.fipi.ru/bank, № 858CFE",
+    "sourceDir": "fipi-bank"
+  },
+  "blocks": [
+    {
+      "html": "<p>Выберите <strong>два исходных вещества</strong>, взаимодействию водных растворов которых соответствует сокращённое ионное уравнение реакции:<br />Al<sup>3+</sup> + 3OH<sup>−</sup> = Al(OH)<sub>3</sub></p>"
+    }
+  ],
+  "content": {
+    "statements": [
+      "Al<sub>2</sub>O<sub>3</sub>",
+      "AlBr<sub>3</sub>",
+      "AlPO<sub>4</sub>",
+      "KOH",
+      "H<sub>2</sub>O",
+      "Mg(OH)<sub>2</sub>"
+    ],
+    "maxChoices": 2,
+    "cellCount": 2
+  },
+  "answer": {
+    "correct": [
+      "2",
+      "4"
+    ]
+  },
+  "solution": null
+}

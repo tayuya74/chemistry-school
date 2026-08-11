@@ -1,0 +1,34 @@
+{
+  "id": 1630,
+  "examType": 14,
+  "uiKind": "twoChoice",
+  "meta": {
+    "lead": "Реакции ионного обмена",
+    "source": "Открытый банк заданий ОГЭ по химии (ФИПИ), oge.fipi.ru/bank, № E21845",
+    "sourceDir": "fipi-bank"
+  },
+  "blocks": [
+    {
+      "html": "<p>Выберите <strong>два исходных вещества</strong>, взаимодействию водных растворов которых соответствует сокращённое ионное уравнение реакции:<br />3Sr<sup>2+</sup> + 2PO<sub>4</sub><sup>3−</sup> = Sr<sub>3</sub>(PO<sub>4</sub>)<sub>2</sub></p>"
+    }
+  ],
+  "content": {
+    "statements": [
+      "Sr",
+      "SrO",
+      "SrSO<sub>4</sub>",
+      "Sr(NO<sub>3</sub>)<sub>2</sub>",
+      "H<sub>3</sub>PO<sub>4</sub>",
+      "K<sub>3</sub>PO<sub>4</sub>"
+    ],
+    "maxChoices": 2,
+    "cellCount": 2
+  },
+  "answer": {
+    "correct": [
+      "4",
+      "6"
+    ]
+  },
+  "solution": null
+}
