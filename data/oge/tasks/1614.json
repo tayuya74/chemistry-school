@@ -1,0 +1,33 @@
+{
+  "id": 1614,
+  "examType": 13,
+  "uiKind": "twoChoice",
+  "meta": {
+    "lead": "Электролитическая диссоциация",
+    "source": "Открытый банк заданий ОГЭ по химии (ФИПИ), oge.fipi.ru/bank, № A6BB65",
+    "sourceDir": "fipi-bank"
+  },
+  "blocks": [
+    {
+      "html": "<p>Укажите, какие ионы и в каком количестве образуются в растворе при полной диссоциации 1 моль <strong>сульфита натрия</strong>.</p>"
+    }
+  ],
+  "content": {
+    "statements": [
+      "1 моль Na<sup>+</sup>",
+      "2 моль Na<sup>+</sup>",
+      "1 моль SO<sub>4</sub><sup>2−</sup>",
+      "1 моль SO<sub>3</sub><sup>2−</sup>",
+      "2 моль S<sup>2−</sup>"
+    ],
+    "maxChoices": 2,
+    "cellCount": 2
+  },
+  "answer": {
+    "correct": [
+      "2",
+      "4"
+    ]
+  },
+  "solution": null
+}

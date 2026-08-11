@@ -1,0 +1,35 @@
+{
+  "id": 1594,
+  "examType": 13,
+  "uiKind": "twoChoice",
+  "meta": {
+    "lead": "Электролитическая диссоциация",
+    "source": "Открытый банк заданий ОГЭ по химии (ФИПИ), oge.fipi.ru/bank, № D3FDF0",
+    "sourceDir": "fipi-bank",
+    "advanced": true,
+    "advancedNote": "Азотистая кислота HNO₂ и сероводородная H₂S — слабые, а похожие по виду HCl сильная, оксиды же не электролиты."
+  },
+  "blocks": [
+    {
+      "html": "<p>Из предложенного перечня веществ выберите <strong>два слабых электролита</strong>.</p>"
+    }
+  ],
+  "content": {
+    "statements": [
+      "CaO",
+      "HCl",
+      "HNO<sub>2</sub>",
+      "H<sub>2</sub>S",
+      "SO<sub>3</sub>"
+    ],
+    "maxChoices": 2,
+    "cellCount": 2
+  },
+  "answer": {
+    "correct": [
+      "3",
+      "4"
+    ]
+  },
+  "solution": null
+}

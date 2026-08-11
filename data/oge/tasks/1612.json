@@ -1,0 +1,33 @@
+{
+  "id": 1612,
+  "examType": 13,
+  "uiKind": "twoChoice",
+  "meta": {
+    "lead": "Электролитическая диссоциация",
+    "source": "Открытый банк заданий ОГЭ по химии (ФИПИ), oge.fipi.ru/bank, № F26CEA",
+    "sourceDir": "fipi-bank"
+  },
+  "blocks": [
+    {
+      "html": "<p>Укажите, какие ионы и в каком количестве образуются в растворе при полной диссоциации 1 моль <strong>сульфата железа(III)</strong>.</p>"
+    }
+  ],
+  "content": {
+    "statements": [
+      "1 моль Fe<sup>3+</sup>",
+      "2 моль Fe<sup>3+</sup>",
+      "3 моль Fe<sup>3+</sup>",
+      "1 моль SO<sub>4</sub><sup>2−</sup>",
+      "3 моль SO<sub>4</sub><sup>2−</sup>"
+    ],
+    "maxChoices": 2,
+    "cellCount": 2
+  },
+  "answer": {
+    "correct": [
+      "2",
+      "5"
+    ]
+  },
+  "solution": null
+}

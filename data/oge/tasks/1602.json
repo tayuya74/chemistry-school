@@ -1,0 +1,35 @@
+{
+  "id": 1602,
+  "examType": 13,
+  "uiKind": "twoChoice",
+  "meta": {
+    "lead": "Электролитическая диссоциация",
+    "source": "Открытый банк заданий ОГЭ по химии (ФИПИ), oge.fipi.ru/bank, № 3AE64D",
+    "sourceDir": "fipi-bank",
+    "advanced": true,
+    "advancedNote": "Хлор есть во всех пяти формулах, но хлорид-ион дают только две: гипохлорит и хлорат — это другие анионы, а CCl₄ вообще не электролит."
+  },
+  "blocks": [
+    {
+      "html": "<p>При внесении в воду каких <strong>двух</strong> из представленных веществ образуются <strong>хлорид-анионы</strong>?</p>"
+    }
+  ],
+  "content": {
+    "statements": [
+      "CCl<sub>4</sub>",
+      "AlCl<sub>3</sub>",
+      "KCl",
+      "KClO",
+      "KClO<sub>3</sub>"
+    ],
+    "maxChoices": 2,
+    "cellCount": 2
+  },
+  "answer": {
+    "correct": [
+      "2",
+      "3"
+    ]
+  },
+  "solution": null
+}
