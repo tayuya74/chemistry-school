@@ -699,24 +699,19 @@ html[data-theme="dark"] .oge-answer-cells input:focus-visible {
   white-space: nowrap;
 }
 
-/* Связанное задание пары 18–19, раскрывается по клику */
-.oge-linked {
-  border: 1px solid var(--color-border);
-  border-radius: 10px;
-  padding: 12px 16px;
-  background: var(--color-card-bg);
+/* Пара заданий 18–19 на одной странице: второе идёт сразу за первым,
+   отделённое чертой, как в экзаменационном бланке. */
+.oge-pair-title {
+  margin-top: 32px;
+  padding-top: 20px;
+  border-top: 1px solid var(--color-border);
 }
 
-.oge-linked > summary {
-  cursor: pointer;
-  font-weight: 600;
-  padding: 4px 0;
-}
-
-.oge-linked[open] > summary {
-  margin-bottom: 8px;
-  border-bottom: 1px solid var(--color-border);
-  padding-bottom: 10px;
+.oge-pair-back {
+  margin-top: 24px;
+  padding-top: 16px;
+  border-top: 1px solid var(--color-border);
+  font-size: 0.97rem;
 }
 
 /* Видно только программам чтения с экрана */

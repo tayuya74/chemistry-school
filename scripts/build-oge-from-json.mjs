@@ -94,41 +94,45 @@ function hardNote(task) {
 /**
  * Задания 18 и 19 в варианте идут парой с общим условием: сначала считают
  * массовую долю, затем по ней — массу. Если у задания указан meta.linkedTaskId,
- * второе задание пары показываем прямо здесь, но свёрнутым: пока ученик не
- * решил первое, второе ему видеть незачем.
+ * показываем пару так же, как в экзаменационном бланке: одна напоминалка про
+ * атомные массы, один текст о веществе, а под ними оба задания подряд.
+ *
+ * Общую часть второго задания (meta.sharedBlocks первых блоков) не повторяем —
+ * она уже напечатана выше.
  */
 function renderLinkedTask(task) {
   const linkedId = task.meta.linkedTaskId;
   if (!linkedId) return { html: "", script: "" };
 
   const linked = loadTask(linkedId);
+  /* Пара упорядочена: 18 — начало задачи, 19 — её продолжение. Разворачиваем
+     на странице только вперёд, иначе задание 19 показало бы 18 второй раз. */
+  if (linked.examType <= task.examType) {
+    return {
+      script: "",
+      html: `
+      <p class="oge-pair-back">
+        Начало этой задачи — <a href="${linkedId}.html">задание ${linked.examType} № ${linkedId}</a>:
+        там вычисляют массовую долю, которая нужна здесь.
+      </p>`,
+    };
+  }
+
+  const shared = linked.meta.sharedBlocks ?? 0;
+  const own = { ...linked, blocks: linked.blocks.slice(shared) };
   const wrapId = `oge-ex-linked-${linkedId}`;
-  const { html, script } = renderSubtask(linked, {
+  const { html, script } = renderSubtask(own, {
     mode: "ex",
     suffix: "L",
     wrapId,
   });
 
-  /* Пара упорядочена: 18 — начало задачи, 19 — её продолжение. */
-  const isNext = linked.examType > task.examType;
-  const summary = isNext
-    ? `Задание ${linked.examType} № ${linkedId} — продолжение этой задачи`
-    : `Задание ${linked.examType} № ${linkedId} — начало этой задачи`;
-  const hint = isNext
-    ? `Решите его, используя величину, которую получили выше, с указанной там точностью.`
-    : `С него задача начинается: там вычисляют массовую долю, которая нужна здесь.`;
-
   return {
     script,
     html: `
-      <details class="oge-linked" style="margin-top: 28px">
-        <summary>${hardMark(linked)}${summary}</summary>
-        <p class="lead">${linked.meta.lead}</p>${hardNote(linked)}
-        <p class="ref-table-note">${hint}</p>
-        ${html}
-        <p>Источник: ${linked.meta.source}</p>
-        <p><a href="${linkedId}.html">Открыть задание ${linked.examType} № ${linkedId} отдельной страницей</a></p>
-      </details>`,
+      <h3 class="oge-example-title oge-pair-title">${hardMark(linked)}<a class="oge-task-seq" href="${linkedId}.html">Задание ${linked.examType} № ${linkedId}</a></h3>${hardNote(linked)}
+${html}
+      <p>Источник: ${linked.meta.source}</p>`,
   };
 }
 
@@ -157,8 +161,8 @@ function buildExPage(task) {
       <p class="lead">${task.meta.lead}</p>${hardNote(task)}
 
       ${html}
-${linked.html}
-      <p>Источник: ${task.meta.source}</p>`;
+      <p>Источник: ${task.meta.source}</p>
+${linked.html}`;
 
   return shell({
     title: `ОГЭ, задание ${type} № ${task.id} — ${task.meta.lead}`,

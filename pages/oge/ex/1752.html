@@ -51,12 +51,12 @@
           При проведении расчётов для всех элементов, кроме хлора, используйте
           целые значения относительных атомных масс (Ar(Cl) = 35,5).
         </p>
+<p>
+          Иодат калия (KIO<sub>3</sub>) — это калиевая соль иодноватой кислоты; используется в пищевой промышленности в качестве добавки E-917 и для иодирования поваренной соли.
+        </p>
 <p class="tip" style="margin-bottom: 16px">
           При выполнении задания 19 используйте величину, которая определена в
           задании 18 с указанной в нём степенью точности.
-        </p>
-<p class="tip" style="margin-bottom: 16px">
-          Иодат калия (KIO<sub>3</sub>) — это калиевая соль иодноватой кислоты; используется в пищевой промышленности в качестве добавки E-917 и для иодирования поваренной соли.
         </p>
 <p>
           В 1 кг иодированной соли содержится 40 мг иодата калия. <strong>Определите массу (в миллиграммах) иода, который содержится в 10 г иодированной соли.</strong> Запишите число с точностью до сотых.
@@ -141,55 +141,12 @@
         
         </details>
       </div>
-
-      <details class="oge-linked" style="margin-top: 28px">
-        <summary>Задание 18 № 1751 — начало этой задачи</summary>
-        <p class="lead">Вычисление массовой доли химического элемента в веществе</p>
-        <p class="ref-table-note">С него задача начинается: там вычисляют массовую долю, которая нужна здесь.</p>
-        <div class="oge-subtask" id="oge-ex-linked-1751">
-<p class="tip" style="margin-bottom: 16px">
-          При проведении расчётов для всех элементов, кроме хлора, используйте
-          целые значения относительных атомных масс (Ar(Cl) = 35,5).
-        </p>
-<p class="tip" style="margin-bottom: 16px">
-          Задания 18 и 19 выполняются с использованием следующего текста.
-        </p>
-<p>
-          Иодат калия (KIO<sub>3</sub>) — это калиевая соль иодноватой кислоты; используется в пищевой промышленности в качестве добавки E-917 и для иодирования поваренной соли.
-        </p>
-<p>
-          <strong>Вычислите массовую долю (в процентах) иода в иодате калия.</strong> Запишите число с точностью до целых.
-        </p>
-
-        <p class="oge-answer-label">Ответ (%):</p>
-        <p>
-          <input
-            id="ansNumL"
-            type="text"
-            inputmode="decimal"
-            class="oge-answer-input"
-            autocomplete="off"
-            aria-label="Числовой ответ"
-          />
-        </p>
-        <p style="margin-top: 16px">
-          <button type="button" id="checkBtnL">Проверить</button>
-        </p>
-        <p id="resultOutL" class="result" role="status"></p>
-        <details class="tip" style="margin-top: 24px">
-          <summary style="cursor: pointer; font-weight: 600">
-            Ход решения
-          </summary>
-          
-          <p>M(KIO<sub>3</sub>) = 39 + 127 + 3 · 16 = 214 г/моль.</p>
-          <p>w(I) = 127 / 214 · 100 % = 59,3… % ≈ <strong>59 %</strong>.</p>
-        
-        </details>
-      </div>
-        <p>Источник: Открытый банк заданий ОГЭ по химии (ФИПИ), oge.fipi.ru/bank, № C0A234</p>
-        <p><a href="1751.html">Открыть задание 18 № 1751 отдельной страницей</a></p>
-      </details>
       <p>Источник: Открытый банк заданий ОГЭ по химии (ФИПИ), oge.fipi.ru/bank, № 18DEE2</p>
+
+      <p class="oge-pair-back">
+        Начало этой задачи — <a href="1751.html">задание 18 № 1751</a>:
+        там вычисляют массовую долю, которая нужна здесь.
+      </p>
       </article>
     </main>
     <script>
@@ -202,19 +159,6 @@
         btn.textContent = "Ответ";
         btn.addEventListener("click", function () {
           out.textContent = OGE_EX_formatAnswer(["0,24"]);
-        });
-      })();
-    </script>
-    <script>
-      (function () {
-        const root = document.getElementById("oge-ex-linked-1751");
-        if (!root) return;
-        const btn = root.querySelector("button[type='button']");
-        const out = root.querySelector(".result");
-        if (!btn || !out) return;
-        btn.textContent = "Ответ";
-        btn.addEventListener("click", function () {
-          out.textContent = OGE_EX_formatAnswer(["59"]);
         });
       })();
     </script>
