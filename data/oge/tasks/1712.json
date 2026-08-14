@@ -1,0 +1,38 @@
+{
+  "id": 1712,
+  "examType": 17,
+  "uiKind": "matchTriple",
+  "meta": {
+    "lead": "Качественные реакции неорганических соединений. Индикаторы",
+    "source": "Открытый банк заданий ОГЭ по химии (ФИПИ), oge.fipi.ru/bank, № A80EBE",
+    "sourceDir": "fipi-bank"
+  },
+  "blocks": [
+    {
+      "html": "<p>\n          Установите соответствие между <strong>двумя веществами</strong> и\n          <strong>реактивом</strong>, с помощью которого можно различить эти вещества:\n          к каждой позиции, обозначенной буквой, подберите соответствующую позицию,\n          обозначенную цифрой.\n        </p>"
+    }
+  ],
+  "content": {
+    "leftTitle": "Вещества",
+    "rightTitle": "Реактив",
+    "left": [
+      "А) LiNO<sub>3</sub> и KOH",
+      "Б) NaCl и MgCl<sub>2</sub>",
+      "В) K<sub>2</sub>SO<sub>4</sub> и KBr"
+    ],
+    "right": [
+      "1) Ba(NO<sub>3</sub>)<sub>2</sub>",
+      "2) NaOH",
+      "3) HCl",
+      "4) фенолфталеин"
+    ]
+  },
+  "answer": {
+    "mapping": {
+      "A": "4",
+      "B": "2",
+      "V": "1"
+    }
+  },
+  "solution": null
+}

@@ -1,0 +1,38 @@
+{
+  "id": 1689,
+  "examType": 17,
+  "uiKind": "matchTriple",
+  "meta": {
+    "lead": "Качественные реакции неорганических соединений. Индикаторы",
+    "source": "Открытый банк заданий ОГЭ по химии (ФИПИ), oge.fipi.ru/bank, № 45623A",
+    "sourceDir": "fipi-bank"
+  },
+  "blocks": [
+    {
+      "html": "<p>\n          Установите соответствие между <strong>двумя веществами</strong> и\n          <strong>реактивом</strong>, с помощью которого можно различить эти вещества:\n          к каждой позиции, обозначенной буквой, подберите соответствующую позицию,\n          обозначенную цифрой.\n        </p>"
+    }
+  ],
+  "content": {
+    "leftTitle": "Вещества",
+    "rightTitle": "Реактив",
+    "left": [
+      "А) FeO и FeS",
+      "Б) BaCO<sub>3</sub> и Ba<sub>3</sub>(PO<sub>4</sub>)<sub>2</sub>",
+      "В) Al(OH)<sub>3</sub> и Mg(OH)<sub>2</sub>"
+    ],
+    "right": [
+      "1) Cu",
+      "2) HCl",
+      "3) KOH",
+      "4) Na<sub>2</sub>SO<sub>4</sub>"
+    ]
+  },
+  "answer": {
+    "mapping": {
+      "A": "2",
+      "B": "2",
+      "V": "3"
+    }
+  },
+  "solution": null
+}

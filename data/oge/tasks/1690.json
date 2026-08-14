@@ -1,0 +1,38 @@
+{
+  "id": 1690,
+  "examType": 17,
+  "uiKind": "matchTriple",
+  "meta": {
+    "lead": "Качественные реакции неорганических соединений. Индикаторы",
+    "source": "Открытый банк заданий ОГЭ по химии (ФИПИ), oge.fipi.ru/bank, № 6E17EC",
+    "sourceDir": "fipi-bank"
+  },
+  "blocks": [
+    {
+      "html": "<p>\n          Установите соответствие между <strong>двумя веществами</strong> и\n          <strong>реактивом</strong>, с помощью которого можно различить эти вещества:\n          к каждой позиции, обозначенной буквой, подберите соответствующую позицию,\n          обозначенную цифрой.\n        </p>"
+    }
+  ],
+  "content": {
+    "leftTitle": "Вещества",
+    "rightTitle": "Реактив",
+    "left": [
+      "А) Fe и Ag",
+      "Б) CaCO<sub>3</sub> и Ca(OH)<sub>2</sub>",
+      "В) Al(OH)<sub>3</sub> и Mg(OH)<sub>2</sub>"
+    ],
+    "right": [
+      "1) HCl",
+      "2) Cu",
+      "3) Na<sub>2</sub>SO<sub>4</sub>",
+      "4) KOH"
+    ]
+  },
+  "answer": {
+    "mapping": {
+      "A": "1",
+      "B": "1",
+      "V": "4"
+    }
+  },
+  "solution": null
+}

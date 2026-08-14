@@ -1,0 +1,40 @@
+{
+  "id": 1696,
+  "examType": 17,
+  "uiKind": "matchTriple",
+  "meta": {
+    "lead": "Качественные реакции неорганических соединений. Индикаторы",
+    "source": "Открытый банк заданий ОГЭ по химии (ФИПИ), oge.fipi.ru/bank, № 0E3860",
+    "sourceDir": "fipi-bank",
+    "advanced": true,
+    "advancedNote": "Нитрат бария стоит в двух парах подряд, и реактив каждый раз нужен разный."
+  },
+  "blocks": [
+    {
+      "html": "<p>\n          Установите соответствие между <strong>двумя веществами</strong> и\n          <strong>реактивом</strong>, с помощью которого можно различить эти вещества:\n          к каждой позиции, обозначенной буквой, подберите соответствующую позицию,\n          обозначенную цифрой.\n        </p>"
+    }
+  ],
+  "content": {
+    "leftTitle": "Вещества",
+    "rightTitle": "Реактив",
+    "left": [
+      "А) MgCl<sub>2</sub> и Ba(NO<sub>3</sub>)<sub>2</sub>",
+      "Б) Ba(NO<sub>3</sub>)<sub>2</sub> и Na<sub>2</sub>SO<sub>4</sub>",
+      "В) NaHCO<sub>3</sub> и NaNO<sub>3</sub>"
+    ],
+    "right": [
+      "1) K<sub>3</sub>PO<sub>4</sub>",
+      "2) KCl",
+      "3) KOH",
+      "4) HCl"
+    ]
+  },
+  "answer": {
+    "mapping": {
+      "A": "3",
+      "B": "1",
+      "V": "4"
+    }
+  },
+  "solution": null
+}

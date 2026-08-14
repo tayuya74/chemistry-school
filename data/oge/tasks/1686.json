@@ -1,0 +1,38 @@
+{
+  "id": 1686,
+  "examType": 17,
+  "uiKind": "matchTriple",
+  "meta": {
+    "lead": "Качественные реакции неорганических соединений. Индикаторы",
+    "source": "Открытый банк заданий ОГЭ по химии (ФИПИ), oge.fipi.ru/bank, № 2DAEC5",
+    "sourceDir": "fipi-bank"
+  },
+  "blocks": [
+    {
+      "html": "<p>\n          Установите соответствие между <strong>двумя веществами</strong> и\n          <strong>реактивом</strong>, с помощью которого можно различить эти вещества:\n          к каждой позиции, обозначенной буквой, подберите соответствующую позицию,\n          обозначенную цифрой.\n        </p>"
+    }
+  ],
+  "content": {
+    "leftTitle": "Вещества",
+    "rightTitle": "Реактив",
+    "left": [
+      "А) Al и Ag",
+      "Б) Al(NO<sub>3</sub>)<sub>3</sub> и AgNO<sub>3</sub>",
+      "В) MgSO<sub>4</sub> и MgCl<sub>2</sub>"
+    ],
+    "right": [
+      "1) фенолфталеин",
+      "2) HCl",
+      "3) CaCO<sub>3</sub>",
+      "4) Ba(NO<sub>3</sub>)<sub>2</sub>"
+    ]
+  },
+  "answer": {
+    "mapping": {
+      "A": "2",
+      "B": "2",
+      "V": "4"
+    }
+  },
+  "solution": null
+}
