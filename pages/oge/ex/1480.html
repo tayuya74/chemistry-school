@@ -49,7 +49,7 @@
         <strong>★ Задание повышенной сложности.</strong> Алюминий — амфотерный металл: он реагирует не только с кислотой, но и со щёлочью KOH. Про вторую реакцию часто забывают.
       </p>
 
-      <div class="oge-subtask" data-oge-checkbox-max="2" data-oge-two-choice-correct="1|3" data-oge-option-count="5">
+      <div class="oge-subtask" id="oge-ex-1480" data-oge-checkbox-max="2" data-oge-two-choice-correct="1|3" data-oge-option-count="5">
 <p>
           Какие <strong>два</strong> из перечисленных веществ <strong>вступают в реакцию</strong>
           с алюминием?
@@ -125,8 +125,10 @@
     </main>
     <script>
       (function () {
-        const btn = document.querySelector(".oge-subtask button[type='button']");
-        const out = document.querySelector(".oge-subtask .result");
+        const root = document.getElementById("oge-ex-1480");
+        if (!root) return;
+        const btn = root.querySelector("button[type='button']");
+        const out = root.querySelector(".result");
         if (!btn || !out) return;
         btn.textContent = "Ответ";
         btn.addEventListener("click", function () {

@@ -1,0 +1,222 @@
+<!doctype html>
+<html lang="ru">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>ОГЭ, задание 18 № 1739 — Вычисление массовой доли химического элемента в веществе</title>
+    <link rel="stylesheet" href="../../../css/style.css" />
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0"
+    />
+    <script src="../../../js/theme.js"></script>
+    <script src="../../../js/oge-check-feedback.js"></script>
+  </head>
+  <body>
+    <header class="site-header">
+      <div class="site-header__inner">
+        <h1>ОГЭ</h1>
+        <div class="site-header__tail">
+          <nav>
+            <a href="../../../index.html">Главная</a>
+            <a href="../../topics/index.html">Темы</a>
+            <a href="../../tables.html">Таблицы</a>
+            <a href="../index.html">ОГЭ</a>
+          </nav>
+          <button
+            type="button"
+            class="theme-toggle"
+            aria-label="Включить светлую тему"
+          >
+            <span class="material-symbols-outlined" aria-hidden="true"
+              >light_mode</span
+            >
+          </button>
+        </div>
+      </div>
+    </header>
+
+    <main class="container">
+      <article class="card">
+<p><a href="../index.html">← К списку заданий ОГЭ</a> · <a href="../type-18.html">Задание 18</a></p>
+      <nav class="oge-task-nav" aria-label="Соседние типы заданий ОГЭ">
+        <a href="../type-17.html">← Задание 17</a>
+        <a class="oge-task-nav__next" href="../type-19.html">Задание 19 →</a>
+      </nav>
+      <h2>Задание 18 № 1739</h2>
+      <p class="lead">Вычисление массовой доли химического элемента в веществе</p>
+
+      <div class="oge-subtask" id="oge-ex-1739">
+<p class="tip" style="margin-bottom: 16px">
+          При проведении расчётов для всех элементов, кроме хлора, используйте
+          целые значения относительных атомных масс (Ar(Cl) = 35,5).
+        </p>
+<p class="tip" style="margin-bottom: 16px">
+          Задания 18 и 19 выполняются с использованием следующего текста.
+        </p>
+<p>
+          Препараты фтора являются эффективными средствами профилактики кариеса зубов. Монофторофосфат натрия — неорганическое соединение, соль натрия и фторфосфорной кислоты с формулой Na<sub>2</sub>PO<sub>3</sub>F — входит в состав зубных паст. В 150 г фторированной зубной пасты содержится 78 мг монофторофосфата натрия.
+        </p>
+<p>
+          <strong>Вычислите в процентах массовую долю фтора в монофторофосфате натрия.</strong> Запишите число с точностью до десятых.
+        </p>
+
+        <p class="oge-answer-label">Ответ (%):</p>
+        <p>
+          <input
+            id="ansNum"
+            type="text"
+            inputmode="decimal"
+            class="oge-answer-input"
+            autocomplete="off"
+            aria-label="Числовой ответ"
+          />
+        </p>
+        <p style="margin-top: 16px">
+          <button type="button" id="checkBtn">Проверить</button>
+        </p>
+        <p id="resultOut" class="result" role="status"></p>
+        <details class="tip" style="margin-top: 24px">
+          <summary style="cursor: pointer; font-weight: 600">
+            Ход решения
+          </summary>
+          
+          <p>M(Na<sub>2</sub>PO<sub>3</sub>F) = 2 · 23 + 31 + 3 · 16 + 19 = 144 г/моль.</p>
+          <p>w(F) = 19 / 144 · 100 % = 13,19… % ≈ <strong>13,2 %</strong>.</p>
+        
+        </details>
+      </div>
+
+      <details class="oge-linked" style="margin-top: 28px">
+        <summary>Задание 19 № 1740 — продолжение этой задачи</summary>
+        <p class="lead">Вычисления массы элемента по его массовой доле в веществе</p>
+        <p class="ref-table-note">Решите его, используя величину, которую получили выше, с указанной там точностью.</p>
+        <div class="oge-subtask" id="oge-ex-linked-1740">
+<p class="tip" style="margin-bottom: 16px">
+          При проведении расчётов для всех элементов, кроме хлора, используйте
+          целые значения относительных атомных масс (Ar(Cl) = 35,5).
+        </p>
+<p class="tip" style="margin-bottom: 16px">
+          При выполнении задания 19 используйте величину, которая определена в
+          задании 18 с указанной в нём степенью точности.
+        </p>
+<p class="tip" style="margin-bottom: 16px">
+          Препараты фтора являются эффективными средствами профилактики кариеса зубов. Монофторофосфат натрия — неорганическое соединение, соль натрия и фторфосфорной кислоты с формулой Na<sub>2</sub>PO<sub>3</sub>F — входит в состав зубных паст. В 150 г фторированной зубной пасты содержится 78 мг монофторофосфата натрия.
+        </p>
+<p>
+          <strong>Определите массу (в миллиграммах) фтора, который содержится в тюбике зубной пасты массой 100 г.</strong> Запишите число с точностью до целых.
+        </p>
+
+        <div
+          class="oge-mass-table-wrap"
+          role="region"
+          aria-label="Таблица для расчёта"
+        >
+          <table class="oge-mass-table">
+            <tbody>
+              <tr>
+                <td class="oge-mass-table__cell--blank"></td>
+                <td class="oge-mass-table__static">W, %</td>
+                <td>
+                  <input
+                    type="text"
+                    inputmode="text"
+                    autocomplete="off"
+                    aria-label="Верхняя правая ячейка таблицы"
+                  />
+                </td>
+              </tr>
+              <tr>
+                <td class="oge-mass-table__static">элемент</td>
+                <td>
+                  <input
+                    type="text"
+                    inputmode="text"
+                    autocomplete="off"
+                    aria-label="Массовая доля элемента, проценты"
+                  />
+                </td>
+                <td>
+                  <input
+                    type="text"
+                    inputmode="text"
+                    autocomplete="off"
+                    aria-label="Правая ячейка строки «элемент»"
+                  />
+                </td>
+              </tr>
+              <tr>
+                <td class="oge-mass-table__static">вещество</td>
+                <td class="oge-mass-table__static">100</td>
+                <td>
+                  <input
+                    type="text"
+                    inputmode="text"
+                    autocomplete="off"
+                    aria-label="Масса вещества"
+                  />
+                </td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+        <p class="oge-answer-label">Ответ (мг):</p>
+        <p>
+          <input
+            id="ansNumL"
+            type="text"
+            inputmode="decimal"
+            class="oge-answer-input"
+            autocomplete="off"
+            aria-label="Числовой ответ"
+          />
+        </p>
+        <p style="margin-top: 16px">
+          <button type="button" id="checkBtnL">Проверить</button>
+        </p>
+        <p id="resultOutL" class="result" role="status"></p>
+        <details class="tip" style="margin-top: 24px">
+          <summary style="cursor: pointer; font-weight: 600">
+            Ход решения
+          </summary>
+          
+          <p>Сначала пересчитаем соль на 100 г пасты: в 150 г её 78 мг, значит в 100 г — 78 · 100 / 150 = 52 мг.</p>
+          <p>m(F) = 52 · 0,132 = 6,86… мг.</p>
+          <p>Ответ: <strong>7 мг</strong>.</p>
+        
+        </details>
+      </div>
+        <p>Источник: Открытый банк заданий ОГЭ по химии (ФИПИ), oge.fipi.ru/bank, № B0213E</p>
+        <p><a href="1740.html">Открыть задание 19 № 1740 отдельной страницей</a></p>
+      </details>
+      <p>Источник: Открытый банк заданий ОГЭ по химии (ФИПИ), oge.fipi.ru/bank, № 075C1F</p>
+      </article>
+    </main>
+    <script>
+      (function () {
+        const root = document.getElementById("oge-ex-1739");
+        if (!root) return;
+        const btn = root.querySelector("button[type='button']");
+        const out = root.querySelector(".result");
+        if (!btn || !out) return;
+        btn.textContent = "Ответ";
+        btn.addEventListener("click", function () {
+          out.textContent = OGE_EX_formatAnswer(["13,2"]);
+        });
+      })();
+    </script>
+    <script>
+      (function () {
+        const root = document.getElementById("oge-ex-linked-1740");
+        if (!root) return;
+        const btn = root.querySelector("button[type='button']");
+        const out = root.querySelector(".result");
+        if (!btn || !out) return;
+        btn.textContent = "Ответ";
+        btn.addEventListener("click", function () {
+          out.textContent = OGE_EX_formatAnswer(["7"]);
+        });
+      })();
+    </script>
+  </body>
+</html>

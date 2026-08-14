@@ -49,7 +49,7 @@
         <strong>★ Задание повышенной сложности.</strong> Цифры в ответе идут в порядке убывания (3-2-1) — привычный ответ «1-2-3» здесь неверен.
       </p>
 
-      <div class="oge-subtask">
+      <div class="oge-subtask" id="oge-ex-1323">
 <p>Расположите химические элементы —</p>
 <ol>
             <li>фосфор</li>
@@ -104,8 +104,10 @@
     </main>
     <script>
       (function () {
-        const btn = document.querySelector(".oge-subtask button[type='button']");
-        const out = document.querySelector(".oge-subtask .result");
+        const root = document.getElementById("oge-ex-1323");
+        if (!root) return;
+        const btn = root.querySelector("button[type='button']");
+        const out = root.querySelector(".result");
         if (!btn || !out) return;
         btn.textContent = "Ответ";
         btn.addEventListener("click", function () {

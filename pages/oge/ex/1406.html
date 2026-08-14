@@ -49,7 +49,7 @@
         <strong>★ Задание повышенной сложности.</strong> Непривычная формулировка: верно для алюминия и неверно для магния. Пункт про три электронных слоя верен для обоих, поэтому не подходит.
       </p>
 
-      <div class="oge-subtask" data-oge-checkbox-max="2" data-oge-two-choice-correct="4|5" data-oge-option-count="5">
+      <div class="oge-subtask" id="oge-ex-1406" data-oge-checkbox-max="2" data-oge-two-choice-correct="4|5" data-oge-option-count="5">
 <p>
           Какие <strong>два утверждения</strong> являются <strong>верными для характеристики алюминия</strong>
           и <strong>неверными для характеристики магния</strong>?
@@ -125,8 +125,10 @@
     </main>
     <script>
       (function () {
-        const btn = document.querySelector(".oge-subtask button[type='button']");
-        const out = document.querySelector(".oge-subtask .result");
+        const root = document.getElementById("oge-ex-1406");
+        if (!root) return;
+        const btn = root.querySelector("button[type='button']");
+        const out = root.querySelector(".result");
         if (!btn || !out) return;
         btn.textContent = "Ответ";
         btn.addEventListener("click", function () {

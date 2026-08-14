@@ -10,7 +10,10 @@ export function validateTaskShape(task) {
   if (!task.meta?.source) issues.push("meta.source missing");
   if (!Array.isArray(task.blocks)) issues.push("blocks must be array");
   /* meta.advanced — необязательная пометка «повышенная сложность» (звёздочка на странице) */
-  if (task.meta?.advanced !== undefined && typeof task.meta.advanced !== "boolean") {
+  if (
+    task.meta?.advanced !== undefined &&
+    typeof task.meta.advanced !== "boolean"
+  ) {
     issues.push("meta.advanced must be boolean");
   }
   if (task.meta?.advanced && !task.meta?.advancedNote) {
@@ -24,9 +27,17 @@ export function validateTaskShape(task) {
     if (!task.answer) issues.push("answer missing");
   }
 
+  /* Разбор решения необязателен везде, кроме открытых заданий, но если он есть —
+     нужны оба поля, иначе на странице появится пустой раскрывающийся блок. */
+  if (task.solution) {
+    if (!task.solution.title) issues.push("solution.title missing");
+    if (!task.solution.html) issues.push("solution.html missing");
+  }
+
   switch (task.uiKind) {
     case "twoChoice":
-      if (task.content.statements?.length < 2) issues.push("twoChoice: statements");
+      if (task.content.statements?.length < 2)
+        issues.push("twoChoice: statements");
       if (task.answer?.correct?.length !== 2) issues.push("twoChoice: correct");
       break;
     case "matchTriple":
@@ -34,14 +45,16 @@ export function validateTaskShape(task) {
       break;
     case "orderedDigits":
       if (!task.content?.items?.length) issues.push("orderedDigits: items");
-      if (!task.answer?.sequence?.length) issues.push("orderedDigits: sequence");
+      if (!task.answer?.sequence?.length)
+        issues.push("orderedDigits: sequence");
       break;
     case "periodDiagram":
       if (!task.content?.figure?.html) issues.push("periodDiagram: figure");
       if (!task.answer?.values?.X) issues.push("periodDiagram: values");
       break;
     case "multiChoiceFour":
-      if (task.content?.statements?.length !== 4) issues.push("multiChoiceFour: statements");
+      if (task.content?.statements?.length !== 4)
+        issues.push("multiChoiceFour: statements");
       if (
         !task.answer?.correct?.length ||
         task.answer.correct.length < 1 ||
@@ -52,7 +65,10 @@ export function validateTaskShape(task) {
       break;
     case "numericInt":
     case "numericMassTable":
-      if (typeof task.answer?.value !== "number" || Number.isNaN(task.answer.value)) {
+      if (
+        typeof task.answer?.value !== "number" ||
+        Number.isNaN(task.answer.value)
+      ) {
         issues.push("numeric: value");
       }
       if (task.uiKind === "numericMassTable" && !task.content?.showMassTable) {
@@ -88,7 +104,11 @@ export function validateTask(task, row) {
 export function validateDraft(draft) {
   const issues = [];
 
-  if (typeof draft.examType !== "number" || draft.examType < 1 || draft.examType > 23) {
+  if (
+    typeof draft.examType !== "number" ||
+    draft.examType < 1 ||
+    draft.examType > 23
+  ) {
     return [`examType must be a number 1..23, got: ${draft.examType}`];
   }
 

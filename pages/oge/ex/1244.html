@@ -46,7 +46,7 @@
       <h2>Задание 14 № 1244</h2>
       <p class="lead">Реакции ионного обмена</p>
 
-      <div class="oge-subtask" data-oge-checkbox-max="2" data-oge-two-choice-correct="1|6" data-oge-option-count="6">
+      <div class="oge-subtask" id="oge-ex-1244" data-oge-checkbox-max="2" data-oge-two-choice-correct="1|6" data-oge-option-count="6">
 <p>
           Выберите два исходных вещества, взаимодействию которых соответствует
           сокращённое ионное уравнение реакции
@@ -131,8 +131,10 @@
     </main>
     <script>
       (function () {
-        const btn = document.querySelector(".oge-subtask button[type='button']");
-        const out = document.querySelector(".oge-subtask .result");
+        const root = document.getElementById("oge-ex-1244");
+        if (!root) return;
+        const btn = root.querySelector("button[type='button']");
+        const out = root.querySelector(".result");
         if (!btn || !out) return;
         btn.textContent = "Ответ";
         btn.addEventListener("click", function () {

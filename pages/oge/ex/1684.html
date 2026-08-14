@@ -49,7 +49,7 @@
         <strong>★ Задание повышенной сложности.</strong> Азотная кислота водорода не даёт, но цинк в ней всё равно растворяется — этого достаточно, чтобы отличить её от соли.
       </p>
 
-      <div class="oge-subtask">
+      <div class="oge-subtask" id="oge-ex-1684">
 <p>
           Установите соответствие между <strong>двумя веществами</strong> и
           <strong>реактивом</strong>, с помощью которого можно различить эти вещества:
@@ -130,8 +130,10 @@
     </main>
     <script>
       (function () {
-        const btn = document.querySelector(".oge-subtask button[type='button']");
-        const out = document.querySelector(".oge-subtask .result");
+        const root = document.getElementById("oge-ex-1684");
+        if (!root) return;
+        const btn = root.querySelector("button[type='button']");
+        const out = root.querySelector(".result");
         if (!btn || !out) return;
         btn.textContent = "Ответ";
         btn.addEventListener("click", function () {

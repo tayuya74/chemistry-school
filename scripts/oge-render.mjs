@@ -135,9 +135,7 @@ function dataAttrs(task) {
     parts.push(
       `data-oge-two-choice-correct="${task.answer.correct.join("|")}"`,
     );
-    parts.push(
-      `data-oge-option-count="${task.content.statements.length}"`,
-    );
+    parts.push(`data-oge-option-count="${task.content.statements.length}"`);
   }
   if (task.uiKind === "multiChoiceFour") {
     parts.push(
@@ -422,9 +420,23 @@ ${cells}
         <p id="${sid("resultOut", suffix)}" class="result" role="status"></p>`;
 }
 
+/** Свёрнутый разбор решения; раскрывается только по клику, ответ заранее не выдаёт. */
+function renderSolutionDetails(task) {
+  if (!task.solution) return "";
+  return `
+        <details class="tip" style="margin-top: 24px">
+          <summary style="cursor: pointer; font-weight: 600">
+            ${task.solution.title}
+          </summary>
+          ${task.solution.html}
+        </details>`;
+}
+
 function renderNumericBody(task, suffix, withTable) {
   const unit = task.content.unit ?? "%";
-  const inputmode = unit === "г" ? "decimal" : "numeric";
+  /* Дробным может быть любой ответ — и проценты, и масса, — поэтому на телефоне
+     всегда нужна клавиатура с запятой. */
+  const inputmode = "decimal";
   return `${renderBlocks(task.blocks)}
 ${withTable ? MASS_TABLE_HTML : ""}
         <p class="oge-answer-label">Ответ (${unit}):</p>
@@ -441,7 +453,7 @@ ${withTable ? MASS_TABLE_HTML : ""}
         <p style="margin-top: 16px">
           <button type="button" id="${sid("checkBtn", suffix)}">Проверить</button>
         </p>
-        <p id="${sid("resultOut", suffix)}" class="result" role="status"></p>`;
+        <p id="${sid("resultOut", suffix)}" class="result" role="status"></p>${renderSolutionDetails(task)}`;
 }
 
 function renderOpenBody(task) {
@@ -451,15 +463,7 @@ function renderOpenBody(task) {
       html += `\n${EXPERIMENT_TABLE_HTML}`;
     }
   }
-  if (task.solution) {
-    html += `
-        <details class="tip" style="margin-top: 24px">
-          <summary style="cursor: pointer; font-weight: 600">
-            ${task.solution.title}
-          </summary>
-          ${task.solution.html}
-        </details>`;
-  }
+  html += renderSolutionDetails(task);
   return html;
 }
 
@@ -487,13 +491,20 @@ function renderTaskBody(task, suffix = "") {
   }
 }
 
-function exRevealScript(task) {
+function exRevealScript(task, wrapId = null) {
   const parts = answerParts(task);
   if (!parts.length) return "";
+  /* Без wrapId берём первый .oge-subtask — на странице примера он один.
+     Когда рядом раскрывается связанное задание, область нужно ограничить. */
+  const root = wrapId
+    ? `document.getElementById("${wrapId}")`
+    : `document.querySelector(".oge-subtask")`;
   return `    <script>
       (function () {
-        const btn = document.querySelector(".oge-subtask button[type='button']");
-        const out = document.querySelector(".oge-subtask .result");
+        const root = ${root};
+        if (!root) return;
+        const btn = root.querySelector("button[type='button']");
+        const out = root.querySelector(".result");
         if (!btn || !out) return;
         btn.textContent = "Ответ";
         btn.addEventListener("click", function () {
@@ -679,7 +690,7 @@ export function renderSubtask(task, { mode, suffix = "", wrapId = null } = {}) {
 
   let script = "";
   if (mode === "ex" && task.answer) {
-    script = exRevealScript(task);
+    script = exRevealScript(task, wrapId);
   } else if (mode === "type" && task.answer) {
     script = typeCheckScript(task, suffix, wrapId);
   }

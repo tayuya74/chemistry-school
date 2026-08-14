@@ -49,7 +49,7 @@
         <strong>★ Задание повышенной сложности.</strong> Здесь верны все четыре суждения. Задание проверяет, хватит ли смелости отметить всё — обычно ученик ищет ошибку и находит её там, где её нет.
       </p>
 
-      <div class="oge-subtask" data-oge-multi-choice-correct="1|2|3|4" data-oge-option-count="4">
+      <div class="oge-subtask" id="oge-ex-1664" data-oge-multi-choice-correct="1|2|3|4" data-oge-option-count="4">
 <p>
           Из перечисленных суждений о правилах работы в школьной лаборатории и методах разделения смесей выберите
           <strong>верное(-ые) суждение(-я)</strong>.
@@ -132,8 +132,10 @@
     </main>
     <script>
       (function () {
-        const btn = document.querySelector(".oge-subtask button[type='button']");
-        const out = document.querySelector(".oge-subtask .result");
+        const root = document.getElementById("oge-ex-1664");
+        if (!root) return;
+        const btn = root.querySelector("button[type='button']");
+        const out = root.querySelector(".result");
         if (!btn || !out) return;
         btn.textContent = "Ответ";
         btn.addEventListener("click", function () {

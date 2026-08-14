@@ -49,7 +49,7 @@
         <strong>★ Задание повышенной сложности.</strong> Ищем те, что НЕ являются замещением. Слово «растворение» встречается дважды, но один раз это замещение (натрий в воде), а другой — обмен.
       </p>
 
-      <div class="oge-subtask" data-oge-checkbox-max="2" data-oge-two-choice-correct="3|4" data-oge-option-count="5">
+      <div class="oge-subtask" id="oge-ex-1547" data-oge-checkbox-max="2" data-oge-two-choice-correct="3|4" data-oge-option-count="5">
 <p>Из предложенного перечня выберите <strong>две реакции</strong>, которые <strong>не являются</strong> реакциями замещения.</p>
 
         <ol class="oge-statements">
@@ -122,8 +122,10 @@
     </main>
     <script>
       (function () {
-        const btn = document.querySelector(".oge-subtask button[type='button']");
-        const out = document.querySelector(".oge-subtask .result");
+        const root = document.getElementById("oge-ex-1547");
+        if (!root) return;
+        const btn = root.querySelector("button[type='button']");
+        const out = root.querySelector(".result");
         if (!btn || !out) return;
         btn.textContent = "Ответ";
         btn.addEventListener("click", function () {

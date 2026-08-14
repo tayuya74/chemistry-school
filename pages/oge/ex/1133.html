@@ -46,7 +46,7 @@
       <h2>Задание 18 № 1133</h2>
       <p class="lead">Вычисление массовой доли химического элемента в веществе</p>
 
-      <div class="oge-subtask">
+      <div class="oge-subtask" id="oge-ex-1133">
 <p class="tip" style="margin-bottom: 16px">
           При проведении расчётов для всех элементов, кроме хлора, используйте
           целые значения относительных атомных масс (Ar(Cl) = 35,5).
@@ -73,7 +73,7 @@
           <input
             id="ansNum"
             type="text"
-            inputmode="numeric"
+            inputmode="decimal"
             class="oge-answer-input"
             autocomplete="off"
             aria-label="Числовой ответ"
@@ -90,8 +90,10 @@
     </main>
     <script>
       (function () {
-        const btn = document.querySelector(".oge-subtask button[type='button']");
-        const out = document.querySelector(".oge-subtask .result");
+        const root = document.getElementById("oge-ex-1133");
+        if (!root) return;
+        const btn = root.querySelector("button[type='button']");
+        const out = root.querySelector(".result");
         if (!btn || !out) return;
         btn.textContent = "Ответ";
         btn.addEventListener("click", function () {

@@ -49,7 +49,7 @@
         <strong>★ Задание повышенной сложности.</strong> Оснóвная соль MgOHCl содержит группу OH, но основанием не является.
       </p>
 
-      <div class="oge-subtask">
+      <div class="oge-subtask" id="oge-ex-1439">
 <p>
           Из предложенного перечня веществ выберите <strong>оснóвную соль</strong> и <strong>амфотерный гидроксид</strong>.
         </p>
@@ -99,8 +99,10 @@
     </main>
     <script>
       (function () {
-        const btn = document.querySelector(".oge-subtask button[type='button']");
-        const out = document.querySelector(".oge-subtask .result");
+        const root = document.getElementById("oge-ex-1439");
+        if (!root) return;
+        const btn = root.querySelector("button[type='button']");
+        const out = root.querySelector(".result");
         if (!btn || !out) return;
         btn.textContent = "Ответ";
         btn.addEventListener("click", function () {

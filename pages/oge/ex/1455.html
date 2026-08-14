@@ -49,7 +49,7 @@
         <strong>★ Задание повышенной сложности.</strong> Кислая соль NaHSO₃ даёт сере +4, а не +6: водород в ней тоже считается.
       </p>
 
-      <div class="oge-subtask">
+      <div class="oge-subtask" id="oge-ex-1455">
 <p>
           Установите соответствие между формулой вещества и степенью окисления
           серы в данном веществе: к каждой позиции, обозначенной буквой,
@@ -129,8 +129,10 @@
     </main>
     <script>
       (function () {
-        const btn = document.querySelector(".oge-subtask button[type='button']");
-        const out = document.querySelector(".oge-subtask .result");
+        const root = document.getElementById("oge-ex-1455");
+        if (!root) return;
+        const btn = root.querySelector("button[type='button']");
+        const out = root.querySelector(".result");
         if (!btn || !out) return;
         btn.textContent = "Ответ";
         btn.addEventListener("click", function () {

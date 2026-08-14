@@ -46,7 +46,7 @@
       <h2>Задание 2 № 1140</h2>
       <p class="lead">Строение атома, строение электронных оболочек</p>
 
-      <div class="oge-subtask">
+      <div class="oge-subtask" id="oge-ex-1140">
 <p>
           На рисунке изображена модель строения <strong>ядра</strong> атома
           некоторого химического элемента.
@@ -157,8 +157,10 @@
     </main>
     <script>
       (function () {
-        const btn = document.querySelector(".oge-subtask button[type='button']");
-        const out = document.querySelector(".oge-subtask .result");
+        const root = document.getElementById("oge-ex-1140");
+        if (!root) return;
+        const btn = root.querySelector("button[type='button']");
+        const out = root.querySelector(".result");
         if (!btn || !out) return;
         btn.textContent = "Ответ";
         btn.addEventListener("click", function () {

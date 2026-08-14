@@ -49,7 +49,7 @@
         <strong>★ Задание повышенной сложности.</strong> Из металла получается сульфат железа(II), а из оксида железа(III) — сульфат железа(III): степень окисления в оксиде сохраняется.
       </p>
 
-      <div class="oge-subtask">
+      <div class="oge-subtask" id="oge-ex-1528">
 <p>
           Установите соответствие между <strong>реагирующими веществами</strong> и
           <strong>продуктом(-ами) их взаимодействия</strong>: к каждой позиции,
@@ -133,8 +133,10 @@
     </main>
     <script>
       (function () {
-        const btn = document.querySelector(".oge-subtask button[type='button']");
-        const out = document.querySelector(".oge-subtask .result");
+        const root = document.getElementById("oge-ex-1528");
+        if (!root) return;
+        const btn = root.querySelector("button[type='button']");
+        const out = root.querySelector(".result");
         if (!btn || !out) return;
         btn.textContent = "Ответ";
         btn.addEventListener("click", function () {

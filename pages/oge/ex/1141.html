@@ -46,7 +46,7 @@
       <h2>Задание 3 № 1141</h2>
       <p class="lead">Периодический закон и Периодическая система элементов</p>
 
-      <div class="oge-subtask">
+      <div class="oge-subtask" id="oge-ex-1141">
 <p>Расположите химические элементы:</p>
 <ol>
           <li>алюминий</li>
@@ -92,8 +92,10 @@
     </main>
     <script>
       (function () {
-        const btn = document.querySelector(".oge-subtask button[type='button']");
-        const out = document.querySelector(".oge-subtask .result");
+        const root = document.getElementById("oge-ex-1141");
+        if (!root) return;
+        const btn = root.querySelector("button[type='button']");
+        const out = root.querySelector(".result");
         if (!btn || !out) return;
         btn.textContent = "Ответ";
         btn.addEventListener("click", function () {

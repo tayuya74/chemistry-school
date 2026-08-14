@@ -699,6 +699,26 @@ html[data-theme="dark"] .oge-answer-cells input:focus-visible {
   white-space: nowrap;
 }
 
+/* Связанное задание пары 18–19, раскрывается по клику */
+.oge-linked {
+  border: 1px solid var(--color-border);
+  border-radius: 10px;
+  padding: 12px 16px;
+  background: var(--color-card-bg);
+}
+
+.oge-linked > summary {
+  cursor: pointer;
+  font-weight: 600;
+  padding: 4px 0;
+}
+
+.oge-linked[open] > summary {
+  margin-bottom: 8px;
+  border-bottom: 1px solid var(--color-border);
+  padding-bottom: 10px;
+}
+
 /* Видно только программам чтения с экрана */
 .visually-hidden {
   position: absolute;

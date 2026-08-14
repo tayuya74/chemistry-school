@@ -46,7 +46,7 @@
       <h2>Задание 13 № 1013</h2>
       <p class="lead">Электролиты и неэлектролиты. Ионы, катионы и анионы</p>
 
-      <div class="oge-subtask" data-oge-checkbox-max="2" data-oge-two-choice-correct="1|5" data-oge-option-count="5">
+      <div class="oge-subtask" id="oge-ex-1013" data-oge-checkbox-max="2" data-oge-two-choice-correct="1|5" data-oge-option-count="5">
 <p>
           Укажите, какие ионы и в каком количестве образуются в растворе при
           <strong>полной диссоциации 1 моль</strong> хлорида железа(III).
@@ -122,8 +122,10 @@
     </main>
     <script>
       (function () {
-        const btn = document.querySelector(".oge-subtask button[type='button']");
-        const out = document.querySelector(".oge-subtask .result");
+        const root = document.getElementById("oge-ex-1013");
+        if (!root) return;
+        const btn = root.querySelector("button[type='button']");
+        const out = root.querySelector(".result");
         if (!btn || !out) return;
         btn.textContent = "Ответ";
         btn.addEventListener("click", function () {

@@ -49,7 +49,7 @@
         <strong>★ Задание повышенной сложности.</strong> Две буквы дают одну и ту же цифру. Железо в FeS и FeCO₃ имеет одинаковую степень окисления, хотя вещества разных классов.
       </p>
 
-      <div class="oge-subtask">
+      <div class="oge-subtask" id="oge-ex-1165">
 <p>
           Установите соответствие между формулой вещества и степенью окисления
           <strong>железа</strong> в этом соединении: к каждой позиции,
@@ -130,8 +130,10 @@
     </main>
     <script>
       (function () {
-        const btn = document.querySelector(".oge-subtask button[type='button']");
-        const out = document.querySelector(".oge-subtask .result");
+        const root = document.getElementById("oge-ex-1165");
+        if (!root) return;
+        const btn = root.querySelector("button[type='button']");
+        const out = root.querySelector(".result");
         if (!btn || !out) return;
         btn.textContent = "Ответ";
         btn.addEventListener("click", function () {

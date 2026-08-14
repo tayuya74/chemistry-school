@@ -49,7 +49,7 @@
         <strong>★ Задание повышенной сложности.</strong> В перечне есть кислая соль NaHCO₃ и сульфат аммония — оба легко принять за искомое.
       </p>
 
-      <div class="oge-subtask">
+      <div class="oge-subtask" id="oge-ex-1414">
 <p>
           Из предложенного перечня веществ выберите <strong>несолеобразующий оксид</strong> и <strong>кислоту</strong>.
         </p>
@@ -99,8 +99,10 @@
     </main>
     <script>
       (function () {
-        const btn = document.querySelector(".oge-subtask button[type='button']");
-        const out = document.querySelector(".oge-subtask .result");
+        const root = document.getElementById("oge-ex-1414");
+        if (!root) return;
+        const btn = root.querySelector("button[type='button']");
+        const out = root.querySelector(".result");
         if (!btn || !out) return;
         btn.textContent = "Ответ";
         btn.addEventListener("click", function () {

@@ -49,7 +49,7 @@
         <strong>★ Задание повышенной сложности.</strong> Вещество может содержать сразу два типа связи: в KOH и NH₄Cl есть и ионная, и ковалентная.
       </p>
 
-      <div class="oge-subtask" data-oge-checkbox-max="2" data-oge-two-choice-correct="3|4" data-oge-option-count="5">
+      <div class="oge-subtask" id="oge-ex-1348" data-oge-checkbox-max="2" data-oge-two-choice-correct="3|4" data-oge-option-count="5">
 <p>
           Из предложенного перечня выберите два вещества, в каждом из которых содержится <strong>как ионная, так и ковалентная связь</strong>.
         </p>
@@ -124,8 +124,10 @@
     </main>
     <script>
       (function () {
-        const btn = document.querySelector(".oge-subtask button[type='button']");
-        const out = document.querySelector(".oge-subtask .result");
+        const root = document.getElementById("oge-ex-1348");
+        if (!root) return;
+        const btn = root.querySelector("button[type='button']");
+        const out = root.querySelector(".result");
         if (!btn || !out) return;
         btn.textContent = "Ответ";
         btn.addEventListener("click", function () {

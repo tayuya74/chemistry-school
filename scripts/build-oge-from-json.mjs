@@ -91,6 +91,47 @@ function hardNote(task) {
       </p>`;
 }
 
+/**
+ * Задания 18 и 19 в варианте идут парой с общим условием: сначала считают
+ * массовую долю, затем по ней — массу. Если у задания указан meta.linkedTaskId,
+ * второе задание пары показываем прямо здесь, но свёрнутым: пока ученик не
+ * решил первое, второе ему видеть незачем.
+ */
+function renderLinkedTask(task) {
+  const linkedId = task.meta.linkedTaskId;
+  if (!linkedId) return { html: "", script: "" };
+
+  const linked = loadTask(linkedId);
+  const wrapId = `oge-ex-linked-${linkedId}`;
+  const { html, script } = renderSubtask(linked, {
+    mode: "ex",
+    suffix: "L",
+    wrapId,
+  });
+
+  /* Пара упорядочена: 18 — начало задачи, 19 — её продолжение. */
+  const isNext = linked.examType > task.examType;
+  const summary = isNext
+    ? `Задание ${linked.examType} № ${linkedId} — продолжение этой задачи`
+    : `Задание ${linked.examType} № ${linkedId} — начало этой задачи`;
+  const hint = isNext
+    ? `Решите его, используя величину, которую получили выше, с указанной там точностью.`
+    : `С него задача начинается: там вычисляют массовую долю, которая нужна здесь.`;
+
+  return {
+    script,
+    html: `
+      <details class="oge-linked" style="margin-top: 28px">
+        <summary>${hardMark(linked)}${summary}</summary>
+        <p class="lead">${linked.meta.lead}</p>${hardNote(linked)}
+        <p class="ref-table-note">${hint}</p>
+        ${html}
+        <p>Источник: ${linked.meta.source}</p>
+        <p><a href="${linkedId}.html">Открыть задание ${linked.examType} № ${linkedId} отдельной страницей</a></p>
+      </details>`,
+  };
+}
+
 function buildExPage(task) {
   const type = task.examType;
   const p = pad2(type);
@@ -103,7 +144,9 @@ function buildExPage(task) {
     ? `<a class="oge-task-nav__next" href="../type-${nextP}.html">Задание ${type + 1} →</a>`
     : `<a class="oge-task-nav__next" href="../index.html">К списку заданий →</a>`;
 
-  const { html, script } = renderSubtask(task, { mode: "ex" });
+  const wrapId = `oge-ex-${task.id}`;
+  const { html, script } = renderSubtask(task, { mode: "ex", wrapId });
+  const linked = renderLinkedTask(task);
 
   const articleInner = `<p><a href="../index.html">← К списку заданий ОГЭ</a> · <a href="../type-${p}.html">Задание ${type}</a></p>
       <nav class="oge-task-nav" aria-label="Соседние типы заданий ОГЭ">
@@ -114,7 +157,7 @@ function buildExPage(task) {
       <p class="lead">${task.meta.lead}</p>${hardNote(task)}
 
       ${html}
-
+${linked.html}
       <p>Источник: ${task.meta.source}</p>`;
 
   return shell({
@@ -128,7 +171,7 @@ function buildExPage(task) {
       oge: "../index.html",
     },
     articleInner,
-    scripts: script,
+    scripts: [script, linked.script].filter(Boolean).join("\n"),
   });
 }
 

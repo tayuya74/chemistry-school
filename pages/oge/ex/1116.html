@@ -46,7 +46,7 @@
       <h2>Задание 1 № 1116</h2>
       <p class="lead">Химические элементы и вещества</p>
 
-      <div class="oge-subtask" data-oge-checkbox-max="2" data-oge-two-choice-correct="2|3" data-oge-option-count="5">
+      <div class="oge-subtask" id="oge-ex-1116" data-oge-checkbox-max="2" data-oge-two-choice-correct="2|3" data-oge-option-count="5">
 <p>
           Выберите два утверждения, в которых говорится о золоте как о
           <strong>химическом элементе</strong>.
@@ -122,8 +122,10 @@
     </main>
     <script>
       (function () {
-        const btn = document.querySelector(".oge-subtask button[type='button']");
-        const out = document.querySelector(".oge-subtask .result");
+        const root = document.getElementById("oge-ex-1116");
+        if (!root) return;
+        const btn = root.querySelector("button[type='button']");
+        const out = root.querySelector(".result");
         if (!btn || !out) return;
         btn.textContent = "Ответ";
         btn.addEventListener("click", function () {

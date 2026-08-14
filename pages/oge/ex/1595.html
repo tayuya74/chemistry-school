@@ -49,7 +49,7 @@
         <strong>★ Задание повышенной сложности.</strong> Соли — сильные электролиты, оксиды не электролиты, а сероводородная кислота хоть и электролит, но слабый.
       </p>
 
-      <div class="oge-subtask" data-oge-checkbox-max="2" data-oge-two-choice-correct="3|4" data-oge-option-count="5">
+      <div class="oge-subtask" id="oge-ex-1595" data-oge-checkbox-max="2" data-oge-two-choice-correct="3|4" data-oge-option-count="5">
 <p>Из предложенного перечня веществ выберите <strong>два сильных электролита</strong>.</p>
 
         <ol class="oge-statements">
@@ -122,8 +122,10 @@
     </main>
     <script>
       (function () {
-        const btn = document.querySelector(".oge-subtask button[type='button']");
-        const out = document.querySelector(".oge-subtask .result");
+        const root = document.getElementById("oge-ex-1595");
+        if (!root) return;
+        const btn = root.querySelector("button[type='button']");
+        const out = root.querySelector(".result");
         if (!btn || !out) return;
         btn.textContent = "Ответ";
         btn.addEventListener("click", function () {

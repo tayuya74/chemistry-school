@@ -49,7 +49,7 @@
         <strong>★ Задание повышенной сложности.</strong> Ищем те, что НЕ реагируют. N₂O₃ — кислотный оксид, и с другим кислотным оксидом SiO₂ он не реагирует.
       </p>
 
-      <div class="oge-subtask" data-oge-checkbox-max="2" data-oge-two-choice-correct="3|5" data-oge-option-count="5">
+      <div class="oge-subtask" id="oge-ex-1472" data-oge-checkbox-max="2" data-oge-two-choice-correct="3|5" data-oge-option-count="5">
 <p>
           Какие <strong>два</strong> из перечисленных веществ <strong>не вступают в реакцию</strong>
           с оксидом азота(III)?
@@ -125,8 +125,10 @@
     </main>
     <script>
       (function () {
-        const btn = document.querySelector(".oge-subtask button[type='button']");
-        const out = document.querySelector(".oge-subtask .result");
+        const root = document.getElementById("oge-ex-1472");
+        if (!root) return;
+        const btn = root.querySelector("button[type='button']");
+        const out = root.querySelector(".result");
         if (!btn || !out) return;
         btn.textContent = "Ответ";
         btn.addEventListener("click", function () {

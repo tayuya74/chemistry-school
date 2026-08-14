@@ -49,7 +49,7 @@
         <strong>★ Задание повышенной сложности.</strong> Гидроксид алюминия амфотерный: растворяется и в щёлочи, и в кислоте, поэтому две буквы дают одну цифру.
       </p>
 
-      <div class="oge-subtask">
+      <div class="oge-subtask" id="oge-ex-1562">
 <p>
           Установите соответствие между <strong>реагирующими веществами</strong> и
           <strong>признаком протекающей между ними реакции</strong>: к каждой позиции,
@@ -129,8 +129,10 @@
     </main>
     <script>
       (function () {
-        const btn = document.querySelector(".oge-subtask button[type='button']");
-        const out = document.querySelector(".oge-subtask .result");
+        const root = document.getElementById("oge-ex-1562");
+        if (!root) return;
+        const btn = root.querySelector("button[type='button']");
+        const out = root.querySelector(".result");
         if (!btn || !out) return;
         btn.textContent = "Ответ";
         btn.addEventListener("click", function () {

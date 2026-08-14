@@ -46,7 +46,7 @@
       <h2>Задание 9 № 1055</h2>
       <p class="lead">Химические свойства простых и сложных веществ</p>
 
-      <div class="oge-subtask">
+      <div class="oge-subtask" id="oge-ex-1055">
 <p>
           Установите соответствие между реагирующими веществами и продуктами их
           взаимодействия: к каждой позиции, обозначенной буквой, подберите
@@ -130,8 +130,10 @@
     </main>
     <script>
       (function () {
-        const btn = document.querySelector(".oge-subtask button[type='button']");
-        const out = document.querySelector(".oge-subtask .result");
+        const root = document.getElementById("oge-ex-1055");
+        if (!root) return;
+        const btn = root.querySelector("button[type='button']");
+        const out = root.querySelector(".result");
         if (!btn || !out) return;
         btn.textContent = "Ответ";
         btn.addEventListener("click", function () {

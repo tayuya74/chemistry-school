@@ -49,7 +49,7 @@
         <strong>★ Задание повышенной сложности.</strong> Ответ в два шага: по схеме ядра определить элемент, затем назвать номер группы и общее число электронов.
       </p>
 
-      <div class="oge-subtask">
+      <div class="oge-subtask" id="oge-ex-1301">
 <p>
           На рисунке изображена модель строения <strong>ядра</strong> атома
           некоторого химического элемента.
@@ -207,8 +207,10 @@
     </main>
     <script>
       (function () {
-        const btn = document.querySelector(".oge-subtask button[type='button']");
-        const out = document.querySelector(".oge-subtask .result");
+        const root = document.getElementById("oge-ex-1301");
+        if (!root) return;
+        const btn = root.querySelector("button[type='button']");
+        const out = root.querySelector(".result");
         if (!btn || !out) return;
         btn.textContent = "Ответ";
         btn.addEventListener("click", function () {

@@ -49,7 +49,7 @@
         <strong>★ Задание повышенной сложности.</strong> Солей аммония в перечне две, и обе растворимы. Но с сульфатом гидроксид бария дал бы ещё осадок BaSO₄, и уравнение было бы другим.
       </p>
 
-      <div class="oge-subtask" data-oge-checkbox-max="2" data-oge-two-choice-correct="3|5" data-oge-option-count="6">
+      <div class="oge-subtask" id="oge-ex-1626" data-oge-checkbox-max="2" data-oge-two-choice-correct="3|5" data-oge-option-count="6">
 <p>Выберите <strong>два исходных вещества</strong>, взаимодействию водных растворов которых соответствует сокращённое ионное уравнение реакции:<br />NH<sub>4</sub><sup>+</sup> + OH<sup>−</sup> = NH<sub>3</sub> + H<sub>2</sub>O</p>
 
         <ol class="oge-statements">
@@ -128,8 +128,10 @@
     </main>
     <script>
       (function () {
-        const btn = document.querySelector(".oge-subtask button[type='button']");
-        const out = document.querySelector(".oge-subtask .result");
+        const root = document.getElementById("oge-ex-1626");
+        if (!root) return;
+        const btn = root.querySelector("button[type='button']");
+        const out = root.querySelector(".result");
         if (!btn || !out) return;
         btn.textContent = "Ответ";
         btn.addEventListener("click", function () {

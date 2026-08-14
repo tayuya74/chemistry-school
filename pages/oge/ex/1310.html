@@ -49,7 +49,7 @@
         <strong>★ Задание повышенной сложности.</strong> Спрашивают число протонов, а на схеме показаны электроны по слоям — нужно вспомнить, что эти числа равны.
       </p>
 
-      <div class="oge-subtask">
+      <div class="oge-subtask" id="oge-ex-1310">
 <p>
           На рисунке изображена <strong>схема распределения электронов</strong>
           по электронным слоям атома некоторого химического элемента.
@@ -141,8 +141,10 @@
     </main>
     <script>
       (function () {
-        const btn = document.querySelector(".oge-subtask button[type='button']");
-        const out = document.querySelector(".oge-subtask .result");
+        const root = document.getElementById("oge-ex-1310");
+        if (!root) return;
+        const btn = root.querySelector("button[type='button']");
+        const out = root.querySelector(".result");
         if (!btn || !out) return;
         btn.textContent = "Ответ";
         btn.addEventListener("click", function () {

@@ -49,7 +49,7 @@
         <strong>★ Задание повышенной сложности.</strong> Ищем те, что НЕ реагируют. Алюминий амфотерный, поэтому со щёлочью Ca(OH)₂ он реагирует — это и сбивает с толку.
       </p>
 
-      <div class="oge-subtask" data-oge-checkbox-max="2" data-oge-two-choice-correct="2|4" data-oge-option-count="5">
+      <div class="oge-subtask" id="oge-ex-1478" data-oge-checkbox-max="2" data-oge-two-choice-correct="2|4" data-oge-option-count="5">
 <p>
           Какие <strong>два</strong> из перечисленных веществ <strong>не вступают в реакцию</strong>
           с алюминием?
@@ -125,8 +125,10 @@
     </main>
     <script>
       (function () {
-        const btn = document.querySelector(".oge-subtask button[type='button']");
-        const out = document.querySelector(".oge-subtask .result");
+        const root = document.getElementById("oge-ex-1478");
+        if (!root) return;
+        const btn = root.querySelector("button[type='button']");
+        const out = root.querySelector(".result");
         if (!btn || !out) return;
         btn.textContent = "Ответ";
         btn.addEventListener("click", function () {

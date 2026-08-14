@@ -49,7 +49,7 @@
         <strong>★ Задание повышенной сложности.</strong> Лакмус работает сразу на две пары: сернистый газ подкисляет воду, аммиак подщелачивает. Третья пара — про нерастворимый фосфат лития.
       </p>
 
-      <div class="oge-subtask">
+      <div class="oge-subtask" id="oge-ex-1679">
 <p>
           Установите соответствие между <strong>двумя веществами</strong> и
           <strong>реактивом</strong>, с помощью которого можно различить эти вещества:
@@ -130,8 +130,10 @@
     </main>
     <script>
       (function () {
-        const btn = document.querySelector(".oge-subtask button[type='button']");
-        const out = document.querySelector(".oge-subtask .result");
+        const root = document.getElementById("oge-ex-1679");
+        if (!root) return;
+        const btn = root.querySelector("button[type='button']");
+        const out = root.querySelector(".result");
         if (!btn || !out) return;
         btn.textContent = "Ответ";
         btn.addEventListener("click", function () {

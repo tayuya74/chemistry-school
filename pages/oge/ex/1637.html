@@ -49,7 +49,7 @@
         <strong>★ Задание повышенной сложности.</strong> Кислород здесь сам окисляется: из степени −2 он переходит в 0, хотя привычнее видеть его окислителем.
       </p>
 
-      <div class="oge-subtask">
+      <div class="oge-subtask" id="oge-ex-1637">
 <p>
           Установите соответствие между <strong>схемой процесса</strong>, происходящего в
           окислительно-восстановительной реакции, и <strong>названием этого процесса</strong>:
@@ -122,8 +122,10 @@
     </main>
     <script>
       (function () {
-        const btn = document.querySelector(".oge-subtask button[type='button']");
-        const out = document.querySelector(".oge-subtask .result");
+        const root = document.getElementById("oge-ex-1637");
+        if (!root) return;
+        const btn = root.querySelector("button[type='button']");
+        const out = root.querySelector(".result");
         if (!btn || !out) return;
         btn.textContent = "Ответ";
         btn.addEventListener("click", function () {

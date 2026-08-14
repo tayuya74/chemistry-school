@@ -49,7 +49,7 @@
         <strong>★ Задание повышенной сложности.</strong> PH₄I похож на соль, но фосфор в нём −3 — как и в фосфиде K₃P. Две буквы дают одну цифру.
       </p>
 
-      <div class="oge-subtask">
+      <div class="oge-subtask" id="oge-ex-1450">
 <p>
           Установите соответствие между формулой вещества и степенью окисления
           фосфора в данном веществе: к каждой позиции, обозначенной буквой,
@@ -129,8 +129,10 @@
     </main>
     <script>
       (function () {
-        const btn = document.querySelector(".oge-subtask button[type='button']");
-        const out = document.querySelector(".oge-subtask .result");
+        const root = document.getElementById("oge-ex-1450");
+        if (!root) return;
+        const btn = root.querySelector("button[type='button']");
+        const out = root.querySelector(".result");
         if (!btn || !out) return;
         btn.textContent = "Ответ";
         btn.addEventListener("click", function () {

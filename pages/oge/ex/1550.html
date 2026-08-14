@@ -49,7 +49,7 @@
         <strong>★ Задание повышенной сложности.</strong> Ищем те, где степени окисления НЕ меняются. Три «термических разложения» выглядят одинаково, но нитраты выделяют кислород, а карбонат — только углекислый газ.
       </p>
 
-      <div class="oge-subtask" data-oge-checkbox-max="2" data-oge-two-choice-correct="1|4" data-oge-option-count="5">
+      <div class="oge-subtask" id="oge-ex-1550" data-oge-checkbox-max="2" data-oge-two-choice-correct="1|4" data-oge-option-count="5">
 <p>Из предложенного перечня выберите <strong>две реакции</strong>, которые <strong>не являются</strong> окислительно-восстановительными.</p>
 
         <ol class="oge-statements">
@@ -122,8 +122,10 @@
     </main>
     <script>
       (function () {
-        const btn = document.querySelector(".oge-subtask button[type='button']");
-        const out = document.querySelector(".oge-subtask .result");
+        const root = document.getElementById("oge-ex-1550");
+        if (!root) return;
+        const btn = root.querySelector("button[type='button']");
+        const out = root.querySelector(".result");
         if (!btn || !out) return;
         btn.textContent = "Ответ";
         btn.addEventListener("click", function () {

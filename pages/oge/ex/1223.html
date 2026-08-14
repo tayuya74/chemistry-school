@@ -46,7 +46,7 @@
       <h2>Задание 16 № 1223</h2>
       <p class="lead">Безопасность в лаборатории. Разделение смесей. Химическое загрязнение</p>
 
-      <div class="oge-subtask" data-oge-multi-choice-correct="2|3" data-oge-option-count="4">
+      <div class="oge-subtask" id="oge-ex-1223" data-oge-multi-choice-correct="2|3" data-oge-option-count="4">
 <p>
           Из перечисленных суждений о правилах работы с веществами в лаборатории
           и быту выберите <strong>верное(-ые) суждение(-я)</strong>.
@@ -129,8 +129,10 @@
     </main>
     <script>
       (function () {
-        const btn = document.querySelector(".oge-subtask button[type='button']");
-        const out = document.querySelector(".oge-subtask .result");
+        const root = document.getElementById("oge-ex-1223");
+        if (!root) return;
+        const btn = root.querySelector("button[type='button']");
+        const out = root.querySelector(".result");
         if (!btn || !out) return;
         btn.textContent = "Ответ";
         btn.addEventListener("click", function () {

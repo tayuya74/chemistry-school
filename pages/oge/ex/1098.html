@@ -46,7 +46,7 @@
       <h2>Задание 6 № 1098</h2>
       <p class="lead">Закономерности изменения свойств элементов</p>
 
-      <div class="oge-subtask" data-oge-checkbox-max="2" data-oge-two-choice-correct="1|4" data-oge-option-count="5">
+      <div class="oge-subtask" id="oge-ex-1098" data-oge-checkbox-max="2" data-oge-two-choice-correct="1|4" data-oge-option-count="5">
 <p>
           Выберите два верных продолжения для следующего утверждения. Сходство
           углерода, азота и кислорода проявляется в том, что…
@@ -122,8 +122,10 @@
     </main>
     <script>
       (function () {
-        const btn = document.querySelector(".oge-subtask button[type='button']");
-        const out = document.querySelector(".oge-subtask .result");
+        const root = document.getElementById("oge-ex-1098");
+        if (!root) return;
+        const btn = root.querySelector("button[type='button']");
+        const out = root.querySelector(".result");
         if (!btn || !out) return;
         btn.textContent = "Ответ";
         btn.addEventListener("click", function () {

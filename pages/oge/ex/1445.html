@@ -49,7 +49,7 @@
         <strong>★ Задание повышенной сложности.</strong> Три разных случая: карбид Al₄C₃ (−4), ацетилен C₂H₂ (−1) и кислая соль NaHCO₃ (+4).
       </p>
 
-      <div class="oge-subtask">
+      <div class="oge-subtask" id="oge-ex-1445">
 <p>
           Установите соответствие между формулой вещества и степенью окисления
           углерода в данном веществе: к каждой позиции, обозначенной буквой,
@@ -129,8 +129,10 @@
     </main>
     <script>
       (function () {
-        const btn = document.querySelector(".oge-subtask button[type='button']");
-        const out = document.querySelector(".oge-subtask .result");
+        const root = document.getElementById("oge-ex-1445");
+        if (!root) return;
+        const btn = root.querySelector("button[type='button']");
+        const out = root.querySelector(".result");
         if (!btn || !out) return;
         btn.textContent = "Ответ";
         btn.addEventListener("click", function () {

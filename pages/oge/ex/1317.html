@@ -49,7 +49,7 @@
         <strong>★ Задание повышенной сложности.</strong> Be, Ca и K стоят в разных периодах и разных группах — сравнивать приходится и по периоду, и по группе.
       </p>
 
-      <div class="oge-subtask">
+      <div class="oge-subtask" id="oge-ex-1317">
 <p>Расположите химические элементы —</p>
 <ol>
             <li>кальций</li>
@@ -104,8 +104,10 @@
     </main>
     <script>
       (function () {
-        const btn = document.querySelector(".oge-subtask button[type='button']");
-        const out = document.querySelector(".oge-subtask .result");
+        const root = document.getElementById("oge-ex-1317");
+        if (!root) return;
+        const btn = root.querySelector("button[type='button']");
+        const out = root.querySelector(".result");
         if (!btn || !out) return;
         btn.textContent = "Ответ";
         btn.addEventListener("click", function () {

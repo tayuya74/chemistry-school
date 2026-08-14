@@ -49,7 +49,7 @@
         <strong>★ Задание повышенной сложности.</strong> Непривычная формулировка: утверждение должно быть верным для одного элемента и неверным для другого — проверять нужно в обе стороны.
       </p>
 
-      <div class="oge-subtask" data-oge-checkbox-max="2" data-oge-two-choice-correct="2|3" data-oge-option-count="5">
+      <div class="oge-subtask" id="oge-ex-1405" data-oge-checkbox-max="2" data-oge-two-choice-correct="2|3" data-oge-option-count="5">
 <p>
           Какие <strong>два утверждения</strong> являются <strong>верными для характеристики кальция</strong>
           и <strong>неверными для характеристики азота</strong>?
@@ -125,8 +125,10 @@
     </main>
     <script>
       (function () {
-        const btn = document.querySelector(".oge-subtask button[type='button']");
-        const out = document.querySelector(".oge-subtask .result");
+        const root = document.getElementById("oge-ex-1405");
+        if (!root) return;
+        const btn = root.querySelector("button[type='button']");
+        const out = root.querySelector(".result");
         if (!btn || !out) return;
         btn.textContent = "Ответ";
         btn.addEventListener("click", function () {

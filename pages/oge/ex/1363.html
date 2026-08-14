@@ -49,7 +49,7 @@
         <strong>★ Задание повышенной сложности.</strong> Гидроксид калия — вещество ионное, но связь O–H внутри гидроксид-иона ковалентная полярная, поэтому он подходит.
       </p>
 
-      <div class="oge-subtask" data-oge-checkbox-max="2" data-oge-two-choice-correct="2|5" data-oge-option-count="5">
+      <div class="oge-subtask" id="oge-ex-1363" data-oge-checkbox-max="2" data-oge-two-choice-correct="2|5" data-oge-option-count="5">
 <p>
           Из предложенного перечня выберите два вещества, содержащие <strong>ковалентную полярную связь</strong>.
         </p>
@@ -124,8 +124,10 @@
     </main>
     <script>
       (function () {
-        const btn = document.querySelector(".oge-subtask button[type='button']");
-        const out = document.querySelector(".oge-subtask .result");
+        const root = document.getElementById("oge-ex-1363");
+        if (!root) return;
+        const btn = root.querySelector("button[type='button']");
+        const out = root.querySelector(".result");
         if (!btn || !out) return;
         btn.textContent = "Ответ";
         btn.addEventListener("click", function () {

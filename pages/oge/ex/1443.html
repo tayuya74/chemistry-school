@@ -49,7 +49,7 @@
         <strong>★ Задание повышенной сложности.</strong> BaO₂ — пероксид (кислород −1), а в O₂F₂ кислород +1. Обычное «−2» подходит только к Al₂O₃.
       </p>
 
-      <div class="oge-subtask">
+      <div class="oge-subtask" id="oge-ex-1443">
 <p>
           Установите соответствие между формулой вещества и степенью окисления
           кислорода в данном веществе: к каждой позиции, обозначенной буквой,
@@ -129,8 +129,10 @@
     </main>
     <script>
       (function () {
-        const btn = document.querySelector(".oge-subtask button[type='button']");
-        const out = document.querySelector(".oge-subtask .result");
+        const root = document.getElementById("oge-ex-1443");
+        if (!root) return;
+        const btn = root.querySelector("button[type='button']");
+        const out = root.querySelector(".result");
         if (!btn || !out) return;
         btn.textContent = "Ответ";
         btn.addEventListener("click", function () {

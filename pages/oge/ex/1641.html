@@ -49,7 +49,7 @@
         <strong>★ Задание повышенной сложности.</strong> Кислород идёт в −1, как в пероксиде бария: это всё ещё восстановление, просто не до привычной степени −2.
       </p>
 
-      <div class="oge-subtask">
+      <div class="oge-subtask" id="oge-ex-1641">
 <p>
           Установите соответствие между <strong>схемой процесса</strong>, происходящего в
           окислительно-восстановительной реакции, и <strong>названием этого процесса</strong>:
@@ -122,8 +122,10 @@
     </main>
     <script>
       (function () {
-        const btn = document.querySelector(".oge-subtask button[type='button']");
-        const out = document.querySelector(".oge-subtask .result");
+        const root = document.getElementById("oge-ex-1641");
+        if (!root) return;
+        const btn = root.querySelector("button[type='button']");
+        const out = root.querySelector(".result");
         if (!btn || !out) return;
         btn.textContent = "Ответ";
         btn.addEventListener("click", function () {
