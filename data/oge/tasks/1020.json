@@ -21,7 +21,7 @@
   "content": {},
   "answer": null,
   "solution": {
-    "title": "Эталон ответа (демоверсия ОГЭ 2026)",
+    "title": "Ход решения",
     "html": "<p style=\"margin-top: 12px\">Электронный баланс:</p>\n          <p style=\"font-family: monospace; white-space: pre-line\">\n            Fe<sup>+3</sup> + 1ē → Fe<sup>+2</sup> |×2 2I<sup>−1</sup> − 2ē →\n            I<sub>2</sub><sup>0</sup> |×1\n          </p>\n          <p>\n            <strong>Окислитель:</strong> железо в степени окисления +3 (или\n            Fe(OH)<sub>3</sub>).<br />\n            <strong>Восстановитель:</strong> иод в степени окисления −1 (или\n            HI).\n          </p>\n          <p>Уравнение реакции:</p>\n          <p style=\"text-align: center\">\n            <strong>2</strong>Fe(OH)<sub>3</sub> + <strong>6</strong>HI =\n            <strong>2</strong>FeI<sub>2</sub> + I<sub>2</sub> +\n            <strong>6</strong>H<sub>2</sub>O\n          </p>"
   }
 }
