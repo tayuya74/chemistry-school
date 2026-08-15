@@ -1,0 +1,29 @@
+{
+  "id": 1814,
+  "examType": 20,
+  "uiKind": "openReference",
+  "meta": {
+    "lead": "Окислительно-восстановительные реакции",
+    "source": "Открытый банк заданий ОГЭ по химии (ФИПИ), oge.fipi.ru/bank, № 66DC90",
+    "sourceDir": "fipi-bank",
+    "advanced": true,
+    "advancedNote": "Конпропорционирование: азот из соли аммония (−3) и азот из нитрата (+5) встречаются в одной степени +1. Окислитель и восстановитель — один элемент в разных веществах."
+  },
+  "blocks": [
+    {
+      "html": "<p>\n          Используя метод электронного баланса, расставьте коэффициенты в схеме\n          реакции\n        </p>"
+    },
+    {
+      "html": "<p style=\"text-align: center; font-size: 1.1rem; margin: 16px 0\">\n          KNO<sub>3</sub> + NH<sub>4</sub>Cl → N<sub>2</sub>O + H<sub>2</sub>O + KCl\n        </p>"
+    },
+    {
+      "html": "<p>\n          Запишите в отдельной(-ых) строчке(-ах) формулы вещества/частицы\n          окислителя и восстановителя. Укажите, какое(-ая) из этих\n          веществ/частиц является окислителем, а какое(-ая) — восстановителем.\n        </p>"
+    }
+  ],
+  "content": {},
+  "answer": null,
+  "solution": {
+    "title": "Ход решения",
+    "html": "<p style=\"margin-top: 12px\">Электронный баланс:</p>\n          <p style=\"font-family: monospace; white-space: pre-line\">\n            N<sup>−3</sup> − 4ē → N<sup>+1</sup> |×1\n            N<sup>+5</sup> + 4ē → N<sup>+1</sup> |×1\n          </p>\n          <p>\n            <strong>Окислитель:</strong> азот в степени окисления +5 (или KNO<sub>3</sub>).<br />\n            <strong>Восстановитель:</strong> азот в степени окисления −3 (или NH<sub>4</sub>Cl).\n          </p>\n          <p>Уравнение реакции:</p>\n          <p style=\"text-align: center\">\n            KNO<sub>3</sub> + NH<sub>4</sub>Cl = N<sub>2</sub>O + <strong>2</strong>H<sub>2</sub>O + KCl\n          </p>"
+  }
+}
