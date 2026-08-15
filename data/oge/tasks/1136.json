@@ -21,7 +21,7 @@
   "content": {},
   "answer": null,
   "solution": {
-    "title": "Эталон ответа (вариант 4, 2025)",
+    "title": "Ход решения",
     "html": "<p style=\"margin-top: 12px\">\n            Одна из возможных цепочек:\n            <strong>X = Na<sub>2</sub>SiO<sub>3</sub></strong\n            >.\n          </p>\n          <ol style=\"margin-top: 12px; line-height: 1.7\">\n            <li>Si + O<sub>2</sub> = SiO<sub>2</sub></li>\n            <li>\n              SiO<sub>2</sub> + 2NaOH = Na<sub>2</sub>SiO<sub>3</sub> +\n              H<sub>2</sub>O\n              <small\n                >(сплавление или сильный нагрев с концентрированным\n                раствором)</small\n              >\n            </li>\n            <li>\n              Na<sub>2</sub>SiO<sub>3</sub> + 2HCl = H<sub>2</sub>SiO<sub\n                >3</sub\n              >\n              ↓ + 2NaCl\n            </li>\n          </ol>\n          <p style=\"margin-top: 12px\">\n            Допустимы эквивалентные переходы (например, через силикат кальция и\n            CO<sub>2</sub> в водной среде), если они согласуются с условием.\n          </p>"
   }
 }

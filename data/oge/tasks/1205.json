@@ -21,7 +21,7 @@
   "content": {},
   "answer": null,
   "solution": {
-    "title": "Эталон ответа (вариант 7, 2025)",
+    "title": "Ход решения",
     "html": "<p style=\"margin-top: 12px\">\n            2H<sub>2</sub>S + 3O<sub>2</sub> = 2SO<sub>2</sub> + 2H<sub>2</sub>O\n          </p>\n          <p style=\"margin-top: 8px\">\n            SO<sub>2</sub> + 2NH<sub>3</sub> + H<sub>2</sub>O =\n            (NH<sub>4</sub>)<sub>2</sub>SO<sub>3</sub><br /><span\n              >(X — SO<sub>2</sub>)</span\n            >\n          </p>\n          <p style=\"margin-top: 8px\">\n            (NH<sub>4</sub>)<sub>2</sub>SO<sub>3</sub> + 2NaOH =\n            Na<sub>2</sub>SO<sub>3</sub> + 2NH<sub>3</sub> + 2H<sub>2</sub>O\n          </p>"
   }
 }

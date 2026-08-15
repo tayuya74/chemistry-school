@@ -21,7 +21,7 @@
   "content": {},
   "answer": null,
   "solution": {
-    "title": "Эталон ответа (вариант 1, 2025)",
+    "title": "Ход решения",
     "html": "<ol style=\"margin-top: 12px; line-height: 1.7\">\n            <li>\n              Cu(NO<sub>3</sub>)<sub>2</sub> + 2Ag = 2AgNO<sub>3</sub> + Cu↓\n            </li>\n            <li>Cu + Cl<sub>2</sub> = CuCl<sub>2</sub></li>\n            <li>CuCl<sub>2</sub> + 2NaOH = Cu(OH)<sub>2</sub>↓ + 2NaCl</li>\n          </ol>"
   }
 }

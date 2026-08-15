@@ -18,7 +18,7 @@
   "content": {},
   "answer": null,
   "solution": {
-    "title": "Эталон ответа (вариант 6, 2025)",
+    "title": "Ход решения",
     "html": "<p style=\"margin-top: 12px\">\n            Cu + 4HNO<sub>3</sub> = Cu(NO<sub>3</sub>)<sub>2</sub> + 2NO<sub\n              >2</sub\n            >\n            + 2H<sub>2</sub>O\n          </p>\n          <p style=\"margin-top: 8px\">\n            Cu(NO<sub>3</sub>)<sub>2</sub> + 2NaOH = Cu(OH)<sub>2</sub>↓ +\n            2NaNO<sub>3</sub><br />\n            <span>(X — Cu(OH)<sub>2</sub>)</span>\n          </p>\n          <p style=\"margin-top: 8px\">\n            Cu(OH)<sub>2</sub> + 2HCl = CuCl<sub>2</sub> + 2H<sub>2</sub>O\n          </p>"
   }
 }

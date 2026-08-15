@@ -21,7 +21,7 @@
   "content": {},
   "answer": null,
   "solution": {
-    "title": "Эталон ответа (демоверсия ОГЭ 2026)",
+    "title": "Ход решения",
     "html": "<ol style=\"margin-top: 12px; line-height: 1.7\">\n            <li>\n              2Zn(NO<sub>3</sub>)<sub>2</sub>\n              <span style=\"margin-left: 4px\">→</span><sup>t°</sup> 2ZnO +\n              4NO<sub>2</sub> + O<sub>2</sub> &nbsp; (X — ZnO)\n            </li>\n            <li>\n              ZnO + H<sub>2</sub>SO<sub>4</sub> = ZnSO<sub>4</sub> +\n              H<sub>2</sub>O\n            </li>\n            <li>\n              ZnSO<sub>4</sub> + 2NaOH = Zn(OH)<sub>2</sub> +\n              Na<sub>2</sub>SO<sub>4</sub>\n            </li>\n          </ol>\n          <p style=\"margin-top: 12px\">\n            Допускается иной разумный путь к ZnSO<sub>4</sub> от оксида цинка.\n          </p>"
   }
 }
