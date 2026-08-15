@@ -82,9 +82,112 @@
           <button type="button" id="checkBtn">Проверить</button>
         </p>
         <p id="resultOut" class="result" role="status"></p>
+        <details class="tip" style="margin-top: 24px">
+          <summary style="cursor: pointer; font-weight: 600">
+            Ход решения
+          </summary>
+          
+          <p>M(MgHPO<sub>4</sub>) = 24 + 1 + 31 + 4 · 16 = 120 г/моль.</p>
+          <p>w(Mg) = 24 / 120 · 100 % = <strong>20 %</strong>.</p>
+        
+        </details>
       </div>
       <p>Источник: Демонстрационный вариант ОГЭ по химии 2026 года (ФИПИ).</p>
 
+      <h3 class="oge-example-title oge-pair-title"><a class="oge-task-seq" href="1019.html">Задание 19 № 1019</a></h3>
+<div class="oge-subtask" id="oge-ex-linked-1019">
+<p class="tip" style="margin-bottom: 16px">
+          При выполнении задания 19 используйте величину, которая определена в
+          задании 18 с указанной в нём степенью точности.
+        </p>
+<p>
+          <strong>Вычислите массу гидрофосфата магния (в миллиграммах)</strong>,
+          которая должна содержаться в
+          <strong>одной таблетке</strong> витаминно-минерального комплекса, если
+          рекомендован приём <strong>двух</strong> таких таблеток в сутки (всего
+          300 мг магния в сутки). Запишите число с точностью до целых.
+        </p>
+
+        <div
+          class="oge-mass-table-wrap"
+          role="region"
+          aria-label="Таблица для расчёта"
+        >
+          <table class="oge-mass-table">
+            <tbody>
+              <tr>
+                <td class="oge-mass-table__cell--blank"></td>
+                <td class="oge-mass-table__static">W, %</td>
+                <td>
+                  <input
+                    type="text"
+                    inputmode="text"
+                    autocomplete="off"
+                    aria-label="Верхняя правая ячейка таблицы"
+                  />
+                </td>
+              </tr>
+              <tr>
+                <td class="oge-mass-table__static">элемент</td>
+                <td>
+                  <input
+                    type="text"
+                    inputmode="text"
+                    autocomplete="off"
+                    aria-label="Массовая доля элемента, проценты"
+                  />
+                </td>
+                <td>
+                  <input
+                    type="text"
+                    inputmode="text"
+                    autocomplete="off"
+                    aria-label="Правая ячейка строки «элемент»"
+                  />
+                </td>
+              </tr>
+              <tr>
+                <td class="oge-mass-table__static">вещество</td>
+                <td class="oge-mass-table__static">100</td>
+                <td>
+                  <input
+                    type="text"
+                    inputmode="text"
+                    autocomplete="off"
+                    aria-label="Масса вещества"
+                  />
+                </td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+        <p class="oge-answer-label">Ответ (мг):</p>
+        <p>
+          <input
+            id="ansNumL"
+            type="text"
+            inputmode="decimal"
+            class="oge-answer-input"
+            autocomplete="off"
+            aria-label="Числовой ответ"
+          />
+        </p>
+        <p style="margin-top: 16px">
+          <button type="button" id="checkBtnL">Проверить</button>
+        </p>
+        <p id="resultOutL" class="result" role="status"></p>
+        <details class="tip" style="margin-top: 24px">
+          <summary style="cursor: pointer; font-weight: 600">
+            Ход решения
+          </summary>
+          
+          <p>В сутки нужно 300 мг магния, а таблеток две — значит на одну приходится 300 : 2 = 150 мг магния.</p>
+          <p>Масса соли в таблетке = 150 / 0,20 = 750 мг.</p>
+          <p>Ответ: <strong>750 мг</strong>.</p>
+        
+        </details>
+      </div>
+      <p>Источник: Демонстрационный вариант ОГЭ по химии 2026 года (ФИПИ).</p>
       </article>
     </main>
     <script>
@@ -97,6 +200,19 @@
         btn.textContent = "Ответ";
         btn.addEventListener("click", function () {
           out.textContent = OGE_EX_formatAnswer(["20"]);
+        });
+      })();
+    </script>
+    <script>
+      (function () {
+        const root = document.getElementById("oge-ex-linked-1019");
+        if (!root) return;
+        const btn = root.querySelector("button[type='button']");
+        const out = root.querySelector(".result");
+        if (!btn || !out) return;
+        btn.textContent = "Ответ";
+        btn.addEventListener("click", function () {
+          out.textContent = OGE_EX_formatAnswer(["750"]);
         });
       })();
     </script>

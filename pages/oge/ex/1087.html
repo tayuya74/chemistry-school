@@ -51,10 +51,6 @@
           При проведении расчётов для всех элементов, кроме хлора, используйте
           целые значения относительных атомных масс (Ar(Cl) = 35,5).
         </p>
-<p class="tip" style="margin-bottom: 16px">
-          Ответом к заданиям 18, 19 является целое число или конечная десятичная
-          дробь. Задания 18 и 19 выполняются с использованием следующего текста.
-        </p>
 <p>
           Тимохинон (C<sub>10</sub>H<sub>12</sub>O<sub>2</sub>) — биологически
           активный компонент масла чёрного тмина. Обладает широким спектром
@@ -85,9 +81,113 @@
           <button type="button" id="checkBtn">Проверить</button>
         </p>
         <p id="resultOut" class="result" role="status"></p>
+        <details class="tip" style="margin-top: 24px">
+          <summary style="cursor: pointer; font-weight: 600">
+            Ход решения
+          </summary>
+          
+          <p>M(C<sub>10</sub>H<sub>12</sub>O<sub>2</sub>) = 10 · 12 + 12 · 1 + 2 · 16 = 164 г/моль.</p>
+          <p>m(C) = 10 · 12 = 120.</p>
+          <p>w(C) = 120 / 164 · 100 % = 73,17… % ≈ <strong>73,2 %</strong>.</p>
+        
+        </details>
       </div>
       <p>Источник: ОГЭ. Типовые экзаменационные варианты, вариант 2 (Издательство «Национальное образование», 2025).</p>
 
+      <h3 class="oge-example-title oge-pair-title"><a class="oge-task-seq" href="1088.html">Задание 19 № 1088</a></h3>
+<div class="oge-subtask" id="oge-ex-linked-1088">
+<p class="tip" style="margin-bottom: 16px">
+          При выполнении задания 19 используйте величину, которая определена в
+          задании 18 с указанной в нём степенью точности.
+        </p>
+<p>
+          <strong
+            >Вычислите, сколько миллиграммов (мг) углерода в неделю получит
+            человек, ежедневно употребляющий суточную дозу тимохинона.</strong
+          >
+          Запишите число с точностью до целых.
+        </p>
+
+        <div
+          class="oge-mass-table-wrap"
+          role="region"
+          aria-label="Таблица для расчёта"
+        >
+          <table class="oge-mass-table">
+            <tbody>
+              <tr>
+                <td class="oge-mass-table__cell--blank"></td>
+                <td class="oge-mass-table__static">W, %</td>
+                <td>
+                  <input
+                    type="text"
+                    inputmode="text"
+                    autocomplete="off"
+                    aria-label="Верхняя правая ячейка таблицы"
+                  />
+                </td>
+              </tr>
+              <tr>
+                <td class="oge-mass-table__static">элемент</td>
+                <td>
+                  <input
+                    type="text"
+                    inputmode="text"
+                    autocomplete="off"
+                    aria-label="Массовая доля элемента, проценты"
+                  />
+                </td>
+                <td>
+                  <input
+                    type="text"
+                    inputmode="text"
+                    autocomplete="off"
+                    aria-label="Правая ячейка строки «элемент»"
+                  />
+                </td>
+              </tr>
+              <tr>
+                <td class="oge-mass-table__static">вещество</td>
+                <td class="oge-mass-table__static">100</td>
+                <td>
+                  <input
+                    type="text"
+                    inputmode="text"
+                    autocomplete="off"
+                    aria-label="Масса вещества"
+                  />
+                </td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+        <p class="oge-answer-label">Ответ (мг):</p>
+        <p>
+          <input
+            id="ansNumL"
+            type="text"
+            inputmode="decimal"
+            class="oge-answer-input"
+            autocomplete="off"
+            aria-label="Числовой ответ"
+          />
+        </p>
+        <p style="margin-top: 16px">
+          <button type="button" id="checkBtnL">Проверить</button>
+        </p>
+        <p id="resultOutL" class="result" role="status"></p>
+        <details class="tip" style="margin-top: 24px">
+          <summary style="cursor: pointer; font-weight: 600">
+            Ход решения
+          </summary>
+          
+          <p>За неделю человек примет 15 мг · 7 = 105 мг тимохинона.</p>
+          <p>m(C) = 105 · 0,732 = 76,86 мг.</p>
+          <p>Ответ: <strong>77 мг</strong>.</p>
+        
+        </details>
+      </div>
+      <p>Источник: ОГЭ. Типовые экзаменационные варианты, вариант 2 (Издательство «Национальное образование», 2025).</p>
       </article>
     </main>
     <script>
@@ -100,6 +200,19 @@
         btn.textContent = "Ответ";
         btn.addEventListener("click", function () {
           out.textContent = OGE_EX_formatAnswer(["73,2"]);
+        });
+      })();
+    </script>
+    <script>
+      (function () {
+        const root = document.getElementById("oge-ex-linked-1088");
+        if (!root) return;
+        const btn = root.querySelector("button[type='button']");
+        const out = root.querySelector(".result");
+        if (!btn || !out) return;
+        btn.textContent = "Ответ";
+        btn.addEventListener("click", function () {
+          out.textContent = OGE_EX_formatAnswer(["77"]);
         });
       })();
     </script>

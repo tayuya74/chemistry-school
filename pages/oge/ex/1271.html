@@ -48,15 +48,8 @@
 
       <div class="oge-subtask" id="oge-ex-1271">
 <p class="tip" style="margin-bottom: 16px">
-          Ответом к заданиям 18, 19 является целое число или конечная десятичная
-          дробь. Ответы сначала укажите в тексте работы, а затем перенесите в
-          БЛАНК ОТВЕТОВ № 1 справа от номера соответствующего задания, начиная с
-          первой клеточки. Каждый символ пишите в отдельной клеточке в
-          соответствии с приведёнными в бланке образцами. Единицы измерения
-          физических величин в бланке ответов указывать не нужно.
-        </p>
-<p class="tip" style="margin-bottom: 16px">
-          Задания 18 и 19 выполняются с использованием следующего текста.
+          При проведении расчётов для всех элементов, кроме хлора, используйте
+          целые значения относительных атомных масс (Ar(Cl) = 35,5).
         </p>
 <p>
           Цитрат кальция — химическое соединение, соль кальция и лимонной
@@ -88,9 +81,115 @@
           <button type="button" id="checkBtn">Проверить</button>
         </p>
         <p id="resultOut" class="result" role="status"></p>
+        <details class="tip" style="margin-top: 24px">
+          <summary style="cursor: pointer; font-weight: 600">
+            Ход решения
+          </summary>
+          
+          <p>M(Ca<sub>3</sub>(C<sub>6</sub>H<sub>5</sub>O<sub>7</sub>)<sub>2</sub>) = 3 · 40 + 2 · (6 · 12 + 5 · 1 + 7 · 16) = 120 + 2 · 189 = 498 г/моль.</p>
+          <p>m(Ca) = 3 · 40 = 120.</p>
+          <p>w(Ca) = 120 / 498 · 100 % = 24,09… % ≈ <strong>24 %</strong>.</p>
+        
+        </details>
       </div>
       <p>Источник: ОГЭ. Типовые экзаменационные варианты, вариант 10 (Издательство «Национальное образование», 2025).</p>
 
+      <h3 class="oge-example-title oge-pair-title"><a class="oge-task-seq" href="1272.html">Задание 19 № 1272</a></h3>
+<div class="oge-subtask" id="oge-ex-linked-1272">
+<p class="tip" style="margin-bottom: 16px">
+          При выполнении задания 19 используйте величину, которая определена в
+          задании 18 с указанной в нём степенью точности.
+        </p>
+<p>
+          <strong
+            >Чтобы покрывать суточную потребность животного в кальции, собаке
+            весом около 5 кг ежедневно в пищу добавляют одну мерную ложечку (2
+            г) цитрата кальция.</strong
+          >
+          Вычислите, сколько миллиграммов (мг) кальция ежедневно получает собака
+          с этим препаратом. Запишите число с точностью до целых.
+        </p>
+
+        <div
+          class="oge-mass-table-wrap"
+          role="region"
+          aria-label="Таблица для расчёта"
+        >
+          <table class="oge-mass-table">
+            <tbody>
+              <tr>
+                <td class="oge-mass-table__cell--blank"></td>
+                <td class="oge-mass-table__static">W, %</td>
+                <td>
+                  <input
+                    type="text"
+                    inputmode="text"
+                    autocomplete="off"
+                    aria-label="Верхняя правая ячейка таблицы"
+                  />
+                </td>
+              </tr>
+              <tr>
+                <td class="oge-mass-table__static">элемент</td>
+                <td>
+                  <input
+                    type="text"
+                    inputmode="text"
+                    autocomplete="off"
+                    aria-label="Массовая доля элемента, проценты"
+                  />
+                </td>
+                <td>
+                  <input
+                    type="text"
+                    inputmode="text"
+                    autocomplete="off"
+                    aria-label="Правая ячейка строки «элемент»"
+                  />
+                </td>
+              </tr>
+              <tr>
+                <td class="oge-mass-table__static">вещество</td>
+                <td class="oge-mass-table__static">100</td>
+                <td>
+                  <input
+                    type="text"
+                    inputmode="text"
+                    autocomplete="off"
+                    aria-label="Масса вещества"
+                  />
+                </td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+        <p class="oge-answer-label">Ответ (мг):</p>
+        <p>
+          <input
+            id="ansNumL"
+            type="text"
+            inputmode="decimal"
+            class="oge-answer-input"
+            autocomplete="off"
+            aria-label="Числовой ответ"
+          />
+        </p>
+        <p style="margin-top: 16px">
+          <button type="button" id="checkBtnL">Проверить</button>
+        </p>
+        <p id="resultOutL" class="result" role="status"></p>
+        <details class="tip" style="margin-top: 24px">
+          <summary style="cursor: pointer; font-weight: 600">
+            Ход решения
+          </summary>
+          
+          <p>Собака получает 2 г = 2000 мг цитрата кальция.</p>
+          <p>m(Ca) = 2000 · 0,24 = 480 мг.</p>
+          <p>Ответ: <strong>480 мг</strong>.</p>
+        
+        </details>
+      </div>
+      <p>Источник: ОГЭ. Типовые экзаменационные варианты, вариант 10 (Издательство «Национальное образование», 2025).</p>
       </article>
     </main>
     <script>
@@ -103,6 +202,19 @@
         btn.textContent = "Ответ";
         btn.addEventListener("click", function () {
           out.textContent = OGE_EX_formatAnswer(["24"]);
+        });
+      })();
+    </script>
+    <script>
+      (function () {
+        const root = document.getElementById("oge-ex-linked-1272");
+        if (!root) return;
+        const btn = root.querySelector("button[type='button']");
+        const out = root.querySelector(".result");
+        if (!btn || !out) return;
+        btn.textContent = "Ответ";
+        btn.addEventListener("click", function () {
+          out.textContent = OGE_EX_formatAnswer(["480"]);
         });
       })();
     </script>

@@ -5,7 +5,9 @@
   "meta": {
     "lead": "Вычисление массовой доли химического элемента в веществе",
     "source": "Демонстрационный вариант ОГЭ по химии 2026 года (ФИПИ).",
-    "sourceDir": "2026-demo"
+    "sourceDir": "2026-demo",
+    "linkedTaskId": 1019,
+    "sharedBlocks": 2
   },
   "blocks": [
     {
@@ -25,5 +27,8 @@
   "answer": {
     "value": 20
   },
-  "solution": null
+  "solution": {
+    "title": "Ход решения",
+    "html": "\n          <p>M(MgHPO<sub>4</sub>) = 24 + 1 + 31 + 4 · 16 = 120 г/моль.</p>\n          <p>w(Mg) = 24 / 120 · 100 % = <strong>20 %</strong>.</p>\n        "
+  }
 }

@@ -51,10 +51,6 @@
           При проведении расчётов для всех элементов, кроме хлора, используйте
           целые значения относительных атомных масс (Ar(Cl) = 35,5).
         </p>
-<p class="tip" style="margin-bottom: 16px">
-          Ответом к заданиям 18, 19 является целое число или конечная десятичная
-          дробь. Задания 18 и 19 выполняются с использованием следующего текста.
-        </p>
 <p>
           Глицерофосфат кальция (C<sub>3</sub>H<sub>7</sub>CaO<sub>6</sub>P)
           является лекарственным препаратом, который выполняет функцию
@@ -85,9 +81,113 @@
           <button type="button" id="checkBtn">Проверить</button>
         </p>
         <p id="resultOut" class="result" role="status"></p>
+        <details class="tip" style="margin-top: 24px">
+          <summary style="cursor: pointer; font-weight: 600">
+            Ход решения
+          </summary>
+          
+          <p>M(C<sub>3</sub>H<sub>7</sub>CaO<sub>6</sub>P) = 3 · 12 + 7 · 1 + 40 + 6 · 16 + 31 = 210 г/моль.</p>
+          <p>w(P) = 31 / 210 · 100 % = 14,76… % ≈ <strong>14,8 %</strong>.</p>
+        
+        </details>
       </div>
       <p>Источник: ОГЭ. Типовые экзаменационные варианты, вариант 6 (Издательство «Национальное образование», 2025).</p>
 
+      <h3 class="oge-example-title oge-pair-title"><a class="oge-task-seq" href="1180.html">Задание 19 № 1180</a></h3>
+<div class="oge-subtask" id="oge-ex-linked-1180">
+<p class="tip" style="margin-bottom: 16px">
+          При выполнении задания 19 используйте величину, которая определена в
+          задании 18 с указанной в нём степенью точности.
+        </p>
+<p>
+          <strong
+            >Какую массу (в миллиграммах) фосфора взрослый человек получит в
+            сутки при приёме таблетки, в каждой из которых содержится 150 мг
+            глицерофосфата кальция?</strong
+          >
+          Запишите число с точностью до десятых.
+        </p>
+
+        <div
+          class="oge-mass-table-wrap"
+          role="region"
+          aria-label="Таблица для расчёта"
+        >
+          <table class="oge-mass-table">
+            <tbody>
+              <tr>
+                <td class="oge-mass-table__cell--blank"></td>
+                <td class="oge-mass-table__static">W, %</td>
+                <td>
+                  <input
+                    type="text"
+                    inputmode="text"
+                    autocomplete="off"
+                    aria-label="Верхняя правая ячейка таблицы"
+                  />
+                </td>
+              </tr>
+              <tr>
+                <td class="oge-mass-table__static">элемент</td>
+                <td>
+                  <input
+                    type="text"
+                    inputmode="text"
+                    autocomplete="off"
+                    aria-label="Массовая доля элемента, проценты"
+                  />
+                </td>
+                <td>
+                  <input
+                    type="text"
+                    inputmode="text"
+                    autocomplete="off"
+                    aria-label="Правая ячейка строки «элемент»"
+                  />
+                </td>
+              </tr>
+              <tr>
+                <td class="oge-mass-table__static">вещество</td>
+                <td class="oge-mass-table__static">100</td>
+                <td>
+                  <input
+                    type="text"
+                    inputmode="text"
+                    autocomplete="off"
+                    aria-label="Масса вещества"
+                  />
+                </td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+        <p class="oge-answer-label">Ответ (мг):</p>
+        <p>
+          <input
+            id="ansNumL"
+            type="text"
+            inputmode="decimal"
+            class="oge-answer-input"
+            autocomplete="off"
+            aria-label="Числовой ответ"
+          />
+        </p>
+        <p style="margin-top: 16px">
+          <button type="button" id="checkBtnL">Проверить</button>
+        </p>
+        <p id="resultOutL" class="result" role="status"></p>
+        <details class="tip" style="margin-top: 24px">
+          <summary style="cursor: pointer; font-weight: 600">
+            Ход решения
+          </summary>
+          
+          <p>Таблетки принимают два раза в сутки: 2 · 150 = 300 мг препарата.</p>
+          <p>m(P) = 300 · 0,148 = 44,4 мг.</p>
+          <p>Ответ: <strong>44,4 мг</strong>.</p>
+        
+        </details>
+      </div>
+      <p>Источник: ОГЭ. Типовые экзаменационные варианты, вариант 6 (Издательство «Национальное образование», 2025).</p>
       </article>
     </main>
     <script>
@@ -100,6 +200,19 @@
         btn.textContent = "Ответ";
         btn.addEventListener("click", function () {
           out.textContent = OGE_EX_formatAnswer(["14,8"]);
+        });
+      })();
+    </script>
+    <script>
+      (function () {
+        const root = document.getElementById("oge-ex-linked-1180");
+        if (!root) return;
+        const btn = root.querySelector("button[type='button']");
+        const out = root.querySelector(".result");
+        if (!btn || !out) return;
+        btn.textContent = "Ответ";
+        btn.addEventListener("click", function () {
+          out.textContent = OGE_EX_formatAnswer(["44,4"]);
         });
       })();
     </script>

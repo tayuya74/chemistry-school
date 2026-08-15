@@ -51,10 +51,6 @@
           При проведении расчётов для всех элементов, кроме хлора, используйте
           целые значения относительных атомных масс (Ar(Cl) = 35,5).
         </p>
-<p class="tip" style="margin-bottom: 16px">
-          Ответом к заданиям 18, 19 является целое число или конечная десятичная
-          дробь. Задания 18 и 19 выполняются с использованием следующего текста.
-        </p>
 <p>
           Ксонотлит — редкий минерал кальция, состав которого можно описать
           формулой Ca<sub>6</sub>Si<sub>6</sub>O<sub>19</sub>H<sub>2</sub>.
@@ -83,9 +79,113 @@
           <button type="button" id="checkBtn">Проверить</button>
         </p>
         <p id="resultOut" class="result" role="status"></p>
+        <details class="tip" style="margin-top: 24px">
+          <summary style="cursor: pointer; font-weight: 600">
+            Ход решения
+          </summary>
+          
+          <p>M(Ca<sub>6</sub>Si<sub>6</sub>O<sub>19</sub>H<sub>2</sub>) = 6 · 40 + 6 · 28 + 19 · 16 + 2 · 1 = 240 + 168 + 304 + 2 = 714 г/моль.</p>
+          <p>m(Ca) = 6 · 40 = 240.</p>
+          <p>w(Ca) = 240 / 714 · 100 % = 33,61… % ≈ <strong>33,6 %</strong>.</p>
+        
+        </details>
       </div>
       <p>Источник: ОГЭ. Типовые экзаменационные варианты, вариант 4 (Издательство «Национальное образование», 2025).</p>
 
+      <h3 class="oge-example-title oge-pair-title"><a class="oge-task-seq" href="1134.html">Задание 19 № 1134</a></h3>
+<div class="oge-subtask" id="oge-ex-linked-1134">
+<p class="tip" style="margin-bottom: 16px">
+          При выполнении задания 19 используйте величину, которая определена в
+          задании 18 с указанной в нём степенью точности.
+        </p>
+<p>
+          <strong
+            >Вычислите, сколько граммов (г) кальция содержится в кабошоне из
+            ксонотлита массой 12,8&nbsp;г.</strong
+          >
+          Запишите число с точностью до десятых.
+        </p>
+
+        <div
+          class="oge-mass-table-wrap"
+          role="region"
+          aria-label="Таблица для расчёта"
+        >
+          <table class="oge-mass-table">
+            <tbody>
+              <tr>
+                <td class="oge-mass-table__cell--blank"></td>
+                <td class="oge-mass-table__static">W, %</td>
+                <td>
+                  <input
+                    type="text"
+                    inputmode="text"
+                    autocomplete="off"
+                    aria-label="Верхняя правая ячейка таблицы"
+                  />
+                </td>
+              </tr>
+              <tr>
+                <td class="oge-mass-table__static">элемент</td>
+                <td>
+                  <input
+                    type="text"
+                    inputmode="text"
+                    autocomplete="off"
+                    aria-label="Массовая доля элемента, проценты"
+                  />
+                </td>
+                <td>
+                  <input
+                    type="text"
+                    inputmode="text"
+                    autocomplete="off"
+                    aria-label="Правая ячейка строки «элемент»"
+                  />
+                </td>
+              </tr>
+              <tr>
+                <td class="oge-mass-table__static">вещество</td>
+                <td class="oge-mass-table__static">100</td>
+                <td>
+                  <input
+                    type="text"
+                    inputmode="text"
+                    autocomplete="off"
+                    aria-label="Масса вещества"
+                  />
+                </td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+        <p class="oge-answer-label">Ответ (г):</p>
+        <p>
+          <input
+            id="ansNumL"
+            type="text"
+            inputmode="decimal"
+            class="oge-answer-input"
+            autocomplete="off"
+            aria-label="Числовой ответ"
+          />
+        </p>
+        <p style="margin-top: 16px">
+          <button type="button" id="checkBtnL">Проверить</button>
+        </p>
+        <p id="resultOutL" class="result" role="status"></p>
+        <details class="tip" style="margin-top: 24px">
+          <summary style="cursor: pointer; font-weight: 600">
+            Ход решения
+          </summary>
+          
+          <p>Масса кабошона 12,8 г.</p>
+          <p>m(Ca) = 12,8 · 0,336 = 4,30… г.</p>
+          <p>Ответ: <strong>4,3 г</strong>.</p>
+        
+        </details>
+      </div>
+      <p>Источник: ОГЭ. Типовые экзаменационные варианты, вариант 4 (Издательство «Национальное образование», 2025).</p>
       </article>
     </main>
     <script>
@@ -98,6 +198,19 @@
         btn.textContent = "Ответ";
         btn.addEventListener("click", function () {
           out.textContent = OGE_EX_formatAnswer(["33,6"]);
+        });
+      })();
+    </script>
+    <script>
+      (function () {
+        const root = document.getElementById("oge-ex-linked-1134");
+        if (!root) return;
+        const btn = root.querySelector("button[type='button']");
+        const out = root.querySelector(".result");
+        if (!btn || !out) return;
+        btn.textContent = "Ответ";
+        btn.addEventListener("click", function () {
+          out.textContent = OGE_EX_formatAnswer(["4,3"]);
         });
       })();
     </script>

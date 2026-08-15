@@ -48,15 +48,8 @@
 
       <div class="oge-subtask" id="oge-ex-1225">
 <p class="tip" style="margin-bottom: 16px">
-          Ответом к заданиям 18, 19 является целое число или конечная десятичная
-          дробь. Ответы сначала укажите в тексте работы, а затем перенесите в
-          БЛАНК ОТВЕТОВ № 1 справа от номера соответствующего задания, начиная с
-          первой клеточки. Каждый символ пишите в отдельной клеточке в
-          соответствии с приведёнными в бланке образцами. Единицы измерения
-          физических величин в бланке ответов указывать не нужно.
-        </p>
-<p class="tip" style="margin-bottom: 16px">
-          Задания 18 и 19 выполняются с использованием следующего текста.
+          При проведении расчётов для всех элементов, кроме хлора, используйте
+          целые значения относительных атомных масс (Ar(Cl) = 35,5).
         </p>
 <p>
           Доломитовая мука (двойной карбонат кальция-магния, CaCO<sub>3</sub> ·
@@ -86,9 +79,113 @@
           <button type="button" id="checkBtn">Проверить</button>
         </p>
         <p id="resultOut" class="result" role="status"></p>
+        <details class="tip" style="margin-top: 24px">
+          <summary style="cursor: pointer; font-weight: 600">
+            Ход решения
+          </summary>
+          
+          <p>Точка в формуле присоединяет второй карбонат, обе части идут в молярную массу.</p>
+          <p>M(CaCO<sub>3</sub>·MgCO<sub>3</sub>) = (40 + 12 + 48) + (24 + 12 + 48) = 100 + 84 = 184 г/моль.</p>
+          <p>w(Mg) = 24 / 184 · 100 % = 13,04… % ≈ <strong>13 %</strong>.</p>
+        
+        </details>
       </div>
       <p>Источник: ОГЭ. Типовые экзаменационные варианты, вариант 8 (Издательство «Национальное образование», 2025).</p>
 
+      <h3 class="oge-example-title oge-pair-title"><a class="oge-task-seq" href="1226.html">Задание 19 № 1226</a></h3>
+<div class="oge-subtask" id="oge-ex-linked-1226">
+<p class="tip" style="margin-bottom: 16px">
+          При выполнении задания 19 используйте величину, которая определена в
+          задании 18 с указанной в нём степенью точности.
+        </p>
+<p>
+          <strong
+            >Вычислите массу (в килограммах) доломита, которую надо внести в
+            почву на участке площадью 100 м<sup>2</sup>.</strong
+          >
+          Запишите число с точностью до десятых.
+        </p>
+
+        <div
+          class="oge-mass-table-wrap"
+          role="region"
+          aria-label="Таблица для расчёта"
+        >
+          <table class="oge-mass-table">
+            <tbody>
+              <tr>
+                <td class="oge-mass-table__cell--blank"></td>
+                <td class="oge-mass-table__static">W, %</td>
+                <td>
+                  <input
+                    type="text"
+                    inputmode="text"
+                    autocomplete="off"
+                    aria-label="Верхняя правая ячейка таблицы"
+                  />
+                </td>
+              </tr>
+              <tr>
+                <td class="oge-mass-table__static">элемент</td>
+                <td>
+                  <input
+                    type="text"
+                    inputmode="text"
+                    autocomplete="off"
+                    aria-label="Массовая доля элемента, проценты"
+                  />
+                </td>
+                <td>
+                  <input
+                    type="text"
+                    inputmode="text"
+                    autocomplete="off"
+                    aria-label="Правая ячейка строки «элемент»"
+                  />
+                </td>
+              </tr>
+              <tr>
+                <td class="oge-mass-table__static">вещество</td>
+                <td class="oge-mass-table__static">100</td>
+                <td>
+                  <input
+                    type="text"
+                    inputmode="text"
+                    autocomplete="off"
+                    aria-label="Масса вещества"
+                  />
+                </td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+        <p class="oge-answer-label">Ответ (кг):</p>
+        <p>
+          <input
+            id="ansNumL"
+            type="text"
+            inputmode="decimal"
+            class="oge-answer-input"
+            autocomplete="off"
+            aria-label="Числовой ответ"
+          />
+        </p>
+        <p style="margin-top: 16px">
+          <button type="button" id="checkBtnL">Проверить</button>
+        </p>
+        <p id="resultOutL" class="result" role="status"></p>
+        <details class="tip" style="margin-top: 24px">
+          <summary style="cursor: pointer; font-weight: 600">
+            Ход решения
+          </summary>
+          
+          <p>Магния нужно: 10 г/м² · 100 м² = 1000 г.</p>
+          <p>Масса доломита = 1000 / 0,13 = 7692,3… г ≈ 7,69 кг.</p>
+          <p>Ответ: <strong>7,7 кг</strong>.</p>
+        
+        </details>
+      </div>
+      <p>Источник: ОГЭ. Типовые экзаменационные варианты, вариант 8 (Издательство «Национальное образование», 2025).</p>
       </article>
     </main>
     <script>
@@ -101,6 +198,19 @@
         btn.textContent = "Ответ";
         btn.addEventListener("click", function () {
           out.textContent = OGE_EX_formatAnswer(["13"]);
+        });
+      })();
+    </script>
+    <script>
+      (function () {
+        const root = document.getElementById("oge-ex-linked-1226");
+        if (!root) return;
+        const btn = root.querySelector("button[type='button']");
+        const out = root.querySelector(".result");
+        if (!btn || !out) return;
+        btn.textContent = "Ответ";
+        btn.addEventListener("click", function () {
+          out.textContent = OGE_EX_formatAnswer(["7,7"]);
         });
       })();
     </script>

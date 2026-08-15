@@ -1402,15 +1402,8 @@
           <p class="lead oge-variant-task__lead">Вычисление массовой доли химического элемента в веществе</p>
 <div class="oge-subtask" id="oge-var-1248">
 <p class="tip" style="margin-bottom: 16px">
-          Ответом к заданиям 18, 19 является целое число или конечная десятичная
-          дробь. Ответы сначала укажите в тексте работы, а затем перенесите в
-          БЛАНК ОТВЕТОВ № 1 справа от номера соответствующего задания, начиная с
-          первой клеточки. Каждый символ пишите в отдельной клеточке в
-          соответствии с приведёнными в бланке образцами. Единицы измерения
-          физических величин в бланке ответов указывать не нужно.
-        </p>
-<p class="tip" style="margin-bottom: 16px">
-          Задания 18 и 19 выполняются с использованием следующего текста.
+          При проведении расчётов для всех элементов, кроме хлора, используйте
+          целые значения относительных атомных масс (Ar(Cl) = 35,5).
         </p>
 <p>
           Двойной суперфосфат (дигидрофосфат кальция,
@@ -1441,6 +1434,15 @@
           <button type="button" id="checkBtn-t1248">Проверить</button>
         </p>
         <p id="resultOut-t1248" class="result" role="status"></p>
+        <details class="tip" style="margin-top: 24px">
+          <summary style="cursor: pointer; font-weight: 600">
+            Ход решения
+          </summary>
+          
+          <p>M(Ca(H<sub>2</sub>PO<sub>4</sub>)<sub>2</sub>) = 40 + 2 · (2 · 1 + 31 + 4 · 16) = 40 + 2 · 97 = 234 г/моль.</p>
+          <p>w(Ca) = 40 / 234 · 100 % = 17,09… % ≈ <strong>17,1 %</strong> (задание требует точность до десятых).</p>
+        
+        </details>
       </div>
         </section>
         <section class="oge-variant-task" id="oge-variant-slot-19">
@@ -1454,11 +1456,18 @@
           <p class="lead oge-variant-task__lead">Вычисления массы элемента по его массовой доле в веществе</p>
 <div class="oge-subtask" id="oge-var-1249">
 <p class="tip" style="margin-bottom: 16px">
-          При выполнении задания 19 используйте величину, которая определена в
-          задании 18 с указанной в нём степенью точности.
+          При проведении расчётов для всех элементов, кроме хлора, используйте
+          целые значения относительных атомных масс (Ar(Cl) = 35,5).
+        </p>
+<p>
+          Двойной суперфосфат (дигидрофосфат кальция,
+          Ca(H<sub>2</sub>PO<sub>4</sub>)<sub>2</sub>) — широко используемое
+          комплексное удобрение. При подкормках овощных культур в почву вносят
+          10 г кальция на 1 м<sup>2</sup>.
         </p>
 <p class="tip" style="margin-bottom: 16px">
-          Контекст двойного суперфосфата — в задании 18 этого варианта.
+          При выполнении задания 19 используйте величину, которая определена в
+          задании 18 с указанной в нём степенью точности.
         </p>
 <p>
           <strong
@@ -1521,7 +1530,7 @@
             </tbody>
           </table>
         </div>
-        <p class="oge-answer-label">Ответ (г):</p>
+        <p class="oge-answer-label">Ответ (кг):</p>
         <p>
           <input
             id="ansNum-t1249"
@@ -1536,6 +1545,16 @@
           <button type="button" id="checkBtn-t1249">Проверить</button>
         </p>
         <p id="resultOut-t1249" class="result" role="status"></p>
+        <details class="tip" style="margin-top: 24px">
+          <summary style="cursor: pointer; font-weight: 600">
+            Ход решения
+          </summary>
+          
+          <p>Кальция нужно: 10 г/м² · 150 м² = 1500 г.</p>
+          <p>Масса суперфосфата = 1500 / 0,171 = 8771,9… г ≈ 8,77 кг.</p>
+          <p>Ответ: <strong>8,8 кг</strong>.</p>
+        
+        </details>
       </div>
         </section>
         <section class="oge-variant-task" id="oge-variant-slot-20">
@@ -2157,7 +2176,7 @@
             out.textContent = OGE_CHECK.retry;
             return;
           }
-          const ok = n === 17;
+          const ok = n === 17.1;
           out.textContent = ok ? OGE_CHECK.ok : OGE_CHECK.retry;
         });
       })();

@@ -1459,10 +1459,6 @@
           При проведении расчётов для всех элементов, кроме хлора, используйте
           целые значения относительных атомных масс (Ar(Cl) = 35,5).
         </p>
-<p class="tip" style="margin-bottom: 16px">
-          Ответом к заданиям 18, 19 является целое число или конечная десятичная
-          дробь. Задания 18 и 19 выполняются с использованием следующего текста.
-        </p>
 <p>
           Аллицин (C<sub>6</sub>H<sub>10</sub>OS<sub>2</sub>) — органическое
           соединение, которое образуется при механическом разрушении клеток
@@ -1492,6 +1488,16 @@
           <button type="button" id="checkBtn-t1110">Проверить</button>
         </p>
         <p id="resultOut-t1110" class="result" role="status"></p>
+        <details class="tip" style="margin-top: 24px">
+          <summary style="cursor: pointer; font-weight: 600">
+            Ход решения
+          </summary>
+          
+          <p>M(C<sub>6</sub>H<sub>10</sub>OS<sub>2</sub>) = 6 · 12 + 10 · 1 + 16 + 2 · 32 = 72 + 10 + 16 + 64 = 162 г/моль.</p>
+          <p>Серы в формуле два атома: m(S) = 2 · 32 = 64.</p>
+          <p>w(S) = 64 / 162 · 100 % = 39,5… % ≈ <strong>40 %</strong>.</p>
+        
+        </details>
       </div>
         </section>
         <section class="oge-variant-task" id="oge-variant-slot-19">
@@ -1508,15 +1514,18 @@
           При проведении расчётов для всех элементов, кроме хлора, используйте
           целые значения относительных атомных масс (Ar(Cl) = 35,5).
         </p>
+<p>
+          Аллицин (C<sub>6</sub>H<sub>10</sub>OS<sub>2</sub>) — органическое
+          соединение, которое образуется при механическом разрушении клеток
+          чеснока. Придаёт острый аромат блюдам со свежим чесноком и обладает
+          бактерицидным и фунгицидным действием. В одной капсуле биологически
+          активной добавки к пище массой <strong>400&nbsp;мг</strong> содержится
+          <strong>5&nbsp;мг</strong> аллицина. Рекомендовано принимать
+          <strong>две</strong> капсулы в сутки.
+        </p>
 <p class="tip" style="margin-bottom: 16px">
           При выполнении задания 19 используйте величину, которая определена в
           задании 18 с указанной в нём степенью точности.
-        </p>
-<p class="tip" style="margin-bottom: 16px">
-          Аллицин (C<sub>6</sub>H<sub>10</sub>OS<sub>2</sub>) содержится в
-          каждой капсуле в количестве <strong>5&nbsp;мг</strong>; масса капсулы
-          — <strong>400&nbsp;мг</strong> (полный текст — в задании 18 этого
-          варианта).
         </p>
 <p>
           <strong
@@ -1594,6 +1603,17 @@
           <button type="button" id="checkBtn-t1111">Проверить</button>
         </p>
         <p id="resultOut-t1111" class="result" role="status"></p>
+        <details class="tip" style="margin-top: 24px">
+          <summary style="cursor: pointer; font-weight: 600">
+            Ход решения
+          </summary>
+          
+          <p>В 24 г капсул содержится 24 : 0,4 = 60 капсул, в каждой по 5 мг аллицина.</p>
+          <p>Всего аллицина: 60 · 5 = 300 мг = 0,3 г.</p>
+          <p>m(S) = 0,3 · 0,40 = 0,12 г.</p>
+          <p>Ответ: <strong>0,1 г</strong>.</p>
+        
+        </details>
       </div>
         </section>
         <section class="oge-variant-task" id="oge-variant-slot-20">
@@ -2269,7 +2289,7 @@
             out.textContent = OGE_CHECK.retry;
             return;
           }
-          const ok = n === 36;
+          const ok = n === 40;
           out.textContent = ok ? OGE_CHECK.ok : OGE_CHECK.retry;
         });
       })();
