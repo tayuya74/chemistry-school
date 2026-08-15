@@ -1,0 +1,27 @@
+{
+  "id": 1823,
+  "examType": 21,
+  "uiKind": "openReference",
+  "meta": {
+    "lead": "Взаимосвязь различных классов неорганических веществ",
+    "source": "Открытый банк заданий ОГЭ по химии (ФИПИ), oge.fipi.ru/bank, № 965853",
+    "sourceDir": "fipi-bank"
+  },
+  "blocks": [
+    {
+      "html": "<p>Дана схема превращений:</p>"
+    },
+    {
+      "html": "<p style=\"text-align: center; font-size: 1.1rem; margin: 16px 0\">\n          Cu\n          <span style=\"margin: 0 6px\">→</span>\n          CuCl<sub>2</sub>\n          <span style=\"margin: 0 6px\">→</span>\n          X\n          <span style=\"margin: 0 6px\">→</span>\n          NO<sub>2</sub>\n        </p>"
+    },
+    {
+      "html": "<p>\n          Напишите <strong>молекулярные уравнения реакций</strong>, с помощью\n          которых можно осуществить указанные превращения.\n        </p>"
+    }
+  ],
+  "content": {},
+  "answer": null,
+  "solution": {
+    "title": "Ход решения",
+    "html": "<p style=\"margin-top: 12px\">Промежуточное вещество: <strong>X — Cu(NO<sub>3</sub>)<sub>2</sub></strong>.</p>\n          <ol style=\"line-height: 1.9\">\n            <li>Cu + Cl<sub>2</sub> = CuCl<sub>2</sub></li>\n            <li>CuCl<sub>2</sub> + 2AgNO<sub>3</sub> = Cu(NO<sub>3</sub>)<sub>2</sub> + 2AgCl↓</li>\n            <li>2Cu(NO<sub>3</sub>)<sub>2</sub> —t°→ 2CuO + 4NO<sub>2</sub>↑ + O<sub>2</sub>↑</li>\n          </ol>"
+  }
+}

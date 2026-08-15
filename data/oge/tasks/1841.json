@@ -1,0 +1,29 @@
+{
+  "id": 1841,
+  "examType": 21,
+  "uiKind": "openReference",
+  "meta": {
+    "lead": "Взаимосвязь различных классов неорганических веществ",
+    "source": "Открытый банк заданий ОГЭ по химии (ФИПИ), oge.fipi.ru/bank, № 3CBA0F",
+    "sourceDir": "fipi-bank",
+    "advanced": true,
+    "advancedNote": "На последнем шаге щёлочь работает не как основание: она растворяет амфотерный оксид цинка, а не осаждает его."
+  },
+  "blocks": [
+    {
+      "html": "<p>Дана схема превращений:</p>"
+    },
+    {
+      "html": "<p style=\"text-align: center; font-size: 1.1rem; margin: 16px 0\">\n          Zn(OH)<sub>2</sub>\n          <span style=\"margin: 0 6px\">→</span>\n          ZnO\n          <span style=\"margin: 0 6px\">→</span>\n          X\n          <span style=\"margin: 0 6px\">→</span>\n          Zn<sub>3</sub>(PO<sub>4</sub>)<sub>2</sub>\n        </p>"
+    },
+    {
+      "html": "<p>\n          Напишите <strong>молекулярные уравнения реакций</strong>, с помощью\n          которых можно осуществить указанные превращения.\n        </p>"
+    }
+  ],
+  "content": {},
+  "answer": null,
+  "solution": {
+    "title": "Ход решения",
+    "html": "<p style=\"margin-top: 12px\">Промежуточное вещество: <strong>X — ZnCl<sub>2</sub></strong>.</p>\n          <ol style=\"line-height: 1.9\">\n            <li>Zn(OH)<sub>2</sub> —t°→ ZnO + H<sub>2</sub>O</li>\n            <li>ZnO + 2HCl = ZnCl<sub>2</sub> + H<sub>2</sub>O</li>\n            <li>3ZnCl<sub>2</sub> + 2Na<sub>3</sub>PO<sub>4</sub> = Zn<sub>3</sub>(PO<sub>4</sub>)<sub>2</sub>↓ + 6NaCl</li>\n          </ol>"
+  }
+}

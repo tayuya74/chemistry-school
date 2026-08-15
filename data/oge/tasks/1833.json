@@ -1,0 +1,27 @@
+{
+  "id": 1833,
+  "examType": 21,
+  "uiKind": "openReference",
+  "meta": {
+    "lead": "Взаимосвязь различных классов неорганических веществ",
+    "source": "Открытый банк заданий ОГЭ по химии (ФИПИ), oge.fipi.ru/bank, № 4911A4",
+    "sourceDir": "fipi-bank"
+  },
+  "blocks": [
+    {
+      "html": "<p>Дана схема превращений:</p>"
+    },
+    {
+      "html": "<p style=\"text-align: center; font-size: 1.1rem; margin: 16px 0\">\n          CaO\n          <span style=\"margin: 0 6px\">→</span>\n          X\n          <span style=\"margin: 0 6px\">→</span>\n          CaCO<sub>3</sub>\n          <span style=\"margin: 0 6px\">→</span>\n          CaCl<sub>2</sub>\n        </p>"
+    },
+    {
+      "html": "<p>\n          Напишите <strong>молекулярные уравнения реакций</strong>, с помощью\n          которых можно осуществить указанные превращения.\n        </p>"
+    }
+  ],
+  "content": {},
+  "answer": null,
+  "solution": {
+    "title": "Ход решения",
+    "html": "<p style=\"margin-top: 12px\">Промежуточное вещество: <strong>X — Ca(OH)<sub>2</sub></strong>.</p>\n          <ol style=\"line-height: 1.9\">\n            <li>CaO + H<sub>2</sub>O = Ca(OH)<sub>2</sub></li>\n            <li>Ca(OH)<sub>2</sub> + CO<sub>2</sub> = CaCO<sub>3</sub>↓ + H<sub>2</sub>O</li>\n            <li>CaCO<sub>3</sub> + 2HCl = CaCl<sub>2</sub> + H<sub>2</sub>O + CO<sub>2</sub>↑</li>\n          </ol>"
+  }
+}

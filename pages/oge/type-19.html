@@ -2836,102 +2836,6 @@
         
         </details>
       </div>
-      <h3 class="oge-example-title" id="oge-ex-title-1746"><a class="oge-task-seq" href="ex/1746.html">Задание 19 № 1746</a></h3>
-<div class="oge-subtask" id="oge-ex-1746">
-<p class="tip" style="margin-bottom: 16px">
-          При проведении расчётов для всех элементов, кроме хлора, используйте
-          целые значения относительных атомных масс (Ar(Cl) = 35,5).
-        </p>
-<p>
-          Глицерофосфат кальция (C<sub>3</sub>H<sub>7</sub>CaO<sub>6</sub>P) является лекарственным препаратом, который восполняет дефицит кальция и оказывает общеукрепляющее действие на организм. Его прописывают детям в форме таблеток для приёма два раза в сутки.
-        </p>
-<p class="tip" style="margin-bottom: 16px">
-          При выполнении задания 19 используйте величину, которая определена в
-          задании 18 с указанной в нём степенью точности.
-        </p>
-<p>
-          <strong>Какую массу (в миллиграммах) кальция ребёнок получает в сутки при приёме двух таблеток, в каждой из которых содержится 150 мг глицерофосфата кальция?</strong> Запишите число с точностью до целых.
-        </p>
-
-        <div
-          class="oge-mass-table-wrap"
-          role="region"
-          aria-label="Таблица для расчёта"
-        >
-          <table class="oge-mass-table">
-            <tbody>
-              <tr>
-                <td class="oge-mass-table__cell--blank"></td>
-                <td class="oge-mass-table__static">W, %</td>
-                <td>
-                  <input
-                    type="text"
-                    inputmode="text"
-                    autocomplete="off"
-                    aria-label="Верхняя правая ячейка таблицы"
-                  />
-                </td>
-              </tr>
-              <tr>
-                <td class="oge-mass-table__static">элемент</td>
-                <td>
-                  <input
-                    type="text"
-                    inputmode="text"
-                    autocomplete="off"
-                    aria-label="Массовая доля элемента, проценты"
-                  />
-                </td>
-                <td>
-                  <input
-                    type="text"
-                    inputmode="text"
-                    autocomplete="off"
-                    aria-label="Правая ячейка строки «элемент»"
-                  />
-                </td>
-              </tr>
-              <tr>
-                <td class="oge-mass-table__static">вещество</td>
-                <td class="oge-mass-table__static">100</td>
-                <td>
-                  <input
-                    type="text"
-                    inputmode="text"
-                    autocomplete="off"
-                    aria-label="Масса вещества"
-                  />
-                </td>
-              </tr>
-            </tbody>
-          </table>
-        </div>
-        <p class="oge-answer-label">Ответ (мг):</p>
-        <p>
-          <input
-            id="ansNum-1746"
-            type="text"
-            inputmode="decimal"
-            class="oge-answer-input"
-            autocomplete="off"
-            aria-label="Числовой ответ"
-          />
-        </p>
-        <p style="margin-top: 16px">
-          <button type="button" id="checkBtn-1746">Проверить</button>
-        </p>
-        <p id="resultOut-1746" class="result" role="status"></p>
-        <details class="tip" style="margin-top: 24px">
-          <summary style="cursor: pointer; font-weight: 600">
-            Ход решения
-          </summary>
-          
-          <p>За сутки принимают две таблетки: 2 · 150 = 300 мг соли.</p>
-          <p>m(Ca) = 300 · 0,19 = 57 мг.</p>
-          <p>Ответ: <strong>57 мг</strong>.</p>
-        
-        </details>
-      </div>
       <h3 class="oge-example-title" id="oge-ex-title-1748"><a class="oge-task-seq" href="ex/1748.html">Задание 19 № 1748</a></h3>
 <div class="oge-subtask" id="oge-ex-1748">
 <p class="tip" style="margin-bottom: 16px">
@@ -4254,26 +4158,6 @@
             return;
           }
           const ok = n === 7.7;
-          out.textContent = ok ? OGE_CHECK.ok : OGE_CHECK.retry;
-        });
-      })();
-    </script>
-    <script>
-      (function () {
-        const root = document.getElementById("oge-ex-1746");
-        if (!root) return;
-        const btn = root.querySelector("button[type='button']");
-        const out = root.querySelector(".result");
-        const input = root.querySelector("#ansNum-1746");
-        if (!btn || !out || !input) return;
-        btn.addEventListener("click", function () {
-          const raw = OGE_answerDotsToCommasInField(input);
-          const n = parseFloat(raw);
-          if (isNaN(n)) {
-            out.textContent = OGE_CHECK.retry;
-            return;
-          }
-          const ok = n === 57;
           out.textContent = ok ? OGE_CHECK.ok : OGE_CHECK.retry;
         });
       })();

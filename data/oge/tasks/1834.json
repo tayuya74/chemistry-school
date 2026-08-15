@@ -1,0 +1,27 @@
+{
+  "id": 1834,
+  "examType": 21,
+  "uiKind": "openReference",
+  "meta": {
+    "lead": "Взаимосвязь различных классов неорганических веществ",
+    "source": "Открытый банк заданий ОГЭ по химии (ФИПИ), oge.fipi.ru/bank, № 00BFA9",
+    "sourceDir": "fipi-bank"
+  },
+  "blocks": [
+    {
+      "html": "<p>Дана схема превращений:</p>"
+    },
+    {
+      "html": "<p style=\"text-align: center; font-size: 1.1rem; margin: 16px 0\">\n          Li<sub>2</sub>O\n          <span style=\"margin: 0 6px\">→</span>\n          X\n          <span style=\"margin: 0 6px\">→</span>\n          LiCl\n          <span style=\"margin: 0 6px\">→</span>\n          LiNO<sub>3</sub>\n        </p>"
+    },
+    {
+      "html": "<p>\n          Напишите <strong>молекулярные уравнения реакций</strong>, с помощью\n          которых можно осуществить указанные превращения.\n        </p>"
+    }
+  ],
+  "content": {},
+  "answer": null,
+  "solution": {
+    "title": "Ход решения",
+    "html": "<p style=\"margin-top: 12px\">Промежуточное вещество: <strong>X — LiOH</strong>.</p>\n          <ol style=\"line-height: 1.9\">\n            <li>Li<sub>2</sub>O + H<sub>2</sub>O = 2LiOH</li>\n            <li>LiOH + HCl = LiCl + H<sub>2</sub>O</li>\n            <li>LiCl + AgNO<sub>3</sub> = AgCl↓ + LiNO<sub>3</sub></li>\n          </ol>"
+  }
+}

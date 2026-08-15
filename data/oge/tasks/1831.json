@@ -1,0 +1,27 @@
+{
+  "id": 1831,
+  "examType": 21,
+  "uiKind": "openReference",
+  "meta": {
+    "lead": "Взаимосвязь различных классов неорганических веществ",
+    "source": "Открытый банк заданий ОГЭ по химии (ФИПИ), oge.fipi.ru/bank, № 452B7B",
+    "sourceDir": "fipi-bank"
+  },
+  "blocks": [
+    {
+      "html": "<p>Дана схема превращений:</p>"
+    },
+    {
+      "html": "<p style=\"text-align: center; font-size: 1.1rem; margin: 16px 0\">\n          N<sub>2</sub>\n          <span style=\"margin: 0 6px\">→</span>\n          X\n          <span style=\"margin: 0 6px\">→</span>\n          (NH<sub>4</sub>)<sub>2</sub>SO<sub>4</sub>\n          <span style=\"margin: 0 6px\">→</span>\n          NH<sub>4</sub>Cl\n        </p>"
+    },
+    {
+      "html": "<p>\n          Напишите <strong>молекулярные уравнения реакций</strong>, с помощью\n          которых можно осуществить указанные превращения.\n        </p>"
+    }
+  ],
+  "content": {},
+  "answer": null,
+  "solution": {
+    "title": "Ход решения",
+    "html": "<p style=\"margin-top: 12px\">Промежуточное вещество: <strong>X — NH<sub>3</sub></strong>.</p>\n          <ol style=\"line-height: 1.9\">\n            <li>N<sub>2</sub> + 3H<sub>2</sub> = 2NH<sub>3</sub></li>\n            <li>2NH<sub>3</sub> + H<sub>2</sub>SO<sub>4</sub> = (NH<sub>4</sub>)<sub>2</sub>SO<sub>4</sub></li>\n            <li>(NH<sub>4</sub>)<sub>2</sub>SO<sub>4</sub> + BaCl<sub>2</sub> = BaSO<sub>4</sub>↓ + 2NH<sub>4</sub>Cl</li>\n          </ol>"
+  }
+}

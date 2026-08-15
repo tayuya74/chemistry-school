@@ -1218,44 +1218,6 @@
         
         </details>
       </div>
-      <h3 class="oge-example-title" id="oge-ex-title-1745"><a class="oge-task-seq" href="ex/1745.html">Задание 18 № 1745</a></h3>
-<div class="oge-subtask" id="oge-ex-1745">
-<p class="tip" style="margin-bottom: 16px">
-          При проведении расчётов для всех элементов, кроме хлора, используйте
-          целые значения относительных атомных масс (Ar(Cl) = 35,5).
-        </p>
-<p>
-          Глицерофосфат кальция (C<sub>3</sub>H<sub>7</sub>CaO<sub>6</sub>P) является лекарственным препаратом, который восполняет дефицит кальция и оказывает общеукрепляющее действие на организм. Его прописывают детям в форме таблеток для приёма два раза в сутки.
-        </p>
-<p>
-          <strong>Вычислите в процентах массовую долю кальция в глицерофосфате кальция.</strong> Запишите число с точностью до целых.
-        </p>
-
-        <p class="oge-answer-label">Ответ (%):</p>
-        <p>
-          <input
-            id="ansNum-1745"
-            type="text"
-            inputmode="decimal"
-            class="oge-answer-input"
-            autocomplete="off"
-            aria-label="Числовой ответ"
-          />
-        </p>
-        <p style="margin-top: 16px">
-          <button type="button" id="checkBtn-1745">Проверить</button>
-        </p>
-        <p id="resultOut-1745" class="result" role="status"></p>
-        <details class="tip" style="margin-top: 24px">
-          <summary style="cursor: pointer; font-weight: 600">
-            Ход решения
-          </summary>
-          
-          <p>M(C<sub>3</sub>H<sub>7</sub>CaO<sub>6</sub>P) = 3 · 12 + 7 · 1 + 40 + 6 · 16 + 31 = 210 г/моль.</p>
-          <p>w(Ca) = 40 / 210 · 100 % = 19,0… % ≈ <strong>19 %</strong>.</p>
-        
-        </details>
-      </div>
       <h3 class="oge-example-title" id="oge-ex-title-1747"><a class="oge-task-seq" href="ex/1747.html">Задание 18 № 1747</a></h3>
 <div class="oge-subtask" id="oge-ex-1747">
 <p class="tip" style="margin-bottom: 16px">
@@ -2120,26 +2082,6 @@
             return;
           }
           const ok = n === 51.3;
-          out.textContent = ok ? OGE_CHECK.ok : OGE_CHECK.retry;
-        });
-      })();
-    </script>
-    <script>
-      (function () {
-        const root = document.getElementById("oge-ex-1745");
-        if (!root) return;
-        const btn = root.querySelector("button[type='button']");
-        const out = root.querySelector(".result");
-        const input = root.querySelector("#ansNum-1745");
-        if (!btn || !out || !input) return;
-        btn.addEventListener("click", function () {
-          const raw = OGE_answerDotsToCommasInField(input);
-          const n = parseFloat(raw);
-          if (isNaN(n)) {
-            out.textContent = OGE_CHECK.retry;
-            return;
-          }
-          const ok = n === 19;
           out.textContent = ok ? OGE_CHECK.ok : OGE_CHECK.retry;
         });
       })();

@@ -1,0 +1,27 @@
+{
+  "id": 1844,
+  "examType": 21,
+  "uiKind": "openReference",
+  "meta": {
+    "lead": "Взаимосвязь различных классов неорганических веществ",
+    "source": "Открытый банк заданий ОГЭ по химии (ФИПИ), oge.fipi.ru/bank, № C0B553",
+    "sourceDir": "fipi-bank"
+  },
+  "blocks": [
+    {
+      "html": "<p>Дана схема превращений:</p>"
+    },
+    {
+      "html": "<p style=\"text-align: center; font-size: 1.1rem; margin: 16px 0\">\n          P<sub>2</sub>O<sub>5</sub>\n          <span style=\"margin: 0 6px\">→</span>\n          X\n          <span style=\"margin: 0 6px\">→</span>\n          Na<sub>3</sub>PO<sub>4</sub>\n          <span style=\"margin: 0 6px\">→</span>\n          Ba<sub>3</sub>(PO<sub>4</sub>)<sub>2</sub>\n        </p>"
+    },
+    {
+      "html": "<p>\n          Напишите <strong>молекулярные уравнения реакций</strong>, с помощью\n          которых можно осуществить указанные превращения.\n        </p>"
+    }
+  ],
+  "content": {},
+  "answer": null,
+  "solution": {
+    "title": "Ход решения",
+    "html": "<p style=\"margin-top: 12px\">Промежуточное вещество: <strong>X — H<sub>3</sub>PO<sub>4</sub></strong>.</p>\n          <ol style=\"line-height: 1.9\">\n            <li>P<sub>2</sub>O<sub>5</sub> + 3H<sub>2</sub>O = 2H<sub>3</sub>PO<sub>4</sub></li>\n            <li>H<sub>3</sub>PO<sub>4</sub> + 3NaOH = Na<sub>3</sub>PO<sub>4</sub> + 3H<sub>2</sub>O</li>\n            <li>2Na<sub>3</sub>PO<sub>4</sub> + 3BaCl<sub>2</sub> = Ba<sub>3</sub>(PO<sub>4</sub>)<sub>2</sub>↓ + 6NaCl</li>\n          </ol>"
+  }
+}
