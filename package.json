@@ -12,7 +12,8 @@
     "validate:oge-tasks": "node scripts/validate-oge-tasks.mjs",
     "check:oge-duplicates": "node scripts/find-oge-duplicates.mjs",
     "generate:oge-variants": "node scripts/generate-oge-variants.mjs",
-    "add:oge-task": "node scripts/add-oge-task.mjs"
+    "add:oge-task": "node scripts/add-oge-task.mjs",
+    "check:oge-solutions": "node scripts/check-oge-solutions.mjs"
   },
   "devDependencies": {
     "prettier": "^3.5.3"

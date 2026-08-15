@@ -22,6 +22,6 @@
   "answer": null,
   "solution": {
     "title": "Ход решения",
-    "html": "<ol style=\"margin-top: 12px; line-height: 1.7\">\n            <li>\n              Cu(NO<sub>3</sub>)<sub>2</sub> + 2Ag = 2AgNO<sub>3</sub> + Cu↓\n            </li>\n            <li>Cu + Cl<sub>2</sub> = CuCl<sub>2</sub></li>\n            <li>CuCl<sub>2</sub> + 2NaOH = Cu(OH)<sub>2</sub>↓ + 2NaCl</li>\n          </ol>"
+    "html": "<ol style=\"margin-top: 12px; line-height: 1.7\">\n            <li>\n              Cu(NO<sub>3</sub>)<sub>2</sub> + Zn = Zn(NO<sub>3</sub>)<sub>2</sub> + Cu↓\n            </li>\n            <li>Cu + Cl<sub>2</sub> = CuCl<sub>2</sub></li>\n            <li>CuCl<sub>2</sub> + 2NaOH = Cu(OH)<sub>2</sub>↓ + 2NaCl</li>\n          </ol>\n          <p class=\"ref-table-note\">\n            Вытеснить медь из соли может только более активный металл. Подойдёт\n            любой левее меди в ряду активности: цинк, железо, магний.\n          </p>"
   }
 }
