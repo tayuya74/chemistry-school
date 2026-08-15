@@ -3,6 +3,19 @@ import path from "node:path";
 import { loadRegistry, pad2, root } from "./oge-migrate-lib.mjs";
 import { buildAllVariantPages } from "./build-oge-variants.mjs";
 import { renderSubtask } from "./oge-render.mjs";
+import { pointsLabel, pointsNote } from "./oge-points.mjs";
+
+/** Плашка «сколько даёт задание на экзамене» — под подзаголовком типа. */
+function pointsBadge(examType) {
+  const label = pointsLabel(examType);
+  if (!label) return "";
+  const note = pointsNote(examType);
+  return `\n      <p class="oge-points">
+        <span class="oge-points__value">${label}</span> на экзамене${
+          note ? `<span class="oge-points__note">${note}</span>` : ""
+        }
+      </p>`;
+}
 
 function rowSortPriority(row) {
   if (row.sourceDir === "2026-demo") return 0;
@@ -158,7 +171,7 @@ function buildExPage(task) {
         ${nextLink}
       </nav>
       <h2>${hardMark(task)}Задание ${type} № ${task.id}</h2>
-      <p class="lead">${task.meta.lead}</p>${hardNote(task)}
+      <p class="lead">${task.meta.lead}</p>${pointsBadge(type)}${hardNote(task)}
 
       ${html}
       <p>Источник: ${task.meta.source}</p>
@@ -210,7 +223,7 @@ ${html}
           }
         </nav>
         <h2>Задание ${examType}</h2>
-        <p class="lead">${lead}</p>
+        <p class="lead">${lead}</p>${pointsBadge(examType)}
 ${inserts.trimEnd()}`;
 
   return shell({

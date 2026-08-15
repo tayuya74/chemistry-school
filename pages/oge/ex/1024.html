@@ -45,8 +45,11 @@
       </nav>
       <h2>Задание 1 № 1024</h2>
       <p class="lead">Химические элементы и вещества</p>
+      <p class="oge-points">
+        <span class="oge-points__value">1 балл</span> на экзамене
+      </p>
 
-      <div class="oge-subtask" id="oge-ex-1024" data-oge-checkbox-max="2" data-oge-two-choice-correct="1|2" data-oge-option-count="5">
+      <div class="oge-subtask" id="oge-ex-1024" data-oge-checkbox-max="2" data-oge-two-choice-correct="2|5" data-oge-option-count="5">
 <p>
           Выберите два утверждения, в которых говорится о кальции как о
           <strong>химическом элементе</strong>.
@@ -129,7 +132,7 @@
         if (!btn || !out) return;
         btn.textContent = "Ответ";
         btn.addEventListener("click", function () {
-          out.textContent = OGE_EX_formatAnswer(["1","2"]);
+          out.textContent = OGE_EX_formatAnswer(["2","5"]);
         });
       })();
     </script>

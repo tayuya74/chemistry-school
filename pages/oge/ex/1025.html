@@ -45,6 +45,9 @@
       </nav>
       <h2>Задание 2 № 1025</h2>
       <p class="lead">Строение атома, строение электронных оболочек</p>
+      <p class="oge-points">
+        <span class="oge-points__value">1 балл</span> на экзамене
+      </p>
 
       <div class="oge-subtask" id="oge-ex-1025">
 <p>
@@ -58,12 +61,12 @@
             viewBox="0 0 320 260"
             width="300"
             height="244"
-            aria-label="Схема атома: ядро +Z, два электрона на внутреннем слое и восемь на внешнем"
+            aria-label="Схема атома: ядро +Z, 2 на первом слое, 7 на втором слое"
           >
             <circle
               cx="160"
               cy="130"
-              r="118"
+              r="84"
               fill="var(--color-tip-bg)"
               stroke="var(--color-border)"
               stroke-width="2"
@@ -71,7 +74,7 @@
             <circle
               cx="160"
               cy="130"
-              r="72"
+              r="34"
               fill="none"
               stroke="var(--color-border)"
               stroke-width="1.5"
@@ -80,7 +83,7 @@
             <circle
               cx="160"
               cy="130"
-              r="34"
+              r="72"
               fill="none"
               stroke="var(--color-border)"
               stroke-width="1.5"
@@ -105,16 +108,15 @@
               +Z
             </text>
             <g fill="#2563eb" aria-hidden="true">
-              <circle cx="160" cy="104" r="5" />
-              <circle cx="149" cy="112" r="5" />
-              <circle cx="134" cy="130" r="5" />
-              <circle cx="149" cy="148" r="5" />
-              <circle cx="160" cy="156" r="5" />
-              <circle cx="171" cy="148" r="5" />
-              <circle cx="186" cy="130" r="5" />
-              <circle cx="171" cy="112" r="5" />
-              <circle cx="118" cy="130" r="5" />
-              <circle cx="202" cy="130" r="5" />
+              <circle cx="160.0" cy="96.0" r="5" />
+              <circle cx="160.0" cy="164.0" r="5" />
+              <circle cx="160.0" cy="58.0" r="5" />
+              <circle cx="216.3" cy="85.1" r="5" />
+              <circle cx="230.2" cy="146.0" r="5" />
+              <circle cx="191.2" cy="194.9" r="5" />
+              <circle cx="128.8" cy="194.9" r="5" />
+              <circle cx="89.8" cy="146.0" r="5" />
+              <circle cx="103.7" cy="85.1" r="5" />
             </g>
           </svg>
           
@@ -171,7 +173,7 @@
         if (!btn || !out) return;
         btn.textContent = "Ответ";
         btn.addEventListener("click", function () {
-          out.textContent = OGE_EX_formatAnswer(["2","10"]);
+          out.textContent = OGE_EX_formatAnswer(["2","9"]);
         });
       })();
     </script>

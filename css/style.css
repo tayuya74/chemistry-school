@@ -699,6 +699,29 @@ html[data-theme="dark"] .oge-answer-cells input:focus-visible {
   white-space: nowrap;
 }
 
+/* Сколько задание даёт баллов на экзамене */
+.oge-points {
+  margin: 8px 0 0;
+  font-size: 0.95rem;
+}
+
+.oge-points__value {
+  display: inline-block;
+  padding: 2px 10px;
+  margin-right: 6px;
+  border-radius: 999px;
+  background: var(--color-tip-bg);
+  border: 1px solid var(--color-border);
+  font-weight: 600;
+  white-space: nowrap;
+}
+
+.oge-points__note {
+  display: block;
+  margin-top: 6px;
+  opacity: 0.9;
+}
+
 /* Пара заданий 18–19 на одной странице: второе идёт сразу за первым,
    отделённое чертой, как в экзаменационном бланке. */
 .oge-pair-title {
