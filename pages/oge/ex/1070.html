@@ -49,7 +49,7 @@
         <span class="oge-points__value">1 балл</span> на экзамене
       </p>
 
-      <div class="oge-subtask" id="oge-ex-1070" data-oge-checkbox-max="2" data-oge-two-choice-correct="4|5" data-oge-option-count="5">
+      <div class="oge-subtask" id="oge-ex-1070" data-oge-checkbox-max="2" data-oge-two-choice-correct="1|4" data-oge-option-count="5">
 <p>
           Выберите два утверждения, в которых говорится о никеле как о
           <strong>простом веществе</strong>.
@@ -132,7 +132,7 @@
         if (!btn || !out) return;
         btn.textContent = "Ответ";
         btn.addEventListener("click", function () {
-          out.textContent = OGE_EX_formatAnswer(["4","5"]);
+          out.textContent = OGE_EX_formatAnswer(["1","4"]);
         });
       })();
     </script>
