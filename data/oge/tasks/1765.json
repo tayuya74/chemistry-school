@@ -1,0 +1,29 @@
+{
+  "id": 1765,
+  "examType": 20,
+  "uiKind": "openReference",
+  "meta": {
+    "lead": "Окислительно-восстановительные реакции",
+    "source": "Открытый банк заданий ОГЭ по химии (ФИПИ), oge.fipi.ru/bank, № 88484E",
+    "sourceDir": "fipi-bank",
+    "advanced": true,
+    "advancedNote": "Восстановитель отдаёт 3 электрона, окислитель принимает 8 — наименьшее общее кратное 24, отсюда и коэффициент 15 перед кислотой."
+  },
+  "blocks": [
+    {
+      "html": "<p>\n          Используя метод электронного баланса, расставьте коэффициенты в схеме\n          реакции\n        </p>"
+    },
+    {
+      "html": "<p style=\"text-align: center; font-size: 1.1rem; margin: 16px 0\">\n          H<sub>2</sub>SO<sub>4</sub> + Al → H<sub>2</sub>S + Al<sub>2</sub>(SO<sub>4</sub>)<sub>3</sub> + H<sub>2</sub>O\n        </p>"
+    },
+    {
+      "html": "<p>\n          Запишите в отдельной(-ых) строчке(-ах) формулы вещества/частицы\n          окислителя и восстановителя. Укажите, какое(-ая) из этих\n          веществ/частиц является окислителем, а какое(-ая) — восстановителем.\n        </p>"
+    }
+  ],
+  "content": {},
+  "answer": null,
+  "solution": {
+    "title": "Ход решения",
+    "html": "<p style=\"margin-top: 12px\">Электронный баланс:</p>\n          <p style=\"font-family: monospace; white-space: pre-line\">\n            Al<sup>0</sup> − 3ē → Al<sup>+3</sup> |×8\n            S<sup>+6</sup> + 8ē → S<sup>−2</sup> |×3\n          </p>\n          <p>\n            <strong>Окислитель:</strong> сера в степени окисления +6 (или H<sub>2</sub>SO<sub>4</sub>).<br />\n            <strong>Восстановитель:</strong> алюминий в степени окисления 0 (или Al).\n          </p>\n          <p>Уравнение реакции:</p>\n          <p style=\"text-align: center\">\n            <strong>15</strong>H<sub>2</sub>SO<sub>4</sub> + <strong>8</strong>Al = <strong>3</strong>H<sub>2</sub>S + <strong>4</strong>Al<sub>2</sub>(SO<sub>4</sub>)<sub>3</sub> + <strong>12</strong>H<sub>2</sub>O\n          </p>"
+  }
+}

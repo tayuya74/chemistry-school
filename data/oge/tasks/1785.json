@@ -1,0 +1,29 @@
+{
+  "id": 1785,
+  "examType": 20,
+  "uiKind": "openReference",
+  "meta": {
+    "lead": "Окислительно-восстановительные реакции",
+    "source": "Открытый банк заданий ОГЭ по химии (ФИПИ), oge.fipi.ru/bank, № E142F9",
+    "sourceDir": "fipi-bank",
+    "advanced": true,
+    "advancedNote": "И окислитель, и восстановитель — простые вещества. Соляная кислота степень окисления не меняет и в баланс не входит."
+  },
+  "blocks": [
+    {
+      "html": "<p>\n          Используя метод электронного баланса, расставьте коэффициенты в схеме\n          реакции\n        </p>"
+    },
+    {
+      "html": "<p style=\"text-align: center; font-size: 1.1rem; margin: 16px 0\">\n          Cr + O<sub>2</sub> + HCl → CrCl<sub>3</sub> + H<sub>2</sub>O\n        </p>"
+    },
+    {
+      "html": "<p>\n          Запишите в отдельной(-ых) строчке(-ах) формулы вещества/частицы\n          окислителя и восстановителя. Укажите, какое(-ая) из этих\n          веществ/частиц является окислителем, а какое(-ая) — восстановителем.\n        </p>"
+    }
+  ],
+  "content": {},
+  "answer": null,
+  "solution": {
+    "title": "Ход решения",
+    "html": "<p style=\"margin-top: 12px\">Электронный баланс:</p>\n          <p style=\"font-family: monospace; white-space: pre-line\">\n            Cr<sup>0</sup> − 3ē → Cr<sup>+3</sup> |×4\n            O<sub>2</sub><sup>0</sup> + 4ē → 2O<sup>−2</sup> |×3\n          </p>\n          <p>\n            <strong>Окислитель:</strong> кислород в степени окисления 0 (или O<sub>2</sub>).<br />\n            <strong>Восстановитель:</strong> хром в степени окисления 0 (или Cr).\n          </p>\n          <p>Уравнение реакции:</p>\n          <p style=\"text-align: center\">\n            <strong>4</strong>Cr + <strong>3</strong>O<sub>2</sub> + <strong>12</strong>HCl = <strong>4</strong>CrCl<sub>3</sub> + <strong>6</strong>H<sub>2</sub>O\n          </p>"
+  }
+}

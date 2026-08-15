@@ -1,0 +1,27 @@
+{
+  "id": 1769,
+  "examType": 20,
+  "uiKind": "openReference",
+  "meta": {
+    "lead": "Окислительно-восстановительные реакции",
+    "source": "Открытый банк заданий ОГЭ по химии (ФИПИ), oge.fipi.ru/bank, № 12A558",
+    "sourceDir": "fipi-bank"
+  },
+  "blocks": [
+    {
+      "html": "<p>\n          Используя метод электронного баланса, расставьте коэффициенты в схеме\n          реакции\n        </p>"
+    },
+    {
+      "html": "<p style=\"text-align: center; font-size: 1.1rem; margin: 16px 0\">\n          HNO<sub>3</sub> + Zn → Zn(NO<sub>3</sub>)<sub>2</sub> + N<sub>2</sub> + H<sub>2</sub>O\n        </p>"
+    },
+    {
+      "html": "<p>\n          Запишите в отдельной(-ых) строчке(-ах) формулы вещества/частицы\n          окислителя и восстановителя. Укажите, какое(-ая) из этих\n          веществ/частиц является окислителем, а какое(-ая) — восстановителем.\n        </p>"
+    }
+  ],
+  "content": {},
+  "answer": null,
+  "solution": {
+    "title": "Ход решения",
+    "html": "<p style=\"margin-top: 12px\">Электронный баланс:</p>\n          <p style=\"font-family: monospace; white-space: pre-line\">\n            Zn<sup>0</sup> − 2ē → Zn<sup>+2</sup> |×5\n            2N<sup>+5</sup> + 10ē → N<sub>2</sub><sup>0</sup> |×1\n          </p>\n          <p>\n            <strong>Окислитель:</strong> азот в степени окисления +5 (или HNO<sub>3</sub>).<br />\n            <strong>Восстановитель:</strong> цинк в степени окисления 0 (или Zn).\n          </p>\n          <p>Уравнение реакции:</p>\n          <p style=\"text-align: center\">\n            <strong>12</strong>HNO<sub>3</sub> + <strong>5</strong>Zn = <strong>5</strong>Zn(NO<sub>3</sub>)<sub>2</sub> + N<sub>2</sub> + <strong>6</strong>H<sub>2</sub>O\n          </p>"
+  }
+}

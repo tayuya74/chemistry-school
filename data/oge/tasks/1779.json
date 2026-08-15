@@ -1,0 +1,27 @@
+{
+  "id": 1779,
+  "examType": 20,
+  "uiKind": "openReference",
+  "meta": {
+    "lead": "Окислительно-восстановительные реакции",
+    "source": "Открытый банк заданий ОГЭ по химии (ФИПИ), oge.fipi.ru/bank, № 52B5CC",
+    "sourceDir": "fipi-bank"
+  },
+  "blocks": [
+    {
+      "html": "<p>\n          Используя метод электронного баланса, расставьте коэффициенты в схеме\n          реакции\n        </p>"
+    },
+    {
+      "html": "<p style=\"text-align: center; font-size: 1.1rem; margin: 16px 0\">\n          SO<sub>2</sub> + Br<sub>2</sub> + H<sub>2</sub>O → H<sub>2</sub>SO<sub>4</sub> + HBr\n        </p>"
+    },
+    {
+      "html": "<p>\n          Запишите в отдельной(-ых) строчке(-ах) формулы вещества/частицы\n          окислителя и восстановителя. Укажите, какое(-ая) из этих\n          веществ/частиц является окислителем, а какое(-ая) — восстановителем.\n        </p>"
+    }
+  ],
+  "content": {},
+  "answer": null,
+  "solution": {
+    "title": "Ход решения",
+    "html": "<p style=\"margin-top: 12px\">Электронный баланс:</p>\n          <p style=\"font-family: monospace; white-space: pre-line\">\n            S<sup>+4</sup> − 2ē → S<sup>+6</sup> |×1\n            Br<sub>2</sub><sup>0</sup> + 2ē → 2Br<sup>−1</sup> |×1\n          </p>\n          <p>\n            <strong>Окислитель:</strong> бром в степени окисления 0 (или Br<sub>2</sub>).<br />\n            <strong>Восстановитель:</strong> сера в степени окисления +4 (или SO<sub>2</sub>).\n          </p>\n          <p>Уравнение реакции:</p>\n          <p style=\"text-align: center\">\n            SO<sub>2</sub> + Br<sub>2</sub> + <strong>2</strong>H<sub>2</sub>O = H<sub>2</sub>SO<sub>4</sub> + <strong>2</strong>HBr\n          </p>"
+  }
+}

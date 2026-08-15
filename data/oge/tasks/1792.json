@@ -1,0 +1,29 @@
+{
+  "id": 1792,
+  "examType": 20,
+  "uiKind": "openReference",
+  "meta": {
+    "lead": "Окислительно-восстановительные реакции",
+    "source": "Открытый банк заданий ОГЭ по химии (ФИПИ), oge.fipi.ru/bank, № 56F055",
+    "sourceDir": "fipi-bank",
+    "advanced": true,
+    "advancedNote": "Диспропорционирование азота: из +2 он уходит и в +3, и в 0, то есть частично становится простым веществом."
+  },
+  "blocks": [
+    {
+      "html": "<p>\n          Используя метод электронного баланса, расставьте коэффициенты в схеме\n          реакции\n        </p>"
+    },
+    {
+      "html": "<p style=\"text-align: center; font-size: 1.1rem; margin: 16px 0\">\n          NO + KOH → KNO<sub>2</sub> + N<sub>2</sub> + H<sub>2</sub>O\n        </p>"
+    },
+    {
+      "html": "<p>\n          Запишите в отдельной(-ых) строчке(-ах) формулы вещества/частицы\n          окислителя и восстановителя. Укажите, какое(-ая) из этих\n          веществ/частиц является окислителем, а какое(-ая) — восстановителем.\n        </p>"
+    }
+  ],
+  "content": {},
+  "answer": null,
+  "solution": {
+    "title": "Ход решения",
+    "html": "<p style=\"margin-top: 12px\">Электронный баланс:</p>\n          <p style=\"font-family: monospace; white-space: pre-line\">\n            N<sup>+2</sup> − 1ē → N<sup>+3</sup> |×4\n            2N<sup>+2</sup> + 4ē → N<sub>2</sub><sup>0</sup> |×1\n          </p>\n          <p>\n            <strong>Окислитель:</strong> азот в степени окисления +2 (или NO).<br />\n            <strong>Восстановитель:</strong> азот в степени окисления +2 (или NO).\n          </p>\n          <p>Уравнение реакции:</p>\n          <p style=\"text-align: center\">\n            <strong>6</strong>NO + <strong>4</strong>KOH = <strong>4</strong>KNO<sub>2</sub> + N<sub>2</sub> + <strong>2</strong>H<sub>2</sub>O\n          </p>"
+  }
+}

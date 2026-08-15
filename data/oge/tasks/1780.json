@@ -1,0 +1,27 @@
+{
+  "id": 1780,
+  "examType": 20,
+  "uiKind": "openReference",
+  "meta": {
+    "lead": "Окислительно-восстановительные реакции",
+    "source": "Открытый банк заданий ОГЭ по химии (ФИПИ), oge.fipi.ru/bank, № 507AE0",
+    "sourceDir": "fipi-bank"
+  },
+  "blocks": [
+    {
+      "html": "<p>\n          Используя метод электронного баланса, расставьте коэффициенты в схеме\n          реакции\n        </p>"
+    },
+    {
+      "html": "<p style=\"text-align: center; font-size: 1.1rem; margin: 16px 0\">\n          Cl<sub>2</sub> + KI + H<sub>2</sub>O → KIO<sub>3</sub> + HCl\n        </p>"
+    },
+    {
+      "html": "<p>\n          Запишите в отдельной(-ых) строчке(-ах) формулы вещества/частицы\n          окислителя и восстановителя. Укажите, какое(-ая) из этих\n          веществ/частиц является окислителем, а какое(-ая) — восстановителем.\n        </p>"
+    }
+  ],
+  "content": {},
+  "answer": null,
+  "solution": {
+    "title": "Ход решения",
+    "html": "<p style=\"margin-top: 12px\">Электронный баланс:</p>\n          <p style=\"font-family: monospace; white-space: pre-line\">\n            I<sup>−1</sup> − 6ē → I<sup>+5</sup> |×1\n            Cl<sub>2</sub><sup>0</sup> + 2ē → 2Cl<sup>−1</sup> |×3\n          </p>\n          <p>\n            <strong>Окислитель:</strong> хлор в степени окисления 0 (или Cl<sub>2</sub>).<br />\n            <strong>Восстановитель:</strong> иод в степени окисления −1 (или KI).\n          </p>\n          <p>Уравнение реакции:</p>\n          <p style=\"text-align: center\">\n            <strong>3</strong>Cl<sub>2</sub> + KI + <strong>3</strong>H<sub>2</sub>O = KIO<sub>3</sub> + <strong>6</strong>HCl\n          </p>"
+  }
+}

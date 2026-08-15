@@ -1,0 +1,27 @@
+{
+  "id": 1777,
+  "examType": 20,
+  "uiKind": "openReference",
+  "meta": {
+    "lead": "Окислительно-восстановительные реакции",
+    "source": "Открытый банк заданий ОГЭ по химии (ФИПИ), oge.fipi.ru/bank, № E6B2EB",
+    "sourceDir": "fipi-bank"
+  },
+  "blocks": [
+    {
+      "html": "<p>\n          Используя метод электронного баланса, расставьте коэффициенты в схеме\n          реакции\n        </p>"
+    },
+    {
+      "html": "<p style=\"text-align: center; font-size: 1.1rem; margin: 16px 0\">\n          C + K<sub>2</sub>Cr<sub>2</sub>O<sub>7</sub> → Cr<sub>2</sub>O<sub>3</sub> + K<sub>2</sub>CO<sub>3</sub> + CO<sub>2</sub>\n        </p>"
+    },
+    {
+      "html": "<p>\n          Запишите в отдельной(-ых) строчке(-ах) формулы вещества/частицы\n          окислителя и восстановителя. Укажите, какое(-ая) из этих\n          веществ/частиц является окислителем, а какое(-ая) — восстановителем.\n        </p>"
+    }
+  ],
+  "content": {},
+  "answer": null,
+  "solution": {
+    "title": "Ход решения",
+    "html": "<p style=\"margin-top: 12px\">Электронный баланс:</p>\n          <p style=\"font-family: monospace; white-space: pre-line\">\n            C<sup>0</sup> − 4ē → C<sup>+4</sup> |×3\n            2Cr<sup>+6</sup> + 6ē → 2Cr<sup>+3</sup> |×2\n          </p>\n          <p>\n            <strong>Окислитель:</strong> хром в степени окисления +6 (или K<sub>2</sub>Cr<sub>2</sub>O<sub>7</sub>).<br />\n            <strong>Восстановитель:</strong> углерод в степени окисления 0 (или C).\n          </p>\n          <p>Уравнение реакции:</p>\n          <p style=\"text-align: center\">\n            <strong>3</strong>C + <strong>2</strong>K<sub>2</sub>Cr<sub>2</sub>O<sub>7</sub> = <strong>2</strong>Cr<sub>2</sub>O<sub>3</sub> + <strong>2</strong>K<sub>2</sub>CO<sub>3</sub> + CO<sub>2</sub>\n          </p>"
+  }
+}

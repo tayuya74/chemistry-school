@@ -1,0 +1,29 @@
+{
+  "id": 1790,
+  "examType": 20,
+  "uiKind": "openReference",
+  "meta": {
+    "lead": "Окислительно-восстановительные реакции",
+    "source": "Открытый банк заданий ОГЭ по химии (ФИПИ), oge.fipi.ru/bank, № A34203",
+    "sourceDir": "fipi-bank",
+    "advanced": true,
+    "advancedNote": "Диспропорционирование марганца: из +6 он уходит и в +4, и в +7. Вода степень окисления не меняет."
+  },
+  "blocks": [
+    {
+      "html": "<p>\n          Используя метод электронного баланса, расставьте коэффициенты в схеме\n          реакции\n        </p>"
+    },
+    {
+      "html": "<p style=\"text-align: center; font-size: 1.1rem; margin: 16px 0\">\n          K<sub>2</sub>MnO<sub>4</sub> + H<sub>2</sub>O → MnO<sub>2</sub> + KMnO<sub>4</sub> + KOH\n        </p>"
+    },
+    {
+      "html": "<p>\n          Запишите в отдельной(-ых) строчке(-ах) формулы вещества/частицы\n          окислителя и восстановителя. Укажите, какое(-ая) из этих\n          веществ/частиц является окислителем, а какое(-ая) — восстановителем.\n        </p>"
+    }
+  ],
+  "content": {},
+  "answer": null,
+  "solution": {
+    "title": "Ход решения",
+    "html": "<p style=\"margin-top: 12px\">Электронный баланс:</p>\n          <p style=\"font-family: monospace; white-space: pre-line\">\n            Mn<sup>+6</sup> + 2ē → Mn<sup>+4</sup> |×1\n            Mn<sup>+6</sup> − 1ē → Mn<sup>+7</sup> |×2\n          </p>\n          <p>\n            <strong>Окислитель:</strong> марганец в степени окисления +6 (или K<sub>2</sub>MnO<sub>4</sub>).<br />\n            <strong>Восстановитель:</strong> марганец в степени окисления +6 (или K<sub>2</sub>MnO<sub>4</sub>).\n          </p>\n          <p>Уравнение реакции:</p>\n          <p style=\"text-align: center\">\n            <strong>3</strong>K<sub>2</sub>MnO<sub>4</sub> + <strong>2</strong>H<sub>2</sub>O = MnO<sub>2</sub> + <strong>2</strong>KMnO<sub>4</sub> + <strong>4</strong>KOH\n          </p>"
+  }
+}

@@ -1,0 +1,29 @@
+{
+  "id": 1784,
+  "examType": 20,
+  "uiKind": "openReference",
+  "meta": {
+    "lead": "Окислительно-восстановительные реакции",
+    "source": "Открытый банк заданий ОГЭ по химии (ФИПИ), oge.fipi.ru/bank, № E568EF",
+    "sourceDir": "fipi-bank",
+    "advanced": true,
+    "advancedNote": "И окислитель, и восстановитель — простые вещества, причём железо уходит сразу в +6: для школьного курса это редкая степень окисления."
+  },
+  "blocks": [
+    {
+      "html": "<p>\n          Используя метод электронного баланса, расставьте коэффициенты в схеме\n          реакции\n        </p>"
+    },
+    {
+      "html": "<p style=\"text-align: center; font-size: 1.1rem; margin: 16px 0\">\n          Fe + O<sub>2</sub> + KOH → K<sub>2</sub>FeO<sub>4</sub> + H<sub>2</sub>O\n        </p>"
+    },
+    {
+      "html": "<p>\n          Запишите в отдельной(-ых) строчке(-ах) формулы вещества/частицы\n          окислителя и восстановителя. Укажите, какое(-ая) из этих\n          веществ/частиц является окислителем, а какое(-ая) — восстановителем.\n        </p>"
+    }
+  ],
+  "content": {},
+  "answer": null,
+  "solution": {
+    "title": "Ход решения",
+    "html": "<p style=\"margin-top: 12px\">Электронный баланс:</p>\n          <p style=\"font-family: monospace; white-space: pre-line\">\n            Fe<sup>0</sup> − 6ē → Fe<sup>+6</sup> |×2\n            O<sub>2</sub><sup>0</sup> + 4ē → 2O<sup>−2</sup> |×3\n          </p>\n          <p>\n            <strong>Окислитель:</strong> кислород в степени окисления 0 (или O<sub>2</sub>).<br />\n            <strong>Восстановитель:</strong> железо в степени окисления 0 (или Fe).\n          </p>\n          <p>Уравнение реакции:</p>\n          <p style=\"text-align: center\">\n            <strong>2</strong>Fe + <strong>3</strong>O<sub>2</sub> + <strong>4</strong>KOH = <strong>2</strong>K<sub>2</sub>FeO<sub>4</sub> + <strong>2</strong>H<sub>2</sub>O\n          </p>"
+  }
+}

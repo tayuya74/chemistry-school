@@ -1,0 +1,27 @@
+{
+  "id": 1774,
+  "examType": 20,
+  "uiKind": "openReference",
+  "meta": {
+    "lead": "Окислительно-восстановительные реакции",
+    "source": "Открытый банк заданий ОГЭ по химии (ФИПИ), oge.fipi.ru/bank, № 2733D0",
+    "sourceDir": "fipi-bank"
+  },
+  "blocks": [
+    {
+      "html": "<p>\n          Используя метод электронного баланса, расставьте коэффициенты в схеме\n          реакции\n        </p>"
+    },
+    {
+      "html": "<p style=\"text-align: center; font-size: 1.1rem; margin: 16px 0\">\n          P + HBrO<sub>3</sub> + H<sub>2</sub>O → H<sub>3</sub>PO<sub>4</sub> + HBr\n        </p>"
+    },
+    {
+      "html": "<p>\n          Запишите в отдельной(-ых) строчке(-ах) формулы вещества/частицы\n          окислителя и восстановителя. Укажите, какое(-ая) из этих\n          веществ/частиц является окислителем, а какое(-ая) — восстановителем.\n        </p>"
+    }
+  ],
+  "content": {},
+  "answer": null,
+  "solution": {
+    "title": "Ход решения",
+    "html": "<p style=\"margin-top: 12px\">Электронный баланс:</p>\n          <p style=\"font-family: monospace; white-space: pre-line\">\n            P<sup>0</sup> − 5ē → P<sup>+5</sup> |×6\n            Br<sup>+5</sup> + 6ē → Br<sup>−1</sup> |×5\n          </p>\n          <p>\n            <strong>Окислитель:</strong> бром в степени окисления +5 (или HBrO<sub>3</sub>).<br />\n            <strong>Восстановитель:</strong> фосфор в степени окисления 0 (или P).\n          </p>\n          <p>Уравнение реакции:</p>\n          <p style=\"text-align: center\">\n            <strong>6</strong>P + <strong>5</strong>HBrO<sub>3</sub> + <strong>9</strong>H<sub>2</sub>O = <strong>6</strong>H<sub>3</sub>PO<sub>4</sub> + <strong>5</strong>HBr\n          </p>"
+  }
+}
