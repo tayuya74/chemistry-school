@@ -18,7 +18,7 @@
   "content": {},
   "answer": null,
   "solution": {
-    "title": "Эталон ответа (вариант 5, 2025)",
+    "title": "Ход решения",
     "html": "<p style=\"margin-top: 12px\"><strong>Уравнение:</strong></p>\n          <p style=\"text-align: center\">\n            2NaOH + CuSO<sub>4</sub> = Cu(OH)<sub>2</sub>↓ +\n            Na<sub>2</sub>SO<sub>4</sub>\n          </p>\n          <p><strong>Вычисления (по сборнику):</strong></p>\n          <ul style=\"line-height: 1.7\">\n            <li>\n              n(Cu(OH)<sub>2</sub>) = m / M = 73,5 / 98 =\n              <strong>0,75 моль</strong>\n            </li>\n            <li>\n              по уравнению n(NaOH) = 2 · n(Cu(OH)<sub>2</sub>) =\n              <strong>1,5 моль</strong>\n            </li>\n            <li>m(NaOH) = n · M = 1,5 · 40 = <strong>60 г</strong></li>\n            <li>\n              ω(NaOH) = m(NaOH) / m(р‑ра) = 60 / 300 =\n              <strong>0,20 (20%)</strong>\n            </li>\n          </ul>"
   }
 }

@@ -18,7 +18,7 @@
   "content": {},
   "answer": null,
   "solution": {
-    "title": "Эталон ответа (вариант 2, 2025)",
+    "title": "Ход решения",
     "html": "<p style=\"margin-top: 12px\"><strong>Уравнение:</strong></p>\n          <p style=\"text-align: center\">\n            K<sub>2</sub>CO<sub>3</sub> + Mg(NO<sub>3</sub>)<sub>2</sub> =\n            MgCO<sub>3</sub>↓ + 2KNO<sub>3</sub>\n          </p>\n          <p><strong>Вычисления:</strong></p>\n          <ul style=\"line-height: 1.7\">\n            <li>n(MgCO<sub>3</sub>) = m / M = 16,8 / 84 = 0,2 моль</li>\n            <li>\n              по уравнению n(K<sub>2</sub>CO<sub>3</sub>) = n(MgCO<sub>3</sub>)\n              = 0,2 моль\n            </li>\n            <li>m(K<sub>2</sub>CO<sub>3</sub>) = n · M = 0,2 · 138 = 27,6 г</li>\n            <li>\n              ω(K<sub>2</sub>CO<sub>3</sub>) = m / m(р-ра) = 27,6 / 250 = 0,1104\n              → или <strong>11 %</strong> (ключ издания; по точным данным\n              получается ≈11,04 %)\n            </li>\n          </ul>"
   }
 }

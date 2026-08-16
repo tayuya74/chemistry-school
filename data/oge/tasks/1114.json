@@ -18,7 +18,7 @@
   "content": {},
   "answer": null,
   "solution": {
-    "title": "Эталон ответа (вариант 3, 2025)",
+    "title": "Ход решения",
     "html": "<p style=\"margin-top: 12px\"><strong>Уравнение:</strong></p>\n          <p style=\"text-align: center\">\n            Fe(NO<sub>3</sub>)<sub>2</sub> + 2KOH = Fe(OH)<sub>2</sub>↓ +\n            2KNO<sub>3</sub>\n          </p>\n          <p><strong>Вычисления:</strong></p>\n          <ul style=\"line-height: 1.7\">\n            <li>\n              M(Fe(OH)<sub>2</sub>) = 56 + 2 · (16 + 1) =\n              <strong>90 г/моль</strong>\n            </li>\n            <li>\n              n(Fe(OH)<sub>2</sub>) = m / M = 22,5 / 90 =\n              <strong>0,25 моль</strong>\n            </li>\n            <li>\n              по коэффициентам реакции n(KOH) = 2 · n(Fe(OH)<sub>2</sub>) =\n              <strong>0,50 моль</strong>\n            </li>\n            <li>\n              m(KOH) = n · M = 0,50 · 56 = <strong>28 г</strong> (принято M(KOH)\n              = 39 + 16 + 1)\n            </li>\n            <li>\n              ω(KOH) = m / m(р-ра) = 28 / 110 =\n              <strong>0,255</strong>&nbsp;(≈&nbsp;<strong>25,5&nbsp;%</strong>)\n            </li>\n          </ul>"
   }
 }

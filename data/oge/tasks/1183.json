@@ -18,7 +18,7 @@
   "content": {},
   "answer": null,
   "solution": {
-    "title": "Эталон ответа (вариант 6, 2025)",
+    "title": "Ход решения",
     "html": "<p style=\"margin-top: 12px\">\n            AlCl<sub>3</sub> + 3KOH = Al(OH)<sub>3</sub>↓ + 3KCl\n          </p>\n          <p style=\"margin-top: 8px\">\n            m(KOH) = ω·m(р‑ра)/100 = 16,8·10/100 = 1,68 г; n(KOH) = 1,68/56 =\n            0,03 моль; n(Al(OH)<sub>3</sub>) = <span>&#8531;</span>·n(KOH) =\n            0,01 моль; m(Al(OH)<sub>3</sub>) = 0,01·78 = 0,78 г.\n          </p>"
   }
 }

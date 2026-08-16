@@ -26,7 +26,7 @@
   },
   "answer": null,
   "solution": {
-    "title": "Эталон ответа (вариант 8, 2025)",
+    "title": "Ход решения",
     "html": "<p style=\"margin-top: 12px\">\n            Выбранные реактивы: раствор <strong>CuCl<sub>2</sub></strong> и\n            раствор <strong>Na<sub>2</sub>CO<sub>3</sub></strong\n            >. Хлорид меди(II) позволяет определить гидроксид калия по голубому\n            осадку Cu(OH)<sub>2</sub>, а карбонат натрия — сульфат магния по\n            белому осадку MgCO<sub>3</sub>.\n          </p>\n          <p style=\"margin-top: 12px; line-height: 1.65\">\n            CuCl<sub>2</sub> + 2KOH = Cu(OH)<sub>2</sub>↓ + 2KCl;<br />Cu<sup\n              >2+</sup\n            >\n            + 2OH<sup>−</sup> = Cu(OH)<sub>2</sub>↓.\n          </p>\n          <p style=\"margin-top: 12px; line-height: 1.65\">\n            MgSO<sub>4</sub> + Na<sub>2</sub>CO<sub>3</sub> = MgCO<sub>3</sub>↓\n            + Na<sub>2</sub>SO<sub>4</sub>;<br />Mg<sup>2+</sup> + CO<sub>3</sub\n            ><sup>2−</sup> = MgCO<sub>3</sub>↓.\n          </p>"
   }
 }

@@ -18,7 +18,7 @@
   "content": {},
   "answer": null,
   "solution": {
-    "title": "Эталон ответа (вариант 7, 2025)",
+    "title": "Ход решения",
     "html": "<p style=\"margin-top: 12px\">\n            Na<sub>2</sub>CO<sub>3</sub> + H<sub>2</sub>SO<sub>4</sub> =\n            Na<sub>2</sub>SO<sub>4</sub> + CO<sub>2</sub>↑ + H<sub>2</sub>O\n          </p>\n          <p style=\"margin-top: 8px\">\n            m(H<sub>2</sub>SO<sub>4</sub>) = 19,6·10/100 = 1,96 г;\n            n(H<sub>2</sub>SO<sub>4</sub>) = 1,96/98 = 0,02 моль;\n            n(Na<sub>2</sub>CO<sub>3</sub>) = 0,02 моль;\n            m(Na<sub>2</sub>CO<sub>3</sub>) = 0,02·106 = 2,12 г.\n          </p>"
   }
 }
