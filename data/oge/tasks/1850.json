@@ -1,0 +1,27 @@
+{
+  "id": 1850,
+  "examType": 22,
+  "uiKind": "openReference",
+  "meta": {
+    "lead": "Расчётные задачи по химии",
+    "source": "Открытый банк заданий ОГЭ по химии (ФИПИ), oge.fipi.ru/bank, № E664FA",
+    "sourceDir": "fipi-bank"
+  },
+  "blocks": [
+    {
+      "html": "<p class=\"tip\" style=\"margin-bottom: 16px\">\n          При проведении расчётов для всех элементов, кроме хлора, используйте\n          целые значения относительных атомных масс (Ar(Cl) = 35,5).\n        </p>"
+    },
+    {
+      "html": "<p>Вычислите объём газа (н. у.), который выделится при действии избытка сульфида железа(II) на 490 г 10 %-ного раствора серной кислоты.</p>"
+    },
+    {
+      "html": "<p>\n          В ответе запишите уравнение реакции, о которой идёт речь в условии\n          задачи, и приведите все необходимые вычисления (указывайте единицы\n          измерения искомых физических величин).\n        </p>"
+    }
+  ],
+  "content": {},
+  "answer": null,
+  "solution": {
+    "title": "Ход решения",
+    "html": "<p style=\"margin-top: 12px; font-family: monospace\">FeS + H<sub>2</sub>SO<sub>4</sub> = FeSO<sub>4</sub> + H<sub>2</sub>S↑</p>\n          <ol style=\"line-height: 1.9\">\n            <li>m(H<sub>2</sub>SO<sub>4</sub>) = 490 · 10 / 100 = 49 г</li>\n            <li>n(H<sub>2</sub>SO<sub>4</sub>) = 49 / 98 = 0,5 моль</li>\n            <li>по уравнению n(H<sub>2</sub>S) = 0,5 моль</li>\n            <li>V(H<sub>2</sub>S) = n · V<sub>m</sub> = 0,5 · 22,4 = <strong>11,2 л</strong></li>\n          </ol>"
+  }
+}
