@@ -800,3 +800,158 @@ html[data-theme="dark"] .oge-answer-cells input:focus-visible {
   font-style: italic;
   text-align: right;
 }
+
+/* ---- Периодическая система, короткая форма (страница tables.html) ---- */
+.pt-scroll {
+  overflow-x: auto;
+  padding: 4px;
+  border-radius: 8px;
+  border: 1px solid var(--color-border);
+  background: var(--color-card-bg);
+}
+
+.pt-table {
+  border-collapse: collapse;
+  width: 100%;
+  min-width: 46rem;
+  table-layout: fixed;
+}
+
+.pt-table th,
+.pt-table td {
+  border: 1px solid var(--color-border);
+  padding: 0;
+  text-align: center;
+}
+
+.pt-corner,
+.pt-groups,
+.pt-group,
+.pt-period {
+  background: var(--color-tip-bg);
+  font-weight: 600;
+  padding: 4px 6px;
+  font-size: 0.9rem;
+}
+
+.pt-corner {
+  width: 3.4rem;
+}
+
+/* Клетка элемента: номер сверху, символ крупно, масса и название мелко. */
+.pt-el {
+  display: block;
+  padding: 3px 2px 4px;
+  line-height: 1.15;
+  min-width: 0;
+}
+
+.pt-num {
+  display: block;
+  font-size: 0.62rem;
+  opacity: 0.75;
+}
+
+.pt-sym {
+  display: block;
+  font-size: 1.02rem;
+  font-weight: 700;
+}
+
+.pt-star {
+  font-size: 0.7em;
+  vertical-align: super;
+}
+
+.pt-mass {
+  display: block;
+  font-size: 0.63rem;
+  opacity: 0.85;
+}
+
+.pt-name {
+  display: block;
+  font-size: 0.6rem;
+  opacity: 0.7;
+  overflow-wrap: anywhere;
+}
+
+.pt-el--ghost .pt-sym {
+  font-weight: 500;
+  opacity: 0.55;
+}
+
+/* Ширины колонок: группе VIII нужно место под триады Fe—Co—Ni. */
+.pt-col-period {
+  width: 3.2rem;
+}
+
+.pt-col {
+  width: 8.1%;
+}
+
+.pt-col-viii {
+  width: 21%;
+}
+
+/* Триада в побочной подгруппе VIII: три элемента в одной клетке. */
+.pt-cell--triad {
+  display: flex;
+}
+
+.pt-cell--triad .pt-el {
+  flex: 1 1 0;
+  min-width: 0;
+  box-sizing: border-box;
+}
+
+.pt-cell--triad .pt-el + .pt-el {
+  border-left: 1px solid var(--color-border);
+}
+
+.pt-cell--empty {
+  background: transparent;
+}
+
+.pt-table--series {
+  margin-top: 10px;
+  min-width: 46rem;
+}
+
+.pt-series-title {
+  caption-side: top;
+  text-align: left;
+  font-weight: 600;
+  font-size: 0.9rem;
+  padding: 6px 2px;
+}
+
+/* Кнопка скачивания справочного изображения. */
+.ref-download {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  padding: 7px 14px;
+  border-radius: 8px;
+  border: 1px solid var(--color-accent);
+  color: var(--color-accent);
+  text-decoration: none;
+  font-weight: 600;
+  font-size: 0.95rem;
+}
+
+.ref-download:hover,
+.ref-download:focus-visible {
+  background: var(--color-tip-bg);
+  color: var(--color-accent-hover);
+}
+
+.ref-download .material-symbols-outlined {
+  font-size: 1.15rem;
+}
+
+@media (max-width: 640px) {
+  .pt-name {
+    display: none;
+  }
+}
