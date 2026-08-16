@@ -22,6 +22,6 @@
   "answer": null,
   "solution": {
     "title": "Ход решения",
-    "html": "<p style=\"margin-top: 12px\">\n            Cu + 2AgNO<sub>3</sub> = Cu(NO<sub>3</sub>)<sub>2</sub> + 2Ag<br /><span\n              >(X — Cu(NO<sub>3</sub>)<sub>2</sub>)</span\n            >\n          </p>\n          <p style=\"margin-top: 8px\">\n            Cu(NO<sub>3</sub>)<sub>2</sub> + 2NaOH = Cu(OH)<sub>2</sub>↓ +\n            2NaNO<sub>3</sub>\n          </p>\n          <p style=\"margin-top: 8px\">\n            Cu(OH)<sub>2</sub> = CuO + H<sub>2</sub>O\n          </p>"
+    "html": "<p style=\"margin-top: 12px\">\n            Cu + 2AgNO<sub>3</sub> = Cu(NO<sub>3</sub>)<sub>2</sub> + 2Ag<br /><span\n              >(X — Cu(NO<sub>3</sub>)<sub>2</sub>)</span\n            >\n          </p>\n          <p style=\"margin-top: 8px\">\n            Cu(NO<sub>3</sub>)<sub>2</sub> + 2NaOH = Cu(OH)<sub>2</sub>↓ +\n            2NaNO<sub>3</sub>\n          </p>\n          <p style=\"margin-top: 8px\">\n            Cu(OH)<sub>2</sub> —t°→ CuO + H<sub>2</sub>O\n          </p>"
   }
 }

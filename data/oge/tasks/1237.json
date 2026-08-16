@@ -12,7 +12,7 @@
       "html": "<p>\n          Из предложенного перечня веществ выберите соль и амфотерный оксид.\n        </p>"
     },
     {
-      "html": "<ol>\n          <li>Ca(OH)<sub>2</sub></li>\n          <li>Al(OH)<sub>3</sub></li>\n          <li>ZnO</li>\n          <li>NaClO</li>\n          <li>FeO</li>\n        </ol>"
+      "html": "<ol>\n          <li>Ca(OH)<sub>2</sub></li>\n          <li>Al(OH)<sub>3</sub></li>\n          <li>ZnO</li>\n          <li>NaClO<sub>4</sub></li>\n          <li>FeO</li>\n        </ol>"
     },
     {
       "html": "<p>\n          Запишите в поле ответа сначала номер соли, а затем номер амфотерного\n          оксида.\n        </p>"
@@ -23,16 +23,13 @@
       "Ca(OH)<sub>2</sub>",
       "Al(OH)<sub>3</sub>",
       "ZnO",
-      "NaClO",
+      "NaClO<sub>4</sub>",
       "FeO"
     ],
     "cellCount": 2
   },
   "answer": {
-    "sequence": [
-      "4",
-      "3"
-    ]
+    "sequence": ["4", "3"]
   },
   "solution": null
 }
