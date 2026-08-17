@@ -1,4 +1,14 @@
-/** Конструктор своего варианта: случайный отбор N заданий каждого типа из pages/oge/task-index.json */
+/**
+ * Конструктор своего варианта: случайный отбор N заданий каждого типа
+ * из pages/oge/task-index.json.
+ *
+ * Скрипт обслуживает две страницы:
+ *   builder.html          — таблица с числами по каждому типу;
+ *   variants/index.html   — одна кнопка «сгенерировать вариант»
+ *                           (по одному заданию каждого типа).
+ * Путь к каталогу берётся из data-index на кнопке, потому что страницы
+ * лежат на разной глубине.
+ */
 (function () {
   const TOTAL_TYPES = 23;
 
@@ -25,6 +35,14 @@
     }
   }
 
+  /** Проставляет одно и то же число во все поля таблицы. */
+  function setAllCounts(value) {
+    for (let type = 1; type <= TOTAL_TYPES; type++) {
+      const input = document.getElementById(`builderCount${type}`);
+      if (input) input.value = String(value);
+    }
+  }
+
   function readCounts() {
     const counts = [];
     for (let type = 1; type <= TOTAL_TYPES; type++) {
@@ -32,6 +50,13 @@
       const n = parseInt(input.value, 10);
       if (n > 0) counts.push([type, n]);
     }
+    return counts;
+  }
+
+  /** По одному заданию каждого из 23 типов — целый вариант. */
+  function fullVariantCounts() {
+    const counts = [];
+    for (let type = 1; type <= TOTAL_TYPES; type++) counts.push([type, 1]);
     return counts;
   }
 
@@ -54,8 +79,15 @@
     return byType;
   }
 
-  function renderResult(container, groups, warnings) {
+  function renderResult(container, groups, warnings, options) {
+    const opts = options || {};
     container.innerHTML = "";
+
+    if (opts.title) {
+      const h = document.createElement("h3");
+      h.textContent = opts.title;
+      container.appendChild(h);
+    }
 
     if (warnings.length) {
       const warn = document.createElement("p");
@@ -66,7 +98,8 @@
 
     if (!groups.length) {
       const empty = document.createElement("p");
-      empty.textContent = "Укажите хотя бы одно число больше нуля.";
+      empty.textContent =
+        opts.emptyText || "Укажите хотя бы одно число больше нуля.";
       container.appendChild(empty);
       return;
     }
@@ -74,7 +107,10 @@
     groups.forEach(({ type, picked }) => {
       const heading = document.createElement("h3");
       heading.className = "oge-example-title";
-      heading.textContent = `Задание ${type} (${picked.length})`;
+      heading.textContent =
+        picked.length > 1
+          ? `Задание ${type} (${picked.length})`
+          : `Задание ${type}`;
       container.appendChild(heading);
 
       const list = document.createElement("ul");
@@ -82,7 +118,7 @@
       picked.forEach((row) => {
         const item = document.createElement("li");
         const link = document.createElement("a");
-        link.href = `ex/${row.id}.html`;
+        link.href = `${opts.linkPrefix || "ex/"}${row.id}.html`;
         link.target = "_blank";
         link.rel = "noopener";
         link.textContent = `${row.advanced ? "★ " : ""}№ ${row.id} — ${row.lead}`;
@@ -93,26 +129,32 @@
     });
   }
 
-  async function handleBuild(resultEl) {
+  async function loadIndex(url) {
+    const res = await fetch(url);
+    return res.json();
+  }
+
+  /** Общая сборка: считает выборку и рисует результат. */
+  async function build(resultEl, counts, options) {
+    const opts = options || {};
     resultEl.textContent = "Собираю…";
 
     let index;
     try {
-      const res = await fetch("task-index.json");
-      index = await res.json();
+      index = await loadIndex(opts.indexUrl || "task-index.json");
     } catch {
       resultEl.textContent =
         "Не удалось загрузить каталог заданий (task-index.json).";
       return;
     }
 
-    const onlyHard = document.getElementById("onlyHard")?.checked;
+    const onlyHard = opts.onlyHard;
     const pool = onlyHard ? index.filter((row) => row.advanced) : index;
     const byType = groupByType(pool);
     const warnings = [];
     const groups = [];
 
-    readCounts().forEach(([type, n]) => {
+    counts.forEach(([type, n]) => {
       const available = byType.get(type) ?? [];
       if (available.length < n) {
         warnings.push(
@@ -123,17 +165,50 @@
       if (picked.length) groups.push({ type, picked });
     });
 
-    renderResult(resultEl, groups, warnings);
+    renderResult(resultEl, groups, warnings, opts);
   }
 
-  function init() {
+  function initBuilder() {
     const tbody = document.querySelector("#builderTable tbody");
     const buildBtn = document.getElementById("buildBtn");
     const resultEl = document.getElementById("builderResult");
-    if (!tbody || !buildBtn || !resultEl) return;
+    if (!tbody || !buildBtn || !resultEl) return false;
 
     renderTypeRows(tbody);
-    buildBtn.addEventListener("click", () => handleBuild(resultEl));
+
+    const fillBtn = document.getElementById("fillOnesBtn");
+    if (fillBtn) fillBtn.addEventListener("click", () => setAllCounts(1));
+
+    const clearBtn = document.getElementById("clearCountsBtn");
+    if (clearBtn) clearBtn.addEventListener("click", () => setAllCounts(0));
+
+    buildBtn.addEventListener("click", () =>
+      build(resultEl, readCounts(), {
+        onlyHard: document.getElementById("onlyHard")?.checked,
+      }),
+    );
+    return true;
+  }
+
+  function initQuickVariant() {
+    const btn = document.getElementById("quickVariantBtn");
+    const resultEl = document.getElementById("builderResult");
+    if (!btn || !resultEl) return false;
+
+    btn.addEventListener("click", () =>
+      build(resultEl, fullVariantCounts(), {
+        indexUrl: btn.dataset.index || "../task-index.json",
+        linkPrefix: btn.dataset.linkPrefix || "../ex/",
+        title: "Случайный вариант из банка заданий",
+        emptyText: "В каталоге не нашлось заданий.",
+      }),
+    );
+    return true;
+  }
+
+  function init() {
+    initBuilder();
+    initQuickVariant();
   }
 
   if (document.readyState === "loading") {

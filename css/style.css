@@ -1046,3 +1046,23 @@ html[data-theme="dark"] .oge-answer-cells input:focus-visible {
     gap: 2px;
   }
 }
+
+/* Кнопки-действия над таблицей конструктора вариантов. */
+.oge-builder-actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  margin: 16px 0;
+}
+
+button.btn-secondary {
+  background: transparent;
+  color: var(--color-accent);
+  border: 1px solid var(--color-accent);
+}
+
+button.btn-secondary:hover,
+button.btn-secondary:focus-visible {
+  background: var(--color-tip-bg);
+  color: var(--color-accent-hover);
+}

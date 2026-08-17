@@ -140,7 +140,26 @@ function buildVariantsIndex(variants) {
         </p>
         <ul class="topic-list oge-variant-list">
 ${items}
-        </ul>`;
+        </ul>
+
+        <h3>Свой вариант из банка</h3>
+        <p>
+          Кнопка соберёт новый вариант прямо сейчас: по одному случайному
+          заданию каждого из 23 типов. Нажмите ещё раз — получится другой
+          набор. Если нужно иначе (например, десять заданий одного типа),
+          загляните в <a href="../builder.html">конструктор</a>.
+        </p>
+        <p class="oge-builder-actions">
+          <button
+            type="button"
+            id="quickVariantBtn"
+            data-index="../task-index.json"
+            data-link-prefix="../ex/"
+          >
+            Сгенерировать вариант
+          </button>
+        </p>
+        <div id="builderResult" role="status"></div>`;
 
   return shell({
     title: "ОГЭ — готовые варианты",
@@ -153,7 +172,7 @@ ${items}
       oge: "../index.html",
     },
     articleInner,
-    scripts: "",
+    scripts: `    <script src="../../../js/oge-task-builder.js"></script>`,
   });
 }
 
