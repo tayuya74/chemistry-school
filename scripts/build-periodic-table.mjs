@@ -163,13 +163,14 @@ const ROWS = [
   { period: null,         kind: "b",     cells: [[111], [112], [113], [114], [115], [116], [117], [118]] },
 ];
 
-/** Главная подгруппа в этой клетке или побочная. */
-function isMainSubgroup(kind, groupIndex) {
-  if (kind === "small") return true;
-  const firstTwo = groupIndex < 2;
-  return kind === "a" ? firstTwo : !firstTwo;
-}
-
+/**
+ * Как выглядит клетка: к какому краю прижата и что идёт первым —
+ * символ или масса. Снято с печатной таблицы:
+ *   первый ряд большого периода — всё влево, символ первым;
+ *   второй ряд — всё вправо, масса первой;
+ *   малый период — группы I–II как первый ряд, III–VII как второй;
+ *   группа VIII — благородный газ всегда символом вперёд.
+ */
 const GROUPS = ["I", "II", "III", "IV", "V", "VI", "VII", "VIII"];
 
 /** Проверка целостности данных: все 118 номеров, символы не повторяются. */
@@ -201,9 +202,17 @@ function selfCheck() {
   return problems;
 }
 
+function cellLayout(kind, groupIndex) {
+  const isViii = groupIndex === 7;
+  if (kind === "a") return { side: "left", massFirst: false };
+  if (kind === "b") return { side: "right", massFirst: !isViii };
+  if (groupIndex < 2) return { side: "left", massFirst: false };
+  return { side: "right", massFirst: !isViii };
+}
+
 const esc = (s) => String(s).replace(/&/g, "&amp;").replace(/</g, "&lt;");
 
-function cellBox(z, mark) {
+function cellBox(z, mark, massFirst) {
   if (z === "Hmark") {
     return `<div class="pt-el pt-el--ghost"><span class="pt-sym">(H)</span></div>`;
   }
@@ -215,8 +224,11 @@ function cellBox(z, mark) {
     `<div class="pt-el" title="${esc(name)}, Ar = ${esc(mass)}">` +
     `<span class="pt-num">${z}</span>` +
     `<span class="pt-line">` +
-    `<span class="pt-sym">${esc(sym)}${star}</span>` +
-    `<span class="pt-mass">${esc(mass)}</span>` +
+    (massFirst
+      ? `<span class="pt-mass">${esc(mass)}</span>` +
+        `<span class="pt-sym">${esc(sym)}${star}</span>`
+      : `<span class="pt-sym">${esc(sym)}${star}</span>` +
+        `<span class="pt-mass">${esc(mass)}</span>`) +
     `</span>` +
     `<span class="pt-name">${esc(name)}</span>` +
     `</div>`
@@ -227,7 +239,8 @@ function renderCell(cell, groupIndex, kind) {
   if (!cell) return `<td class="pt-cell pt-cell--empty"></td>`;
   const mark = typeof cell[1] === "string" ? cell[1] : null;
   const items = cell.filter((x) => typeof x === "number" || x === "Hmark");
-  const boxes = items.map((z) => cellBox(z, mark));
+  const { side, massFirst } = cellLayout(kind, groupIndex);
+  const boxes = items.map((z) => cellBox(z, mark, massFirst));
 
   /* В группе VIII клетка всегда делится на три: триада занимает все три,
      а благородный газ — только правую, как на печатной таблице. */
@@ -237,10 +250,7 @@ function renderCell(cell, groupIndex, kind) {
     return `<td class="pt-cell pt-cell--triad">${boxes.join("")}</td>`;
   }
 
-  const side = isMainSubgroup(kind, groupIndex)
-    ? "pt-cell--main"
-    : "pt-cell--sub";
-  return `<td class="pt-cell ${side}">${boxes.join("")}</td>`;
+  return `<td class="pt-cell pt-cell--${side}">${boxes.join("")}</td>`;
 }
 
 function renderMain() {
