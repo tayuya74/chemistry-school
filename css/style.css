@@ -854,7 +854,7 @@ html[data-theme="dark"] .oge-answer-cells input:focus-visible {
 .pt-el {
   display: inline-block;
   /* Заметно уже клетки — иначе сдвиг влево/вправо не читается глазом. */
-  width: 68%;
+  width: 76%;
   padding: 3px 1px 4px;
   line-height: 1.15;
   min-width: 0;
@@ -876,11 +876,20 @@ html[data-theme="dark"] .oge-answer-cells input:focus-visible {
   display: block;
   font-size: 0.62rem;
   opacity: 0.75;
+  text-align: center;
+}
+
+/* Символ и относительная атомная масса — одной строкой. */
+.pt-line {
+  display: flex;
+  align-items: baseline;
+  justify-content: center;
+  gap: 3px;
+  white-space: nowrap;
 }
 
 .pt-sym {
-  display: block;
-  font-size: 1.02rem;
+  font-size: 1rem;
   font-weight: 700;
 }
 
@@ -890,16 +899,16 @@ html[data-theme="dark"] .oge-answer-cells input:focus-visible {
 }
 
 .pt-mass {
-  display: block;
-  font-size: 0.63rem;
+  font-size: 0.6rem;
   opacity: 0.85;
 }
 
 .pt-name {
   display: block;
-  font-size: 0.6rem;
+  font-size: 0.58rem;
   opacity: 0.7;
   overflow-wrap: anywhere;
+  text-align: center;
 }
 
 .pt-el--ghost .pt-sym {
@@ -951,6 +960,24 @@ html[data-theme="dark"] .oge-answer-cells input:focus-visible {
   min-width: 46rem;
 }
 
+/* В рядах лантаноидов и актиноидов 14 колонок — шрифт чуть мельче,
+   иначе «Pm [145]» не помещается в строку. */
+.pt-table--series .pt-el {
+  width: 96%;
+}
+
+.pt-table--series .pt-sym {
+  font-size: 0.9rem;
+}
+
+.pt-table--series .pt-mass {
+  font-size: 0.55rem;
+}
+
+.pt-table--series .pt-line {
+  gap: 2px;
+}
+
 .pt-series-title {
   caption-side: top;
   text-align: left;
@@ -986,5 +1013,15 @@ html[data-theme="dark"] .oge-answer-cells input:focus-visible {
 @media (max-width: 640px) {
   .pt-name {
     display: none;
+  }
+
+  /* На узком экране клетки уже: масса чуть мельче, чтобы строка
+     «La* 138,91» не обрезалась. */
+  .pt-mass {
+    font-size: 0.55rem;
+  }
+
+  .pt-line {
+    gap: 2px;
   }
 }

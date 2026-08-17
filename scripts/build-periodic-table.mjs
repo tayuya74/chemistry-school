@@ -209,11 +209,15 @@ function cellBox(z, mark) {
   }
   const [sym, mass, name] = E[z];
   const star = mark ? `<span class="pt-star">${mark}</span>` : "";
+  /* Символ и масса стоят на одной строке, как в печатной таблице;
+     номер сверху и название снизу — по центру клетки. */
   return (
     `<div class="pt-el" title="${esc(name)}, Ar = ${esc(mass)}">` +
     `<span class="pt-num">${z}</span>` +
+    `<span class="pt-line">` +
     `<span class="pt-sym">${esc(sym)}${star}</span>` +
     `<span class="pt-mass">${esc(mass)}</span>` +
+    `</span>` +
     `<span class="pt-name">${esc(name)}</span>` +
     `</div>`
   );
