@@ -1,59 +1,68 @@
 :root {
-  --color-bg: #f5f7fb;
-  --color-text: #1f2937;
-  --color-header-bg: #2563eb;
-  --color-header-text: #fff;
-  --color-header-link: #fff;
-  --color-card-bg: #fff;
-  --color-card-shadow: rgba(0, 0, 0, 0.08);
-  --color-border: #e5e7eb;
-  --color-accent: #2563eb;
-  --color-accent-hover: #1d4ed8;
-  --color-tip-bg: #eff6ff;
-  --color-tip-border: #2563eb;
-  --color-link: #1d4ed8;
-  --color-topic-link-bg: #fff;
-  --color-topic-link-text: #1e40af;
-  --color-topic-link-hover: #eff6ff;
-  --color-topic-shadow: rgba(0, 0, 0, 0.06);
-  --color-theme-toggle-bg: rgba(255, 255, 255, 0.2);
-  --color-theme-toggle-hover: rgba(255, 255, 255, 0.3);
-  /* Поля ответа в заданиях ОГЭ (контраст с карточкой и фоном страницы) */
+  /* Палитра подобрана под чувствительность к яркому свету: вместо чистого
+     белого — тёплый приглушённый тон, синий цвет менее насыщенный.
+     Контраст текста проверен по WCAG, все пары выше 4.5:1. */
+  --color-bg: #e8e6e1;
+  --color-text: #33302c;
+  --color-header-bg: #3f5a7d;
+  --color-header-text: #f4f2ee;
+  --color-header-link: #eceae5;
+  --color-card-bg: #f4f2ee;
+  --color-card-shadow: rgba(60, 55, 45, 0.08);
+  --color-border: #cfcabf;
+  --color-accent: #2f5b8a;
+  --color-accent-hover: #24486e;
+  --color-tip-bg: #e4e9ef;
+  --color-tip-border: #6d8bab;
+  --color-link: #2a5580;
+  --color-topic-link-bg: #f4f2ee;
+  --color-topic-link-text: #2a4d73;
+  --color-topic-link-hover: #e6eaef;
+  --color-topic-shadow: rgba(60, 55, 45, 0.06);
+  --color-theme-toggle-bg: rgba(255, 255, 255, 0.18);
+  --color-theme-toggle-hover: rgba(255, 255, 255, 0.28);
   /* Сетка и подписи периодической системы */
-  --color-pt-grid: #94a3b8;
-  --color-pt-dim: #475569;
-  --color-field-bg: #f1f5f9;
-  --color-field-border: #94a3b8;
-  --color-field-shadow: inset 0 1px 2px rgba(15, 23, 42, 0.07);
-  --color-field-focus-ring: rgba(37, 99, 235, 0.28);
+  --color-pt-grid: #8a8377;
+  --color-pt-dim: #5c574f;
+  /* Поля ответа в заданиях ОГЭ (контраст с карточкой и фоном страницы) */
+  --color-field-bg: #eae7e0;
+  --color-field-border: #8a8377;
+  --color-field-shadow: inset 0 1px 2px rgba(60, 55, 45, 0.09);
+  --color-btn-text: #f4f2ee;
+  --color-field-focus-ring: rgba(47, 91, 138, 0.3);
 }
 
 html[data-theme="dark"] {
-  --color-bg: #111827;
-  --color-text: #e5e7eb;
-  --color-header-bg: #1e3a8a;
-  --color-header-text: #f9fafb;
-  --color-header-link: #e0e7ff;
-  --color-card-bg: #1f2937;
-  --color-card-shadow: rgba(0, 0, 0, 0.35);
-  --color-border: #374151;
-  --color-accent: #3b82f6;
-  --color-accent-hover: #60a5fa;
-  --color-tip-bg: #172554;
-  --color-tip-border: #3b82f6;
-  --color-link: #93c5fd;
-  --color-topic-link-bg: #374151;
-  --color-topic-link-text: #bfdbfe;
-  --color-topic-link-hover: #4b5563;
-  --color-topic-shadow: rgba(0, 0, 0, 0.25);
-  --color-theme-toggle-bg: rgba(255, 255, 255, 0.12);
-  --color-theme-toggle-hover: rgba(255, 255, 255, 0.2);
-  --color-pt-grid: #64748b;
-  --color-pt-dim: #cbd5e1;
-  --color-field-bg: #374151;
-  --color-field-border: #9ca3af;
-  --color-field-shadow: inset 0 2px 4px rgba(0, 0, 0, 0.35);
-  --color-field-focus-ring: rgba(96, 165, 250, 0.38);
+  /* Тёмная тема сделана контрастнее: карточка заметно светлее фона,
+     границы больше не сливаются (было 1,42:1, стало 4,4:1). */
+  --color-bg: #0d1117;
+  --color-text: #f0f3f7;
+  --color-header-bg: #17304f;
+  --color-header-text: #ffffff;
+  --color-header-link: #dbe7f7;
+  --color-card-bg: #1b2230;
+  --color-card-shadow: rgba(0, 0, 0, 0.45);
+  --color-border: #566173;
+  --color-accent: #5aa2ff;
+  --color-accent-hover: #83bcff;
+  --color-tip-bg: #12283f;
+  --color-tip-border: #5aa2ff;
+  --color-link: #8fc4ff;
+  --color-topic-link-bg: #232c3b;
+  --color-topic-link-text: #cfe2ff;
+  --color-topic-link-hover: #2e3a4d;
+  --color-topic-shadow: rgba(0, 0, 0, 0.35);
+  --color-theme-toggle-bg: rgba(255, 255, 255, 0.14);
+  --color-theme-toggle-hover: rgba(255, 255, 255, 0.24);
+  --color-pt-grid: #7c8798;
+  --color-pt-dim: #dbe2ea;
+  --color-field-bg: #232c3b;
+  --color-field-border: #8b96a8;
+  --color-field-shadow: inset 0 2px 4px rgba(0, 0, 0, 0.4);
+  /* На светлой кнопке тёмной темы белый текст даёт всего 2,6:1 —
+     поэтому здесь надпись тёмная. */
+  --color-btn-text: #0d1117;
+  --color-field-focus-ring: rgba(90, 162, 255, 0.4);
 }
 
 body {
@@ -173,7 +182,7 @@ button.theme-toggle .material-symbols-outlined {
 
 button:not(.theme-toggle) {
   background: var(--color-accent);
-  color: #fff;
+  color: var(--color-btn-text);
   border: none;
   padding: 10px 16px;
   border-radius: 8px;
