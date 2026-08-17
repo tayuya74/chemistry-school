@@ -853,19 +853,22 @@ html[data-theme="dark"] .oge-answer-cells input:focus-visible {
 /* Клетка элемента: номер сверху, символ крупно, масса и название мелко. */
 .pt-el {
   display: inline-block;
-  width: 92%;
-  padding: 3px 2px 4px;
+  /* Заметно уже клетки — иначе сдвиг влево/вправо не читается глазом. */
+  width: 68%;
+  padding: 3px 1px 4px;
   line-height: 1.15;
   min-width: 0;
   text-align: center;
 }
 
-/* Подгруппы: главная прижата влево, побочная вправо. */
-.pt-cell--main {
+/* Подгруппы: главная прижата влево, побочная вправо.
+   Селектор с .pt-table — иначе правило перебивает `.pt-table td`,
+   у которого специфичность выше. */
+.pt-table td.pt-cell--main {
   text-align: left;
 }
 
-.pt-cell--sub {
+.pt-table td.pt-cell--sub {
   text-align: right;
 }
 
