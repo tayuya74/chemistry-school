@@ -852,10 +852,21 @@ html[data-theme="dark"] .oge-answer-cells input:focus-visible {
 
 /* Клетка элемента: номер сверху, символ крупно, масса и название мелко. */
 .pt-el {
-  display: block;
+  display: inline-block;
+  width: 92%;
   padding: 3px 2px 4px;
   line-height: 1.15;
   min-width: 0;
+  text-align: center;
+}
+
+/* Подгруппы: главная прижата влево, побочная вправо. */
+.pt-cell--main {
+  text-align: left;
+}
+
+.pt-cell--sub {
+  text-align: right;
 }
 
 .pt-num {
@@ -914,6 +925,7 @@ html[data-theme="dark"] .oge-answer-cells input:focus-visible {
 
 .pt-cell--triad .pt-el {
   flex: 1 1 0;
+  width: auto;
   min-width: 0;
   box-sizing: border-box;
 }

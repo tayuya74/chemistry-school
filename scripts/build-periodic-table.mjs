@@ -139,22 +139,36 @@ const E = {
 /**
  * Ряды короткой формы. Каждая строка — восемь групп; в группе VIII
  * побочной подгруппы стоят сразу три элемента (триада).
- * null — пустая клетка, "H2" — метка «(H)» над галогенами.
+ * null — пустая клетка, "Hmark" — метка «(H)» над галогенами.
+ *
+ * kind задаёт, где в строке главная подгруппа, а где побочная:
+ *   "small" — малый период, все элементы главной подгруппы;
+ *   "a" — первый ряд большого периода: I и II главные, III–VII побочные;
+ *   "b" — второй ряд: I и II побочные, III–VII главные.
+ * Элементы главных подгрупп прижимаются влево, побочных — вправо,
+ * как в печатной таблице.
  */
 /* prettier-ignore */
 const ROWS = [
-  { period: "1", span: 1, cells: [[1], null, null, null, null, null, ["Hmark"], [2]] },
-  { period: "2", span: 1, cells: [[3], [4], [5], [6], [7], [8], [9], [10]] },
-  { period: "3", span: 1, cells: [[11], [12], [13], [14], [15], [16], [17], [18]] },
-  { period: "4", span: 2, cells: [[19], [20], [21], [22], [23], [24], [25], [26, 27, 28]] },
-  { period: null,         cells: [[29], [30], [31], [32], [33], [34], [35], [36]] },
-  { period: "5", span: 2, cells: [[37], [38], [39], [40], [41], [42], [43], [44, 45, 46]] },
-  { period: null,         cells: [[47], [48], [49], [50], [51], [52], [53], [54]] },
-  { period: "6", span: 2, cells: [[55], [56], [57, "*"], [72], [73], [74], [75], [76, 77, 78]] },
-  { period: null,         cells: [[79], [80], [81], [82], [83], [84], [85], [86]] },
-  { period: "7", span: 2, cells: [[87], [88], [89, "**"], [104], [105], [106], [107], [108, 109, 110]] },
-  { period: null,         cells: [[111], [112], [113], [114], [115], [116], [117], [118]] },
+  { period: "1", span: 1, kind: "small", cells: [[1], null, null, null, null, null, ["Hmark"], [2]] },
+  { period: "2", span: 1, kind: "small", cells: [[3], [4], [5], [6], [7], [8], [9], [10]] },
+  { period: "3", span: 1, kind: "small", cells: [[11], [12], [13], [14], [15], [16], [17], [18]] },
+  { period: "4", span: 2, kind: "a",     cells: [[19], [20], [21], [22], [23], [24], [25], [26, 27, 28]] },
+  { period: null,         kind: "b",     cells: [[29], [30], [31], [32], [33], [34], [35], [36]] },
+  { period: "5", span: 2, kind: "a",     cells: [[37], [38], [39], [40], [41], [42], [43], [44, 45, 46]] },
+  { period: null,         kind: "b",     cells: [[47], [48], [49], [50], [51], [52], [53], [54]] },
+  { period: "6", span: 2, kind: "a",     cells: [[55], [56], [57, "*"], [72], [73], [74], [75], [76, 77, 78]] },
+  { period: null,         kind: "b",     cells: [[79], [80], [81], [82], [83], [84], [85], [86]] },
+  { period: "7", span: 2, kind: "a",     cells: [[87], [88], [89, "**"], [104], [105], [106], [107], [108, 109, 110]] },
+  { period: null,         kind: "b",     cells: [[111], [112], [113], [114], [115], [116], [117], [118]] },
 ];
+
+/** Главная подгруппа в этой клетке или побочная. */
+function isMainSubgroup(kind, groupIndex) {
+  if (kind === "small") return true;
+  const firstTwo = groupIndex < 2;
+  return kind === "a" ? firstTwo : !firstTwo;
+}
 
 const GROUPS = ["I", "II", "III", "IV", "V", "VI", "VII", "VIII"];
 
@@ -205,7 +219,7 @@ function cellBox(z, mark) {
   );
 }
 
-function renderCell(cell, isGroupViii) {
+function renderCell(cell, groupIndex, kind) {
   if (!cell) return `<td class="pt-cell pt-cell--empty"></td>`;
   const mark = typeof cell[1] === "string" ? cell[1] : null;
   const items = cell.filter((x) => typeof x === "number" || x === "Hmark");
@@ -213,12 +227,16 @@ function renderCell(cell, isGroupViii) {
 
   /* В группе VIII клетка всегда делится на три: триада занимает все три,
      а благородный газ — только правую, как на печатной таблице. */
-  if (isGroupViii) {
+  if (groupIndex === 7) {
     while (boxes.length < 3)
       boxes.unshift(`<div class="pt-el pt-el--blank"></div>`);
     return `<td class="pt-cell pt-cell--triad">${boxes.join("")}</td>`;
   }
-  return `<td class="pt-cell">${boxes.join("")}</td>`;
+
+  const side = isMainSubgroup(kind, groupIndex)
+    ? "pt-cell--main"
+    : "pt-cell--sub";
+  return `<td class="pt-cell ${side}">${boxes.join("")}</td>`;
 }
 
 function renderMain() {
@@ -240,7 +258,7 @@ function renderMain() {
       r.period === null
         ? ""
         : `<th class="pt-period" scope="row"${r.span > 1 ? ` rowspan="${r.span}"` : ""}>${r.period}</th>`;
-    return `<tr>${label}${r.cells.map((c, i) => renderCell(c, i === 7)).join("")}</tr>`;
+    return `<tr>${label}${r.cells.map((c, i) => renderCell(c, i, r.kind)).join("")}</tr>`;
   }).join("");
 
   return `<table class="pt-table"><caption class="visually-hidden">Периодическая система химических элементов Д. И. Менделеева, короткая форма</caption>${cols}<thead>${head}</thead><tbody>${body}</tbody></table>`;
