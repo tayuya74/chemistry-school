@@ -86,14 +86,26 @@ body {
   gap: 12px 16px;
 }
 
-.site-header nav a {
-  color: var(--color-header-link);
-  margin-right: 12px;
-  text-decoration: none;
+.site-header nav {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 2px 4px;
 }
 
-.site-header nav a:last-child {
-  margin-right: 0;
+/* Ссылки в шапке — с запасом по высоте, чтобы попадать пальцем с телефона. */
+.site-header nav a {
+  color: var(--color-header-link);
+  text-decoration: none;
+  display: inline-flex;
+  align-items: center;
+  min-height: 44px;
+  padding: 0 10px;
+  border-radius: 8px;
+}
+
+.site-header nav a:hover,
+.site-header nav a:focus-visible {
+  background: var(--color-theme-toggle-bg);
 }
 
 .site-header nav a:hover {
@@ -881,17 +893,18 @@ html[data-theme="dark"] .oge-answer-cells input:focus-visible {
   opacity: 0.55;
 }
 
-/* Ширины колонок: группе VIII нужно место под триады Fe—Co—Ni. */
+/* Ширины колонок в долях: VIII группа ровно втрое шире остальных,
+   поэтому клетка триады совпадает по ширине с обычной клеткой. */
 .pt-col-period {
-  width: 3.2rem;
+  width: 4.8%;
 }
 
 .pt-col {
-  width: 8.1%;
+  width: 9.52%;
 }
 
 .pt-col-viii {
-  width: 21%;
+  width: 28.6%;
 }
 
 /* Триада в побочной подгруппе VIII: три элемента в одной клетке. */
@@ -907,6 +920,11 @@ html[data-theme="dark"] .oge-answer-cells input:focus-visible {
 
 .pt-cell--triad .pt-el + .pt-el {
   border-left: 1px solid var(--color-border);
+}
+
+/* Пустая треть в группе VIII: держит ширину, но рамкой не выделяется. */
+.pt-el--blank {
+  border-left: 0 !important;
 }
 
 .pt-cell--empty {

@@ -205,12 +205,20 @@ function cellBox(z, mark) {
   );
 }
 
-function renderCell(cell) {
+function renderCell(cell, isGroupViii) {
   if (!cell) return `<td class="pt-cell pt-cell--empty"></td>`;
   const mark = typeof cell[1] === "string" ? cell[1] : null;
   const items = cell.filter((x) => typeof x === "number" || x === "Hmark");
-  const cls = items.length > 1 ? "pt-cell pt-cell--triad" : "pt-cell";
-  return `<td class="${cls}">${items.map((z) => cellBox(z, mark)).join("")}</td>`;
+  const boxes = items.map((z) => cellBox(z, mark));
+
+  /* В группе VIII клетка всегда делится на три: триада занимает все три,
+     а благородный газ — только правую, как на печатной таблице. */
+  if (isGroupViii) {
+    while (boxes.length < 3)
+      boxes.unshift(`<div class="pt-el pt-el--blank"></div>`);
+    return `<td class="pt-cell pt-cell--triad">${boxes.join("")}</td>`;
+  }
+  return `<td class="pt-cell">${boxes.join("")}</td>`;
 }
 
 function renderMain() {
@@ -232,7 +240,7 @@ function renderMain() {
       r.period === null
         ? ""
         : `<th class="pt-period" scope="row"${r.span > 1 ? ` rowspan="${r.span}"` : ""}>${r.period}</th>`;
-    return `<tr>${label}${r.cells.map(renderCell).join("")}</tr>`;
+    return `<tr>${label}${r.cells.map((c, i) => renderCell(c, i === 7)).join("")}</tr>`;
   }).join("");
 
   return `<table class="pt-table"><caption class="visually-hidden">Периодическая система химических элементов Д. И. Менделеева, короткая форма</caption>${cols}<thead>${head}</thead><tbody>${body}</tbody></table>`;
