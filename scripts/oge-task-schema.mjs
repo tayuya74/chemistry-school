@@ -53,6 +53,14 @@ export function validateTaskShape(task) {
       if (!task.content?.items?.length) issues.push("orderedDigits: items");
       if (!task.answer?.sequence?.length)
         issues.push("orderedDigits: sequence");
+      /* cellCount задаёт число ячеек ответа на странице — если оно меньше длины
+         sequence, ученику физически негде вписать часть цифр (баг, который уже
+         был у 10 заданий типа 3: cellCount=1 при sequence из 3 цифр). */
+      if (task.content?.cellCount !== task.answer?.sequence?.length) {
+        issues.push(
+          `orderedDigits: cellCount (${task.content?.cellCount}) должен совпадать с длиной sequence (${task.answer?.sequence?.length})`,
+        );
+      }
       break;
     case "periodDiagram":
       if (!task.content?.figure?.html) issues.push("periodDiagram: figure");
