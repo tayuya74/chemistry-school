@@ -266,7 +266,17 @@
     renderTypeRows(tbody);
 
     const fillBtn = document.getElementById("fillOnesBtn");
-    if (fillBtn) fillBtn.addEventListener("click", () => setAllCounts(1));
+    if (fillBtn) {
+      const useFullRender = Boolean(window.OGE_RENDER);
+      fillBtn.addEventListener("click", () => {
+        setAllCounts(1);
+        (useFullRender ? buildFull : build)(resultEl, fullVariantCounts(), {
+          taskDir: fillBtn.dataset.taskDir || "../../data/oge/tasks/",
+          title: "Случайный вариант из банка заданий",
+          emptyText: "В каталоге не нашлось заданий.",
+        });
+      });
+    }
 
     const clearBtn = document.getElementById("clearCountsBtn");
     if (clearBtn) clearBtn.addEventListener("click", () => setAllCounts(0));

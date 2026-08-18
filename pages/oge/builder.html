@@ -46,8 +46,13 @@
         </p>
 
         <p class="oge-builder-actions">
-          <button type="button" id="fillOnesBtn" class="btn-secondary">
-            Поставить везде 1
+          <button
+            type="button"
+            id="fillOnesBtn"
+            class="btn-secondary"
+            data-task-dir="../../data/oge/tasks/"
+          >
+            Всех по 1
           </button>
           <button type="button" id="clearCountsBtn" class="btn-secondary">
             Очистить
@@ -78,6 +83,8 @@
         <div id="builderResult" role="status"></div>
       </article>
     </main>
+    <script src="../../js/oge-check-feedback.js"></script>
+    <script src="../../js/oge-render-client.js"></script>
     <script src="../../js/oge-task-builder.js"></script>
   </body>
 </html>
