@@ -158,6 +158,14 @@ function renderTwoChoiceBody(task, suffix) {
     )
     .join("\n");
 
+  const hintId = sid("hintOut", suffix);
+  const hintButton = task.hint
+    ? `\n          <button type="button" class="btn-secondary oge-hint-btn" style="margin-left: 8px" aria-expanded="false" aria-controls="${hintId}" data-oge-hint-target="${hintId}">Подсказка</button>`
+    : "";
+  const hintParagraph = task.hint
+    ? `\n        <p id="${hintId}" class="tip oge-hint" hidden>${task.hint}</p>`
+    : "";
+
   return `${renderBlocks(task.blocks)}
 
         <ol class="oge-statements">
@@ -191,8 +199,8 @@ ${stmts}
         </div>
 
         <p style="margin-top: 16px">
-          <button type="button" id="${sid("checkBtn", suffix)}">Проверить</button>
-        </p>
+          <button type="button" id="${sid("checkBtn", suffix)}">Проверить</button>${hintButton}
+        </p>${hintParagraph}
         <p id="${sid("resultOut", suffix)}" class="result" role="status"></p>`;
 }
 

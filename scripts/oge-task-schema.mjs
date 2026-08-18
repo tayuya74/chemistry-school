@@ -34,6 +34,12 @@ export function validateTaskShape(task) {
     if (!task.solution.html) issues.push("solution.html missing");
   }
 
+  /* hint — необязательная подсказка (кнопка рядом с «Проверить»), наводит на ответ,
+     но не выдаёт его; пока используется только у twoChoice-заданий. */
+  if (task.hint !== undefined && (typeof task.hint !== "string" || !task.hint.trim())) {
+    issues.push("hint must be a non-empty string when present");
+  }
+
   switch (task.uiKind) {
     case "twoChoice":
       if (task.content.statements?.length < 2)

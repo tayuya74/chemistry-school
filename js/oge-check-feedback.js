@@ -308,8 +308,27 @@ function initOgeSubtaskCheckboxLimits() {
   bindOgeCheckboxLimitsBySubtask();
 }
 
+/** Кнопка «Подсказка»: раскрывает/скрывает соседний текст подсказки, ответ не выдаёт. */
+function initOgeHintButtons() {
+  document.querySelectorAll(".oge-hint-btn").forEach(function (btn) {
+    if (btn.dataset.ogeHintBound === "1") return;
+    btn.dataset.ogeHintBound = "1";
+    const target = document.getElementById(btn.dataset.ogeHintTarget);
+    if (!target) return;
+    btn.addEventListener("click", function () {
+      const showing = target.hidden;
+      target.hidden = !showing;
+      btn.setAttribute("aria-expanded", String(showing));
+    });
+  });
+}
+
 if (document.readyState === "loading") {
-  document.addEventListener("DOMContentLoaded", initOgeSubtaskCheckboxLimits);
+  document.addEventListener("DOMContentLoaded", function () {
+    initOgeSubtaskCheckboxLimits();
+    initOgeHintButtons();
+  });
 } else {
   initOgeSubtaskCheckboxLimits();
+  initOgeHintButtons();
 }
