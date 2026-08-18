@@ -154,7 +154,7 @@ ${items}
             type="button"
             id="quickVariantBtn"
             data-index="../task-index.json"
-            data-link-prefix="../ex/"
+            data-task-dir="../../../data/oge/tasks/"
           >
             Сгенерировать вариант
           </button>
@@ -172,7 +172,9 @@ ${items}
       oge: "../index.html",
     },
     articleInner,
-    scripts: `    <script src="../../../js/oge-task-builder.js"></script>`,
+    scripts: `    <script src="../../../js/oge-check-feedback.js"></script>
+    <script src="../../../js/oge-render-client.js"></script>
+    <script src="../../../js/oge-task-builder.js"></script>`,
   });
 }
 

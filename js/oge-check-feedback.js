@@ -182,6 +182,8 @@ window.OGE_answerDotsToCommasInField = function (inputEl) {
     });
   }
 
+  window.OGE_attachNumericGuards = attachNumericGuards;
+
   if (document.readyState === "loading") {
     document.addEventListener("DOMContentLoaded", attachNumericGuards);
   } else {

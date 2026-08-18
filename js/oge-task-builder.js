@@ -134,6 +134,95 @@
     return res.json();
   }
 
+  async function loadTask(taskDir, id) {
+    const res = await fetch(`${taskDir}${id}.json`);
+    return res.json();
+  }
+
+  /**
+   * Как build(), но вместо ссылок вставляет само содержимое заданий
+   * (текст, поля ответа, кнопку «Проверить») — для кнопки «Сгенерировать
+   * вариант», которая должна сразу показать вариант, а не список ссылок.
+   */
+  async function buildFull(resultEl, counts, options) {
+    const opts = options || {};
+    resultEl.textContent = "Собираю…";
+
+    let index;
+    try {
+      index = await loadIndex(opts.indexUrl || "task-index.json");
+    } catch {
+      resultEl.textContent =
+        "Не удалось загрузить каталог заданий (task-index.json).";
+      return;
+    }
+
+    const byType = groupByType(index);
+    const warnings = [];
+    const picks = [];
+    counts.forEach(([type, n]) => {
+      const available = byType.get(type) ?? [];
+      if (available.length < n) {
+        warnings.push(
+          `Тип ${type}: запрошено ${n}, в наличии только ${available.length} — взяты все.`,
+        );
+      }
+      pickRandom(available, n).forEach((row) => picks.push({ type, row }));
+    });
+
+    if (!picks.length) {
+      resultEl.innerHTML = "";
+      const empty = document.createElement("p");
+      empty.textContent = opts.emptyText || "В каталоге не нашлось заданий.";
+      resultEl.appendChild(empty);
+      return;
+    }
+
+    resultEl.textContent = "Загружаю задания…";
+    const taskDir = opts.taskDir || "../../../data/oge/tasks/";
+    let tasks;
+    try {
+      tasks = await Promise.all(picks.map((p) => loadTask(taskDir, p.row.id)));
+    } catch {
+      resultEl.textContent = "Не удалось загрузить содержимое заданий.";
+      return;
+    }
+
+    resultEl.innerHTML = "";
+    if (opts.title) {
+      const h = document.createElement("h3");
+      h.textContent = opts.title;
+      resultEl.appendChild(h);
+    }
+    if (warnings.length) {
+      const warn = document.createElement("p");
+      warn.className = "tip";
+      warn.textContent = warnings.join(" ");
+      resultEl.appendChild(warn);
+    }
+
+    const linkPrefix = opts.linkPrefix || "../ex/";
+    picks.forEach((p, i) => {
+      const task = tasks[i];
+      const suffix = `-t${task.id}`;
+      const wrapId = `oge-quick-${task.id}`;
+      const section = document.createElement("section");
+      section.className = "oge-variant-task";
+      section.innerHTML = `<h3 class="oge-variant-task__title">Задание ${p.type}
+        <span class="oge-variant-task__meta">(<a class="oge-task-seq" href="${linkPrefix}${task.id}.html" target="_blank" rel="noopener">№ ${task.id}</a>)</span>
+      </h3>
+      <p class="lead oge-variant-task__lead">${task.meta.lead}</p>
+      ${window.OGE_RENDER.buildSubtaskHtml(task, suffix, wrapId)}`;
+      resultEl.appendChild(section);
+
+      const root = document.getElementById(wrapId);
+      if (root) window.OGE_RENDER.attachCheckHandlers(root, task, suffix);
+    });
+
+    if (window.OGE_attachNumericGuards) window.OGE_attachNumericGuards();
+    if (window.initOgeSubtaskCheckboxLimits) window.initOgeSubtaskCheckboxLimits();
+  }
+
   /** Общая сборка: считает выборку и рисует результат. */
   async function build(resultEl, counts, options) {
     const opts = options || {};
@@ -195,10 +284,12 @@
     const resultEl = document.getElementById("builderResult");
     if (!btn || !resultEl) return false;
 
+    const useFullRender = Boolean(window.OGE_RENDER);
     btn.addEventListener("click", () =>
-      build(resultEl, fullVariantCounts(), {
+      (useFullRender ? buildFull : build)(resultEl, fullVariantCounts(), {
         indexUrl: btn.dataset.index || "../task-index.json",
         linkPrefix: btn.dataset.linkPrefix || "../ex/",
+        taskDir: btn.dataset.taskDir || "../../../data/oge/tasks/",
         title: "Случайный вариант из банка заданий",
         emptyText: "В каталоге не нашлось заданий.",
       }),
