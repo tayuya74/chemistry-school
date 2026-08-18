@@ -278,11 +278,7 @@ ${opts}
             </tr>
           </tbody>
         </table>
-
-        <p style="margin-top: 16px">
-          <button type="button" id="${sid("checkBtn", suffix)}">Проверить</button>
-        </p>
-        <p id="${sid("resultOut", suffix)}" class="result" role="status"></p>`;
+${renderCheckAndHintFooter(task, suffix)}`;
 }
 
 function renderOrderedDigitsBody(task, suffix) {
