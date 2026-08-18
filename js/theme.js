@@ -46,6 +46,29 @@
 
   applyStored();
 
+  /* Кнопка «наверх»: одна на страницу, добавляется сюда, чтобы не
+     редактировать разметку всех страниц сайта. */
+  function initBackToTop() {
+    if (document.querySelector(".back-to-top")) return;
+
+    const btn = document.createElement("button");
+    btn.type = "button";
+    btn.className = "back-to-top";
+    btn.setAttribute("aria-label", "Наверх страницы");
+    btn.innerHTML = themeIconHtml("arrow_upward");
+    document.body.appendChild(btn);
+
+    function sync() {
+      btn.classList.toggle("back-to-top--visible", window.scrollY > 400);
+    }
+
+    btn.addEventListener("click", function () {
+      window.scrollTo({ top: 0, behavior: "smooth" });
+    });
+    window.addEventListener("scroll", sync, { passive: true });
+    sync();
+  }
+
   function init() {
     document.querySelectorAll(".theme-toggle").forEach(function (btn) {
       btn.addEventListener("click", function () {
@@ -53,6 +76,7 @@
       });
     });
     syncToggles();
+    initBackToTop();
   }
 
   if (document.readyState === "loading") {
