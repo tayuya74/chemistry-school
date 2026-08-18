@@ -146,6 +146,22 @@ function dataAttrs(task) {
   return parts.length ? ` ${parts.join(" ")}` : "";
 }
 
+/** Кнопка «Проверить» + необязательная «Подсказка» рядом с ней (task.hint). */
+function renderCheckAndHintFooter(task, suffix) {
+  const hintId = sid("hintOut", suffix);
+  const hintButton = task.hint
+    ? `\n          <button type="button" class="btn-secondary oge-hint-btn" style="margin-left: 8px" aria-expanded="false" aria-controls="${hintId}" data-oge-hint-target="${hintId}">Подсказка</button>`
+    : "";
+  const hintParagraph = task.hint
+    ? `\n        <p id="${hintId}" class="tip oge-hint" hidden>${task.hint}</p>`
+    : "";
+  return `
+        <p style="margin-top: 16px">
+          <button type="button" id="${sid("checkBtn", suffix)}">Проверить</button>${hintButton}
+        </p>${hintParagraph}
+        <p id="${sid("resultOut", suffix)}" class="result" role="status"></p>`;
+}
+
 function renderTwoChoiceBody(task, suffix) {
   const stmts = task.content.statements
     .map(
@@ -157,14 +173,6 @@ function renderTwoChoiceBody(task, suffix) {
           </li>`,
     )
     .join("\n");
-
-  const hintId = sid("hintOut", suffix);
-  const hintButton = task.hint
-    ? `\n          <button type="button" class="btn-secondary oge-hint-btn" style="margin-left: 8px" aria-expanded="false" aria-controls="${hintId}" data-oge-hint-target="${hintId}">Подсказка</button>`
-    : "";
-  const hintParagraph = task.hint
-    ? `\n        <p id="${hintId}" class="tip oge-hint" hidden>${task.hint}</p>`
-    : "";
 
   return `${renderBlocks(task.blocks)}
 
@@ -197,11 +205,7 @@ ${stmts}
             autocomplete="off"
           />
         </div>
-
-        <p style="margin-top: 16px">
-          <button type="button" id="${sid("checkBtn", suffix)}">Проверить</button>${hintButton}
-        </p>${hintParagraph}
-        <p id="${sid("resultOut", suffix)}" class="result" role="status"></p>`;
+${renderCheckAndHintFooter(task, suffix)}`;
 }
 
 function matchOptionCount(right) {
@@ -377,11 +381,7 @@ ${postPrompt}
             </tr>
           </tbody>
         </table>
-
-        <p style="margin-top: 16px">
-          <button type="button" id="${sid("checkBtn", suffix)}">Проверить</button>
-        </p>
-        <p id="${sid("resultOut", suffix)}" class="result" role="status"></p>`;
+${renderCheckAndHintFooter(task, suffix)}`;
 }
 
 function renderMultiChoiceFourBody(task, suffix) {
