@@ -271,6 +271,7 @@
       fillBtn.addEventListener("click", () => {
         setAllCounts(1);
         (useFullRender ? buildFull : build)(resultEl, fullVariantCounts(), {
+          linkPrefix: "ex/",
           taskDir: fillBtn.dataset.taskDir || "../../data/oge/tasks/",
           title: "Случайный вариант из банка заданий",
           emptyText: "В каталоге не нашлось заданий.",
