@@ -1,4 +1,8 @@
 (function () {
+  /* document.currentScript доступен только синхронно при выполнении этого
+     скрипта — сохраняем сразу, чтобы позже вычислить путь до корня сайта. */
+  const scriptEl = document.currentScript;
+
   function isDark() {
     return document.documentElement.getAttribute("data-theme") === "dark";
   }
@@ -45,6 +49,25 @@
   }
 
   applyStored();
+
+  /* Сайт живёт и на localhost, и на GitHub Pages в подпапке
+     (tayuya74.github.io/chemistry-school/) — абсолютный "/favicon.ico"
+     там не сработает, дефолтный поиск браузером тоже (он ищет от корня
+     домена, а не от подпапки). Путь до корня берём из src этого же
+     скрипта — он уже правильный для глубины текущей страницы. */
+  function initFavicon() {
+    if (document.querySelector('link[rel="icon"]')) return;
+    const src = (scriptEl && scriptEl.getAttribute("src")) || "";
+    const idx = src.indexOf("js/theme.js");
+    const prefix = idx >= 0 ? src.slice(0, idx) : "";
+    const link = document.createElement("link");
+    link.rel = "icon";
+    link.type = "image/x-icon";
+    link.href = prefix + "favicon.ico";
+    document.head.appendChild(link);
+  }
+
+  initFavicon();
 
   /* Кнопка «наверх»: одна на страницу, добавляется сюда, чтобы не
      редактировать разметку всех страниц сайта. */
