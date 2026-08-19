@@ -25,6 +25,6 @@
   "answer": null,
   "solution": {
     "title": "Ход решения",
-    "html": "<p style=\"margin-top: 12px\">Электронный баланс:</p>\n          <p style=\"font-family: monospace; white-space: pre-line\">\n            Mg<sup>0</sup> − 2ē → Mg<sup>+2</sup> |×1\n            2H<sup>+1</sup> + 2ē → H<sub>2</sub><sup>0</sup> |×1\n          </p>\n          <p>\n            <strong>Окислитель:</strong> водород в степени окисления +1 (или NH<sub>4</sub>Cl).<br />\n            <strong>Восстановитель:</strong> магний в степени окисления 0 (или Mg).\n          </p>\n          <p>Уравнение реакции:</p>\n          <p style=\"text-align: center\">\n            <strong>2</strong>NH<sub>4</sub>Cl + Mg = <strong>2</strong>NH<sub>3</sub> + MgCl<sub>2</sub> + H<sub>2</sub>\n          </p>"
+    "html": "<p style=\"margin-top: 12px\">Электронный баланс:</p>\n          <p style=\"font-family: monospace; white-space: pre-line\">\n            Mg<sup>0</sup> − 2ē → Mg<sup>+2</sup> |×1<br />\n            2H<sup>+1</sup> + 2ē → H<sub>2</sub><sup>0</sup> |×1\n          </p>\n          <p>\n            <strong>Окислитель:</strong> водород в степени окисления +1 (или NH<sub>4</sub>Cl).<br />\n            <strong>Восстановитель:</strong> магний в степени окисления 0 (или Mg).\n          </p>\n          <p>Уравнение реакции:</p>\n          <p style=\"text-align: center\">\n            <strong>2</strong>NH<sub>4</sub>Cl + Mg = <strong>2</strong>NH<sub>3</sub> + MgCl<sub>2</sub> + H<sub>2</sub>\n          </p>"
   }
 }
