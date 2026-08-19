@@ -195,7 +195,11 @@ ${linked.html}`;
 function buildTypePage(examType, tasks) {
   const p = pad2(examType);
   const lead = tasks[0].meta.lead;
+  const prevP = examType > 1 ? pad2(examType - 1) : null;
   const nextP = examType < 23 ? pad2(examType + 1) : null;
+  const prevLink = prevP
+    ? `<a href="type-${prevP}.html">← Задание ${examType - 1}</a>`
+    : `<a href="index.html">← К списку заданий</a>`;
 
   let inserts = "";
   let scripts = "";
@@ -215,7 +219,7 @@ ${html}
 
   const articleInner = `<p><a href="index.html">← К списку заданий ОГЭ</a></p>
         <nav class="oge-task-nav" aria-label="Соседние задания ОГЭ">
-          <a href="index.html">← К списку заданий</a>
+          ${prevLink}
           ${
             nextP
               ? `<a class="oge-task-nav__next" href="type-${nextP}.html">К следующему типу (задание ${examType + 1}) →</a>`
