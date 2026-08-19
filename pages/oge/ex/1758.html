@@ -129,9 +129,12 @@
             aria-label="Числовой ответ"
           />
         </p>
+
         <p style="margin-top: 16px">
           <button type="button" id="checkBtn">Проверить</button>
+          <button type="button" class="btn-secondary oge-hint-btn" style="margin-left: 8px" aria-expanded="false" aria-controls="hintOut" data-oge-hint-target="hintOut">Подсказка</button>
         </p>
+        <p id="hintOut" class="tip oge-hint" hidden>Масса элемента и масса вещества связаны через массовую долю: m(элемента) = m(вещества) × w(элемента), значит m(вещества) = m(элемента) / w(элемента) — смотрите, что дано, а что нужно найти. Используйте значение w, найденное в задании 18, а не пересчитывайте заново.</p>
         <p id="resultOut" class="result" role="status"></p>
         <details class="tip" style="margin-top: 24px">
           <summary style="cursor: pointer; font-weight: 600">

@@ -414,10 +414,7 @@ ${stmts}
         >
 ${cells}
         </div>
-        <p style="margin-top: 16px">
-          <button type="button" id="${sid("checkBtn", suffix)}">Проверить</button>
-        </p>
-        <p id="${sid("resultOut", suffix)}" class="result" role="status"></p>`;
+${renderCheckAndHintFooter(task, suffix)}`;
 }
 
 /** Свёрнутый разбор решения; раскрывается только по клику, ответ заранее не выдаёт. */
@@ -450,10 +447,7 @@ ${withTable ? MASS_TABLE_HTML : ""}
             aria-label="Числовой ответ"
           />
         </p>
-        <p style="margin-top: 16px">
-          <button type="button" id="${sid("checkBtn", suffix)}">Проверить</button>
-        </p>
-        <p id="${sid("resultOut", suffix)}" class="result" role="status"></p>${renderSolutionDetails(task)}`;
+${renderCheckAndHintFooter(task, suffix)}${renderSolutionDetails(task)}`;
 }
 
 function renderOpenBody(task) {
