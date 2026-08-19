@@ -450,12 +450,20 @@ ${withTable ? MASS_TABLE_HTML : ""}
 ${renderCheckAndHintFooter(task, suffix)}${renderSolutionDetails(task)}`;
 }
 
-function renderOpenBody(task) {
+function renderOpenBody(task, suffix) {
   let html = renderBlocks(task.blocks);
   if (task.uiKind === "experimentOpen" && task.content.hasExperimentTable) {
     if (!html.includes("oge-xy-table")) {
       html += `\n${EXPERIMENT_TABLE_HTML}`;
     }
+  }
+  if (task.hint) {
+    const hintId = sid("hintOut", suffix);
+    html += `
+        <p style="margin-top: 16px">
+          <button type="button" class="btn-secondary oge-hint-btn" aria-expanded="false" aria-controls="${hintId}" data-oge-hint-target="${hintId}">Подсказка</button>
+        </p>
+        <p id="${hintId}" class="tip oge-hint" hidden>${task.hint}</p>`;
   }
   html += renderSolutionDetails(task);
   return html;
@@ -479,7 +487,7 @@ function renderTaskBody(task, suffix = "") {
       return renderNumericBody(task, suffix, true);
     case "openReference":
     case "experimentOpen":
-      return renderOpenBody(task);
+      return renderOpenBody(task, suffix);
     default:
       throw new Error(`render: unknown uiKind ${task.uiKind}`);
   }
