@@ -51,15 +51,14 @@ export function validateTaskShape(task) {
   if (!task.meta?.lead) issues.push("meta.lead missing");
   if (!task.meta?.source) issues.push("meta.source missing");
   if (!Array.isArray(task.blocks)) issues.push("blocks must be array");
-  /* meta.advanced — необязательная пометка «повышенная сложность» (звёздочка на странице) */
+  /* meta.advanced — необязательная пометка сложного задания (★ на странице).
+     Сопроводительный meta.advancedNote больше не обязателен и на страницы не
+     выводится: пояснения оказались не подсказкой, а ответом. */
   if (
     task.meta?.advanced !== undefined &&
     typeof task.meta.advanced !== "boolean"
   ) {
     issues.push("meta.advanced must be boolean");
-  }
-  if (task.meta?.advanced && !task.meta?.advancedNote) {
-    issues.push("meta.advancedNote missing (чем задание сложнее обычного)");
   }
 
   if (OPEN_KINDS.has(task.uiKind)) {

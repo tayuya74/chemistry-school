@@ -91,17 +91,18 @@ ${scripts}
 `;
 }
 
-/** Звёздочка «повышенная сложность» + пояснение, чем задание коварно */
+/**
+ * Звёздочка «сложное задание» — и всё, без пояснений.
+ *
+ * Раньше рядом печаталась плашка «★ Задание повышенной сложности» с текстом
+ * `meta.advancedNote`, и тот же текст висел в подсказке при наведении. По решению
+ * автора сайта это убрано: пояснения на деле подсказывали не ход рассуждения, а
+ * сам ответ. `advancedNote` остаётся в JSON как внутренняя заметка и на страницы
+ * не попадает.
+ */
 function hardMark(task) {
   if (!task.meta.advanced) return "";
-  return `<span class="oge-hard" title="${task.meta.advancedNote}" aria-label="Задание повышенной сложности: ${task.meta.advancedNote}">★</span>`;
-}
-
-function hardNote(task) {
-  if (!task.meta.advanced) return "";
-  return `\n      <p class="tip oge-hard-note">
-        <strong>★ Задание повышенной сложности.</strong> ${task.meta.advancedNote}
-      </p>`;
+  return `<span class="oge-hard" aria-label="сложное задание">★</span>`;
 }
 
 /**
@@ -143,7 +144,7 @@ function renderLinkedTask(task) {
   return {
     script,
     html: `
-      <h3 class="oge-example-title oge-pair-title">${hardMark(linked)}<a class="oge-task-seq" href="${linkedId}.html">Задание ${linked.examType} № ${linkedId}</a></h3>${hardNote(linked)}
+      <h3 class="oge-example-title oge-pair-title">${hardMark(linked)}<a class="oge-task-seq" href="${linkedId}.html">Задание ${linked.examType} № ${linkedId}</a></h3>
 ${html}
       <p>Источник: ${linked.meta.source}</p>`,
   };
@@ -171,7 +172,7 @@ function buildExPage(task) {
         ${nextLink}
       </nav>
       <h2>${hardMark(task)}Задание ${type} № ${task.id}</h2>
-      <p class="lead">${task.meta.lead}</p>${pointsBadge(type)}${hardNote(task)}
+      <p class="lead">${task.meta.lead}</p>${pointsBadge(type)}
 
       ${html}
       <p>Источник: ${task.meta.source}</p>
@@ -214,7 +215,7 @@ function buildTypePage(examType, tasks) {
       wrapId: `oge-ex-${task.id}`,
     });
     inserts += `      <section class="oge-example"${task.meta.advanced ? ' data-oge-advanced="1"' : ""}>
-      <h3 class="oge-example-title" id="oge-ex-title-${task.id}">${hardMark(task)}<a class="oge-task-seq" href="ex/${task.id}.html">Задание ${examType} № ${task.id}</a></h3>${hardNote(task)}
+      <h3 class="oge-example-title" id="oge-ex-title-${task.id}">${hardMark(task)}<a class="oge-task-seq" href="ex/${task.id}.html">Задание ${examType} № ${task.id}</a></h3>
 ${html}
       </section>
 `;
@@ -229,7 +230,7 @@ ${html}
             Порядок: обычный
           </button>
           <span class="oge-sort__note"
-            >★ повышенной сложности: ${advancedCount} из ${tasks.length}</span
+            >★ сложных: ${advancedCount} из ${tasks.length}</span
           >
         </p>`
     : "";

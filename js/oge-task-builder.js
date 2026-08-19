@@ -247,7 +247,7 @@
       const available = byType.get(type) ?? [];
       if (available.length < n) {
         warnings.push(
-          `Тип ${type}: запрошено ${n}, ${onlyHard ? "заданий повышенной сложности" : "в наличии"} только ${available.length} — взяты все.`,
+          `Тип ${type}: запрошено ${n}, ${onlyHard ? "сложных заданий" : "в наличии"} только ${available.length} — взяты все.`,
         );
       }
       const picked = pickRandom(available, n);

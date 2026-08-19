@@ -577,16 +577,12 @@ html[data-theme="dark"] .oge-answer-cells input:focus-visible {
     0 0 0 3px var(--color-field-focus-ring);
 }
 
-/* Пометка «задание повышенной сложности» */
+/* Звёздочка «сложное задание». Пояснений при наведении нет — поэтому и
+   cursor: help убран, он обещал подсказку, которой больше не будет. */
 .oge-hard {
   color: #f59e0b;
   font-size: 1.1em;
   margin-right: 6px;
-  cursor: help;
-}
-
-.oge-hard-note {
-  margin-top: 4px;
 }
 
 /* Обёртка одного примера на странице типа: заголовок + плашка ★ + условие.
