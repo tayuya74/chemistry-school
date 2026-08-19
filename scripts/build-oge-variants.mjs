@@ -100,7 +100,7 @@ ${html}
     if (script) scripts += script + "\n";
   }
 
-  const articleInner = `        <p><a href="index.html">← К списку вариантов</a> · <a href="../index.html">ОГЭ</a></p>
+  const articleInner = `        <p><a href="../index.html">← К разделу ОГЭ</a></p>
         <h2>${variant.title}</h2>
         <p class="lead">Полный вариант ОГЭ по химии: задания 1–23 на одной странице.</p>
         <p>Источник: ${variant.source}</p>
@@ -121,62 +121,6 @@ ${body.trimEnd()}`;
   });
 }
 
-function buildVariantsIndex(variants) {
-  const items = variants
-    .map((v) => {
-      const ids = v.tasks.map((t) => t.taskId);
-      return `          <li>
-            <a href="${v.slug}.html"><strong>${v.title}</strong></a>
-            <span class="oge-variant-list__ids"> (задания № ${ids[0]}–${ids[ids.length - 1]})</span>
-          </li>`;
-    })
-    .join("\n");
-
-  const articleInner = `        <p><a href="../index.html">← К разделу ОГЭ</a></p>
-        <h2>Готовые варианты ОГЭ</h2>
-        <p class="lead">
-          Полные варианты из 23 заданий. Каждый вариант — отдельная страница для
-          решения подряд, как на экзамене.
-        </p>
-        <ul class="topic-list oge-variant-list">
-${items}
-        </ul>
-
-        <h3>Свой вариант из банка</h3>
-        <p>
-          Кнопка соберёт новый вариант прямо сейчас: по одному случайному
-          заданию каждого из 23 типов. Нажмите ещё раз — получится другой
-          набор. Если нужно иначе (например, десять заданий одного типа),
-          загляните в <a href="../builder.html">конструктор</a>.
-        </p>
-        <p class="oge-builder-actions">
-          <button
-            type="button"
-            id="quickVariantBtn"
-            data-index="../task-index.json"
-            data-task-dir="../../../data/oge/tasks/"
-          >
-            Сгенерировать вариант
-          </button>
-        </p>
-        <div id="builderResult" role="status"></div>`;
-
-  return shell({
-    title: "ОГЭ — готовые варианты",
-    cssBase: "../../..",
-    jsBase: "../../..",
-    nav: {
-      home: "../../../index.html",
-      topics: "../../topics/index.html",
-      tables: "../../tables.html",
-      oge: "../index.html",
-    },
-    articleInner,
-    scripts: `    <script src="../../../js/oge-check-feedback.js"></script>
-    <script src="../../../js/oge-render-client.js"></script>
-    <script src="../../../js/oge-task-builder.js"></script>`,
-  });
-}
 
 export function buildAllVariantPages() {
   const variants = loadVariants();
@@ -198,11 +142,5 @@ export function buildAllVariantPages() {
     console.log(`OK variants/${variant.slug}.html`);
   }
 
-  fs.writeFileSync(
-    path.join(outDir, "index.html"),
-    buildVariantsIndex(variants),
-    "utf8",
-  );
-  console.log("OK variants/index.html");
   return variants.length;
 }

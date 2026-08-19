@@ -4,6 +4,8 @@ import { loadRegistry, pad2, root } from "./oge-migrate-lib.mjs";
 import { buildAllVariantPages } from "./build-oge-variants.mjs";
 import { renderSubtask } from "./oge-render.mjs";
 import { pointsLabel, pointsNote } from "./oge-points.mjs";
+import { VARIANT_META } from "./oge-variant-meta.mjs";
+import { TYPE_TITLES } from "./oge-type-titles.mjs";
 
 /** Плашка «сколько даёт задание на экзамене» — под подзаголовком типа. */
 function pointsBadge(examType) {
@@ -263,6 +265,120 @@ ${inserts.trimEnd()}`;
   });
 }
 
+/**
+ * Главная страница раздела ОГЭ.
+ *
+ * Раньше её роль делили три страницы: этот список типов, отдельный список
+ * готовых вариантов и отдельный конструктор — они дублировали друг друга.
+ * Теперь всё на одной: кнопки готовых вариантов, кнопка случайного варианта
+ * и список типов, у каждого из которых слева поле «сколько взять», а сама
+ * строка по-прежнему ведёт на страницу типа.
+ */
+function buildOgeIndexPage(countByType) {
+  const variants = Object.values(VARIANT_META).sort(
+    (a, b) => (a.gridOrder ?? 99) - (b.gridOrder ?? 99),
+  );
+
+  const variantButtons = variants
+    .map(
+      (v) =>
+        `          <a class="oge-variant-btn" href="variants/${v.slug}.html" title="${v.title}">${v.short}</a>`,
+    )
+    .join("\n");
+
+  const typeRows = Object.entries(TYPE_TITLES)
+    .map(([t, title]) => {
+      const type = Number(t);
+      const p = pad2(type);
+      const total = countByType.get(type) ?? 0;
+      return `          <li class="oge-type-row">
+            <input
+              type="number"
+              class="oge-type-row__count"
+              id="ogeCount${type}"
+              min="0"
+              max="${total}"
+              step="1"
+              placeholder="0"
+              aria-label="Сколько заданий типа ${type} взять в свой вариант"
+            />
+            <a class="oge-type-row__link" href="type-${p}.html">
+              <span class="oge-type-row__name"
+                ><strong>${type}.</strong> ${title}</span
+              >
+              <span class="oge-type-row__total">${total}</span>
+            </a>
+          </li>`;
+    })
+    .join("\n");
+
+  const articleInner = `        <h2>Задания ОГЭ по химии</h2>
+        <p class="lead">
+          Задания 1–23 повторяют структуру экзамена. Можно решать готовый
+          вариант целиком, собрать случайный или набрать свой — указав слева от
+          нужных типов, сколько заданий взять.
+        </p>
+
+        <h3 class="oge-section-heading">Готовые варианты</h3>
+        <div class="oge-variant-grid">
+${variantButtons}
+        </div>
+
+        <h3 class="oge-section-heading">Свой вариант</h3>
+        <p class="oge-random">
+          <button
+            type="button"
+            id="quickVariantBtn"
+            data-index="task-index.json"
+            data-link-prefix="ex/"
+            data-task-dir="../../data/oge/tasks/"
+          >
+            Собрать случайный вариант
+          </button>
+          <span class="oge-random__note"
+            >по одному случайному заданию каждого из 23 типов</span
+          >
+        </p>
+
+        <p class="oge-builder-hint">
+          Либо укажите числа слева от нужных типов и нажмите «Собрать». По самой
+          строке можно перейти к полному списку примеров этого типа; справа —
+          сколько их всего.
+        </p>
+
+        <ul class="oge-type-list">
+${typeRows}
+        </ul>
+
+        <p class="oge-builder-actions">
+          <button type="button" id="buildBtn">Собрать</button>
+          <button type="button" id="clearCountsBtn" class="btn-secondary">
+            Очистить
+          </button>
+          <label class="oge-builder-onlyhard">
+            <input type="checkbox" id="onlyHard" />
+            только сложные <span class="oge-hard">★</span>
+          </label>
+        </p>
+
+        <div id="builderResult" role="status"></div>`;
+
+  return shell({
+    title: "ОГЭ — Химия",
+    cssBase: "../..",
+    jsBase: "../..",
+    nav: {
+      home: "../../index.html",
+      topics: "../topics/index.html",
+      tables: "../tables.html",
+      oge: "index.html",
+    },
+    articleInner,
+    scripts: `    <script src="../../js/oge-render-client.js"></script>
+    <script src="../../js/oge-task-builder.js"></script>`,
+  });
+}
+
 function main() {
   const rows = loadRegistry();
   const ogeDir = path.join(root, "pages", "oge");
@@ -308,6 +424,16 @@ function main() {
     );
     console.log(`OK type-${pad2(examType)}.html (${tasks.length} примеров)`);
   }
+
+  const countByType = new Map(
+    [...byType.entries()].map(([type, list]) => [type, list.length]),
+  );
+  fs.writeFileSync(
+    path.join(ogeDir, "index.html"),
+    buildOgeIndexPage(countByType),
+    "utf8",
+  );
+  console.log("OK index.html (варианты + конструктор)");
 
   console.log(`Готово: ${rows.length} ex-страниц и type-01…23 из JSON`);
   console.log(`Готово: pages/oge/task-index.json (${index.length} записей)`);

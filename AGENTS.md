@@ -32,7 +32,8 @@
 
 ## Структура каталогов
 
-- **`pages/oge/`** — список типов `index.html`, страницы типов `type-01.html`…`type-23.html`, отдельные примеры в **`pages/oge/ex/{id}.html`**.
+- **`pages/oge/`** — главная страница раздела `index.html`, страницы типов `type-01.html`…`type-23.html`, отдельные примеры в **`pages/oge/ex/{id}.html`**, готовые варианты в `pages/oge/variants/{slug}.html`.
+  - **`index.html` собирается скриптом** (`buildOgeIndexPage` в `scripts/build-oge-from-json.mjs`), руками не правится: кнопки готовых вариантов берутся из `scripts/oge-variant-meta.mjs`, названия типов — из `scripts/oge-type-titles.mjs`, число примеров у каждого типа — из реестра. На этой же странице живут конструктор своего варианта и кнопка случайного варианта: раньше под них были отдельные `builder.html` и `variants/index.html`, которые дублировали друг друга, — их убрали.
 - **`pages/topics/`** — темы и `index.html` (список тем).
 - **`pages/tests/`** — страницы тестов.
 - **`pages/tables.html`** — справочные таблицы.

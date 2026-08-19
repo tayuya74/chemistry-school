@@ -328,11 +328,6 @@ button:not(.theme-toggle):hover {
   font-size: 0.98rem;
 }
 
-.oge-variant-list__ids {
-  color: var(--color-text-muted, #64748b);
-  font-size: 0.92rem;
-}
-
 .oge-subtask {
   margin-bottom: 28px;
   padding-bottom: 8px;
@@ -624,25 +619,6 @@ html[data-theme="dark"] .oge-answer-cells input:focus-visible {
 button.oge-sort-btn {
   /* палец на телефоне — не меньше 44 px по высоте */
   min-height: 44px;
-}
-
-/* Таблица конструктора своего варианта (pages/oge/builder.html) */
-.oge-builder-table {
-  border-collapse: collapse;
-  margin-top: 8px;
-  width: 100%;
-  max-width: 26rem;
-}
-
-.oge-builder-table th,
-.oge-builder-table td {
-  border: 1px solid var(--color-border);
-  padding: 8px 12px;
-  text-align: left;
-}
-
-.oge-builder-table input[type="number"] {
-  width: 5rem;
 }
 
 /* Одно числовое поле в заданиях 18–19 и аналогичных */
@@ -1126,8 +1102,137 @@ button.oge-sort-btn {
 .oge-builder-actions {
   display: flex;
   flex-wrap: wrap;
-  gap: 10px;
+  align-items: center;
+  gap: 10px 16px;
   margin: 16px 0;
+}
+
+.oge-builder-onlyhard {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  min-height: 44px;
+}
+
+.oge-builder-hint {
+  margin: 18px 0 12px;
+  color: var(--color-pt-dim);
+  font-size: 0.93rem;
+}
+
+/* Готовые варианты: 12 кнопок сеткой 4 в ряд (3 ряда) */
+.oge-variant-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 10px;
+  margin-bottom: 8px;
+}
+
+.oge-variant-btn {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 48px;
+  padding: 10px 12px;
+  text-align: center;
+  text-decoration: none;
+  border-radius: 8px;
+  background: var(--color-topic-link-bg);
+  color: var(--color-topic-link-text);
+  border: 1px solid var(--color-border);
+  box-shadow: 0 2px 8px var(--color-topic-shadow);
+}
+
+.oge-variant-btn:hover,
+.oge-variant-btn:focus-visible {
+  background: var(--color-topic-link-hover);
+  border-color: var(--color-accent);
+}
+
+/* Кнопка случайного варианта */
+.oge-random {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 10px 14px;
+  margin: 12px 0 4px;
+}
+
+.oge-random__note {
+  color: var(--color-pt-dim);
+  font-size: 0.92rem;
+}
+
+/* Список типов = конструктор: слева поле «сколько взять»,
+   справа вся строка остаётся ссылкой на страницу типа. Поле нельзя класть
+   внутрь <a> — интерактивный элемент внутри ссылки ломает и клик, и доступность,
+   поэтому это два соседних элемента во flex-строке. */
+.oge-type-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: grid;
+  gap: 10px;
+}
+
+.oge-type-row {
+  display: flex;
+  align-items: stretch;
+  gap: 10px;
+}
+
+.oge-type-row__count {
+  width: 4.5rem;
+  min-height: 44px;
+  padding: 8px;
+  text-align: center;
+  font-size: 1rem;
+  border-radius: 8px;
+  border: 1px solid var(--color-field-border);
+  background: var(--color-field-bg);
+  color: var(--color-text);
+  box-shadow: var(--color-field-shadow);
+}
+
+.oge-type-row__link {
+  flex: 1;
+  min-width: 0;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 12px;
+  padding: 12px 16px;
+  border-radius: 8px;
+  text-decoration: none;
+  background: var(--color-topic-link-bg);
+  color: var(--color-topic-link-text);
+  box-shadow: 0 2px 8px var(--color-topic-shadow);
+}
+
+.oge-type-row__link:hover,
+.oge-type-row__link:focus-visible {
+  background: var(--color-topic-link-hover);
+}
+
+.oge-type-row__total {
+  flex: none;
+  color: var(--color-pt-dim);
+  font-size: 0.9rem;
+  font-variant-numeric: tabular-nums;
+}
+
+@media (max-width: 720px) {
+  .oge-variant-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+/* На типичном телефоне (375 px) две кнопки в ряд ещё помещаются целиком —
+   в один столбец сворачиваем только на совсем узких экранах. */
+@media (max-width: 340px) {
+  .oge-variant-grid {
+    grid-template-columns: 1fr;
+  }
 }
 
 button.btn-secondary {

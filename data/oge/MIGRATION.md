@@ -75,7 +75,7 @@ npm run generate:oge-variants   # JSON вариантов из реестра
 npm run build:oge               # включает сборку pages/oge/variants/
 ```
 
-**Результат (2026-07):** 12 готовых вариантов (демо 2025/2026 + типовые 1–10). Список: [`pages/oge/variants/index.html`](../pages/oge/variants/index.html).
+**Результат (2026-07):** 12 готовых вариантов (демо 2025/2026 + типовые 1–10). Кнопки на них — на главной странице раздела [`pages/oge/index.html`](../../pages/oge/index.html); отдельного списка вариантов больше нет.
 
 Код: `scripts/generate-oge-variants.mjs`, `scripts/build-oge-variants.mjs`, `scripts/oge-variant-meta.mjs`.
 

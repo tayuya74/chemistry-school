@@ -1,52 +1,32 @@
 /**
- * Конструктор своего варианта: случайный отбор N заданий каждого типа
- * из pages/oge/task-index.json.
+ * Свой вариант на главной странице раздела ОГЭ (pages/oge/index.html):
+ * случайный отбор N заданий каждого типа из pages/oge/task-index.json.
  *
- * Скрипт обслуживает две страницы:
- *   builder.html          — таблица с числами по каждому типу;
- *   variants/index.html   — одна кнопка «сгенерировать вариант»
- *                           (по одному заданию каждого типа).
- * Путь к каталогу берётся из data-index на кнопке, потому что страницы
- * лежат на разной глубине.
+ * Числа берутся из полей рядом со списком типов (`#ogeCount{тип}`), а кнопка
+ * «Собрать случайный вариант» — это те же числа, но по единице на каждый тип.
+ * Раньше это были две отдельные страницы (builder.html и variants/index.html),
+ * которые дублировали друг друга.
  */
 (function () {
   const TOTAL_TYPES = 23;
 
-  function renderTypeRows(tbody) {
-    for (let type = 1; type <= TOTAL_TYPES; type++) {
-      const tr = document.createElement("tr");
-
-      const labelCell = document.createElement("td");
-      labelCell.textContent = `Задание ${type}`;
-      tr.appendChild(labelCell);
-
-      const inputCell = document.createElement("td");
-      const input = document.createElement("input");
-      input.type = "number";
-      input.min = "0";
-      input.value = "0";
-      input.className = "oge-answer-input";
-      input.id = `builderCount${type}`;
-      input.setAttribute("aria-label", `Сколько заданий типа ${type} взять`);
-      inputCell.appendChild(input);
-      tr.appendChild(inputCell);
-
-      tbody.appendChild(tr);
-    }
+  function countInput(type) {
+    return document.getElementById(`ogeCount${type}`);
   }
 
-  /** Проставляет одно и то же число во все поля таблицы. */
+  /** Проставляет одно и то же значение во все поля («Очистить» — пустую строку). */
   function setAllCounts(value) {
     for (let type = 1; type <= TOTAL_TYPES; type++) {
-      const input = document.getElementById(`builderCount${type}`);
-      if (input) input.value = String(value);
+      const input = countInput(type);
+      if (input) input.value = value;
     }
   }
 
   function readCounts() {
     const counts = [];
     for (let type = 1; type <= TOTAL_TYPES; type++) {
-      const input = document.getElementById(`builderCount${type}`);
+      const input = countInput(type);
+      if (!input) continue;
       const n = parseInt(input.value, 10);
       if (n > 0) counts.push([type, n]);
     }
@@ -257,36 +237,41 @@
     renderResult(resultEl, groups, warnings, opts);
   }
 
+  /** Результат длинный, поэтому после сборки подводим к нему страницу. */
+  function scrollToResult(resultEl) {
+    resultEl.scrollIntoView({ behavior: "smooth", block: "start" });
+  }
+
   function initBuilder() {
-    const tbody = document.querySelector("#builderTable tbody");
     const buildBtn = document.getElementById("buildBtn");
     const resultEl = document.getElementById("builderResult");
-    if (!tbody || !buildBtn || !resultEl) return false;
+    if (!buildBtn || !resultEl) return false;
 
-    renderTypeRows(tbody);
-
-    const fillBtn = document.getElementById("fillOnesBtn");
-    if (fillBtn) {
-      const useFullRender = Boolean(window.OGE_RENDER);
-      fillBtn.addEventListener("click", () => {
-        setAllCounts(1);
-        (useFullRender ? buildFull : build)(resultEl, fullVariantCounts(), {
-          linkPrefix: "ex/",
-          taskDir: fillBtn.dataset.taskDir || "../../data/oge/tasks/",
-          title: "Случайный вариант из банка заданий",
-          emptyText: "В каталоге не нашлось заданий.",
-        });
+    const clearBtn = document.getElementById("clearCountsBtn");
+    if (clearBtn) {
+      clearBtn.addEventListener("click", () => {
+        setAllCounts("");
+        resultEl.innerHTML = "";
       });
     }
 
-    const clearBtn = document.getElementById("clearCountsBtn");
-    if (clearBtn) clearBtn.addEventListener("click", () => setAllCounts(0));
-
-    buildBtn.addEventListener("click", () =>
-      build(resultEl, readCounts(), {
+    buildBtn.addEventListener("click", async () => {
+      const counts = readCounts();
+      if (!counts.length) {
+        resultEl.innerHTML = "";
+        const hint = document.createElement("p");
+        hint.className = "tip";
+        hint.textContent =
+          "Укажите слева от нужных типов, сколько заданий взять, — хотя бы одно число больше нуля.";
+        resultEl.appendChild(hint);
+        return;
+      }
+      await build(resultEl, counts, {
         onlyHard: document.getElementById("onlyHard")?.checked,
-      }),
-    );
+        title: "Свой вариант из банка заданий",
+      });
+      scrollToResult(resultEl);
+    });
     return true;
   }
 
@@ -296,15 +281,16 @@
     if (!btn || !resultEl) return false;
 
     const useFullRender = Boolean(window.OGE_RENDER);
-    btn.addEventListener("click", () =>
-      (useFullRender ? buildFull : build)(resultEl, fullVariantCounts(), {
-        indexUrl: btn.dataset.index || "../task-index.json",
-        linkPrefix: btn.dataset.linkPrefix || "../ex/",
-        taskDir: btn.dataset.taskDir || "../../../data/oge/tasks/",
+    btn.addEventListener("click", async () => {
+      await (useFullRender ? buildFull : build)(resultEl, fullVariantCounts(), {
+        indexUrl: btn.dataset.index || "task-index.json",
+        linkPrefix: btn.dataset.linkPrefix || "ex/",
+        taskDir: btn.dataset.taskDir || "../../data/oge/tasks/",
         title: "Случайный вариант из банка заданий",
         emptyText: "В каталоге не нашлось заданий.",
-      }),
-    );
+      });
+      scrollToResult(resultEl);
+    });
     return true;
   }
 
