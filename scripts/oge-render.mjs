@@ -417,9 +417,15 @@ ${cells}
 ${renderCheckAndHintFooter(task, suffix)}`;
 }
 
-/** Свёрнутый разбор решения; раскрывается только по клику, ответ заранее не выдаёт. */
-function renderSolutionDetails(task) {
-  if (!task.solution) return "";
+/**
+ * Свёрнутый разбор решения — **только на странице отдельного задания**
+ * (`mode === "ex"`). На странице типа и в собранных вариантах разбора быть
+ * не должно: там ученик решает подряд, и готовый ход решения под условием
+ * лишает задание смысла. Чтобы посмотреть разбор, он переходит на страницу
+ * конкретного задания.
+ */
+function renderSolutionDetails(task, mode) {
+  if (!task.solution || mode !== "ex") return "";
   return `
         <details class="tip" style="margin-top: 24px">
           <summary style="cursor: pointer; font-weight: 600">
@@ -429,7 +435,7 @@ function renderSolutionDetails(task) {
         </details>`;
 }
 
-function renderNumericBody(task, suffix, withTable) {
+function renderNumericBody(task, suffix, withTable, mode) {
   const unit = task.content.unit ?? "%";
   /* Дробным может быть любой ответ — и проценты, и масса, — поэтому на телефоне
      всегда нужна клавиатура с запятой. */
@@ -447,10 +453,10 @@ ${withTable ? MASS_TABLE_HTML : ""}
             aria-label="Числовой ответ"
           />
         </p>
-${renderCheckAndHintFooter(task, suffix)}${renderSolutionDetails(task)}`;
+${renderCheckAndHintFooter(task, suffix)}${renderSolutionDetails(task, mode)}`;
 }
 
-function renderOpenBody(task, suffix) {
+function renderOpenBody(task, suffix, mode) {
   let html = renderBlocks(task.blocks);
   if (task.uiKind === "experimentOpen" && task.content.hasExperimentTable) {
     if (!html.includes("oge-xy-table")) {
@@ -465,11 +471,11 @@ function renderOpenBody(task, suffix) {
         </p>
         <p id="${hintId}" class="tip oge-hint" hidden>${task.hint}</p>`;
   }
-  html += renderSolutionDetails(task);
+  html += renderSolutionDetails(task, mode);
   return html;
 }
 
-function renderTaskBody(task, suffix = "") {
+function renderTaskBody(task, suffix = "", mode) {
   switch (task.uiKind) {
     case "twoChoice":
       return renderTwoChoiceBody(task, suffix);
@@ -482,12 +488,12 @@ function renderTaskBody(task, suffix = "") {
     case "multiChoiceFour":
       return renderMultiChoiceFourBody(task, suffix);
     case "numericInt":
-      return renderNumericBody(task, suffix, false);
+      return renderNumericBody(task, suffix, false, mode);
     case "numericMassTable":
-      return renderNumericBody(task, suffix, true);
+      return renderNumericBody(task, suffix, true, mode);
     case "openReference":
     case "experimentOpen":
-      return renderOpenBody(task, suffix);
+      return renderOpenBody(task, suffix, mode);
     default:
       throw new Error(`render: unknown uiKind ${task.uiKind}`);
   }
@@ -682,7 +688,7 @@ function typeCheckScript(task, suffix, wrapId = null) {
 }
 
 export function renderSubtask(task, { mode, suffix = "", wrapId = null } = {}) {
-  const body = renderTaskBody(task, suffix);
+  const body = renderTaskBody(task, suffix, mode);
   const attrs = dataAttrs(task);
   const idAttr = wrapId ? ` id="${wrapId}"` : "";
   const wrapped =
