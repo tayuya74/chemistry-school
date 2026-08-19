@@ -23,6 +23,6 @@
   "answer": null,
   "solution": {
     "title": "Ход решения",
-    "html": "<p style=\"margin-top: 12px\">Электронный баланс:</p>\n          <p style=\"font-family: monospace; white-space: pre-line\">\n            S<sup>−2</sup> − 8ē → S<sup>+6</sup> |×3<br />\n            N<sup>+5</sup> + 3ē → N<sup>+2</sup> |×8\n          </p>\n          <p>\n            <strong>Окислитель:</strong> азот в степени окисления +5 (или HNO<sub>3</sub>).<br />\n            <strong>Восстановитель:</strong> сера в степени окисления −2 (или PbS).\n          </p>\n          <p>Уравнение реакции:</p>\n          <p style=\"text-align: center\">\n            <strong>8</strong>HNO<sub>3</sub> + <strong>3</strong>PbS = <strong>3</strong>PbSO<sub>4</sub> + <strong>8</strong>NO + <strong>4</strong>H<sub>2</sub>O\n          </p>"
+    "html": "<p style=\"margin-top: 12px\">Электронный баланс:</p>\n          <p style=\"font-family: monospace; white-space: pre-line\"> S<sup>−2</sup> − 8ē → S<sup>+6</sup> |×3<br /> N<sup>+5</sup> + 3ē → N<sup>+2</sup> |×8 </p>\n          <p>\n            <strong>Окислитель:</strong> азот в степени окисления +5 (или HNO<sub>3</sub>).<br />\n            <strong>Восстановитель:</strong> сера в степени окисления −2 (или PbS).\n          </p>\n          <p>Уравнение реакции:</p>\n          <p style=\"text-align: center\">\n            <strong>8</strong>HNO<sub>3</sub> + <strong>3</strong>PbS = <strong>3</strong>PbSO<sub>4</sub> + <strong>8</strong>NO + <strong>4</strong>H<sub>2</sub>O\n          </p>"
   }
 }

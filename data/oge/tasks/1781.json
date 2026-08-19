@@ -23,6 +23,6 @@
   "answer": null,
   "solution": {
     "title": "Ход решения",
-    "html": "<p style=\"margin-top: 12px\">Электронный баланс:</p>\n          <p style=\"font-family: monospace; white-space: pre-line\">\n            P<sup>−3</sup> − 8ē → P<sup>+5</sup> |×1<br />\n            Cl<sub>2</sub><sup>0</sup> + 2ē → 2Cl<sup>−1</sup> |×4\n          </p>\n          <p>\n            <strong>Окислитель:</strong> хлор в степени окисления 0 (или Cl<sub>2</sub>).<br />\n            <strong>Восстановитель:</strong> фосфор в степени окисления −3 (или PH<sub>3</sub>).\n          </p>\n          <p>Уравнение реакции:</p>\n          <p style=\"text-align: center\">\n            PH<sub>3</sub> + <strong>4</strong>Cl<sub>2</sub> + <strong>4</strong>H<sub>2</sub>O = H<sub>3</sub>PO<sub>4</sub> + <strong>8</strong>HCl\n          </p>"
+    "html": "<p style=\"margin-top: 12px\">Электронный баланс:</p>\n          <p style=\"font-family: monospace; white-space: pre-line\"> P<sup>−3</sup> − 8ē → P<sup>+5</sup> |×1<br /> Cl<sub>2</sub><sup>0</sup> + 2ē → 2Cl<sup>−1</sup> |×4 </p>\n          <p>\n            <strong>Окислитель:</strong> хлор в степени окисления 0 (или Cl<sub>2</sub>).<br />\n            <strong>Восстановитель:</strong> фосфор в степени окисления −3 (или PH<sub>3</sub>).\n          </p>\n          <p>Уравнение реакции:</p>\n          <p style=\"text-align: center\">\n            PH<sub>3</sub> + <strong>4</strong>Cl<sub>2</sub> + <strong>4</strong>H<sub>2</sub>O = H<sub>3</sub>PO<sub>4</sub> + <strong>8</strong>HCl\n          </p>"
   }
 }

@@ -25,6 +25,6 @@
   "answer": null,
   "solution": {
     "title": "Ход решения",
-    "html": "<p style=\"margin-top: 12px\">Электронный баланс:</p>\n          <p style=\"font-family: monospace; white-space: pre-line\">\n            2H<sup>−1</sup> − 4ē → 2H<sup>+1</sup> |×3<br />\n            Cl<sup>+5</sup> + 6ē → Cl<sup>−1</sup> |×2\n          </p>\n          <p>\n            <strong>Окислитель:</strong> хлор в степени окисления +5 (или KClO<sub>3</sub>).<br />\n            <strong>Восстановитель:</strong> водород в степени окисления −1 (или CaH<sub>2</sub>).\n          </p>\n          <p>Уравнение реакции:</p>\n          <p style=\"text-align: center\">\n            <strong>2</strong>KClO<sub>3</sub> + <strong>3</strong>CaH<sub>2</sub> = <strong>3</strong>Ca(OH)<sub>2</sub> + <strong>2</strong>KCl\n          </p>"
+    "html": "<p style=\"margin-top: 12px\">Электронный баланс:</p>\n          <p style=\"font-family: monospace; white-space: pre-line\"> 2H<sup>−1</sup> − 4ē → 2H<sup>+1</sup> |×3<br /> Cl<sup>+5</sup> + 6ē → Cl<sup>−1</sup> |×2 </p>\n          <p>\n            <strong>Окислитель:</strong> хлор в степени окисления +5 (или KClO<sub>3</sub>).<br />\n            <strong>Восстановитель:</strong> водород в степени окисления −1 (или CaH<sub>2</sub>).\n          </p>\n          <p>Уравнение реакции:</p>\n          <p style=\"text-align: center\">\n            <strong>2</strong>KClO<sub>3</sub> + <strong>3</strong>CaH<sub>2</sub> = <strong>3</strong>Ca(OH)<sub>2</sub> + <strong>2</strong>KCl\n          </p>"
   }
 }

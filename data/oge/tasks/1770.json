@@ -23,6 +23,6 @@
   "answer": null,
   "solution": {
     "title": "Ход решения",
-    "html": "<p style=\"margin-top: 12px\">Электронный баланс:</p>\n          <p style=\"font-family: monospace; white-space: pre-line\">\n            Cu<sup>0</sup> − 2ē → Cu<sup>+2</sup> |×3<br />\n            N<sup>+5</sup> + 3ē → N<sup>+2</sup> |×2\n          </p>\n          <p>\n            <strong>Окислитель:</strong> азот в степени окисления +5 (или HNO<sub>3</sub>).<br />\n            <strong>Восстановитель:</strong> медь в степени окисления 0 (или Cu).\n          </p>\n          <p>Уравнение реакции:</p>\n          <p style=\"text-align: center\">\n            <strong>8</strong>HNO<sub>3</sub> + <strong>3</strong>Cu = <strong>3</strong>Cu(NO<sub>3</sub>)<sub>2</sub> + <strong>2</strong>NO + <strong>4</strong>H<sub>2</sub>O\n          </p>"
+    "html": "<p style=\"margin-top: 12px\">Электронный баланс:</p>\n          <p style=\"font-family: monospace; white-space: pre-line\"> Cu<sup>0</sup> − 2ē → Cu<sup>+2</sup> |×3<br /> N<sup>+5</sup> + 3ē → N<sup>+2</sup> |×2 </p>\n          <p>\n            <strong>Окислитель:</strong> азот в степени окисления +5 (или HNO<sub>3</sub>).<br />\n            <strong>Восстановитель:</strong> медь в степени окисления 0 (или Cu).\n          </p>\n          <p>Уравнение реакции:</p>\n          <p style=\"text-align: center\">\n            <strong>8</strong>HNO<sub>3</sub> + <strong>3</strong>Cu = <strong>3</strong>Cu(NO<sub>3</sub>)<sub>2</sub> + <strong>2</strong>NO + <strong>4</strong>H<sub>2</sub>O\n          </p>"
   }
 }

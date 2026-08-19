@@ -23,6 +23,6 @@
   "answer": null,
   "solution": {
     "title": "Ход решения",
-    "html": "<p style=\"margin-top: 12px\">Электронный баланс:</p>\n          <p style=\"font-family: monospace; white-space: pre-line\">\n            P<sup>0</sup> − 5ē → P<sup>+5</sup> |×3<br />\n            N<sup>+5</sup> + 3ē → N<sup>+2</sup> |×5\n          </p>\n          <p>\n            <strong>Окислитель:</strong> азот в степени окисления +5 (или HNO<sub>3</sub>).<br />\n            <strong>Восстановитель:</strong> фосфор в степени окисления 0 (или P).\n          </p>\n          <p>Уравнение реакции:</p>\n          <p style=\"text-align: center\">\n            <strong>5</strong>HNO<sub>3</sub> + <strong>3</strong>P + <strong>2</strong>H<sub>2</sub>O = <strong>5</strong>NO + <strong>3</strong>H<sub>3</sub>PO<sub>4</sub>\n          </p>"
+    "html": "<p style=\"margin-top: 12px\">Электронный баланс:</p>\n          <p style=\"font-family: monospace; white-space: pre-line\"> P<sup>0</sup> − 5ē → P<sup>+5</sup> |×3<br /> N<sup>+5</sup> + 3ē → N<sup>+2</sup> |×5 </p>\n          <p>\n            <strong>Окислитель:</strong> азот в степени окисления +5 (или HNO<sub>3</sub>).<br />\n            <strong>Восстановитель:</strong> фосфор в степени окисления 0 (или P).\n          </p>\n          <p>Уравнение реакции:</p>\n          <p style=\"text-align: center\">\n            <strong>5</strong>HNO<sub>3</sub> + <strong>3</strong>P + <strong>2</strong>H<sub>2</sub>O = <strong>5</strong>NO + <strong>3</strong>H<sub>3</sub>PO<sub>4</sub>\n          </p>"
   }
 }
