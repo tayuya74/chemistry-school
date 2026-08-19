@@ -1,0 +1,28 @@
+{
+  "id": 1902,
+  "examType": 21,
+  "uiKind": "openReference",
+  "meta": {
+    "lead": "Взаимосвязь различных классов неорганических веществ",
+    "source": "Открытый банк заданий ОГЭ по химии (ФИПИ), oge.fipi.ru/bank, № 55E104",
+    "sourceDir": "fipi-bank"
+  },
+  "blocks": [
+    {
+      "html": "<p>Дана схема превращений:</p>"
+    },
+    {
+      "html": "<p style=\"text-align: center; font-size: 1.1rem; margin: 16px 0\">\n          Fe<sub>2</sub>O<sub>3</sub>\n          <span style=\"margin: 0 6px\">→</span>\n          Fe\n          <span style=\"margin: 0 6px; display: inline-block; text-align: center; line-height: 1.1\"><small>Cl<sub>2</sub></small><br />→</span>\n          X\n          <span style=\"margin: 0 6px\">→</span>\n          Fe(OH)<sub>3</sub>\n        </p>"
+    },
+    {
+      "html": "<p>\n          Напишите <strong>молекулярные уравнения реакций</strong>, с помощью\n          которых можно осуществить указанные превращения.\n        </p>"
+    }
+  ],
+  "content": {},
+  "hint": "Каждая стрелка = смена класса: простое → оксид (горение), оксид → соль (к-та/оксид), соль → гидроксид (щёлочь), гидроксид → соль (к-та). Правила — как в 8 и 11.",
+  "answer": null,
+  "solution": {
+    "title": "Ход решения",
+    "html": "<p style=\"margin-top: 12px\">Промежуточное вещество: <strong>X — FeCl<sub>3</sub></strong>.</p>\n          <ol style=\"line-height: 1.9\">\n            <li>Fe<sub>2</sub>O<sub>3</sub> + 3CO <span style=\"margin: 0 4px; display: inline-block; text-align: center; line-height: 1.1\"><small>t°</small><br />→</span> 2Fe + 3CO<sub>2</sub></li>\n            <li>2Fe + 3Cl<sub>2</sub> = 2FeCl<sub>3</sub></li>\n            <li>FeCl<sub>3</sub> + 3NaOH = Fe(OH)<sub>3</sub>↓ + 3NaCl</li>\n          </ol>"
+  }
+}

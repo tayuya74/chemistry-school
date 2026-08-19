@@ -1,0 +1,30 @@
+{
+  "id": 1910,
+  "examType": 21,
+  "uiKind": "openReference",
+  "meta": {
+    "lead": "Взаимосвязь различных классов неорганических веществ",
+    "source": "Открытый банк заданий ОГЭ по химии (ФИПИ), oge.fipi.ru/bank, № 5A5AE6",
+    "sourceDir": "fipi-bank",
+    "advanced": true,
+    "advancedNote": "Второй переход непривычный: хлорат калия получают электролизом горячего раствора хлорида, а не обменной реакцией."
+  },
+  "blocks": [
+    {
+      "html": "<p>Дана схема превращений:</p>"
+    },
+    {
+      "html": "<p style=\"text-align: center; font-size: 1.1rem; margin: 16px 0\">\n          KOH\n          <span style=\"margin: 0 6px\">→</span>\n          KCl\n          <span style=\"margin: 0 6px\">→</span>\n          X\n          <span style=\"margin: 0 6px; display: inline-block; text-align: center; line-height: 1.1\"><small>t°</small><br />→</span>\n          O<sub>2</sub>\n        </p>"
+    },
+    {
+      "html": "<p>\n          Напишите <strong>молекулярные уравнения реакций</strong>, с помощью\n          которых можно осуществить указанные превращения.\n        </p>"
+    }
+  ],
+  "content": {},
+  "hint": "Каждая стрелка = смена класса: простое → оксид (горение), оксид → соль (к-та/оксид), соль → гидроксид (щёлочь), гидроксид → соль (к-та). Правила — как в 8 и 11.",
+  "answer": null,
+  "solution": {
+    "title": "Ход решения",
+    "html": "<p style=\"margin-top: 12px\">Промежуточное вещество: <strong>X — KClO<sub>3</sub></strong>.</p>\n          <ol style=\"line-height: 1.9\">\n            <li>KOH + HCl = KCl + H<sub>2</sub>O</li>\n            <li>KCl + 3H<sub>2</sub>O <span style=\"margin: 0 4px; display: inline-block; text-align: center; line-height: 1.1\"><small>электролиз</small><br />→</span> KClO<sub>3</sub> + 3H<sub>2</sub>↑</li>\n            <li>2KClO<sub>3</sub> <span style=\"margin: 0 4px; display: inline-block; text-align: center; line-height: 1.1\"><small>t°</small><br />→</span> 2KCl + 3O<sub>2</sub>↑</li>\n          </ol>"
+  }
+}

@@ -1,0 +1,28 @@
+{
+  "id": 1908,
+  "examType": 21,
+  "uiKind": "openReference",
+  "meta": {
+    "lead": "Взаимосвязь различных классов неорганических веществ",
+    "source": "Открытый банк заданий ОГЭ по химии (ФИПИ), oge.fipi.ru/bank, № B7FAC4",
+    "sourceDir": "fipi-bank"
+  },
+  "blocks": [
+    {
+      "html": "<p>Дана схема превращений:</p>"
+    },
+    {
+      "html": "<p style=\"text-align: center; font-size: 1.1rem; margin: 16px 0\">\n          CaBr<sub>2</sub>\n          <span style=\"margin: 0 6px\">→</span>\n          CaCl<sub>2</sub>\n          <span style=\"margin: 0 6px; display: inline-block; text-align: center; line-height: 1.1\"><small>Na<sub>2</sub>CO<sub>3</sub></small><br />→</span>\n          X\n          <span style=\"margin: 0 6px\">→</span>\n          CaSiO<sub>3</sub>\n        </p>"
+    },
+    {
+      "html": "<p>\n          Напишите <strong>молекулярные уравнения реакций</strong>, с помощью\n          которых можно осуществить указанные превращения.\n        </p>"
+    }
+  ],
+  "content": {},
+  "hint": "Каждая стрелка = смена класса: простое → оксид (горение), оксид → соль (к-та/оксид), соль → гидроксид (щёлочь), гидроксид → соль (к-та). Правила — как в 8 и 11.",
+  "answer": null,
+  "solution": {
+    "title": "Ход решения",
+    "html": "<p style=\"margin-top: 12px\">Промежуточное вещество: <strong>X — CaCO<sub>3</sub></strong>.</p>\n          <ol style=\"line-height: 1.9\">\n            <li>CaBr<sub>2</sub> + Cl<sub>2</sub> = CaCl<sub>2</sub> + Br<sub>2</sub></li>\n            <li>CaCl<sub>2</sub> + Na<sub>2</sub>CO<sub>3</sub> = CaCO<sub>3</sub>↓ + 2NaCl</li>\n            <li>CaCO<sub>3</sub> + SiO<sub>2</sub> <span style=\"margin: 0 4px; display: inline-block; text-align: center; line-height: 1.1\"><small>t°</small><br />→</span> CaSiO<sub>3</sub> + CO<sub>2</sub>↑</li>\n          </ol>"
+  }
+}
