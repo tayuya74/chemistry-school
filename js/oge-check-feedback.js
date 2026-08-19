@@ -323,12 +323,70 @@ function initOgeHintButtons() {
   });
 }
 
+/**
+ * Порядок примеров на странице типа. Кнопка перебирает три состояния:
+ * обычный порядок → сначала сложные (★) → сначала простые → обычный.
+ *
+ * Внутри каждой группы сохраняется исходный порядок (сортировка устойчивая),
+ * поэтому «сначала простые» не перемешивает примеры между собой, а только
+ * отодвигает звёздочные в конец.
+ */
+const OGE_SORT_MODES = [
+  { label: "Порядок: обычный", key: null },
+  { label: "Порядок: сначала сложные ★", key: "advancedFirst" },
+  { label: "Порядок: сначала простые", key: "simpleFirst" },
+];
+
+function initOgeSortButtons() {
+  document.querySelectorAll(".oge-sort-btn").forEach(function (btn) {
+    if (btn.dataset.ogeSortBound === "1") return;
+    btn.dataset.ogeSortBound = "1";
+
+    const examples = Array.from(document.querySelectorAll(".oge-example"));
+    if (examples.length < 2) return;
+    const host = examples[0].parentNode;
+
+    /* Запоминаем исходный порядок — по нему возвращаемся и сортируем устойчиво. */
+    examples.forEach(function (el, i) {
+      el.dataset.ogeOrder = String(i);
+    });
+
+    let mode = 0;
+    btn.addEventListener("click", function () {
+      mode = (mode + 1) % OGE_SORT_MODES.length;
+      const { label, key } = OGE_SORT_MODES[mode];
+
+      const sorted = examples.slice().sort(function (a, b) {
+        const aAdv = a.dataset.ogeAdvanced === "1";
+        const bAdv = b.dataset.ogeAdvanced === "1";
+        if (key && aAdv !== bAdv) {
+          if (key === "advancedFirst") return aAdv ? -1 : 1;
+          return aAdv ? 1 : -1;
+        }
+        return Number(a.dataset.ogeOrder) - Number(b.dataset.ogeOrder);
+      });
+
+      /* Один DocumentFragment вместо N перемещений в живом DOM — страница
+         не дёргается и не пересчитывает раскладку на каждом примере. */
+      const frag = document.createDocumentFragment();
+      sorted.forEach(function (el) {
+        frag.appendChild(el);
+      });
+      host.appendChild(frag);
+
+      btn.textContent = label;
+    });
+  });
+}
+
 if (document.readyState === "loading") {
   document.addEventListener("DOMContentLoaded", function () {
     initOgeSubtaskCheckboxLimits();
     initOgeHintButtons();
+    initOgeSortButtons();
   });
 } else {
   initOgeSubtaskCheckboxLimits();
   initOgeHintButtons();
+  initOgeSortButtons();
 }

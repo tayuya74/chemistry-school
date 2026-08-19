@@ -589,6 +589,47 @@ html[data-theme="dark"] .oge-answer-cells input:focus-visible {
   margin-top: 4px;
 }
 
+/* Обёртка одного примера на странице типа: заголовок + плашка ★ + условие.
+   Нужна, чтобы сортировка по сложности переставляла пример целиком. */
+.oge-example {
+  margin-bottom: 28px;
+  padding-bottom: 8px;
+  border-bottom: 1px solid var(--color-border);
+}
+
+.oge-example:last-child {
+  border-bottom: none;
+  margin-bottom: 0;
+  padding-bottom: 0;
+}
+
+/* Разделитель теперь рисует обёртка. Без этого правила у КАЖДОГО примера
+   пропала бы линия: .oge-subtask внутри секции всегда :last-child. */
+.oge-example .oge-subtask {
+  margin-bottom: 0;
+  padding-bottom: 0;
+  border-bottom: none;
+}
+
+/* Переключатель порядка примеров */
+.oge-sort {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  flex-wrap: wrap;
+  margin: 18px 0 24px;
+}
+
+.oge-sort__note {
+  color: var(--color-pt-dim);
+  font-size: 0.9rem;
+}
+
+button.oge-sort-btn {
+  /* палец на телефоне — не меньше 44 px по высоте */
+  min-height: 44px;
+}
+
 /* Таблица конструктора своего варианта (pages/oge/builder.html) */
 .oge-builder-table {
   border-collapse: collapse;

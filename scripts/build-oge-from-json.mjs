@@ -204,6 +204,8 @@ function buildTypePage(examType, tasks) {
   let inserts = "";
   let scripts = "";
 
+  /* Каждый пример заворачиваем в section.oge-example: заголовок, плашку ★ и само
+     условие нужно переставлять одним куском, когда включают сортировку по сложности. */
   for (const task of tasks) {
     const suffix = `-${task.id}`;
     const { html, script } = renderSubtask(task, {
@@ -211,11 +213,26 @@ function buildTypePage(examType, tasks) {
       suffix,
       wrapId: `oge-ex-${task.id}`,
     });
-    inserts += `      <h3 class="oge-example-title" id="oge-ex-title-${task.id}">${hardMark(task)}<a class="oge-task-seq" href="ex/${task.id}.html">Задание ${examType} № ${task.id}</a></h3>${hardNote(task)}
+    inserts += `      <section class="oge-example"${task.meta.advanced ? ' data-oge-advanced="1"' : ""}>
+      <h3 class="oge-example-title" id="oge-ex-title-${task.id}">${hardMark(task)}<a class="oge-task-seq" href="ex/${task.id}.html">Задание ${examType} № ${task.id}</a></h3>${hardNote(task)}
 ${html}
+      </section>
 `;
     if (script) scripts += script + "\n";
   }
+
+  const advancedCount = tasks.filter((t) => t.meta.advanced).length;
+  /* Кнопка нужна только там, где вообще есть ★ — иначе сортировать нечего. */
+  const sortControl = advancedCount
+    ? `\n        <p class="oge-sort">
+          <button type="button" class="btn-secondary oge-sort-btn">
+            Порядок: обычный
+          </button>
+          <span class="oge-sort__note"
+            >★ повышенной сложности: ${advancedCount} из ${tasks.length}</span
+          >
+        </p>`
+    : "";
 
   const articleInner = `<p><a href="index.html">← К списку заданий ОГЭ</a></p>
         <nav class="oge-task-nav" aria-label="Соседние задания ОГЭ">
@@ -227,7 +244,7 @@ ${html}
           }
         </nav>
         <h2>Задание ${examType}</h2>
-        <p class="lead">${lead}</p>${pointsBadge(examType)}
+        <p class="lead">${lead}</p>${pointsBadge(examType)}${sortControl}
 ${inserts.trimEnd()}`;
 
   return shell({
