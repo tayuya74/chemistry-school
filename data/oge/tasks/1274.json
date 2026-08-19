@@ -12,7 +12,7 @@
       "html": "<p>Дана схема превращений:</p>"
     },
     {
-      "html": "<p style=\"text-align: center; font-size: 1.1rem; margin: 16px 0\">\n          Fe(OH)<sub>2</sub> → X —t°→ Fe<sub>2</sub>O<sub>3</sub> →\n          Fe(NO<sub>3</sub>)<sub>3</sub>\n        </p>"
+      "html": "<p style=\"text-align: center; font-size: 1.1rem; margin: 16px 0\">\n          Fe(OH)<sub>2</sub> <span style=\"margin: 0 6px\">→</span> X <span style=\"margin: 0 6px; display: inline-block; text-align: center; line-height: 1.1\"><small>t°</small><br />→</span> Fe<sub>2</sub>O<sub>3</sub> <span style=\"margin: 0 6px\">→</span> Fe(NO<sub>3</sub>)<sub>3</sub>\n        </p>"
     },
     {
       "html": "<p>\n          Напишите молекулярные уравнения реакций, с помощью которых можно\n          осуществить указанные превращения.\n        </p>"
@@ -23,6 +23,6 @@
   "answer": null,
   "solution": {
     "title": "Ход решения",
-    "html": "<p style=\"margin-top: 12px\">\n            4Fe(OH)<sub>2</sub> + O<sub>2</sub> + 2H<sub>2</sub>O = 4Fe(OH)<sub\n              >3</sub\n            ><br /><span>(X — Fe(OH)<sub>3</sub>)</span>\n          </p>\n          <p style=\"margin-top: 8px\">\n            2Fe(OH)<sub>3</sub> —t°→ Fe<sub>2</sub>O<sub>3</sub> + 3H<sub>2</sub>O\n          </p>\n          <p style=\"margin-top: 8px\">\n            Fe<sub>2</sub>O<sub>3</sub> + 6HNO<sub>3</sub> =\n            2Fe(NO<sub>3</sub>)<sub>3</sub> + 3H<sub>2</sub>O\n          </p>"
+    "html": "<p style=\"margin-top: 12px\">\n            4Fe(OH)<sub>2</sub> + O<sub>2</sub> + 2H<sub>2</sub>O = 4Fe(OH)<sub\n              >3</sub\n            ><br /><span>(X — Fe(OH)<sub>3</sub>)</span>\n          </p>\n          <p style=\"margin-top: 8px\">\n            2Fe(OH)<sub>3</sub> <span style=\"margin: 0 4px; display: inline-block; text-align: center; line-height: 1.1\"><small>t°</small><br />→</span> Fe<sub>2</sub>O<sub>3</sub> + 3H<sub>2</sub>O\n          </p>\n          <p style=\"margin-top: 8px\">\n            Fe<sub>2</sub>O<sub>3</sub> + 6HNO<sub>3</sub> =\n            2Fe(NO<sub>3</sub>)<sub>3</sub> + 3H<sub>2</sub>O\n          </p>"
   }
 }

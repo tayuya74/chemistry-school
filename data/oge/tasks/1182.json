@@ -9,7 +9,10 @@
   },
   "blocks": [
     {
-      "html": "<p>\n          Дана схема превращений:\n          <strong\n            >Cu → Cu(NO<sub>3</sub>)<sub>2</sub> → X → CuCl<sub>2</sub></strong\n          >\n        </p>"
+      "html": "<p>Дана схема превращений:</p>"
+    },
+    {
+      "html": "<p style=\"text-align: center; font-size: 1.1rem; margin: 16px 0\">\n          Cu <span style=\"margin: 0 6px\">→</span> Cu(NO<sub>3</sub>)<sub>2</sub> <span style=\"margin: 0 6px\">→</span> X <span style=\"margin: 0 6px\">→</span> CuCl<sub>2</sub>\n        </p>"
     },
     {
       "html": "<p>\n          Напишите молекулярные уравнения реакций, с помощью которых можно\n          осуществить указанные превращения.\n        </p>"

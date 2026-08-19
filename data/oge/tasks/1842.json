@@ -25,6 +25,6 @@
   "answer": null,
   "solution": {
     "title": "Ход решения",
-    "html": "<p style=\"margin-top: 12px\">Промежуточное вещество: <strong>X — Al<sub>2</sub>(SO<sub>4</sub>)<sub>3</sub></strong>.</p>\n          <ol style=\"line-height: 1.9\">\n            <li>2Al(OH)<sub>3</sub> —t°→ Al<sub>2</sub>O<sub>3</sub> + 3H<sub>2</sub>O</li>\n            <li>Al<sub>2</sub>O<sub>3</sub> + 3H<sub>2</sub>SO<sub>4</sub> = Al<sub>2</sub>(SO<sub>4</sub>)<sub>3</sub> + 3H<sub>2</sub>O</li>\n            <li>Al<sub>2</sub>(SO<sub>4</sub>)<sub>3</sub> + 6KOH = 2Al(OH)<sub>3</sub>↓ + 3K<sub>2</sub>SO<sub>4</sub></li>\n          </ol>"
+    "html": "<p style=\"margin-top: 12px\">Промежуточное вещество: <strong>X — Al<sub>2</sub>(SO<sub>4</sub>)<sub>3</sub></strong>.</p>\n          <ol style=\"line-height: 1.9\">\n            <li>2Al(OH)<sub>3</sub> <span style=\"margin: 0 4px; display: inline-block; text-align: center; line-height: 1.1\"><small>t°</small><br />→</span> Al<sub>2</sub>O<sub>3</sub> + 3H<sub>2</sub>O</li>\n            <li>Al<sub>2</sub>O<sub>3</sub> + 3H<sub>2</sub>SO<sub>4</sub> = Al<sub>2</sub>(SO<sub>4</sub>)<sub>3</sub> + 3H<sub>2</sub>O</li>\n            <li>Al<sub>2</sub>(SO<sub>4</sub>)<sub>3</sub> + 6KOH = 2Al(OH)<sub>3</sub>↓ + 3K<sub>2</sub>SO<sub>4</sub></li>\n          </ol>"
   }
 }

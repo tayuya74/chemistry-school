@@ -31,15 +31,25 @@ const ACTIVITY =
 const CHARGE = "¤";
 
 function flatten(html) {
-  return html
-    .replace(/\s*\n\s*/g, " ")
-    .replace(/<sup>[\s\S]*?<\/sup>/g, CHARGE)
-    .replace(/<sub>\s*([\s\S]*?)\s*<\/sub>/g, (_, d) => d.replace(/\s+/g, ""))
-    .replace(/<br\s*\/?>/gi, "\n")
-    .replace(/<\/(p|li|div|ol|ul)>/gi, "\n")
-    .replace(/<[^>]+>/g, "")
-    .replace(/&nbsp;/g, " ")
-    .replace(/[ \t]+/g, " ");
+  return (
+    html
+      .replace(/\s*\n\s*/g, " ")
+      /* Стрелка с условием над ней (см. «Схема превращений» в TASK-TYPES.md) —
+         двухстрочный inline-block с <br> внутри. Схлопываем её в обычную «→»
+         раньше, чем <br> станет переводом строки, иначе уравнение разорвётся
+         пополам и молча выпадет из проверки. */
+      .replace(
+        /<span[^>]*display:\s*inline-block[^>]*>[\s\S]*?<\/span>/gi,
+        " → ",
+      )
+      .replace(/<sup>[\s\S]*?<\/sup>/g, CHARGE)
+      .replace(/<sub>\s*([\s\S]*?)\s*<\/sub>/g, (_, d) => d.replace(/\s+/g, ""))
+      .replace(/<br\s*\/?>/gi, "\n")
+      .replace(/<\/(p|li|div|ol|ul)>/gi, "\n")
+      .replace(/<[^>]+>/g, "")
+      .replace(/&nbsp;/g, " ")
+      .replace(/[ \t]+/g, " ")
+  );
 }
 
 /** Считает атомы в формуле вида 3Ca(H2PO4)2 и добавляет их в acc. */

@@ -2,6 +2,48 @@ import { allowedUiKinds, isAllowedUiKind } from "./oge-ui-kind-map.mjs";
 
 const OPEN_KINDS = new Set(["openReference", "experimentOpen"]);
 
+/**
+ * Условие над стрелкой (t° или реагент) должно стоять НАД ней — двухстрочным
+ * inline-block, см. «Схема превращений» в data/oge/TASK-TYPES.md. Ловим способы
+ * записи, которые в браузере выглядят рвано и уже встречались при оцифровке.
+ */
+const BAD_ARROW_PATTERNS = [
+  {
+    re: /—\s*t°\s*→|-\s*t°\s*-?>/,
+    hint: "«—t°→» набрано тире; нужна двухстрочная стрелка с подписью сверху",
+  },
+  {
+    re: /→\s*<\/span>\s*<sup>/,
+    hint: "<sup> после стрелки уводит подпись вправо вместо того, чтобы поставить её над стрелкой",
+  },
+  {
+    re: /\(\s*\+\s*[A-Za-zА-Яа-я(]/,
+    hint: "реагент в скобках со знаком «+» попадает в общий ряд цепочки; подпись ставится над стрелкой и без «+»",
+  },
+];
+
+function collectStrings(value, out = []) {
+  if (typeof value === "string") out.push(value);
+  else if (Array.isArray(value)) value.forEach((v) => collectStrings(v, out));
+  else if (value && typeof value === "object") {
+    Object.values(value).forEach((v) => collectStrings(v, out));
+  }
+  return out;
+}
+
+function arrowIssues(task) {
+  const issues = [];
+  const haystack = collectStrings([
+    task.blocks,
+    task.content,
+    task.solution,
+  ]).join("\n");
+  for (const { re, hint } of BAD_ARROW_PATTERNS) {
+    if (re.test(haystack)) issues.push(`стрелка: ${hint}`);
+  }
+  return issues;
+}
+
 /** Проверяет содержимое задания по правилам его uiKind — без привязки к id/реестру. */
 export function validateTaskShape(task) {
   const issues = [];
@@ -39,6 +81,8 @@ export function validateTaskShape(task) {
   if (task.hint !== undefined && (typeof task.hint !== "string" || !task.hint.trim())) {
     issues.push("hint must be a non-empty string when present");
   }
+
+  issues.push(...arrowIssues(task));
 
   switch (task.uiKind) {
     case "twoChoice":

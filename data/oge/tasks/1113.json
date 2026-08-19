@@ -12,7 +12,7 @@
       "html": "<p>Дана схема превращений:</p>"
     },
     {
-      "html": "<p style=\"text-align: center; font-size: 1.1rem; margin: 16px 0\">\n          Mg → MgO <strong>(+ SO<sub>3</sub>)</strong> → X →\n          Mg(NO<sub>3</sub>)<sub>2</sub>\n        </p>"
+      "html": "<p style=\"text-align: center; font-size: 1.1rem; margin: 16px 0\">\n          Mg <span style=\"margin: 0 6px\">→</span> MgO <span style=\"margin: 0 6px; display: inline-block; text-align: center; line-height: 1.1\"><small>SO<sub>3</sub></small><br />→</span> X <span style=\"margin: 0 6px\">→</span> Mg(NO<sub>3</sub>)<sub>2</sub>\n        </p>"
     },
     {
       "html": "<p>\n          Напишите <strong>молекулярные уравнения реакций</strong>, с помощью\n          которых можно осуществить указанные превращения.\n        </p>"

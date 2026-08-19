@@ -18,7 +18,7 @@
     "leftTitle": "Реагирующие вещества",
     "rightTitle": "Продукт(-ы) взаимодействия",
     "left": [
-      "А) ZnO + KOH (тв.) —t°→",
+      "А) ZnO + KOH (тв.) <span style=\"margin: 0 4px; display: inline-block; text-align: center; line-height: 1.1\"><small>t°</small><br />→</span>",
       "Б) ZnSO<sub>4</sub> + KOH (изб.) →",
       "В) ZnSO<sub>4</sub> (изб.) + KOH (р-р) →"
     ],

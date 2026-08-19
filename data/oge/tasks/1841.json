@@ -25,6 +25,6 @@
   "answer": null,
   "solution": {
     "title": "Ход решения",
-    "html": "<p style=\"margin-top: 12px\">Промежуточное вещество: <strong>X — ZnCl<sub>2</sub></strong>.</p>\n          <ol style=\"line-height: 1.9\">\n            <li>Zn(OH)<sub>2</sub> —t°→ ZnO + H<sub>2</sub>O</li>\n            <li>ZnO + 2HCl = ZnCl<sub>2</sub> + H<sub>2</sub>O</li>\n            <li>3ZnCl<sub>2</sub> + 2Na<sub>3</sub>PO<sub>4</sub> = Zn<sub>3</sub>(PO<sub>4</sub>)<sub>2</sub>↓ + 6NaCl</li>\n          </ol>"
+    "html": "<p style=\"margin-top: 12px\">Промежуточное вещество: <strong>X — ZnCl<sub>2</sub></strong>.</p>\n          <ol style=\"line-height: 1.9\">\n            <li>Zn(OH)<sub>2</sub> <span style=\"margin: 0 4px; display: inline-block; text-align: center; line-height: 1.1\"><small>t°</small><br />→</span> ZnO + H<sub>2</sub>O</li>\n            <li>ZnO + 2HCl = ZnCl<sub>2</sub> + H<sub>2</sub>O</li>\n            <li>3ZnCl<sub>2</sub> + 2Na<sub>3</sub>PO<sub>4</sub> = Zn<sub>3</sub>(PO<sub>4</sub>)<sub>2</sub>↓ + 6NaCl</li>\n          </ol>"
   }
 }
