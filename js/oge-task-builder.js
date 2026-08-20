@@ -109,6 +109,50 @@
     });
   }
 
+  const HINTS_SHOW_LABEL = "Показать подсказки";
+  const HINTS_HIDE_LABEL = "Скрыть подсказки";
+
+  /**
+   * Переключатель подсказок над собранным вариантом. По умолчанию кнопок
+   * «Подсказка» не видно — вариант решается как на экзамене; по нажатию они
+   * появляются у всех заданий сразу, ещё раз — исчезают вместе с уже
+   * раскрытыми подсказками. Разбора («ход решения») в варианте нет вообще: за
+   * ним ученик идёт по ссылке на страницу отдельного задания.
+   */
+  function buildHintToggle(resultEl) {
+    const wrap = document.createElement("p");
+    wrap.className = "oge-hints-toggle";
+
+    const btn = document.createElement("button");
+    btn.type = "button";
+    btn.className = "btn-secondary";
+    btn.textContent = HINTS_SHOW_LABEL;
+    btn.setAttribute("aria-pressed", "false");
+
+    const note = document.createElement("span");
+    note.className = "oge-hints-toggle__note";
+    note.textContent =
+      "Ход решения — на странице задания по ссылке в заголовке.";
+
+    btn.addEventListener("click", () => {
+      const show = btn.getAttribute("aria-pressed") === "false";
+      btn.setAttribute("aria-pressed", String(show));
+      btn.textContent = show ? HINTS_HIDE_LABEL : HINTS_SHOW_LABEL;
+      resultEl.querySelectorAll(".oge-hint-btn").forEach((hintBtn) => {
+        hintBtn.hidden = !show;
+        if (show) return;
+        /* Прячем и сам текст, иначе раскрытая подсказка осталась бы на виду. */
+        hintBtn.setAttribute("aria-expanded", "false");
+        const target = document.getElementById(hintBtn.dataset.ogeHintTarget);
+        if (target) target.hidden = true;
+      });
+    });
+
+    wrap.appendChild(btn);
+    wrap.appendChild(note);
+    return wrap;
+  }
+
   async function loadIndex(url) {
     const res = await fetch(url);
     return res.json();
@@ -181,6 +225,9 @@
       resultEl.appendChild(warn);
     }
 
+    const hintToggle = buildHintToggle(resultEl);
+    resultEl.appendChild(hintToggle);
+
     const linkPrefix = opts.linkPrefix || "../ex/";
     picks.forEach((p, i) => {
       const task = tasks[i];
@@ -200,7 +247,13 @@
     });
 
     if (window.OGE_attachNumericGuards) window.OGE_attachNumericGuards();
-    if (window.initOgeSubtaskCheckboxLimits) window.initOgeSubtaskCheckboxLimits();
+    if (window.initOgeSubtaskCheckboxLimits)
+      window.initOgeSubtaskCheckboxLimits();
+    if (window.initOgeHintButtons) window.initOgeHintButtons();
+
+    /* Заданий без подсказки не бывает, но если такой вариант всё же собрался —
+       переключателю нечем управлять, и он только мешает. */
+    if (!resultEl.querySelector(".oge-hint-btn")) hintToggle.remove();
   }
 
   /** Общая сборка: считает выборку и рисует результат. */

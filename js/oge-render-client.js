@@ -6,6 +6,11 @@
  * HTML-разметка тел заданий сознательно повторяет scripts/oge-render.mjs
  * (генератор статических страниц pages/oge/ex и pages/oge/variants) — так
  * сгенерированный на лету вариант выглядит и ведёт себя как готовые.
+ *
+ * Как и в собранных вариантах, разбора («ход решения») здесь нет: он остаётся
+ * только на странице отдельного задания pages/oge/ex/{id}.html. Вместо него у
+ * задания есть кнопка «Подсказка», а показать или спрятать такие кнопки сразу
+ * во всём варианте позволяет переключатель из oge-task-builder.js.
  */
 (function () {
   const MASS_TABLE_HTML = `
@@ -57,6 +62,35 @@
     return suffix ? `${base}${suffix}` : base;
   }
 
+  /**
+   * Кнопка «Подсказка». По умолчанию скрыта: над собранным вариантом есть
+   * общий переключатель (js/oge-task-builder.js), который показывает такие
+   * кнопки сразу у всех заданий или прячет их обратно.
+   */
+  function renderHintButton(task, suffix, extraStyle) {
+    if (!task.hint) return "";
+    const hintId = sid("hintOut", suffix);
+    return `<button type="button" class="btn-secondary oge-hint-btn"${extraStyle || ""} hidden aria-expanded="false" aria-controls="${hintId}" data-oge-hint-target="${hintId}">Подсказка</button>`;
+  }
+
+  function renderHintText(task, suffix) {
+    if (!task.hint) return "";
+    return `\n<p id="${sid("hintOut", suffix)}" class="tip oge-hint" hidden>${task.hint}</p>`;
+  }
+
+  /**
+   * Футер задания: «Проверить», «Подсказка» и строка результата — как
+   * renderCheckAndHintFooter() в scripts/oge-render.mjs. Разбора («ход
+   * решения») здесь нет и быть не должно: в собранном варианте ученик решает
+   * задания подряд, а разбор ждёт его на странице отдельного задания.
+   */
+  function renderCheckAndHintFooter(task, suffix) {
+    return `<p style="margin-top: 16px">
+        <button type="button" id="${sid("checkBtn", suffix)}">Проверить</button>${renderHintButton(task, suffix, ' style="margin-left: 8px"')}
+      </p>${renderHintText(task, suffix)}
+      <p id="${sid("resultOut", suffix)}" class="result" role="status"></p>`;
+  }
+
   function renderBlocks(blocks) {
     return (blocks ?? []).map((b) => b.html).join("\n");
   }
@@ -74,11 +108,15 @@
     const parts = [];
     if (task.uiKind === "twoChoice") {
       parts.push(`data-oge-checkbox-max="2"`);
-      parts.push(`data-oge-two-choice-correct="${task.answer.correct.join("|")}"`);
+      parts.push(
+        `data-oge-two-choice-correct="${task.answer.correct.join("|")}"`,
+      );
       parts.push(`data-oge-option-count="${task.content.statements.length}"`);
     }
     if (task.uiKind === "multiChoiceFour") {
-      parts.push(`data-oge-multi-choice-correct="${task.answer.correct.join("|")}"`);
+      parts.push(
+        `data-oge-multi-choice-correct="${task.answer.correct.join("|")}"`,
+      );
       parts.push(`data-oge-option-count="4"`);
     }
     return parts.length ? ` ${parts.join(" ")}` : "";
@@ -87,7 +125,8 @@
   function renderTwoChoiceBody(task, suffix) {
     const stmts = task.content.statements
       .map(
-        (text, i) => `<li><label><input type="checkbox" name="st" value="${i + 1}" /><span>${text}</span></label></li>`,
+        (text, i) =>
+          `<li><label><input type="checkbox" name="st" value="${i + 1}" /><span>${text}</span></label></li>`,
       )
       .join("\n");
     return `${renderBlocks(task.blocks)}
@@ -98,13 +137,14 @@
         <input id="${sid("ansDigit1", suffix)}" type="text" inputmode="numeric" maxlength="1" aria-label="Первая ячейка ответа" autocomplete="off" />
         <input id="${sid("ansDigit2", suffix)}" type="text" inputmode="numeric" maxlength="1" aria-label="Вторая ячейка ответа" autocomplete="off" />
       </div>
-      <p style="margin-top: 16px"><button type="button" id="${sid("checkBtn", suffix)}">Проверить</button></p>
-      <p id="${sid("resultOut", suffix)}" class="result" role="status"></p>`;
+      ${renderCheckAndHintFooter(task, suffix)}`;
   }
 
   function renderMatchTripleBody(task, suffix) {
     const left = task.content.left.map((item) => `<li>${item}</li>`).join("\n");
-    const right = task.content.right.map((item) => `<li>${item}</li>`).join("\n");
+    const right = task.content.right
+      .map((item) => `<li>${item}</li>`)
+      .join("\n");
     const n = matchOptionCount(task.content.right);
     const opts = Array.from({ length: n }, (_, i) => i + 1)
       .map((v) => `<option value="${v}">${v}</option>`)
@@ -125,8 +165,7 @@
           </tr>
         </tbody>
       </table>
-      <p style="margin-top: 16px"><button type="button" id="${sid("checkBtn", suffix)}">Проверить</button></p>
-      <p id="${sid("resultOut", suffix)}" class="result" role="status"></p>`;
+      ${renderCheckAndHintFooter(task, suffix)}`;
   }
 
   function renderOrderedDigitsBody(task, suffix) {
@@ -137,8 +176,7 @@
     return `${renderBlocks(task.blocks)}
       <p class="oge-answer-label">Ответ:</p>
       <div class="oge-answer-cells" role="group" aria-label="Последовательность цифр">${cells}</div>
-      <p style="margin-top: 16px"><button type="button" id="${sid("checkBtn", suffix)}">Проверить</button></p>
-      <p id="${sid("resultOut", suffix)}" class="result" role="status"></p>`;
+      ${renderCheckAndHintFooter(task, suffix)}`;
   }
 
   function renderPeriodDiagramBody(task, suffix) {
@@ -152,7 +190,9 @@
     } else {
       figureHtml = fig.html;
     }
-    const hasPostPrompt = (task.blocks ?? []).some((b) => /Запишите в (поле|таблицу)/.test(b.html));
+    const hasPostPrompt = (task.blocks ?? []).some((b) =>
+      /Запишите в (поле|таблицу)/.test(b.html),
+    );
     const postPrompt = task.content.postPrompt
       ? `<p>${task.content.postPrompt}</p>`
       : hasPostPrompt
@@ -171,34 +211,28 @@
           </tr>
         </tbody>
       </table>
-      <p style="margin-top: 16px"><button type="button" id="${sid("checkBtn", suffix)}">Проверить</button></p>
-      <p id="${sid("resultOut", suffix)}" class="result" role="status"></p>`;
+      ${renderCheckAndHintFooter(task, suffix)}`;
   }
 
   function renderMultiChoiceFourBody(task, suffix) {
     const stmts = task.content.statements
       .map(
-        (text, i) => `<li><label><input type="checkbox" name="st" value="${i + 1}" /><span>${text}</span></label></li>`,
+        (text, i) =>
+          `<li><label><input type="checkbox" name="st" value="${i + 1}" /><span>${text}</span></label></li>`,
       )
       .join("\n");
     const cells = [1, 2, 3, 4]
-      .map((n) => `<input id="${sid(`c${n}`, suffix)}" type="text" inputmode="numeric" maxlength="1" autocomplete="off" aria-label="${n}-я ячейка ответа" />`)
+      .map(
+        (n) =>
+          `<input id="${sid(`c${n}`, suffix)}" type="text" inputmode="numeric" maxlength="1" autocomplete="off" aria-label="${n}-я ячейка ответа" />`,
+      )
       .join("\n");
     return `${renderBlocks(task.blocks)}
       <ol class="oge-statements">${stmts}</ol>
       <p>Запишите в поле ответа номер(а) верного(-ых) суждения(-й).</p>
       <p class="oge-answer-label">Ответ:</p>
       <div class="oge-answer-cells" role="group" aria-label="Номера верных суждений">${cells}</div>
-      <p style="margin-top: 16px"><button type="button" id="${sid("checkBtn", suffix)}">Проверить</button></p>
-      <p id="${sid("resultOut", suffix)}" class="result" role="status"></p>`;
-  }
-
-  function renderSolutionDetails(task) {
-    if (!task.solution) return "";
-    return `<details class="tip" style="margin-top: 24px">
-      <summary style="cursor: pointer; font-weight: 600">${task.solution.title}</summary>
-      ${task.solution.html}
-    </details>`;
+      ${renderCheckAndHintFooter(task, suffix)}`;
   }
 
   function renderNumericBody(task, suffix, withTable) {
@@ -207,16 +241,18 @@
       ${withTable ? MASS_TABLE_HTML : ""}
       <p class="oge-answer-label">Ответ (${unit}):</p>
       <p><input id="${sid("ansNum", suffix)}" type="text" inputmode="decimal" class="oge-answer-input" autocomplete="off" aria-label="Числовой ответ" /></p>
-      <p style="margin-top: 16px"><button type="button" id="${sid("checkBtn", suffix)}">Проверить</button></p>
-      <p id="${sid("resultOut", suffix)}" class="result" role="status"></p>${renderSolutionDetails(task)}`;
+      ${renderCheckAndHintFooter(task, suffix)}`;
   }
 
-  function renderOpenBody(task) {
+  function renderOpenBody(task, suffix) {
     let html = renderBlocks(task.blocks);
     if (task.uiKind === "experimentOpen" && task.content.hasExperimentTable) {
       if (!html.includes("oge-xy-table")) html += `\n${EXPERIMENT_TABLE_HTML}`;
     }
-    html += renderSolutionDetails(task);
+    /* У заданий 20–23 проверять нечего, поэтому от футера остаётся подсказка. */
+    if (task.hint) {
+      html += `\n<p style="margin-top: 16px">${renderHintButton(task, suffix)}</p>${renderHintText(task, suffix)}`;
+    }
     return html;
   }
 
@@ -238,7 +274,7 @@
         return renderNumericBody(task, suffix, true);
       case "openReference":
       case "experimentOpen":
-        return renderOpenBody(task);
+        return renderOpenBody(task, suffix);
       default:
         return `<p class="tip">Неизвестный тип задания (${task.uiKind}).</p>`;
     }
@@ -266,15 +302,25 @@
       case "twoChoice": {
         const correct = task.answer.correct;
         const optionCount = task.content.statements.length;
-        const boxes = root.querySelectorAll('.oge-statements input[type="checkbox"]');
-        const inputs = root.querySelectorAll(".oge-answer-cells input[type='text']");
+        const boxes = root.querySelectorAll(
+          '.oge-statements input[type="checkbox"]',
+        );
+        const inputs = root.querySelectorAll(
+          ".oge-answer-cells input[type='text']",
+        );
         if (inputs.length < 2) return;
         btn.addEventListener("click", function () {
           const chosen = [];
           boxes.forEach((cb) => {
             if (cb.checked) chosen.push(cb.value);
           });
-          const ok = OGE_twoChoiceAllOk(chosen, inputs[0].value.trim(), inputs[1].value.trim(), correct, optionCount);
+          const ok = OGE_twoChoiceAllOk(
+            chosen,
+            inputs[0].value.trim(),
+            inputs[1].value.trim(),
+            correct,
+            optionCount,
+          );
           out.textContent = ok ? OGE_CHECK.ok : OGE_CHECK.retry;
         });
         break;
@@ -321,8 +367,12 @@
 
       case "multiChoiceFour": {
         const correct = task.answer.correct;
-        const boxes = root.querySelectorAll('.oge-statements input[type="checkbox"]');
-        const inputs = root.querySelectorAll(".oge-answer-cells input[type='text']");
+        const boxes = root.querySelectorAll(
+          '.oge-statements input[type="checkbox"]',
+        );
+        const inputs = root.querySelectorAll(
+          ".oge-answer-cells input[type='text']",
+        );
         if (inputs.length < 4) return;
         btn.addEventListener("click", function () {
           const chosen = [];
@@ -351,7 +401,8 @@
             out.textContent = OGE_CHECK.retry;
             return;
           }
-          out.textContent = n === task.answer.value ? OGE_CHECK.ok : OGE_CHECK.retry;
+          out.textContent =
+            n === task.answer.value ? OGE_CHECK.ok : OGE_CHECK.retry;
         });
         break;
       }
