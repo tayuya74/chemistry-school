@@ -165,8 +165,8 @@
 
   /**
    * Как build(), но вместо ссылок вставляет само содержимое заданий
-   * (текст, поля ответа, кнопку «Проверить») — для кнопки «Сгенерировать
-   * вариант», которая должна сразу показать вариант, а не список ссылок.
+   * (текст, поля ответа, кнопку «Проверить») — для ручной и случайной
+   * сборки варианта.
    */
   async function buildFull(resultEl, counts, options) {
     const opts = options || {};
@@ -321,8 +321,10 @@
         resultEl.appendChild(hint);
         return;
       }
-      await build(resultEl, counts, {
+      await buildFull(resultEl, counts, {
         onlyHard: document.getElementById("onlyHard")?.checked,
+        taskDir: "../../data/oge/tasks/",
+        linkPrefix: "ex/",
         title: "Свой вариант из банка заданий",
       });
       scrollToResult(resultEl);
