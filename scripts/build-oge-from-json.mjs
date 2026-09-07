@@ -325,6 +325,12 @@ ${variantButtons}
         </div>
 
         <h3 class="oge-section-heading">Свой вариант</h3>
+        <p>
+          <label class="oge-builder-onlyhard">
+            <input type="checkbox" id="onlyHard" />
+            только сложные <span class="oge-hard">★</span>
+          </label>
+        </p>
         <p class="oge-random">
           <button
             type="button"
@@ -355,10 +361,6 @@ ${typeRows}
           <button type="button" id="clearCountsBtn" class="btn-secondary">
             Очистить
           </button>
-          <label class="oge-builder-onlyhard">
-            <input type="checkbox" id="onlyHard" />
-            только сложные <span class="oge-hard">★</span>
-          </label>
         </p>
 
         <div id="builderResult" role="status"></div>`;

@@ -181,14 +181,16 @@
       return;
     }
 
-    const byType = groupByType(index);
+    const onlyHard = opts.onlyHard;
+    const pool = onlyHard ? index.filter((row) => row.advanced) : index;
+    const byType = groupByType(pool);
     const warnings = [];
     const picks = [];
     counts.forEach(([type, n]) => {
       const available = byType.get(type) ?? [];
       if (available.length < n) {
         warnings.push(
-          `Тип ${type}: запрошено ${n}, в наличии только ${available.length} — взяты все.`,
+          `Тип ${type}: запрошено ${n}, ${onlyHard ? "сложных заданий" : "в наличии"} только ${available.length} — взяты все.`,
         );
       }
       pickRandom(available, n).forEach((row) => picks.push({ type, row }));
@@ -336,6 +338,7 @@
     const useFullRender = Boolean(window.OGE_RENDER);
     btn.addEventListener("click", async () => {
       await (useFullRender ? buildFull : build)(resultEl, fullVariantCounts(), {
+        onlyHard: document.getElementById("onlyHard")?.checked,
         indexUrl: btn.dataset.index || "task-index.json",
         linkPrefix: btn.dataset.linkPrefix || "ex/",
         taskDir: btn.dataset.taskDir || "../../data/oge/tasks/",
