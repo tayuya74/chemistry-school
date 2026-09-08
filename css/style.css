@@ -453,6 +453,19 @@ html[data-theme="dark"] .oge-answer-cells input:focus-visible {
   height: auto;
 }
 
+/* Подписи без заданной заливки SVG иначе остаются чёрными в тёмной теме. */
+.oge-nucleus-wrap svg text:not([fill]) {
+  fill: var(--color-text);
+}
+
+html[data-theme="dark"] .oge-nucleus-wrap svg {
+  --color-border: var(--color-field-border);
+}
+
+html[data-theme="dark"] .oge-nucleus-wrap svg [fill="#2563eb"] {
+  fill: #83bcff;
+}
+
 .oge-legend {
   display: flex;
   flex-wrap: wrap;
