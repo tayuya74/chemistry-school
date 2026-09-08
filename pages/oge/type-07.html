@@ -53,7 +53,7 @@
             Порядок: обычный
           </button>
           <span class="oge-sort__note"
-            >★ сложных: 6 из 43</span
+            >★ сложных: 7 из 44</span
           >
         </p>
       <section class="oge-example">
@@ -2349,6 +2349,43 @@
         <p id="resultOut-1440" class="result" role="status"></p>
       </div>
       </section>
+      <section class="oge-example" data-oge-advanced="1">
+      <h3 class="oge-example-title" id="oge-ex-title-1932"><span class="oge-hard" aria-label="сложное задание">★</span><a class="oge-task-seq" href="ex/1932.html">Задание 7 № 1932</a></h3>
+<div class="oge-subtask" id="oge-ex-1932">
+<p>Из предложенного перечня веществ выберите кислотный оксид и соль.</p><ol><li>K<sub>2</sub>CO<sub>3</sub></li><li>Ca(OH)<sub>2</sub></li><li>CO</li><li>Cl<sub>2</sub>O<sub>7</sub></li><li>Al(OH)<sub>3</sub></li></ol><p>Запишите в поле ответа сначала номер кислотного оксида, а затем номер соли.</p>
+
+        <p class="oge-answer-label">Ответ:</p>
+        <div
+          class="oge-answer-cells"
+          role="group"
+          aria-label="Последовательность цифр"
+        >
+          <input
+            id="d1-1932"
+            type="text"
+            inputmode="numeric"
+            maxlength="1"
+            autocomplete="off"
+            aria-label="Позиция 1"
+          />
+          <input
+            id="d2-1932"
+            type="text"
+            inputmode="numeric"
+            maxlength="1"
+            autocomplete="off"
+            aria-label="Позиция 2"
+          />
+        </div>
+
+        <p style="margin-top: 16px">
+          <button type="button" id="checkBtn-1932">Проверить</button>
+          <button type="button" class="btn-secondary oge-hint-btn" style="margin-left: 8px" aria-expanded="false" aria-controls="hintOut-1932" data-oge-hint-target="hintOut-1932">Подсказка</button>
+        </p>
+        <p id="hintOut-1932" class="tip oge-hint" hidden>Среди оксидов есть несолеобразующие. Сначала определите классы веществ, затем соблюдите требуемый порядок записи.</p>
+        <p id="resultOut-1932" class="result" role="status"></p>
+      </div>
+      </section>
       </article>
     </main>
     <script>
@@ -3112,6 +3149,22 @@
             correct,
             optionCount,
           );
+          out.textContent = ok ? OGE_CHECK.ok : OGE_CHECK.retry;
+        });
+      })();
+    </script>
+    <script>
+      (function () {
+        const root = document.getElementById("oge-ex-1932");
+        if (!root) return;
+        const btn = root.querySelector("button[type='button']");
+        const out = root.querySelector(".result");
+        if (!btn || !out) return;
+        btn.addEventListener("click", function () {
+          const a = root.querySelector("#d1-1932").value.trim();
+          const b = root.querySelector("#d2-1932").value.trim();
+
+          const ok = a === "4" && b === "1";
           out.textContent = ok ? OGE_CHECK.ok : OGE_CHECK.retry;
         });
       })();

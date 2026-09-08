@@ -53,7 +53,7 @@
             Порядок: обычный
           </button>
           <span class="oge-sort__note"
-            >★ сложных: 33 из 47</span
+            >★ сложных: 33 из 48</span
           >
         </p>
       <section class="oge-example">
@@ -3933,6 +3933,85 @@
         <p id="resultOut-1529" class="result" role="status"></p>
       </div>
       </section>
+      <section class="oge-example">
+      <h3 class="oge-example-title" id="oge-ex-title-1934"><a class="oge-task-seq" href="ex/1934.html">Задание 9 № 1934</a></h3>
+<div class="oge-subtask" id="oge-ex-1934">
+<p>Установите соответствие между реагирующими веществами и продуктом(-ами) их взаимодействия.</p>
+
+        <div class="match-columns">
+          <div>
+            <strong>Реагирующие вещества</strong>
+            <ul class="oge-match-plain">
+              <li>А) Ba и H<sub>2</sub>O</li>
+              <li>Б) KOH и H<sub>2</sub>SO<sub>3</sub></li>
+              <li>В) K<sub>2</sub>O и H<sub>2</sub>SO<sub>4</sub></li>
+            </ul>
+          </div>
+          <div>
+            <strong>Продукт(ы) взаимодействия</strong>
+            <ul class="oge-match-plain">
+              <li>1) K<sub>2</sub>SO<sub>4</sub> и H<sub>2</sub></li>
+              <li>2) Ba(OH)<sub>2</sub> и H<sub>2</sub></li>
+              <li>3) Ba(OH)<sub>2</sub></li>
+              <li>4) K<sub>2</sub>SO<sub>3</sub> и H<sub>2</sub>O</li>
+              <li>5) K<sub>2</sub>SO<sub>4</sub> и H<sub>2</sub>O</li>
+            </ul>
+          </div>
+        </div>
+
+        <p>Запишите в таблицу выбранные цифры под соответствующими буквами.</p>
+        <table class="match-answer-table">
+          <thead>
+            <tr>
+              <th>А</th>
+              <th>Б</th>
+              <th>В</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>
+                <select id="sA-1934" aria-label="Ответ для А">
+                  <option value="">—</option>
+                  <option value="1">1</option>
+                  <option value="2">2</option>
+                  <option value="3">3</option>
+                  <option value="4">4</option>
+                  <option value="5">5</option>
+                </select>
+              </td>
+              <td>
+                <select id="sB-1934" aria-label="Ответ для Б">
+                  <option value="">—</option>
+                  <option value="1">1</option>
+                  <option value="2">2</option>
+                  <option value="3">3</option>
+                  <option value="4">4</option>
+                  <option value="5">5</option>
+                </select>
+              </td>
+              <td>
+                <select id="sV-1934" aria-label="Ответ для В">
+                  <option value="">—</option>
+                  <option value="1">1</option>
+                  <option value="2">2</option>
+                  <option value="3">3</option>
+                  <option value="4">4</option>
+                  <option value="5">5</option>
+                </select>
+              </td>
+            </tr>
+          </tbody>
+        </table>
+
+        <p style="margin-top: 16px">
+          <button type="button" id="checkBtn-1934">Проверить</button>
+          <button type="button" class="btn-secondary oge-hint-btn" style="margin-left: 8px" aria-expanded="false" aria-controls="hintOut-1934" data-oge-hint-target="hintOut-1934">Подсказка</button>
+        </p>
+        <p id="hintOut-1934" class="tip oge-hint" hidden>Активный металл с водой даёт щёлочь и водород. В реакциях нейтрализации сохраняется кислотный остаток исходной кислоты.</p>
+        <p id="resultOut-1934" class="result" role="status"></p>
+      </div>
+      </section>
       </article>
     </main>
     <script>
@@ -4871,6 +4950,26 @@
             return;
           }
           const ok = a === "3" && b === "1" && v === "4";
+          out.textContent = ok ? OGE_CHECK.ok : OGE_CHECK.retry;
+        });
+      })();
+    </script>
+    <script>
+      (function () {
+        const root = document.getElementById("oge-ex-1934");
+        if (!root) return;
+        const btn = root.querySelector("button[type='button']");
+        const out = root.querySelector(".result");
+        if (!btn || !out) return;
+        btn.addEventListener("click", function () {
+          const a = root.querySelector("#sA-1934").value;
+          const b = root.querySelector("#sB-1934").value;
+          const v = root.querySelector("#sV-1934").value;
+          if (!a || !b || !v) {
+            out.textContent = OGE_CHECK.retry;
+            return;
+          }
+          const ok = a === "2" && b === "4" && v === "5";
           out.textContent = ok ? OGE_CHECK.ok : OGE_CHECK.retry;
         });
       })();

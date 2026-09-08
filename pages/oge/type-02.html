@@ -53,7 +53,7 @@
             Порядок: обычный
           </button>
           <span class="oge-sort__note"
-            >★ сложных: 3 из 27</span
+            >★ сложных: 3 из 28</span
           >
         </p>
       <section class="oge-example">
@@ -3296,6 +3296,57 @@
         <p id="resultOut-1311" class="result" role="status"></p>
       </div>
       </section>
+      <section class="oge-example">
+      <h3 class="oge-example-title" id="oge-ex-title-1927"><a class="oge-task-seq" href="ex/1927.html">Задание 2 № 1927</a></h3>
+<div class="oge-subtask" id="oge-ex-1927">
+<p>На приведённом рисунке изображена модель атома химического элемента.</p>
+
+        <div class="oge-nucleus-wrap">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 280 280" width="280" height="280" role="img" aria-label="Модель атома: ядро +Z; на слоях 2, 8 и 4 электрона"><circle cx="140" cy="140" r="50" fill="none" stroke="currentColor"/><circle cx="140" cy="140" r="80" fill="none" stroke="currentColor"/><circle cx="140" cy="140" r="108" fill="none" stroke="currentColor"/><circle cx="140" cy="140" r="22" fill="var(--color-tip-bg)" stroke="currentColor"/><text x="140" y="146" text-anchor="middle" fill="currentColor" font-size="18">+Z</text><circle cx="140.00" cy="90.00" r="6" fill="currentColor"/><circle cx="140.00" cy="190.00" r="6" fill="currentColor"/><circle cx="140.00" cy="60.00" r="6" fill="currentColor"/><circle cx="196.57" cy="83.43" r="6" fill="currentColor"/><circle cx="220.00" cy="140.00" r="6" fill="currentColor"/><circle cx="196.57" cy="196.57" r="6" fill="currentColor"/><circle cx="140.00" cy="220.00" r="6" fill="currentColor"/><circle cx="83.43" cy="196.57" r="6" fill="currentColor"/><circle cx="60.00" cy="140.00" r="6" fill="currentColor"/><circle cx="83.43" cy="83.43" r="6" fill="currentColor"/><circle cx="140.00" cy="32.00" r="6" fill="currentColor"/><circle cx="248.00" cy="140.00" r="6" fill="currentColor"/><circle cx="140.00" cy="248.00" r="6" fill="currentColor"/><circle cx="32.00" cy="140.00" r="6" fill="currentColor"/></svg>
+
+        </div>
+        <p>Запишите в таблицу номер периода (<strong>X</strong>), в котором данный элемент расположен в Периодической системе Д. И. Менделеева, и величину заряда ядра (<strong>Y</strong>) его атома. Для записи ответа используйте арабские цифры.</p>
+
+        <p class="oge-answer-label">Ответ:</p>
+        <table class="oge-xy-table">
+          <thead>
+            <tr>
+              <th>X</th>
+              <th>Y</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>
+                <input
+                  id="ansX-1927"
+                  type="text"
+                  inputmode="numeric"
+                  autocomplete="off"
+                  aria-label="X"
+                />
+              </td>
+              <td>
+                <input
+                  id="ansY-1927"
+                  type="text"
+                  inputmode="numeric"
+                  autocomplete="off"
+                  aria-label="Y"
+                />
+              </td>
+            </tr>
+          </tbody>
+        </table>
+
+        <p style="margin-top: 16px">
+          <button type="button" id="checkBtn-1927">Проверить</button>
+          <button type="button" class="btn-secondary oge-hint-btn" style="margin-left: 8px" aria-expanded="false" aria-controls="hintOut-1927" data-oge-hint-target="hintOut-1927">Подсказка</button>
+        </p>
+        <p id="hintOut-1927" class="tip oge-hint" hidden>Номер периода совпадает с числом занятых электронных слоёв. У нейтрального атома число электронов равно числу протонов.</p>
+        <p id="resultOut-1927" class="result" role="status"></p>
+      </div>
+      </section>
       </article>
     </main>
     <script>
@@ -3699,6 +3750,21 @@
           const x = root.querySelector("#ansX-1311").value.trim();
           const y = root.querySelector("#ansY-1311").value.trim();
           const ok = x === "2" && y === "5";
+          out.textContent = ok ? OGE_CHECK.ok : OGE_CHECK.retry;
+        });
+      })();
+    </script>
+    <script>
+      (function () {
+        const root = document.getElementById("oge-ex-1927");
+        if (!root) return;
+        const btn = root.querySelector("button[type='button']");
+        const out = root.querySelector(".result");
+        if (!btn || !out) return;
+        btn.addEventListener("click", function () {
+          const x = root.querySelector("#ansX-1927").value.trim();
+          const y = root.querySelector("#ansY-1927").value.trim();
+          const ok = x === "3" && y === "14";
           out.textContent = ok ? OGE_CHECK.ok : OGE_CHECK.retry;
         });
       })();

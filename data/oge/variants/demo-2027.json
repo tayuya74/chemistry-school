@@ -1,0 +1,100 @@
+{
+  "slug": "demo-2027",
+  "title": "Демонстрационный вариант 2027 (ФИПИ, проект)",
+  "source": "Демонстрационный вариант ОГЭ по химии 2027 года (ФИПИ), проект.",
+  "sourceDir": "2027-demo",
+  "tasks": [
+    {
+      "slot": 1,
+      "taskId": 1926
+    },
+    {
+      "slot": 2,
+      "taskId": 1927
+    },
+    {
+      "slot": 3,
+      "taskId": 1928
+    },
+    {
+      "slot": 4,
+      "taskId": 1929
+    },
+    {
+      "slot": 5,
+      "taskId": 1930
+    },
+    {
+      "slot": 6,
+      "taskId": 1931
+    },
+    {
+      "slot": 7,
+      "taskId": 1932
+    },
+    {
+      "slot": 8,
+      "taskId": 1933
+    },
+    {
+      "slot": 9,
+      "taskId": 1934
+    },
+    {
+      "slot": 10,
+      "taskId": 1935
+    },
+    {
+      "slot": 11,
+      "taskId": 1936
+    },
+    {
+      "slot": 12,
+      "taskId": 1937
+    },
+    {
+      "slot": 13,
+      "taskId": 1938
+    },
+    {
+      "slot": 14,
+      "taskId": 1939
+    },
+    {
+      "slot": 15,
+      "taskId": 1940
+    },
+    {
+      "slot": 16,
+      "taskId": 1941
+    },
+    {
+      "slot": 17,
+      "taskId": 1942
+    },
+    {
+      "slot": 18,
+      "taskId": 1943
+    },
+    {
+      "slot": 19,
+      "taskId": 1944
+    },
+    {
+      "slot": 20,
+      "taskId": 1945
+    },
+    {
+      "slot": 21,
+      "taskId": 1946
+    },
+    {
+      "slot": 22,
+      "taskId": 1947
+    },
+    {
+      "slot": 23,
+      "taskId": 1948
+    }
+  ]
+}

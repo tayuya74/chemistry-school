@@ -53,7 +53,7 @@
             Порядок: обычный
           </button>
           <span class="oge-sort__note"
-            >★ сложных: 5 из 33</span
+            >★ сложных: 5 из 34</span
           >
         </p>
       <section class="oge-example">
@@ -2011,6 +2011,51 @@
         <p id="resultOut-1380" class="result" role="status"></p>
       </div>
       </section>
+      <section class="oge-example">
+      <h3 class="oge-example-title" id="oge-ex-title-1928"><a class="oge-task-seq" href="ex/1928.html">Задание 3 № 1928</a></h3>
+<div class="oge-subtask" id="oge-ex-1928">
+<p>Расположите химические элементы —</p><ol><li>сера</li><li>кремний</li><li>хлор</li></ol><p>в порядке усиления неметаллических свойств образуемых ими простых веществ. Запишите указанные номера элементов в соответствующем порядке.</p>
+
+        <p class="oge-answer-label">Ответ:</p>
+        <div
+          class="oge-answer-cells"
+          role="group"
+          aria-label="Последовательность цифр"
+        >
+          <input
+            id="d1-1928"
+            type="text"
+            inputmode="numeric"
+            maxlength="1"
+            autocomplete="off"
+            aria-label="Позиция 1"
+          />
+          <input
+            id="d2-1928"
+            type="text"
+            inputmode="numeric"
+            maxlength="1"
+            autocomplete="off"
+            aria-label="Позиция 2"
+          />
+          <input
+            id="d3-1928"
+            type="text"
+            inputmode="numeric"
+            maxlength="1"
+            autocomplete="off"
+            aria-label="Позиция 3"
+          />
+        </div>
+
+        <p style="margin-top: 16px">
+          <button type="button" id="checkBtn-1928">Проверить</button>
+          <button type="button" class="btn-secondary oge-hint-btn" style="margin-left: 8px" aria-expanded="false" aria-controls="hintOut-1928" data-oge-hint-target="hintOut-1928">Подсказка</button>
+        </p>
+        <p id="hintOut-1928" class="tip oge-hint" hidden>В одном периоде неметаллические свойства усиливаются слева направо. Найдите положения всех трёх элементов.</p>
+        <p id="resultOut-1928" class="result" role="status"></p>
+      </div>
+      </section>
       </article>
     </main>
     <script>
@@ -2630,6 +2675,23 @@
             correct,
             optionCount,
           );
+          out.textContent = ok ? OGE_CHECK.ok : OGE_CHECK.retry;
+        });
+      })();
+    </script>
+    <script>
+      (function () {
+        const root = document.getElementById("oge-ex-1928");
+        if (!root) return;
+        const btn = root.querySelector("button[type='button']");
+        const out = root.querySelector(".result");
+        if (!btn || !out) return;
+        btn.addEventListener("click", function () {
+          const a = root.querySelector("#d1-1928").value.trim();
+          const b = root.querySelector("#d2-1928").value.trim();
+          const c = root.querySelector("#d3-1928").value.trim();
+
+          const ok = a === "2" && b === "1" && c === "3";
           out.textContent = ok ? OGE_CHECK.ok : OGE_CHECK.retry;
         });
       })();

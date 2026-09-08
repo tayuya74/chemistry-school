@@ -7,6 +7,7 @@ const __dirname = path.dirname(fileURLToPath(import.meta.url));
 export const root = path.join(__dirname, "..");
 
 const FOOTERS = {
+  "2027-demo": "Демонстрационный вариант ОГЭ по химии 2027 года (ФИПИ), проект.",
   default: "Демонстрационный вариант ОГЭ по химии 2025 года (ФИПИ).",
   "2026-demo": "Демонстрационный вариант ОГЭ по химии 2026 года (ФИПИ).",
   "variant-1":

@@ -53,7 +53,7 @@
             Порядок: обычный
           </button>
           <span class="oge-sort__note"
-            >★ сложных: 8 из 29</span
+            >★ сложных: 8 из 30</span
           >
         </p>
       <section class="oge-example">
@@ -2179,6 +2179,78 @@
         <p id="resultOut-1556" class="result" role="status"></p>
       </div>
       </section>
+      <section class="oge-example">
+      <h3 class="oge-example-title" id="oge-ex-title-1936"><a class="oge-task-seq" href="ex/1936.html">Задание 11 № 1936</a></h3>
+<div class="oge-subtask" id="oge-ex-1936" data-oge-checkbox-max="2" data-oge-two-choice-correct="3|5" data-oge-option-count="5">
+<p>Из предложенного перечня выберите две пары веществ, между которыми протекает окислительно-восстановительная реакция.</p>
+
+        <ol class="oge-statements">
+          <li>
+            <label>
+              <input type="checkbox" name="st" value="1" />
+              <span>оксид железа(III) и серная кислота</span>
+            </label>
+          </li>
+          <li>
+            <label>
+              <input type="checkbox" name="st" value="2" />
+              <span>оксид натрия и вода</span>
+            </label>
+          </li>
+          <li>
+            <label>
+              <input type="checkbox" name="st" value="3" />
+              <span>угарный газ и кислород</span>
+            </label>
+          </li>
+          <li>
+            <label>
+              <input type="checkbox" name="st" value="4" />
+              <span>аммиак и хлороводород</span>
+            </label>
+          </li>
+          <li>
+            <label>
+              <input type="checkbox" name="st" value="5" />
+              <span>алюминий и соляная кислота</span>
+            </label>
+          </li>
+        </ol>
+
+        <p>Запишите номера выбранных ответов.</p>
+
+        <p class="oge-answer-label">Ответ:</p>
+        <div
+          class="oge-answer-cells"
+          role="group"
+          aria-label="Номера двух выбранных утверждений (порядок цифр в ячейках любой)"
+        >
+          <input
+            id="ansDigit1-1936"
+            type="text"
+            inputmode="numeric"
+            maxlength="1"
+            aria-label="Первая ячейка ответа"
+            autocomplete="off"
+          />
+          <input
+            id="ansDigit2-1936"
+            type="text"
+            inputmode="numeric"
+            maxlength="1"
+            aria-label="Вторая ячейка ответа"
+            autocomplete="off"
+          />
+        </div>
+
+        <p style="margin-top: 16px">
+          <button type="button" id="checkBtn-1936">Проверить</button>
+          <button type="button" class="btn-secondary oge-hint-btn" style="margin-left: 8px" aria-expanded="false" aria-controls="hintOut-1936" data-oge-hint-target="hintOut-1936">Подсказка</button>
+        </p>
+        <p id="hintOut-1936" class="tip oge-hint" hidden>В ОВР изменяются степени окисления. Наличие кислоты или образование соли само по себе не означает ОВР.</p>
+        <p id="resultOut-1936" class="result" role="status"></p>
+      </div>
+      </section>
       </article>
     </main>
     <script>
@@ -2942,6 +3014,33 @@
         const correct = ["4","5"];
         const optionCount = 5;
         const root = document.getElementById("oge-ex-1556");
+        if (!root) return;
+        const boxes = root.querySelectorAll('.oge-statements input[type="checkbox"]');
+        const btn = root.querySelector("button[type='button']");
+        const out = root.querySelector(".result");
+        const inputs = root.querySelectorAll(".oge-answer-cells input[type='text']");
+        if (!btn || !out || inputs.length < 2) return;
+        btn.addEventListener("click", function () {
+          const chosen = [];
+          boxes.forEach(function (cb) {
+            if (cb.checked) chosen.push(cb.value);
+          });
+          const ok = OGE_twoChoiceAllOk(
+            chosen,
+            inputs[0].value.trim(),
+            inputs[1].value.trim(),
+            correct,
+            optionCount,
+          );
+          out.textContent = ok ? OGE_CHECK.ok : OGE_CHECK.retry;
+        });
+      })();
+    </script>
+    <script>
+      (function () {
+        const correct = ["3","5"];
+        const optionCount = 5;
+        const root = document.getElementById("oge-ex-1936");
         if (!root) return;
         const boxes = root.querySelectorAll('.oge-statements input[type="checkbox"]');
         const btn = root.querySelector("button[type='button']");

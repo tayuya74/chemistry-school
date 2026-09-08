@@ -53,7 +53,7 @@
             Порядок: обычный
           </button>
           <span class="oge-sort__note"
-            >★ сложных: 9 из 34</span
+            >★ сложных: 9 из 35</span
           >
         </p>
       <section class="oge-example">
@@ -2543,6 +2543,78 @@
         <p id="resultOut-1614" class="result" role="status"></p>
       </div>
       </section>
+      <section class="oge-example">
+      <h3 class="oge-example-title" id="oge-ex-title-1938"><a class="oge-task-seq" href="ex/1938.html">Задание 13 № 1938</a></h3>
+<div class="oge-subtask" id="oge-ex-1938" data-oge-checkbox-max="2" data-oge-two-choice-correct="2|3" data-oge-option-count="5">
+<p>Укажите, какие ионы и в каком количестве образуются в растворе при полной диссоциации 1 моль нитрата алюминия.</p>
+
+        <ol class="oge-statements">
+          <li>
+            <label>
+              <input type="checkbox" name="st" value="1" />
+              <span>3 моль Al<sup>3+</sup></span>
+            </label>
+          </li>
+          <li>
+            <label>
+              <input type="checkbox" name="st" value="2" />
+              <span>1 моль Al<sup>3+</sup></span>
+            </label>
+          </li>
+          <li>
+            <label>
+              <input type="checkbox" name="st" value="3" />
+              <span>3 моль NO<sub>3</sub><sup>−</sup></span>
+            </label>
+          </li>
+          <li>
+            <label>
+              <input type="checkbox" name="st" value="4" />
+              <span>2 моль NO<sub>3</sub><sup>−</sup></span>
+            </label>
+          </li>
+          <li>
+            <label>
+              <input type="checkbox" name="st" value="5" />
+              <span>1 моль NO<sub>3</sub><sup>−</sup></span>
+            </label>
+          </li>
+        </ol>
+
+        <p>Запишите номера выбранных ответов.</p>
+
+        <p class="oge-answer-label">Ответ:</p>
+        <div
+          class="oge-answer-cells"
+          role="group"
+          aria-label="Номера двух выбранных утверждений (порядок цифр в ячейках любой)"
+        >
+          <input
+            id="ansDigit1-1938"
+            type="text"
+            inputmode="numeric"
+            maxlength="1"
+            aria-label="Первая ячейка ответа"
+            autocomplete="off"
+          />
+          <input
+            id="ansDigit2-1938"
+            type="text"
+            inputmode="numeric"
+            maxlength="1"
+            aria-label="Вторая ячейка ответа"
+            autocomplete="off"
+          />
+        </div>
+
+        <p style="margin-top: 16px">
+          <button type="button" id="checkBtn-1938">Проверить</button>
+          <button type="button" class="btn-secondary oge-hint-btn" style="margin-left: 8px" aria-expanded="false" aria-controls="hintOut-1938" data-oge-hint-target="hintOut-1938">Подсказка</button>
+        </p>
+        <p id="hintOut-1938" class="tip oge-hint" hidden>Составьте формулу соли по зарядам ионов. Индексы в формуле определяют количества ионов при диссоциации.</p>
+        <p id="resultOut-1938" class="result" role="status"></p>
+      </div>
+      </section>
       </article>
     </main>
     <script>
@@ -3441,6 +3513,33 @@
         const correct = ["2","4"];
         const optionCount = 5;
         const root = document.getElementById("oge-ex-1614");
+        if (!root) return;
+        const boxes = root.querySelectorAll('.oge-statements input[type="checkbox"]');
+        const btn = root.querySelector("button[type='button']");
+        const out = root.querySelector(".result");
+        const inputs = root.querySelectorAll(".oge-answer-cells input[type='text']");
+        if (!btn || !out || inputs.length < 2) return;
+        btn.addEventListener("click", function () {
+          const chosen = [];
+          boxes.forEach(function (cb) {
+            if (cb.checked) chosen.push(cb.value);
+          });
+          const ok = OGE_twoChoiceAllOk(
+            chosen,
+            inputs[0].value.trim(),
+            inputs[1].value.trim(),
+            correct,
+            optionCount,
+          );
+          out.textContent = ok ? OGE_CHECK.ok : OGE_CHECK.retry;
+        });
+      })();
+    </script>
+    <script>
+      (function () {
+        const correct = ["2","3"];
+        const optionCount = 5;
+        const root = document.getElementById("oge-ex-1938");
         if (!root) return;
         const boxes = root.querySelectorAll('.oge-statements input[type="checkbox"]');
         const btn = root.querySelector("button[type='button']");

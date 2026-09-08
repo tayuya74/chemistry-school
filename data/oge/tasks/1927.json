@@ -1,0 +1,38 @@
+{
+  "id": 1927,
+  "examType": 2,
+  "uiKind": "periodDiagram",
+  "meta": {
+    "lead": "Строение атома, строение электронных оболочек",
+    "source": "Демонстрационный вариант ОГЭ по химии 2027 года (ФИПИ), проект. Условия и ключи — из PDF «ХИ-9 ОГЭ 2027_ДЕМО.pdf».",
+    "sourceDir": "2027-demo"
+  },
+  "blocks": [
+    {
+      "html": "<p>На приведённом рисунке изображена модель атома химического элемента.</p>"
+    }
+  ],
+  "content": {
+    "figure": {
+      "kind": "svg",
+      "html": "<svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 280 280\" width=\"280\" height=\"280\" role=\"img\" aria-label=\"Модель атома: ядро +Z; на слоях 2, 8 и 4 электрона\"><circle cx=\"140\" cy=\"140\" r=\"50\" fill=\"none\" stroke=\"currentColor\"/><circle cx=\"140\" cy=\"140\" r=\"80\" fill=\"none\" stroke=\"currentColor\"/><circle cx=\"140\" cy=\"140\" r=\"108\" fill=\"none\" stroke=\"currentColor\"/><circle cx=\"140\" cy=\"140\" r=\"22\" fill=\"var(--color-tip-bg)\" stroke=\"currentColor\"/><text x=\"140\" y=\"146\" text-anchor=\"middle\" fill=\"currentColor\" font-size=\"18\">+Z</text><circle cx=\"140.00\" cy=\"90.00\" r=\"6\" fill=\"currentColor\"/><circle cx=\"140.00\" cy=\"190.00\" r=\"6\" fill=\"currentColor\"/><circle cx=\"140.00\" cy=\"60.00\" r=\"6\" fill=\"currentColor\"/><circle cx=\"196.57\" cy=\"83.43\" r=\"6\" fill=\"currentColor\"/><circle cx=\"220.00\" cy=\"140.00\" r=\"6\" fill=\"currentColor\"/><circle cx=\"196.57\" cy=\"196.57\" r=\"6\" fill=\"currentColor\"/><circle cx=\"140.00\" cy=\"220.00\" r=\"6\" fill=\"currentColor\"/><circle cx=\"83.43\" cy=\"196.57\" r=\"6\" fill=\"currentColor\"/><circle cx=\"60.00\" cy=\"140.00\" r=\"6\" fill=\"currentColor\"/><circle cx=\"83.43\" cy=\"83.43\" r=\"6\" fill=\"currentColor\"/><circle cx=\"140.00\" cy=\"32.00\" r=\"6\" fill=\"currentColor\"/><circle cx=\"248.00\" cy=\"140.00\" r=\"6\" fill=\"currentColor\"/><circle cx=\"140.00\" cy=\"248.00\" r=\"6\" fill=\"currentColor\"/><circle cx=\"32.00\" cy=\"140.00\" r=\"6\" fill=\"currentColor\"/></svg>",
+      "captionHtml": null
+    },
+    "labels": [
+      "X",
+      "Y"
+    ],
+    "postPrompt": "Запишите в таблицу номер периода (<strong>X</strong>), в котором данный элемент расположен в Периодической системе Д. И. Менделеева, и величину заряда ядра (<strong>Y</strong>) его атома. Для записи ответа используйте арабские цифры."
+  },
+  "answer": {
+    "values": {
+      "X": "3",
+      "Y": "14"
+    }
+  },
+  "hint": "Номер периода совпадает с числом занятых электронных слоёв. У нейтрального атома число электронов равно числу протонов.",
+  "solution": {
+    "title": "Ход решения",
+    "html": "<p>На схеме три электронных слоя: 2, 8 и 4 электрона. Всего 14 электронов; заряд ядра +14. X = 3, Y = 14.</p>"
+  }
+}

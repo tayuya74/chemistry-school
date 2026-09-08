@@ -53,7 +53,7 @@
             Порядок: обычный
           </button>
           <span class="oge-sort__note"
-            >★ сложных: 8 из 34</span
+            >★ сложных: 8 из 35</span
           >
         </p>
       <section class="oge-example">
@@ -2882,6 +2882,86 @@
         <p id="resultOut-1678" class="result" role="status"></p>
       </div>
       </section>
+      <section class="oge-example">
+      <h3 class="oge-example-title" id="oge-ex-title-1941"><a class="oge-task-seq" href="ex/1941.html">Задание 16 № 1941</a></h3>
+<div class="oge-subtask" id="oge-ex-1941" data-oge-multi-choice-correct="1|4" data-oge-option-count="4">
+<p>Из перечисленных суждений о правилах работы с веществами и оборудованием в школьной лаборатории выберите верное(-ые) суждение(-я).</p>
+
+        <ol class="oge-statements">
+          <li>
+            <label>
+              <input type="checkbox" name="st" value="1" />
+              <span>Легковоспламеняющиеся жидкости запрещено нагревать на открытом огне.</span>
+            </label>
+          </li>
+          <li>
+            <label>
+              <input type="checkbox" name="st" value="2" />
+              <span>В школьной лаборатории получение углекислого газа из мрамора можно проводить только в вытяжном шкафу.</span>
+            </label>
+          </li>
+          <li>
+            <label>
+              <input type="checkbox" name="st" value="3" />
+              <span>Выпаривание воды из раствора соли проводят в фарфоровой ступке.</span>
+            </label>
+          </li>
+          <li>
+            <label>
+              <input type="checkbox" name="st" value="4" />
+              <span>При нагревании на спиртовке пробирки с раствором её держат под углом примерно 45°.</span>
+            </label>
+          </li>
+        </ol>
+        <p>Запишите в поле ответа номер(а) верного(-ых) суждения(-й).</p>
+        <p class="oge-answer-label">Ответ:</p>
+        <div
+          class="oge-answer-cells"
+          role="group"
+          aria-label="Номера верных суждений"
+        >
+          <input
+            id="c1-1941"
+            type="text"
+            inputmode="numeric"
+            maxlength="1"
+            autocomplete="off"
+            aria-label="1-я ячейка ответа"
+          />
+          <input
+            id="c2-1941"
+            type="text"
+            inputmode="numeric"
+            maxlength="1"
+            autocomplete="off"
+            aria-label="2-я ячейка ответа"
+          />
+          <input
+            id="c3-1941"
+            type="text"
+            inputmode="numeric"
+            maxlength="1"
+            autocomplete="off"
+            aria-label="3-я ячейка ответа"
+          />
+          <input
+            id="c4-1941"
+            type="text"
+            inputmode="numeric"
+            maxlength="1"
+            autocomplete="off"
+            aria-label="4-я ячейка ответа"
+          />
+        </div>
+
+        <p style="margin-top: 16px">
+          <button type="button" id="checkBtn-1941">Проверить</button>
+          <button type="button" class="btn-secondary oge-hint-btn" style="margin-left: 8px" aria-expanded="false" aria-controls="hintOut-1941" data-oge-hint-target="hintOut-1941">Подсказка</button>
+        </p>
+        <p id="hintOut-1941" class="tip oge-hint" hidden>Оцените каждое суждение отдельно. Различайте посуду для растирания и для выпаривания; вспомните положение пробирки при нагревании.</p>
+        <p id="resultOut-1941" class="result" role="status"></p>
+      </div>
+      </section>
       </article>
     </main>
     <script>
@@ -3779,6 +3859,33 @@
       (function () {
         const correct = ["1","3"];
         const root = document.getElementById("oge-ex-1678");
+        if (!root) return;
+        const boxes = root.querySelectorAll('.oge-statements input[type="checkbox"]');
+        const btn = root.querySelector("button[type='button']");
+        const out = root.querySelector(".result");
+        const inputs = root.querySelectorAll(".oge-answer-cells input[type='text']");
+        if (!btn || !out || inputs.length < 4) return;
+        btn.addEventListener("click", function () {
+          const chosen = [];
+          boxes.forEach(function (cb) {
+            if (cb.checked) chosen.push(cb.value);
+          });
+          const ok = OGE_multiChoiceAllOk(
+            chosen,
+            Array.from(inputs, function (input) {
+              return input.value.trim();
+            }),
+            correct,
+            4,
+          );
+          out.textContent = ok ? OGE_CHECK.ok : OGE_CHECK.retry;
+        });
+      })();
+    </script>
+    <script>
+      (function () {
+        const correct = ["1","4"];
+        const root = document.getElementById("oge-ex-1941");
         if (!root) return;
         const boxes = root.querySelectorAll('.oge-statements input[type="checkbox"]');
         const btn = root.querySelector("button[type='button']");

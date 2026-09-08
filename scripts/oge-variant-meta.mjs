@@ -1,12 +1,19 @@
 /** Метаданные готовых вариантов ОГЭ (по sourceDir в реестре). */
 
 export const VARIANT_META = {
+  "2027-demo": {
+    slug: "demo-2027",
+    title: "Демонстрационный вариант 2027 (ФИПИ, проект)",
+    sortOrder: -2,
+    short: "Демо 2027",
+    gridOrder: -2,
+  },
   "2026-demo": {
     slug: "demo-2026",
     title: "Демонстрационный вариант 2026 (ФИПИ)",
     sortOrder: 0,
     short: "Демо 2026",
-    gridOrder: 1,
+    gridOrder: -1,
   },
   default: {
     slug: "demo-2025",

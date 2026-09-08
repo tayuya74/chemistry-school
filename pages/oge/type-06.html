@@ -53,7 +53,7 @@
             Порядок: обычный
           </button>
           <span class="oge-sort__note"
-            >★ сложных: 4 из 40</span
+            >★ сложных: 5 из 41</span
           >
         </p>
       <section class="oge-example">
@@ -3081,6 +3081,78 @@
         <p id="resultOut-1423" class="result" role="status"></p>
       </div>
       </section>
+      <section class="oge-example" data-oge-advanced="1">
+      <h3 class="oge-example-title" id="oge-ex-title-1931"><span class="oge-hard" aria-label="сложное задание">★</span><a class="oge-task-seq" href="ex/1931.html">Задание 6 № 1931</a></h3>
+<div class="oge-subtask" id="oge-ex-1931" data-oge-checkbox-max="2" data-oge-two-choice-correct="3|5" data-oge-option-count="5">
+<p>Какие два утверждения являются <strong>верными</strong> для характеристики натрия и <strong>неверными</strong> для характеристики хлора?</p>
+
+        <ol class="oge-statements">
+          <li>
+            <label>
+              <input type="checkbox" name="st" value="1" />
+              <span>Соответствующее простое вещество при обычных условиях является жидкостью.</span>
+            </label>
+          </li>
+          <li>
+            <label>
+              <input type="checkbox" name="st" value="2" />
+              <span>Электроны в атоме расположены на трёх электронных слоях.</span>
+            </label>
+          </li>
+          <li>
+            <label>
+              <input type="checkbox" name="st" value="3" />
+              <span>Является металлом.</span>
+            </label>
+          </li>
+          <li>
+            <label>
+              <input type="checkbox" name="st" value="4" />
+              <span>Химический элемент образует летучее водородное соединение.</span>
+            </label>
+          </li>
+          <li>
+            <label>
+              <input type="checkbox" name="st" value="5" />
+              <span>Высшая степень окисления этого элемента равна +1.</span>
+            </label>
+          </li>
+        </ol>
+
+        <p>Запишите номера выбранных ответов.</p>
+
+        <p class="oge-answer-label">Ответ:</p>
+        <div
+          class="oge-answer-cells"
+          role="group"
+          aria-label="Номера двух выбранных утверждений (порядок цифр в ячейках любой)"
+        >
+          <input
+            id="ansDigit1-1931"
+            type="text"
+            inputmode="numeric"
+            maxlength="1"
+            aria-label="Первая ячейка ответа"
+            autocomplete="off"
+          />
+          <input
+            id="ansDigit2-1931"
+            type="text"
+            inputmode="numeric"
+            maxlength="1"
+            aria-label="Вторая ячейка ответа"
+            autocomplete="off"
+          />
+        </div>
+
+        <p style="margin-top: 16px">
+          <button type="button" id="checkBtn-1931">Проверить</button>
+          <button type="button" class="btn-secondary oge-hint-btn" style="margin-left: 8px" aria-expanded="false" aria-controls="hintOut-1931" data-oge-hint-target="hintOut-1931">Подсказка</button>
+        </p>
+        <p id="hintOut-1931" class="tip oge-hint" hidden>Проверяйте каждое утверждение дважды: для натрия оно должно выполняться, для хлора — нет. Совпадающие свойства не подходят.</p>
+        <p id="resultOut-1931" class="result" role="status"></p>
+      </div>
+      </section>
       </article>
     </main>
     <script>
@@ -4141,6 +4213,33 @@
         const correct = ["3","5"];
         const optionCount = 5;
         const root = document.getElementById("oge-ex-1423");
+        if (!root) return;
+        const boxes = root.querySelectorAll('.oge-statements input[type="checkbox"]');
+        const btn = root.querySelector("button[type='button']");
+        const out = root.querySelector(".result");
+        const inputs = root.querySelectorAll(".oge-answer-cells input[type='text']");
+        if (!btn || !out || inputs.length < 2) return;
+        btn.addEventListener("click", function () {
+          const chosen = [];
+          boxes.forEach(function (cb) {
+            if (cb.checked) chosen.push(cb.value);
+          });
+          const ok = OGE_twoChoiceAllOk(
+            chosen,
+            inputs[0].value.trim(),
+            inputs[1].value.trim(),
+            correct,
+            optionCount,
+          );
+          out.textContent = ok ? OGE_CHECK.ok : OGE_CHECK.retry;
+        });
+      })();
+    </script>
+    <script>
+      (function () {
+        const correct = ["3","5"];
+        const optionCount = 5;
+        const root = document.getElementById("oge-ex-1931");
         if (!root) return;
         const boxes = root.querySelectorAll('.oge-statements input[type="checkbox"]');
         const btn = root.querySelector("button[type='button']");

@@ -53,7 +53,7 @@
             Порядок: обычный
           </button>
           <span class="oge-sort__note"
-            >★ сложных: 15 из 46</span
+            >★ сложных: 16 из 47</span
           >
         </p>
       <section class="oge-example">
@@ -3731,6 +3731,81 @@
         <p id="resultOut-1712" class="result" role="status"></p>
       </div>
       </section>
+      <section class="oge-example" data-oge-advanced="1">
+      <h3 class="oge-example-title" id="oge-ex-title-1942"><span class="oge-hard" aria-label="сложное задание">★</span><a class="oge-task-seq" href="ex/1942.html">Задание 17 № 1942</a></h3>
+<div class="oge-subtask" id="oge-ex-1942">
+<p>Установите соответствие между двумя веществами и реактивом, с помощью которого можно различить эти вещества.</p>
+
+        <div class="match-columns">
+          <div>
+            <strong>Вещества</strong>
+            <ul class="oge-match-plain">
+              <li>А) Al(OH)<sub>3</sub> и Mg(OH)<sub>2</sub></li>
+              <li>Б) MgCl<sub>2</sub> (р-р) и ZnCl<sub>2</sub> (р-р)</li>
+              <li>В) CaCO<sub>3</sub> и BaSO<sub>4</sub></li>
+            </ul>
+          </div>
+          <div>
+            <strong>Реактив</strong>
+            <ul class="oge-match-plain">
+              <li>1) KOH (р-р)</li>
+              <li>2) AgNO<sub>3</sub> (р-р)</li>
+              <li>3) Cu</li>
+              <li>4) HCl (р-р)</li>
+            </ul>
+          </div>
+        </div>
+
+        <p>Запишите в таблицу выбранные цифры под соответствующими буквами.</p>
+        <table class="match-answer-table">
+          <thead>
+            <tr>
+              <th>А</th>
+              <th>Б</th>
+              <th>В</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>
+                <select id="sA-1942" aria-label="Ответ для А">
+                  <option value="">—</option>
+                  <option value="1">1</option>
+                  <option value="2">2</option>
+                  <option value="3">3</option>
+                  <option value="4">4</option>
+                </select>
+              </td>
+              <td>
+                <select id="sB-1942" aria-label="Ответ для Б">
+                  <option value="">—</option>
+                  <option value="1">1</option>
+                  <option value="2">2</option>
+                  <option value="3">3</option>
+                  <option value="4">4</option>
+                </select>
+              </td>
+              <td>
+                <select id="sV-1942" aria-label="Ответ для В">
+                  <option value="">—</option>
+                  <option value="1">1</option>
+                  <option value="2">2</option>
+                  <option value="3">3</option>
+                  <option value="4">4</option>
+                </select>
+              </td>
+            </tr>
+          </tbody>
+        </table>
+
+        <p style="margin-top: 16px">
+          <button type="button" id="checkBtn-1942">Проверить</button>
+          <button type="button" class="btn-secondary oge-hint-btn" style="margin-left: 8px" aria-expanded="false" aria-controls="hintOut-1942" data-oge-hint-target="hintOut-1942">Подсказка</button>
+        </p>
+        <p id="hintOut-1942" class="tip oge-hint" hidden>Амфотерный гидроксид растворяется в избытке щёлочи. При различении солей наблюдайте не только образование осадка, но и его поведение при дальнейшем добавлении реактива.</p>
+        <p id="resultOut-1942" class="result" role="status"></p>
+      </div>
+      </section>
       </article>
     </main>
     <script>
@@ -4649,6 +4724,26 @@
             return;
           }
           const ok = a === "4" && b === "2" && v === "1";
+          out.textContent = ok ? OGE_CHECK.ok : OGE_CHECK.retry;
+        });
+      })();
+    </script>
+    <script>
+      (function () {
+        const root = document.getElementById("oge-ex-1942");
+        if (!root) return;
+        const btn = root.querySelector("button[type='button']");
+        const out = root.querySelector(".result");
+        if (!btn || !out) return;
+        btn.addEventListener("click", function () {
+          const a = root.querySelector("#sA-1942").value;
+          const b = root.querySelector("#sB-1942").value;
+          const v = root.querySelector("#sV-1942").value;
+          if (!a || !b || !v) {
+            out.textContent = OGE_CHECK.retry;
+            return;
+          }
+          const ok = a === "1" && b === "1" && v === "4";
           out.textContent = ok ? OGE_CHECK.ok : OGE_CHECK.retry;
         });
       })();

@@ -53,7 +53,7 @@
             Порядок: обычный
           </button>
           <span class="oge-sort__note"
-            >★ сложных: 2 из 34</span
+            >★ сложных: 3 из 35</span
           >
         </p>
       <section class="oge-example">
@@ -2781,6 +2781,84 @@
         <p id="resultOut-1636" class="result" role="status"></p>
       </div>
       </section>
+      <section class="oge-example" data-oge-advanced="1">
+      <h3 class="oge-example-title" id="oge-ex-title-1939"><span class="oge-hard" aria-label="сложное задание">★</span><a class="oge-task-seq" href="ex/1939.html">Задание 14 № 1939</a></h3>
+<div class="oge-subtask" id="oge-ex-1939" data-oge-checkbox-max="2" data-oge-two-choice-correct="2|6" data-oge-option-count="6">
+<p>Из предложенного перечня выберите названия двух веществ, взаимодействию которых в растворе соответствует сокращённое ионное уравнение реакции: Ba<sup>2+</sup> + SO<sub>4</sub><sup>2−</sup> = BaSO<sub>4</sub>.</p>
+
+        <ol class="oge-statements">
+          <li>
+            <label>
+              <input type="checkbox" name="st" value="1" />
+              <span>серная кислота</span>
+            </label>
+          </li>
+          <li>
+            <label>
+              <input type="checkbox" name="st" value="2" />
+              <span>гидроксид бария</span>
+            </label>
+          </li>
+          <li>
+            <label>
+              <input type="checkbox" name="st" value="3" />
+              <span>сульфат магния</span>
+            </label>
+          </li>
+          <li>
+            <label>
+              <input type="checkbox" name="st" value="4" />
+              <span>оксид бария</span>
+            </label>
+          </li>
+          <li>
+            <label>
+              <input type="checkbox" name="st" value="5" />
+              <span>барий</span>
+            </label>
+          </li>
+          <li>
+            <label>
+              <input type="checkbox" name="st" value="6" />
+              <span>сульфат калия</span>
+            </label>
+          </li>
+        </ol>
+
+        <p>Запишите номера выбранных ответов.</p>
+
+        <p class="oge-answer-label">Ответ:</p>
+        <div
+          class="oge-answer-cells"
+          role="group"
+          aria-label="Номера двух выбранных утверждений (порядок цифр в ячейках любой)"
+        >
+          <input
+            id="ansDigit1-1939"
+            type="text"
+            inputmode="numeric"
+            maxlength="1"
+            aria-label="Первая ячейка ответа"
+            autocomplete="off"
+          />
+          <input
+            id="ansDigit2-1939"
+            type="text"
+            inputmode="numeric"
+            maxlength="1"
+            aria-label="Вторая ячейка ответа"
+            autocomplete="off"
+          />
+        </div>
+
+        <p style="margin-top: 16px">
+          <button type="button" id="checkBtn-1939">Проверить</button>
+          <button type="button" class="btn-secondary oge-hint-btn" style="margin-left: 8px" aria-expanded="false" aria-controls="hintOut-1939" data-oge-hint-target="hintOut-1939">Подсказка</button>
+        </p>
+        <p id="hintOut-1939" class="tip oge-hint" hidden>Проверьте, какие ионы дают вещества в растворе и не идёт ли одновременно другая реакция — например, образование воды или второго осадка.</p>
+        <p id="resultOut-1939" class="result" role="status"></p>
+      </div>
+      </section>
       </article>
     </main>
     <script>
@@ -3679,6 +3757,33 @@
         const correct = ["3","6"];
         const optionCount = 6;
         const root = document.getElementById("oge-ex-1636");
+        if (!root) return;
+        const boxes = root.querySelectorAll('.oge-statements input[type="checkbox"]');
+        const btn = root.querySelector("button[type='button']");
+        const out = root.querySelector(".result");
+        const inputs = root.querySelectorAll(".oge-answer-cells input[type='text']");
+        if (!btn || !out || inputs.length < 2) return;
+        btn.addEventListener("click", function () {
+          const chosen = [];
+          boxes.forEach(function (cb) {
+            if (cb.checked) chosen.push(cb.value);
+          });
+          const ok = OGE_twoChoiceAllOk(
+            chosen,
+            inputs[0].value.trim(),
+            inputs[1].value.trim(),
+            correct,
+            optionCount,
+          );
+          out.textContent = ok ? OGE_CHECK.ok : OGE_CHECK.retry;
+        });
+      })();
+    </script>
+    <script>
+      (function () {
+        const correct = ["2","6"];
+        const optionCount = 6;
+        const root = document.getElementById("oge-ex-1939");
         if (!root) return;
         const boxes = root.querySelectorAll('.oge-statements input[type="checkbox"]');
         const btn = root.querySelector("button[type='button']");

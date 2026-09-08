@@ -53,7 +53,7 @@
             Порядок: обычный
           </button>
           <span class="oge-sort__note"
-            >★ сложных: 2 из 32</span
+            >★ сложных: 2 из 33</span
           >
         </p>
       <section class="oge-example">
@@ -2436,6 +2436,78 @@
         <p id="resultOut-1296" class="result" role="status"></p>
       </div>
       </section>
+      <section class="oge-example">
+      <h3 class="oge-example-title" id="oge-ex-title-1926"><a class="oge-task-seq" href="ex/1926.html">Задание 1 № 1926</a></h3>
+<div class="oge-subtask" id="oge-ex-1926" data-oge-checkbox-max="2" data-oge-two-choice-correct="2|4" data-oge-option-count="5">
+<p>Выберите два высказывания, в которых говорится об алюминии как о простом веществе.</p>
+
+        <ol class="oge-statements">
+          <li>
+            <label>
+              <input type="checkbox" name="st" value="1" />
+              <span>По распространённости в природе алюминий занимает третье место среди всех химических элементов.</span>
+            </label>
+          </li>
+          <li>
+            <label>
+              <input type="checkbox" name="st" value="2" />
+              <span>Алюминий получают электролизом расплава его оксида в криолите.</span>
+            </label>
+          </li>
+          <li>
+            <label>
+              <input type="checkbox" name="st" value="3" />
+              <span>Высший оксид алюминия имеет формулу Al<sub>2</sub>O<sub>3</sub>.</span>
+            </label>
+          </li>
+          <li>
+            <label>
+              <input type="checkbox" name="st" value="4" />
+              <span>Для начала реакции алюминия с иодом требуется добавить несколько капель воды.</span>
+            </label>
+          </li>
+          <li>
+            <label>
+              <input type="checkbox" name="st" value="5" />
+              <span>Радиус атома у алюминия больше, чем у кремния.</span>
+            </label>
+          </li>
+        </ol>
+
+        <p>Запишите номера выбранных ответов.</p>
+
+        <p class="oge-answer-label">Ответ:</p>
+        <div
+          class="oge-answer-cells"
+          role="group"
+          aria-label="Номера двух выбранных утверждений (порядок цифр в ячейках любой)"
+        >
+          <input
+            id="ansDigit1-1926"
+            type="text"
+            inputmode="numeric"
+            maxlength="1"
+            aria-label="Первая ячейка ответа"
+            autocomplete="off"
+          />
+          <input
+            id="ansDigit2-1926"
+            type="text"
+            inputmode="numeric"
+            maxlength="1"
+            aria-label="Вторая ячейка ответа"
+            autocomplete="off"
+          />
+        </div>
+
+        <p style="margin-top: 16px">
+          <button type="button" id="checkBtn-1926">Проверить</button>
+          <button type="button" class="btn-secondary oge-hint-btn" style="margin-left: 8px" aria-expanded="false" aria-controls="hintOut-1926" data-oge-hint-target="hintOut-1926">Подсказка</button>
+        </p>
+        <p id="hintOut-1926" class="tip oge-hint" hidden>Различайте свойства атомов и соединений элемента и действия с простым веществом: его получение и участие в реакциях.</p>
+        <p id="resultOut-1926" class="result" role="status"></p>
+      </div>
+      </section>
       </article>
     </main>
     <script>
@@ -3280,6 +3352,33 @@
         const correct = ["1","4"];
         const optionCount = 5;
         const root = document.getElementById("oge-ex-1296");
+        if (!root) return;
+        const boxes = root.querySelectorAll('.oge-statements input[type="checkbox"]');
+        const btn = root.querySelector("button[type='button']");
+        const out = root.querySelector(".result");
+        const inputs = root.querySelectorAll(".oge-answer-cells input[type='text']");
+        if (!btn || !out || inputs.length < 2) return;
+        btn.addEventListener("click", function () {
+          const chosen = [];
+          boxes.forEach(function (cb) {
+            if (cb.checked) chosen.push(cb.value);
+          });
+          const ok = OGE_twoChoiceAllOk(
+            chosen,
+            inputs[0].value.trim(),
+            inputs[1].value.trim(),
+            correct,
+            optionCount,
+          );
+          out.textContent = ok ? OGE_CHECK.ok : OGE_CHECK.retry;
+        });
+      })();
+    </script>
+    <script>
+      (function () {
+        const correct = ["2","4"];
+        const optionCount = 5;
+        const root = document.getElementById("oge-ex-1926");
         if (!root) return;
         const boxes = root.querySelectorAll('.oge-statements input[type="checkbox"]');
         const btn = root.querySelector("button[type='button']");

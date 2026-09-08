@@ -53,7 +53,7 @@
             Порядок: обычный
           </button>
           <span class="oge-sort__note"
-            >★ сложных: 2 из 36</span
+            >★ сложных: 3 из 37</span
           >
         </p>
       <section class="oge-example">
@@ -1366,6 +1366,33 @@
         <p id="resultOut-1761" class="result" role="status"></p>
       </div>
       </section>
+      <section class="oge-example" data-oge-advanced="1">
+      <h3 class="oge-example-title" id="oge-ex-title-1943"><span class="oge-hard" aria-label="сложное задание">★</span><a class="oge-task-seq" href="ex/1943.html">Задание 18 № 1943</a></h3>
+<div class="oge-subtask" id="oge-ex-1943">
+<p>При проведении расчётов для всех элементов, кроме хлора, используйте целые значения относительных атомных масс (Ar(Cl) = 35,5).</p>
+<p>Основным компонентом некоторого железосодержащего препарата является гептагидрат сульфата железа(II) (FeSO<sub>4</sub>·7H<sub>2</sub>O). Железо — важный элемент в составе гемоглобина крови, поэтому препарат прописывают для восполнения дефицита железа в организме. В каждой капсуле массой 350 мг содержится 250 мг гептагидрата сульфата железа(II), остальное — не содержащие железа примеси.</p>
+<p>Вычислите в процентах массовую долю железа в гептагидрате сульфата железа(II). Запишите число с точностью до целых.</p>
+
+        <p class="oge-answer-label">Ответ (%):</p>
+        <p>
+          <input
+            id="ansNum-1943"
+            type="text"
+            inputmode="decimal"
+            class="oge-answer-input"
+            autocomplete="off"
+            aria-label="Числовой ответ"
+          />
+        </p>
+
+        <p style="margin-top: 16px">
+          <button type="button" id="checkBtn-1943">Проверить</button>
+          <button type="button" class="btn-secondary oge-hint-btn" style="margin-left: 8px" aria-expanded="false" aria-controls="hintOut-1943" data-oge-hint-target="hintOut-1943">Подсказка</button>
+        </p>
+        <p id="hintOut-1943" class="tip oge-hint" hidden>При расчёте молярной массы кристаллогидрата учтите все семь молекул воды. Массовая доля элемента равна отношению его массы к массе всего вещества.</p>
+        <p id="resultOut-1943" class="result" role="status"></p>
+      </div>
+      </section>
       </article>
     </main>
     <script>
@@ -2084,6 +2111,26 @@
             return;
           }
           const ok = n === 7.84;
+          out.textContent = ok ? OGE_CHECK.ok : OGE_CHECK.retry;
+        });
+      })();
+    </script>
+    <script>
+      (function () {
+        const root = document.getElementById("oge-ex-1943");
+        if (!root) return;
+        const btn = root.querySelector("button[type='button']");
+        const out = root.querySelector(".result");
+        const input = root.querySelector("#ansNum-1943");
+        if (!btn || !out || !input) return;
+        btn.addEventListener("click", function () {
+          const raw = OGE_answerDotsToCommasInField(input);
+          const n = parseFloat(raw);
+          if (isNaN(n)) {
+            out.textContent = OGE_CHECK.retry;
+            return;
+          }
+          const ok = n === 20;
           out.textContent = ok ? OGE_CHECK.ok : OGE_CHECK.retry;
         });
       })();

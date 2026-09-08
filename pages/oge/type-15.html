@@ -53,7 +53,7 @@
             Порядок: обычный
           </button>
           <span class="oge-sort__note"
-            >★ сложных: 7 из 32</span
+            >★ сложных: 8 из 33</span
           >
         </p>
       <section class="oge-example">
@@ -2354,6 +2354,73 @@
         <p id="resultOut-1656" class="result" role="status"></p>
       </div>
       </section>
+      <section class="oge-example" data-oge-advanced="1">
+      <h3 class="oge-example-title" id="oge-ex-title-1940"><span class="oge-hard" aria-label="сложное задание">★</span><a class="oge-task-seq" href="ex/1940.html">Задание 15 № 1940</a></h3>
+<div class="oge-subtask" id="oge-ex-1940">
+<p>Установите соответствие между схемой процесса, происходящего в окислительно-восстановительной реакции, и названием этого процесса.</p>
+
+        <div class="match-columns">
+          <div>
+            <strong>Схема процесса</strong>
+            <ul class="oge-match-plain">
+              <li>А) Fe<sup>+3</sup> → Fe<sup>0</sup></li>
+              <li>Б) Cl<sub>2</sub><sup>0</sup> → 2Cl<sup>+1</sup></li>
+              <li>В) S<sup>−2</sup> → S<sup>+4</sup></li>
+            </ul>
+          </div>
+          <div>
+            <strong>Название процесса</strong>
+            <ul class="oge-match-plain">
+              <li>1) окисление</li>
+              <li>2) восстановление</li>
+            </ul>
+          </div>
+        </div>
+
+        <p>Запишите в таблицу выбранные цифры под соответствующими буквами.</p>
+        <table class="match-answer-table">
+          <thead>
+            <tr>
+              <th>А</th>
+              <th>Б</th>
+              <th>В</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>
+                <select id="sA-1940" aria-label="Ответ для А">
+                  <option value="">—</option>
+                  <option value="1">1</option>
+                  <option value="2">2</option>
+                </select>
+              </td>
+              <td>
+                <select id="sB-1940" aria-label="Ответ для Б">
+                  <option value="">—</option>
+                  <option value="1">1</option>
+                  <option value="2">2</option>
+                </select>
+              </td>
+              <td>
+                <select id="sV-1940" aria-label="Ответ для В">
+                  <option value="">—</option>
+                  <option value="1">1</option>
+                  <option value="2">2</option>
+                </select>
+              </td>
+            </tr>
+          </tbody>
+        </table>
+
+        <p style="margin-top: 16px">
+          <button type="button" id="checkBtn-1940">Проверить</button>
+          <button type="button" class="btn-secondary oge-hint-btn" style="margin-left: 8px" aria-expanded="false" aria-controls="hintOut-1940" data-oge-hint-target="hintOut-1940">Подсказка</button>
+        </p>
+        <p id="hintOut-1940" class="tip oge-hint" hidden>Повышение степени окисления означает отдачу электронов, понижение — их принятие. Внимательно прочитайте знак у конечной степени окисления хлора.</p>
+        <p id="resultOut-1940" class="result" role="status"></p>
+      </div>
+      </section>
       </article>
     </main>
     <script>
@@ -2992,6 +3059,26 @@
             return;
           }
           const ok = a === "1" && b === "2" && v === "1";
+          out.textContent = ok ? OGE_CHECK.ok : OGE_CHECK.retry;
+        });
+      })();
+    </script>
+    <script>
+      (function () {
+        const root = document.getElementById("oge-ex-1940");
+        if (!root) return;
+        const btn = root.querySelector("button[type='button']");
+        const out = root.querySelector(".result");
+        if (!btn || !out) return;
+        btn.addEventListener("click", function () {
+          const a = root.querySelector("#sA-1940").value;
+          const b = root.querySelector("#sB-1940").value;
+          const v = root.querySelector("#sV-1940").value;
+          if (!a || !b || !v) {
+            out.textContent = OGE_CHECK.retry;
+            return;
+          }
+          const ok = a === "2" && b === "1" && v === "1";
           out.textContent = ok ? OGE_CHECK.ok : OGE_CHECK.retry;
         });
       })();
