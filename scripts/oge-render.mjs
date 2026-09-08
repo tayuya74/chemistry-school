@@ -311,7 +311,7 @@ function renderPeriodDiagramBody(task, suffix) {
   const fig = task.content.figure;
   let figureHtml;
   if (fig.kind === "svg") {
-    figureHtml = `        <div class="oge-nucleus-wrap">
+    figureHtml = `        <div class="oge-nucleus-wrap" data-diagram-type="${fig.diagramType}">
           ${fig.html}
           ${
             fig.captionHtml
@@ -320,7 +320,7 @@ function renderPeriodDiagramBody(task, suffix) {
           }
         </div>`;
   } else {
-    figureHtml = `        ${fig.html}`;
+    figureHtml = `<div data-diagram-type="${fig.diagramType}">${fig.html}</div>`;
   }
 
   const hasPostPrompt = (task.blocks ?? []).some((b) =>

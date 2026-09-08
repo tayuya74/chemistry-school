@@ -53,6 +53,14 @@
 | 22 | openReference |
 | 23 | experimentOpen |
 
+## Формы изображения в типе 2
+
+Для типа 2 поле `content.figure.diagramType` обязательно: `nucleus` (ядро),
+`electron-shells` (электроны-точки), `shell-counts` (дуги с числом электронов),
+`periodic-cell` (ячейка таблицы). Общие стили выбираются по форме через
+`data-diagram-type`, одинаково в статических страницах и конструкторе.
+Правила оформления: [oge-atom-diagrams.mdc](../../../.cursor/rules/oge-atom-diagrams.mdc).
+
 ## Пометка «повышенная сложность» (★)
 
 Любому заданию можно поставить `meta.advanced: true` — рядом с заголовком появится ★.

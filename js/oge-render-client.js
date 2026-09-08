@@ -183,12 +183,12 @@
     const fig = task.content.figure;
     let figureHtml;
     if (fig.kind === "svg") {
-      figureHtml = `<div class="oge-nucleus-wrap">
+      figureHtml = `<div class="oge-nucleus-wrap" data-diagram-type="${fig.diagramType}">
         ${fig.html}
         ${fig.captionHtml ? `<p class="tip" style="margin-top: 8px">${fig.captionHtml}</p>` : ""}
       </div>`;
     } else {
-      figureHtml = fig.html;
+      figureHtml = `<div data-diagram-type="${fig.diagramType}">${fig.html}</div>`;
     }
     const hasPostPrompt = (task.blocks ?? []).some((b) =>
       /Запишите в (поле|таблицу)/.test(b.html),

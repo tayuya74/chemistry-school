@@ -106,6 +106,10 @@ export function validateTaskShape(task) {
       }
       break;
     case "periodDiagram":
+      if (!["nucleus", "electron-shells", "shell-counts", "periodic-cell"].includes(task.content?.figure?.diagramType))
+        issues.push("periodDiagram: figure.diagramType must specify the diagram form");
+      if ((task.content?.figure?.diagramType === "periodic-cell") !== (task.content?.figure?.kind === "periodicCell"))
+        issues.push("periodDiagram: diagramType and figure.kind disagree");
       if (!task.content?.figure?.html) issues.push("periodDiagram: figure");
       if (!task.answer?.values?.X) issues.push("periodDiagram: values");
       break;

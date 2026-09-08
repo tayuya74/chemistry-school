@@ -15,7 +15,8 @@
   "content": {
     "figure": {
       "kind": "periodicCell",
-      "html": "<div\n          style=\"\n            display: inline-grid;\n            grid-template-columns: 1fr;\n            min-width: 96px;\n            border: 1px solid var(--color-border);\n            padding: 12px;\n            text-align: center;\n            margin: 12px 0 18px;\n          \"\n        >\n          <div style=\"text-align: left\">7</div>\n          <div style=\"font-size: 1.2rem\">N</div>\n          <div style=\"text-align: right\">14,0</div>\n        </div>"
+      "html": "<div\n          style=\"\n            display: inline-grid;\n            grid-template-columns: 1fr;\n            min-width: 96px;\n            border: 1px solid var(--color-border);\n            padding: 12px;\n            text-align: center;\n            margin: 12px 0 18px;\n          \"\n        >\n          <div style=\"text-align: left\">7</div>\n          <div style=\"font-size: 1.2rem\">N</div>\n          <div style=\"text-align: right\">14,0</div>\n        </div>",
+      "diagramType": "periodic-cell"
     },
     "labels": [
       "X",

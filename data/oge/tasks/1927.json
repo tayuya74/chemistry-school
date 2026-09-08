@@ -16,7 +16,8 @@
     "figure": {
       "kind": "svg",
       "html": "<svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 280 280\" width=\"280\" height=\"280\" role=\"img\" aria-label=\"Модель атома: ядро +Z; на слоях 2, 8 и 4 электрона\"><circle cx=\"140\" cy=\"140\" r=\"50\" fill=\"none\" stroke=\"currentColor\"/><circle cx=\"140\" cy=\"140\" r=\"80\" fill=\"none\" stroke=\"currentColor\"/><circle cx=\"140\" cy=\"140\" r=\"108\" fill=\"none\" stroke=\"currentColor\"/><circle cx=\"140\" cy=\"140\" r=\"22\" fill=\"var(--color-tip-bg)\" stroke=\"currentColor\"/><text x=\"140\" y=\"146\" text-anchor=\"middle\" fill=\"currentColor\" font-size=\"18\">+Z</text><circle cx=\"140.00\" cy=\"90.00\" r=\"6\" fill=\"currentColor\"/><circle cx=\"140.00\" cy=\"190.00\" r=\"6\" fill=\"currentColor\"/><circle cx=\"140.00\" cy=\"60.00\" r=\"6\" fill=\"currentColor\"/><circle cx=\"196.57\" cy=\"83.43\" r=\"6\" fill=\"currentColor\"/><circle cx=\"220.00\" cy=\"140.00\" r=\"6\" fill=\"currentColor\"/><circle cx=\"196.57\" cy=\"196.57\" r=\"6\" fill=\"currentColor\"/><circle cx=\"140.00\" cy=\"220.00\" r=\"6\" fill=\"currentColor\"/><circle cx=\"83.43\" cy=\"196.57\" r=\"6\" fill=\"currentColor\"/><circle cx=\"60.00\" cy=\"140.00\" r=\"6\" fill=\"currentColor\"/><circle cx=\"83.43\" cy=\"83.43\" r=\"6\" fill=\"currentColor\"/><circle cx=\"140.00\" cy=\"32.00\" r=\"6\" fill=\"currentColor\"/><circle cx=\"248.00\" cy=\"140.00\" r=\"6\" fill=\"currentColor\"/><circle cx=\"140.00\" cy=\"248.00\" r=\"6\" fill=\"currentColor\"/><circle cx=\"32.00\" cy=\"140.00\" r=\"6\" fill=\"currentColor\"/></svg>",
-      "captionHtml": null
+      "captionHtml": null,
+      "diagramType": "electron-shells"
     },
     "labels": [
       "X",

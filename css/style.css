@@ -458,11 +458,12 @@ html[data-theme="dark"] .oge-answer-cells input:focus-visible {
   fill: var(--color-text);
 }
 
-html[data-theme="dark"] .oge-nucleus-wrap svg {
+html[data-theme="dark"] .oge-nucleus-wrap[data-diagram-type="shell-counts"] svg,
+html[data-theme="dark"] .oge-nucleus-wrap[data-diagram-type="electron-shells"] svg {
   --color-border: var(--color-field-border);
 }
 
-html[data-theme="dark"] .oge-nucleus-wrap svg [fill="#2563eb"] {
+html[data-theme="dark"] .oge-nucleus-wrap[data-diagram-type="electron-shells"] svg [fill="#2563eb"] {
   fill: #83bcff;
 }
 
