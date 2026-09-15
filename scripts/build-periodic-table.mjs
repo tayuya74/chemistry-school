@@ -270,7 +270,7 @@ function renderMain() {
   const body = ROWS.map((r, rowIndex) => {
     const periodsLabel =
       rowIndex === 0
-        ? `<th class="pt-periods-label" rowspan="${ROWS.length}" scope="rowgroup"><span class="visually-hidden">Периоды</span><span class="pt-periods-label__vertical" aria-hidden="true">${[..."Периоды"].map((letter) => `<span>${letter}</span>`).join("")}</span></th>`
+        ? `<th class="pt-periods-label" rowspan="${ROWS.length}" scope="rowgroup"><span class="visually-hidden">Периоды</span><span class="pt-periods-label__vertical" aria-hidden="true">${[..."Периоды"].join("<br />")}</span></th>`
         : "";
     const label =
       r.period === null

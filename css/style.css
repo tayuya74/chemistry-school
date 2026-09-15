@@ -905,10 +905,7 @@ button.oge-sort-btn {
 }
 
 .pt-periods-label__vertical {
-  display: inline-flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
+  display: inline-block;
   line-height: 1;
 }
 
