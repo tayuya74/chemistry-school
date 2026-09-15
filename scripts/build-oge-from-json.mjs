@@ -316,10 +316,9 @@ function buildOgeIndexPage(countByType, rows) {
         <form id="ogeTaskSearch" class="oge-task-search" role="search" data-task-ids="${rows.map((row) => row.id).join(',')}" novalidate>
           <label for="ogeTaskNumber">Найти задание по номеру</label>
           <div class="oge-task-search__controls">
-            <input id="ogeTaskNumber" name="task" type="text" inputmode="numeric" placeholder="Например, 1001" autocomplete="off" aria-describedby="ogeTaskSearchHelp ogeTaskSearchStatus" />
+            <input id="ogeTaskNumber" name="task" type="text" inputmode="numeric" placeholder="Например, 1001" autocomplete="off" aria-describedby="ogeTaskSearchStatus" />
             <button type="submit">Найти</button>
           </div>
-          <p id="ogeTaskSearchHelp">Введите номер примера — откроется его страница с кнопкой «Ответ».</p>
           <p id="ogeTaskSearchStatus" role="status"></p>
         </form>
 
