@@ -9,6 +9,187 @@
  */
 (function () {
   const TOTAL_TYPES = 23;
+  let buildVersion = 0;
+  const SAVED_KEY = "chemistry-school.oge.saved-variants.v1";
+
+  function validIds(ids) {
+    return (
+      Array.isArray(ids) &&
+      ids.length > 0 &&
+      ids.length <= 2000 &&
+      ids.every((id) => Number.isSafeInteger(id) && id > 0) &&
+      new Set(ids).size === ids.length
+    );
+  }
+
+  function readSavedVariants() {
+    const saved = JSON.parse(localStorage.getItem(SAVED_KEY) || "[]");
+    if (
+      !Array.isArray(saved) ||
+      saved.some(
+        (item) =>
+          !item ||
+          typeof item.title !== "string" ||
+          !validIds(item.ids) ||
+          !Number.isFinite(Date.parse(item.savedAt)),
+      )
+    ) {
+      throw new Error("Не удалось прочитать сохранённые варианты");
+    }
+    return saved;
+  }
+
+  function variantUrl(ids, title) {
+    const url = new URL(window.location.href);
+    url.hash = new URLSearchParams({
+      variant: ids.join(","),
+      title,
+    }).toString();
+    return url.href;
+  }
+
+  function openVariant(ids, title) {
+    const result = document.getElementById("builderResult");
+    if (!result) return;
+    return buildFull(result, [], {
+      ids,
+      title,
+      taskDir: "../../data/oge/tasks/",
+      linkPrefix: "ex/",
+    }).then(() => scrollToResult(result));
+  }
+
+  function openLinkedVariant() {
+    const params = new URLSearchParams(window.location.hash.slice(1));
+    if (!params.has("variant")) return;
+    const raw = params.get("variant");
+    const ids = raw.split(",").map(Number);
+    if (!/^\d+(,\d+)*$/.test(raw) || !validIds(ids)) {
+      const result = document.getElementById("builderResult");
+      buildVersion++;
+      result.textContent =
+        "Ссылка на вариант повреждена. Проверьте, что она скопирована целиком.";
+      scrollToResult(result);
+      return;
+    }
+    openVariant(
+      ids,
+      params.get("title")?.slice(0, 120) || "Сохранённый вариант",
+    );
+  }
+
+  function buildSaveControls(ids, title) {
+    const form = document.createElement("form");
+    form.className = "oge-variant-save";
+    const label = document.createElement("label");
+    label.htmlFor = "ogeVariantName";
+    label.textContent = "Название варианта";
+    const name = document.createElement("input");
+    name.id = "ogeVariantName";
+    name.type = "text";
+    name.maxLength = 120;
+    name.value =
+      title && !title.endsWith("из банка заданий")
+        ? title
+        : `Вариант от ${new Date().toLocaleDateString("ru-RU")}`;
+    name.placeholder = "Например, 9А — домашняя работа на 20 сентября";
+    const actions = document.createElement("div");
+    actions.className = "oge-variant-save__actions";
+    const save = document.createElement("button");
+    save.type = "submit";
+    save.textContent = "Сохранить вариант";
+    const copy = document.createElement("button");
+    copy.type = "button";
+    copy.className = "btn-secondary";
+    copy.textContent = "Копировать ссылку";
+    const linkLabel = document.createElement("label");
+    linkLabel.htmlFor = "ogeVariantLink";
+    linkLabel.textContent = "Ссылка на этот вариант";
+    const link = document.createElement("input");
+    link.id = "ogeVariantLink";
+    link.type = "text";
+    link.readOnly = true;
+    const status = document.createElement("p");
+    status.setAttribute("role", "status");
+    const updateLink = () => {
+      link.value = variantUrl(ids, name.value.trim() || "Сохранённый вариант");
+      status.textContent = "";
+    };
+    name.addEventListener("input", updateLink);
+    updateLink();
+    form.addEventListener("submit", (event) => {
+      event.preventDefault();
+      try {
+        const saved = readSavedVariants();
+        const item = {
+          title: name.value.trim() || "Сохранённый вариант",
+          ids: ids.slice(),
+          savedAt: new Date().toISOString(),
+        };
+        const existing = saved.findIndex(
+          (entry) =>
+            entry.title === item.title && entry.ids.join(",") === ids.join(","),
+        );
+        if (existing !== -1) saved.splice(existing, 1);
+        saved.unshift(item);
+        localStorage.setItem(SAVED_KEY, JSON.stringify(saved));
+        renderSavedVariants();
+        status.textContent =
+          "Вариант сохранён. Он доступен в разделе «Сохранённые варианты».";
+      } catch {
+        status.textContent =
+          "Не удалось сохранить в браузере. Скопируйте ссылку на вариант, чтобы вернуться к нему позже.";
+      }
+    });
+    copy.addEventListener("click", async () => {
+      try {
+        await navigator.clipboard.writeText(link.value);
+        status.textContent =
+          "Ссылка скопирована. По ней откроются те же задания в том же порядке.";
+      } catch {
+        link.focus();
+        link.select();
+        status.textContent = "Скопируйте выделенную ссылку вручную.";
+      }
+    });
+    actions.append(save, copy);
+    form.append(label, name, actions, linkLabel, link, status);
+    return form;
+  }
+
+  function renderSavedVariants() {
+    const list = document.getElementById("ogeSavedVariants");
+    if (!list) return;
+    list.replaceChildren();
+    let saved;
+    try {
+      saved = readSavedVariants();
+    } catch {
+      list.textContent =
+        "Сохранённые варианты недоступны в этом браузере. Можно пользоваться ссылками на варианты.";
+      return;
+    }
+    if (!saved.length) {
+      list.textContent = "Пока нет сохранённых вариантов.";
+      return;
+    }
+    saved.forEach((item) => {
+      const row = document.createElement("li");
+      const link = document.createElement("a");
+      link.textContent = item.title;
+      link.href = variantUrl(item.ids, item.title);
+      link.addEventListener("click", (event) => {
+        if (event.ctrlKey || event.metaKey || event.shiftKey || event.altKey)
+          return;
+        event.preventDefault();
+        openVariant(item.ids, item.title);
+      });
+      const meta = document.createElement("p");
+      meta.textContent = `${new Date(item.savedAt).toLocaleDateString("ru-RU")} · Заданий: ${item.ids.length}`;
+      row.append(link, meta);
+      list.appendChild(row);
+    });
+  }
 
   function countInput(type) {
     return document.getElementById(`ogeCount${type}`);
@@ -155,11 +336,13 @@
 
   async function loadIndex(url) {
     const res = await fetch(url);
+    if (!res.ok) throw new Error("Не удалось загрузить каталог");
     return res.json();
   }
 
   async function loadTask(taskDir, id) {
     const res = await fetch(`${taskDir}${id}.json`);
+    if (!res.ok) throw new Error(`Не удалось загрузить задание ${id}`);
     return res.json();
   }
 
@@ -169,6 +352,7 @@
    * сборки варианта.
    */
   async function buildFull(resultEl, counts, options) {
+    const version = ++buildVersion;
     const opts = options || {};
     resultEl.textContent = "Собираю…";
 
@@ -176,25 +360,39 @@
     try {
       index = await loadIndex(opts.indexUrl || "task-index.json");
     } catch {
+      if (version !== buildVersion) return;
       resultEl.textContent =
         "Не удалось загрузить каталог заданий (task-index.json).";
       return;
     }
 
+    if (version !== buildVersion) return;
     const onlyHard = opts.onlyHard;
     const pool = onlyHard ? index.filter((row) => row.advanced) : index;
     const byType = groupByType(pool);
     const warnings = [];
     const picks = [];
-    counts.forEach(([type, n]) => {
-      const available = byType.get(type) ?? [];
-      if (available.length < n) {
-        warnings.push(
-          `Тип ${type}: запрошено ${n}, ${onlyHard ? "сложных заданий" : "в наличии"} только ${available.length} — взяты все.`,
-        );
+    if (opts.ids) {
+      const byId = new Map(index.map((row) => [row.id, row]));
+      const missing = opts.ids.filter((id) => !byId.has(id));
+      if (missing.length) {
+        resultEl.textContent = `Не удалось открыть вариант: задания № ${missing.join(", ")} больше не доступны.`;
+        return;
       }
-      pickRandom(available, n).forEach((row) => picks.push({ type, row }));
-    });
+      opts.ids.forEach((id) => {
+        const row = byId.get(id);
+        picks.push({ type: row.examType, row });
+      });
+    } else
+      counts.forEach(([type, n]) => {
+        const available = byType.get(type) ?? [];
+        if (available.length < n) {
+          warnings.push(
+            `Тип ${type}: запрошено ${n}, ${onlyHard ? "сложных заданий" : "в наличии"} только ${available.length} — взяты все.`,
+          );
+        }
+        pickRandom(available, n).forEach((row) => picks.push({ type, row }));
+      });
 
     if (!picks.length) {
       resultEl.innerHTML = "";
@@ -210,10 +408,12 @@
     try {
       tasks = await Promise.all(picks.map((p) => loadTask(taskDir, p.row.id)));
     } catch {
+      if (version !== buildVersion) return;
       resultEl.textContent = "Не удалось загрузить содержимое заданий.";
       return;
     }
 
+    if (version !== buildVersion) return;
     resultEl.innerHTML = "";
     if (opts.title) {
       const h = document.createElement("h3");
@@ -226,6 +426,13 @@
       warn.textContent = warnings.join(" ");
       resultEl.appendChild(warn);
     }
+
+    resultEl.appendChild(
+      buildSaveControls(
+        picks.map((p) => p.row.id),
+        opts.title,
+      ),
+    );
 
     const hintToggle = buildHintToggle(resultEl);
     resultEl.appendChild(hintToggle);
@@ -260,6 +467,7 @@
 
   /** Общая сборка: считает выборку и рисует результат. */
   async function build(resultEl, counts, options) {
+    ++buildVersion;
     const opts = options || {};
     resultEl.textContent = "Собираю…";
 
@@ -305,6 +513,7 @@
     const clearBtn = document.getElementById("clearCountsBtn");
     if (clearBtn) {
       clearBtn.addEventListener("click", () => {
+        buildVersion++;
         setAllCounts("");
         resultEl.innerHTML = "";
       });
@@ -313,6 +522,7 @@
     buildBtn.addEventListener("click", async () => {
       const counts = readCounts();
       if (!counts.length) {
+        buildVersion++;
         resultEl.innerHTML = "";
         const hint = document.createElement("p");
         hint.className = "tip";
@@ -355,6 +565,12 @@
   function init() {
     initBuilder();
     initQuickVariant();
+    renderSavedVariants();
+    openLinkedVariant();
+    window.addEventListener("hashchange", openLinkedVariant);
+    window.addEventListener("storage", (event) => {
+      if (event.key === SAVED_KEY || event.key === null) renderSavedVariants();
+    });
   }
 
   if (document.readyState === "loading") {

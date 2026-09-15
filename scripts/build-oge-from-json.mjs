@@ -327,6 +327,12 @@ function buildOgeIndexPage(countByType, rows) {
 ${variantButtons}
         </div>
 
+        <section aria-labelledby="ogeSavedHeading" class="oge-saved-variants">
+          <h3 id="ogeSavedHeading" class="oge-section-heading">Сохранённые варианты</h3>
+          <p>Сохраняются в этом браузере. Для другого устройства или отправки ученику скопируйте ссылку на вариант.</p>
+          <ul id="ogeSavedVariants" class="topic-list"></ul>
+        </section>
+
         <h3 class="oge-section-heading">Свой вариант</h3>
         <p>
           <label class="oge-builder-onlyhard">

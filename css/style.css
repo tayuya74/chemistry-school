@@ -1365,3 +1365,53 @@ button.btn-secondary:focus-visible {
 #ogeTaskSearchStatus:empty {
   display: none;
 }
+
+.oge-variant-save {
+  margin: 20px 0;
+  padding: 16px;
+  border: 1px solid var(--color-border);
+  border-radius: 8px;
+}
+
+.oge-variant-save label {
+  display: block;
+  margin-bottom: 8px;
+  font-weight: 600;
+}
+
+.oge-variant-save input {
+  display: block;
+  box-sizing: border-box;
+  width: 100%;
+  min-height: 44px;
+  padding: 10px 12px;
+  border: 2px solid var(--color-field-border);
+  border-radius: 8px;
+  background: var(--color-field-bg);
+  color: var(--color-text);
+  font: inherit;
+}
+
+.oge-variant-save input:focus-visible {
+  outline: 3px solid var(--color-field-focus-ring);
+  outline-offset: 2px;
+}
+
+.oge-variant-save__actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  margin: 12px 0 20px;
+}
+
+.oge-variant-save button {
+  min-height: 44px;
+}
+
+.oge-variant-save p:empty {
+  display: none;
+}
+
+.oge-saved-variants li p {
+  margin: 4px 0 12px;
+}
