@@ -771,6 +771,12 @@ button.oge-sort-btn {
   font-size: 0.95rem;
 }
 
+.ref-downloads {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+}
+
 .metal-series {
   display: flex;
   flex-wrap: wrap;
