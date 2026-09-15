@@ -1,4 +1,4 @@
-/** Версии 1 и 2 неизменяемы: от них зависят уже выданные номера вариантов. */
+/** Версии 1–3 неизменяемы: от них зависят уже выданные номера вариантов. */
 (function (root) {
   const ALPHABET = "23456789ABCDEFGHJKMNPQRSTUVWXYZ";
   const legacyChecksum = (payload) =>
@@ -74,6 +74,19 @@
       .replace(/^№\s*/, "")
       .replace(/[\s-]/g, "")
       .toUpperCase();
+    if (/^\d{6}$/.test(code)) {
+      const number = Number(code);
+      const onlyHard = number >= 500000;
+      const counts = [];
+      for (let type = 1; type <= 23; type++) counts.push([type, 1]);
+      return {
+        code,
+        version: 3,
+        seed: number % 500000,
+        onlyHard,
+        counts,
+      };
+    }
     if (/^1\d/.test(code)) return parseLegacy(code);
     if (
       !/^2[2-9A-HJKMNP-Z]{8}(?:[2-9A-HJKMNP-Z]{3})*$/.test(code) ||
@@ -114,18 +127,18 @@
     const full =
       normalized.length === 23 &&
       normalized.every(([type, n], i) => type === i + 1 && n === 1);
+    if (full) {
+      const seed = root.crypto.getRandomValues(new Uint32Array(1))[0] % 500000;
+      return String(seed + (onlyHard ? 500000 : 0)).padStart(6, "0");
+    }
     const seed =
       root.crypto.getRandomValues(new Uint32Array(1))[0] % ALPHABET.length ** 6;
-    const mode = (full ? 0 : 2) + (onlyHard ? 1 : 0);
+    const mode = 2 + (onlyHard ? 1 : 0);
     const payload =
       "2" +
       encode(seed, 6) +
       encode(mode, 1) +
-      (full
-        ? ""
-        : normalized
-            .map(([type, n]) => encode(type, 1) + encode(n, 2))
-            .join(""));
+      normalized.map(([type, n]) => encode(type, 1) + encode(n, 2)).join("");
     return parse(payload + shortChecksum(payload)).code;
   }
 

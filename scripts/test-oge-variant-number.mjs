@@ -53,7 +53,7 @@ test("На другом устройстве без сохранений вос�
     const teacher = engine(seed),
       student = engine(42),
       code = teacher.create(full, false);
-    assert.equal(code.length, 9);
+    assert.match(code, /^\d{6}$/);
     const ids = plain(teacher.pick(code, catalog).ids);
     assert.deepEqual(
       plain(student.pick(code, catalog.slice().reverse()).ids),
@@ -84,9 +84,9 @@ test("Свой набор и фильтр сложности входят в н�
     }
   }
 });
-test("Опечатки отклоняются, пробелы и знак номера допустимы", () => {
+test("В длинном коде опечатки отклоняются, пробелы и знак номера допустимы", () => {
   const api = engine(),
-    code = api.create(full, false);
+    code = api.create([[1, 2]], false);
   assert.equal(
     api.parse("№ " + code.slice(0, 4).toLowerCase() + "-" + code.slice(4)).code,
     code,
@@ -106,4 +106,14 @@ test("Старые 13-значные номера продолжают откр�
   assert.equal(parsed.version, 1);
   assert.equal(parsed.seed, 0);
   assert.equal(parsed.counts.length, 23);
+});
+
+test("Полный вариант получает шестизначный цифровой номер", () => {
+  const regular = engine(123456789).create(full, false);
+  const hard = engine(123456789).create(full, true);
+  assert.equal(regular, "456789");
+  assert.equal(hard, "956789");
+  assert.equal(engine().parse(regular).onlyHard, false);
+  assert.equal(engine().parse(hard).onlyHard, true);
+  assert.equal(engine().parse("000042").seed, 42);
 });
