@@ -1415,3 +1415,12 @@ button.btn-secondary:focus-visible {
 .oge-saved-variants li p {
   margin: 4px 0 12px;
 }
+
+#ogeCurrentVariantNumber {
+  margin-bottom: 16px;
+}
+
+#builderResult > h3,
+.oge-saved-variants a {
+  overflow-wrap: anywhere;
+}

@@ -322,6 +322,15 @@ function buildOgeIndexPage(countByType, rows) {
           <p id="ogeTaskSearchStatus" role="status"></p>
         </form>
 
+        <form id="ogeVariantSearch" class="oge-task-search" role="search" aria-label="Поиск варианта" novalidate>
+          <label for="ogeVariantNumber">Найти вариант по номеру</label>
+          <div class="oge-task-search__controls">
+            <input id="ogeVariantNumber" type="text" inputmode="numeric" autocomplete="off" placeholder="Номер собранного варианта" aria-describedby="ogeVariantSearchStatus" />
+            <button type="submit">Открыть вариант</button>
+          </div>
+          <p id="ogeVariantSearchStatus" role="status"></p>
+        </form>
+
         <h3 class="oge-section-heading">Готовые варианты</h3>
         <div class="oge-variant-grid">
 ${variantButtons}
@@ -329,7 +338,7 @@ ${variantButtons}
 
         <section aria-labelledby="ogeSavedHeading" class="oge-saved-variants">
           <h3 id="ogeSavedHeading" class="oge-section-heading">Сохранённые варианты</h3>
-          <p>Сохраняются в этом браузере. Для другого устройства или отправки ученику скопируйте ссылку на вариант.</p>
+          <p>Этот список хранится в браузере. Номер нового варианта работает на любом устройстве — сообщите его ученику.</p>
           <ul id="ogeSavedVariants" class="topic-list"></ul>
         </section>
 
@@ -381,6 +390,7 @@ ${typeRows}
     articleInner,
     scripts: `    <script src="../../js/oge-task-search.js"></script>
     <script src="../../js/oge-render-client.js"></script>
+    <script src="../../js/oge-variant-number.js"></script>
     <script src="../../js/oge-task-builder.js"></script>`,
   });
 }

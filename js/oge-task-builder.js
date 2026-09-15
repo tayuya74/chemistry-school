@@ -39,8 +39,12 @@
     return saved;
   }
 
-  function variantUrl(ids, title) {
+  function variantUrl(ids, title, number) {
     const url = new URL(window.location.href);
+    if (number) {
+      url.hash = new URLSearchParams({ number }).toString();
+      return url.href;
+    }
     url.hash = new URLSearchParams({
       variant: ids.join(","),
       title,
@@ -48,12 +52,13 @@
     return url.href;
   }
 
-  function openVariant(ids, title) {
+  function openVariant(ids, title, number) {
     const result = document.getElementById("builderResult");
     if (!result) return;
     return buildFull(result, [], {
       ids,
       title,
+      number,
       taskDir: "../../data/oge/tasks/",
       linkPrefix: "ex/",
     }).then(() => scrollToResult(result));
@@ -61,6 +66,10 @@
 
   function openLinkedVariant() {
     const params = new URLSearchParams(window.location.hash.slice(1));
+    if (params.has("number")) {
+      findNumber(params.get("number"));
+      return;
+    }
     if (!params.has("variant")) return;
     const raw = params.get("variant");
     const ids = raw.split(",").map(Number);
@@ -78,7 +87,7 @@
     );
   }
 
-  function buildSaveControls(ids, title) {
+  function buildSaveControls(ids, title, number) {
     const form = document.createElement("form");
     form.className = "oge-variant-save";
     const label = document.createElement("label");
@@ -112,7 +121,11 @@
     const status = document.createElement("p");
     status.setAttribute("role", "status");
     const updateLink = () => {
-      link.value = variantUrl(ids, name.value.trim() || "Сохранённый вариант");
+      link.value = variantUrl(
+        ids,
+        name.value.trim() || "Сохранённый вариант",
+        number,
+      );
       status.textContent = "";
     };
     name.addEventListener("input", updateLink);
@@ -124,6 +137,7 @@
         const item = {
           title: name.value.trim() || "Сохранённый вариант",
           ids: ids.slice(),
+          ...(number ? { number } : {}),
           savedAt: new Date().toISOString(),
         };
         const existing = saved.findIndex(
@@ -153,6 +167,33 @@
       }
     });
     actions.append(save, copy);
+    if (number) {
+      const numberLabel = document.createElement("label");
+      numberLabel.htmlFor = "ogeCurrentVariantNumber";
+      numberLabel.textContent = "Номер варианта — можно отправить ученику";
+      const numberInput = document.createElement("input");
+      numberInput.id = "ogeCurrentVariantNumber";
+      numberInput.type = "text";
+      numberInput.readOnly = true;
+      numberInput.value = number;
+      const copyNumber = document.createElement("button");
+      copyNumber.type = "button";
+      copyNumber.className = "btn-secondary";
+      copyNumber.textContent = "Копировать номер";
+      copyNumber.addEventListener("click", async () => {
+        try {
+          await navigator.clipboard.writeText(number);
+          status.textContent =
+            "Номер скопирован. Ученик может ввести его в поле «Найти вариант по номеру».";
+        } catch {
+          numberInput.focus();
+          numberInput.select();
+          status.textContent = "Скопируйте выделенный номер вручную.";
+        }
+      });
+      form.append(numberLabel, numberInput);
+      actions.appendChild(copyNumber);
+    }
     form.append(label, name, actions, linkLabel, link, status);
     return form;
   }
@@ -176,13 +217,17 @@
     saved.forEach((item) => {
       const row = document.createElement("li");
       const link = document.createElement("a");
-      link.textContent = item.title;
-      link.href = variantUrl(item.ids, item.title);
+      link.textContent =
+        item.title +
+        (item.number && !item.title.includes(item.number)
+          ? ` · № ${item.number}`
+          : "");
+      link.href = variantUrl(item.ids, item.title, item.number);
       link.addEventListener("click", (event) => {
         if (event.ctrlKey || event.metaKey || event.shiftKey || event.altKey)
           return;
         event.preventDefault();
-        openVariant(item.ids, item.title);
+        openVariant(item.ids, item.title, item.number);
       });
       const meta = document.createElement("p");
       meta.textContent = `${new Date(item.savedAt).toLocaleDateString("ru-RU")} · Заданий: ${item.ids.length}`;
@@ -353,12 +398,24 @@
    */
   async function buildFull(resultEl, counts, options) {
     const version = ++buildVersion;
-    const opts = options || {};
+    const opts = { ...options };
     resultEl.textContent = "Собираю…";
 
     let index;
+    let numberWarnings = [];
     try {
-      index = await loadIndex(opts.indexUrl || "task-index.json");
+      if (opts.number) {
+        opts.number = window.OGE_VARIANTS.parse(opts.number).code;
+        index = await loadIndex(window.OGE_VARIANTS.catalogUrl(opts.number));
+        const selection = window.OGE_VARIANTS.pick(opts.number, index);
+        opts.ids = selection.ids;
+        numberWarnings = selection.warnings;
+        if (!opts.title || opts.title.endsWith("из банка заданий")) {
+          opts.title = `Вариант № ${opts.number}`;
+        }
+      } else {
+        index = await loadIndex(opts.indexUrl || "task-index.json");
+      }
     } catch {
       if (version !== buildVersion) return;
       resultEl.textContent =
@@ -370,7 +427,7 @@
     const onlyHard = opts.onlyHard;
     const pool = onlyHard ? index.filter((row) => row.advanced) : index;
     const byType = groupByType(pool);
-    const warnings = [];
+    const warnings = numberWarnings;
     const picks = [];
     if (opts.ids) {
       const byId = new Map(index.map((row) => [row.id, row]));
@@ -431,6 +488,7 @@
       buildSaveControls(
         picks.map((p) => p.row.id),
         opts.title,
+        opts.number,
       ),
     );
 
@@ -532,6 +590,10 @@
         return;
       }
       await buildFull(resultEl, counts, {
+        number: window.OGE_VARIANTS.create(
+          counts,
+          document.getElementById("onlyHard")?.checked,
+        ),
         onlyHard: document.getElementById("onlyHard")?.checked,
         taskDir: "../../data/oge/tasks/",
         linkPrefix: "ex/",
@@ -550,6 +612,10 @@
     const useFullRender = Boolean(window.OGE_RENDER);
     btn.addEventListener("click", async () => {
       await (useFullRender ? buildFull : build)(resultEl, fullVariantCounts(), {
+        number: window.OGE_VARIANTS.create(
+          fullVariantCounts(),
+          document.getElementById("onlyHard")?.checked,
+        ),
         onlyHard: document.getElementById("onlyHard")?.checked,
         indexUrl: btn.dataset.index || "task-index.json",
         linkPrefix: btn.dataset.linkPrefix || "ex/",
@@ -562,9 +628,32 @@
     return true;
   }
 
+  function findNumber(value) {
+    const status = document.getElementById("ogeVariantSearchStatus");
+    try {
+      const { code } = window.OGE_VARIANTS.parse(value);
+      status.textContent = "";
+      document.getElementById("ogeVariantNumber").value = code;
+      return openVariant(null, "", code);
+    } catch (error) {
+      status.textContent = error.message;
+      document.getElementById("ogeVariantNumber").focus();
+    }
+  }
+
+  function initNumberSearch() {
+    const form = document.getElementById("ogeVariantSearch");
+    if (!form) return;
+    form.addEventListener("submit", (event) => {
+      event.preventDefault();
+      findNumber(document.getElementById("ogeVariantNumber").value);
+    });
+  }
+
   function init() {
     initBuilder();
     initQuickVariant();
+    initNumberSearch();
     renderSavedVariants();
     openLinkedVariant();
     window.addEventListener("hashchange", openLinkedVariant);
