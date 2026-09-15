@@ -326,12 +326,6 @@ function buildOgeIndexPage(countByType, rows) {
 ${variantButtons}
         </div>
 
-        <section aria-labelledby="ogeSavedHeading" class="oge-saved-variants">
-          <h3 id="ogeSavedHeading" class="oge-section-heading">Сохранённые варианты</h3>
-          <p>Этот список хранится в браузере. Номер нового варианта работает на любом устройстве — сообщите его ученику.</p>
-          <ul id="ogeSavedVariants" class="topic-list"></ul>
-        </section>
-
         <h3 class="oge-section-heading">Свой вариант</h3>
         <p>
           <label class="oge-builder-onlyhard">
@@ -369,6 +363,30 @@ ${typeRows}
 
   return shell({
     title: "ОГЭ — Химия",
+    cssBase: "../..",
+    jsBase: "../..",
+    nav: {
+      home: "../../index.html",
+      topics: "../topics/index.html",
+      tables: "../tables.html",
+      oge: "index.html",
+    },
+    articleInner,
+    scripts: `    <script src="../../js/oge-render-client.js"></script>
+    <script src="../../js/oge-variant-number.js"></script>
+    <script src="../../js/oge-task-builder.js"></script>`,
+  });
+}
+
+function buildNumberedVariantPage() {
+  const articleInner = `        <p><a href="index.html">← К заданиям ОГЭ</a></p>
+        <div id="ogeVariantPage">
+          <h2 id="ogeVariantTitle">Вариант ОГЭ</h2>
+          <div id="builderResult" role="status">Загружаю вариант…</div>
+        </div>`;
+
+  return shell({
+    title: "Вариант ОГЭ по химии",
     cssBase: "../..",
     jsBase: "../..",
     nav: {
@@ -436,6 +454,11 @@ function main() {
   fs.writeFileSync(
     path.join(ogeDir, "index.html"),
     buildOgeIndexPage(countByType, rows),
+    "utf8",
+  );
+  fs.writeFileSync(
+    path.join(ogeDir, "variant.html"),
+    buildNumberedVariantPage(),
     "utf8",
   );
   console.log("OK index.html (варианты + конструктор)");

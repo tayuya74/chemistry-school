@@ -10,7 +10,6 @@
 (function () {
   const TOTAL_TYPES = 23;
   let buildVersion = 0;
-  const SAVED_KEY = "chemistry-school.oge.saved-variants.v1";
 
   function validIds(ids) {
     return (
@@ -22,42 +21,24 @@
     );
   }
 
-  function readSavedVariants() {
-    const saved = JSON.parse(localStorage.getItem(SAVED_KEY) || "[]");
-    if (
-      !Array.isArray(saved) ||
-      saved.some(
-        (item) =>
-          !item ||
-          typeof item.title !== "string" ||
-          !validIds(item.ids) ||
-          !Number.isFinite(Date.parse(item.savedAt)),
-      )
-    ) {
-      throw new Error("Не удалось прочитать сохранённые варианты");
-    }
-    return saved;
-  }
-
-  function variantUrl(ids, title, number) {
-    const url = new URL(window.location.href);
-    if (number) {
-      url.hash = new URLSearchParams({ number }).toString();
-      return url.href;
-    }
-    url.hash = new URLSearchParams({
-      variant: ids.join(","),
-      title,
-    }).toString();
-    return url.href;
-  }
-
   function openVariant(ids, title, number) {
+    if (number && !document.getElementById("ogeVariantPage")) {
+      const url = new URL("variant.html", document.baseURI);
+      url.hash = new URLSearchParams({ number }).toString();
+      window.location.assign(url.href);
+      return;
+    }
     const result = document.getElementById("builderResult");
     if (!result) return;
+    const heading = document.getElementById("ogeVariantTitle");
+    const pageTitle = number ? `Вариант № ${number}` : title;
+    if (heading && pageTitle) {
+      heading.textContent = pageTitle;
+      document.title = `${pageTitle} — ОГЭ по химии`;
+    }
     return buildFull(result, [], {
       ids,
-      title,
+      title: heading ? "" : title,
       number,
       taskDir: "../../data/oge/tasks/",
       linkPrefix: "ex/",
@@ -410,7 +391,10 @@
         const selection = window.OGE_VARIANTS.pick(opts.number, index);
         opts.ids = selection.ids;
         numberWarnings = selection.warnings;
-        if (!opts.title || opts.title.endsWith("из банка заданий")) {
+        if (
+          !document.getElementById("ogeVariantTitle") &&
+          (!opts.title || opts.title.endsWith("из банка заданий"))
+        ) {
           opts.title = `Вариант № ${opts.number}`;
         }
       } else {
@@ -483,14 +467,6 @@
       warn.textContent = warnings.join(" ");
       resultEl.appendChild(warn);
     }
-
-    resultEl.appendChild(
-      buildSaveControls(
-        picks.map((p) => p.row.id),
-        opts.title,
-        opts.number,
-      ),
-    );
 
     const hintToggle = buildHintToggle(resultEl);
     resultEl.appendChild(hintToggle);
@@ -577,7 +553,7 @@
       });
     }
 
-    buildBtn.addEventListener("click", async () => {
+    buildBtn.addEventListener("click", () => {
       const counts = readCounts();
       if (!counts.length) {
         buildVersion++;
@@ -589,17 +565,14 @@
         resultEl.appendChild(hint);
         return;
       }
-      await buildFull(resultEl, counts, {
-        number: window.OGE_VARIANTS.create(
+      openVariant(
+        null,
+        "",
+        window.OGE_VARIANTS.create(
           counts,
           document.getElementById("onlyHard")?.checked,
         ),
-        onlyHard: document.getElementById("onlyHard")?.checked,
-        taskDir: "../../data/oge/tasks/",
-        linkPrefix: "ex/",
-        title: "Свой вариант из банка заданий",
-      });
-      scrollToResult(resultEl);
+      );
     });
     return true;
   }
@@ -609,21 +582,15 @@
     const resultEl = document.getElementById("builderResult");
     if (!btn || !resultEl) return false;
 
-    const useFullRender = Boolean(window.OGE_RENDER);
-    btn.addEventListener("click", async () => {
-      await (useFullRender ? buildFull : build)(resultEl, fullVariantCounts(), {
-        number: window.OGE_VARIANTS.create(
+    btn.addEventListener("click", () => {
+      openVariant(
+        null,
+        "",
+        window.OGE_VARIANTS.create(
           fullVariantCounts(),
           document.getElementById("onlyHard")?.checked,
         ),
-        onlyHard: document.getElementById("onlyHard")?.checked,
-        indexUrl: btn.dataset.index || "task-index.json",
-        linkPrefix: btn.dataset.linkPrefix || "ex/",
-        taskDir: btn.dataset.taskDir || "../../data/oge/tasks/",
-        title: "Случайный вариант из банка заданий",
-        emptyText: "В каталоге не нашлось заданий.",
-      });
-      scrollToResult(resultEl);
+      );
     });
     return true;
   }
@@ -633,14 +600,21 @@
     const input = document.getElementById("ogeNumber");
     try {
       const { code } = window.OGE_VARIANTS.parse(value);
-      status.textContent = "";
-      input.value = code;
-      input.removeAttribute("aria-invalid");
+      if (status) status.textContent = "";
+      if (input) {
+        input.value = code;
+        input.removeAttribute("aria-invalid");
+      }
       return openVariant(null, "", code);
     } catch (error) {
-      status.textContent = error.message;
-      input.setAttribute("aria-invalid", "true");
-      input.focus();
+      if (status) status.textContent = error.message;
+      if (input) {
+        input.setAttribute("aria-invalid", "true");
+        input.focus();
+      } else {
+        const result = document.getElementById("builderResult");
+        if (result) result.textContent = error.message;
+      }
     }
   }
 
@@ -678,12 +652,8 @@
     initBuilder();
     initQuickVariant();
     initNumberSearch();
-    renderSavedVariants();
     openLinkedVariant();
     window.addEventListener("hashchange", openLinkedVariant);
-    window.addEventListener("storage", (event) => {
-      if (event.key === SAVED_KEY || event.key === null) renderSavedVariants();
-    });
   }
 
   if (document.readyState === "loading") {
