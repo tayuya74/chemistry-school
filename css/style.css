@@ -764,12 +764,6 @@ button.oge-sort-btn {
   opacity: 0.95;
 }
 
-.ref-table-subheading {
-  margin: 28px 0 8px;
-  font-size: 1.05rem;
-  font-weight: 600;
-}
-
 .ref-table-note {
   margin: 0 0 10px;
   font-size: 0.95rem;
@@ -779,25 +773,6 @@ button.oge-sort-btn {
   display: flex;
   flex-wrap: wrap;
   gap: 10px;
-}
-
-.metal-series {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 6px 8px;
-  align-items: center;
-  padding: 12px 14px;
-  border-radius: 8px;
-  border: 1px solid var(--color-border);
-  background: var(--color-tip-bg);
-  font-family: system-ui, "Segoe UI", Arial, sans-serif;
-  font-size: 0.95rem;
-  font-weight: 600;
-}
-
-.metal-series span {
-  padding: 2px 4px;
-  white-space: nowrap;
 }
 
 /* Сколько задание даёт баллов на экзамене */
@@ -889,17 +864,6 @@ button.oge-sort-btn {
 .trivial-group th {
   background: var(--color-tip-bg);
   font-size: 1rem;
-}
-
-.metal-series__h {
-  color: var(--color-accent);
-}
-
-.metal-series-note {
-  margin: 8px 0 0;
-  font-size: 0.9rem;
-  font-style: italic;
-  text-align: right;
 }
 
 /* ---- Периодическая система, короткая форма (страница tables.html) ---- */
