@@ -196,6 +196,10 @@ button.theme-toggle .material-symbols-outlined {
   padding: 0 16px;
 }
 
+.tables-container {
+  max-width: 1200px;
+}
+
 .card {
   background: var(--color-card-bg);
   border-radius: 10px;
@@ -924,6 +928,7 @@ button.oge-sort-btn {
 .pt-corner,
 .pt-groups,
 .pt-group,
+.pt-periods-label,
 .pt-period {
   background: var(--color-tip-bg);
   font-weight: 600;
@@ -935,7 +940,7 @@ button.oge-sort-btn {
   width: 3.4rem;
 }
 
-.pt-corner__vertical {
+.pt-periods-label__vertical {
   display: inline-flex;
   flex-direction: column;
   align-items: center;
@@ -1018,16 +1023,20 @@ button.oge-sort-btn {
 
 /* Ширины колонок в долях: VIII группа ровно втрое шире остальных,
    поэтому клетка триады совпадает по ширине с обычной клеткой. */
+.pt-col-period-label {
+  width: 2.8%;
+}
+
 .pt-col-period {
-  width: 4.8%;
+  width: 3.8%;
 }
 
 .pt-col {
-  width: 9.52%;
+  width: 9.34%;
 }
 
 .pt-col-viii {
-  width: 28.6%;
+  width: 28.02%;
 }
 
 /* Триада в побочной подгруппе VIII: три элемента в одной клетке. */

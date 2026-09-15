@@ -35,7 +35,7 @@
       </div>
     </header>
 
-    <main class="container">
+    <main class="container tables-container">
       <section class="card">
         <h2>Периодическая система химических элементов Д. И. Менделеева</h2>
         <p class="lead">
@@ -78,6 +78,7 @@
               короткая форма
             </caption>
             <colgroup>
+              <col class="pt-col-period-label" />
               <col class="pt-col-period" />
               <col class="pt-col" />
               <col class="pt-col" />
@@ -90,13 +91,12 @@
             </colgroup>
             <thead>
               <tr>
-                <th class="pt-corner" rowspan="2" scope="col">
-                  <span class="visually-hidden">Периоды</span
-                  ><span class="pt-corner__vertical" aria-hidden="true"
-                    ><span>П</span><span>е</span><span>р</span><span>и</span
-                    ><span>о</span><span>д</span><span>ы</span></span
-                  >
-                </th>
+                <th
+                  class="pt-corner"
+                  colspan="2"
+                  rowspan="2"
+                  aria-hidden="true"
+                ></th>
                 <th class="pt-groups" colspan="8" scope="colgroup">Группы</th>
               </tr>
               <tr>
@@ -112,6 +112,13 @@
             </thead>
             <tbody>
               <tr>
+                <th class="pt-periods-label" rowspan="11" scope="rowgroup">
+                  <span class="visually-hidden">Периоды</span
+                  ><span class="pt-periods-label__vertical" aria-hidden="true"
+                    ><span>П</span><span>е</span><span>р</span><span>и</span
+                    ><span>о</span><span>д</span><span>ы</span></span
+                  >
+                </th>
                 <th class="pt-period" scope="row">1</th>
                 <td class="pt-cell pt-cell--left">
                   <div class="pt-el" title="Водород, Ar = 1,008">

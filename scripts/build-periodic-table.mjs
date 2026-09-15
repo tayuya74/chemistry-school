@@ -256,23 +256,27 @@ function renderCell(cell, groupIndex, kind) {
 function renderMain() {
   /* Группе VIII нужно втрое больше места: там стоят триады Fe—Co—Ni и т. п. */
   const cols =
-    `<colgroup><col class="pt-col-period" />` +
+    `<colgroup><col class="pt-col-period-label" /><col class="pt-col-period" />` +
     GROUPS.map(
       (g) => `<col class="${g === "VIII" ? "pt-col-viii" : "pt-col"}" />`,
     ).join("") +
     `</colgroup>`;
 
   const head =
-    `<tr><th class="pt-corner" rowspan="2" scope="col"><span class="visually-hidden">Периоды</span><span class="pt-corner__vertical" aria-hidden="true">${[..."Периоды"].map((letter) => `<span>${letter}</span>`).join("")}</span></th>` +
+    `<tr><th class="pt-corner" colspan="2" rowspan="2" aria-hidden="true"></th>` +
     `<th class="pt-groups" colspan="8" scope="colgroup">Группы</th></tr>` +
     `<tr>${GROUPS.map((g) => `<th class="pt-group" scope="col">${g}</th>`).join("")}</tr>`;
 
-  const body = ROWS.map((r) => {
+  const body = ROWS.map((r, rowIndex) => {
+    const periodsLabel =
+      rowIndex === 0
+        ? `<th class="pt-periods-label" rowspan="${ROWS.length}" scope="rowgroup"><span class="visually-hidden">Периоды</span><span class="pt-periods-label__vertical" aria-hidden="true">${[..."Периоды"].map((letter) => `<span>${letter}</span>`).join("")}</span></th>`
+        : "";
     const label =
       r.period === null
         ? ""
         : `<th class="pt-period" scope="row"${r.span > 1 ? ` rowspan="${r.span}"` : ""}>${r.period}</th>`;
-    return `<tr>${label}${r.cells.map((c, i) => renderCell(c, i, r.kind)).join("")}</tr>`;
+    return `<tr>${periodsLabel}${label}${r.cells.map((c, i) => renderCell(c, i, r.kind)).join("")}</tr>`;
   }).join("");
 
   return `<table class="pt-table"><caption class="visually-hidden">Периодическая система химических элементов Д. И. Менделеева, короткая форма</caption>${cols}<thead>${head}</thead><tbody>${body}</tbody></table>`;
