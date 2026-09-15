@@ -929,6 +929,14 @@ button.oge-sort-btn {
   width: 3.4rem;
 }
 
+.pt-corner__vertical {
+  display: inline-flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  line-height: 1;
+}
+
 /* Клетка элемента: номер сверху, символ крупно, масса и название мелко. */
 .pt-el {
   display: inline-block;

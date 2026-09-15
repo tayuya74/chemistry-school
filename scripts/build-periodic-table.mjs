@@ -263,7 +263,7 @@ function renderMain() {
     `</colgroup>`;
 
   const head =
-    `<tr><th class="pt-corner" rowspan="2" scope="col">Периоды</th>` +
+    `<tr><th class="pt-corner" rowspan="2" scope="col"><span class="visually-hidden">Периоды</span><span class="pt-corner__vertical" aria-hidden="true">${[..."Периоды"].map((letter) => `<span>${letter}</span>`).join("")}</span></th>` +
     `<th class="pt-groups" colspan="8" scope="colgroup">Группы</th></tr>` +
     `<tr>${GROUPS.map((g) => `<th class="pt-group" scope="col">${g}</th>`).join("")}</tr>`;
 
