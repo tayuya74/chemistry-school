@@ -27,12 +27,11 @@ function engine(seed = 0) {
   return ctx.OGE_VARIANTS;
 }
 const plain = (value) => JSON.parse(JSON.stringify(value));
-test("Выданный номер и закреплённый каталог не меняются", () => {
+test("Старый номер и закреплённый каталог не меняются", () => {
   assert.equal(
     createHash("sha256").update(JSON.stringify(catalog)).digest("hex"),
     "f336406a4bab610c8221ea21ffc3be0a6d2abf9912132c32ef073bf9c79fb9e8",
   );
-  assert.equal(engine().create(full, false), "1000000000049");
   assert.deepEqual(
     plain(engine().pick("1000000000049", catalog).ids),
     [
@@ -54,7 +53,7 @@ test("На другом устройстве без сохранений вос�
     const teacher = engine(seed),
       student = engine(42),
       code = teacher.create(full, false);
-    assert.equal(code.length, 13);
+    assert.equal(code.length, 9);
     const ids = plain(teacher.pick(code, catalog).ids);
     assert.deepEqual(
       plain(student.pick(code, catalog.slice().reverse()).ids),
@@ -89,14 +88,22 @@ test("Опечатки отклоняются, пробелы и знак ном
   const api = engine(),
     code = api.create(full, false);
   assert.equal(
-    api.parse("№ " + code.slice(0, 5) + " " + code.slice(5)).code,
+    api.parse("№ " + code.slice(0, 4).toLowerCase() + "-" + code.slice(4)).code,
     code,
   );
   for (let i = 0; i < code.length; i++) {
-    const typo =
-      code.slice(0, i) + ((Number(code[i]) + 1) % 10) + code.slice(i + 1);
+    const replacement = code[i] === "2" ? "3" : "2";
+    const typo = code.slice(0, i) + replacement + code.slice(i + 1);
     assert.throws(() => api.parse(typo));
   }
   for (const value of ["", "1001", "abc", code + "0"])
     assert.throws(() => api.parse(value));
+});
+
+test("Старые 13-значные номера продолжают открываться", () => {
+  const api = engine();
+  const parsed = api.parse("1000000000049");
+  assert.equal(parsed.version, 1);
+  assert.equal(parsed.seed, 0);
+  assert.equal(parsed.counts.length, 23);
 });
