@@ -313,22 +313,12 @@ function buildOgeIndexPage(countByType, rows) {
     .join("\n");
 
   const articleInner = `        <h2>Задания ОГЭ по химии</h2>
-        <form id="ogeTaskSearch" class="oge-task-search" role="search" data-task-ids="${rows.map((row) => row.id).join(',')}" novalidate>
-          <label for="ogeTaskNumber">Найти задание по номеру</label>
+        <form id="ogeNumberSearch" class="oge-task-search" role="search" data-task-ids="${rows.map((row) => row.id).join(",")}" aria-label="Поиск задания или варианта по номеру" novalidate>
           <div class="oge-task-search__controls">
-            <input id="ogeTaskNumber" name="task" type="text" inputmode="numeric" placeholder="Например, 1001" autocomplete="off" aria-describedby="ogeTaskSearchStatus" />
+            <input id="ogeNumber" type="text" inputmode="numeric" placeholder="Найти по номеру" autocomplete="off" aria-label="Номер задания или варианта" aria-describedby="ogeNumberSearchStatus" />
             <button type="submit">Найти</button>
           </div>
-          <p id="ogeTaskSearchStatus" role="status"></p>
-        </form>
-
-        <form id="ogeVariantSearch" class="oge-task-search" role="search" aria-label="Поиск варианта" novalidate>
-          <label for="ogeVariantNumber">Найти вариант по номеру</label>
-          <div class="oge-task-search__controls">
-            <input id="ogeVariantNumber" type="text" inputmode="numeric" autocomplete="off" placeholder="Номер собранного варианта" aria-describedby="ogeVariantSearchStatus" />
-            <button type="submit">Открыть вариант</button>
-          </div>
-          <p id="ogeVariantSearchStatus" role="status"></p>
+          <p id="ogeNumberSearchStatus" role="status"></p>
         </form>
 
         <h3 class="oge-section-heading">Готовые варианты</h3>
@@ -388,8 +378,7 @@ ${typeRows}
       oge: "index.html",
     },
     articleInner,
-    scripts: `    <script src="../../js/oge-task-search.js"></script>
-    <script src="../../js/oge-render-client.js"></script>
+    scripts: `    <script src="../../js/oge-render-client.js"></script>
     <script src="../../js/oge-variant-number.js"></script>
     <script src="../../js/oge-task-builder.js"></script>`,
   });

@@ -184,7 +184,7 @@
         try {
           await navigator.clipboard.writeText(number);
           status.textContent =
-            "Номер скопирован. Ученик может ввести его в поле «Найти вариант по номеру».";
+            "Номер скопирован. Ученик может ввести его в поле «Найти по номеру».";
         } catch {
           numberInput.focus();
           numberInput.select();
@@ -629,24 +629,48 @@
   }
 
   function findNumber(value) {
-    const status = document.getElementById("ogeVariantSearchStatus");
+    const status = document.getElementById("ogeNumberSearchStatus");
+    const input = document.getElementById("ogeNumber");
     try {
       const { code } = window.OGE_VARIANTS.parse(value);
       status.textContent = "";
-      document.getElementById("ogeVariantNumber").value = code;
+      input.value = code;
+      input.removeAttribute("aria-invalid");
       return openVariant(null, "", code);
     } catch (error) {
       status.textContent = error.message;
-      document.getElementById("ogeVariantNumber").focus();
+      input.setAttribute("aria-invalid", "true");
+      input.focus();
     }
   }
 
   function initNumberSearch() {
-    const form = document.getElementById("ogeVariantSearch");
+    const form = document.getElementById("ogeNumberSearch");
     if (!form) return;
+    const input = document.getElementById("ogeNumber");
+    const status = document.getElementById("ogeNumberSearchStatus");
+    const taskIds = new Set(form.dataset.taskIds.split(","));
+    input.addEventListener("input", () => {
+      status.textContent = "";
+      input.removeAttribute("aria-invalid");
+    });
     form.addEventListener("submit", (event) => {
       event.preventDefault();
-      findNumber(document.getElementById("ogeVariantNumber").value);
+      const value = input.value.trim().replace(/^№\s*/, "");
+      const taskId = /^\d+$/.test(value) ? value : "";
+      if (taskIds.has(taskId)) {
+        window.location.assign(
+          new URL(`ex/${taskId}.html`, document.baseURI).href,
+        );
+        return;
+      }
+      if (/^\d{1,5}$/.test(value)) {
+        status.textContent = "Задание с таким номером не найдено.";
+        input.setAttribute("aria-invalid", "true");
+        input.focus();
+        return;
+      }
+      findNumber(value);
     });
   }
 
