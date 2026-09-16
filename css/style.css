@@ -197,7 +197,7 @@ button.theme-toggle .material-symbols-outlined {
 }
 
 .tables-container {
-  max-width: 1000px;
+  max-width: 1100px;
 }
 
 .card {
@@ -762,6 +762,54 @@ button.oge-sort-btn {
   line-height: 1.5;
   color: var(--color-text);
   opacity: 0.95;
+}
+
+.solubility-scroll {
+  overflow-x: auto;
+  border: 2px solid var(--color-pt-grid);
+  border-radius: 8px;
+  background: var(--color-card-bg);
+}
+
+.solubility-table {
+  width: 100%;
+  min-width: 62rem;
+  border-collapse: collapse;
+  table-layout: fixed;
+  font-size: 0.82rem;
+}
+
+.solubility-table th,
+.solubility-table td {
+  min-width: 2.35rem;
+  padding: 4px 3px;
+  border: 1px solid var(--color-pt-grid);
+  text-align: center;
+  white-space: nowrap;
+}
+
+.solubility-table th {
+  background: var(--color-tip-bg);
+  font-weight: 700;
+}
+
+.solubility-table tbody th {
+  position: sticky;
+  left: 0;
+  z-index: 1;
+  min-width: 4.8rem;
+}
+
+.sol-value--r {
+  background: color-mix(in srgb, #6fba70 18%, transparent);
+}
+
+.sol-value--m {
+  background: color-mix(in srgb, #e4b64f 22%, transparent);
+}
+
+.sol-value--n {
+  background: color-mix(in srgb, #d96b61 16%, transparent);
 }
 
 .ref-table-note {
