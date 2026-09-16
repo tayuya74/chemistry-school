@@ -799,11 +799,17 @@ button.oge-sort-btn {
   font-weight: 700;
 }
 
+.solubility-table tr > :first-child {
+  width: 6.5rem;
+  min-width: 6.5rem;
+  padding-left: 8px;
+  text-align: left;
+}
+
 .solubility-table tbody th {
   position: sticky;
   left: 0;
   z-index: 1;
-  min-width: 4.8rem;
 }
 
 .solubility-axis-frame {
