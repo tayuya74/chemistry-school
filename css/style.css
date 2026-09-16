@@ -807,7 +807,7 @@ button.oge-sort-btn {
 .solubility-table .is-active-cell {
   position: relative;
   z-index: 2;
-  box-shadow: inset 0 0 0 3px var(--color-text);
+  box-shadow: inset 0 0 0 2px var(--color-text);
 }
 
 .solubility-legend {
