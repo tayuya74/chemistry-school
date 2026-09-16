@@ -463,11 +463,16 @@ html[data-theme="dark"] .oge-answer-cells input:focus-visible {
 }
 
 html[data-theme="dark"] .oge-nucleus-wrap[data-diagram-type="shell-counts"] svg,
-html[data-theme="dark"] .oge-nucleus-wrap[data-diagram-type="electron-shells"] svg {
+html[data-theme="dark"]
+  .oge-nucleus-wrap[data-diagram-type="electron-shells"]
+  svg {
   --color-border: var(--color-field-border);
 }
 
-html[data-theme="dark"] .oge-nucleus-wrap[data-diagram-type="electron-shells"] svg [fill="#2563eb"] {
+html[data-theme="dark"]
+  .oge-nucleus-wrap[data-diagram-type="electron-shells"]
+  svg
+  [fill="#2563eb"] {
   fill: #83bcff;
 }
 
@@ -765,6 +770,7 @@ button.oge-sort-btn {
 }
 
 .solubility-scroll {
+  position: relative;
   overflow-x: auto;
   border: 2px solid var(--color-pt-grid);
   border-radius: 8px;
@@ -789,7 +795,7 @@ button.oge-sort-btn {
 }
 
 .solubility-table th {
-  background: var(--color-tip-bg);
+  background: transparent;
   font-weight: 700;
 }
 
@@ -800,14 +806,12 @@ button.oge-sort-btn {
   min-width: 4.8rem;
 }
 
-.solubility-table .is-active-axis {
-  box-shadow: inset 0 0 0 2px var(--color-text);
-}
-
-.solubility-table .is-active-cell {
-  position: relative;
-  z-index: 2;
-  box-shadow: inset 0 0 0 2px var(--color-text);
+.solubility-axis-frame {
+  position: absolute;
+  z-index: 3;
+  box-sizing: border-box;
+  border: 2px solid var(--color-text);
+  pointer-events: none;
 }
 
 .solubility-legend {
@@ -993,7 +997,7 @@ button.oge-sort-btn {
 
 .pt-table th,
 .pt-table td {
-  border: 2px solid var(--color-pt-grid);
+  border: 1px solid var(--color-pt-grid);
   padding: 0;
   text-align: center;
 }
@@ -1003,7 +1007,7 @@ button.oge-sort-btn {
 .pt-group,
 .pt-periods-label,
 .pt-period {
-  background: var(--color-tip-bg);
+  background: transparent;
   font-weight: 600;
   padding: 4px 6px;
   font-size: 0.9rem;
@@ -1110,19 +1114,20 @@ button.oge-sort-btn {
 }
 
 /* Триада в побочной подгруппе VIII: три элемента в одной клетке. */
-.pt-cell--triad {
-  display: flex;
+.pt-triad {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  height: 100%;
 }
 
-.pt-cell--triad .pt-el {
-  flex: 1 1 0;
+.pt-triad .pt-el {
   width: auto;
   min-width: 0;
   box-sizing: border-box;
 }
 
-.pt-cell--triad .pt-el + .pt-el {
-  border-left: 2px solid var(--color-pt-grid);
+.pt-triad .pt-el + .pt-el {
+  border-left: 1px solid var(--color-pt-grid);
 }
 
 /* Пустая треть в группе VIII: держит ширину, но рамкой не выделяется. */

@@ -247,7 +247,7 @@ function renderCell(cell, groupIndex, kind) {
   if (groupIndex === 7) {
     while (boxes.length < 3)
       boxes.unshift(`<div class="pt-el pt-el--blank"></div>`);
-    return `<td class="pt-cell pt-cell--triad">${boxes.join("")}</td>`;
+    return `<td class="pt-cell pt-cell--triad"><div class="pt-triad">${boxes.join("")}</div></td>`;
   }
 
   return `<td class="pt-cell pt-cell--${side}">${boxes.join("")}</td>`;

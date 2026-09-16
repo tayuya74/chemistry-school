@@ -84,7 +84,7 @@ const body = rows
   })
   .join("");
 
-const table = `<div class="solubility-scroll" tabindex="0" role="region" aria-label="Растворимость кислот, солей и оснований в воде"><table class="solubility-table"><caption class="visually-hidden">Таблица растворимости кислот, солей и оснований в воде</caption><thead><tr><th scope="col">Анион</th>${head}</tr></thead><tbody>${body}</tbody></table></div>`;
+const table = `<div class="solubility-scroll" tabindex="0" role="region" aria-label="Растворимость кислот, солей и оснований в воде"><table class="solubility-table"><caption class="visually-hidden">Таблица растворимости кислот, солей и оснований в воде</caption><thead><tr><th scope="col" aria-label="Анионы"></th>${head}</tr></thead><tbody>${body}</tbody></table></div>`;
 const file = path.join(root, "pages", "tables.html");
 const source = fs.readFileSync(file, "utf8");
 const start = "<!-- SOLUBILITY-TABLE:start -->";
