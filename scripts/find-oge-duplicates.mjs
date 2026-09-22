@@ -112,12 +112,14 @@ function main() {
       optionSet: new Set(options),
       shape: shapeOf(task, options),
       answer: answerOf(task),
+      duplicateOf: task.meta?.duplicateOf ?? null,
       fipi: (task.meta?.source ?? "").match(/№\s*(\S+)/)?.[1] ?? null,
     });
   }
 
   console.log(`Проверено заданий: ${tasks.length}\n`);
   let exactGroups = 0;
+  let documentedGroups = 0;
 
   /* 1. Один и тот же номер задания в банке ФИПИ использован дважды. */
   const byFipi = new Map();
@@ -149,7 +151,12 @@ function main() {
 
   for (const group of byShape.values()) {
     if (group.length < 2) continue;
-    exactGroups++;
+    const canonicalId = Math.min(...group.map((task) => task.id));
+    const documented = group.every(
+      (task) => task.id === canonicalId || task.duplicateOf === canonicalId,
+    );
+    if (documented) documentedGroups++;
+    else exactGroups++;
     const sameOrder = new Set(group.map((t) => t.options.join("~"))).size === 1;
     const sameAnswer = new Set(group.map((t) => t.answer)).size === 1;
     const kind =
@@ -158,17 +165,25 @@ function main() {
         : sameOrder
           ? "то же содержание, ответы разные"
           : "тот же вопрос, порядок вариантов переставлен";
-    console.log(`ДУБЛЬ (тип ${group[0].examType}) — ${kind}`);
+    console.log(
+      `${documented ? "ДОКУМЕНТИРОВАННЫЙ ДУБЛЬ" : "ДУБЛЬ"} (тип ${group[0].examType}) — ${kind}`,
+    );
     console.log(`  ${group[0].prompt.slice(0, 120)}`);
     for (const task of group) console.log(`  ${describe(task, membership)}`);
     if (!sameAnswer)
       console.log("  ответы разные — это ожидаемо при перестановке вариантов");
-    const removable = group.filter((t) => !membership.has(t.id));
-    console.log(
-      removable.length
-        ? `  можно удалить без вреда: ${removable.map((t) => t.id).join(", ")}`
-        : "  все копии входят в собранные варианты — удаление сломает вариант",
-    );
+    if (documented) {
+      console.log(
+        `  сохраняется для совместимости; основной id ${canonicalId}`,
+      );
+    } else {
+      const removable = group.filter((t) => !membership.has(t.id));
+      console.log(
+        removable.length
+          ? `  можно удалить без вреда: ${removable.map((t) => t.id).join(", ")}`
+          : "  все копии входят в собранные варианты — удаление сломает вариант",
+      );
+    }
     console.log("");
   }
 
@@ -205,9 +220,12 @@ function main() {
 
   console.log(
     exactGroups
-      ? `Групп с одинаковым содержанием: ${exactGroups}`
-      : "Заданий с одинаковым содержанием не найдено",
+      ? `Новых групп с одинаковым содержанием: ${exactGroups}`
+      : "Новых заданий с одинаковым содержанием не найдено",
   );
+  if (documentedGroups) {
+    console.log(`Документированных групп-дублей: ${documentedGroups}`);
+  }
   if (!showNear)
     console.log("Похожие, но не одинаковые задания: запустите с --near");
 

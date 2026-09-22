@@ -26,7 +26,11 @@ for (const filePath of files) {
     encoding: "utf8",
   });
   if (result.status !== 0) {
-    invalid.push({ filePath, error: result.stderr.trim() });
+    const error =
+      result.stderr?.trim() ||
+      result.error?.message ||
+      `node --check завершился с кодом ${result.status}`;
+    invalid.push({ filePath, error });
   }
 }
 

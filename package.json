@@ -20,10 +20,13 @@
     "build:solubility-table": "node scripts/build-solubility-table.mjs",
     "check:site-links": "node scripts/check-site-links.mjs",
     "check:js-syntax": "node scripts/check-js-syntax.mjs",
-    "check:generated": "git diff --ignore-space-at-eol --exit-code -- pages/oge",
-    "verify": "npm run validate:oge-tasks && npm run validate:oge-phase0:check && npm run check:oge-solutions && npm run build:oge && npm run check:site-links && npm run check:js-syntax && npm run check:generated"
+    "test:unit": "node scripts/test-oge-variant-number.mjs",
+    "test:ui": "playwright test",
+    "check:generated": "node scripts/check-generated.mjs",
+    "verify": "npm run validate:oge-tasks && npm run validate:oge-phase0:check && npm run check:oge-solutions && npm run check:oge-duplicates -- --strict && npm run check:generated && npm run check:site-links && npm run check:js-syntax && npm run test:unit && npm run test:ui"
   },
   "devDependencies": {
+    "@playwright/test": "^1.63.0",
     "prettier": "^3.5.3"
   }
 }

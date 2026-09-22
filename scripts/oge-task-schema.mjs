@@ -50,6 +50,14 @@ export function validateTaskShape(task) {
 
   if (!task.meta?.lead) issues.push("meta.lead missing");
   if (!task.meta?.source) issues.push("meta.source missing");
+  if (
+    task.meta?.duplicateOf !== undefined &&
+    (!Number.isInteger(task.meta.duplicateOf) ||
+      task.meta.duplicateOf <= 0 ||
+      task.meta.duplicateOf === task.id)
+  ) {
+    issues.push("meta.duplicateOf must reference another positive task id");
+  }
   if (!Array.isArray(task.blocks)) issues.push("blocks must be array");
   /* meta.advanced — необязательная пометка сложного задания (★ на странице).
      Сопроводительный meta.advancedNote больше не обязателен и на страницы не
@@ -77,7 +85,10 @@ export function validateTaskShape(task) {
 
   /* hint — необязательная подсказка (кнопка рядом с «Проверить»), наводит на ответ,
      но не выдаёт его; пока используется только у twoChoice-заданий. */
-  if (task.hint !== undefined && (typeof task.hint !== "string" || !task.hint.trim())) {
+  if (
+    task.hint !== undefined &&
+    (typeof task.hint !== "string" || !task.hint.trim())
+  ) {
     issues.push("hint must be a non-empty string when present");
   }
 
@@ -106,9 +117,21 @@ export function validateTaskShape(task) {
       }
       break;
     case "periodDiagram":
-      if (!["nucleus", "electron-shells", "shell-counts", "periodic-cell"].includes(task.content?.figure?.diagramType))
-        issues.push("periodDiagram: figure.diagramType must specify the diagram form");
-      if ((task.content?.figure?.diagramType === "periodic-cell") !== (task.content?.figure?.kind === "periodicCell"))
+      if (
+        ![
+          "nucleus",
+          "electron-shells",
+          "shell-counts",
+          "periodic-cell",
+        ].includes(task.content?.figure?.diagramType)
+      )
+        issues.push(
+          "periodDiagram: figure.diagramType must specify the diagram form",
+        );
+      if (
+        (task.content?.figure?.diagramType === "periodic-cell") !==
+        (task.content?.figure?.kind === "periodicCell")
+      )
         issues.push("periodDiagram: diagramType and figure.kind disagree");
       if (!task.content?.figure?.html) issues.push("periodDiagram: figure");
       if (!task.answer?.values?.X) issues.push("periodDiagram: values");

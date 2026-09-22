@@ -589,9 +589,9 @@ function typeCheckScript(task, suffix, wrapId = null) {
         .map((val, i) => {
           const id = sid(`d${i + 1}`, suffix);
           const varName = String.fromCharCode(97 + i);
-          return `const ${varName} = root.querySelector("#${id}").value.trim();\n          `;
+          return `const ${varName} = root.querySelector("#${id}").value.trim();`;
         })
-        .join("");
+        .join("\n          ");
       const okExpr = seq
         .map((val, i) => `${String.fromCharCode(97 + i)} === "${val}"`)
         .join(" && ");

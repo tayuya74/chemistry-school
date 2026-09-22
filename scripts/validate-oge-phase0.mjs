@@ -395,7 +395,10 @@ function main() {
     numericLegacyCount: numericLegacyIssues.length,
     otherIssueCount: otherIssues.length,
     byExamType: summarizeByExamType(results),
-    tasks: results,
+    /* JSON-native задания уже проверяет validate:oge-tasks. В отчёте фазы 0
+       оставляем только действительно разобранные legacy-источники, иначе
+       сотни служебных записей json_native скрывают полезные результаты. */
+    tasks: results.filter((result) => !result.error),
   };
 
   if (writeReport) {
@@ -417,7 +420,9 @@ function main() {
     `Карта uiKind: ${report.uiKindConfirmed ? "OK" : "ОШИБКА"} (${report.uiKindMismatchCount} расхождений)`,
   );
   console.log(
-    `Legacy numeric 18/19: ${report.numericLegacyCount} (исправится при миграции)`,
+    report.numericLegacyCount
+      ? `Legacy numeric 18/19: ${report.numericLegacyCount} (исправится при миграции)`
+      : "Legacy numeric 18/19: 0",
   );
   if (writeReport) console.log("Отчёт: data/oge/phase-0-report.md");
 

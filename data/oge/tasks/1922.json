@@ -5,7 +5,8 @@
   "meta": {
     "lead": "Взаимосвязь различных классов неорганических веществ",
     "source": "Открытый банк заданий ОГЭ по химии (ФИПИ), oge.fipi.ru/bank, № C4B3C0",
-    "sourceDir": "fipi-bank"
+    "sourceDir": "fipi-bank",
+    "duplicateOf": 1844
   },
   "blocks": [
     {

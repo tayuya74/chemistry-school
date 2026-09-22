@@ -169,7 +169,7 @@
               out.textContent = OGE_CHECK.retry;
               return;
             }
-            const ok = Math.abs(n - 53.4) < 0.06;
+            const ok = n === 53.4;
             out.textContent = ok ? OGE_CHECK.ok : OGE_CHECK.retry;
           });
       })();

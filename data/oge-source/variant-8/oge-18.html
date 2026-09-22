@@ -107,7 +107,7 @@
               out.textContent = OGE_CHECK.retry;
               return;
             }
-            const ok = Math.round(n) === 13;
+            const ok = n === 13;
             out.textContent = ok ? OGE_CHECK.ok : OGE_CHECK.retry;
           });
       })();

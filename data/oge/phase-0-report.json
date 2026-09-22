@@ -1,13 +1,14 @@
 {
-  "generatedAt": "2026-07-17T21:15:44.671Z",
-  "totalTasks": 276,
+  "generatedAt": "2026-09-22T06:00:13.455Z",
+  "totalTasks": 944,
   "analyzed": 276,
-  "passed": 255,
-  "failed": 21,
+  "passed": 276,
+  "failed": 0,
   "missingFiles": 0,
+  "jsonNative": 668,
   "uiKindConfirmed": true,
   "uiKindMismatchCount": 0,
-  "numericLegacyCount": 21,
+  "numericLegacyCount": 0,
   "otherIssueCount": 0,
   "byExamType": [
     {
@@ -302,15 +303,13 @@
         "numericInt"
       ],
       "examples": 12,
-      "failedExamples": 10,
+      "failedExamples": 0,
       "consistent": true,
       "statementCounts": [],
       "matchRightCounts": [],
       "correctLengths": [],
       "legacyNumericChecks": [
-        "rounded",
-        "strict",
-        "tolerance"
+        "strict"
       ]
     },
     {
@@ -320,15 +319,13 @@
         "numericMassTable"
       ],
       "examples": 12,
-      "failedExamples": 11,
+      "failedExamples": 0,
       "consistent": true,
       "statementCounts": [],
       "matchRightCounts": [],
       "correctLengths": [],
       "legacyNumericChecks": [
-        "rounded",
-        "strict",
-        "tolerance"
+        "strict"
       ]
     },
     {
@@ -709,16 +706,14 @@
       "file": "data\\oge-source\\variant-1\\oge-18.html",
       "expectedUiKind": "numericInt",
       "detectedUiKind": "numericInt",
-      "ok": false,
-      "issues": [
-        "numeric: проверка «tolerance», целевое правило — strict (n === value)"
-      ],
+      "ok": true,
+      "issues": [],
       "details": {
         "statementCount": null,
         "answerCellCount": null,
         "matchRightCount": null,
         "correct": null,
-        "numericCheck": "tolerance"
+        "numericCheck": "strict"
       }
     },
     {
@@ -728,16 +723,14 @@
       "file": "data\\oge-source\\variant-1\\oge-19.html",
       "expectedUiKind": "numericMassTable",
       "detectedUiKind": "numericMassTable",
-      "ok": false,
-      "issues": [
-        "numeric: проверка «tolerance», целевое правило — strict (n === value)"
-      ],
+      "ok": true,
+      "issues": [],
       "details": {
         "statementCount": null,
         "answerCellCount": null,
         "matchRightCount": null,
         "correct": null,
-        "numericCheck": "tolerance"
+        "numericCheck": "strict"
       }
     },
     {
@@ -1561,16 +1554,14 @@
       "file": "data\\oge-source\\default\\oge-19.html",
       "expectedUiKind": "numericMassTable",
       "detectedUiKind": "numericMassTable",
-      "ok": false,
-      "issues": [
-        "numeric: проверка «rounded», целевое правило — strict (n === value)"
-      ],
+      "ok": true,
+      "issues": [],
       "details": {
         "statementCount": null,
         "answerCellCount": null,
         "matchRightCount": null,
         "correct": null,
-        "numericCheck": "rounded"
+        "numericCheck": "strict"
       }
     },
     {
@@ -1961,16 +1952,14 @@
       "file": "data\\oge-source\\variant-2\\oge-18.html",
       "expectedUiKind": "numericInt",
       "detectedUiKind": "numericInt",
-      "ok": false,
-      "issues": [
-        "numeric: проверка «rounded», целевое правило — strict (n === value)"
-      ],
+      "ok": true,
+      "issues": [],
       "details": {
         "statementCount": null,
         "answerCellCount": null,
         "matchRightCount": null,
         "correct": null,
-        "numericCheck": "rounded"
+        "numericCheck": "strict"
       }
     },
     {
@@ -1980,16 +1969,14 @@
       "file": "data\\oge-source\\variant-2\\oge-19.html",
       "expectedUiKind": "numericMassTable",
       "detectedUiKind": "numericMassTable",
-      "ok": false,
-      "issues": [
-        "numeric: проверка «rounded», целевое правило — strict (n === value)"
-      ],
+      "ok": true,
+      "issues": [],
       "details": {
         "statementCount": null,
         "answerCellCount": null,
         "matchRightCount": null,
         "correct": null,
-        "numericCheck": "rounded"
+        "numericCheck": "strict"
       }
     },
     {
@@ -2381,16 +2368,14 @@
       "file": "data\\oge-source\\variant-3\\oge-18.html",
       "expectedUiKind": "numericInt",
       "detectedUiKind": "numericInt",
-      "ok": false,
-      "issues": [
-        "numeric: проверка «rounded», целевое правило — strict (n === value)"
-      ],
+      "ok": true,
+      "issues": [],
       "details": {
         "statementCount": null,
         "answerCellCount": null,
         "matchRightCount": null,
         "correct": null,
-        "numericCheck": "rounded"
+        "numericCheck": "strict"
       }
     },
     {
@@ -2400,16 +2385,14 @@
       "file": "data\\oge-source\\variant-3\\oge-19.html",
       "expectedUiKind": "numericMassTable",
       "detectedUiKind": "numericMassTable",
-      "ok": false,
-      "issues": [
-        "numeric: проверка «rounded», целевое правило — strict (n === value)"
-      ],
+      "ok": true,
+      "issues": [],
       "details": {
         "statementCount": null,
         "answerCellCount": null,
         "matchRightCount": null,
         "correct": null,
-        "numericCheck": "rounded"
+        "numericCheck": "strict"
       }
     },
     {
@@ -2800,16 +2783,14 @@
       "file": "data\\oge-source\\variant-4\\oge-18.html",
       "expectedUiKind": "numericInt",
       "detectedUiKind": "numericInt",
-      "ok": false,
-      "issues": [
-        "numeric: проверка «rounded», целевое правило — strict (n === value)"
-      ],
+      "ok": true,
+      "issues": [],
       "details": {
         "statementCount": null,
         "answerCellCount": null,
         "matchRightCount": null,
         "correct": null,
-        "numericCheck": "rounded"
+        "numericCheck": "strict"
       }
     },
     {
@@ -2819,16 +2800,14 @@
       "file": "data\\oge-source\\variant-4\\oge-19.html",
       "expectedUiKind": "numericMassTable",
       "detectedUiKind": "numericMassTable",
-      "ok": false,
-      "issues": [
-        "numeric: проверка «rounded», целевое правило — strict (n === value)"
-      ],
+      "ok": true,
+      "issues": [],
       "details": {
         "statementCount": null,
         "answerCellCount": null,
         "matchRightCount": null,
         "correct": null,
-        "numericCheck": "rounded"
+        "numericCheck": "strict"
       }
     },
     {
@@ -3223,16 +3202,14 @@
       "file": "data\\oge-source\\variant-5\\oge-18.html",
       "expectedUiKind": "numericInt",
       "detectedUiKind": "numericInt",
-      "ok": false,
-      "issues": [
-        "numeric: проверка «rounded», целевое правило — strict (n === value)"
-      ],
+      "ok": true,
+      "issues": [],
       "details": {
         "statementCount": null,
         "answerCellCount": null,
         "matchRightCount": null,
         "correct": null,
-        "numericCheck": "rounded"
+        "numericCheck": "strict"
       }
     },
     {
@@ -3242,16 +3219,14 @@
       "file": "data\\oge-source\\variant-5\\oge-19.html",
       "expectedUiKind": "numericMassTable",
       "detectedUiKind": "numericMassTable",
-      "ok": false,
-      "issues": [
-        "numeric: проверка «rounded», целевое правило — strict (n === value)"
-      ],
+      "ok": true,
+      "issues": [],
       "details": {
         "statementCount": null,
         "answerCellCount": null,
         "matchRightCount": null,
         "correct": null,
-        "numericCheck": "rounded"
+        "numericCheck": "strict"
       }
     },
     {
@@ -3643,16 +3618,14 @@
       "file": "data\\oge-source\\variant-6\\oge-18.html",
       "expectedUiKind": "numericInt",
       "detectedUiKind": "numericInt",
-      "ok": false,
-      "issues": [
-        "numeric: проверка «rounded», целевое правило — strict (n === value)"
-      ],
+      "ok": true,
+      "issues": [],
       "details": {
         "statementCount": null,
         "answerCellCount": null,
         "matchRightCount": null,
         "correct": null,
-        "numericCheck": "rounded"
+        "numericCheck": "strict"
       }
     },
     {
@@ -3662,16 +3635,14 @@
       "file": "data\\oge-source\\variant-6\\oge-19.html",
       "expectedUiKind": "numericMassTable",
       "detectedUiKind": "numericMassTable",
-      "ok": false,
-      "issues": [
-        "numeric: проверка «rounded», целевое правило — strict (n === value)"
-      ],
+      "ok": true,
+      "issues": [],
       "details": {
         "statementCount": null,
         "answerCellCount": null,
         "matchRightCount": null,
         "correct": null,
-        "numericCheck": "rounded"
+        "numericCheck": "strict"
       }
     },
     {
@@ -4063,16 +4034,14 @@
       "file": "data\\oge-source\\variant-7\\oge-18.html",
       "expectedUiKind": "numericInt",
       "detectedUiKind": "numericInt",
-      "ok": false,
-      "issues": [
-        "numeric: проверка «rounded», целевое правило — strict (n === value)"
-      ],
+      "ok": true,
+      "issues": [],
       "details": {
         "statementCount": null,
         "answerCellCount": null,
         "matchRightCount": null,
         "correct": null,
-        "numericCheck": "rounded"
+        "numericCheck": "strict"
       }
     },
     {
@@ -4082,16 +4051,14 @@
       "file": "data\\oge-source\\variant-7\\oge-19.html",
       "expectedUiKind": "numericMassTable",
       "detectedUiKind": "numericMassTable",
-      "ok": false,
-      "issues": [
-        "numeric: проверка «rounded», целевое правило — strict (n === value)"
-      ],
+      "ok": true,
+      "issues": [],
       "details": {
         "statementCount": null,
         "answerCellCount": null,
         "matchRightCount": null,
         "correct": null,
-        "numericCheck": "rounded"
+        "numericCheck": "strict"
       }
     },
     {
@@ -4482,16 +4449,14 @@
       "file": "data\\oge-source\\variant-8\\oge-18.html",
       "expectedUiKind": "numericInt",
       "detectedUiKind": "numericInt",
-      "ok": false,
-      "issues": [
-        "numeric: проверка «rounded», целевое правило — strict (n === value)"
-      ],
+      "ok": true,
+      "issues": [],
       "details": {
         "statementCount": null,
         "answerCellCount": null,
         "matchRightCount": null,
         "correct": null,
-        "numericCheck": "rounded"
+        "numericCheck": "strict"
       }
     },
     {
@@ -4501,16 +4466,14 @@
       "file": "data\\oge-source\\variant-8\\oge-19.html",
       "expectedUiKind": "numericMassTable",
       "detectedUiKind": "numericMassTable",
-      "ok": false,
-      "issues": [
-        "numeric: проверка «rounded», целевое правило — strict (n === value)"
-      ],
+      "ok": true,
+      "issues": [],
       "details": {
         "statementCount": null,
         "answerCellCount": null,
         "matchRightCount": null,
         "correct": null,
-        "numericCheck": "rounded"
+        "numericCheck": "strict"
       }
     },
     {
@@ -4901,16 +4864,14 @@
       "file": "data\\oge-source\\variant-9\\oge-18.html",
       "expectedUiKind": "numericInt",
       "detectedUiKind": "numericInt",
-      "ok": false,
-      "issues": [
-        "numeric: проверка «rounded», целевое правило — strict (n === value)"
-      ],
+      "ok": true,
+      "issues": [],
       "details": {
         "statementCount": null,
         "answerCellCount": null,
         "matchRightCount": null,
         "correct": null,
-        "numericCheck": "rounded"
+        "numericCheck": "strict"
       }
     },
     {
@@ -4920,16 +4881,14 @@
       "file": "data\\oge-source\\variant-9\\oge-19.html",
       "expectedUiKind": "numericMassTable",
       "detectedUiKind": "numericMassTable",
-      "ok": false,
-      "issues": [
-        "numeric: проверка «rounded», целевое правило — strict (n === value)"
-      ],
+      "ok": true,
+      "issues": [],
       "details": {
         "statementCount": null,
         "answerCellCount": null,
         "matchRightCount": null,
         "correct": null,
-        "numericCheck": "rounded"
+        "numericCheck": "strict"
       }
     },
     {
@@ -5320,16 +5279,14 @@
       "file": "data\\oge-source\\variant-10\\oge-18.html",
       "expectedUiKind": "numericInt",
       "detectedUiKind": "numericInt",
-      "ok": false,
-      "issues": [
-        "numeric: проверка «rounded», целевое правило — strict (n === value)"
-      ],
+      "ok": true,
+      "issues": [],
       "details": {
         "statementCount": null,
         "answerCellCount": null,
         "matchRightCount": null,
         "correct": null,
-        "numericCheck": "rounded"
+        "numericCheck": "strict"
       }
     },
     {
@@ -5339,16 +5296,14 @@
       "file": "data\\oge-source\\variant-10\\oge-19.html",
       "expectedUiKind": "numericMassTable",
       "detectedUiKind": "numericMassTable",
-      "ok": false,
-      "issues": [
-        "numeric: проверка «rounded», целевое правило — strict (n === value)"
-      ],
+      "ok": true,
+      "issues": [],
       "details": {
         "statementCount": null,
         "answerCellCount": null,
         "matchRightCount": null,
         "correct": null,
-        "numericCheck": "rounded"
+        "numericCheck": "strict"
       }
     },
     {

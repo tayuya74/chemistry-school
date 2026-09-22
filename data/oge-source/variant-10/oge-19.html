@@ -158,7 +158,7 @@
               out.textContent = OGE_CHECK.retry;
               return;
             }
-            const ok = Math.round(n) === 480;
+            const ok = n === 480;
             out.textContent = ok ? OGE_CHECK.ok : OGE_CHECK.retry;
           });
       })();

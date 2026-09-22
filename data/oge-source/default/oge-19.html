@@ -169,7 +169,7 @@
               out.textContent = OGE_CHECK.retry;
               return;
             }
-            const ok = Math.round(n * 10) === 16;
+            const ok = n === 1.6;
             out.textContent = ok ? OGE_CHECK.ok : OGE_CHECK.retry;
           });
       })();
