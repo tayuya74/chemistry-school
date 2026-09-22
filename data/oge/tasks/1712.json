@@ -35,5 +35,5 @@
     }
   },
   "hint": "Ищи реактив с РАЗНЫМ откликом на оба в-ва (осадок/нет, разный цвет, газ/нет).<br>Cl⁻/Br⁻/I⁻ → AgNO₃ (разные цвета, AgF растворим!). SO₄²⁻ → BaCl₂ (белый). CO₃²⁻/HCO₃⁻ → к-та (газ). Щёлочь: соли акт. Ме — без осадка, остальные — осадок.",
-  "solution": null
+  "solution": { "title": "Полный разбор всех проб", "html": "<p><strong>А) LiNO<sub>3</sub> и KOH.</strong> Различает фенолфталеин.</p><ul><li>LiNO<sub>3</sub> с фенолфталеином остаётся бесцветным.</li><li>KOH с фенолфталеином даёт малиновую окраску.</li><li>С Ba(NO<sub>3</sub>)<sub>2</sub>, NaOH и HCl видимых различий нет.</li></ul><p><strong>Б) NaCl и MgCl<sub>2</sub>.</strong> Различает NaOH.</p><ul><li>NaCl + NaOH — реакции нет.</li><li>MgCl<sub>2</sub> + 2NaOH → Mg(OH)<sub>2</sub>↓ + 2NaCl (белый осадок).</li><li>С Ba(NO<sub>3</sub>)<sub>2</sub> и HCl видимых различий нет; фенолфталеин бесцветный в обеих пробах.</li></ul><p><strong>В) K<sub>2</sub>SO<sub>4</sub> и KBr.</strong> Различает Ba(NO<sub>3</sub>)<sub>2</sub>.</p><ul><li>K<sub>2</sub>SO<sub>4</sub> + Ba(NO<sub>3</sub>)<sub>2</sub> → BaSO<sub>4</sub>↓ + 2KNO<sub>3</sub> (белый осадок).</li><li>KBr + Ba(NO<sub>3</sub>)<sub>2</sub> — реакции нет.</li><li>С NaOH, HCl и фенолфталеином видимых различий нет.</li></ul>" }
 }

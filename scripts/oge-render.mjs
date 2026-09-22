@@ -162,7 +162,7 @@ function renderCheckAndHintFooter(task, suffix) {
         <p id="${sid("resultOut", suffix)}" class="result" role="status"></p>`;
 }
 
-function renderTwoChoiceBody(task, suffix) {
+function renderTwoChoiceBody(task, suffix, mode) {
   const stmts = task.content.statements
     .map(
       (text, i) => `          <li>
@@ -205,7 +205,7 @@ ${stmts}
             autocomplete="off"
           />
         </div>
-${renderCheckAndHintFooter(task, suffix)}`;
+${renderCheckAndHintFooter(task, suffix)}${renderSolutionDetails(task, mode)}`;
 }
 
 function matchOptionCount(right) {
@@ -217,7 +217,7 @@ function matchOptionCount(right) {
   );
 }
 
-function renderMatchTripleBody(task, suffix) {
+function renderMatchTripleBody(task, suffix, mode) {
   const left = task.content.left
     .map((item) => `              <li>${item}</li>`)
     .join("\n");
@@ -278,10 +278,10 @@ ${opts}
             </tr>
           </tbody>
         </table>
-${renderCheckAndHintFooter(task, suffix)}`;
+${renderCheckAndHintFooter(task, suffix)}${renderSolutionDetails(task, mode)}`;
 }
 
-function renderOrderedDigitsBody(task, suffix) {
+function renderOrderedDigitsBody(task, suffix, mode) {
   const cells = Array.from({ length: task.content.cellCount }, (_, i) => {
     const n = i + 1;
     return `          <input
@@ -304,10 +304,10 @@ function renderOrderedDigitsBody(task, suffix) {
         >
 ${cells}
         </div>
-${renderCheckAndHintFooter(task, suffix)}`;
+${renderCheckAndHintFooter(task, suffix)}${renderSolutionDetails(task, mode)}`;
 }
 
-function renderPeriodDiagramBody(task, suffix) {
+function renderPeriodDiagramBody(task, suffix, mode) {
   const fig = task.content.figure;
   let figureHtml;
   if (fig.kind === "svg") {
@@ -373,10 +373,10 @@ ${postPrompt}
             </tr>
           </tbody>
         </table>
-${renderCheckAndHintFooter(task, suffix)}`;
+${renderCheckAndHintFooter(task, suffix)}${renderSolutionDetails(task, mode)}`;
 }
 
-function renderMultiChoiceFourBody(task, suffix) {
+function renderMultiChoiceFourBody(task, suffix, mode) {
   const stmts = task.content.statements
     .map(
       (text, i) => `          <li>
@@ -414,7 +414,7 @@ ${stmts}
         >
 ${cells}
         </div>
-${renderCheckAndHintFooter(task, suffix)}`;
+${renderCheckAndHintFooter(task, suffix)}${renderSolutionDetails(task, mode)}`;
 }
 
 /**
@@ -478,15 +478,15 @@ function renderOpenBody(task, suffix, mode) {
 function renderTaskBody(task, suffix = "", mode) {
   switch (task.uiKind) {
     case "twoChoice":
-      return renderTwoChoiceBody(task, suffix);
+      return renderTwoChoiceBody(task, suffix, mode);
     case "matchTriple":
-      return renderMatchTripleBody(task, suffix);
+      return renderMatchTripleBody(task, suffix, mode);
     case "orderedDigits":
-      return renderOrderedDigitsBody(task, suffix);
+      return renderOrderedDigitsBody(task, suffix, mode);
     case "periodDiagram":
-      return renderPeriodDiagramBody(task, suffix);
+      return renderPeriodDiagramBody(task, suffix, mode);
     case "multiChoiceFour":
-      return renderMultiChoiceFourBody(task, suffix);
+      return renderMultiChoiceFourBody(task, suffix, mode);
     case "numericInt":
       return renderNumericBody(task, suffix, false, mode);
     case "numericMassTable":

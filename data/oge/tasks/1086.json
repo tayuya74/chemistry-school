@@ -2,38 +2,10 @@
   "id": 1086,
   "examType": 17,
   "uiKind": "matchTriple",
-  "meta": {
-    "lead": "Качественные реакции неорганических соединений. Индикаторы",
-    "source": "ОГЭ. Типовые экзаменационные варианты, вариант 2 (Издательство «Национальное образование», 2025).",
-    "sourceDir": "variant-2"
-  },
-  "blocks": [
-    {
-      "html": "<p>\n          Установите соответствие между двумя веществами, взятыми в виде водных\n          растворов, и реактивом, с помощью которого можно различить эти\n          вещества: к каждой позиции, обозначенной буквой, подберите\n          соответствующую позицию, обозначенную цифрой.\n        </p>"
-    }
-  ],
-  "content": {
-    "leftTitle": "Вещества",
-    "rightTitle": "Реактив",
-    "left": [
-      "А) Na<sub>2</sub>CO<sub>3</sub> и Li<sub>2</sub>CO<sub>3</sub>",
-      "Б) MgCl<sub>2</sub> и BaCl<sub>2</sub>",
-      "В) CaBr<sub>2</sub> и CaI<sub>2</sub>"
-    ],
-    "right": [
-      "1) AgNO<sub>3</sub>",
-      "2) Cl<sub>2</sub>",
-      "3) K<sub>3</sub>PO<sub>4</sub>",
-      "4) H<sub>2</sub>SO<sub>4</sub>"
-    ]
-  },
-  "answer": {
-    "mapping": {
-      "A": "3",
-      "B": "4",
-      "V": "1"
-    }
-  },
+  "meta": { "lead": "Качественные реакции неорганических соединений. Индикаторы", "source": "ОГЭ. Типовые экзаменационные варианты, вариант 2 (Издательство «Национальное образование», 2025).", "sourceDir": "variant-2" },
+  "blocks": [{ "html": "<p>Установите соответствие между двумя веществами, взятыми в виде водных растворов, и реактивом, с помощью которого можно различить эти вещества: к каждой позиции, обозначенной буквой, подберите соответствующую позицию, обозначенную цифрой.</p>" }],
+  "content": { "leftTitle": "Вещества", "rightTitle": "Реактив", "left": ["А) Na<sub>2</sub>CO<sub>3</sub> и Li<sub>2</sub>CO<sub>3</sub>", "Б) MgCl<sub>2</sub> и BaCl<sub>2</sub>", "В) CaBr<sub>2</sub> и CaI<sub>2</sub>"], "right": ["1) AgNO<sub>3</sub>", "2) Cl<sub>2</sub>", "3) K<sub>3</sub>PO<sub>4</sub>", "4) H<sub>2</sub>SO<sub>4</sub>"] },
+  "answer": { "mapping": { "A": "3", "B": "4", "V": "1" } },
   "hint": "Ищи реактив с РАЗНЫМ откликом на оба в-ва (осадок/нет, разный цвет, газ/нет).<br>Cl⁻/Br⁻/I⁻ → AgNO₃ (разные цвета, AgF растворим!). SO₄²⁻ → BaCl₂ (белый). CO₃²⁻/HCO₃⁻ → к-та (газ). Щёлочь: соли акт. Ме — без осадка, остальные — осадок.",
-  "solution": null
+  "solution": { "title": "Полный разбор всех проб", "html": "<p><strong>А) Na<sub>2</sub>CO<sub>3</sub> и Li<sub>2</sub>CO<sub>3</sub>.</strong> Различает K<sub>3</sub>PO<sub>4</sub>.</p><ul><li>С AgNO<sub>3</sub> оба карбоната образуют светло-жёлтый Ag<sub>2</sub>CO<sub>3</sub>↓.</li><li>С Cl<sub>2</sub> видимой реакции нет.</li><li>Na<sub>2</sub>CO<sub>3</sub> + K<sub>3</sub>PO<sub>4</sub> — реакции нет.</li><li>3Li<sub>2</sub>CO<sub>3</sub> + 2K<sub>3</sub>PO<sub>4</sub> → 2Li<sub>3</sub>PO<sub>4</sub>↓ + 3K<sub>2</sub>CO<sub>3</sub> (белый осадок).</li><li>С H<sub>2</sub>SO<sub>4</sub> оба карбоната выделяют CO<sub>2</sub> — бесцветный газ без запаха.</li></ul><p><strong>Б) MgCl<sub>2</sub> и BaCl<sub>2</sub>.</strong> Различает H<sub>2</sub>SO<sub>4</sub>.</p><ul><li>Обе соли с AgNO<sub>3</sub> образуют белый творожистый AgCl↓.</li><li>С Cl<sub>2</sub> видимой реакции нет.</li><li>С K<sub>3</sub>PO<sub>4</sub> обе соли образуют белые фосфаты.</li><li>MgCl<sub>2</sub> + H<sub>2</sub>SO<sub>4</sub> — видимой реакции нет.</li><li>BaCl<sub>2</sub> + H<sub>2</sub>SO<sub>4</sub> → BaSO<sub>4</sub>↓ + 2HCl (белый осадок).</li></ul><p><strong>В) CaBr<sub>2</sub> и CaI<sub>2</sub>.</strong> Различает AgNO<sub>3</sub>.</p><ul><li>CaBr<sub>2</sub> + 2AgNO<sub>3</sub> → 2AgBr↓ + Ca(NO<sub>3</sub>)<sub>2</sub> (светло-жёлтый осадок).</li><li>CaI<sub>2</sub> + 2AgNO<sub>3</sub> → 2AgI↓ + Ca(NO<sub>3</sub>)<sub>2</sub> (жёлтый осадок).</li><li>Cl<sub>2</sub> + CaBr<sub>2</sub> → Br<sub>2</sub> + CaCl<sub>2</sub> (жёлто-бурая окраска).</li><li>Cl<sub>2</sub> + CaI<sub>2</sub> → I<sub>2</sub> + CaCl<sub>2</sub> (бурый раствор).</li><li>С K<sub>3</sub>PO<sub>4</sub> обе соли образуют белый Ca<sub>3</sub>(PO<sub>4</sub>)<sub>2</sub>↓; с H<sub>2</sub>SO<sub>4</sub> видимой реакции нет.</li></ul>" }
 }

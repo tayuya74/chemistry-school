@@ -8,6 +8,7 @@
     "build:oge": "node scripts/build-oge-from-json.mjs",
     "build:oge:legacy": "node scripts/build-oge-from-registry.mjs",
     "validate:oge-phase0": "node scripts/validate-oge-phase0.mjs",
+    "validate:oge-phase0:check": "node scripts/validate-oge-phase0.mjs --no-report",
     "migrate:oge-tasks": "node scripts/migrate-oge-html-to-json.mjs",
     "validate:oge-tasks": "node scripts/validate-oge-tasks.mjs",
     "check:oge-duplicates": "node scripts/find-oge-duplicates.mjs",
@@ -16,7 +17,11 @@
     "add:oge-task": "node scripts/add-oge-task.mjs",
     "check:oge-solutions": "node scripts/check-oge-solutions.mjs",
     "build:periodic-table": "node scripts/build-periodic-table.mjs",
-    "build:solubility-table": "node scripts/build-solubility-table.mjs"
+    "build:solubility-table": "node scripts/build-solubility-table.mjs",
+    "check:site-links": "node scripts/check-site-links.mjs",
+    "check:js-syntax": "node scripts/check-js-syntax.mjs",
+    "check:generated": "git diff --ignore-space-at-eol --exit-code -- pages/oge",
+    "verify": "npm run validate:oge-tasks && npm run validate:oge-phase0:check && npm run check:oge-solutions && npm run build:oge && npm run check:site-links && npm run check:js-syntax && npm run check:generated"
   },
   "devDependencies": {
     "prettier": "^3.5.3"

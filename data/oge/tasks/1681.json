@@ -37,5 +37,5 @@
     }
   },
   "hint": "Ищи реактив с РАЗНЫМ откликом на оба в-ва (осадок/нет, разный цвет, газ/нет).<br>Cl⁻/Br⁻/I⁻ → AgNO₃ (разные цвета, AgF растворим!). SO₄²⁻ → BaCl₂ (белый). CO₃²⁻/HCO₃⁻ → к-та (газ). Щёлочь: соли акт. Ме — без осадка, остальные — осадок.",
-  "solution": null
+  "solution": { "title": "Полный разбор всех проб", "html": "<p><strong>А) Al и Mg.</strong> Различает KOH.</p><ul><li>2Al + 2KOH + 6H<sub>2</sub>O → 2K[Al(OH)<sub>4</sub>] + 3H<sub>2</sub>↑ (алюминий растворяется, бесцветный газ без запаха).</li><li>Mg + KOH — реакции нет.</li><li>С NaCl, CaCO<sub>3</sub> и фенолфталеином видимых различий нет.</li></ul><p><strong>Б) NH<sub>3</sub> и H<sub>2</sub>.</strong> Различает фенолфталеин.</p><ul><li>Раствор NH<sub>3</sub> с фенолфталеином малиновый.</li><li>H<sub>2</sub> не изменяет окраску фенолфталеина.</li><li>С KOH, NaCl и CaCO<sub>3</sub> характерных видимых реакций нет.</li></ul><p><strong>В) Ba(NO<sub>3</sub>)<sub>2</sub> и HNO<sub>3</sub>.</strong> Различает CaCO<sub>3</sub>.</p><ul><li>С KOH, NaCl и фенолфталеином видимой реакции нет.</li><li>Ba(NO<sub>3</sub>)<sub>2</sub> + CaCO<sub>3</sub> — реакции нет.</li><li>CaCO<sub>3</sub> + 2HNO<sub>3</sub> → Ca(NO<sub>3</sub>)<sub>2</sub> + H<sub>2</sub>O + CO<sub>2</sub>↑ (карбонат растворяется; бесцветный газ без запаха).</li></ul>" }
 }

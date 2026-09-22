@@ -72,6 +72,59 @@ body {
   color: var(--color-text);
 }
 
+/* Цветовые подсказки в сводке визуальных реакций ОГЭ.
+   Светлые осадки намеренно набраны тёмным текстом: белый текст на белом фоне
+   был бы нечитаем и в светлой, и в тёмной теме. */
+.visual-reactions__color {
+  color: #25211d;
+  font-weight: 600;
+}
+
+.visual-reactions__color--blue {
+  background: #b9e0f2;
+  color: #143447;
+}
+
+.visual-reactions__color--brown {
+  background: #b5835a;
+  color: #21140b;
+}
+
+.visual-reactions__color--green {
+  background: #b7c7a3;
+  color: #213018;
+}
+
+.visual-reactions__color--white {
+  background: #fbfaf6;
+  box-shadow: inset 0 0 0 1px #8a8377;
+}
+
+.visual-reactions__color--yellow {
+  background: #f8df7c;
+  color: #3b2f00;
+}
+
+.visual-reactions__color--black {
+  background: #25282b;
+  color: #ffffff;
+}
+
+.visual-reactions__color--clear {
+  background: #ddeef2;
+  color: #1c3740;
+}
+
+.visual-reactions__color--gray {
+  background: #d6d8da;
+  color: #252a2d;
+}
+
+.visual-reactions__color--red {
+  background: #dc967d;
+  color: #2f130c;
+}
+
 .site-header {
   background: var(--color-header-bg);
   color: var(--color-header-text);

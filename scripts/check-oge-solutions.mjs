@@ -90,6 +90,11 @@ function countAtoms(formula, acc) {
 function cleanSide(side) {
   return side
     .replace(/\([^)]*—[^)]*\)/g, "")
+    /* Наблюдение после уравнения иногда записано в скобках, например
+       «(AgF растворим; раствор бесцветный)». Это не часть формулы: в отличие
+       от групп вида Mg(OH)2, внутри такого пояснения есть пробел. */
+    .replace(/\([A-Z][A-Za-z0-9]*\s+[^)]*\)/g, "")
+    .replace(/\([^)]*\s+[^)]*\)/g, "")
     .replace(/\((р-р|тв\.|конц\.|разб\.|изб\.|кр\.)\)/g, "")
     .replace(/—?\s*(t°|электролиз|кат\.|сплавление)\s*—?/gi, " ")
     .replace(/[↓↑]/g, "")
@@ -158,7 +163,8 @@ function main() {
     const text = flatten(task.solution.html);
 
     for (const line of text.split("\n")) {
-      const raw = line.trim();
+      for (const part of line.split(/;(?![^()]*\))/)) {
+      const raw = part.trim();
       if (isLabel(raw)) continue;
       /* Ионные уравнения сводятся с учётом зарядов — этот скрипт их не разбирает. */
       if (raw.includes(CHARGE)) continue;
@@ -171,6 +177,7 @@ function main() {
         console.log(`НЕ СХОДИТСЯ  id ${row.id} [тип ${row.type}]`);
         console.log(`  ${raw}`);
         console.log(`  ${diff.join("; ")}`);
+      }
       }
     }
 

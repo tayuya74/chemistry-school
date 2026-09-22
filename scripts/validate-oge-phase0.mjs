@@ -12,7 +12,13 @@ function pad2(n) {
 
 function resolveSourcePath(row) {
   const dir = row.sourceDir ? row.sourceDir : "default";
-  return path.join(root, "data", "oge-source", dir, `oge-${pad2(row.type)}.html`);
+  return path.join(
+    root,
+    "data",
+    "oge-source",
+    dir,
+    `oge-${pad2(row.type)}.html`,
+  );
 }
 
 /** Определить uiKind по разметке и скриптам HTML-шаблона. */
@@ -155,7 +161,9 @@ function analyzeTask(row) {
 
   if (expected === "multiChoiceFour") {
     if (details.statementCount !== 4) {
-      issues.push(`multiChoiceFour: суждений ${details.statementCount}, нужно 4`);
+      issues.push(
+        `multiChoiceFour: суждений ${details.statementCount}, нужно 4`,
+      );
     }
     if (details.answerCellCount !== 4) {
       issues.push(`multiChoiceFour: ячеек ${details.answerCellCount}, нужно 4`);
@@ -170,7 +178,9 @@ function analyzeTask(row) {
 
   if (expected === "matchTriple" && details.matchRightCount != null) {
     if (details.matchRightCount < 2) {
-      issues.push(`matchTriple: мало вариантов справа (${details.matchRightCount})`);
+      issues.push(
+        `matchTriple: мало вариантов справа (${details.matchRightCount})`,
+      );
     }
   }
 
@@ -275,11 +285,7 @@ function buildMarkdownReport(report) {
 
   for (const s of report.byExamType) {
     const okMark =
-      s.failedExamples === 0 && s.consistent
-        ? "✓"
-        : s.consistent
-          ? "~"
-          : "✗";
+      s.failedExamples === 0 && s.consistent ? "✓" : s.consistent ? "~" : "✗";
     const stmt =
       s.statementCounts.length > 0 ? s.statementCounts.join(", ") : "—";
     const match =
@@ -287,9 +293,7 @@ function buildMarkdownReport(report) {
     const corr =
       s.correctLengths.length > 0 ? s.correctLengths.join(", ") : "—";
     const num =
-      s.legacyNumericChecks.length > 0
-        ? s.legacyNumericChecks.join(", ")
-        : "—";
+      s.legacyNumericChecks.length > 0 ? s.legacyNumericChecks.join(", ") : "—";
     lines.push(
       `| ${s.examType} | \`${s.expectedUiKind}\` | ${s.examples} | ${okMark} | ${s.detectedUiKinds.join(", ")} | ${stmt} / ${match} | ${corr} | ${num} |`,
     );
@@ -350,6 +354,7 @@ function buildMarkdownReport(report) {
 }
 
 function main() {
+  const writeReport = !process.argv.includes("--no-report");
   const registryPath = path.join(root, "data", "oge-registry.json");
   const registry = JSON.parse(fs.readFileSync(registryPath, "utf8"));
   const rows = registry.examples ?? registry;
@@ -393,14 +398,14 @@ function main() {
     tasks: results,
   };
 
-  const outDir = path.join(root, "data", "oge");
-  fs.mkdirSync(outDir, { recursive: true });
-
-  const jsonPath = path.join(outDir, "phase-0-report.json");
-  const mdPath = path.join(outDir, "phase-0-report.md");
-
-  fs.writeFileSync(jsonPath, JSON.stringify(report, null, 2) + "\n", "utf8");
-  fs.writeFileSync(mdPath, buildMarkdownReport(report) + "\n", "utf8");
+  if (writeReport) {
+    const outDir = path.join(root, "data", "oge");
+    fs.mkdirSync(outDir, { recursive: true });
+    const jsonPath = path.join(outDir, "phase-0-report.json");
+    const mdPath = path.join(outDir, "phase-0-report.md");
+    fs.writeFileSync(jsonPath, JSON.stringify(report, null, 2) + "\n", "utf8");
+    fs.writeFileSync(mdPath, buildMarkdownReport(report) + "\n", "utf8");
+  }
 
   console.log(
     `Проверено заданий: ${report.analyzed} из ${report.totalTasks} в реестре` +
@@ -414,7 +419,7 @@ function main() {
   console.log(
     `Legacy numeric 18/19: ${report.numericLegacyCount} (исправится при миграции)`,
   );
-  console.log(`Отчёт: ${path.relative(root, mdPath)}`);
+  if (writeReport) console.log("Отчёт: data/oge/phase-0-report.md");
 
   for (const s of report.byExamType) {
     if (!s.consistent) {

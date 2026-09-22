@@ -37,5 +37,5 @@
     }
   },
   "hint": "Ищи реактив с РАЗНЫМ откликом на оба в-ва (осадок/нет, разный цвет, газ/нет).<br>Cl⁻/Br⁻/I⁻ → AgNO₃ (разные цвета, AgF растворим!). SO₄²⁻ → BaCl₂ (белый). CO₃²⁻/HCO₃⁻ → к-та (газ). Щёлочь: соли акт. Ме — без осадка, остальные — осадок.",
-  "solution": null
+  "solution": { "title": "Полный разбор всех проб", "html": "<p><strong>А) NH<sub>3</sub> и N<sub>2</sub>.</strong> Различает фенолфталеин.</p><ul><li>Раствор NH<sub>3</sub> с фенолфталеином малиновый; N<sub>2</sub> окраску не меняет.</li><li>С Cu, NaOH и Na<sub>2</sub>SO<sub>4</sub> видимых реакций нет.</li></ul><p><strong>Б) MgO и ZnO.</strong> Различает NaOH.</p><ul><li>ZnO + 2NaOH + H<sub>2</sub>O → Na<sub>2</sub>[Zn(OH)<sub>4</sub>] (оксид растворяется, бесцветный раствор).</li><li>MgO + NaOH — реакции нет; белое твёрдое вещество остаётся.</li><li>С Cu, Na<sub>2</sub>SO<sub>4</sub> и фенолфталеином видимых различий нет.</li></ul><p><strong>В) HNO<sub>3</sub> и H<sub>3</sub>PO<sub>4</sub>.</strong> Различает Cu.</p><ul><li>3Cu + 8HNO<sub>3</sub>(разб.) → 3Cu(NO<sub>3</sub>)<sub>2</sub> + 2NO↑ + 4H<sub>2</sub>O. Медь растворяется, раствор становится голубым; бесцветный NO на воздухе буреет до NO<sub>2</sub>.</li><li>Cu + H<sub>3</sub>PO<sub>4</sub> — реакции нет.</li><li>С NaOH, Na<sub>2</sub>SO<sub>4</sub> и фенолфталеином характерного различия нет.</li></ul>" }
 }
