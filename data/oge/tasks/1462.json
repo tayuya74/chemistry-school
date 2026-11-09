@@ -14,11 +14,11 @@
   ],
   "content": {
     "statements": [
-      "Na2S",
+      "Na<sub>2</sub>S",
       "CO",
       "KOH",
-      "H2SO4",
-      "O2"
+      "H<sub>2</sub>SO<sub>4</sub>",
+      "O<sub>2</sub>"
     ],
     "maxChoices": 2,
     "cellCount": 2

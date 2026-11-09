@@ -39,9 +39,10 @@
     <main class="container">
       <article class="card">
         <p><a href="../index.html">← К разделу ОГЭ</a></p>
-        <h2>Типовой вариант 1 (Национальное образование)</h2>
-        <p class="lead">Полный вариант ОГЭ по химии: задания 1–23 на одной странице.</p>
-        <p>Источник: ОГЭ. Типовые экзаменационные варианты, вариант 1 (Издательство «Национальное образование», 2025).</p>
+        <div data-oge-ready-variant>
+          <h2>Типовой вариант 1 (Национальное образование)</h2>
+          <p class="lead">Полный вариант ОГЭ по химии: задания 1–23 на одной странице.</p>
+          <p>Источник: ОГЭ. Типовые экзаменационные варианты, вариант 1 (Издательство «Национальное образование», 2025).</p>
         <section class="oge-variant-task" id="oge-variant-slot-1">
           <h3 class="oge-variant-task__title">
             Задание 1
@@ -51,7 +52,7 @@
             >
           </h3>
           <p class="lead oge-variant-task__lead">Химические элементы и вещества</p>
-<div class="oge-subtask" id="oge-var-1024" data-oge-checkbox-max="2" data-oge-two-choice-correct="2|5" data-oge-option-count="5">
+<div class="oge-subtask" id="oge-var-1024" data-oge-task-id="1024" data-oge-exam-type="1" data-oge-checkbox-max="2" data-oge-two-choice-correct="2|5" data-oge-option-count="5">
 <p>
           Выберите два утверждения, в которых говорится о кальции как о
           <strong>химическом элементе</strong>.
@@ -133,7 +134,7 @@
             >
           </h3>
           <p class="lead oge-variant-task__lead">Строение атома, строение электронных оболочек</p>
-<div class="oge-subtask" id="oge-var-1025">
+<div class="oge-subtask" id="oge-var-1025" data-oge-task-id="1025" data-oge-exam-type="2">
 <p>
           На рисунке изображена модель строения атома некоторого химического
           элемента.
@@ -256,7 +257,7 @@
             >
           </h3>
           <p class="lead oge-variant-task__lead">Периодический закон и Периодическая система элементов</p>
-<div class="oge-subtask" id="oge-var-1026">
+<div class="oge-subtask" id="oge-var-1026" data-oge-task-id="1026" data-oge-exam-type="3">
 <p>Расположите химические элементы</p>
 <ol>
           <li>бор</li>
@@ -315,7 +316,7 @@
             >
           </h3>
           <p class="lead oge-variant-task__lead">Валентность и степень окисления химических элементов</p>
-<div class="oge-subtask" id="oge-var-1027">
+<div class="oge-subtask" id="oge-var-1027" data-oge-task-id="1027" data-oge-exam-type="4">
 <p>
           Установите соответствие между формулой вещества и степенью окисления
           азота в данном веществе: к каждой позиции, обозначенной буквой,
@@ -401,13 +402,13 @@
             >
           </h3>
           <p class="lead oge-variant-task__lead">Типы химической связи</p>
-<div class="oge-subtask" id="oge-var-1028" data-oge-checkbox-max="2" data-oge-two-choice-correct="1|4" data-oge-option-count="5">
+<div class="oge-subtask" id="oge-var-1028" data-oge-task-id="1028" data-oge-exam-type="5" data-oge-checkbox-max="2" data-oge-two-choice-correct="1|4" data-oge-option-count="5">
 <p>
           Из предложенного перечня выберите
           <strong>два вещества с ионной связью</strong>.
         </p>
 
-        <ol class="oge-statements">
+        <ol class="oge-statements oge-statements--substances">
           <li>
             <label>
               <input type="checkbox" name="st" value="1" />
@@ -470,7 +471,7 @@
           <button type="button" id="checkBtn-t1028">Проверить</button>
           <button type="button" class="btn-secondary oge-hint-btn" style="margin-left: 8px" aria-expanded="false" aria-controls="hintOut-t1028" data-oge-hint-target="hintOut-t1028">Подсказка</button>
         </p>
-        <p id="hintOut-t1028" class="tip oge-hint" hidden>ионная Me+неMe([NH4]+), металлическая Me, ковалентная не полярная неMe(H2O2), ковалентная полярная неMe+неMe</p>
+        <p id="hintOut-t1028" class="tip oge-hint" hidden>ионная Me+неMe([NH<sub>4</sub>]+), металлическая Me, ковалентная не полярная неMe(H<sub>2</sub>O<sub>2</sub>), ковалентная полярная неMe+неMe</p>
         <p id="resultOut-t1028" class="result" role="status"></p>
       </div>
         </section>
@@ -483,7 +484,7 @@
             >
           </h3>
           <p class="lead oge-variant-task__lead">Закономерности изменения свойств элементов</p>
-<div class="oge-subtask" id="oge-var-1029" data-oge-checkbox-max="2" data-oge-two-choice-correct="1|4" data-oge-option-count="5">
+<div class="oge-subtask" id="oge-var-1029" data-oge-task-id="1029" data-oge-exam-type="6" data-oge-checkbox-max="2" data-oge-two-choice-correct="1|4" data-oge-option-count="5">
 <p>
           Выберите два верных продолжения для следующего утверждения. Сходство
           натрия, магния и алюминия проявляется в том, что…
@@ -565,8 +566,8 @@
             >
           </h3>
           <p class="lead oge-variant-task__lead">Классификация сложных веществ</p>
-<div class="oge-subtask" id="oge-var-1030">
-<p>
+<div class="oge-subtask" id="oge-var-1030" data-oge-task-id="1030" data-oge-exam-type="7">
+<div class="oge-compact-substances"><p>
           Из предложенного перечня веществ выберите
           <strong>кислоту и основной оксид</strong>.
         </p>
@@ -580,7 +581,7 @@
 <p>
           Запишите в поле ответа сначала номер кислоты, а затем номер основного
           оксида.
-        </p>
+        </p></div>
 
         <p class="oge-answer-label">Ответ:</p>
         <div
@@ -623,13 +624,13 @@
             >
           </h3>
           <p class="lead oge-variant-task__lead">Химические свойства простых и сложных веществ</p>
-<div class="oge-subtask" id="oge-var-1031" data-oge-checkbox-max="2" data-oge-two-choice-correct="1|5" data-oge-option-count="5">
+<div class="oge-subtask" id="oge-var-1031" data-oge-task-id="1031" data-oge-exam-type="8" data-oge-checkbox-max="2" data-oge-two-choice-correct="1|5" data-oge-option-count="5">
 <p>
           Какие два из перечисленных веществ
           <strong>не вступают</strong> в реакцию с оксидом натрия?
         </p>
 
-        <ol class="oge-statements">
+        <ol class="oge-statements oge-statements--substances">
           <li>
             <label>
               <input type="checkbox" name="st" value="1" />
@@ -705,7 +706,7 @@
             >
           </h3>
           <p class="lead oge-variant-task__lead">Химические свойства простых и сложных веществ</p>
-<div class="oge-subtask" id="oge-var-1032">
+<div class="oge-subtask" id="oge-var-1032" data-oge-task-id="1032" data-oge-exam-type="9">
 <p>
           Установите соответствие между реагирующими веществами и
           продуктом(-ями) их взаимодействия: к каждой позиции, обозначенной
@@ -795,7 +796,7 @@
             >
           </h3>
           <p class="lead oge-variant-task__lead">Химические свойства простых и сложных веществ</p>
-<div class="oge-subtask" id="oge-var-1033">
+<div class="oge-subtask" id="oge-var-1033" data-oge-task-id="1033" data-oge-exam-type="10">
 <p>
           Установите соответствие между веществом и реагентами, с каждым из
           которых оно может вступать в реакцию: к каждой позиции, обозначенной
@@ -881,7 +882,7 @@
             >
           </h3>
           <p class="lead oge-variant-task__lead">Классификация химических реакций</p>
-<div class="oge-subtask" id="oge-var-1034" data-oge-checkbox-max="2" data-oge-two-choice-correct="3|5" data-oge-option-count="5">
+<div class="oge-subtask" id="oge-var-1034" data-oge-task-id="1034" data-oge-exam-type="11" data-oge-checkbox-max="2" data-oge-two-choice-correct="3|5" data-oge-option-count="5">
 <p>
           Из предложенного перечня выберите
           <strong>два вещества</strong>, с которыми оксид железа(II) вступает в
@@ -964,7 +965,7 @@
             >
           </h3>
           <p class="lead oge-variant-task__lead">Признаки протекания химических реакций</p>
-<div class="oge-subtask" id="oge-var-1035">
+<div class="oge-subtask" id="oge-var-1035" data-oge-task-id="1035" data-oge-exam-type="12">
 <p>
           Установите соответствие между реагирующими веществами и признаком
           протекающей между ними реакции: к каждой позиции, обозначенной буквой,
@@ -1050,12 +1051,12 @@
             >
           </h3>
           <p class="lead oge-variant-task__lead">Электролитическая диссоциация</p>
-<div class="oge-subtask" id="oge-var-1036" data-oge-checkbox-max="2" data-oge-two-choice-correct="1|4" data-oge-option-count="5">
+<div class="oge-subtask" id="oge-var-1036" data-oge-task-id="1036" data-oge-exam-type="13" data-oge-checkbox-max="2" data-oge-two-choice-correct="1|4" data-oge-option-count="5">
 <p>
           Из предложенного перечня выберите <strong>два электролита</strong>.
         </p>
 
-        <ol class="oge-statements">
+        <ol class="oge-statements oge-statements--substances">
           <li>
             <label>
               <input type="checkbox" name="st" value="1" />
@@ -1131,7 +1132,7 @@
             >
           </h3>
           <p class="lead oge-variant-task__lead">Реакции ионного обмена</p>
-<div class="oge-subtask" id="oge-var-1037" data-oge-checkbox-max="2" data-oge-two-choice-correct="3|4" data-oge-option-count="6">
+<div class="oge-subtask" id="oge-var-1037" data-oge-task-id="1037" data-oge-exam-type="14" data-oge-checkbox-max="2" data-oge-two-choice-correct="3|4" data-oge-option-count="6">
 <p>
           Выберите <strong>два исходных вещества</strong>, взаимодействию водных
           растворов которых соответствует сокращённое ионное уравнение реакции
@@ -1140,7 +1141,7 @@
           2OH<sup>−</sup> + Cu<sup>2+</sup> = Cu(OH)<sub>2</sub>
         </p>
 
-        <ol class="oge-statements">
+        <ol class="oge-statements oge-statements--substances">
           <li>
             <label>
               <input type="checkbox" name="st" value="1" />
@@ -1222,7 +1223,7 @@
             >
           </h3>
           <p class="lead oge-variant-task__lead">Окислительно-восстановительные реакции</p>
-<div class="oge-subtask" id="oge-var-1038">
+<div class="oge-subtask" id="oge-var-1038" data-oge-task-id="1038" data-oge-exam-type="15">
 <p>
           Установите соответствие между схемой процесса, происходящего в
           окислительно-восстановительной реакции, и названием этого процесса: к
@@ -1301,7 +1302,7 @@
             >
           </h3>
           <p class="lead oge-variant-task__lead">Безопасность в лаборатории. Разделение смесей. Химическое загрязнение</p>
-<div class="oge-subtask" id="oge-var-1039" data-oge-multi-choice-correct="1|3|4" data-oge-option-count="4">
+<div class="oge-subtask" id="oge-var-1039" data-oge-task-id="1039" data-oge-exam-type="16" data-oge-multi-choice-correct="1|3|4" data-oge-option-count="4">
 <p>
           Из перечисленных суждений о правилах работы с веществами в лаборатории
           и быту выберите <strong>верное(-ые) суждение(-я)</strong>.
@@ -1391,7 +1392,7 @@
             >
           </h3>
           <p class="lead oge-variant-task__lead">Качественные реакции неорганических соединений. Индикаторы</p>
-<div class="oge-subtask" id="oge-var-1040">
+<div class="oge-subtask" id="oge-var-1040" data-oge-task-id="1040" data-oge-exam-type="17">
 <p>
           Установите соответствие между двумя веществами, взятыми в виде водных
           растворов, и реактивом, с помощью которого можно различить эти
@@ -1478,7 +1479,7 @@
             >
           </h3>
           <p class="lead oge-variant-task__lead">Вычисление массовой доли химического элемента в веществе</p>
-<div class="oge-subtask" id="oge-var-1041">
+<div class="oge-subtask" id="oge-var-1041" data-oge-task-id="1041" data-oge-exam-type="18">
 <p class="tip" style="margin-bottom: 16px">
           При проведении расчётов для всех элементов, кроме хлора, используйте
           целые значения относительных атомных масс (Ar(Cl) = 35,5).
@@ -1524,7 +1525,7 @@
             >
           </h3>
           <p class="lead oge-variant-task__lead">Вычисления массы элемента по его массовой доле в веществе</p>
-<div class="oge-subtask" id="oge-var-1042">
+<div class="oge-subtask" id="oge-var-1042" data-oge-task-id="1042" data-oge-exam-type="19">
 <p class="tip" style="margin-bottom: 16px">
           При проведении расчётов для всех элементов, кроме хлора, используйте
           целые значения относительных атомных масс (Ar(Cl) = 35,5).
@@ -1791,6 +1792,7 @@
         </p>
         <p id="hintOut-t1046" class="tip oge-hint" hidden>Реактив с разным откликом на оба в-ва — как в 17. В ионных ур-ях: соли/сильные к-ты/щёлочи — ионами, осадки/газы/слабые — целой формулой.</p>
         </section>
+        </div>
       </article>
     </main>
     <script>
@@ -2215,6 +2217,7 @@
         });
       })();
     </script>
-
+    <script src="../../../js/vendor/html2canvas.min.js"></script>
+    <script src="../../../js/oge-task-builder.js"></script>
   </body>
 </html>

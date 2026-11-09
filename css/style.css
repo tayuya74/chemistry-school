@@ -423,31 +423,94 @@ button:not(.theme-toggle):hover {
 }
 
 .oge-statements {
-  list-style: decimal;
-  list-style-position: outside;
-  padding-left: 1.75em;
+  list-style: none;
+  padding-left: 0;
   margin: 16px 0;
+  counter-reset: oge-option;
 }
 
 .oge-statements li {
   margin-bottom: 12px;
+  display: flex;
+  align-items: center;
+}
+
+.oge-statements li::before {
+  flex: 0 0 1.4em;
+  margin-right: 6px;
+  color: var(--color-text);
+  content: counter(oge-option) ".";
+  counter-increment: oge-option;
+  text-align: right;
 }
 
 .oge-statements label {
   display: flex;
+  flex: 1;
   gap: 10px;
-  align-items: flex-start;
+  align-items: center;
   cursor: pointer;
   line-height: 1.45;
 }
 
 .oge-statements input {
-  margin-top: 4px;
+  margin-top: 0;
   flex-shrink: 0;
 }
 
 .oge-statements input[disabled] {
   cursor: not-allowed;
+}
+
+/* В заданиях с перечнем веществ компактная строка быстрее считывается, чем
+   высокий список. На узком экране пункты естественно переносятся. */
+.oge-statements--substances,
+.oge-compact-substances > ol {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px 76px;
+  align-items: center;
+  padding-left: 0;
+  list-style: none;
+  counter-reset: oge-substance-option;
+}
+
+.oge-statements--substances li,
+.oge-compact-substances > ol > li {
+  margin: 0;
+  display: flex;
+  align-items: center;
+}
+
+/* В типе 7 формула хранится прямо в <li>: flex раскладывает её текст и
+   индексы по отдельным анонимным элементам. Оставляем строку обычной, чтобы
+   нижние индексы сохраняли химическую базовую линию. */
+.oge-compact-substances > ol > li {
+  display: block;
+}
+
+.oge-statements--substances li::before,
+.oge-compact-substances > ol > li::before {
+  flex: 0 0 1.4em;
+  margin-right: 6px;
+  color: var(--color-text);
+  content: counter(oge-substance-option) ".";
+  counter-increment: oge-substance-option;
+  text-align: right;
+}
+
+.oge-compact-substances > ol > li::before {
+  display: inline-block;
+  vertical-align: baseline;
+}
+
+.oge-statements--substances label {
+  align-items: center;
+  gap: 5px;
+}
+
+.oge-statements--substances input {
+  margin-top: 0;
 }
 
 .oge-answer-label {
@@ -1348,6 +1411,45 @@ button.oge-sort-btn {
   font-size: 0.92rem;
 }
 
+/* Копирование собранного варианта для внешней интерактивной доски. */
+.oge-copy-actions {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 8px 10px;
+  margin: 16px 0 0;
+  position: sticky;
+  top: var(--oge-copy-actions-top, 12px);
+  z-index: 20;
+  padding: 10px 12px;
+  background: var(--color-card-bg);
+  border: 1px solid var(--color-border);
+  border-radius: 10px;
+  box-shadow: 0 2px 8px var(--color-card-shadow);
+  scroll-margin-top: calc(var(--oge-copy-actions-top, 12px) + 8px);
+}
+
+.oge-copy-actions__note,
+.oge-copy-actions__status {
+  color: var(--color-pt-dim);
+  font-size: 0.92rem;
+}
+
+.oge-copy-actions__status {
+  flex-basis: 100%;
+}
+
+/* Временный блок вне экрана для единого PNG собранного варианта. */
+.oge-copy-capture {
+  position: absolute;
+  top: 0;
+  left: -10000px;
+  width: 900px;
+  padding: 28px;
+  background: #fff;
+  color: #1e293b;
+}
+
 /* Список типов = конструктор: слева поле «сколько взять»,
    справа вся строка остаётся ссылкой на страницу типа. Поле нельзя класть
    внутрь <a> — интерактивный элемент внутри ссылки ломает и клик, и доступность,
@@ -1525,4 +1627,221 @@ button.btn-secondary:focus-visible {
 
 #builderResult > h3 {
   overflow-wrap: anywhere;
+}
+
+/* Личные кабинеты: компактная форма остаётся удобной на телефоне. */
+.auth-card {
+  max-width: 520px;
+  margin-inline: auto;
+}
+
+.auth-form {
+  display: grid;
+  gap: 16px;
+}
+
+.auth-form label {
+  display: grid;
+  gap: 6px;
+  font-weight: 600;
+}
+
+.auth-form input {
+  min-height: 44px;
+  box-sizing: border-box;
+  padding: 10px 12px;
+  border: 2px solid var(--color-field-border);
+  border-radius: 8px;
+  background: var(--color-field-bg);
+  color: var(--color-text);
+  font: inherit;
+}
+
+.auth-form input:focus-visible {
+  outline: 3px solid var(--color-field-focus-ring);
+  outline-offset: 2px;
+}
+
+.auth-form button {
+  justify-self: start;
+  min-height: 44px;
+}
+
+.auth-status {
+  min-height: 1.5em;
+  margin-bottom: 0;
+}
+
+.auth-status--error {
+  color: #c62828;
+}
+
+.oge-account-sync-status {
+  min-height: 1.25em;
+  margin: 8px 0 0;
+  font-size: 0.95rem;
+}
+
+.oge-account-sync-status[data-state="saved"] {
+  color: #2e6535;
+}
+
+.oge-account-sync-status[data-state="queued"] {
+  color: #8a4b08;
+}
+
+.oge-account-sync-status[data-state="error"] {
+  color: #c62828;
+}
+
+body.dark-theme .auth-status--error {
+  color: #ff8a80;
+}
+
+body.dark-theme .oge-account-sync-status[data-state="saved"] {
+  color: #8fd19a;
+}
+
+body.dark-theme .oge-account-sync-status[data-state="queued"] {
+  color: #ffc46b;
+}
+
+body.dark-theme .oge-account-sync-status[data-state="error"] {
+  color: #ff8a80;
+}
+
+.account-prototype {
+  padding: 12px 14px;
+  border: 2px solid var(--color-accent);
+  border-radius: 8px;
+  background: var(--color-tip-bg);
+}
+
+.account-heading,
+.account-create-form,
+.account-stats {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: end;
+  gap: 12px;
+}
+
+.account-heading {
+  justify-content: space-between;
+  align-items: start;
+}
+
+.account-create-form label {
+  display: grid;
+  gap: 6px;
+  font-weight: 600;
+}
+
+.account-create-form input {
+  min-height: 44px;
+  box-sizing: border-box;
+  padding: 10px 12px;
+  border: 2px solid var(--color-field-border);
+  border-radius: 8px;
+  background: var(--color-field-bg);
+  color: var(--color-text);
+  font: inherit;
+}
+
+.account-create-form select {
+  min-height: 44px;
+  box-sizing: border-box;
+  padding: 8px 10px;
+  border: 2px solid var(--color-field-border);
+  border-radius: 8px;
+  background: var(--color-field-bg);
+  color: var(--color-text);
+  font: inherit;
+}
+
+.account-analytics-detail {
+  margin-top: 24px;
+  padding-top: 8px;
+  border-top: 1px solid var(--color-field-border);
+}
+
+.account-print-summary {
+  display: none;
+}
+
+@media print {
+  body > .site-header,
+  main > [data-account-load-status],
+  [data-account-role="teacher"] > :not(.account-print-summary) {
+    display: none !important;
+  }
+
+  [data-account-role="teacher"],
+  .account-print-summary {
+    display: block !important;
+  }
+
+  [data-account-role="teacher"] {
+    border: 0;
+    box-shadow: none;
+  }
+
+  .account-print-summary .trivial-table {
+    width: 100%;
+  }
+}
+
+.account-stats {
+  margin: 22px 0;
+  align-items: stretch;
+}
+
+.account-stats > div {
+  flex: 1 1 130px;
+  padding: 14px;
+  border: 1px solid var(--color-field-border);
+  border-radius: 8px;
+  text-align: center;
+}
+
+.account-stats strong,
+.account-stats span {
+  display: block;
+}
+
+.account-stats strong {
+  font-size: 1.5rem;
+}
+
+.account-access-result {
+  margin-top: 16px;
+  padding: 12px 14px;
+  border: 1px solid var(--color-field-border);
+  border-radius: 8px;
+}
+
+.account-access-result p {
+  margin: 4px 0;
+}
+
+.account-demo-access {
+  margin-top: 20px;
+}
+
+.account-pagination {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 10px;
+  margin: 10px 0;
+}
+
+.account-pagination[hidden] {
+  display: none;
+}
+
+[data-students-body] td:last-child {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 6px;
 }

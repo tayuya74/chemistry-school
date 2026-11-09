@@ -101,10 +101,12 @@ ${html}
   }
 
   const articleInner = `        <p><a href="../index.html">← К разделу ОГЭ</a></p>
-        <h2>${variant.title}</h2>
-        <p class="lead">Полный вариант ОГЭ по химии: задания 1–23 на одной странице.</p>
-        <p>Источник: ${variant.source}</p>
-${body.trimEnd()}`;
+        <div data-oge-ready-variant>
+          <h2>${variant.title}</h2>
+          <p class="lead">Полный вариант ОГЭ по химии: задания 1–23 на одной странице.</p>
+          <p>Источник: ${variant.source}</p>
+${body.trimEnd()}
+        </div>`;
 
   return shell({
     title: `ОГЭ — ${variant.title}`,
@@ -117,7 +119,8 @@ ${body.trimEnd()}`;
       oge: "../index.html",
     },
     articleInner,
-    scripts,
+    scripts: `${scripts}    <script src="../../../js/vendor/html2canvas.min.js"></script>
+    <script src="../../../js/oge-task-builder.js"></script>`,
   });
 }
 

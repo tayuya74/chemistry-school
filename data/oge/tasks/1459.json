@@ -14,11 +14,11 @@
   ],
   "content": {
     "statements": [
-      "H2S",
-      "CO2",
-      "Ca(OH)2",
-      "FeCl3",
-      "H2SiO3"
+      "H<sub>2</sub>S",
+      "CO<sub>2</sub>",
+      "Ca(OH)<sub>2</sub>",
+      "FeCl<sub>3</sub>",
+      "H<sub>2</sub>SiO<sub>3</sub>"
     ],
     "maxChoices": 2,
     "cellCount": 2

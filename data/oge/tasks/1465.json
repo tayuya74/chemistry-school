@@ -14,11 +14,11 @@
   ],
   "content": {
     "statements": [
-      "Cl2",
-      "MgCl2",
-      "NH3",
-      "CaCO3",
-      "HNO3"
+      "Cl<sub>2</sub>",
+      "MgCl<sub>2</sub>",
+      "NH<sub>3</sub>",
+      "CaCO<sub>3</sub>",
+      "HNO<sub>3</sub>"
     ],
     "maxChoices": 2,
     "cellCount": 2

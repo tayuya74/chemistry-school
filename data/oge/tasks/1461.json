@@ -14,11 +14,11 @@
   ],
   "content": {
     "statements": [
-      "SO2",
-      "N2",
+      "SO<sub>2</sub>",
+      "N<sub>2</sub>",
       "NaOH",
-      "BaSO4",
-      "HNO3"
+      "BaSO<sub>4</sub>",
+      "HNO<sub>3</sub>"
     ],
     "maxChoices": 2,
     "cellCount": 2

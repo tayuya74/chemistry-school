@@ -17,10 +17,10 @@
   "content": {
     "statements": [
       "KOH",
-      "H2O",
-      "CaCl2",
+      "H<sub>2</sub>O",
+      "CaCl<sub>2</sub>",
       "BaO",
-      "CO2"
+      "CO<sub>2</sub>"
     ],
     "maxChoices": 2,
     "cellCount": 2

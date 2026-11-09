@@ -16,10 +16,10 @@
   ],
   "content": {
     "statements": [
-      "Na2SO4",
+      "Na<sub>2</sub>SO<sub>4</sub>",
       "CO",
-      "HNO3",
-      "CaSiO3",
+      "HNO<sub>3</sub>",
+      "CaSiO<sub>3</sub>",
       "HBr"
     ],
     "maxChoices": 2,

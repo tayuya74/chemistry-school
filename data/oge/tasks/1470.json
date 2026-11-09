@@ -14,11 +14,11 @@
   ],
   "content": {
     "statements": [
-      "O2",
-      "H2O",
-      "Ca(OH)2",
-      "K2SO4",
-      "CO2"
+      "O<sub>2</sub>",
+      "H<sub>2</sub>O",
+      "Ca(OH)<sub>2</sub>",
+      "K<sub>2</sub>SO<sub>4</sub>",
+      "CO<sub>2</sub>"
     ],
     "maxChoices": 2,
     "cellCount": 2

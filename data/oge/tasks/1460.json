@@ -14,11 +14,11 @@
   ],
   "content": {
     "statements": [
-      "N2",
-      "SO2",
+      "N<sub>2</sub>",
+      "SO<sub>2</sub>",
       "KOH",
-      "H2S",
-      "NaNO3"
+      "H<sub>2</sub>S",
+      "NaNO<sub>3</sub>"
     ],
     "maxChoices": 2,
     "cellCount": 2

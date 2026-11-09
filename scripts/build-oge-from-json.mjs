@@ -397,6 +397,7 @@ function buildNumberedVariantPage() {
     },
     articleInner,
     scripts: `    <script src="../../js/oge-render-client.js"></script>
+    <script src="../../js/vendor/html2canvas.min.js"></script>
     <script src="../../js/oge-variant-number.js"></script>
     <script src="../../js/oge-task-builder.js"></script>`,
   });

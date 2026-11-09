@@ -14,11 +14,11 @@
   ],
   "content": {
     "statements": [
-      "H3PO4",
+      "H<sub>3</sub>PO<sub>4</sub>",
       "Al",
       "KOH",
-      "BaSO4",
-      "N2"
+      "BaSO<sub>4</sub>",
+      "N<sub>2</sub>"
     ],
     "maxChoices": 2,
     "cellCount": 2

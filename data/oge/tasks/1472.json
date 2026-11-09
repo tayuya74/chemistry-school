@@ -17,10 +17,10 @@
   "content": {
     "statements": [
       "NaOH",
-      "H2O",
-      "SiO2",
+      "H<sub>2</sub>O",
+      "SiO<sub>2</sub>",
       "CaO",
-      "BaSO4"
+      "BaSO<sub>4</sub>"
     ],
     "maxChoices": 2,
     "cellCount": 2

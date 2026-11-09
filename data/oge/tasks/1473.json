@@ -16,10 +16,10 @@
   ],
   "content": {
     "statements": [
-      "Na2SO4",
-      "HNO3",
-      "Br2",
-      "CuCl2",
+      "Na<sub>2</sub>SO<sub>4</sub>",
+      "HNO<sub>3</sub>",
+      "Br<sub>2</sub>",
+      "CuCl<sub>2</sub>",
       "KOH"
     ],
     "maxChoices": 2,

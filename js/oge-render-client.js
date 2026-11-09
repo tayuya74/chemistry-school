@@ -105,7 +105,10 @@
   }
 
   function dataAttrs(task) {
-    const parts = [];
+    const parts = [
+      `data-oge-task-id="${task.id}"`,
+      `data-oge-exam-type="${task.examType}"`,
+    ];
     if (task.uiKind === "twoChoice") {
       parts.push(`data-oge-checkbox-max="2"`);
       parts.push(
@@ -119,10 +122,13 @@
       );
       parts.push(`data-oge-option-count="4"`);
     }
-    return parts.length ? ` ${parts.join(" ")}` : "";
+    return ` ${parts.join(" ")}`;
   }
 
   function renderTwoChoiceBody(task, suffix) {
+    const compactClass = [5, 8, 13, 14].includes(task.examType)
+      ? " oge-statements--substances"
+      : "";
     const stmts = task.content.statements
       .map(
         (text, i) =>
@@ -130,7 +136,7 @@
       )
       .join("\n");
     return `${renderBlocks(task.blocks)}
-      <ol class="oge-statements">${stmts}</ol>
+      <ol class="oge-statements${compactClass}">${stmts}</ol>
       <p>Запишите номера выбранных ответов.</p>
       <p class="oge-answer-label">Ответ:</p>
       <div class="oge-answer-cells" role="group" aria-label="Номера двух выбранных утверждений (порядок цифр в ячейках любой)">
@@ -173,7 +179,8 @@
       const n = i + 1;
       return `<input id="${sid(`d${n}`, suffix)}" type="text" inputmode="numeric" maxlength="1" autocomplete="off" aria-label="Позиция ${n}" />`;
     }).join("\n");
-    return `${renderBlocks(task.blocks)}
+    const compactBlocks = task.examType === 7;
+    return `${compactBlocks ? '<div class="oge-compact-substances">' : ""}${renderBlocks(task.blocks)}${compactBlocks ? "</div>" : ""}
       <p class="oge-answer-label">Ответ:</p>
       <div class="oge-answer-cells" role="group" aria-label="Последовательность цифр">${cells}</div>
       ${renderCheckAndHintFooter(task, suffix)}`;

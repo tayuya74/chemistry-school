@@ -15,10 +15,10 @@
   "content": {
     "statements": [
       "Cu",
-      "FeCl2",
-      "SiO2",
-      "H2SO4",
-      "Na2O"
+      "FeCl<sub>2</sub>",
+      "SiO<sub>2</sub>",
+      "H<sub>2</sub>SO<sub>4</sub>",
+      "Na<sub>2</sub>O"
     ],
     "maxChoices": 2,
     "cellCount": 2

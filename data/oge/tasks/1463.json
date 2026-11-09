@@ -14,11 +14,11 @@
   ],
   "content": {
     "statements": [
-      "HNO3",
+      "HNO<sub>3</sub>",
       "MgO",
-      "H2O",
-      "Na2SiO3",
-      "N2"
+      "H<sub>2</sub>O",
+      "Na<sub>2</sub>SiO<sub>3</sub>",
+      "N<sub>2</sub>"
     ],
     "maxChoices": 2,
     "cellCount": 2

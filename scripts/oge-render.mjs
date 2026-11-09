@@ -128,8 +128,10 @@ function answerParts(task) {
   }
 }
 
-function dataAttrs(task) {
-  const parts = [];
+function dataAttrs(task, includeTracking) {
+  const parts = includeTracking
+    ? [`data-oge-task-id="${task.id}"`, `data-oge-exam-type="${task.examType}"`]
+    : [];
   if (task.uiKind === "twoChoice") {
     parts.push(`data-oge-checkbox-max="2"`);
     parts.push(
@@ -163,6 +165,9 @@ function renderCheckAndHintFooter(task, suffix) {
 }
 
 function renderTwoChoiceBody(task, suffix, mode) {
+  const compactClass = [5, 8, 13, 14].includes(task.examType)
+    ? " oge-statements--substances"
+    : "";
   const stmts = task.content.statements
     .map(
       (text, i) => `          <li>
@@ -176,7 +181,7 @@ function renderTwoChoiceBody(task, suffix, mode) {
 
   return `${renderBlocks(task.blocks)}
 
-        <ol class="oge-statements">
+        <ol class="oge-statements${compactClass}">
 ${stmts}
         </ol>
 
@@ -294,7 +299,8 @@ function renderOrderedDigitsBody(task, suffix, mode) {
           />`;
   }).join("\n");
 
-  return `${renderBlocks(task.blocks)}
+  const compactBlocks = task.examType === 7;
+  return `${compactBlocks ? '<div class="oge-compact-substances">' : ""}${renderBlocks(task.blocks)}${compactBlocks ? "</div>" : ""}
 
         <p class="oge-answer-label">Ответ:</p>
         <div
@@ -689,7 +695,7 @@ function typeCheckScript(task, suffix, wrapId = null) {
 
 export function renderSubtask(task, { mode, suffix = "", wrapId = null } = {}) {
   const body = renderTaskBody(task, suffix, mode);
-  const attrs = dataAttrs(task);
+  const attrs = dataAttrs(task, mode === "type");
   const idAttr = wrapId ? ` id="${wrapId}"` : "";
   const wrapped =
     task.uiKind === "openReference" || task.uiKind === "experimentOpen"
